@@ -1,7 +1,5 @@
 # Samples of the PressMint-SI corpus
 
-- Language sl (Slovenian)
-
 ## Documentation
 
 ### Data source
@@ -39,7 +37,7 @@ The paragraphs have the following metadata:
 - OCR quality estimation (either "low" or "good")
 
 The corpus is linguistically annotated. The OCR-ed texts were first corrected with [cSMTiser](https://github.com/clarinsi/csmtiser)
-trained on (a set of manually corrected samples)[hdl.handle.net/11356/1907] from the original texts. The texts were then annotated
+trained on [a set of manually corrected samples](hdl.handle.net/11356/1907) from the original texts. The texts were then annotated
 with (CLASSLA-Stanza)[https://github.com/clarinsi/classla] for sentences,  tokens, lemmas, part-of-speech tags and named entities,
 following the Universal Dependencies formalism for tagging, and the standard 5-class NER system.
 
@@ -51,10 +49,10 @@ The corpus is formatted as a vertical file for the concordancer. Below is the st
       issue="86" volume="25" date="1892-04-15" year="1892">
 <p id="248H5BK1.1.1" quality="good" image="248H5BK1-0.jpg">
 <s id="248H5BK1.1.1.1">
-86.	86.-k	Kav	Mdo	NUM	NumForm=Digit NumType=Ord
+86.		86.-k		Kav	Mdo	NUM	NumForm=Digit NumType=Ord
 številka	številka-s	Sozei	Ncfsn	NOUN	Case=Nom Gender=Fem Number=Sing
 <g/>
-.	.-u	U	Z	PUNCT	
+.		.-u		U	Z	PUNCT	
 </s>
 </p>
 <p id="248H5BK1.1.2" quality="good" image="248H5BK1-0.jpg">
@@ -63,13 +61,13 @@ The corpus is formatted as a vertical file for the concordancer. Below is the st
 Ljubljana	Ljubljana-s	Slzei	Npfsn	PROPN	Case=Nom Gender=Fem Number=Sing
 </name>
 <g/>
-,	,-u	U	Z	PUNCT	
-v	v-d	Dt	Sa	ADP	Case=Acc
-petek	petek-s	Sometn	Ncmsan	NOUN	Animacy=Inan Case=Acc Gender=Masc Number=Sing
-15.	15.-k	Kav	Mdo	NUM	NumForm=Digit NumType=Ord
-aprila	april-s	Somer	Ncmsg	NOUN	Case=Gen Gender=Masc Number=Sing
+,		,-u		U	Z	PUNCT	
+v		v-d		Dt	Sa	ADP	Case=Acc
+petek		petek-s		Sometn	Ncmsan	NOUN	Animacy=Inan Case=Acc Gender=Masc Number=Sing
+15.		15.-k		Kav	Mdo	NUM	NumForm=Digit NumType=Ord
+aprila		april-s	Somer	Ncmsg	NOUN	Case=Gen Gender=Masc Number=Sing
 <g/>
-.	.-u	U	Z	PUNCT	
+.		.-u	U	Z	PUNCT	
 </s>
 </p>
 ```
