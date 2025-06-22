@@ -17,5 +17,5 @@ for a large number of countries and autonomous regions
 This Git repository is, as yet, a stub with few of the content planned.
 Note that there are several branches for different parts of the development.
 
-* The *[Samples](Samples/) folder* contains directories by contributing (CLARIN) country.
+* The *[Samples](Samples/) directory* contains directories by contributing (CLARIN) country.
   It will eventually include samples for all variants and formats of the ParlaMint corpora.
