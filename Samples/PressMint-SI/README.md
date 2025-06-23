@@ -22,9 +22,9 @@ the form of OCR-ed PDF and TXT files.
 
 * __Content__: Slovenian periodicals published during the 18th, 19th, and beginning of 20th century (1771-1914). The corpus contains not only newspapers but also other periodically appearing texts, such as magazines or yearbooks.
 
-* __Size__: Around 150,000 texts and 910,000,000 tokens (50GB).
+* __Size__: Around 150 thousand texts and 910 million tokens (50GB).
 
-* __Structure__: The corpus is structured into texts (typically corresponding to one issue of a periodical) and paragraphs. No effort has been made to structure the texts into articles, mark their titles and similar. However
+* __Structure__: The corpus is structured into texts (typically corresponding to one issue of a periodical) and paragraphs. No effort has been made to structure the texts into articles, mark their titles and similar.
 
 * __Correction__: The OCR-ed texts were corrected with [cSMTiser](https://github.com/clarinsi/csmtiser) trained on [a set of manually corrected samples](hdl.handle.net/11356/1907) from the original texts. 
 
@@ -67,9 +67,9 @@ the form of OCR-ed PDF and TXT files.
     <g/>
     ,		,-u		U	Z	PUNCT	
     v		v-d		Dt	Sa	ADP	Case=Acc
-    petek		petek-s		Sometn	Ncmsan	NOUN	Animacy=Inan Case=Acc Gender=Masc Number=Sing
+    petek	petek-s		Sometn	Ncmsan	NOUN	Animacy=Inan Case=Acc Gender=Masc Number=Sing
     15.		15.-k		Kav	Mdo	NUM	NumForm=Digit NumType=Ord
-    aprila		april-s	Somer	Ncmsg	NOUN	Case=Gen Gender=Masc Number=Sing
+    aprila	april-s	Somer	Ncmsg	NOUN	Case=Gen Gender=Masc Number=Sing
     <g/>
     .		.-u	U	Z	PUNCT	
     </s>
