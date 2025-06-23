@@ -1,4 +1,4 @@
-# PressMint: Comparable Historical Newspaper Corpora
+# PressMint: Interoperable Corpora of Historical Newspapers
 
 The [CLARIN PressMint project](https://www.clarin.eu/pressmint) 
 plans to compile corpora of historical newspapers for a number of countries and languages.
