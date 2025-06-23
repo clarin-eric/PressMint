@@ -8,17 +8,28 @@ The source of the PressMint-SI corpus will be a selection of texts from the
 *Corpus of Slovenian periodicals (1771-1914) sPeriodika 1.0*
 ([http://hdl.handle.net/11356/1881](http://hdl.handle.net/11356/1881)).
 
+The compilation of the corpus is described in:
+
+> [A Lightweight Approach to a Giga-Corpus of Historical Periodicals: The Story of a Slovenian Historical Newspaper Collection](https://aclanthology.org/2024.lrec-main.61/) (Dobranić et al., *LREC-COLING 2024*).
+
 Details of the source:
 
-* *Source*: The periodical issues were retreived from [dLib](https://dlib.si), the Slovenia's national library's digital library service in
+* **Source**: The periodical issues were retreived from [dLib](https://dlib.si), the Slovenia's national library's digital library service in
 the form of OCR-ed PDF and TXT files.
-* *Availability*: Available for [download](http://hdl.handle.net/11356/1881) under the CC BY-SA 4.0 licence and for on-line analysis via the [CLARIN.SI installation of the NoSketch Engine concordancer](https://www.clarin.si/ske/#dashboard?corpname=speriodika).
-* *Content*: Slovenian periodicals published during the 18th, 19th, and beginning of 20th century (1771-1914). The corpus contains not only newspapers but also other periodically appearing texts, such as magazines or yearbooks.
-* *Size*: Around 150,000 texts and 910,000,000 tokens (50GB).
-* *Structure*: The corpus is structured into texts (typically corresponding to one issue of a periodical) and paragraphs. No effort has been made to structure the texts into articles, mark their titles and similar. However
-* *Correction*: The OCR-ed texts were corrected with [cSMTiser](https://github.com/clarinsi/csmtiser) trained on [a set of manually corrected samples](hdl.handle.net/11356/1907) from the original texts. 
-* *Linguistic annotation*: The texts were then annotated with [CLASSLA-Stanza](https://github.com/clarinsi/classla) for sentences,  tokens, lemmas, part-of-speech tags and named entities, following the Universal Dependencies formalism for tagging, and the standard 5-class NER system.
-* *Metadata*: The texts in the corpus have the following metadata:
+
+* **Availability**: Available for [download](http://hdl.handle.net/11356/1881) under the CC BY-SA 4.0 licence and for on-line analysis via the [CLARIN.SI installation of the NoSketch Engine concordancer](https://www.clarin.si/ske/#dashboard?corpname=speriodika).
+
+* **Content**: Slovenian periodicals published during the 18th, 19th, and beginning of 20th century (1771-1914). The corpus contains not only newspapers but also other periodically appearing texts, such as magazines or yearbooks.
+
+* **Size**: Around 150,000 texts and 910,000,000 tokens (50GB).
+
+* **Structure**: The corpus is structured into texts (typically corresponding to one issue of a periodical) and paragraphs. No effort has been made to structure the texts into articles, mark their titles and similar. However
+
+* **Correction**: The OCR-ed texts were corrected with [cSMTiser](https://github.com/clarinsi/csmtiser) trained on [a set of manually corrected samples](hdl.handle.net/11356/1907) from the original texts. 
+
+* **Linguistic annotation**: The texts were then annotated with [CLASSLA-Stanza](https://github.com/clarinsi/classla) for sentences,  tokens, lemmas, part-of-speech tags and named entities, following the Universal Dependencies formalism for tagging, and the standard 5-class NER system.
+
+* **Metadata**: The texts in the corpus have the following metadata:
 
     - Document ID (URN)
     - Source (URL of the original digitised document available at dlib.si)
@@ -32,7 +43,8 @@ the form of OCR-ed PDF and TXT files.
     The paragraphs have the following metadata:
     - Image (not available for all documents)
     - OCR quality estimation (either "low" or "good")
-* *Format*: The corpus is formatted as a vertical file for the concordancer. Below is the start of a corpus text:
+
+* **Format**: The corpus is formatted as a vertical file for the concordancer. Below is the start of a corpus text:
 
     ```
     <text id="248H5BK1" source="https://dlib.si/details/URN:NBN:SI:DOC-248H5BK1/"
@@ -63,4 +75,5 @@ the form of OCR-ed PDF and TXT files.
     </p>
     ```
 
-* *Facsimile*: The image files for complete texts are available as PDFs from their original locations in dLib. For most of the corpus per-page JPEGs are available on the Web and intergrated into the concordancer search. However, they are not of high quality (quality: 50).
+* **Facsimile**: The image files for complete texts are available as PDFs from their original locations in dLib. For most of the corpus per-page JPEGs are available on the Web and intergrated into the concordancer search. However, they are not of high quality (quality: 50).
+[Here](https://nl.ijs.si/inz/speriodika/4OVRPKTJ-2.jpg) is an example.
