@@ -87,9 +87,9 @@ Below is the start of a corpus text:
     v		v-d		Dt	Sa	ADP	Case=Acc
     petek	petek-s		Sometn	Ncmsan	NOUN	Animacy=Inan Case=Acc Gender=Masc Number=Sing
     15.		15.-k		Kav	Mdo	NUM	NumForm=Digit NumType=Ord
-    aprila	april-s	Somer	Ncmsg	NOUN	Case=Gen Gender=Masc Number=Sing
+    aprila	april-s		Somer	Ncmsg	NOUN	Case=Gen Gender=Masc Number=Sing
     <g/>
-    .		.-u	U	Z	PUNCT	
+    .		.-u     	U	Z	PUNCT	
     </s>
     </p>
     ```
