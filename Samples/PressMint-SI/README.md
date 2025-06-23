@@ -43,7 +43,9 @@ No effort has been made to structure the texts into articles, mark their titles 
 sentences, tokens, lemmas, part-of-speech tags and features, and named entities,
 following the Universal Dependencies formalism for tagging, and the standard CoNLL03 4-class system for NEs.
 
-* __Metadata__: The texts in the corpus have the following metadata:
+* __Metadata__:
+
+    The texts in the corpus have the following metadata:
 
     - Document ID (URN)
     - Source (URL of the original digitised document available at dlib.si)
@@ -54,7 +56,9 @@ following the Universal Dependencies formalism for tagging, and the standard CoN
     - Issue number (if available)
     - Date of publication (of varying granularity, based on original metadata available)
     - Year of publication (sometimes only as a date range, e.g. 1882/1888 or 1909-1910)
+    
     The paragraphs have the following metadata:
+    
     - Image (not available for all documents)
     - OCR quality estimation (either "low" or "good")
 
