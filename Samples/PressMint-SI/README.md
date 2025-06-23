@@ -18,7 +18,7 @@ the form of OCR-ed PDF and TXT files.
 * *Size*: Around 150,000 texts and 910,000,000 tokens (50GB).
 * *Structure*: The corpus is structured into texts (typically corresponding to one issue of a periodical) and paragraphs. No effort has been made to structure the texts into articles, mark their titles and similar. However
 * *Correction*: The OCR-ed texts were corrected with [cSMTiser](https://github.com/clarinsi/csmtiser) trained on [a set of manually corrected samples](hdl.handle.net/11356/1907) from the original texts. 
-* *Linguistic annotation*: The texts were then annotated with (CLASSLA-Stanza)[https://github.com/clarinsi/classla] for sentences,  tokens, lemmas, part-of-speech tags and named entities, following the Universal Dependencies formalism for tagging, and the standard 5-class NER system.
+* *Linguistic annotation*: The texts were then annotated with [CLASSLA-Stanza](https://github.com/clarinsi/classla) for sentences,  tokens, lemmas, part-of-speech tags and named entities, following the Universal Dependencies formalism for tagging, and the standard 5-class NER system.
 * *Metadata*: The texts in the corpus have the following metadata:
 
     - Document ID (URN)
@@ -34,6 +34,7 @@ the form of OCR-ed PDF and TXT files.
     - Image (not available for all documents)
     - OCR quality estimation (either "low" or "good")
 * *Format*: The corpus is formatted as a vertical file for the concordancer. Below is the start of a corpus text:
+
     ```
 <text id="248H5BK1" source="https://dlib.si/details/URN:NBN:SI:DOC-248H5BK1/"
       publisher="Narodna tiskarna" title="Slovenski narod" periodical="Slovenski narod"
