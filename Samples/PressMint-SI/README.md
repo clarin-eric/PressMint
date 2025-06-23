@@ -8,9 +8,14 @@ _Corpus of Slovenian periodicals (1771-1914) sPeriodika 1.0_
 
 The corpus is described in:
 
-* Dobranić et al. 2024. [A Lightweight Approach to a Giga-Corpus of Historical Periodicals: The Story of a Slovenian Historical Newspaper Collection](https://aclanthology.org/2024.lrec-main.61/) *LREC-COLING 2024*.
+* Dobranić et al. (2024).
+[A Lightweight Approach to a Giga-Corpus of Historical Periodicals:
+The Story of a Slovenian Historical Newspaper Collection](https://aclanthology.org/2024.lrec-main.61/).
+*LREC-COLING 2024*.
 
-* Pretnar Žagar, A. (2024). A Corpus Linguistic Characterisation of sPeriodika. *Conference on Language Technologies and Digital Humanities (JT-DH-2024)*. [https://doi.org/10.5281/zenodo.13936418](https://doi.org/10.5281/zenodo.13936418).
+* Pretnar Žagar, A. (2024).
+[A Corpus Linguistic Characterisation of sPeriodika](https://doi.org/10.5281/zenodo.13936418).
+*JT-DH 2024*.
 
 
 ### Details of the source:
@@ -26,7 +31,7 @@ for on-line analysis via the
 * __Content__: Slovenian periodicals published during the 18th, 19th, and beginning of 20th century (1771-1914).
 The corpus contains not only newspapers but also other periodically appearing texts, such as magazines or yearbooks.
 
-* __Size__: Around 150 thousand texts and 910 million tokens (50GB).
+* __Size__: Around 150 thousand texts or 910 million tokens (50GB).
 
 * __Structure__: The corpus is structured into texts (typically corresponding to one issue of a periodical) and paragraphs.
 No effort has been made to structure the texts into articles, mark their titles and similar.
@@ -34,9 +39,9 @@ No effort has been made to structure the texts into articles, mark their titles 
 * __Correction__: The OCR-ed texts were corrected with [cSMTiser](https://github.com/clarinsi/csmtiser) trained on
 [a set of manually corrected samples](hdl.handle.net/11356/1907) from the original texts. 
 
-* __Linguistic annotation__: The texts were then annotated with [CLASSLA-Stanza](https://github.com/clarinsi/classla) for
-sentences, tokens, lemmas, part-of-speech tags and named entities,
-following the Universal Dependencies formalism for tagging, and the standard CoNLL03 4-class NER system.
+* __Linguistic annotation__: The texts were annotated with [CLASSLA-Stanza](https://github.com/clarinsi/classla) for
+sentences, tokens, lemmas, part-of-speech tags and features, and named entities,
+following the Universal Dependencies formalism for tagging, and the standard CoNLL03 4-class system for NEs.
 
 * __Metadata__: The texts in the corpus have the following metadata:
 
@@ -85,7 +90,7 @@ Below is the start of a corpus text:
     </p>
     ```
 
-* __Facsimile__: The image files for complete texts are available as PDFs from their original locations in dLib.
+* __Facsimile__: The image files for complete texts are available as PDFs from their original locations in dLib. 
 For most of the corpus per-page JPEGs are available on the Web and intergrated into the concordancer search.
 However, they are not of high quality (quality: 50).
 [Here](https://nl.ijs.si/inz/speriodika/4OVRPKTJ-2.jpg) is an example.
