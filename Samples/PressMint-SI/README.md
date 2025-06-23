@@ -15,20 +15,28 @@ The corpus is described in:
 
 ### Details of the source:
 
-* __Source__: The periodical issues were retreived from [dLib](https://dlib.si), the Slovenia's national library's digital library service in
+* __Source__: The periodical issues were retreived from [dLib](https://dlib.si),
+the Slovenia's national library's digital library service in
 the form of OCR-ed PDF and TXT files.
 
-* __Availability__: Available for [download](http://hdl.handle.net/11356/1881) under the CC BY-SA 4.0 licence and for on-line analysis via the [CLARIN.SI installation of the NoSketch Engine concordancer](https://www.clarin.si/ske/#dashboard?corpname=speriodika).
+* __Availability__: Available for [download](http://hdl.handle.net/11356/1881) under the CC BY-SA 4.0 licence and
+for on-line analysis via the
+[CLARIN.SI installation of the NoSketch Engine concordancer](https://www.clarin.si/ske/#dashboard?corpname=speriodika).
 
-* __Content__: Slovenian periodicals published during the 18th, 19th, and beginning of 20th century (1771-1914). The corpus contains not only newspapers but also other periodically appearing texts, such as magazines or yearbooks.
+* __Content__: Slovenian periodicals published during the 18th, 19th, and beginning of 20th century (1771-1914).
+The corpus contains not only newspapers but also other periodically appearing texts, such as magazines or yearbooks.
 
 * __Size__: Around 150 thousand texts and 910 million tokens (50GB).
 
-* __Structure__: The corpus is structured into texts (typically corresponding to one issue of a periodical) and paragraphs. No effort has been made to structure the texts into articles, mark their titles and similar.
+* __Structure__: The corpus is structured into texts (typically corresponding to one issue of a periodical) and paragraphs.
+No effort has been made to structure the texts into articles, mark their titles and similar.
 
-* __Correction__: The OCR-ed texts were corrected with [cSMTiser](https://github.com/clarinsi/csmtiser) trained on [a set of manually corrected samples](hdl.handle.net/11356/1907) from the original texts. 
+* __Correction__: The OCR-ed texts were corrected with [cSMTiser](https://github.com/clarinsi/csmtiser) trained on
+[a set of manually corrected samples](hdl.handle.net/11356/1907) from the original texts. 
 
-* __Linguistic annotation__: The texts were then annotated with [CLASSLA-Stanza](https://github.com/clarinsi/classla) for sentences,  tokens, lemmas, part-of-speech tags and named entities, following the Universal Dependencies formalism for tagging, and the standard 5-class NER system.
+* __Linguistic annotation__: The texts were then annotated with [CLASSLA-Stanza](https://github.com/clarinsi/classla) for
+sentences, tokens, lemmas, part-of-speech tags and named entities,
+following the Universal Dependencies formalism for tagging, and the standard CoNLL03 4-class NER system.
 
 * __Metadata__: The texts in the corpus have the following metadata:
 
@@ -45,7 +53,8 @@ the form of OCR-ed PDF and TXT files.
     - Image (not available for all documents)
     - OCR quality estimation (either "low" or "good")
 
-* __Format__: The corpus is formatted as a vertical file for the concordancer. Below is the start of a corpus text:
+* __Format__: The corpus is formatted as a vertical file for the concordancer.
+Below is the start of a corpus text:
 
     ```
     <text id="248H5BK1" source="https://dlib.si/details/URN:NBN:SI:DOC-248H5BK1/"
@@ -76,5 +85,7 @@ the form of OCR-ed PDF and TXT files.
     </p>
     ```
 
-* __Facsimile__: The image files for complete texts are available as PDFs from their original locations in dLib. For most of the corpus per-page JPEGs are available on the Web and intergrated into the concordancer search. However, they are not of high quality (quality: 50).
+* __Facsimile__: The image files for complete texts are available as PDFs from their original locations in dLib.
+For most of the corpus per-page JPEGs are available on the Web and intergrated into the concordancer search.
+However, they are not of high quality (quality: 50).
 [Here](https://nl.ijs.si/inz/speriodika/4OVRPKTJ-2.jpg) is an example.
