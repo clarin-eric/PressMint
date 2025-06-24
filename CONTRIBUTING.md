@@ -17,8 +17,7 @@ Sample data should be pushed to the Data branch of the PressMint repository dire
  git clone git@github.com:<USER-ORG>/PressMint.git
 ```
 
-- Set the data branch in your repository to be synchronized with the data branch in the PressMint repository:
-
+- (ONLY WHEN YOU FORGET TO UNCHECK "Copy the main branch only") Set the data branch in your repository to be synchronized with the data branch in the PressMint repository:
 ```bash
 cd PressMint
 git remote add upstream https://github.com/clarin-eric/PressMint.git
