@@ -106,7 +106,7 @@ For the PressMint-SI corpus we plan to:
 * Sample sPeriodika to:
 
     * remove texts that are not newspapers
-    * remove text older than 1850 (they use the old alphabet not correctly recognised by OCR=+)
+    * remove text older than 1850 (they use the old alphabet incorrectly recognised by OCR)
     * remove texts with too many paragraphs of low OCR quality
     * (maybe) remove paragraphs with low OCR quality
 
