@@ -98,3 +98,19 @@ Below is the start of a corpus text:
 For most of the corpus per-page JPEGs are available on the Web and intergrated into the concordancer search.
 However, they are not of high quality (quality: 50).
 [Here](https://nl.ijs.si/inz/speriodika/4OVRPKTJ-2.jpg) is an example.
+
+## Conversion plan
+
+For the PressMint-SI corpus we plan to:
+
+* Sample sPeriodika to:
+
+    * remove texts that are not newspapers
+    * remove text older than 1850 (they use the old alphabet not correctly recognised by OCR=+)
+    * remove texts with too many paragraphs of low OCR quality
+    * (maybe) remove paragraphs with low OCR quality
+
+* Develop conversion procedure for vertical to PressMint format
+
+    * a parameter specifies whether to produce plain text or .ana version
+    * we retain all the available metadata & do not plan to introduce new metadata
