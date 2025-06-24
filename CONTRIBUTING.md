@@ -9,6 +9,7 @@ Sample data should be pushed to the Data branch of the PressMint repository dire
 
 - [Create a GitHub account](https://github.com/signup) if you don't have one.
 - [Fork PressMint repository](https://github.com/clarin-eric/PressMint/fork) into your organization or private account.
+  - uncheck "Copy the main branch only"
 - Start the terminal on your computer and navigate to the folder where you want the PressMint local clone of the repository to be placed:
 
 ```bash
@@ -16,8 +17,7 @@ Sample data should be pushed to the Data branch of the PressMint repository dire
  git clone git@github.com:<USER-ORG>/PressMint.git
 ```
 
-- Set the data branch in your repository to be synchronized with the data branch in the PressMint repository:
-
+- (ONLY WHEN YOU FORGET TO UNCHECK "Copy the main branch only") Set the data branch in your repository to be synchronized with the data branch in the PressMint repository:
 ```bash
 cd PressMint
 git remote add upstream https://github.com/clarin-eric/PressMint.git
