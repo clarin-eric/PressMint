@@ -9,6 +9,7 @@ Sample data should be pushed to the Data branch of the PressMint repository dire
 
 - [Create a GitHub account](https://github.com/signup) if you don't have one.
 - [Fork PressMint repository](https://github.com/clarin-eric/PressMint/fork) into your organization or private account.
+  - uncheck "Copy the main branch only"
 - Start the terminal on your computer and navigate to the folder where you want the PressMint local clone of the repository to be placed:
 
 ```bash
