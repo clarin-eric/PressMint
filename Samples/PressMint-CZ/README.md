@@ -2,7 +2,7 @@
 
 ## Data source
 
-The source of the PressMint-CZ corpus will be ...
+The source of the PressMint-CZ corpus will be a selection of texts from the digital library Kramerius, which is a project of the National Library of the Czech Republic.
 
 ### Details of the source:
 
