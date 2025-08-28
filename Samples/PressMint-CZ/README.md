@@ -18,7 +18,7 @@ The library conains two relevant collections:
 
 * __Size__: 
 
-  - issues: 11(Local Press) + 22(Daily Press) = 33
+  - issues: 11(Local Press), 22(Daily Press), 26(both)
   - volumes: 504
   - copies: 139 k
   - pages: 954 k
@@ -26,7 +26,6 @@ The library conains two relevant collections:
   - facimiles: 954k * 6MB = 5.7 TB  (raugh estimation - not downloaded yet)
 
 * __Structure__: 
-
 It is possible to reconstruct all relations collection-issue-volume-copie-page. Pages corresponds to scan of the page in jpg format and automaticaly recognized text.
 
 * __Correction__: -
@@ -44,7 +43,11 @@ It is possible to reconstruct all relations collection-issue-volume-copie-page. 
 
 * __Facsimile__: The image files for single page is available from original source, eg ![1st page, Národní listy 1.1.1961](https://api.kramerius.mzk.cz/search/iiif/uuid:1c0e0e26-435f-11dd-b505-00145e5790ea/full/max/0/default.jpg)
 
-## Conversion plan
+#### Details of the exepected source:
 
-For the PressMint-CZ corpus we plan to:
+Only daily and not local press will be included:
+![words per year](https://raw.githubusercontent.com/ufal/PressMint-CZ-pipeline/refs/heads/main/DataStats/chart-year-word-issue.png)
+
+
+## Conversion plan
 
