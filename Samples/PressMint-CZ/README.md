@@ -48,14 +48,14 @@ It is possible to reconstruct all relations collection-issue-volume-copie-page. 
 Only daily and not local press will be included:
 ![words per year](https://raw.githubusercontent.com/ufal/PressMint-CZ-pipeline/refs/heads/main/DataStats/chart-year-word-issue.png)
 
-| id_issue                                | title                                      |   pages |       words |
-|----------------------------------------|-------------------------------------------|--------:|-----------:|
-| 5abfd8d0-b9f1-11e9-8fdf-005056827e52   | Národní nowiny                            |    2 446 |   5 580 345 |
-| 02203ad6-32f0-11de-992b-00145e5790ea   | Moravská orlice                           |   82 428 | 205 386 790 |
-| ae876087-435d-11dd-b505-00145e5790ea   | Národní listy                             |  181 419 | 681 521 395 |
-| bdc405b0-e5f9-11dc-bfb2-000d606f5dc6   | Lidové noviny                             |   73 792 | 166 273 100 |
-| b138db20-a5e4-11e8-99aa-005056827e51   | Katolické listy                           |   19 786 |  40 013 163 |
-| 5c259210-2182-11e6-918e-5ef3fc9ae867   | Čech: politický týdenník katolický        |   67 667 | 146 565 919 |
+| title                                      |   pages |       words |
+|-------------------------------------------|--------:|-----------:|
+| [Národní nowiny](https://www.digitalniknihovna.cz/mzk/periodical/uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52)                            |    2 446 |   5 580 345 |
+| [Moravská orlice](https://www.digitalniknihovna.cz/mzk/periodical/uuid:02203ad6-32f0-11de-992b-00145e5790ea)                           |   82 428 | 205 386 790 |
+| [Národní listy](https://www.digitalniknihovna.cz/mzk/periodical/uuid:ae876087-435d-11dd-b505-00145e5790ea)                             |  181 419 | 681 521 395 |
+| [Lidové noviny](https://www.digitalniknihovna.cz/mzk/periodical/uuid:bdc405b0-e5f9-11dc-bfb2-000d606f5dc6)                             |   73 792 | 166 273 100 |
+| [Katolické listy](https://www.digitalniknihovna.cz/mzk/periodical/uuid:b138db20-a5e4-11e8-99aa-005056827e51)                           |   19 786 |  40 013 163 |
+| [Čech: politický týdenník katolický](https://www.digitalniknihovna.cz/mzk/periodical/uuid:5c259210-2182-11e6-918e-5ef3fc9ae867)        |   67 667 | 146 565 919 |
 
 ## Conversion plan
 
