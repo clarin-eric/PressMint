@@ -25,7 +25,7 @@ SUBSET = --localsource=p5subset.xml
 PROFILE = --profiledir=$(shell pwd) --profile=profile
 
 # Convert to HTML
-html:	prepare val-schema
+html:	prepare val-odd
 	Stylesheets/bin/teitohtml ${PROFILE} --odd ${SUBSET} ${OUTPUT} ${ODD} ../docs/index.html
 
 # Compile schemas to RelaxNG, DTD and XSD; best use the RelaxNG one.
