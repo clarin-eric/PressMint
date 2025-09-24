@@ -33,7 +33,8 @@ The corpus contains not only newspapers but also other periodically appearing te
 
 * __Size__: Around 150 thousand texts or 910 million tokens (50GB).
 
-* __Structure__: The corpus is structured into texts (typically corresponding to one issue of a periodical) and paragraphs.
+* __Structure__: The corpus is structured into texts (typically corresponding to one issue of a periodical and
+sometimes to a particular article) and paragraphs.
 No effort has been made to structure the texts into articles, mark their titles and similar.
 
 * __Correction__: The OCR-ed texts were corrected with [cSMTiser](https://github.com/clarinsi/csmtiser) trained on
@@ -59,8 +60,8 @@ following the Universal Dependencies formalism for tagging, and the standard CoN
     
     The paragraphs have the following metadata:
     
-    - Image (not available for all documents)
-    - OCR quality estimation (either "low" or "good")
+    - URL of the page image where the paragraph appears (not available for all documents)
+    - OCR quality estimation (either "low" or "good") of the page where the paragraph appears 
 
 * __Format__: The corpus is formatted as a vertical file for the concordancer.
 Below is the start of a corpus text:
@@ -107,8 +108,8 @@ For the PressMint-SI corpus we plan to:
 
     * remove texts that are not newspapers
     * remove text older than 1850 (they use the old alphabet incorrectly recognised by OCR)
-    * remove texts with too many paragraphs of low OCR quality
-    * (maybe) remove paragraphs with low OCR quality
+    * remove texts with too many paragraphs (pages) of low OCR quality
+    * (maybe) remove paragraphs (pages) with low OCR quality
 
 * Develop conversion procedure for vertical to PressMint format
 
