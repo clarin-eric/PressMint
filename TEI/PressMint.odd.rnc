@@ -10,7 +10,7 @@ namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 namespace xsl = "http://www.w3.org/1999/XSL/Transform"
 
-# Schema generated from ODD source 2025-09-16T16:18:17Z. 2025-09-16. 
+# Schema generated from ODD source 2025-09-22T11:51:42Z. 2025-09-16. 
 # TEI Edition: P5 Version 4.10.0a. Last updated on 13th August 2025, revision 73d59c946 
 # TEI Edition Location: https://www.tei-c.org/Vault/P5/4.10.0a/ 
 #
@@ -89,6 +89,63 @@ tei_att.canonical.attribute.ref =
     list {
       xsd:anyURI { pattern = "\S+" }+
     }
+  }?
+tei_att.citing.attributes =
+  tei_att.citing.attribute.unit,
+  tei_att.citing.attribute.from,
+  tei_att.citing.attribute.to
+tei_att.citing.attribute.unit =
+  
+  ## identifies the unit of information conveyed by the element.
+  ## Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line; 5] chapter (chapter); 6] part; 7] column; 8] entry
+  attribute unit {
+    
+    ## (volume) the element contains a volume number.
+    "volume"
+    | 
+      ## the element contains an issue number, or volume and issue numbers.
+      "issue"
+    | 
+      ## (page) the element contains a page number or page range.
+      "page"
+    | 
+      ## the element contains a line number or line range.
+      "line"
+    | 
+      ## (chapter) the element contains a chapter indication (number and/or title)
+      "chapter"
+    | 
+      ## the element identifies a part of a book or collection.
+      "part"
+    | 
+      ## the element identifies a column.
+      "column"
+    | 
+      ## the element identifies an entry number or label in a list of entries.
+      "entry"
+    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
+  }?
+tei_att.citing.attribute.from =
+  [
+    a:documentation [
+      "specifies the starting point of the range of units indicated by the "
+      ns1:code [ "@unit" ]
+      " attribute."
+    ]
+  ]
+  attribute from {
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
+  }?
+tei_att.citing.attribute.to =
+  [
+    a:documentation [
+      "specifies the end-point of the range of units indicated by the "
+      ns1:code [ "@unit" ]
+      " attribute."
+    ]
+  ]
+  attribute to {
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 tei_att.cmc.attributes = tei_att.cmc.attribute.generatedBy
 tei_att.cmc.attribute.generatedBy =
@@ -951,7 +1008,10 @@ tei_att.written.attribute.hand =
     xsd:anyURI { pattern = "\S+" }
   }?
 tei_att.datable.attributes =
-  tei_att.datable.w3c.attributes, tei_att.datable.attribute.period
+  tei_att.datable.custom.attributes,
+  tei_att.datable.iso.attributes,
+  tei_att.datable.w3c.attributes,
+  tei_att.datable.attribute.period
 tei_att.datable.attribute.period =
   [
     a:documentation [
@@ -1320,12 +1380,16 @@ tei_att.timed.attribute.end =
   attribute end {
     xsd:anyURI { pattern = "\S+" }
   }?
-tei_model.nameLike.agent = tei_name
-tei_model.nameLike.agent_alternation = tei_name
-tei_model.nameLike.agent_sequence = tei_name
-tei_model.nameLike.agent_sequenceOptional = tei_name?
-tei_model.nameLike.agent_sequenceOptionalRepeatable = tei_name*
-tei_model.nameLike.agent_sequenceRepeatable = tei_name+
+tei_model.nameLike.agent = tei_name | tei_orgName | tei_persName
+tei_model.nameLike.agent_alternation =
+  tei_name | tei_orgName | tei_persName
+tei_model.nameLike.agent_sequence = tei_name, tei_orgName, tei_persName
+tei_model.nameLike.agent_sequenceOptional =
+  tei_name?, tei_orgName?, tei_persName?
+tei_model.nameLike.agent_sequenceOptionalRepeatable =
+  tei_name*, tei_orgName*, tei_persName*
+tei_model.nameLike.agent_sequenceRepeatable =
+  tei_name+, tei_orgName+, tei_persName+
 tei_model.segLike = tei_s | tei_w | tei_pc
 tei_model.segLike_alternation = tei_s | tei_w | tei_pc
 tei_model.segLike_sequence = tei_s, tei_w, tei_pc
@@ -1529,7 +1593,7 @@ tei_model.milestoneLike_sequence = tei_pb, tei_fw
 tei_model.milestoneLike_sequenceOptional = tei_pb?, tei_fw?
 tei_model.milestoneLike_sequenceOptionalRepeatable = tei_pb*, tei_fw*
 tei_model.milestoneLike_sequenceRepeatable = tei_pb+, tei_fw+
-tei_model.gLike = tei_g
+tei_model.gLike = notAllowed
 tei_model.oddDecl = notAllowed
 tei_model.oddDecl_alternation = notAllowed
 tei_model.oddDecl_sequence = empty
@@ -1610,12 +1674,12 @@ tei_model.global.edit_sequenceRepeatable =
   tei_gap+, tei_addSpan+, tei_damageSpan+, tei_delSpan+, tei_space+
 tei_model.divPart = tei_model.lLike | tei_model.pLike
 tei_model.personLike = notAllowed
-tei_model.placeNamePart = notAllowed
-tei_model.placeNamePart_alternation = notAllowed
-tei_model.placeNamePart_sequence = empty
-tei_model.placeNamePart_sequenceOptional = empty
-tei_model.placeNamePart_sequenceOptionalRepeatable = empty
-tei_model.placeNamePart_sequenceRepeatable = notAllowed
+tei_model.placeNamePart = tei_placeName
+tei_model.placeNamePart_alternation = tei_placeName
+tei_model.placeNamePart_sequence = tei_placeName
+tei_model.placeNamePart_sequenceOptional = tei_placeName?
+tei_model.placeNamePart_sequenceOptionalRepeatable = tei_placeName*
+tei_model.placeNamePart_sequenceRepeatable = tei_placeName+
 tei_model.placeStateLike = tei_model.placeNamePart
 tei_model.placeStateLike_alternation =
   tei_model.placeNamePart_alternation
@@ -1659,9 +1723,9 @@ tei_model.frontPart.drama = notAllowed
 tei_model.pLike.front = tei_head | tei_docDate
 tei_model.divBottomPart = notAllowed
 tei_model.divBottom = tei_model.divWrapper | tei_model.divBottomPart
-tei_model.imprintPart = tei_publisher | tei_pubPlace
+tei_model.imprintPart = tei_publisher | tei_biblScope | tei_pubPlace
 tei_model.catDescPart = notAllowed
-tei_model.settingPart = notAllowed
+tei_model.settingPart = tei_placeName
 tei_model.addressLike = tei_email
 tei_model.addressLike_alternation = tei_email
 tei_model.addressLike_sequence = tei_email
@@ -1673,31 +1737,37 @@ tei_model.nameLike =
   | tei_model.offsetLike
   | tei_model.placeStateLike
   | tei_idno
+  | tei_model.persNamePart
 tei_model.nameLike_alternation =
   tei_model.nameLike.agent_alternation
   | tei_model.offsetLike_alternation
   | tei_model.placeStateLike_alternation
   | tei_idno
+  | tei_model.persNamePart_alternation
 tei_model.nameLike_sequence =
   tei_model.nameLike.agent_sequence,
   tei_model.offsetLike_sequence,
   tei_model.placeStateLike_sequence,
-  tei_idno
+  tei_idno,
+  tei_model.persNamePart_sequence
 tei_model.nameLike_sequenceOptional =
   tei_model.nameLike.agent_sequenceOptional?,
   tei_model.offsetLike_sequenceOptional?,
   tei_model.placeStateLike_sequenceOptional?,
-  tei_idno?
+  tei_idno?,
+  tei_model.persNamePart_sequenceOptional?
 tei_model.nameLike_sequenceOptionalRepeatable =
   tei_model.nameLike.agent_sequenceOptionalRepeatable*,
   tei_model.offsetLike_sequenceOptionalRepeatable*,
   tei_model.placeStateLike_sequenceOptionalRepeatable*,
-  tei_idno*
+  tei_idno*,
+  tei_model.persNamePart_sequenceOptionalRepeatable*
 tei_model.nameLike_sequenceRepeatable =
   tei_model.nameLike.agent_sequenceRepeatable+,
   tei_model.offsetLike_sequenceRepeatable+,
   tei_model.placeStateLike_sequenceRepeatable+,
-  tei_idno+
+  tei_idno+,
+  tei_model.persNamePart_sequenceRepeatable+
 tei_model.global =
   tei_model.global.meta
   | tei_model.milestoneLike
@@ -1790,7 +1860,6 @@ tei_model.encodingDescPart =
   | tei_listPrefixDef
   | tei_classDecl
   | tei_appInfo
-  | tei_charDecl
 tei_model.editorialDeclPart =
   tei_correction
   | tei_normalization
@@ -2345,6 +2414,15 @@ tei_publisher =
     tei_macro.phraseSeq,
     tei_att.global.attributes,
     tei_att.canonical.attributes,
+    empty
+  }
+tei_biblScope =
+  
+  ## (scope of bibliographic reference) defines the scope of a bibliographic reference, for example as a list of page numbers, or a named subdivision of a larger work. [3.12.2.5. Scopes and Ranges in Bibliographic Citations]
+  element biblScope {
+    tei_macro.phraseSeq,
+    tei_att.global.attributes,
+    tei_att.citing.attributes,
     empty
   }
 tei_pubPlace =
@@ -4068,6 +4146,192 @@ tei_undo =
     }?,
     empty
   }
+tei_att.datable.custom.attributes =
+  tei_att.datable.custom.attribute.when-custom,
+  tei_att.datable.custom.attribute.notBefore-custom,
+  tei_att.datable.custom.attribute.notAfter-custom,
+  tei_att.datable.custom.attribute.from-custom,
+  tei_att.datable.custom.attribute.to-custom,
+  tei_att.datable.custom.attribute.datingPoint,
+  tei_att.datable.custom.attribute.datingMethod
+tei_att.datable.custom.attribute.when-custom =
+  
+  ## supplies the value of a date or time in some custom standard form.
+  attribute when-custom {
+    list {
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
+    }
+  }?
+tei_att.datable.custom.attribute.notBefore-custom =
+  
+  ## specifies the earliest possible date for the event in some custom standard form.
+  attribute notBefore-custom {
+    list {
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
+    }
+  }?
+tei_att.datable.custom.attribute.notAfter-custom =
+  
+  ## specifies the latest possible date for the event in some custom standard form.
+  attribute notAfter-custom {
+    list {
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
+    }
+  }?
+tei_att.datable.custom.attribute.from-custom =
+  
+  ## indicates the starting point of the period in some custom standard form.
+  attribute from-custom {
+    list {
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
+    }
+  }?
+tei_att.datable.custom.attribute.to-custom =
+  
+  ## indicates the ending point of the period in some custom standard form.
+  attribute to-custom {
+    list {
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
+    }
+  }?
+tei_att.datable.custom.attribute.datingPoint =
+  
+  ## supplies a pointer to some location defining a named point in time with reference to which the datable item is understood to have occurred.
+  attribute datingPoint {
+    xsd:anyURI { pattern = "\S+" }
+  }?
+tei_att.datable.custom.attribute.datingMethod =
+  [
+    a:documentation [
+      "supplies a pointer to a "
+      ns1:code [ "<calendar>" ]
+      " element or other means of interpreting the values of the custom dating attributes."
+    ]
+  ]
+  attribute datingMethod {
+    xsd:anyURI { pattern = "\S+" }
+  }?
+tei_model.persNamePart = notAllowed
+tei_model.persNamePart_alternation = notAllowed
+tei_model.persNamePart_sequence = empty
+tei_model.persNamePart_sequenceOptional = empty
+tei_model.persNamePart_sequenceOptionalRepeatable = empty
+tei_model.persNamePart_sequenceRepeatable = notAllowed
+tei_att.datable.iso.attributes =
+  tei_att.datable.iso.attribute.when-iso,
+  tei_att.datable.iso.attribute.notBefore-iso,
+  tei_att.datable.iso.attribute.notAfter-iso,
+  tei_att.datable.iso.attribute.from-iso,
+  tei_att.datable.iso.attribute.to-iso
+tei_att.datable.iso.attribute.when-iso =
+  
+  ## supplies the value of a date or time in a standard form.
+  attribute when-iso {
+    xsd:date
+    | xsd:gYear
+    | xsd:gMonth
+    | xsd:gDay
+    | xsd:gYearMonth
+    | xsd:gMonthDay
+    | xsd:time
+    | xsd:dateTime
+    | xsd:token { pattern = "[0-9.,DHMPRSTWYZ/:+\-]+" }
+  }?
+tei_att.datable.iso.attribute.notBefore-iso =
+  
+  ## specifies the earliest possible date for the event in standard form, e.g. yyyy-mm-dd.
+  attribute notBefore-iso {
+    xsd:date
+    | xsd:gYear
+    | xsd:gMonth
+    | xsd:gDay
+    | xsd:gYearMonth
+    | xsd:gMonthDay
+    | xsd:time
+    | xsd:dateTime
+    | xsd:token { pattern = "[0-9.,DHMPRSTWYZ/:+\-]+" }
+  }?
+tei_att.datable.iso.attribute.notAfter-iso =
+  
+  ## specifies the latest possible date for the event in standard form, e.g. yyyy-mm-dd.
+  attribute notAfter-iso {
+    xsd:date
+    | xsd:gYear
+    | xsd:gMonth
+    | xsd:gDay
+    | xsd:gYearMonth
+    | xsd:gMonthDay
+    | xsd:time
+    | xsd:dateTime
+    | xsd:token { pattern = "[0-9.,DHMPRSTWYZ/:+\-]+" }
+  }?
+tei_att.datable.iso.attribute.from-iso =
+  
+  ## indicates the starting point of the period in standard form.
+  attribute from-iso {
+    xsd:date
+    | xsd:gYear
+    | xsd:gMonth
+    | xsd:gDay
+    | xsd:gYearMonth
+    | xsd:gMonthDay
+    | xsd:time
+    | xsd:dateTime
+    | xsd:token { pattern = "[0-9.,DHMPRSTWYZ/:+\-]+" }
+  }?
+tei_att.datable.iso.attribute.to-iso =
+  
+  ## indicates the ending point of the period in standard form.
+  attribute to-iso {
+    xsd:date
+    | xsd:gYear
+    | xsd:gMonth
+    | xsd:gDay
+    | xsd:gYearMonth
+    | xsd:gMonthDay
+    | xsd:time
+    | xsd:dateTime
+    | xsd:token { pattern = "[0-9.,DHMPRSTWYZ/:+\-]+" }
+  }?
+tei_orgName =
+  
+  ## (organization name) contains an organizational name. [14.2.2. Organizational Names]
+  element orgName {
+    tei_macro.phraseSeq,
+    tei_att.global.attributes,
+    tei_att.cmc.attributes,
+    tei_att.datable.attributes,
+    tei_att.editLike.attributes,
+    tei_att.personal.attributes,
+    tei_att.typed.attributes,
+    empty
+  }
+tei_persName =
+  
+  ## (personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. [14.2.1. Personal Names]
+  element persName {
+    tei_macro.phraseSeq,
+    tei_att.global.attributes,
+    tei_att.cmc.attributes,
+    tei_att.datable.attributes,
+    tei_att.editLike.attributes,
+    tei_att.personal.attributes,
+    tei_att.typed.attributes,
+    empty
+  }
+tei_placeName =
+  
+  ## (place name) contains an absolute or relative place name. [14.2.3. Place Names]
+  element placeName {
+    tei_macro.phraseSeq,
+    tei_att.global.attributes,
+    tei_att.cmc.attributes,
+    tei_att.datable.attributes,
+    tei_att.editLike.attributes,
+    tei_att.personal.attributes,
+    tei_att.typed.attributes,
+    empty
+  }
 tei_att.lexicographic.normalized.attributes =
   tei_att.lexicographic.normalized.attribute.norm,
   tei_att.lexicographic.normalized.attribute.orig
@@ -4234,1186 +4498,6 @@ tei_pc =
     
     ## indicates whether this punctuation mark precedes or follows the unit it delimits.
     attribute pre { xsd:boolean }?,
-    empty
-  }
-tei_att.gaijiProp.attributes =
-  tei_att.datable.attributes,
-  tei_att.gaijiProp.attribute.name,
-  tei_att.gaijiProp.attribute.value,
-  tei_att.gaijiProp.attribute.version,
-  tei_att.gaijiProp.attribute.scheme
-tei_att.gaijiProp.attribute.name =
-  
-  ## provides the name of the character or glyph property being defined.
-  attribute name { xsd:NCName }
-tei_att.gaijiProp.attribute.value =
-  
-  ## provides the value of the character or glyph property being defined.
-  attribute value { xsd:string }
-tei_att.gaijiProp.attribute.version =
-  
-  ## specifies the version number of the Unicode Standard in which this property name is defined.
-  ## Suggested values include: 1] 1.0.1; 2] 1.1; 3] 2.0; 4] 2.1; 5] 3.0; 6] 3.1; 7] 3.2; 8] 4.0; 9] 4.1; 10] 5.0; 11] 5.1; 12] 5.2; 13] 6.0; 14] 6.1; 15] 6.2; 16] 6.3; 17] 7.0; 18] 8.0; 19] 9.0; 20] 10.0; 21] 11.0; 22] 12.0; 23] 12.1; 24] 13.0; 25] 14.0; 26] 15.0; 27] unassigned
-  attribute version {
-    
-    ##
-    "1.0.1"
-    | 
-      ##
-      "1.1"
-    | 
-      ##
-      "2.0"
-    | 
-      ##
-      "2.1"
-    | 
-      ##
-      "3.0"
-    | 
-      ##
-      "3.1"
-    | 
-      ##
-      "3.2"
-    | 
-      ##
-      "4.0"
-    | 
-      ##
-      "4.1"
-    | 
-      ##
-      "5.0"
-    | 
-      ##
-      "5.1"
-    | 
-      ##
-      "5.2"
-    | 
-      ##
-      "6.0"
-    | 
-      ##
-      "6.1"
-    | 
-      ##
-      "6.2"
-    | 
-      ##
-      "6.3"
-    | 
-      ##
-      "7.0"
-    | 
-      ##
-      "8.0"
-    | 
-      ##
-      "9.0"
-    | 
-      ##
-      "10.0"
-    | 
-      ##
-      "11.0"
-    | 
-      ##
-      "12.0"
-    | 
-      ##
-      "12.1"
-    | 
-      ##
-      "13.0"
-    | 
-      ##
-      "14.0"
-    | 
-      ##
-      "15.0"
-    | 
-      ##
-      "unassigned"
-    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
-  }?
-tei_att.gaijiProp.attribute.scheme =
-  
-  ## supplies the name of the character set system from which this property is drawn.
-  ## Sample values include: 1] Unicode (Unicode); 2] Bridwell (E. Nelson Bridwell); 3] Brewer (Georg Brewer); 4] Doyle (Darren Doyle); 5] Schreyer (Christine Schreyer)
-  [ a:defaultValue = "Unicode" ]
-  attribute scheme {
-    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
-  }?
-tei_g =
-  
-  ## (character or glyph) represents a glyph, or a non-standard character. [5. Characters, Glyphs, and Writing Modes]
-  element g {
-    text,
-    tei_att.global.attributes,
-    tei_att.typed.attributes,
-    
-    ## points to a description of the character or glyph intended.
-    attribute ref {
-      xsd:anyURI { pattern = "\S+" }
-    }?,
-    empty
-  }
-tei_charDecl =
-  
-  ## (character declarations) provides information about nonstandard characters and glyphs. [5.2. Markup Constructs for Representation of Characters and Glyphs]
-  element charDecl {
-    (tei_desc?, (tei_char | tei_glyph)+),
-    tei_att.global.attributes,
-    empty
-  }
-tei_char =
-  
-  ## (character) provides descriptive information about a character. [5.2. Markup Constructs for Representation of Characters and Glyphs]
-  element char {
-    (tei_unicodeProp
-     | tei_unihanProp
-     | tei_localProp
-     | tei_mapping
-     | tei_model.graphicLike
-     | tei_model.noteLike
-     | tei_model.descLike)*,
-    tei_att.global.attributes,
-    empty
-  }
-tei_glyph =
-  
-  ## (character glyph) provides descriptive information about a character glyph. [5.2. Markup Constructs for Representation of Characters and Glyphs]
-  element glyph {
-    (tei_unicodeProp
-     | tei_unihanProp
-     | tei_localProp
-     | tei_mapping
-     | tei_model.graphicLike
-     | tei_model.noteLike
-     | tei_model.descLike)*,
-    tei_att.global.attributes,
-    empty
-  }
-tei_localProp =
-  
-  ## (locally defined property) provides a locally defined character (or glyph) property. [5.2.1. Character Properties]
-  element localProp {
-    empty,
-    tei_att.global.attributes,
-    tei_att.gaijiProp.attributes,
-    empty
-  }
-tei_mapping =
-  [
-    a:documentation [
-      "(character mapping) contains one or more characters which are related to the parent character or glyph in some respect, as specified by the "
-      ns1:code [ "@type" ]
-      " attribute. [5.2. Markup Constructs for Representation of Characters and Glyphs]"
-    ]
-  ]
-  element mapping {
-    tei_macro.xtext,
-    tei_att.global.attributes,
-    tei_att.datable.attributes,
-    tei_att.typed.attributes,
-    empty
-  }
-tei_unihanProp =
-  
-  ## (unihan property) holds the name and value of a normative or informative Unihan character (or glyph) property as part of its attributes. [5.2.1. Character Properties]
-  element unihanProp {
-    empty,
-    tei_att.global.attributes,
-    tei_att.gaijiProp.attribute.version,
-    tei_att.gaijiProp.attribute.scheme,
-    tei_att.datable.attribute.period,
-    tei_att.datable.w3c.attribute.when,
-    tei_att.datable.w3c.attribute.notBefore,
-    tei_att.datable.w3c.attribute.notAfter,
-    tei_att.datable.w3c.attribute.from,
-    tei_att.datable.w3c.attribute.to,
-    
-    ## specifies the normalized name of a unicode han database (Unihan) property.
-    attribute name {
-      
-      ##
-      "kZVariant"
-      | 
-        ##
-        "kAccountingNumeric"
-      | 
-        ##
-        "kBigFive"
-      | 
-        ##
-        "kCCCII"
-      | 
-        ##
-        "kCNS1986"
-      | 
-        ##
-        "kCNS1992"
-      | 
-        ##
-        "kCangjie"
-      | 
-        ##
-        "kCantonese"
-      | 
-        ##
-        "kCheungBauer"
-      | 
-        ##
-        "kCheungBauerIndex"
-      | 
-        ##
-        "kCihaiT"
-      | 
-        ##
-        "kCompatibilityVariant"
-      | 
-        ##
-        "kCowles"
-      | 
-        ##
-        "kDaeJaweon"
-      | 
-        ##
-        "kDefinition"
-      | 
-        ##
-        "kEACC"
-      | 
-        ##
-        "kFenn"
-      | 
-        ##
-        "kFennIndex"
-      | 
-        ##
-        "kFourCornerCode"
-      | 
-        ##
-        "kFrequency"
-      | 
-        ##
-        "kGB0"
-      | 
-        ##
-        "kGB1"
-      | 
-        ##
-        "kGB3"
-      | 
-        ##
-        "kGB5"
-      | 
-        ##
-        "kGB7"
-      | 
-        ##
-        "kGB8"
-      | 
-        ##
-        "kGSR"
-      | 
-        ##
-        "kGradeLevel"
-      | 
-        ##
-        "kHDZRadBreak"
-      | 
-        ##
-        "kHKGlyph"
-      | 
-        ##
-        "kHKSCS"
-      | 
-        ##
-        "kHanYu"
-      | 
-        ##
-        "kHangul"
-      | 
-        ##
-        "kHanyuPinlu"
-      | 
-        ##
-        "kHanyuPinyin"
-      | 
-        ##
-        "kIBMJapan"
-      | 
-        ##
-        "kIICore"
-      | 
-        ##
-        "kIRGDaeJaweon"
-      | 
-        ##
-        "kIRGDaiKanwaZiten"
-      | 
-        ##
-        "kIRGHanyuDaZidian"
-      | 
-        ##
-        "kIRGKangXi"
-      | 
-        ##
-        "kIRG_GSource"
-      | 
-        ##
-        "kIRG_HSource"
-      | 
-        ##
-        "kIRG_JSource"
-      | 
-        ##
-        "kIRG_KPSource"
-      | 
-        ##
-        "kIRG_KSource"
-      | 
-        ##
-        "kIRG_MSource"
-      | 
-        ##
-        "kIRG_TSource"
-      | 
-        ##
-        "kIRG_USource"
-      | 
-        ##
-        "kIRG_VSource"
-      | 
-        ##
-        "kJIS0213"
-      | 
-        ##
-        "kJa"
-      | 
-        ##
-        "kJapaneseKun"
-      | 
-        ##
-        "kJapaneseOn"
-      | 
-        ##
-        "kJinmeiyoKanji"
-      | 
-        ##
-        "kJis0"
-      | 
-        ##
-        "kJis1"
-      | 
-        ##
-        "kJoyoKanji"
-      | 
-        ##
-        "kKPS0"
-      | 
-        ##
-        "kKPS1"
-      | 
-        ##
-        "kKSC0"
-      | 
-        ##
-        "kKSC1"
-      | 
-        ##
-        "kKangXi"
-      | 
-        ##
-        "kKarlgren"
-      | 
-        ##
-        "kKorean"
-      | 
-        ##
-        "kKoreanEducationHanja"
-      | 
-        ##
-        "kKoreanName"
-      | 
-        ##
-        "kLau"
-      | 
-        ##
-        "kMainlandTelegraph"
-      | 
-        ##
-        "kMandarin"
-      | 
-        ##
-        "kMatthews"
-      | 
-        ##
-        "kMeyerWempe"
-      | 
-        ##
-        "kMorohashi"
-      | 
-        ##
-        "kNelson"
-      | 
-        ##
-        "kOtherNumeric"
-      | 
-        ##
-        "kPhonetic"
-      | 
-        ##
-        "kPrimaryNumeric"
-      | 
-        ##
-        "kPseudoGB1"
-      | 
-        ##
-        "kRSAdobe_Japan1_6"
-      | 
-        ##
-        "kRSJapanese"
-      | 
-        ##
-        "kRSKanWa"
-      | 
-        ##
-        "kRSKangXi"
-      | 
-        ##
-        "kRSKorean"
-      | 
-        ##
-        "kRSUnicode"
-      | 
-        ##
-        "kSBGY"
-      | 
-        ##
-        "kSemanticVariant"
-      | 
-        ##
-        "kSimplifiedVariant"
-      | 
-        ##
-        "kSpecializedSemanticVariant"
-      | 
-        ##
-        "kTGH"
-      | 
-        ##
-        "kTaiwanTelegraph"
-      | 
-        ##
-        "kTang"
-      | 
-        ##
-        "kTotalStrokes"
-      | 
-        ##
-        "kTraditionalVariant"
-      | 
-        ##
-        "kVietnamese"
-      | 
-        ##
-        "kXHC1983"
-      | 
-        ##
-        "kXerox"
-    },
-    
-    ## specifies the value of a named Unihan property
-    attribute value {
-      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
-    },
-    empty
-  }
-tei_unicodeProp =
-  
-  ## (unicode property) provides a Unicode property for a character (or glyph). [5.2.1. Character Properties]
-  element unicodeProp {
-    empty,
-    tei_att.global.attributes,
-    tei_att.gaijiProp.attribute.version,
-    tei_att.gaijiProp.attribute.scheme,
-    tei_att.datable.attribute.period,
-    tei_att.datable.w3c.attribute.when,
-    tei_att.datable.w3c.attribute.notBefore,
-    tei_att.datable.w3c.attribute.notAfter,
-    tei_att.datable.w3c.attribute.from,
-    tei_att.datable.w3c.attribute.to,
-    
-    ## specifies the normalized name of a Unicode property.
-    attribute name {
-      
-      ##
-      "Age"
-      | 
-        ##
-        "AHex"
-      | 
-        ##
-        "Alpha"
-      | 
-        ##
-        "Alphabetic"
-      | 
-        ##
-        "ASCII_Hex_Digit"
-      | 
-        ##
-        "bc"
-      | 
-        ##
-        "Bidi_C"
-      | 
-        ##
-        "Bidi_Class"
-      | 
-        ##
-        "Bidi_Control"
-      | 
-        ##
-        "Bidi_M"
-      | 
-        ##
-        "Bidi_Mirrored"
-      | 
-        ##
-        "Bidi_Mirroring_Glyph"
-      | 
-        ##
-        "Bidi_Paired_Bracket"
-      | 
-        ##
-        "Bidi_Paired_Bracket_Type"
-      | 
-        ##
-        "blk"
-      | 
-        ##
-        "Block"
-      | 
-        ##
-        "bmg"
-      | 
-        ##
-        "bpb"
-      | 
-        ##
-        "bpt"
-      | 
-        ##
-        "Canonical_Combining_Class"
-      | 
-        ##
-        "Case_Folding"
-      | 
-        ##
-        "Case_Ignorable"
-      | 
-        ##
-        "Cased"
-      | 
-        ##
-        "ccc"
-      | 
-        ##
-        "CE"
-      | 
-        ##
-        "cf"
-      | 
-        ##
-        "Changes_When_Casefolded"
-      | 
-        ##
-        "Changes_When_Casemapped"
-      | 
-        ##
-        "Changes_When_Lowercased"
-      | 
-        ##
-        "Changes_When_NFKC_Casefolded"
-      | 
-        ##
-        "Changes_When_Titlecased"
-      | 
-        ##
-        "Changes_When_Uppercased"
-      | 
-        ##
-        "CI"
-      | 
-        ##
-        "Comp_Ex"
-      | 
-        ##
-        "Composition_Exclusion"
-      | 
-        ##
-        "CWCF"
-      | 
-        ##
-        "CWCM"
-      | 
-        ##
-        "CWKCF"
-      | 
-        ##
-        "CWL"
-      | 
-        ##
-        "CWT"
-      | 
-        ##
-        "CWU"
-      | 
-        ##
-        "Dash"
-      | 
-        ##
-        "Decomposition_Mapping"
-      | 
-        ##
-        "Decomposition_Type"
-      | 
-        ##
-        "Default_Ignorable_Code_Point"
-      | 
-        ##
-        "Dep"
-      | 
-        ##
-        "Deprecated"
-      | 
-        ##
-        "DI"
-      | 
-        ##
-        "Dia"
-      | 
-        ##
-        "Diacritic"
-      | 
-        ##
-        "dm"
-      | 
-        ##
-        "dt"
-      | 
-        ##
-        "ea"
-      | 
-        ##
-        "East_Asian_Width"
-      | 
-        ##
-        "EqUIdeo"
-      | 
-        ##
-        "Equivalent_Unified_Ideograph"
-      | 
-        ##
-        "Expands_On_NFC"
-      | 
-        ##
-        "Expands_On_NFD"
-      | 
-        ##
-        "Expands_On_NFKC"
-      | 
-        ##
-        "Expands_On_NFKD"
-      | 
-        ##
-        "Ext"
-      | 
-        ##
-        "Extender"
-      | 
-        ##
-        "FC_NFKC"
-      | 
-        ##
-        "FC_NFKC_Closure"
-      | 
-        ##
-        "Full_Composition_Exclusion"
-      | 
-        ##
-        "gc"
-      | 
-        ##
-        "GCB"
-      | 
-        ##
-        "General_Category"
-      | 
-        ##
-        "Gr_Base"
-      | 
-        ##
-        "Gr_Ext"
-      | 
-        ##
-        "Gr_Link"
-      | 
-        ##
-        "Grapheme_Base"
-      | 
-        ##
-        "Grapheme_Cluster_Break"
-      | 
-        ##
-        "Grapheme_Extend"
-      | 
-        ##
-        "Grapheme_Link"
-      | 
-        ##
-        "Hangul_Syllable_Type"
-      | 
-        ##
-        "Hex"
-      | 
-        ##
-        "Hex_Digit"
-      | 
-        ##
-        "hst"
-      | 
-        ##
-        "Hyphen"
-      | 
-        ##
-        "ID_Continue"
-      | 
-        ##
-        "ID_Start"
-      | 
-        ##
-        "IDC"
-      | 
-        ##
-        "Ideo"
-      | 
-        ##
-        "Ideographic"
-      | 
-        ##
-        "IDS"
-      | 
-        ##
-        "IDS_Binary_Operator"
-      | 
-        ##
-        "IDS_Trinary_Operator"
-      | 
-        ##
-        "IDSB"
-      | 
-        ##
-        "IDST"
-      | 
-        ##
-        "Indic_Positional_Category"
-      | 
-        ##
-        "Indic_Syllabic_Category"
-      | 
-        ##
-        "InPC"
-      | 
-        ##
-        "InSC"
-      | 
-        ##
-        "isc"
-      | 
-        ##
-        "ISO_Comment"
-      | 
-        ##
-        "Jamo_Short_Name"
-      | 
-        ##
-        "jg"
-      | 
-        ##
-        "Join_C"
-      | 
-        ##
-        "Join_Control"
-      | 
-        ##
-        "Joining_Group"
-      | 
-        ##
-        "Joining_Type"
-      | 
-        ##
-        "JSN"
-      | 
-        ##
-        "jt"
-      | 
-        ##
-        "kAccountingNumeric"
-      | 
-        ##
-        "kCompatibilityVariant"
-      | 
-        ##
-        "kIICore"
-      | 
-        ##
-        "kIRG_GSource"
-      | 
-        ##
-        "kIRG_HSource"
-      | 
-        ##
-        "kIRG_JSource"
-      | 
-        ##
-        "kIRG_KPSource"
-      | 
-        ##
-        "kIRG_KSource"
-      | 
-        ##
-        "kIRG_MSource"
-      | 
-        ##
-        "kIRG_TSource"
-      | 
-        ##
-        "kIRG_USource"
-      | 
-        ##
-        "kIRG_VSource"
-      | 
-        ##
-        "kOtherNumeric"
-      | 
-        ##
-        "kPrimaryNumeric"
-      | 
-        ##
-        "kRSUnicode"
-      | 
-        ##
-        "lb"
-      | 
-        ##
-        "lc"
-      | 
-        ##
-        "Line_Break"
-      | 
-        ##
-        "LOE"
-      | 
-        ##
-        "Logical_Order_Exception"
-      | 
-        ##
-        "Lower"
-      | 
-        ##
-        "Lowercase"
-      | 
-        ##
-        "Lowercase_Mapping"
-      | 
-        ##
-        "Math"
-      | 
-        ##
-        "na"
-      | 
-        ##
-        "na1"
-      | 
-        ##
-        "Name"
-      | 
-        ##
-        "Name_Alias"
-      | 
-        ##
-        "NChar"
-      | 
-        ##
-        "NFC_QC"
-      | 
-        ##
-        "NFC_Quick_Check"
-      | 
-        ##
-        "NFD_QC"
-      | 
-        ##
-        "NFD_Quick_Check"
-      | 
-        ##
-        "NFKC_Casefold"
-      | 
-        ##
-        "NFKC_CF"
-      | 
-        ##
-        "NFKC_QC"
-      | 
-        ##
-        "NFKC_Quick_Check"
-      | 
-        ##
-        "NFKD_QC"
-      | 
-        ##
-        "NFKD_Quick_Check"
-      | 
-        ##
-        "Noncharacter_Code_Point"
-      | 
-        ##
-        "nt"
-      | 
-        ##
-        "Numeric_Type"
-      | 
-        ##
-        "Numeric_Value"
-      | 
-        ##
-        "nv"
-      | 
-        ##
-        "OAlpha"
-      | 
-        ##
-        "ODI"
-      | 
-        ##
-        "OGr_Ext"
-      | 
-        ##
-        "OIDC"
-      | 
-        ##
-        "OIDS"
-      | 
-        ##
-        "OLower"
-      | 
-        ##
-        "OMath"
-      | 
-        ##
-        "Other_Alphabetic"
-      | 
-        ##
-        "Other_Default_Ignorable_Code_Point"
-      | 
-        ##
-        "Other_Grapheme_Extend"
-      | 
-        ##
-        "Other_ID_Continue"
-      | 
-        ##
-        "Other_ID_Start"
-      | 
-        ##
-        "Other_Lowercase"
-      | 
-        ##
-        "Other_Math"
-      | 
-        ##
-        "Other_Uppercase"
-      | 
-        ##
-        "OUpper"
-      | 
-        ##
-        "Pat_Syn"
-      | 
-        ##
-        "Pat_WS"
-      | 
-        ##
-        "Pattern_Syntax"
-      | 
-        ##
-        "Pattern_White_Space"
-      | 
-        ##
-        "PCM"
-      | 
-        ##
-        "Prepended_Concatenation_Mark"
-      | 
-        ##
-        "QMark"
-      | 
-        ##
-        "Quotation_Mark"
-      | 
-        ##
-        "Radical"
-      | 
-        ##
-        "Regional_Indicator"
-      | 
-        ##
-        "RI"
-      | 
-        ##
-        "SB"
-      | 
-        ##
-        "sc"
-      | 
-        ##
-        "scf"
-      | 
-        ##
-        "Script"
-      | 
-        ##
-        "Script_Extensions"
-      | 
-        ##
-        "scx"
-      | 
-        ##
-        "SD"
-      | 
-        ##
-        "Sentence_Break"
-      | 
-        ##
-        "Sentence_Terminal"
-      | 
-        ##
-        "Simple_Case_Folding"
-      | 
-        ##
-        "Simple_Lowercase_Mapping"
-      | 
-        ##
-        "Simple_Titlecase_Mapping"
-      | 
-        ##
-        "Simple_Uppercase_Mapping"
-      | 
-        ##
-        "slc"
-      | 
-        ##
-        "Soft_Dotted"
-      | 
-        ##
-        "stc"
-      | 
-        ##
-        "STerm"
-      | 
-        ##
-        "suc"
-      | 
-        ##
-        "tc"
-      | 
-        ##
-        "Term"
-      | 
-        ##
-        "Terminal_Punctuation"
-      | 
-        ##
-        "Titlecase_Mapping"
-      | 
-        ##
-        "uc"
-      | 
-        ##
-        "UIdeo"
-      | 
-        ##
-        "Unicode_1_Name"
-      | 
-        ##
-        "Unified_Ideograph"
-      | 
-        ##
-        "Upper"
-      | 
-        ##
-        "Uppercase"
-      | 
-        ##
-        "Uppercase_Mapping"
-      | 
-        ##
-        "Variation_Selector"
-      | 
-        ##
-        "Vertical_Orientation"
-      | 
-        ##
-        "vo"
-      | 
-        ##
-        "VS"
-      | 
-        ##
-        "WB"
-      | 
-        ##
-        "White_Space"
-      | 
-        ##
-        "Word_Break"
-      | 
-        ##
-        "WSpace"
-      | 
-        ##
-        "XID_Continue"
-      | 
-        ##
-        "XID_Start"
-      | 
-        ##
-        "XIDC"
-      | 
-        ##
-        "XIDS"
-      | 
-        ##
-        "XO_NFC"
-      | 
-        ##
-        "XO_NFD"
-      | 
-        ##
-        "XO_NFKC"
-      | 
-        ##
-        "XO_NFKD"
-    },
-    
-    ## specifies the value of a named Unicode property.
-    attribute value { xsd:string },
     empty
   }
 start = tei_TEI | tei_teiCorpus

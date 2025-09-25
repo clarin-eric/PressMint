@@ -877,15 +877,24 @@
             and this is encoded in the nested <gi>bibl</gi> element.</p>
             
             <p>For <hi>corpus components</hi> the source description encodes the edition of the
-            newspaper that the component encodes, i.e. it gives the (bi-lingual) name of the newspaper,
-            the date when the edition was published, and, if available, the URL of the edition on the Web.
+            newspaper that the component encodes, i.e. it gives the name of the newspaper,
+            marked as <code>&lt;title level="j"&gt;</code> 
+            the date when the edition was published. , and, if available, the URL of the edition on the Web.
+            In cases where the whole component corresponds to a particular article in the newspaper, this title
+            is marked as <code>&lt;title level="a"&gt;</code> and if the number of the volume and/or issue of the
+            newspaper is known this can also be encoded as in <gi>biblScope</gi> with the appropriate <att>unit</att>
+            as shown in the following example:
 
             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-sourceDescComp">
               <sourceDesc>
                 <bibl>
-                  <title type="main" xml:lang="sl">Kmetijske in rokodelske novice</title>
+                  <title level="a">Gospodarske skušnje</title>
+                  <title level="j">Kmetijske in rokodelske novice</title>
                   <title type="main" xml:lang="en">Argicultural and Artisan News</title>
+                  <publisher>Jožef Blaznik</publisher>
                   <date when="1899-04-16">16. 4. 1899</date>
+                  <biblScope unit="volume">38</biblScope>
+                  <biblScope unit="issue">3</biblScope>
                   <idno type="URI">https://dlib.si/details/URN:NBN:SI:DOC-000TTDCE/</idno>
                 </bibl>
               </sourceDesc>
