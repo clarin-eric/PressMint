@@ -19,7 +19,7 @@
       </titleStmt>
       <publicationStmt>
         <publisher>CLARIN</publisher>
-        <date>2025-09-16</date>
+        <date>2025-09-25</date>
         <availability status="free">
           <p>This file is freely available and you are hereby authorised to copy, modify, and
           redistribute it in any way without further reference or permissions.</p>
@@ -73,7 +73,7 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
-      <change when="2025-09-16">Tomaž Erjavec: first draft.</change>
+      <change when="2025-09-25">Tomaž Erjavec: first draft.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -83,7 +83,7 @@
           <titlePart type="main">The structure and encoding of
           <ref target="https://github.com/clarin-eric/PressMint">PressMint corpora</ref></titlePart>
         </docTitle>
-        <docDate>2025-09-16</docDate>
+        <docDate>2025-09-25</docDate>
       </titlePage>
       <p></p>
       <divGen type="toc"/>
@@ -488,9 +488,10 @@
             Section on <ref target="#chp-metadata">Corpus metadata</ref>.
 
             The subordinate elements in the text that have an ID (such as
-            page breaks), are recommended to have the top level <att>xml:id</att> as a
+            page breaks, or, more accurately page beginnings), are recommended
+            to have the top level <att>xml:id</att> as a
             prefix and to indicate the element name in the ID. For example, if the top
-            level ID is <val>PressMint-SI_1899-01-02</val>, the first page break
+            level ID is <val>PressMint-SI_1899-01-02</val>, the first page beginning 
             would have the ID <val>PressMint-SI_1899-01-02.pb1</val>.</item>
             
             <item><att>xml:lang</att> is also a global attribute and gives the language
@@ -1259,27 +1260,30 @@
               </body>
             </egXML>
 
-            The exact point where a new page or area starts can also be represented by using the
-            empty page break (<gi>pb</gi>), column break (<gi>cb</gi>) or line break (<gi>lb</gi>) elements,
-            as shown below:
+            The exact point where a new page or area starts can be represented by using the
+            empty page beginning (<gi>pb</gi>), column beginning (<gi>cb</gi>) or line beginning (<gi>lb</gi>) elements,
+            in this order, as shown below:
           
             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-pb">
               <body>
-                <pb facs="#PressMint-SI_1899_KRN-NUK.page1"/>
-                <lb facs="#PressMint-SI_1899_KRN-NUK.page1.line1"/>
+                <pb facs="#PressMint-SI_1899_KRN-NUK.pb1"/>
+                <cb facs="#PressMint-SI_1899_KRN-NUK.cb1"/>
+                <lb facs="#PressMint-SI_1899_KRN-NUK.lb1"/>
                 <p>v Ljubljani, v četrtek 16. aprila 1899.</p>
               </body>
             </egXML>
-            By convention, if these empty elements are used, they should always appear <emph>in front</emph> of the
-            part of the text they cover, i.e. a page/line/column break should come before the text, as above,
-            which is different from the usual practice of putting line breaks at the end of the line.
+            If these empty elements are used, they should always appear, as their name suggestst,
+            <emph>in front</emph> of the part of the text they cover, i.e. a page/line/column beginning
+            should come before the text, as above, which is different from the usual practice of
+            putting line breaks at the end of the line.
+            Furthermore, by convention, the beginnings should appear as high up in the hierarchy as
+            possible, i.e. if they appear at the begining of a paragraph, they should be placed before the start
+            of the paragraph, as in the example above. 
             </p>
             
-            <p>Note that these breaks can appear anywhere in the text, including in the middle of a (end-of-line hyphenated) word,
-            which makes the linguistic annotation of such text more complicated, as texual data is mixed with markup, 
-            typically not otherwise the case. Furthermore, by convention, the breaks should appear as high up in the hierarchy as
-            possible, i.e. if a break should appear at the begining of a paragraph, it should be encoded before its start,
-            as in the example above. </p>
+            <p>Note that these elements can appear anywhere in the text, including in the middle of a (end-of-line hyphenated)
+            word, which makes the linguistic annotation of such text more complicated, as texual data is mixed with markup, 
+            typically not otherwise the case.</p>
         </div>
       </div>
 
@@ -1295,8 +1299,9 @@
 
         <p>PressMint makes few assumptions on the structure of the texts in the TEI <gi>body</gi>
         and optional <gi>front</gi> and <gi>back</gi>. At minimum, they need to contain a series of paragraphs,
-        i.e. <gi>p</gi> elements possibly with interspersed empty break elements, as discussed in the preceding
-        Section on <ref target="#chp-facsimile-facs">Connecting the text to the facsimile</ref>.</p>
+        i.e. <gi>p</gi> elements possibly with interspersed empty page/column/line beginning elements, as
+        discussed in the preceding Section on <ref target="#chp-facsimile-facs">Connecting the text to the
+        facsimile</ref>.</p>
         
         <p>This kind of encoding is appropriate for text with little internal structure.
         However, if the text has been split into articles, these are encoded using the standard <gi>div</gi>
