@@ -18,7 +18,7 @@ The library conains two relevant collections:
 
 * __Size__: 
 
-  - issues: 11(Local Press), 22(Daily Press), 26(both)
+  - periodicals: 11(Local Press), 22(Daily Press), 26(both)
   - volumes: 504
   - copies: 139 k
   - pages: 954 k
@@ -36,8 +36,27 @@ It is possible to reconstruct all relations collection-issue-volume-copie-page. 
 
     The texts in the corpus have the following metadata:
 
-    - Document ID 
-    - ...
+    - Periodical:
+      - ID
+      - title _Národní nowiny_
+      - Date - from-to
+    - Volume:
+      - ID
+      - Date - from-to
+    - Copy:
+      - ID 
+      - Date
+      - language
+      - (Author)
+      - (Publisher - person name)
+      - shelf location of physical copy
+      - other ids:
+        - urn:nbn
+        - [ccnb](https://www.registrdigitalizace.cz/rdcz/info/data/ccnb)
+    - Page
+      - ID
+      - page number
+      - type: _TitlePage / NormalPage / Advertisement_ (rare types _Blank / FlyLeaf / ListOfIllustrations / Table / TableOfContents_)
     
 * __Format__: Raw text, not sure if it always follow the order of columns in article.
 
@@ -48,7 +67,7 @@ It is possible to reconstruct all relations collection-issue-volume-copie-page. 
 Only daily and not local press will be included:
 ![words per year](https://raw.githubusercontent.com/ufal/PressMint-CZ-pipeline/refs/heads/main/DataStats/chart-year-word-issue.png)
 
-| title                                      |   pages |       words |
+| title (periodicals)                       |   pages |       words |
 |-------------------------------------------|--------:|-----------:|
 | [Národní nowiny](https://www.digitalniknihovna.cz/mzk/periodical/uuid:5abfd8d0-b9f1-11e9-8fdf-005056827e52)                            |    2 446 |   5 580 345 |
 | [Moravská orlice](https://www.digitalniknihovna.cz/mzk/periodical/uuid:02203ad6-32f0-11de-992b-00145e5790ea)                           |   82 428 | 205 386 790 |
