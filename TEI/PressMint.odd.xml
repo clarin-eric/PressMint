@@ -1,0 +1,1838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="tei_odds.rng" type="application/xml"
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns:rng="http://relaxng.org/ns/structure/1.0" 
+     xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:sch="http://purl.oclc.org/dsdl/schematron" 
+     xmlns:eg="http://www.tei-c.org/ns/Examples"
+     xmlns:egXML="http://www.tei-c.org/ns/Examples"
+     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+     xmlns:tei="http://www.tei-c.org/ns/1.0"
+     xml:lang="en" n="tei_clarin">
+  
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The structure and encoding of PressMint corpora</title>
+        <author>Tomaž Erjavec, tomaz.erjavec@ijs.si</author>
+        <author>Matyáš Kopp, kopp@ufal.mff.cuni.cz</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>CLARIN</publisher>
+        <date>2025-09-27</date>
+        <availability status="free">
+          <p>This file is freely available and you are hereby authorised to copy, modify, and
+          redistribute it in any way without further reference or permissions.</p>
+        </availability>
+        <pubPlace>
+          <ref target="https://github.com/clarin-eric/PressMint">https://github.com/clarin-eric/PressMint</ref>
+        </pubPlace>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Made on the basis of the <ref
+        target="https://github.com/clarin-eric/ParlaMint">ParlaMint</ref> guidelines and schema.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Research Infrastructure for Language Resources and Tools <ref target="https://www.clarin.eu/">CLARIN</ref>.</p>
+      </projectDesc>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="en">English</language>
+        <language ident="bg">Bulgarian</language>
+        <language ident="bs">Bosnian</language>
+        <language ident="ca">Catalan</language>
+        <language ident="cs">Czech</language>
+        <language ident="da">Danish</language>
+        <language ident="de">German</language>
+        <language ident="el">Greek</language>
+        <language ident="es">Spanish</language>
+        <language ident="et">Estonian</language>
+        <language ident="eu">Basque</language>
+        <language ident="fi">Finnish</language>
+        <language ident="fr">French</language>
+        <language ident="gl">Galician</language>
+        <language ident="hr">Croatian</language>
+        <language ident="hu">Hungarian</language>
+        <language ident="is">Icelandic</language>
+        <language ident="it">Italian</language>
+        <language ident="lv">Latvian</language>
+        <language ident="nb">Norwegian bokmål</language>
+        <language ident="nn">Norwegian nynorsk</language>
+        <language ident="nl">Dutch</language>
+        <language ident="pl">Polish</language>
+        <language ident="pt">Portuguese</language>
+        <language ident="ru">Russian</language>
+        <language ident="sl">Slovenian</language>
+        <language ident="sr">Serbian</language>
+        <language ident="sv">Swedish</language>
+        <language ident="tr">Turkish</language>
+        <language ident="uk">Ukrainian</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2025-09-27">Tomaž Erjavec: first draft.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <titlePage>
+        <docTitle>
+          <titlePart type="main">The structure and encoding of
+          <ref target="https://github.com/clarin-eric/PressMint">PressMint corpora</ref></titlePart>
+        </docTitle>
+        <docDate>2025-09-27</docDate>
+      </titlePage>
+      <p></p>
+      <divGen type="toc"/>
+    </front>
+    <body>
+      <div xml:id="chp-intro">
+        <head>Introduction</head>
+        <p>This document is meant to serve as a reference for the encoding of PressMint
+        corpora of historical newspapers. In order for the PressMint corpora to be
+        interoperable (i.e. so that the same scripts can be used to process them), their
+        structure is fairly rigid, primarily in terms of file names and folder structure,
+        and, partially, their TEI XML encoding.
+        This is not to say that all the corpora have to contain
+        exactly the same information because we distinguish obligatory information, which
+        all the corpora should contain, from that which is optional, and present only in the
+        corpora for which it has been possible to gather it from the corpus sources.</p>
+
+        <p>This document is a modification of the
+        <ref target="https://clarin-eric.github.io/ParlaMint/">ParlaMint encoding guidelines</ref>,
+        which are a customisation the
+        <ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</ref>.
+        But while ParlaMint specifies many reguirements on the structures of the docuemnts and obligatory
+        data and metadata, PressMint makes only minimal requirements for the purposes of interoperability
+        although leaves considerable space for optional extensions.</p>
+        
+        <!--p>The document is not meant as a tutorial on TEI or PressMint, but as a reference to
+        elements, their nesting and attributes.
+        Other sources can help in understanding the encoding and content of PressMint corpora:
+        <list>
+          <item>Samples of PressMint corpora, available in the Samples/ directory of the
+          PressMint GitHub repository; note that the samples in the
+          <ref target="https://github.com/clarin-eric/PressMint/tree/main/Samples">main branch</ref>
+          are supposed to be publication-ready,
+          while those in the
+          <ref target="https://github.com/clarin-eric/PressMint/tree/data/Samples">data branch</ref>
+          are work in progress.
+          </item>
+
+          <item>An openly available paper detailing the PressMint project:
+          <list>
+            <item>The PressMint corpora ... (2026).</item>
+          </list>
+          </item>
+        </list>
+        </p-->
+
+        <p>The rest of these recommendations are structured as follows:
+        <list>
+          <item><ref target="#chp-overall">Chapter 2</ref> explains the overall XML
+          structure of a PressMint corpus, and introduces the distinction between the
+          corpus root and corpus components;</item>
+
+          <item><ref target="#chp-general">Chapter 3</ref> explains basic requirements
+          and the file conventions a ParlaMint corpus and introduces
+          the top level XML elements and their attributes incl. links;</item>
+
+          <item><ref target="#chp-metadata">Chapter 4</ref> gives the encoding of the corpus metadata;</item>
+          
+          <item><ref target="#chp-facsimile">Chapter 5</ref> explains how to encode the information
+          to the facsimile-related information, i.e. links to and documentation of the newspaper images;</item>
+          
+          <item><ref target="#chp-text">Chapter 6</ref> treats the encoding of the
+          the texts of the corpus newspapers;</item>
+
+          <item><ref target="#chp-linguistic">Chapter 7</ref> details the addition of
+          linguistic annotations to the corpus;</item>
+
+          <item><ref target="#chp-validation">Chapter 8</ref> introduces scripts to finalise,
+          validate and convert a PressMint corpus to other formats;</item>
+
+          <item><ref target="#chp-contributing">Chapter 9</ref> gives instructions on how to
+          contribute samples of a PressMint corpus to GitHub;</item>
+
+          <item><ref target="#schema">Appendix A</ref> gives the formal specification of
+          the PressMint schema.</item>
+        </list>
+        </p>
+      </div>
+
+      <div xml:id="chp-overall">
+        <head>Overall corpus structure</head>
+        
+        <div xml:id="chp-xml-struct">
+          <head>XML structure</head>
+          
+          <p>The newspapers of one contributing country constitute one
+          PressMint corpus, which is stored as one XML document, with <gi>teiCorpus</gi> as its
+          top-level element. It is composed of a <gi>teiHeader</gi>, giving the metadata for the
+          corpus as a whole (further detailed in the Section on <ref target="#chp-metadata">Corpus
+          metadata</ref>), followed by a series of <gi>TEI</gi> elements that each contain one
+          <term>corpus component</term>, as illustrated<note>Note that this is a illustrative
+          example, i.e. a valid PressMint corpus would also need certain attributes to be defined
+          on the illustrated elements. This holds for all the examples in chapter.</note>
+          below:
+        
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-docstructure">
+            <![CDATA[
+<!-- Corpus root -->
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>...</teiHeader>
+  <TEI>...</TEI> <!-- Corpus component -->
+  <TEI>...</TEI> <!-- Corpus component -->
+  ...            <!-- More corpus components -->
+  </teiCorpus>]]>
+          </egXML>
+          
+          We do not specify what exactly a corpus component should contain, as this can differ
+          substantially between corpora, e.g. it can be a newspaper edition corresponding to a particular
+          day, or a collection of newspapers for a month or even a year.  However, at least the year of
+          the publication must be clear.</p>
+          
+          <p>A corpus component will thus be rooted in the <gi>TEI</gi> element, which then contains its
+          metadata in its own <gi>teiHeader</gi>, followed by the optional <gi>facsimile</gi> element,
+          giving the links to the images, and this by
+          the obligatory <gi>text</gi> element, which contains the text of the particular component,
+          as illustrated below:
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-docstructure-comp">
+            <TEI>
+              <teiHeader>...</teiHeader>
+              <facsimile>...</facsimile>
+              <text>...</text>
+            </TEI>
+          </egXML>
+          </p>
+        
+          <p>The <gi>teiHeader</gi> of a corpus component (further detailed in the Section on
+          <ref target="#chp-metadata">Corpus metadata</ref>) contains the metadata specific for
+          this component (along with some redundant metadata about its provenance), and which
+          should be unique in the corpus, i.e. the corpus component metadata should distinguish
+          it from all the other components of the corpus.</p>
+
+        </div>
+        
+        <div xml:id="sec-xinclude">
+          <head>Use of XInclude</head>
+
+          <p>The fact that a corpus is one XML document does not mean that it is also stored in
+          one file. In fact, PressMint requires that each corpus component is stored in a
+          separate file, with the <term>corpus root</term>, i.e. the top-level
+          <gi>teiCorpus</gi>, also stored as one file.</p>
+          
+          <p>To enable one XML document to be composed of many files, we use the <ref
+          target="https://www.w3.org/TR/xinclude/">XInclude</ref> mechanism, and the
+          <term>corpus root</term> uses this mechanism (i.e. the <gi>include</gi>
+          elements in the XInclude namespace) to include its <term>corpus component</term>
+          files, so a corpus root will be in fact encoded similarly to the following
+          example:
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-docstructure-root">
+          <![CDATA[
+<!-- Corpus root file -->
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" > 
+  <teiHeader>...</teiHeader>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1899/PressMint-SI_1899-04-16.xml"/>  <!-- Corpus component file -->
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1899/PressMint-SI_1899-04-16.xml"/>  <!-- Corpus component file -->
+  ...                                            <!-- More corpus component files -->
+</teiCorpus>]]>
+          </egXML>
+          In case the <gi>taxonomy</gi> elements will be used in PressMint they will
+          also be stored as separate files, and hence also included in the corpus root using the
+          same XInclude mechanism as explained above.</p>
+        </div>
+      
+        <div xml:id="sec-files">
+          <head>File names and directory structure</head>
+
+          <p>PressMint has strict rules on how to name the various files that constitute a
+          corpus, and how to collect them in directories.</p>
+          
+          <p>The file names have the the following structure:
+          
+          <list>
+            <item>The corpus root file name should start with the string
+            <code>PressMint-</code>, followed by the ISO 3166 country code (cf. Section on <ref
+            target="#sec-standard">Standard values</ref>) of the country whose team is
+            contributing the corpus, e.g. <code>PressMint-SI.xml</code>.</item>
+            
+            <item>A corpus component filename should start with the name of the root, followed
+            by an underscore<note>Note that this is different from ParlaMint, where a hyphen, not underscore is used.</note>
+            and the ISO 8601 formatted date of the publication of the newspaper, for example
+            <code>PressMint-SI_1899-04-16.xml</code>. In case the exact date of the publications is unknown,
+            only the month or year can be given, e.g. <code>PressMint-SI_1899-04.xml</code> or
+            <code>PressMint-SI_1899.xml</code>.</item>
+
+            <item>The corpus component filename can be extended with and underscore and a string containing
+            only ASCII letters and numbers and the hyphen character,
+            e.g. <code>PressMint-SI_1899_KRN-NUK.xml</code>. This extra suffix can encode an abbreviation of the newspaper's name,
+            and serve to distinguish two different newspapers that were published on the same day, or distunguish sources from where
+            a newspaper was obtained.
+            </item>
+
+            <item>Certain metadata elements from the corpus root <gi>teiHeader</gi> are stored in separate
+            files, in particular, in case they will be used,
+            any PressMint taxonomies, stored in the <gi>taxonomy</gi> elements.
+            The file names for such metadata files should start with the name of the corpus root, followed by a hyphen,
+            and then the name of the element, e.g. <code>PressMint-SI-listBil.xml</code> for the list of bibliographic items (newspapers)
+            that represent the sources of the Slovenian corpus.
+            In case there are more files for instances with the same element name, as is the case for taxonomies,
+            the filename should end with another hypen, followed by the a distinguishing suffix,
+            e.g. <code>PressMint-SI-taxonomy-topic.xml</code>.
+            <!--If a taxonomy (or other separate metadata file) refers to the linguistically annotated annotated corpora only, then it should
+            get the suffix <code>.ana</code>, e.g. <code>PressMint-SI-taxonomy-NER.ana.xml</code>.
+            Finally, if a taxonomy is not corpus-specific, i.e. identical files are used by all PressMint corpora then 
+            country or region code is ommitted,
+            e.g. <code>PressMint-taxonomy-NER.ana.xml</code>. -->
+            </item>
+
+            <item>The file names of the corpus as a whole or corpus components that have
+            been automatically converted from the source XML into some other format should
+            have the same name as the corpus root or components, respectively, but with
+            appropriate file extensions, e.g, <code>PressMint-SI_1899_KRN-NUK.txt</code>; this
+            is further explained in the Section on
+            <ref target="#sec-conversion">Conversions</ref>.</item>
+
+            <item>As discussed in the Chapter on <ref target="#chp-linguistic">Linguistic
+            annotation</ref> we distinguish the linguistically annotated version of the
+            corpus from the <q>plain-text</q> one, with the linguistic annotated version
+            having the additional suffix <code>.ana</code> on the corpus root and
+            components, e.g. <code>PressMint-SI.ana.xml</code> or
+            <code>PressMint-SI_1899_KRN-NUK.ana.xml</code>.</item>
+          </list>
+          </p>
+
+          <p>For distribution the complete XML corpus should be stored in a
+          directory that has the same name prefix as the corpus root file and extended with the format
+          (e.g. <code>TEI</code>).
+          The directory then contains the corpus root file (and its metadata files, if such exists),
+          while the corpus components should be in subdirectories, one per year, for example:
+          
+          <eg xml:id="exa-directories"><lb/>
+            <code>PressMint-SI.TEI/PressMint-SI.xml</code><lb/>
+            <code>PressMint-SI.TEI/PressMint-SI-taxonomy-topic.xml</code><lb/>
+            <code>...</code><lb/>
+            <code>PressMint-SI.TEI/1899/PressMint-SI_1899-01-02.xml</code><lb/>
+            <code>PressMint-SI.TEI/1899/PressMint-SI_1899-01-03.xml</code><lb/>
+            <code>PressMint-SI.TEI/1899/PressMint-SI_1899-01-04.xml</code><lb/>
+            <code>...</code><lb/>
+            <code>PressMint-SI.TEI/1900/PressMint-SI_1900-01-02.xml</code><lb/>
+            <code>PressMint-SI.TEI/1900/PressMint-SI_1900-01-03.xml</code><lb/>
+            <code>PressMint-SI.TEI/1900/PressMint-SI_1900-01-04.xml</code><lb/>
+            <code>...</code><lb/>
+          </eg>
+
+          The lingistically annotated version of the corpus is stored separately, with the main directory
+          and, as mentioned, the corpus root and component filenames having the additional suffix
+          <code>.ana</code>, e.g.
+
+          <eg xml:id="exa-directories.ana"><lb/>
+            <code>PressMint-SI.TEI.ana/PressMint-SI.ana.xml</code><lb/>
+            <code>PressMint-SI.TEI.ana/PressMint-SI-taxonomy-topic.xml</code><lb/>
+            <code>...</code><lb/>
+            <code>PressMint-SI.TEI.ana/1899/PressMint-SI_1899-01-02.ana.xml</code><lb/>
+            <code>PressMint-SI.TEI.ana/1899/PressMint-SI_1899-01-03.ana.xml</code><lb/>
+            <code>PressMint-SI.TEI.ana/1899/PressMint-SI_1899-01-04.ana.xml</code><lb/>
+            <code>...</code><lb/>
+            <code>PressMint-SI.TEI.ana/1900/PressMint-SI_1900-01-02.ana.xml</code><lb/>
+            <code>PressMint-SI.TEI.ana/1900/PressMint-SI_1900-01-03.ana.xml</code><lb/>
+            <code>PressMint-SI.TEI.ana/1900/PressMint-SI_1900-01-04.ana.xml</code><lb/>
+            <code>...</code><lb/>
+          </eg>
+          </p>
+        </div>
+      </div>
+      
+      <div xml:id="chp-general">
+        <head>General requirements</head>
+        
+        <p>This section gives some general requirements a PressMint corpus has to meet,
+        in particular those relating to the characters in a corpus, and the use of
+        standards. It also details the structure of the file names of the PressMint root
+        and component files, as well as the attributes expected on the <gi>teiCorpus</gi>
+        and <gi>TEI</gi> tags.</p>
+        
+        <div xml:id="sec-chars">
+          <head>Characters</head>
+          
+          <p>The corpus should be encoded in Unicode, using the UTF-8 character encoding, at
+          least for European languages.  In cases where the original contains characters from
+          the Unicode Private Use Area, these should, if possible, be given their closest
+          Unicode equivalents or substituted by the Unicode replacement character
+          U+FFFD. End-of-line hyphens, if present in the source files, should be removed, and
+          the split words joined in order to enhance searching the corpus and to simplify
+          linguistic processing.</p>
+          
+          <p>The following characters, esp. prevalent when the source documents were in Word or
+          HTML, deserve special mention:
+          
+          <list>
+            <item>TAB (U+0009) character helps the alignment of strings on successive
+            lines. As PressMint is not interested in preserving the layout, all TAB
+            chacters must be substituted by space characters (U+0020).</item>
+            
+            <item>NO-BREAK SPACE (U+00A0) prevents, with some applications, an automatic
+            line break at its position and also collapsing such consecutive characters
+            into a single space. As the use of this character complicates (or breaks)
+            further processing, esp. linguistic annotation, this character must be 
+            substituted by the normal space character (U+0020). The same holds for other
+            variants of Unicode space characters (U+2000 - U+200A), which are, however,
+            used much less frequently.</item>
+
+            <item>ZERO WIDTH NO-BREAK SPACE (U+FEFF), also used as the Byte Order Mark (BOM)
+            in Windows files should be removed.</item>
+            
+            <item>NON-BREAKING HYPHEN (U+2011), similarly to NO-BREAK SPACE, prevents a
+            line break, in this case following its position. With a similar reasoning as
+            above, this character should be substituted by the normal hyphen character
+            ('-', U+002D).</item>
+            
+            <item>SOFT HYPHEN (U+00AD) indicates that a word can be hyphenated at that
+            point. Occurrences of this character should be removed from the corpus.</item>
+          </list>
+          </p>
+          
+          <p>Text-bearing elements should also not start or end with space characters, and
+          sequences of whitespace characters should be changed into a single space.</p>
+        </div>
+        
+        <div xml:id="sec-standard">
+          <head>Standard values</head>
+          
+          <p>Whenever possible, PressMint uses standards for information coding. In
+          particular, the following information must be standardised:
+          <list>
+            <item xml:id="iso3166">As the identity of a PressMint corpus is determined by the country
+            that is contributing the corpus, its code appears in many places. For
+            specifying these codes, the <ref
+            target="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">ISO
+            3166</ref> standard should be used, in particular <ref
+            target="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1
+            alpha-2</ref> for the two letter codes of the countries.</item>
+            
+            <item>The codes for the languages used in the corpora (i.e. the possible
+            values of the <att>xml:lang</att> attribute) should follow <ref
+            target="https://tools.ietf.org/html/bcp47">BCP 47</ref> (cf. also <q><ref
+            target="https://www.w3.org/International/questions/qa-when-xmllang">xml:lang
+            in XML document schemas</ref></q>. Essentially, this means that the value for
+            a language code should have two letters, following <ref
+            target="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1</ref>
+            or, and only if a two letter code does not exist for a language, the
+            three-letter <ref target="https://en.wikipedia.org/wiki/ISO_639-2">ISO
+            639-2/T</ref> code.
+            PressMint corpora will use (except for Great Britain) at least two languages, i.e.
+            the language that the newspapers are written in, which we will call the <term>local
+            language</term> and English, as the meta-language, which is (also) used in
+            the metadata.</item>
+            
+            <item>Temporal, i.e. time-related information is typically stored in the
+            <att>when</att>, <att>from</att> and <att>to</att> attributes of various
+            elements. To specify a date or time as the value of these attributes,
+            formatting according to the
+            <ref target="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</ref>
+            standard should be used, e.g. <val>1888-04-01</val> for the 1st of April 1888.
+            More information on temporal attributes is given in the Section on
+            <ref target="#sec-temporal">Temporal attributes</ref>.</item>
+          </list>
+          </p>
+        </div>
+        
+        <div xml:id="sec-roottags">
+          <head>Attributes of top-level elements</head>
+          
+          <p>The Chapter on <ref target="#chp-overall">Overall corpus structure</ref>
+          introduced the top level elements of the corpus root file and of the component
+          files (i.e. the <gi>teiCorpus</gi> and <gi>TEI</gi> elements), but did not
+          elaborate on their attributes; these are presented in this section.</p>
+
+          <p>The corpus root has three required attributes, as shown below:
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-teiCorpusRoot">
+            <![CDATA[
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" 
+           xml:id="PressMint-SI"
+           xml:lang="sl">]]>
+          </egXML>
+
+          All three attributes can also be used on any other element, and are thus of
+          special importance:
+          <list>
+            <item><att>xmlns</att> determines the namespace of the element, and this should
+            always be the TEI namespace, i.e. <val>http://www.tei-c.org/ns/1.0</val>
+            (apart from the elements using the XInclude directive, cf. the Section on
+            <ref target="#sec-xinclude">Use of XInclude</ref>).
+            Note that lower level elements inherit the namespace of the superordinate element,
+            unless explicitly overridden, so it is only necessary to specify the TEI namespace on
+            the root element of a file.</item>
+            
+            <item><att>xml:id</att> is an attribute from the (implicitly assumed) XML
+            namespace, and gives the identifier of the element bearing it.  The
+            value of an ID should be unique in the corpus as a whole and should obey
+            format requirements as defined by <ref
+            target="https://www.w3.org/TR/xml-id/">W3C</ref>.
+            For the corpus root, as well as for the components, it is required that this
+            top level identifier is identical to the file name (without the file
+            extension).
+            The <att>xml:id</att> is a global attribute, so any element can have
+            it. While this is not required, it is necessary for any element that
+            is then referred to (via this same ID) by some other element, such
+            as many elements in the <gi>teiHeader</gi>, as is explained in the
+            Section on <ref target="#chp-metadata">Corpus metadata</ref>.
+
+            The subordinate elements in the text that have an ID (such as
+            page breaks, or, more accurately page beginnings), are recommended
+            to have the top level <att>xml:id</att> as a
+            prefix and to indicate the element name in the ID. For example, if the top
+            level ID is <val>PressMint-SI_1899-01-02</val>, the first page beginning 
+            would have the ID <val>PressMint-SI_1899-01-02.pb1</val>.</item>
+            
+            <item><att>xml:lang</att> is also a global attribute and gives the language
+            code of the text content of the element; for the corpus root this 
+            means the content of its TEI header, while for corpus components this is
+            the textual content of their TEI headers and <gi>text</gi> elements.
+            The convention is that language of the text
+            content of an element is determined by the value of the first
+            <att>xml:lang</att> attribute on its ancestor axis. In cases where the content
+            is multilingual, the language code should be of the majority language. When
+            the proportion of the languages is about equal, then the <val>mul</val> code
+            for multiple languages can also be used.</item>
+          </list>
+          </p>
+
+          <p>A corpus component also has the same three required attributes, but
+          can additionally also have the <att>ana</att> attribute, which associates the text with
+          a category or categories defined in one or more taxonomies:
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-teiCorpusComp">
+            <![CDATA[
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+     xml:id="PressMint-SI_1899-01-02" 
+     xml:lang="sl" 
+     ana="#SI-frequency.daily">]]>
+          </egXML>
+
+          The same as for the corpus root, the component also sets the TEI namespace, and
+          gives the language of its textual content, while its <att>xml:id</att>, of
+          course, identifies the particular component. The <att>ana</att> attribute is a
+          pointing attribute, and we introduce the these attributes in the next
+          section.</p>
+        </div>
+
+        <div xml:id="sec-pointing">
+          <head>Pointing attributes</head>
+
+          <p>The PressMint encoding can use pointing attributes for various purposes,
+          e.g. for references to the IDs of the facsimile elements.</p>
+
+          <p>While a few elements have dedicated pointing attributes, there are some
+          generally used ones. They share the characteristics that they can all be used by a
+          number of different elements and that their value is a series of pointers,
+          i.e. a white-space delimited sequence of references to the values of some
+          <att>xml:id</att> attribute in the corpus or, in general, to an URI.
+
+          The attributes are:
+
+          <list>
+            <item><att>facs</att> gives the pointer(s) to the elements of the
+            <gi>facsimile</gi> elements (cf. Section on <ref target="#chp-facsimile">Newspaper
+            facsimile</ref>.</item>
+            
+            <!--item><att>ana</att> serves to provide an analysis or to classify an element
+            according to some pre-determined vocabulary. In PressMint the target element
+            could be a category in a taxonomy.</item-->
+            
+            <!--item><att>corresp</att> points to items that correspond to the current
+            element in some way.</item-->
+            
+            <item><att>ref</att> provides an explicit reference to the full definition or
+            identity for the entity being named. In PressMint it could be used e.g. for
+            referring to the Wikimedia entry for a person. The value
+            of this attribute is often, but not always, an URL, e.g. for associating a
+            place name with its GeoNames URL.</item>
+          </list>
+          </p>
+
+          <p>To illustrate, the example below gives some elements that contain one or more of these
+          attributes:
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-pointing">
+            <p facs="#PressMint-SI_1899_KRN-NUK.page1 #PressMint-SI_1899_KRN-NUK.page2">
+              <pb facs="#PressMint-SI_1899_KRN-NUK.page1"/>
+              <name ref="https://www.geopedia.world/#T12_x1614772.8705537645_y5789479.6377019035_s12_b2345">Ljubljana</name>
+            </p>
+            </egXML>
+          </p>            
+
+          <!--p>It is sometimes difficult to decide which of the attribute to use for a
+          particular pointer, therefore examples of usage given with the relevant element
+          should be always consulted.</p-->
+        </div>
+
+        <div xml:id="sec-temporal">
+          <head>Temporal attributes</head>
+
+          <p>PressMint makes use of temporal information, in particular to encode when
+          a newspaper was published. As mentioned in the Section on
+          <ref target="#sec-standard">Standard values</ref>, the
+          <ref target="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</ref> format should be
+          used to specify the dates or times.</p>
+          
+          <p>The following attributes are used to specify temporal information:
+
+          <list>
+            <item>The <att>when</att> attribute is used when the temporal information
+            refers to a point in time, typically a date, and is used e.g. to give the date
+            when a corpus text was published, or when a change in the corpus was made.</item>
+            
+            <item>The <att>from</att> and <att>to</att> attributes give the starting and
+            ending date or time of an interval, e.g. the time period the corpus covers.
+            If only one of the two attributes is present, then the assumption is that this
+            interval extends at least to the start (if <att>from</att> is missing) or
+            after the end (if <att>to</att> is missing) of time period that the
+            particular PressMint corpus covers. Similary, if both attributes are missing,
+            the assumption is that the interval covers the complete time period of a
+            PressMint corpus.</item>
+            
+          </list>
+          </p>
+        </div>
+        
+      </div>
+      
+      <div xml:id="chp-metadata">
+        <head>Corpus metadata</head>
+        
+        <p>As mentioned, <gi>teiCorpus</gi> and <gi>TEI</gi> elements contain the obligatory
+        <gi>teiHeader</gi> element, which stores the metadata to the corpus root or
+        component. In this section we explain and give examples of the required and optional
+        metadata that is contained in the <gi>teiHeader</gi>, proceeding through its various
+        elements, and there distinguishing which parts and what content is appropriate for
+        the corpus root, and which for a corpus component.</p>
+
+        <p>As a general remark, most metadata contains free text, and it is a requirement
+        of PressMint that this data is given in the English language, to help researchers
+        for other countries to understand it, and it is recommended to also give it in the
+        local language in which the (main portion of) newspapers is
+        written, for a local researcher to be able to use it in their native tongue.</p>
+
+        <p>A PressMint <gi>teiHeader</gi> contains three obligatory elements: the file
+        description, <gi>fileDesc</gi>, the encoding description, <gi>encodingDesc</gi>, and
+        the profile description, <gi>profileDesc</gi>, and an optional revision description,
+        <gi>revisionDesc</gi>:
+        
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-teiHeader">
+          <teiHeader>
+            <fileDesc>...</fileDesc>
+            <encodingDesc>...</encodingDesc>
+            <profileDesc>...</profileDesc>
+            <revisionDesc>...</revisionDesc>
+          </teiHeader>
+        </egXML>
+        Below we explain each of these element in turn.
+        </p>
+        
+        <div xml:id="sec-fileDesc">
+          <head>File description</head>
+          <p>The file description, <gi>fileDesc</gi> is composed of five obligatory
+          elements, namely the title statement, <gi>titleStmt</gi>, the edition statement,
+          <gi>editionStmt</gi>, the extent, <gi>extent</gi>, the publication statement,
+          <gi>publicationStmt</gi>, and the source description, <gi>sourceDesc</gi>:
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-fileDesc">
+            <fileDesc>
+              <titleStmt>...</titleStmt>
+              <editionStmt>...</editionStmt>
+              <extent>...</extent>
+              <publicationStmt>...</publicationStmt>
+              <sourceDesc>...</sourceDesc>
+            </fileDesc>
+          </egXML>
+          </p>
+          
+          <div xml:id="sec-titleStmt">
+            <head>Title statement</head>
+            
+            <p>The title statement, <gi>titleStmt</gi> gives the title of the corpus root or
+            component, along with the specification of the particular session(s) of the
+            parliament contained, the persons responsible for compiling the corpus, and the
+            funder(s) of the project.</p>
+
+            <p>This structure is exemplified by the following <hi>corpus root</hi> title
+            statement:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-titleStmtRoot">
+              <titleStmt>
+                <title type="main">Korpus starejših slovenskih časopisov PressMint-SI [PressMint]</title>
+                <title type="main" xml:lang="en">Slovenian historical newspaper corpus PressMint-SI [PressMint]</title>
+                <respStmt>
+                  <persName ref="https://orcid.org/0000-0002-1560-4099">Tomaž Erjavec</persName>
+                  <resp>Kodiranje PressMint TEI XML</resp>
+                  <resp xml:lang="en">PressMint TEI XML corpus encoding</resp>
+                </respStmt>
+                <funder>
+                  <orgName>Raziskovalna infrastruktura CLARIN</orgName>
+                  <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+                </funder>
+                <funder>
+                  <orgName>Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+                  <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+                </funder>
+              </titleStmt>
+            </egXML>
+            
+            The title statement starts with two titles (one in English and one in the local language),
+            with the appropriate language code possibly inherited from a superordinate element.</p>
+            
+            <p>The main title has a formulaic structure <q>&lt;Country_name&gt;
+            historical newspaper corpus PressMint-&lt;Country_code&gt; [PressMint]</q>, with an
+            equivalent structure for the local language. Note that the corpus <q>stamp</q>
+            in square brackets can also be <q>[PressMint.ana]</q> for the linguistically
+            annotated version of the corpus (as explained in the Chapter on <ref
+            target="#chp-linguistic">Linguistic annotation</ref>) or <q>[PressMint
+            SAMPLE]</q> for corpus data samples, as available on the <ref
+            target="https://github.com/clarin-eric/PressMint/">PressMint GitHub
+            repository</ref>.</p>
+
+            <p>After the titles come one or more responsibility statements, <gi>respStmt</gi>, each
+            one containing one or more person names, <gi>persName</gi>, with an optional
+            <att>ref</att> attribute, giving the (typically ORCID) URL, where more information about the
+            person can be found, and the responsibility element <gi>resp</gi>, which
+            specifies what responsibility the statement is about.</p>
+
+            <p>In a similar manner, the <gi>funder</gi> elements give information on the
+            organisations which have financially contributed to the compilation of the corpus,
+            with the names of the organisations given in the <gi>orgName</gi> elements.</p>
+            
+            <p>A <hi>corpus component</hi> has a very similar title statement to the
+            corpus root, except that certain elements specify the metadata of the
+            component, rather than the complete corpus. The can also contain redundant
+            metadata, in particular, the responsibility statement and the funder, as
+            illustrated in the example below:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-titleStmtComp">
+              <titleStmt>
+                <title>Korpus starejših slovenskih časopisov PressMint-SI, Kmetijske in rokodelske novice, 16. 4. 1899 [PressMint]</title>
+                <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI, "Argicultural and Artisan News", April 16th, 1899 [PressMint]</title>
+                <respStmt>
+                  <persName ref="https://orcid.org/0000-0002-1560-4099">Tomaž Erjavec</persName>
+                  <resp>Kodiranje PressMint TEI XML</resp>
+                  <resp xml:lang="en">PressMint TEI XML corpus encoding</resp>
+                </respStmt>
+                <funder>
+                  <orgName>Raziskovalna infrastruktura CLARIN</orgName>
+                  <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+                </funder>
+                <funder>
+                  <orgName>Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+                  <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+                </funder>
+              </titleStmt>
+            </egXML>
+            
+            In the example it can be seen that the title of a corpus component is simply
+            an extension of the corpus root title, as it also gives the name and date of the newspaper 
+            that the component contains. Note that the component title must be unique in the complete corpus.</p>
+
+          </div>
+          
+          <div xml:id="sec-editionStmt">
+            <head>Edition statement</head>
+            
+            <p>PressMint corpora have their edition statement, <gi>editionStmt</gi> both in
+            the corpus root and components. As illustrated below, the only element it contains
+            is <gi>edition</gi>:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-editionStmt">
+              <editionStmt>
+                <edition>1.0</edition>
+              </editionStmt>
+            </egXML>
+            
+            We use semantic versioning to specify the version of the corpus, i.e. giving the
+            version number, where a new major version means substantial changes to the
+            corpus, while the minor version is reserved for e.g. correcting errata or other
+            minor changes. We do not use the patch number. It should be noted that - at least
+            so far - all the PressMint corpora were released together, so that they are all
+            of the same edition, i.e. have the same version number.</p>
+          </div>
+
+          <div xml:id="sec-extent">
+            <head>Extents</head>
+
+            <p>The <gi>extent</gi> element gives information on selected sizes of the
+            complete corpus (in the corpus root) or of one corpus component, as illustrated
+            below in the case of a corpus root extent:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-extent">
+              <extent>
+                <measure unit="texts" quantity="75122" xml:lang="sl">75.122 besedil</measure>
+                <measure unit="texts" quantity="75122" xml:lang="en">75,122 texts</measure>
+                <measure unit="words" quantity="20190034" xml:lang="sl">20.190.034 besed</measure>
+                <measure unit="words" quantity="20190034" xml:lang="en">20,190,034 words</measure>
+              </extent>
+            </egXML>
+            
+            PressMint requires two sizes to be given, and, for preference, in both languages, which are
+            distinguished by their <att>unit</att> attribute, namely the number of texts
+            and the number of words. The exact quantity is given in the <att>quantity</att>
+            attribute, while the text content of <gi>measure</gi> gives the quantity together
+            with the unit - if possible, the number here should contain the thousands
+            separator appropriate for the language.</p>
+
+            <p>It should be noted that while the number of texts corresponds to the number of
+            corpus components, the number of words can be somewhat complex to compute. Both 
+            are, however, inserted into the TEI headers in the finalisation of a corpus (cf. the Section on
+            <ref target="#sec-final">Finalisation of corpora</ref>) by a common script,
+            so it is not necessary to insert the extent in the process of developing a PressMint
+            corpus.</p>
+          </div>
+
+          <div xml:id="sec-publicationStmt">
+            <head>Publication statement</head>
+
+            <p>The publication statement <gi>publicationStmt</gi> must appear in the corpus
+            root as well as, in identical form, in the corpus components. As illustrated
+            below, it contains information about the publisher of the corpus, the persistent
+            identifier where the complete corpus can be found, under which licence it is
+            distributed, and when it was released:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-publicationStmt">
+              <publicationStmt>
+                <publisher>
+                  <orgName xml:lang="sl">Raziskovalna infrastrukutra CLARIN</orgName>
+                  <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+                  <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+                </publisher>
+                <idno type="URI" subtype="handle">http://hdl.handle.net/11356/8943</idno>
+                <availability status="free">
+                  <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+                  <p xml:lang="sl">To delo je ponujeno pod
+                  <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0
+                  mednarodna licenca</ref>.</p>
+                  <p xml:lang="en">This work is licensed under the
+                  <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0
+                  International License</ref>.</p>
+                </availability>
+                <date when="2021-06-11">11. 6. 2023</date>
+              </publicationStmt>
+            </egXML>
+            
+            The <gi>publisher</gi> is, at least for the corpora produced in the scope of the
+            CLARIN PressMint project, the CLARIN research infrastructure, and the element
+            also gives the home page of the infrastructure.
+
+            The <q>identifier number</q> element, <gi>idno</gi>, specifies via its
+            <att>type</att> and <att>subtype</att> attributes with fixed values
+            <val>URI</val> and <val>handle</val> that the identifier is a handle, and
+            contains the handle where the complete corpus corresponding to the specified
+            version can be found.
+
+            The <gi>availability</gi> specifies, via its <gi>licence</gi> element the
+            fixed-value CC BY 4.0 URL, and in the following paragraph gives a prose
+            description of the licence, including its URL via the <att>target</att> attribute
+            of <gi>ref</gi>. As usual, the textual information is given in both languages.
+
+            Finally, the <gi>date</gi> gives the date of the release, where the
+            <att>when</att> gives the date in the ISO 8601 format, while the textual content
+            can give it according to the conventions used in the local language.
+            </p>
+          </div>
+          
+          <div xml:id="sec-sourceDesc">
+            <head>Source description</head>
+
+            <p>The source description <gi>sourceDesc</gi> of the <hi>corpus root</hi> encodes
+            the immediate digital source(s) of the PressMint corpus in the <gi>bibl</gi> element(s),
+            as shown in the following example:
+
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-sourceDescRoot-1">
+              <sourceDesc>
+                <bibl>
+                  <author>Dobranić, Filip</author>
+                  <author>Evkoski, Bojan</author>
+                  <author>Ljubešić, Nikola</author>
+                  <title type="main" xml:lang="sl">Korpus slovenske periodike (1771-1914) sPeriodika 1.0</title>
+                  <title type="main" xml:lang="en">Corpus of Slovenian periodicals (1771-1914) sPeriodika 1.0</title>
+                  <idno type="URI" subtype="handle">http://hdl.handle.net/11356/8943</idno>
+                  <date>2023</date>
+                  <bibl>
+                    <title type="main" xml:lang="sl">Digitalna knjižnica Slovenije dLib</title>
+                    <title type="main" xml:lang="en">Digital library of Slovenia dLib</title>
+                    <idno type="URI">https://dlib.si/</idno>
+                  </bibl>
+                </bibl>
+              </sourceDesc>
+            </egXML>
+            
+            Apart from the <gi>author</gi>s and bi-lingual <gi>title</gi>s, the source description should also contain the
+            <gi>idno</gi> element with the fixed <att>type</att> as <val>URI</val>, which gives the URL where the
+            source is available, if such exists, while the <gi>date</gi> gives the date of publications of the source.
+            As can be seen, the source corpus was itself based on publications available in the digital library of Slovenia,
+            and this is encoded in the nested <gi>bibl</gi> element.</p>
+            
+            <p>For <hi>corpus components</hi> the source description should encode the edition of the
+            newspaper that the component encodes, i.e. the name of the newspaper,
+            marked as <code>&lt;title level="j"&gt;</code> 
+            and the <gi>date</gi> when the edition was published; note that here <att>when</att> should contain the date in
+            ISO format, while the content can be in the convention appropriate for the local language.
+            If available, the URL of the digital edition on the Web should also be given.
+            In cases where the whole component corresponds to a particular article in the newspaper, this title
+            is marked as <code>&lt;title level="a"&gt;</code> and if the number of the volume / issue of the
+            newspaper is known this can also be encoded as in <gi>biblScope</gi> with the appropriate <att>unit</att>.
+            Further optional metadata, such as the <gi>publisher</gi>, <gi>pubPlace</gi> (place of publication)
+            can also be given, as shown in the following example:
+
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-sourceDescComp">
+              <sourceDesc>
+                <bibl>
+                  <title level="a">Gospodarske skušnje</title>
+                  <title level="j">Kmetijske in rokodelske novice</title>
+                  <publisher>Jožef Blaznik</publisher>
+                  <pubPlace>Ljubljana</pubPlace>
+                  <date when="1899-04-16">16. 4. 1899</date>
+                  <biblScope unit="volume">38</biblScope>
+                  <biblScope unit="issue">3</biblScope>
+                  <idno type="URI">https://dlib.si/details/URN:NBN:SI:DOC-000TTDCE/</idno>
+                </bibl>
+              </sourceDesc>
+            </egXML>
+            </p>
+          </div>
+        </div>
+        
+        <div xml:id="sec-encodingDesc">
+          <head>Encoding description</head>
+          
+          <p>The encoding description <gi>encodingDesc</gi> of the <hi>corpus root</hi>
+          contains the following elements:
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-encodingDescRoot">
+            <encodingDesc>
+              <projectDesc>...</projectDesc>
+              <editorialDecl>...</editorialDecl>
+              <tagsDecl>...</tagsDecl>
+            </encodingDesc>
+          </egXML>
+          </p>
+          
+          <p>In contrast, the encoding description of a <hi>corpus component</hi> contains
+          only two elements, namely (and redundantly) the <gi>projectDesc</gi> and the
+          <gi>tagsDecl</gi>.</p>
+
+          <div xml:id="sec-projectDesc">
+            <head>Project description</head>
+            
+            <p>The project description <gi>projectDesc</gi> of the <hi>corpus root</hi>
+            contains a short description of the project in the scope of which the corpus was
+            compiled:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-projectDesc">
+              <projectDesc>
+                <p xml:lang="sl">Projekt <ref target="https://www.clarin.eu/pressmint">PressMint</ref>
+                bo izdelal večjezične, primerljive, označene in prevedene interoperabilne korpuse
+                starejših Evropskih časopisov z začetka 20. stoletja. Korpusi PressMint bodo
+                odprto dostopni, tako za prenos v raznovrstnih formatih, kot tudi v več spletnih
+                platformah za analizo korpusov.</p>
+                <p xml:lang="en">The <ref target="https://www.clarin.eu/pressmint">PressMint</ref>
+                project aims to compile a multilingual, comparable, annotated, translated and
+                interoperable set of corpora of European historical newspapers from around the
+                start of the 20th century. The PressMint corpora will be openly available, both
+                for download in a variety of instances and formats, as well as via several online
+                corpus analysis tools.</p>
+              </projectDesc>
+            </egXML>
+            </p>
+          </div>
+          
+          <div xml:id="sec-editorialDecl">
+            <head>Editorial declaration</head>
+            
+            <p>The editorial declaration, <gi>editorialDecl</gi> is used only in the
+            corpus root and contains prose descriptions of the editorial decision made in
+            the process of compiling the corpus, along several dimensions, in
+            particular what, if any types of <gi>correction</gi>,
+            <gi>normalization</gi>, <gi>quotation</gi>, <gi>hyphenation</gi>, and
+            <gi>segmentation</gi> was performed on the texts of the corpus. The
+            example below illustrates the use of these elements:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-editorial">
+              <editorialDecl>
+                <correction>
+                  <p xml:lang="en">In the source sPeriodika corpus the OCR-ed texts were corrected
+                  with <ref target="https://github.com/clarinsi/csmtiser">cSMTiser</ref>,
+                  a text normalisation tool based on character-level machine translation. No additional
+                  correction was performed in the scope of PressMint.</p>
+                </correction>
+                <normalization>
+                  <p xml:lang="en">Text has not been normalised, except for spacing.</p>
+                </normalization>
+                <hyphenation>
+                  <p xml:lang="en">In the source sPeriodika corpus heuristics were used to join end-of-line hyphenated words.</p>
+                </hyphenation>
+                <quotation>
+                  <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+                </quotation>
+                <segmentation>
+                  <p xml:lang="en">In the source sPeriodika corpus the texts were segmented into pages and paragraphs. No
+                  additional segmentation was perfomed in the scope of PressMint.</p>
+                </segmentation>
+              </editorialDecl>
+            </egXML>
+            </p>
+          </div>
+
+          <div xml:id="sec-tagsDecl">
+            <head>Tags declaration</head>
+            
+            <p>The tags declaration, <gi>tagsDecl</gi> of the corpus root gives the
+            count of all the XML tags used in the data part (so, not in the TEI
+            header) of the corpus (for the corpus root) or in an individual component
+            of the corpus. To distinguish the TEI elements from the possible use of
+            elements from other namespaces, a <gi>namespace</gi> element giving the
+            TEI namespace in its <att>name</att> attribute is introduced
+            first. Inside it, each TEI tag is listed in its own <gi>tagUsage</gi>
+            element, with the attribute <att>gi</att> giving the name of the tag and
+            <att>occurs</att> the number of occurrences, as shown in the following
+            example:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-tagsDecl">
+              <tagsDecl>
+                <namespace name="http://www.tei-c.org/ns/1.0">
+                  <tagUsage gi="text" occurs="414"/>
+                  <tagUsage gi="body" occurs="414"/>
+                  <tagUsage gi="pb" occurs="75122"/>
+                  <tagUsage gi="p" occurs="280971"/>
+                  <tagUsage gi="gap" occurs="789"/>
+                </namespace>
+              </tagsDecl>
+            </egXML>
+            
+            It should be noted that similar to the extents (as explained in the Section on
+            <ref target="#sec-extent">Extents</ref>) the tag usage is inserted into
+            the TEI headers in the finalisation of a corpus (cf. the Section on <ref
+            target="#sec-conversion">Validation and conversion</ref>) by a common
+            script, so it is not necessary to compute it the process of developing a
+            PressMint corpus.</p>
+          </div>
+
+          <div xml:id="sec-prefixDef">
+            <head>Prefix definitions</head>
+            
+            <p>Pointing attributes, such as <att>url</att> or <att>ana</att>, take as their value a
+            reference or space-delimited series of references to a URL and/or the value of
+            <att>xml:id</att> elements. If the reference is to an ID, then it is prefixed the hash
+            character, <code>#</code>, e.g. <val>#parla.uni</val>, and if they are to an ID in another
+            XML document, then the hash follows the URL of the document, e.g.
+            <val>https://nl.ijs.si/ME/V6/msd/tables/msd-fslib2-sl.xml#Vmpr1p</val>.</p>
+            
+            <p>Because complete URLs tend to be long, especially inconvenient when such
+            references are given to every token in a corpus, TEI introduces the so called
+            <ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAPU">Abbreviated
+            Pointers</ref>, whereby the reference to an ID can be given in the form of a
+            prefix, which is separated by a colon from the local part of the ID reference, and
+            the value of this prefix is determined via the <gi>prefixDef</gi> element in the
+            <gi>encodingDesc</gi> of the TEI header.</p>
+
+            <p>PressMint can use this mechanism for pointing to facsimiles images (c.f. the Section
+            on <ref target="#chp-facsimile-element">The facsimile element</ref>) and for linguistic
+            annotations with a closed vocabulary, in particular for corpus-specific analytical
+            part-of-speech tags (c.f. the Section on <ref target="#sec-ana-words">Word-level
+            annotation</ref>).
+
+            The example below illustrates the prefix definitions in a corpus component giving the
+            (partial) URL of the facsimile images of this particular newspaper issue:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-listPrefix-facs">
+              <listPrefixDef>
+                <prefixDef ident="facs"
+                           matchPattern="(.+)"
+                           replacementPattern="https://nl.ijs.si/imp/facs/NUKP14042344.$1">
+                  <p xml:lang="en">The URIs with this prefix point to the facsimile images of this
+                  corpus component.</p>
+                </prefixDef>
+              </listPrefixDef>
+            </egXML>
+
+            In short, if the value of a pointing attribute is <val>facs:page1.png</val> this should be expanded to
+            <val>https://nl.ijs.si/imp/facs/NUKP14042344.page1.png</val>.
+            
+            The second example illustrates the prefix definitions in the corpus root for the optional
+            MULTEXT-East part-of-speech tags:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-listPrefix-mte">
+              <listPrefixDef>
+                <prefixDef ident="mte"
+                           matchPattern="(.+)"
+                           replacementPattern="https://nl.ijs.si/ME/V6/msd/tables/msd-fslib-sl.xml#$1">
+                  <p xml:lang="en">Private URIs with this prefix point to feature-structure elements defining the
+                  Slovenian MULTEXT-East Version 6 MSDs.</p>
+                </prefixDef>
+              </listPrefixDef>
+            </egXML>
+            
+            In detail, the specialised element for listing prefix definitions, <gi>listPrefixDef</gi> gives a
+            (series of) prefix definitions, i.e. <gi>prefixDef</gi> elements. Each prefix definition
+            defines its prefix as the value of the <att>ident</att> attribute, and then specifies a
+            regular expression that matches the part of the ID reference after the prefix in its
+            <att>matchPattern</att> attribute, and its substitution as the value of the
+            <att>replacementPattern</att> attribute. The prefix definition above thus defines the
+            <code>mte</code> prefix, so for any ID reference with this prefix,
+            e.g. <val>mte:Nps</val>, the part after the prefix (<code>Nps</code>)
+            should be matched against <code>(.+)</code> and the result being the matched part (here
+            the entire relation <code>Nps</code>) substituted by <code>#$1</code>, i.e. by the
+            hash character followed by the original value, so that <val>mte:Nps</val> gives
+            <val>https://nl.ijs.si/ME/V6/msd/tables/msd-fslib-sl.xml#Nps</val>.</p>
+            
+            <p>Finally, each prefix definition also contains a possibly bi-lingual paragraph
+            explaining the definition.</p>
+          </div>
+
+        </div>
+
+        <div xml:id="sec-profileDesc">
+          <head>Profile description</head>
+          
+          <p>The profile description, <gi>profileDesc</gi> is the third main division of the
+          metadata provided by the TEI header. It contains a description of non-bibliographic
+          aspects of the corpus, in particular, the date range of the corpus.
+          It is only used in the <hi>corpus root</hi> and contains two elements: 
+
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-profileDesc">
+            <profileDesc>
+              <settingDesc>...</settingDesc>
+              <langUsage>...</langUsage>
+            </profileDesc>
+          </egXML>
+          
+          We explain the contents of each element in the following sections.</p>            
+          
+          <div xml:id="sec-settingDesc">
+            <head>Setting description</head>
+            
+            <p>The setting description, <gi>settingDesc</gi>, is by the corpus root and
+            contains only one element, <gi>setting</gi>, which,
+            in turn then gives information on the date (year) range that the corpus covers:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-settingDescRoot">
+              <settingDesc>
+                <setting>
+                  <date from="1870" to="1915">1870--1915</date>
+                </setting>
+              </settingDesc>
+            </egXML>
+            </p>
+          </div>
+          
+          <div xml:id="sec-langUsage">
+            <head>Language usage</head>
+            
+            <p>The language usage, <gi>langUsage</gi> is the last element of the
+            profile description of a corpus root and defines the languages that are used in
+            the corpus. Typically the language use will define (bilingually) only two
+            languages, the local language and English, as the language used in the metadata,
+            for example:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-langUsage">
+              <langUsage>
+                <language ident="sl" xml:lang="sl" default="true">slovenski</language>
+                <language ident="en" xml:lang="sl">angleški</language>
+                <language ident="sl" xml:lang="en" default="true">Slovenian</language>
+                <language ident="en" xml:lang="en">English</language>
+              </langUsage>
+            </egXML>
+            To distinguish the meta-language from the local language, the <att>default</att>
+            attribute is used, which has to have the value <code>true</code> for the local
+            language.</p>
+            
+            <p>In cases where the corpus contains more than one language, the
+            percentage of their use can also be indicated in the <att>usage</att> element of
+            the <gi>language</gi> elements, as illustrated in the example below:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-langusage2">
+              <langUsage>
+                <language ident="en" xml:lang="en">English</language>
+                <language ident="en" xml:lang="nl">Engels</language>
+                <language default="true" usage="55" ident="nl" xml:lang="en">Dutch</language>
+                <language default="true" usage="55" ident="nl" xml:lang="nl">Nederlands</language>
+                <language usage="45" ident="fr" xml:lang="en">French</language>
+                <language usage="45" ident="fr" xml:lang="nl">Frans</language>
+              </langUsage>
+            </egXML>
+            Note that only one of the local languages should have <code>@default="true"</code>.
+            </p>
+          </div>
+        </div>
+        
+        <div xml:id="sec-revisionDesc">
+          <head>Revision description</head>
+          <p>The revision description, <gi>revisionDesc</gi> is the fourth, and last
+          element of the TEI header. It is an optional element that can appear in the
+          <hi>corpus root or component</hi>, and documents the revisions made in the corpus
+          or component. Its structure is illustrated below:
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-revisionDesc">
+            <revisionDesc>
+              <change when="2025-07-11">
+              <name>Tomaž Erjavec</name>: Finalized encoding.</change>
+              <change when="2025-07-03">
+              <name>Tomaž Erjavec</name>: Built corpus.</change>
+            </revisionDesc>
+          </egXML>
+          The revision description consists of a series of <gi>change</gi> elements, with
+          the attribute <att>when</att> giving the date of the change, and the content
+          containing the <gi>name</gi> of the person responsible for the change, and a
+          free-text description of the change. Note that the <gi>change</gi> follow reverse
+          chronological order, i.e. the most recent changes are at the top.</p>
+        </div>
+      </div>
+      
+      <div xml:id="chp-facsimile">
+        <head>Newspaper facsimile</head>
+        
+        <p>Facsimile (i.e. images) of the newspapers are highly useful, both for providing the
+        original to the trancriptions in their analyis, as well as for allowing better OCR as the
+        state-of-the-art improves.
+        If the facsimile is available it also be also published together with the PressMint corpora,
+        and should be referred to from the corpus, in particular from each corpus component.</p>
+
+        <p>How to encode references to the facsimile images in TEI is, in the general case, explained in the
+        <ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html">Chapter on
+        Representation of Primary Sources</ref> of the TEI Guidelines. In this chapter we only provide
+        the basic representation that is directly supported in PressMint.</p>
+
+        <div xml:id="chp-facsimile-element">
+          <head>The facsimile element</head>
+          
+          <p>The <gi>facsimile</gi> element should appear in a corpus component immediately
+          after the <gi>teiHeader</gi>, c.f.
+          the Section on <ref target="#exa-docstructure">Overall XML corpus structure</ref>.
+          It contains pointers to the complete facsimile or its parts, i.e. URLs of the images of
+          an issue or its individual pages, and can further structure or document these images.</p>
+          
+          <p>The <gi>facsimile</gi> element can contain a <gi>graphic</gi> element that points to the
+          complete facsimile of the corpus component (typically an issue of a newspaper).
+          This is followed by a series of <gi>surface</gi> elements, each one typically corresponding
+          to a printed page.
+          These, in turn, also contain <gi>graphic</gi> elements, each one pointing to the image of the page.
+          It is important that each element containing a <gi>graphic</gi> has the <att>xml:id</att> attribute,
+          as this serves to connect the text to the images.
+          This following example illustrates this basic structure; note that the <att>url</att> values use the
+          TEI extended pointers, cf. the Section on <ref target="#sec-prefixDef">Prefix definitions</ref>:
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-facsimile">
+            <facsimile xml:id="PressMint-SI_1851-12-03_KRN-NUK.facsimile">
+              <graphic xml:id="PressMint-SI_1851-12-03_KRN-NUK.graphic" url="facs:pdf"/>
+              <surface xml:id="PressMint-SI_1851-12-03_KRN-NUK.page1">
+                <graphic url="facs:page1.png"/>
+              </surface>
+              <surface xml:id="PressMint-SI_1851-12-03_KRN-NUK.page2">
+                <graphic url="facs:page2.png"/>
+              </surface>
+            </facsimile>
+          </egXML>
+          </p>        
+          
+          <p>Apart from modelling pages with <gi>surface</gi>, areas inside them can also be specified.
+          For this, <gi>zone</gi> elements inside <gi>surface</gi> are used;
+          these can specify a rectangle or, in general, a polygon inside it;
+          the details are given in the TEI Section on
+          <ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHFAX">Digital Facsimiles</ref>.
+          Note, however, that if this approach is used, a mechanism needs to be implemented to show
+          the correct zone on the image.</p>
+          
+          <div xml:id="chp-facsimile-facs">
+            <head>Connecting the text to the facsimile</head>
+
+            <p>Elements of the transcript are connected to the <gi>facsimile</gi>, <gi>surface</gi> or <gi>zone</gi>
+            elements using the <att>facs</att> attribute, which has a series of ID references as its value.
+            For example, if a paragraph appears on the first and second page of a newspaper issue, this would
+            be modelled as in the following example:
+
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-facs">
+              <body>
+                <p facs="#PressMint-SI_1899_KRN-NUK.page1 #PressMint-SI_1899_KRN-NUK.page2">
+                ...
+                </p>
+              </body>
+            </egXML>
+
+            The exact point where a new page or area starts can be represented by using the
+            empty page beginning (<gi>pb</gi>), column beginning (<gi>cb</gi>) or line beginning (<gi>lb</gi>) elements,
+            in this order, as shown below:
+          
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-pb">
+              <body>
+                <pb facs="#PressMint-SI_1899_KRN-NUK.pb1"/>
+                <cb facs="#PressMint-SI_1899_KRN-NUK.cb1"/>
+                <lb facs="#PressMint-SI_1899_KRN-NUK.lb1"/>
+                <p>v Ljubljani, v četrtek 16. aprila 1899.</p>
+              </body>
+            </egXML>
+            If these empty elements are used, they should always appear, as their name suggestst,
+            <emph>in front</emph> of the part of the text they cover, i.e. a page/line/column beginning
+            should come before the text, as above, which is different from the usual practice of
+            putting line breaks at the end of the line.
+            Furthermore, by convention, the beginnings should appear as high up in the hierarchy as
+            possible, i.e. if they appear at the begining of a paragraph, they should be placed before the start
+            of the paragraph, as in the example above. 
+            </p>
+            
+            <p>Note that these elements can appear anywhere in the text, including in the middle of a (end-of-line hyphenated)
+            word, which makes the linguistic annotation of such text more complicated, as texual data is mixed with markup, 
+            typically not otherwise the case.</p>
+        </div>
+      </div>
+
+      <div xml:id="chp-text">
+        <head>Structure of newspaper texts</head>
+        
+        <p>The newspaper texts are encoded in the <gi>text</gi> element of corpus components.
+        This element can contain <gi>front</gi> and <gi>back</gi> and must contain <gi>body</gi>.
+        If they are used, <gi>front</gi> will typically contain the front-matter of a newspaper issue,
+        i.e. its banner, while back would contain material that does not fit in well with the article-based
+        structure of a newspaper, e.g. advertisements. However, this material can also be included directly
+        in the <gi>body</gi> but at the risk of disrupting the flow of the article texts.</p>
+
+        <p>PressMint makes few assumptions on the structure of the texts in the TEI <gi>body</gi>
+        and optional <gi>front</gi> and <gi>back</gi>. At minimum, they need to contain a series of paragraphs,
+        i.e. <gi>p</gi> elements possibly with interspersed empty page/column/line beginning elements, as
+        discussed in the preceding Section on <ref target="#chp-facsimile-facs">Connecting the text to the
+        facsimile</ref>.</p>
+        
+        <p>This kind of encoding is appropriate for text with little internal structure.
+        However, if the text has been split into articles, these are encoded using the standard <gi>div</gi>
+        element, possibly further qualified by the value of its <att>type</att> attribute, which will have a closed
+        list of values, as illustrated below. 
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-div">
+          <text>
+            <body>
+              <div type="article">...</div>
+              <div type="advertisement">...</div>
+              <div type="article">...</div>
+              ...
+            </body>
+          </text>
+        </egXML>
+        Each division can also start with a <gi>head</gi> element giving the title of the article,
+        and contin possibly other standard TEI elements, such as <gi>byline</gi> giving the article's
+        author.</p>
+      
+      <div xml:id="sec-gaps">
+        <head>Gaps</head>
+        
+        <p>For various reasons, such as too low OCR quality or portions of the text not interesting to PressMint, such
+        as tables, parts of the text can be ommitted. To mark missing material, the <gi>gap</gi> element is used,
+        which is then also marked by the <att>reason</att> attribute, specifying why the material was ommitted. If desired,
+        a description of the ommitted content can be given in the <gi>desc</gi> element of the <gi>gap</gi>,
+        as illustrated below:
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-gap">
+            The city has provided us with a table giving the main expenditures and incomes:
+            <gap reason="editorial">
+              <desc>Table of expenditures and incomes.</desc>
+            </gap>
+          </egXML>
+          </p>
+      </div>
+    </div>
+  </div>
+
+  <div xml:id="chp-linguistic">
+    <head>Linguistic annotation</head>
+
+      <p>This section introduces the PressMint linguistic annotation.
+      An important note is that a linguistically annotated PressMint corpus is
+      stored separately from its base (or <term>plain-text</term>) TEI version, i.e. the
+      version that has been discussed in the preceding sections.
+      The encoding of the linguistically annotated version differs from the plain-text one in the following:
+      
+      <list>
+        <item>All the corpus root and components file names have
+        the extension <code>.ana.xml</code>.
+        For example, if the plain-text TEI root has the file name
+        <code>PressMint-CZ.xml</code>, the linguistically annotated one should be
+        <code>PressMint-CZ.ana.xml</code>, and if the component plain-text files is 
+        <code>PressMint-CZ_2016-04-13.xml</code> the linguistically annotated one is
+        <code>PressMint-CZ_2016-04-13.ana.xml</code>.</item>
+        
+        <item>Because the file ID (i.e. the value of the top level element attribute
+        <att>xml:id</att>, as explained in the Section on <ref
+        target="#sec-roottags">Attributes of top-level elements</ref>) should be the same
+        as the file name (cf. the Section on <ref target="#sec-files">File names and
+        directory structure</ref>), the previous point also means that the linguistically
+        annotated files should have the top level ID suffixed with <code>.ana</code>,
+        e.g. <code>&lt;teiCorpus xml:id="PressMint-CZ.ana"&gt;</code>.</item>
+        
+        <item>The corpus stamp in the main title of the corpus root or components
+        (cf. the Section on <ref target="#sec-titleStmt">Title statement</ref>) which is
+        <code>[PressMint]</code> in the plain-text version, should be
+        <code>[PressMint.ana]</code> for the linguistically annotated version.</item>
+        
+        <item>All the plain text of the newspaper paragraphs (i.e. the text immediately
+        contained by the <gi>p</gi> elements) of the plain-text version should be
+        linguistically annotated on the specified levels, as is further explained in the
+        following Section on <ref target="#sec-ana-markup">Linguistic
+        markup</ref>.</item>
+          
+        <item>The linguistically annotated version of the corpus should also have some
+        added metadata in the TEI header of the corpus root, which is detailed in the
+        following Section on <ref target="#sec-ana-metadata">Metadata for linguistic
+        annotation</ref>.</item>
+        
+        </list>
+        </p>
+        
+        <div xml:id="sec-ana-markup">
+          <head>Linguistic markup</head>
+
+          <p>Linguistic annotation is added only to the text content of <gi>p</gi> elements.
+          For this text, PressMint requires the following additional markup to be present:
+          <list>
+            <item>tokens: what is a word, and what is punctuation, with preserved
+            information on inter-token spaces;</item>
+            
+            <item>sentences: what is a sentence;</item>
+            
+            <item>normalised form (optional): what is the modernised spelling of archaically spelled words;</item>
+            
+            <item>lemmas: what is the base form of each word;</item>
+            
+            <item><ref target="https://universaldependencies.org/">Universal
+            Dependencies</ref> (UD) part-of-speech and morphological features, and,
+            optionally, part-of-speech tags from a different (local) tagset;</item>
+            
+            <item>named entities (NE): what is a name, categorised at least into the standard
+            four NE classes;</item>
+          </list>
+          
+          Below, we explain the encoding of each of these levels.</p>
+          
+          <div xml:id="sec-ana-words">
+            <head>Word-level annotation</head>
+            
+            <p>Basic linguistic annotation comprises tokenisation, sentence segmentation,
+            part-of-speech tagging and lemmatisation, and this mark-up is illustrated in the
+            example below:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-ana-word">
+              <s>
+                <w msd="UPosTag=DET|Case=Gen|Gender=Neut|Number=Sing|PronType=Dem" lemma="ta">Tega</w>
+                <w msd="UPosTag=PRON|PronType=Prs|Reflex=Yes|Variant=Short" lemma="se">se</w>
+                <w msd="UPosTag=PART" lemma="sploh">sploh</w>
+                <w msd="UPosTag=AUX|Mood=Ind|Number=Sing|Person=1|Polarity=Neg|Tense=Pres|VerbForm=Fin" lemma="biti">nisem</w>
+                <w msd="UPosTag=VERB|Aspect=Perf|Gender=Masc|Number=Sing|VerbForm=Part" lemma="zavesti" join="right">zavedel</w>
+                <pc msd="UPosTag=PUNCT">.</pc>
+              </s>
+            </egXML>
+            
+            Sentences are marked up using the <gi>s</gi> element, words with the
+            <gi>w</gi> element and punctuation symbols with the <gi>pc</gi> element. To
+            retain the linguistically significant whitespace, the <att>join</att> element
+            with the fixed value <val>right</val> is used, meaning there should be no whitespace
+            to the right of the token. There can be an added complication with tokenisation, which is
+            further taken up in the next Section on <ref target="#sec-ana-norm">Text modernisation</ref>.
+            </p>
+            
+            <p>The base form or lemmas of a word is given as the value of the
+            <att>lemma</att> attribute, while punctuation characters, <gi>pc</gi>, do not
+            have this attribute.</p>
+            
+            <p>The UD part-of-speech and morphological features are both packed in the
+            <att>msd</att> attribute, with the part-of-speech having the <code>UPosTag</code>
+            linguistic attribute, and the features separated by the vertical bar.</p>
+
+            <p>PressMint also allows (but does not require) part-of-speech tags from some
+            other tagset<note>These are typically tagset developed and used for specific
+            languages and can be found in the XPOS column of CoNLL-U files, which is the
+            native format for UD treebanks.</note> to be added to the linguistic
+            annotation. Where this information is encoded, depends on the type of tagset.</p>
+
+            <p>For <term>synthetic tagsets</term>, such as the <ref
+            target="https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html">Penn
+            Treebank tagset</ref>, which have atomic tags that cannot always be decomposed
+            into attribute-value pairs (e.g. the tag <q>TO</q> for the word <q>to</q>)
+            should be encoded using the <att>pos</att> on words and punctuation symbols, as
+            shown in the example below:
+
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-analysis-pos">
+              <s>
+                <w lemma="I" msd="UPosTag=PRON|Case=Nom|Number=Sing|Person=1|PronType=Prs" pos="PRP">I</w>
+                <w lemma="support" msd="UPosTag=VERB|Mood=Ind|Tense=Pres|VerbForm=Fin" pos="VBP">support</w>
+                <w lemma="the" msd="UPosTag=DET|Definite=Def|PronType=Art" pos="DT">the</w>
+                <w lemma="amendment" msd="UPosTag=NOUN|Number=Sing" pos="NN" join="right">amendment</w>
+                <pc msd="UPosTag=PUNCT" pos=".">.</pc>
+              </s>
+            </egXML>
+            </p>
+
+            <p>For <term>analytic tagsets</term>, where a part-of-speech tag can be always
+            decomposed into a set of attribute-values, the pointing attribute
+            <att>ana</att> should be used. An example of such a collection of tagsets for
+            various languages is given in the <ref
+            target="http://nl.ijs.si/ME/V6/msd/html/">MULTEXT-East morphosyntactic
+            specifications</ref>, and we give below an example that uses this tagset:
+
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-analysis-ana">
+              <s>
+                <w ana="mte:Vmpr1p" lemma="prehajati" msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin">Prehajamo</w>
+                <w ana="mte:Sa" lemma="na" msd="UPosTag=ADP|Case=Acc">na</w>
+                <w ana="mte:Ncnsa" join="right" lemma="odločanje" msd="UPosTag=NOUN|Case=Acc|Gender=Neut|Number=Sing">odločanje</w>
+                <pc ana="mte:Z" msd="UPosTag=PUNCT" >.</pc>
+              </s>
+            </egXML>
+
+            The <code>mte:</code> is a prefix that is, via the TEI extended pointer syntax
+            as defined in the TEI header (cf. the Section on <ref
+            target="#sec-prefixDef">Prefix definitions</ref>) expanded so that the
+            value of such an <att>ana</att> attribute points to the expansions of the
+            given tag to a feature structure. For example, the value <val>mte:Vmpr1p</val>
+            would be expanded to
+            <val>https://nl.ijs.si/ME/V6/msd/tables/msd-fslib2-sl.xml#Vmpr1p</val>, which
+            then resolves to the feature-structure below:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-analysis-fs">
+              <fs xml:id="Vmpr1p" xml:lang="en" corresp="#Ggnspm">
+                <f name="CATEGORY"><symbol value="Verb"/></f>
+                <f name="Type"><symbol value="main"/></f>
+                <f name="Aspect"><symbol value="progressive"/></f>
+                <f name="VForm"><symbol value="present"/></f>
+                <f name="Person"><symbol value="first"/></f>
+                <f name="Number"><symbol value="plural"/></f>
+              </fs>
+            </egXML>
+            </p>
+          </div>
+          
+          <div xml:id="sec-ana-norm">
+            <head>Text modernisation</head>
+            
+            <p>The language of older newspapers might differ significantly from the contemporary
+            norm.  This has an impact on the quality of linguistic annotations, in cases where the
+            annotation tool has been trained on contemporary texts only, as well as hindering
+            searching for particular words or lemmas in their contemporary spellings. To alleviate
+            this, normalisation (i.e. modernisation) is often used on archaic texts, and the
+            subsequent linguist annotation is performed on such modernised text.</p>
+
+            <p>Modern neural approaches typically take a complete chunk of text and normalise it,
+            while more traditional approaches perform the normalisation on individual words. The
+            former has the advantage of being capable not only of modernising the spelling
+            individual words but also substituting archaic words with their contemporary
+            equivalents, modernising multi-word units or even syntactic constructions.  However, if
+            such a method is used on a PressMint corpus this means that the linguistically annotated
+            variant of the corpus will contain only the modernised text, and the alignment to the
+            plain-text variant of the corpus will be at the paragraph level only.  In other words,
+            losing word-alignment with the original tokens means also losing the ability to search
+            for or directly view the original tokens.</p>
+
+            <p>In contrast, traditional methods (such as
+            <ref target="https://github.com/clarinsi/csmtiser">cSMTiser</ref>) will typically normalise
+            only the spelling of individual words, or, at most, sequences of words.  This
+            means that the text has to be first tokenised, normalisation applied to such (series
+            of) tokens, and the resulting normalised word-tokens then linguistically annotated. Here
+            both the original and normalised and annotated words are available in the linguistically
+            annotated version of the corpus.</p>
+
+            <p>If the normalised word token is identical to the original one then the annotation is
+            exactly the same as for non-normalised text. If a original token is normalised into a
+            single, but different token, then the <att>norm</att> attribute is used to record the
+            value of the normalised token. These two cases are illustrated in the following example,
+            where we also give the lemma of the words but, for simplicity, no further linguistic
+            annotation:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-ana-norm1">
+              <w lemma="lep">lepo</w>
+              <w norm="sonce" lemma="sonce">solnce</w>
+            </egXML>
+            
+            A complication arrises when one original token corresponds to several normalised tokens
+            or vice versa.  For these cases we use the same mechanism as was used in ParlaMint for
+            <ref target="https://clarin-eric.github.io/ParlaMint/#sec-ana-norm">splitting orthographic
+            words into syntactic ones</ref><note>Note that PressMint does not
+            foresee syntactic parsing, so there is not ambiguity if word is split because of
+            normalisation or because of its syntactic analysis. However, if both were present, the
+            outer one would correspond to normalisation and the inner to syntactic words.</note>,
+            which is illustrated in the following two examples, the first where an archaic word was
+            split into two contemporary ones, and the second where two archaic words form one contemporary
+            word. Note that the linguistic annotation is given only to the normalised forms:
+
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-ana-norm2">
+              <w>neſkèrbite
+                <w norm="ne" lemma="ne"/>
+                <w norm="skrbite" lemma="skrbeti"/>
+              </w>
+              ...
+              <w norm="najmanjši" lemma="lep">
+                <w>nar</w>
+                <w>manſhi</w>
+              </w>           
+            </egXML>
+
+            Also note that if such nested tokens do not have a following space,
+            <code>join="right"</code> should be added to the top level word as well as to the last
+            nested word.</p>
+            
+          </div>
+          
+          <div xml:id="sec-ner">
+            <head>Named entities</head>
+            
+            <p>PressMint also requires annotation of Named Entities (NE), which should be
+            categorised into the following four types:
+            <list>
+              <item><val>PER</val>: person</item>
+              <item><val>LOC</val>: location</item>
+              <item><val>ORG</val>: organisation</item>
+              <item><val>MISC</val>: miscellaneous</item>
+            </list>
+            </p>
+            
+            <p>The identified names and their type are marked up as the <gi>name</gi> element
+            with the appropriate value of its <att>type</att> attribute, as shown in the example below:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-ana-name">
+              ...
+              <w lemma="and" msd="UPosTag=CCONJ">and</w>
+              <name type="ORG">
+                <w lemma="Westminster" msd="UPosTag=PROPN|Number=Sing">Westminster</w>
+                <w join="right" lemma="Hall" msd="UPosTag=PROPN|Number=Sing">Hall</w>
+              </name>
+              <pc msd="UPosTag=PUNCT">,</pc>
+              ...
+            </egXML>
+            </p>
+          </div>
+          
+        </div>
+        
+        <div xml:id="sec-ana-metadata">
+          <head>Metadata for linguistic annotation</head>
+
+          <p>What kind of metadata a plain-text PressMint corpus should contain was explained in
+          the Section on <ref target="#chp-metadata">Corpus metadata</ref> and in this section we
+          detail what additions must be made to the metadata for the linguistically annotated
+          version. Note that the other changes for this version of a corpus have been already explained at
+          the start of this <ref target="#chp-linguistic">Chapter</ref>. For PressMint, this information
+          has been, so far, simplified in comparison with ParlaMint; we do not foresee linguistic taxonomies (in particular,
+          for NER), so there are one obligatory and one optional metadata element dedicated to linguistic processing.
+          Both are added to the <gi>teiHeader</gi> of the root of the linguistically analysed corpus,
+          namely a description of the tool(s) used to linguistically annotate the corpus, and
+          optional taxonomies of corpus-specific PoS tags.</p>
+
+          <div xml:id="sec-ana-appInfo">
+            <head>Application information for linguistic processing</head>
+            
+            <p>As the linguistic analysis of a PressMint corpus will be performed by a tool, the
+            information on which tool (or tools) have been used should be documented in the
+            corpus root TEI header. This information is encoded in the <gi>appInfo</gi> element
+            of the <gi>encodingDesc</gi>, as shown in the example below:
+
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-ana-appInfo">
+              <appInfo>
+                <application version="1.0" ident="classla">
+                  <label>CLASSLA</label>
+                  <desc xml:lang="en">Linguistic processing performed with with CLASSLA trained for
+                  Slovene, available from <ref
+                  target="https://github.com/clarinsi/classla">https://github.com/clarinsi/classla</ref>.</desc>
+                </application>
+              </appInfo>
+            </egXML>
+            
+            The <gi>appInfo</gi> element contains, in general, a series of <gi>application</gi>
+            elements, each one giving the information on one tool. The element gives the
+            <att>version</att> number of the tool and specifies, via <att>ident</att>, and
+            identifying code. It has two subordinate elements, with <gi>label</gi> giving the name
+            of the tool and <gi>desc</gi> a short description of it, preferably with a pointer to
+            the URL where it can be found or is at least documented.</p>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div xml:id="chp-validation">
+        <head>Validation and conversion</head>
+        
+        <p>The chapter explains how to validate and finalise a PressMint corpus, and introduces
+        scripts for converting a PressMint corpus to other, derived formats.</p>
+
+        <div xml:id="sec-validate">
+          <head>Validating PressMint corpora</head>
+          
+          <p>The XML structure of PressMint corpora can be validated via RelaxNG schema
+          produced as a customisation of the TEI Guidelines.</p>
+
+          <p>The TEI customisation is written as a TEI ODD document, which is, in fact, the XML
+          version of this document, and is available in the <ref
+          target="https://github.com/clarin-eric/PressMint/tree/main/TEI">TEI/ directory</ref> of
+          the PressMint GitHub repository. The XML contains not only the prose guidelines, but
+          also the formal specification of the TEI schema, which is given in the <ref
+          target="#schema">Appendix A</ref>. In the XML it contains the formal schema
+          specification, while in the on-line version this is converted to a reference to all the
+          elements, attributes and classes used in PressMint corpora --- quite a lot, as the PressMint
+          schema has been left open enough to accommodate differing requirements in the encoding.</p>
+
+          <p>The ODD document is not immediately useful for XML validation but has to be converted
+          with standard TEI XSLT stylesheets to a RelaxNG schema. The TEI ODD and its RelaxNG schema
+          (<ref target="https://github.com/clarin-eric/PressMint/blob/main/TEI/PressMint.rng">PressMint.rng</ref>
+          (and the HTML guidelelines)
+          are always kept in sync. 
+          This schema should be used to check that PressMint component files validate against TEI,
+          typically using Jing (cf.
+          <ref target="https://github.com/clarin-eric/PressMint/blob/main/CONTRIBUTING.md">Contributing
+          to PressMint</ref>.
+          </p>
+  
+          <!--
+          <p><del>Validating with XML schemas checks the formal structure of XML files but is less
+          successful in validating other aspects of conformance, such as the textual content or
+          linking of pointer attributes. For this reason, we have also developed an XSLT script
+          that assumes a schema-validated PressMint file on its input, and checks various other
+          aspects of conformance. These validation scripts can be found in the <ref
+          target="https://github.com/clarin-eric/PressMint/tree/main/Scripts">Scripts/
+          directory</ref> of the PressMint GitHub repository, with the <ref
+          target="https://github.com/clarin-eric/PressMint/blob/main/Scripts/README.md">README</ref>
+          file listing them.</del></p>
+
+          <p>It should be noted that it is not necessary to run the validation scripts directly, as
+          the validation can be performed by the main <ref
+          target="https://github.com/clarin-eric/PressMint/blob/main/Makefile">Makefile</ref> of the
+          project. The Makefile is self-documenting, i.e. to see how to use it, please run
+          <code>make help</code> in the top level directory of the PressMint project.</p>
+          
+          <p>While each contributor of a corpus should validate their files with the PressMint
+          schemas and validation script, there also exist further stages of validation, which are
+          also applied to PressMint corpora:
+          <list>
+            <item>The corpora are converted to derived formats, in particular, the linguistically
+            annotated version of the corpus to CoNLL-U and to the so called vertical format for
+            CQP-type concordancers. The Universal Dependencies project provides a <ref
+            target="https://universaldependencies.org/release_checklist.html#validation">program</ref>
+            for validating the formatting and linguistic analyses in CoNLL-U files, and this
+            validation is used on the CoNLL-U files derived from their XML source, up to level 1
+            conformance. The vertical files, on the other hand, are first compiled with <ref
+            target="https://nlp.fi.muni.cz/trac/noske">manatee</ref> (the back end of <ref
+            target="https://www.sketchengine.eu/nosketch-engine/">(no)Sketch Engine</ref>) and
+            this compilation can also expose various errors.</item>
+
+            <item>The last stage in validation is <q>human validation</q> where e.g. simply
+            looking at various produced metadata files or at the concordances of a corpus exposes
+            errors.</item>
+          </list>
+          </p>
+          -->
+        </div>
+
+        <div xml:id="sec-final">
+          <head>Finalisation of corpora</head>
+          
+          <p>While the vast majority of converting source encodings into the PressMint corpus
+          format is left to the compilers of a corpus, there are a few metadata elements that can
+          be produced by a common script on the basis of nearly finished corpora, which then
+          results in the final version of the corpus for a particular release. This includes
+          setting the date, edition and handle under which the corpus will be distributed, and
+          also calculating the size of the corpus (cf. the Sections on <ref
+          target="#sec-extent">Extents</ref> and on <ref target="#sec-tagsDecl">Tags
+          declaration</ref>).
+
+          The script for finalisation can be found in the <ref
+          target="https://github.com/clarin-eric/PressMint/tree/main/Scripts">Scripts/
+          directory</ref> of the PressMint GitHub repository and the
+          <ref target="https://github.com/clarin-eric/PressMint/blob/main/Scripts/README.md">README</ref>
+          file briefly explains
+          its function; more comments can be found in the script itself.
+          <!-- The README there does not in fact mention finalisation, needs updating -->
+          <!-- This script is for V2.1, it has to be updated for 3.0 -->
+          </p>
+        </div>
+        
+        <div xml:id="sec-conversion">
+          <head>Conversions</head>
+          
+          <p>A TEI encoded document is, in general, not meant to be used directly by software
+          programs, rather, it serves as an interchange and storage format. The PressMint project
+          has produced various scripts to down-convert the XML encoded corpora to other formats
+          and they can be found in the <ref
+          target="https://github.com/clarin-eric/PressMint/tree/main/Scripts">Scripts/
+          directory</ref> of the PressMint GitHub repository, with the
+          <ref target="https://github.com/clarin-eric/PressMint/blob/main/Scripts/README.md">README</ref>
+          file listing them
+          and explaining their function. In short, the scripts convert the PressMint XML to plain
+          text, to CoNLL-U, and to vertical format. There is also a script that takes a PressMint
+          corpus and makes from it a sample for inclusion to the <ref
+          target="https://github.com/clarin-eric/PressMint/">PressMint GitHub
+          repository</ref>.</p>
+        </div>
+      </div>
+      
+      <div xml:id="chp-contributing">
+        <head>Contributing to PressMint</head>
+        
+        <p>The <ref target="https://github.com/clarin-eric/PressMint/">PressMint GitHub
+        repository</ref> contains these guidelines, the PressMint XML schemas, the scripts used
+        to validate, finalise and convert the PressMint TEI XML corpora to derived formats, and
+        samples of the PressMint corpora. There are four main branches in the repository:
+          <list>
+            <item><ref target="https://github.com/clarin-eric/PressMint/tree/main">main</ref>
+              is the default branch used for the synchronisation of other branches.
+              It is also used for releasing sample files that correspond to published corpora.</item>
+            <item><ref target="https://github.com/clarin-eric/PressMint/tree/data">data</ref>
+              serves as a pushing place for new sample files in ./Data/PressMint-XX directories.</item>
+            <item><ref target="https://github.com/clarin-eric/PressMint/tree/devel">devel</ref>:
+              development of scripts and documentation.</item>
+          </list>
+        </p>
+
+        <p>The validation procedure for corpora is explained in the Section on <ref target="#sec-validate">Validating PressMint
+        corpora</ref>, while the technical aspects of contributing corpora is further explained in the <ref
+        target="https://github.com/clarin-eric/PressMint/blob/main/CONTRIBUTING.md">CONTRIBUTING file</ref> of the repository.
+        </p>
+      </div>
+      
+      <div xml:id="sec-ack">
+        <head>Acknowledgements</head>
+        
+        <!--p>The authors would like to thank all the participants of the <ref
+        target="https://www.clarin.eu/blog/clarin-parlaformat-workshop">CLARIN
+        ParlaFormat</ref> workshop (May 23-24, 2019, Amersfoort) for their very useful comments
+        and suggestions.</p>
+        
+        <p>This proposal was inspired by a number of related projects, in
+        particular: <ref target="https://tei-c.org/extra/teiinlibraries/">Best Practices for
+        TEI in Libraries</ref>, the DARIAH and ELEXIS funded initiative <ref
+        target="https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html">TEI
+        Lex0</ref> to develop an interchange encoding for machine readable dictionaries, and
+        the <ref target="https://www.distant-reading.net/eltec/">ELTeC corpus</ref> initiative
+        by the COST Action CA16204 <q>Distant Reading for European Literary History</q>.</p-->
+        
+        <p>The work on these recommendations was funded by the <ref
+        target="https://www.clarin.eu/">CLARIN</ref> Research Infrastructure for Language
+        Resources and Tools.</p>
+      </div>
+    </body>
+
+    <back>
+      <divGen type="subtoc"/>
+      <!--div xml:id="examplar">
+          <head>Example document</head>
+          <p>This section gives a complete example document that validates according to Parla-CLARIN and
+          aims to illustrate the encoding of various aspects of parliamentary proceedings corpora.</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:xi="http://www.w3.org/2001/XInclude"
+          xml:id="exa-exemplar">
+          <xi:include href="../Examples/Parla-CLARIN-Exemplar.xml"/>
+          </egXML>
+          </div-->
+      
+      <div xml:id="schema">
+        <head>Formal specification</head>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                    href="PressMint-schemaSpecs.odd.xml"/>
+      </div>
+    </back>
+  </text>
+</TEI>

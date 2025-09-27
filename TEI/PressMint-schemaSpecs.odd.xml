@@ -1,0 +1,42 @@
+<schemaSpec xmlns="http://www.tei-c.org/ns/1.0"
+            xmlns:eg="http://www.tei-c.org/ns/Examples"
+            xmlns:egXML="http://www.tei-c.org/ns/Examples"
+            ident="pressmint"
+            start="TEI teiCorpus"
+            prefix="tei_"
+            docLang="en"
+            xml:lang="en">
+
+  <moduleRef key="tei" except=""/>
+  <moduleRef key="core" include="bibl biblScope cb date desc email gap graphic head label lb measure media meeting name note num p pb pubPlace publisher ref resp respStmt teiCorpus term time title unit"/>
+  <moduleRef key="header"
+             include="appInfo application availability catDesc catRef category change classDecl correction edition editionStmt editorialDecl encodingDesc extent fileDesc funder hyphenation idno langUsage language licence listPrefixDef namespace normalization prefixDef profileDesc projectDesc publicationStmt quotation revisionDesc segmentation sourceDesc tagUsage tagsDecl taxonomy teiHeader textClass titleStmt"/>
+  <moduleRef key="textstructure"
+             include="TEI back body div front text docDate"/>
+  <!--moduleRef key="corpus" include=""/-->
+  <moduleRef key="transcr" include="facsimile surface zone"/>
+  <moduleRef key="namesdates"
+             include="orgName persName placeName"/>
+  <!--moduleRef key="linking"
+             include="link linkGrp seg"/-->
+  <!--moduleRef key="figures"
+             include="figure"/-->
+  <moduleRef key="analysis"
+             include="pc s w"/>
+  
+  <elementSpec ident="div" module="textstructure" mode="change">
+    <attList>
+      <attDef ident="type" mode="replace" usage="rec">
+        <valList type="open">
+          <valItem ident="article">
+            <desc xml:lang="en">An article in a newspaper</desc>
+          </valItem>
+          <valItem ident="advert">
+            <desc xml:lang="en">An advertisement in a newspaper</desc>
+          </valItem>
+        </valList>
+      </attDef>
+    </attList>
+  </elementSpec>
+  
+</schemaSpec>
