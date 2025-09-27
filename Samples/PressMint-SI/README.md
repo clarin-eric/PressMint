@@ -79,7 +79,7 @@ following the Universal Dependencies formalism for tagging, and the standard CoN
   Below is the content of one JSON file, slightly formatted for better readability (there are no line breaks in
   the original files):
 
-    ```
+```json
     
 {
     "URN": "URN:NBN:SI:DOC-000TTDCE",
