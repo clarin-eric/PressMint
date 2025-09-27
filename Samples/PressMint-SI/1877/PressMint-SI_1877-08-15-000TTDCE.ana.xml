@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-SI_1877-08-15-000TTDCE" xml:lang="sl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starejših slovenskih časopisov PressMint-SI, Kmetijske in rokodelske novice, 15.08.1877 [PressMint.ana]</title>
+            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI, "Kmetijske in rokodelske novice", 8/15/1877 [PressMint.ana]</title>
+            <funder>
+               <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
+               <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+            </funder>
+            <funder>
+               <orgName>Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+               <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>0.1</edition>
+         </editionStmt>
+         <extent>
+            <measure unit="pages" quantity="1" xml:lang="sl">1 strani</measure>
+            <measure unit="pages" quantity="1" xml:lang="en">1 pages</measure>
+            <measure unit="words" quantity="53" xml:lang="sl">53 besed</measure>
+            <measure unit="words" quantity="53" xml:lang="en">53 words</measure>
+            <measure unit="tokens" quantity="64" xml:lang="sl">64 pojavnic</measure>
+            <measure unit="tokens" quantity="64" xml:lang="en">64 tokens</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <idno type="URI" subtype="handle">http://handle.net/XXX</idno>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
+            </availability>
+            <date when="2025-09-27">27. september 2025</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kmetijske in rokodelske novice</title>
+               <title level="a">Gospodarske skušnje</title>
+               <publisher>Jožef Blaznik</publisher>
+               <date when="1877-08-15">15.08.1877</date>
+               <biblScope unit="volume">35</biblScope>
+               <biblScope unit="issue">33</biblScope>
+               <idno type="URN">URN:NBN:SI:DOC-000TTDCE</idno>
+               <idno type="URI">https://dlib.si/details/URN:NBN:SI:DOC-000TTDCE/</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <tagsDecl>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="graphic" occurs="1"/>
+               <tagUsage gi="name" occurs="1"/>
+               <tagUsage gi="p" occurs="2"/>
+               <tagUsage gi="pb" occurs="1"/>
+               <tagUsage gi="pc" occurs="11"/>
+               <tagUsage gi="s" occurs="3"/>
+               <tagUsage gi="surface" occurs="1"/>
+               <tagUsage gi="w" occurs="53"/>
+            </namespace>
+         </tagsDecl>
+         <listPrefixDef>
+            <prefixDef ident="facs"
+                       matchPattern="(.+)"
+                       replacementPattern="https://nl.ijs.si/inz/periodika/0/000TTDCE/000TTDCE-$1.jpg">
+               <p xml:lang="en">The URIs with this prefix point to the facsimile images of this corpus component.</p>
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2025-09-27">
+            <name>Tomaž Erjavec</name>: Made sample.</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="PressMint-SI_1877-08-15-000TTDCE.page1">
+         <graphic url="facs:0"/>
+      </surface>
+   </facsimile>
+   <text xml:lang="sl">
+      <body>
+        <pb facs="#PressMint-SI_1877-08-15-000TTDCE.page1"/>
+        <p>
+<s>
+<w ana="mte:Mdc" msd="UPosTag=NUM|NumForm=Digit|NumType=Card" lemma="260">260</w>
+<w ana="mte:Agpfsg" msd="UPosTag=ADJ|Case=Gen|Degree=Pos|Gender=Fem|Number=Sing" lemma="gospodarski">Gospodarske</w>
+<w ana="mte:Ncfsg" msd="UPosTag=NOUN|Case=Nom|Gender=Fem|Number=Plur" lemma="skušnja" join="right">skušnje</w>
+<pc ana="mte:Z" msd="UPosTag=PUNCT">.</pc>
+</s>
+        </p>
+        <p>
+<s>
+<pc ana="mte:Z" msd="UPosTag=PUNCT">*</pc>
+<w ana="mte:Ncfsn" msd="UPosTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="goveda">Goveda</w>
+<w ana="mte:Cc" msd="UPosTag=CCONJ" lemma="in">in</w>
+<w ana="mte:Ncmpn" msd="UPosTag=NOUN|Case=Nom|Gender=Masc|Number=Plur" lemma="konj">konji</w>
+<w ana="mte:Px------y" msd="UPosTag=PRON|PronType=Prs|Reflex=Yes|Variant=Short" lemma="se">se</w>
+<w ana="mte:Vmer3p" msd="UPosTag=VERB|Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin" lemma="dati">dado</w>
+<w ana="mte:Agpfpg" msd="UPosTag=ADJ|Case=Gen|Degree=Pos|Gender=Fem|Number=Plur" lemma="nadležen">nadležnih</w>
+<w ana="mte:Ncfpg" msd="UPosTag=NOUN|Case=Gen|Gender=Fem|Number=Plur" lemma="muha">muh</w>
+<w ana="mte:Vmen" msd="UPosTag=VERB|Aspect=Perf|VerbForm=Inf" lemma="obvarovati" join="right">obvarovati</w>
+<pc ana="mte:Z" msd="UPosTag=PUNCT">,</pc>
+<w ana="mte:Cs" msd="UPosTag=SCONJ" lemma="če">če</w>
+<w ana="mte:Px------y" msd="UPosTag=PRON|PronType=Prs|Reflex=Yes|Variant=Short" lemma="se">se</w>
+<w ana="mte:Si" msd="UPosTag=ADP|Case=Ins" lemma="z">s</w>
+<w ana="mte:Appfsi" msd="UPosTag=ADJ|Case=Ins|Degree=Pos|Gender=Fem|Number=Sing" lemma="suknen">sukneno</w>
+<w ana="mte:Ncfsi" msd="UPosTag=NOUN|Case=Ins|Gender=Fem|Number=Sing" lemma="cunja" join="right">cunjo</w>
+<pc ana="mte:Z" msd="UPosTag=PUNCT">,</pc>
+<w ana="mte:Pq-fsn" msd="UPosTag=DET|Case=Nom|Gender=Fem|Number=Sing|PronType=Int" lemma="kateri">katera</w>
+<w ana="mte:Va-r3s-n" msd="UPosTag=AUX|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">je</w>
+<w ana="mte:Va-p-sf" msd="UPosTag=AUX|Gender=Fem|Number=Sing|VerbForm=Part" lemma="biti">bila</w>
+<w ana="mte:Sa" msd="UPosTag=ADP|Case=Acc" lemma="v">v</w>
+<w ana="mte:Agpfsa" msd="UPosTag=ADJ|Case=Acc|Degree=Pos|Gender=Fem|Number=Sing" lemma="ribji">ribjo</w>
+<w ana="mte:Ncfsa" msd="UPosTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="mast">mast</w>
+<w ana="mte:Appfsn" msd="UPosTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|VerbForm=Part" lemma="pomočen" join="right">pomočena</w>
+<pc ana="mte:Z" msd="UPosTag=PUNCT">,</pc>
+<w ana="mte:Sl" msd="UPosTag=ADP|Case=Loc" lemma="po">po</w>
+<w ana="mte:Ncmsl" msd="UPosTag=NOUN|Case=Loc|Gender=Masc|Number=Sing" lemma="život">životu</w>
+<w ana="mte:Rgp" msd="UPosTag=ADV|Degree=Pos" lemma="dobro">dobro</w>
+<w ana="mte:Vmpr3p" msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin" lemma="oribati" join="right">oribajo</w>
+<pc ana="mte:Z" msd="UPosTag=PUNCT">.</pc>
+</s>
+<s>
+<w ana="mte:Cs" msd="UPosTag=SCONJ" lemma="ker">Ker</w>
+<w ana="mte:Cc" msd="UPosTag=CCONJ" lemma="pa">pa</w>
+<w ana="mte:Agpfsn" msd="UPosTag=ADJ|Case=Nom|Degree=Pos|Gender=Fem|Number=Sing" lemma="ribji">ribja</w>
+<w ana="mte:Ncfsn" msd="UPosTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="mast">mast</w>
+<w ana="mte:Vmpr3s" msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="smrdeti">smrdi</w>
+<w ana="mte:Cc" msd="UPosTag=CCONJ" lemma="in">in</w>
+<w ana="mte:Q" msd="UPosTag=PART" lemma="tudi">tudi</w>
+<w ana="mte:Agpmsnn" msd="UPosTag=ADJ|Case=Nom|Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing" lemma="dober">dober</w>
+<w ana="mte:Ncmsn" msd="UPosTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="kup">kup</w>
+<w ana="mte:Va-r3s-y" msd="UPosTag=VERB|Mood=Ind|Number=Sing|Person=3|Polarity=Neg|Tense=Pres|VerbForm=Fin" lemma="biti" join="right">ni</w>
+<pc ana="mte:Z" msd="UPosTag=PUNCT">,</pc>
+<w ana="mte:Va-r3p-n" msd="UPosTag=AUX|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin" lemma="biti">so</w>
+<w ana="mte:Sl" msd="UPosTag=ADP|Case=Loc" lemma="na">na</w>
+<w ana="mte:Rgc" msd="UPosTag=DET|PronType=Ind" lemma="več">več</w>
+<w ana="mte:Ncmpl" msd="UPosTag=NOUN|Case=Loc|Gender=Masc|Number=Plur" lemma="kraj">krajih</w>
+<name type="LOC">
+<w ana="mte:Npfsg" msd="UPosTag=PROPN|Case=Gen|Gender=Fem|Number=Sing" lemma="Nemčija">Nemčije</w>
+</name>
+<w ana="mte:Sa" msd="UPosTag=ADP|Case=Acc" lemma="za">za</w>
+<w ana="mte:Rgc" msd="UPosTag=ADV|Degree=Cmp" lemma="dobro">bolje</w>
+<w ana="mte:Vmbp-pm" msd="UPosTag=VERB|Gender=Masc|Number=Plur|VerbForm=Part" lemma="spoznati">spoznali</w>
+<w ana="mte:Ncfsa" msd="UPosTag=NOUN|Case=Acc|Gender=Fem|Number=Sing" lemma="pelinovovoda" join="right">pelinovovodo</w>
+<pc ana="mte:Z" msd="UPosTag=PUNCT">,</pc>
+<w ana="mte:Si" msd="UPosTag=ADP|Case=Ins" lemma="z">s</w>
+<w ana="mte:Pq-fsi" msd="UPosTag=DET|Case=Ins|Gender=Fem|Number=Sing|PronType=Int" lemma="kateri">katero</w>
+<w ana="mte:Px------y" msd="UPosTag=PRON|PronType=Prs|Reflex=Yes|Variant=Short" lemma="se">se</w>
+<w ana="mte:Ncfsn" msd="UPosTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="živina" join="right">živina</w>
+<pc ana="mte:Z" msd="UPosTag=PUNCT">,</pc>
+<w ana="mte:Ncmsn" msd="UPosTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="kolikorkrrat">kolikorkrrat</w>
+<w ana="mte:Rgp" msd="UPosTag=ADV|Degree=Pos" lemma="treba" join="right">treba</w>
+<pc ana="mte:Z" msd="UPosTag=PUNCT">,</pc>
+<w ana="mte:Vmer3s" msd="UPosTag=VERB|Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" lemma="umiti" join="right">umije</w>
+<pc ana="mte:Z" msd="UPosTag=PUNCT">.</pc>
+</s>
+        </p>
+
+      </body>
+   </text>
+</TEI>
