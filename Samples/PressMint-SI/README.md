@@ -80,6 +80,7 @@ following the Universal Dependencies formalism for tagging, and the standard CoN
   the original files):
 
     ```
+    
 {
     "URN": "URN:NBN:SI:DOC-000TTDCE",
     "dlib_url": "https://dlib.si/details/URN:NBN:SI:DOC-000TTDCE/",
@@ -209,8 +210,8 @@ following the Universal Dependencies formalism for tagging, and the standard CoN
         }
     ]
 }
-    ```
 
+    ```
 
 * __Facsimile__: The image files for complete texts are available as PDFs from their original locations in dLib. 
 For most of the corpus per-page JPEGs are available on the Web and integrated into the concordancer search.
