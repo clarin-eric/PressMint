@@ -153,8 +153,11 @@ sub processFile {
         
         # Get image url from first page, for prefixDef
         $image_url = ${@{${$record}{'pages'}}[0]}{'image_url'};
-        # Sic! Mistake in JSON:
-        $image_url =~ s|https://nl.ijs.si/inz/periodika/|https://nl.ijs.si/inz/speriodika/|;
+        # Sic!
+        # JSON "image_url": "https://nl.ijs.si/inz/periodika/0/000TTDCE/000TTDCE-0.jpg"
+        # Actual URL:        https://nl.ijs.si/inz/speriodika/000TTDCE-0.jpg
+        $image_url =~ s|https://nl.ijs.si/inz/periodika/[^/]+/[^/]+/|https://nl.ijs.si/inz/speriodika/|;
+
         ($page_prefix) = $image_url =~ /(.+)-\d+\.jpg/;
         
         if ($mode eq 'text') {$text = &prepText}
