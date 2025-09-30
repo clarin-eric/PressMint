@@ -19,7 +19,7 @@
       </titleStmt>
       <publicationStmt>
         <publisher>CLARIN</publisher>
-        <date>2025-09-27</date>
+        <date>2025-09-30</date>
         <availability status="free">
           <p>This file is freely available and you are hereby authorised to copy, modify, and
           redistribute it in any way without further reference or permissions.</p>
@@ -73,7 +73,7 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
-      <change when="2025-09-27">Tomaž Erjavec: first draft.</change>
+      <change when="2025-09-30">Tomaž Erjavec: first draft.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -83,7 +83,7 @@
           <titlePart type="main">The structure and encoding of
           <ref target="https://github.com/clarin-eric/PressMint">PressMint corpora</ref></titlePart>
         </docTitle>
-        <docDate>2025-09-27</docDate>
+        <docDate>2025-09-30</docDate>
       </titlePage>
       <p></p>
       <divGen type="toc"/>
@@ -140,7 +140,8 @@
           and the file conventions a ParlaMint corpus and introduces
           the top level XML elements and their attributes incl. links;</item>
 
-          <item><ref target="#chp-metadata">Chapter 4</ref> gives the encoding of the corpus metadata;</item>
+          <item><ref target="#chp-metadata">Chapter 4</ref> gives the encoding of the corpus metadata,
+          such as the title information, documenting the source of the corpus, taxonomies used etc.;</item>
           
           <item><ref target="#chp-facsimile">Chapter 5</ref> explains how to encode the information
           to the facsimile-related information, i.e. links to and documentation of the newspaper images;</item>
@@ -245,9 +246,10 @@
   ...                                            <!-- More corpus component files -->
 </teiCorpus>]]>
           </egXML>
-          In case the <gi>taxonomy</gi> elements will be used in PressMint they will
-          also be stored as separate files, and hence also included in the corpus root using the
-          same XInclude mechanism as explained above.</p>
+          Apart from corpus components, some parts of the overall corpus metadata (i.e. the
+          <gi>taxonomy</gi> elements) are also stored as separate files, and
+          hence also included in the corpus root using the same XInclude mechanism as explained
+          above.</p>
         </div>
       
         <div xml:id="sec-files">
@@ -279,19 +281,15 @@
             </item>
 
             <item>Certain metadata elements from the corpus root <gi>teiHeader</gi> are stored in separate
-            files, in particular, in case they will be used,
-            any PressMint taxonomies, stored in the <gi>taxonomy</gi> elements.
-            The file names for such metadata files should start with the name of the corpus root, followed by a hyphen,
-            and then the name of the element, e.g. <code>PressMint-SI-listBil.xml</code> for the list of bibliographic items (newspapers)
-            that represent the sources of the Slovenian corpus.
-            In case there are more files for instances with the same element name, as is the case for taxonomies,
-            the filename should end with another hypen, followed by the a distinguishing suffix,
-            e.g. <code>PressMint-SI-taxonomy-topic.xml</code>.
-            <!--If a taxonomy (or other separate metadata file) refers to the linguistically annotated annotated corpora only, then it should
-            get the suffix <code>.ana</code>, e.g. <code>PressMint-SI-taxonomy-NER.ana.xml</code>.
-            Finally, if a taxonomy is not corpus-specific, i.e. identical files are used by all PressMint corpora then 
-            country or region code is ommitted,
-            e.g. <code>PressMint-taxonomy-NER.ana.xml</code>. -->
+            files, in particular the PressMint taxonomies, stored in <gi>taxonomy</gi> elements.
+            The common PressMint taxonomies are named as in <code>ParlaMint-taxonomy-topics.xml</code>,
+            i.e. start with <code>ParlaMint-taxonomy-</code> followed by the a string describing what the taxonomy contains,
+            in this case, the topics that the newspaper articles will be classified into.
+            However, if a taxonomy (or other metadata file) is specific to a particular corpus, then this is indicated by
+            having in the file name (and the IDs contained in it) prefixed by the name of the corpus root, e.g.
+            <code>PressMint-NL-taxonomy-topics.xml</code> for additional topics distinguished by the Dutch corpus.
+            Finally, if a taxonomy (or other separate metadata file) refers to the linguistically annotated annotated corpus only,
+            then it should get the suffix <code>.ana</code>, e.g. <code>PressMint-taxonomy-NER.ana.xml</code>.
             </item>
 
             <item>The file names of the corpus as a whole or corpus components that have
@@ -313,12 +311,12 @@
           <p>For distribution the complete XML corpus should be stored in a
           directory that has the same name prefix as the corpus root file and extended with the format
           (e.g. <code>TEI</code>).
-          The directory then contains the corpus root file (and its metadata files, if such exists),
+          The directory then contains the corpus root file, its metadata files (such as taxonomies),
           while the corpus components should be in subdirectories, one per year, for example:
           
           <eg xml:id="exa-directories"><lb/>
             <code>PressMint-SI.TEI/PressMint-SI.xml</code><lb/>
-            <code>PressMint-SI.TEI/PressMint-SI-taxonomy-topic.xml</code><lb/>
+            <code>PressMint-SI.TEI/PressMint-taxonomy-topic.xml</code><lb/>
             <code>...</code><lb/>
             <code>PressMint-SI.TEI/1899/PressMint-SI_1899-01-02.xml</code><lb/>
             <code>PressMint-SI.TEI/1899/PressMint-SI_1899-01-03.xml</code><lb/>
@@ -331,12 +329,13 @@
           </eg>
 
           The lingistically annotated version of the corpus is stored separately, with the main directory
-          and, as mentioned, the corpus root and component filenames having the additional suffix
-          <code>.ana</code>, e.g.
+          and, as mentioned, the corpus root, its metadata files for linguistic annotation,
+          and component filenames having the additional suffix <code>.ana</code>, e.g.
 
           <eg xml:id="exa-directories.ana"><lb/>
             <code>PressMint-SI.TEI.ana/PressMint-SI.ana.xml</code><lb/>
-            <code>PressMint-SI.TEI.ana/PressMint-SI-taxonomy-topic.xml</code><lb/>
+            <code>PressMint-SI.TEI.ana/PressMint-taxonomy-topic.xml</code><lb/>
+            <code>PressMint-SI.TEI.ana/PressMint-taxonomy-NER.ana.xml</code><lb/>
             <code>...</code><lb/>
             <code>PressMint-SI.TEI.ana/1899/PressMint-SI_1899-01-02.ana.xml</code><lb/>
             <code>PressMint-SI.TEI.ana/1899/PressMint-SI_1899-01-03.ana.xml</code><lb/>
@@ -530,7 +529,7 @@
           <head>Pointing attributes</head>
 
           <p>The PressMint encoding can use pointing attributes for various purposes,
-          e.g. for references to the IDs of the facsimile elements.</p>
+          e.g. for references to the IDs of the facsimile elements or for references to taxonomy categories.</p>
 
           <p>While a few elements have dedicated pointing attributes, there are some
           generally used ones. They share the characteristics that they can all be used by a
@@ -545,9 +544,9 @@
             <gi>facsimile</gi> elements (cf. Section on <ref target="#chp-facsimile">Newspaper
             facsimile</ref>.</item>
             
-            <!--item><att>ana</att> serves to provide an analysis or to classify an element
+            <item><att>ana</att> serves to provide an analysis or to classify an element
             according to some pre-determined vocabulary. In PressMint the target element
-            could be a category in a taxonomy.</item-->
+            will typically be a category in a taxonomy.</item>
             
             <!--item><att>corresp</att> points to items that correspond to the current
             element in some way.</item-->
@@ -1022,21 +1021,107 @@
             PressMint corpus.</p>
           </div>
 
+          <div xml:id="sec-classDecl">
+            <head>Class declaration and taxonomies</head>
+            
+            <p>The class declaration, <gi>classDecl</gi> is used only in the corpus root and
+            contains only definitions of (most) controlled vocabularies used in PressMint corpora.
+            These vocabularies, possibly hierarchically organised, are encoded using the
+            <gi>taxonomy</gi> element.</p>
+
+            <p>The taxonomies themselves are stored in separate files, and are typically
+            PressMint-wide, i.e. all corpora use the same taxonomies. The taxonomies are
+            included in the document root with the XInclude directive, as illustrated
+            below:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-classdecl-xinclude"><![CDATA[
+<classDecl>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="PressMint-taxonomy-topic.xml"/>    <!-- Common taxonomy of topics-->
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="PressMint-NL-taxonomy-topics.xml"/>    <!-- Dutch additional taxonomy of topics-->
+  ]]>
+</egXML>
+
+            As can be seen, the first taxonomy is a general PressMint one, while
+            the second one is specific to the Dutch corpus. They are distinguished by including the
+            country code <code>NL</code> (followed by hyphen) into the filename.</p>
+
+            <p>To illustrate the structure of a taxonomy element, we give below the 
+            start of common taxonomy on topics where we include only the descriptions in English
+            and German:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-taxo">
+              <classDecl>
+                ...
+                <taxonomy xml:id="ParlaMint-taxonomy-topic" xml:lang="mul">
+                  <desc xml:lang="en"><term>Topics</term>: Comparative Agendas Project
+                    <ref target="https://www.comparativeagendas.net/pages/master-codebook">CAP major topic labels</ref>
+                  </desc>
+                  <desc xml:lang="de"><term>Themen</term>: Deutsche Übersetzungen der im Comparative Agendas Projekt (CAP)
+                    <ref target="https://www.comparativeagendas.net/pages/master-codebook">entstandenen Annotations-Tags für Themen</ref>
+                  </desc>
+                  <category xml:id="argic">
+                    <catDesc xml:lang="en"><term>Agriculture</term></catDesc>
+                    <catDesc xml:lang="de"><term>Landwirtschaft</term></catDesc>
+                  </category>
+                  <category xml:id="civil">
+                    <catDesc xml:lang="en"><term>Civil Rights</term></catDesc>
+                    <catDesc xml:lang="de"><term>Bürgerrechte</term></catDesc>
+                  </category>
+                  ...
+                </taxonomy>
+              </classDecl>
+            </egXML>
+            
+            A <gi>taxonomy</gi> thus first describes, via <gi>desc</gi>, what it
+            is a taxonomy of, and then lists (the possibly nested) categories in
+            <gi>category</gi> elements. Crucial here are the values of their
+            <att>xml:id</att> attributes, by which a category is referred to via the
+            <att>ana</att> attribute of some other element, as was already explained in the
+            Section on <ref target="#sec-roottags">Attributes of top-level elements</ref>, in
+            connection with classifying a corpus component via the <att>ana</att> attribute.
+            The taxonomy category then bilingually glosses its
+            meaning in its <gi>catDesc</gi> elements, which should always first contain the
+            short name of the category, encoded in the <gi>term</gi> element.</p>
+            
+            <p>PressMint requires only one taxonomy to be defined in the class declaration
+            of the corpus root (as well as a additionaly ones for the linguistically annotated
+            corpus, as further described in the Section on <ref target="#sec-ana-metadata">Linguistic metadata</ref>).
+            As mentioned, the taxonomies are defined globally and available as part of the data on the
+            <ref target="https://github.com/clarin-eric/PressMint/">PressMint GitHub
+            repository</ref>, and there is a special procedure modifying them, in
+            particular on how to insert translations of a new language.</p>
+
+            <p>The obligatory taxonomy is:
+            
+            <list>
+              <item>The <hi>CAP topics</hi> taxonomy, which gives
+              <ref target="https://www.comparativeagendas.net/pages/master-codebook">major topic labels</ref> of the
+              Comparative Agendas Project.</item>
+            </list>
+            </p>
+
+            <p>Furhtermore, there are several obligatory taxonomies which pertain to the linguistically analysed
+            version of the corpus only, cf. the Section on <ref target="#sec-ana-taxo">Linguistic taxonomies</ref>.</p>
+            
+          </div>
+          
           <div xml:id="sec-prefixDef">
             <head>Prefix definitions</head>
             
             <p>Pointing attributes, such as <att>url</att> or <att>ana</att>, take as their value a
             reference or space-delimited series of references to a URL and/or the value of
             <att>xml:id</att> elements. If the reference is to an ID, then it is prefixed the hash
-            character, <code>#</code>, e.g. <val>#parla.uni</val>, and if they are to an ID in another
+            character, <code>#</code>, e.g. <val>#argic</val>, and if they are to an ID in another
             XML document, then the hash follows the URL of the document, e.g.
             <val>https://nl.ijs.si/ME/V6/msd/tables/msd-fslib2-sl.xml#Vmpr1p</val>.</p>
             
             <p>Because complete URLs tend to be long, especially inconvenient when such
-            references are given to every token in a corpus, TEI introduces the so called
+            references are given to many elements, TEI introduces the so called
             <ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAPU">Abbreviated
-            Pointers</ref>, whereby the reference to an ID can be given in the form of a
-            prefix, which is separated by a colon from the local part of the ID reference, and
+            Pointers</ref>, whereby a reference can be given in the form of a
+            prefix, which is separated by a colon from the local part of the reference, and
             the value of this prefix is determined via the <gi>prefixDef</gi> element in the
             <gi>encodingDesc</gi> of the TEI header.</p>
 
@@ -1053,47 +1138,28 @@
               <listPrefixDef>
                 <prefixDef ident="facs"
                            matchPattern="(.+)"
-                           replacementPattern="https://nl.ijs.si/imp/facs/NUKP14042344.$1">
+                           replacementPattern="https://nl.ijs.si/imp/facs/NUKP14042344.$1.png">
                   <p xml:lang="en">The URIs with this prefix point to the facsimile images of this
                   corpus component.</p>
                 </prefixDef>
               </listPrefixDef>
             </egXML>
 
-            In short, if the value of a pointing attribute is <val>facs:page1.png</val> this should be expanded to
-            <val>https://nl.ijs.si/imp/facs/NUKP14042344.page1.png</val>.
-            
-            The second example illustrates the prefix definitions in the corpus root for the optional
-            MULTEXT-East part-of-speech tags:
-            
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-listPrefix-mte">
-              <listPrefixDef>
-                <prefixDef ident="mte"
-                           matchPattern="(.+)"
-                           replacementPattern="https://nl.ijs.si/ME/V6/msd/tables/msd-fslib-sl.xml#$1">
-                  <p xml:lang="en">Private URIs with this prefix point to feature-structure elements defining the
-                  Slovenian MULTEXT-East Version 6 MSDs.</p>
-                </prefixDef>
-              </listPrefixDef>
-            </egXML>
-            
-            In detail, the specialised element for listing prefix definitions, <gi>listPrefixDef</gi> gives a
-            (series of) prefix definitions, i.e. <gi>prefixDef</gi> elements. Each prefix definition
-            defines its prefix as the value of the <att>ident</att> attribute, and then specifies a
-            regular expression that matches the part of the ID reference after the prefix in its
+            The specialised element for listing prefix definitions, <gi>listPrefixDef</gi> gives a
+            series of prefix definitions, i.e. <gi>prefixDef</gi> elements. Each prefix definition
+            defines its prefix as the value of the <att>ident</att> attribute, and then specifies
+            a regular expression that matches the part of the reference after the prefix in its
             <att>matchPattern</att> attribute, and its substitution as the value of the
             <att>replacementPattern</att> attribute. The prefix definition above thus defines the
-            <code>mte</code> prefix, so for any ID reference with this prefix,
-            e.g. <val>mte:Nps</val>, the part after the prefix (<code>Nps</code>)
-            should be matched against <code>(.+)</code> and the result being the matched part (here
-            the entire relation <code>Nps</code>) substituted by <code>#$1</code>, i.e. by the
-            hash character followed by the original value, so that <val>mte:Nps</val> gives
-            <val>https://nl.ijs.si/ME/V6/msd/tables/msd-fslib-sl.xml#Nps</val>.</p>
-            
+            <code>facs</code> prefix, so for any reference with this prefix,
+            e.g. <val>facs:page1</val>, the part after the prefix (<code>page1</code>)
+            should be matched against the regular expression <code>(.+)</code> and the result being the matched part
+            substituted for <code>$1</code>, so that
+            <val>facs:page1</val> gives <val>https://nl.ijs.si/imp/facs/NUKP14042344.page1.png</val>.</p>
+
             <p>Finally, each prefix definition also contains a possibly bi-lingual paragraph
             explaining the definition.</p>
           </div>
-
         </div>
 
         <div xml:id="sec-profileDesc">
@@ -1294,43 +1360,104 @@
         <head>Structure of newspaper texts</head>
         
         <p>The newspaper texts are encoded in the <gi>text</gi> element of corpus components.
-        This element can contain <gi>front</gi> and <gi>back</gi> and must contain <gi>body</gi>.
-        If they are used, <gi>front</gi> will typically contain the front-matter of a newspaper issue,
-        i.e. its banner, while back would contain material that does not fit in well with the article-based
-        structure of a newspaper, e.g. advertisements. However, this material can also be included directly
-        in the <gi>body</gi> but at the risk of disrupting the flow of the article texts.</p>
+        This element must contain the <gi>body</gi> element, which at the minimum, will contain a series of
+        paragraph (<gi>p</gi>) elements, which corresponds to a newspaper text that has not internal divisions,
+        as illustrated below:
 
-        <p>PressMint makes few assumptions on the structure of the texts in the TEI <gi>body</gi>
-        and optional <gi>front</gi> and <gi>back</gi>. At minimum, they need to contain a series of paragraphs,
-        i.e. <gi>p</gi> elements possibly with interspersed empty page/column/line beginning elements, as
-        discussed in the preceding Section on <ref target="#chp-facsimile-facs">Connecting the text to the
-        facsimile</ref>.</p>
-        
-        <p>This kind of encoding is appropriate for text with little internal structure.
-        However, if the text has been split into articles, these are encoded using the standard <gi>div</gi>
-        element, possibly further qualified by the value of its <att>type</att> attribute, which will have a closed
-        list of values, as illustrated below. 
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-div">
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-ministruct">
           <text>
             <body>
-              <div type="article">...</div>
-              <div type="advertisement">...</div>
-              <div type="article">...</div>
+              <p>...</p>
+              <p>...</p>
               ...
             </body>
           </text>
         </egXML>
-        Each division can also start with a <gi>head</gi> element giving the title of the article,
-        and contin possibly other standard TEI elements, such as <gi>byline</gi> giving the article's
-        author.</p>
-      
+        The paragraphs can also be mixed with empty page, column and line beginning elements, as
+        discussed in the preceding Section on <ref target="#chp-facsimile-facs">Connecting the text to the
+        facsimile</ref>.</p>
+
+        <p>This kind of encoding is appropriate for texts with no internal structure.
+        However, the text can also be split into divisions, encoded using the standard <gi>div</gi>
+        element. PressMint allows two level of divisions. The upper one (if used) corresponds to sections of
+        a newspaper, such as <q>foreign news</q>, <q>crime reports</q>, <q>sports</q> etc. while the lower one
+        encodes individual articles, advertisements and other self-contained portions of the text.
+        The type of the division is indicated by the value of its <att>type</att> attribute, which has the
+        following recommended values:
+        <list>
+          <item><val>domesticNews</val>: groups articles on domestic news</item>
+          <item><val>foreignNews</val>: groups articles on foreign news</item>
+          <item><val>sportsNews</val>: groups articles on sports events</item>
+          <item><val>crimeNews</val>: groups articles on crime and misdemeanors</item>
+          <item><val>supplements</val>: groups the supplements to the newspaper</item>
+          <item><val>banner</val>: contains the banner of a newspaper</item>
+          <item><val>colophon</val>: contains the colophon (details of printing, responsibility etc.) of the newspaper</item>
+          <item><val>article</val>: contains an individual newspaper article</item>
+          <item><val>advertisement</val>: contains an advertisement</item>
+          <item><val>supplement</val>: contains a supplement to th newspaper.</item>
+        </list>
+        In case a corpus contains also other types of divisions, these can be encoded using a local taxonomy of
+        divisions types are referred to via the <att>ana</att> attribute on <gi>div</gi>.
+        </p>
+
+        <p>The divisions can also start with the (typically article) title, i.e. the <gi>head</gi> element,
+        and also start (or more commonly) end with the author of the article, encoded in the <gi>byline</gi> element.
+        This structure, using both levels of <gi>div</gi> is then as follows:
+
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-div">
+          <text>
+            <body>
+              ...
+              <div type="foreignNews">
+                <div type="article">
+                  <head>News for New York</head>
+                  <p>...</p>
+                  ...
+                  <byline>A.B.</byline>
+                </div>
+                ...
+              </div>
+              ...
+            </body>
+          </text>
+        </egXML>
+        </p>
+        
+        <p>Apart from the <gi>body</gi>, the <gi>text</gi> element can also contain <gi>front</gi> and <gi>back</gi>,
+        which, if used, group together matter is not part of the newspaper body proper (so, arenot articles).
+        The <gi>front</gi> element will contain the front-matter of a newspaper issue, i.e. its banner and possibly colophon,
+        while <gi>back</gi> contains material that either comes at the end of a newspaper (such as supplements) or
+        does not fit in well with the article-based structure of a newspaper, in particular, the advertisements,
+        as shown in the example below:
+        
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-frontback">
+          <text>
+            <front>
+              <div type="banner">
+                ...
+              </div>
+            </front>
+            <body>
+              <div type="article">...</div>
+              <div type="article">...</div>
+              ...
+            </body>
+            <back>
+              <div type="advertisiment">...</div>
+              <div type="advertisiment">...</div>
+              ...
+            </back>
+          </text>
+        </egXML>
+        </p>
+
       <div xml:id="sec-gaps">
         <head>Gaps</head>
         
-        <p>For various reasons, such as too low OCR quality or portions of the text not interesting to PressMint, such
-        as tables, parts of the text can be ommitted. To mark missing material, the <gi>gap</gi> element is used,
-        which is then also marked by the <att>reason</att> attribute, specifying why the material was ommitted. If desired,
-        a description of the ommitted content can be given in the <gi>desc</gi> element of the <gi>gap</gi>,
+        <p>For various reasons, such as portions of the text not interesting to PressMint (e.g. tables),
+        parts of the text can be ommitted. To mark missing material, the <gi>gap</gi> element is used,
+        which should also have the <att>reason</att> attribute, specifying why the material was ommitted.
+        It is also possible to give a description of the ommitted content in the <gi>desc</gi> element of the <gi>gap</gi>,
         as illustrated below:
           
           <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-gap">
@@ -1359,8 +1486,8 @@
         For example, if the plain-text TEI root has the file name
         <code>PressMint-CZ.xml</code>, the linguistically annotated one should be
         <code>PressMint-CZ.ana.xml</code>, and if the component plain-text files is 
-        <code>PressMint-CZ_2016-04-13.xml</code> the linguistically annotated one is
-        <code>PressMint-CZ_2016-04-13.ana.xml</code>.</item>
+        <code>PressMint-CZ_1901-04-13.xml</code> the linguistically annotated one is
+        <code>PressMint-CZ_1901-04-13.ana.xml</code>.</item>
         
         <item>Because the file ID (i.e. the value of the top level element attribute
         <att>xml:id</att>, as explained in the Section on <ref
@@ -1383,7 +1510,7 @@
           
         <item>The linguistically annotated version of the corpus should also have some
         added metadata in the TEI header of the corpus root, which is detailed in the
-        following Section on <ref target="#sec-ana-metadata">Metadata for linguistic
+        Section on <ref target="#sec-ana-metadata">Metadata for linguistic
         annotation</ref>.</item>
         
         </list>
@@ -1392,7 +1519,7 @@
         <div xml:id="sec-ana-markup">
           <head>Linguistic markup</head>
 
-          <p>Linguistic annotation is added only to the text content of <gi>p</gi> elements.
+          <p>Linguistic annotation is added only to the immediate text content of <gi>p</gi> elements.
           For this text, PressMint requires the following additional markup to be present:
           <list>
             <item>tokens: what is a word, and what is punctuation, with preserved
@@ -1402,13 +1529,13 @@
             
             <item>normalised form (optional): what is the modernised spelling of archaically spelled words;</item>
             
-            <item>lemmas: what is the base form of each word;</item>
+            <item>lemmas: the base form of each word;</item>
             
             <item><ref target="https://universaldependencies.org/">Universal
             Dependencies</ref> (UD) part-of-speech and morphological features, and,
             optionally, part-of-speech tags from a different (local) tagset;</item>
             
-            <item>named entities (NE): what is a name, categorised at least into the standard
+            <item>named entities (NE): a name, categorised into the standard
             four NE classes;</item>
           </list>
           
