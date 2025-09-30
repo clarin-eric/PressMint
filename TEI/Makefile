@@ -44,7 +44,7 @@ val-samples:
 	./validate.pl samples ${DATA}
 
 # Make one file from the ODD
-prepare: 
+prepare: generate-schemaSpecs
 	rm -f tmp/*
 	$s -xi -xsl:copy-odd.xsl PressMint.odd.xml > tmp/PressMint.xml
 
@@ -52,6 +52,11 @@ prepare:
 setup:
 	mkdir -p tmp
 	git -C ../Scripts clone git@github.com:TEIC/Stylesheets.git
+
+# generate schemaSpecs.odd file
+generate-schemaSpecs:
+	$s -xi -xsl:generate-odd.xsl tei_odd=p5subset.xml PressMint-schemaSpecs.editing.odd.xml > PressMint-schemaSpecs.odd.xml
+
 
 #Prerequisites
 s = java -jar ../Scripts/bin/saxon.jar
