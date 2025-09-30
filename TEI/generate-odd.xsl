@@ -5,7 +5,7 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:eg="http://www.tei-c.org/ns/Examples"
     xmlns:fn="http://www.w3.org/2005/xpath-functions"
-    xmlns:pm="ParlaMint"
+    xmlns:pm="PressMint"
     exclude-result-prefixes="xsl pm">
   <xsl:output indent="yes"/>
 

@@ -2,6 +2,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 namespace eg = "http://www.tei-c.org/ns/Examples"
 namespace egXML = "http://www.tei-c.org/ns/Examples"
 namespace ns1 = "http://www.w3.org/1999/xhtml"
+namespace pm = "PressMint"
 namespace rng = "http://relaxng.org/ns/structure/1.0"
 namespace sch = "http://purl.oclc.org/dsdl/schematron"
 default namespace tei = "http://www.tei-c.org/ns/1.0"
@@ -10,7 +11,7 @@ namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 namespace xsl = "http://www.w3.org/1999/XSL/Transform"
 
-# Schema generated from ODD source 2025-09-30T08:31:04Z. 2025-09-27. 
+# Schema generated from ODD source 2025-09-30T08:53:14Z. 2025-09-27. 
 # TEI Edition: P5 Version 4.10.0a. Last updated on 13th August 2025, revision 73d59c946 
 # TEI Edition Location: https://www.tei-c.org/Vault/P5/4.10.0a/ 
 #
@@ -3047,6 +3048,11 @@ tei_div =
          "\x{a}" ~
          "         "
        ],
+    tei_att.global.attribute.xmlid,
+    tei_att.global.attribute.n,
+    tei_att.global.attribute.xmllang,
+    tei_att.global.analytic.attribute.ana,
+    tei_att.global.source.attribute.source,
     
     ## 
     ## Sample values include: 1] article; 2] advert

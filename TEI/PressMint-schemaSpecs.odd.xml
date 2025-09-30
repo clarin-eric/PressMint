@@ -2,6 +2,7 @@
 <schemaSpec xmlns="http://www.tei-c.org/ns/1.0"
             xmlns:eg="http://www.tei-c.org/ns/Examples"
             xmlns:egXML="http://www.tei-c.org/ns/Examples"
+            xmlns:pm="PressMint"
             ident="pressmint"
             start="TEI teiCorpus"
             prefix="tei_"
@@ -33,12 +34,13 @@
                </valItem>
             </valList>
          </attDef>
-         <attDef ident="xml:id" mode="delete"/>
-         <attDef ident="n" mode="delete"/>
-         <attDef ident="xml:lang" mode="delete"/>
+         <!--div/@ana-->
+         <!--div/@xml:id-->
+         <!--div/@xml:lang-->
+         <!--div/@n-->
+         <!--div/@source-->
          <attDef ident="xml:base" mode="delete"/>
          <attDef ident="xml:space" mode="delete"/>
-         <attDef ident="ana" mode="delete"/>
          <attDef ident="change" mode="delete"/>
          <attDef ident="facs" mode="delete"/>
          <attDef ident="corresp" mode="delete"/>
@@ -54,7 +56,6 @@
          <attDef ident="rendition" mode="delete"/>
          <attDef ident="cert" mode="delete"/>
          <attDef ident="resp" mode="delete"/>
-         <attDef ident="source" mode="delete"/>
          <attDef ident="decls" mode="delete"/>
          <attDef ident="org" mode="delete"/>
          <attDef ident="sample" mode="delete"/>

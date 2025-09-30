@@ -1,6 +1,7 @@
 <schemaSpec xmlns="http://www.tei-c.org/ns/1.0"
             xmlns:eg="http://www.tei-c.org/ns/Examples"
             xmlns:egXML="http://www.tei-c.org/ns/Examples"
+            xmlns:pm="PressMint"
             ident="pressmint"
             start="TEI teiCorpus"
             prefix="tei_"
@@ -26,6 +27,11 @@
   
   <elementSpec ident="div" module="textstructure" mode="change">
     <attList>
+      <pm:attPreserve ident="ana"/>
+      <pm:attPreserve ident="xml:id"/>
+      <pm:attPreserve ident="xml:lang"/>
+      <pm:attPreserve ident="n"/>
+      <pm:attPreserve ident="source"/>
       <attDef ident="type" mode="replace" usage="rec">
         <valList type="open">
           <valItem ident="article">
