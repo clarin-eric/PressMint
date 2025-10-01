@@ -33,7 +33,8 @@ The corpus contains not only newspapers but also other periodically appearing te
 
 * __Size__: Around 150 thousand texts or 910 million tokens (50GB).
 
-* __Structure__: The corpus is structured into texts (typically corresponding to one issue of a periodical) and paragraphs.
+* __Structure__: The corpus is structured into texts (typically corresponding to one issue of a periodical and
+sometimes to a particular article) and paragraphs.
 No effort has been made to structure the texts into articles, mark their titles and similar.
 
 * __Correction__: The OCR-ed texts were corrected with [cSMTiser](https://github.com/clarinsi/csmtiser) trained on
@@ -47,55 +48,171 @@ following the Universal Dependencies formalism for tagging, and the standard CoN
 
     The texts in the corpus have the following metadata:
 
-    - Document ID (URN)
+    - Document ID (its dLib URN)
     - Source (URL of the original digitised document available at dlib.si)
-    - Document title (title of the specific issue of the periodical) 
-    - Name of the periodical
+    - Article title (when the file is a specific article)
     - Publisher
-    - Volume number (if available)
-    - Issue number (if available)
+    - Name of the periodical
     - Date of publication (of varying granularity, based on original metadata available)
     - Year of publication (sometimes only as a date range, e.g. 1882/1888 or 1909-1910)
+    - Volume number (if available)
+    - Issue number (if available)
+    - Number of pages
+    - The ration of corrections made my cSMTIser
     
-    The paragraphs have the following metadata:
+    Each of the pages contained have the following metadata:
     
-    - Image (not available for all documents)
-    - OCR quality estimation (either "low" or "good")
+    - Page number, starting with 0
+    - URL of the page image where the paragraph appears (not available for all documents)
+    - Alignment ratio between source and cSMTiser text
 
-* __Format__: The corpus is formatted as a vertical file for the concordancer.
-Below is the start of a corpus text:
+   The transcription for each page is given in several variants:
 
-    ```
-    <text id="248H5BK1" source="https://dlib.si/details/URN:NBN:SI:DOC-248H5BK1/"
-          publisher="Narodna tiskarna" title="Slovenski narod" periodical="Slovenski narod"
-          issue="86" volume="25" date="1892-04-15" year="1892">
-    <p id="248H5BK1.1.1" quality="good" image="248H5BK1-0.jpg">
-    <s id="248H5BK1.1.1.1">
-    86.		86.-k		Kav	Mdo	NUM	NumForm=Digit NumType=Ord
-    številka	številka-s	Sozei	Ncfsn	NOUN	Case=Nom Gender=Fem Number=Sing
-    <g/>
-    .		.-u		U	Z	PUNCT	
-    </s>
-    </p>
-    <p id="248H5BK1.1.2" quality="good" image="248H5BK1-0.jpg">
-    <s id="248H5BK1.1.2.1">
-    <name type="LOC">
-    Ljubljana	Ljubljana-s	Slzei	Npfsn	PROPN	Case=Nom Gender=Fem Number=Sing
-    </name>
-    <g/>
-    ,		,-u		U	Z	PUNCT	
-    v		v-d		Dt	Sa	ADP	Case=Acc
-    petek	petek-s		Sometn	Ncmsan	NOUN	Animacy=Inan Case=Acc Gender=Masc Number=Sing
-    15.		15.-k		Kav	Mdo	NUM	NumForm=Digit NumType=Ord
-    aprila	april-s		Somer	Ncmsg	NOUN	Case=Gen Gender=Masc Number=Sing
-    <g/>
-    .		.-u     	U	Z	PUNCT	
-    </s>
-    </p>
-    ```
+   - The text taken from the source PDF
+   - White-space (?) normalised text
+   - cSMTiser corrected text with quality estimation in terms of KenLM perplexity (mean and standard deviation)
+   - Corrected text with end-of line normalised words (?)
+   - Normalised text in CoNLL-U format processed with CLASSLA
+   
+* __Format__: The corpus is available both as a vertical file for the concordancer as well as JSON files.
+  We will take the JSON files as our source.
+  Below is the content of one JSON file, slightly formatted for better readability (there are no line breaks in
+  the original files):
+
+```
+{
+    "URN": "URN:NBN:SI:DOC-000TTDCE",
+    "dlib_url": "https://dlib.si/details/URN:NBN:SI:DOC-000TTDCE/",
+    "title": "Gospodarske sku\u0161nje",
+    "periodical_name": "Kmetijske in rokodelske novice",
+    "publisher": "Jo\u017eef Blaznik",
+    "date": "1877-08-15",
+    "year": "1877"
+    "dlib_date": "1877 08 15",
+    "volume_number": "35",
+    "issue_number": "33",
+    "number_of_pages": "1",
+    "csmt_rate": 0.04,
+    "pages": [
+        {
+            "align_ratio": 100.0,
+            "final_line_index": 2,
+            "image_url": "https://nl.ijs.si/inz/periodika/0/000TTDCE/000TTDCE-0.jpg",
+            "page_index": 0,
+            "pdf_text": "260 \n
+                         Gospodarske sku\u0161nje. \n
+                         * Goveda in konji se dado nadle\u017enih muh obva\u00ad\n
+                         rovati, \u010de se s sukneno cunjo, katera je bila v ribjo \n
+                         maBt pomo\u010dena, po \u017eivotu dobro oribajo. Ker pa ribja \n
+                         mast smrdi in tudi dober kup ni, so na ve\u010d krajih \n
+                         Nem\u010dije za bolje spoznali pelinovovodo, s katero \n
+                         se \u017eivina, kolikorkrrat treba, umije. ",
+            "text": "\n
+                         260\n
+                         \n
+                         Gospodarske sku\u0161nje.\n
+                         \n
+                         * Goveda in konji se dado nadle\u017enih muh obvarovati, \u010de se s sukneno cunjo, katera je bila v ribjo maBt pomo\u010dena, po \u017eivotu dobro oribajo. Ker pa ribja mast smrdi in tudi dober kup ni, so na ve\u010d krajih Nem\u010dije za bolje spoznali pelinovovodo, s katero se \u017eivina, kolikorkrrat treba, umije.\n
+                         ",
+            "text_csmtised": "\n
+                         260\n
+                         \n
+                         Gospodarske sku\u0161nje.\n
+                         \n
+                         * Goveda in konji se dado nadle\u017enih muh obvarovati, \u010de se s sukneno cunjo, katera je bila v ribjo mast pomo\u010dena, po \u017eivotu dobro oribajo. Ker pa ribja mast smrdi in tudi dober kup ni, so na ve\u010d krajih Nem\u010dije za bolje spoznali pelinovovodo, s katero se \u017eivina, kolikorkrrat treba, umije.\n
+                         ",
+            "text_csmtised_kenlm_perplexity": {
+                "mean": -84.12516357421875,
+                "stdev": 6.49344779660705
+            },
+            "text_csmtised_splitfixed": "\n
+                         260 Gospodarske sku\u0161nje.\n
+                         \n
+                         * Goveda in konji se dado nadle\u017enih muh obvarovati, \u010de se s sukneno cunjo, katera je bila v ribjo mast pomo\u010dena, po \u017eivotu dobro oribajo. Ker pa ribja mast smrdi in tudi dober kup ni, so na ve\u010d krajih Nem\u010dije za bolje spoznali pelinovovodo, s katero se \u017eivina, kolikorkrrat treba, umije.\n
+                         ",
+            "text_csmtised_splitfixed_CONLLU": "# newpar id = 1\n
+                         # sent_id = 1.1\n
+                         # text = 260 Gospodarske sku\u0161nje.\n
+                         1\t260\t260\tNUM\tMdc\tNumForm=Digit|NumType=Card\t_\t_\t_\tNER=O\n
+                         2\tGospodarske\tgospodarski\tADJ\tAgpfsg\tCase=Gen|Degree=Pos|Gender=Fem|Number=Sing\t_\t_\t_\tNER=O\n
+                         3\tsku\u0161nje\tsku\u0161nja\tNOUN\tNcfsg\tCase=Nom|Gender=Fem|Number=Plur\t_\t_\t_\tNER=O|SpaceAfter=No\n
+                         4\t.\t.\tPUNCT\tZ\t_\t_\t_\t_\tNER=O\n
+                         \n
+                         # newpar id = 2\n
+                         # sent_id = 2.1\n
+                         # text = * Goveda in konji se dado nadle\u017enih muh obvarovati, \u010de se s sukneno cunjo, katera je bila v ribjo mast pomo\u010dena, po \u017eivotu dobro oribajo.\n
+                         1\t*\t*\tPUNCT\tZ\t_\t_\t_\t_\tNER=O\n
+                         2\tGoveda\tgoveda\tNOUN\tNcfsn\tCase=Nom|Gender=Masc|Number=Sing\t_\t_\t_\tNER=O\n
+                         3\tin\tin\tCCONJ\tCc\t_\t_\t_\t_\tNER=O\n
+                         4\tkonji\tkonj\tNOUN\tNcmpn\tCase=Nom|Gender=Masc|Number=Plur\t_\t_\t_\tNER=O\n
+                         5\tse\tse\tPRON\tPx------y\tPronType=Prs|Reflex=Yes|Variant=Short\t_\t_\t_\tNER=O\n
+                         6\tdado\tdati\tVERB\tVmer3p\tAspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin\t_\t_\t_\tNER=O\n
+                         7\tnadle\u017enih\tnadle\u017een\tADJ\tAgpfpg\tCase=Gen|Degree=Pos|Gender=Fem|Number=Plur\t_\t_\t_\tNER=O\n
+                         8\tmuh\tmuha\tNOUN\tNcfpg\tCase=Gen|Gender=Fem|Number=Plur\t_\t_\t_\tNER=O\n
+                         9\tobvarovati\tobvarovati\tVERB\tVmen\tAspect=Perf|VerbForm=Inf\t_\t_\t_\tNER=O|SpaceAfter=No\n
+                         10\t,\t,\tPUNCT\tZ\t_\t_\t_\t_\tNER=O\n
+                         11\t\u010de\t\u010de\tSCONJ\tCs\t_\t_\t_\t_\tNER=O\n
+                         12\tse\tse\tPRON\tPx------y\tPronType=Prs|Reflex=Yes|Variant=Short\t_\t_\t_\tNER=O\n
+                         13\ts\tz\tADP\tSi\tCase=Ins\t_\t_\t_\tNER=O\n
+                         14\tsukneno\tsuknen\tADJ\tAppfsi\tCase=Ins|Degree=Pos|Gender=Fem|Number=Sing\t_\t_\t_\tNER=O\n
+                         15\tcunjo\tcunja\tNOUN\tNcfsi\tCase=Ins|Gender=Fem|Number=Sing\t_\t_\t_\tNER=O|SpaceAfter=No\n
+                         16\t,\t,\tPUNCT\tZ\t_\t_\t_\t_\tNER=O\n
+                         17\tkatera\tkateri\tDET\tPq-fsn\tCase=Nom|Gender=Fem|Number=Sing|PronType=Int\t_\t_\t_\tNER=O\n
+                         18\tje\tbiti\tAUX\tVa-r3s-n\tMood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin\t_\t_\t_\tNER=O\n
+                         19\tbila\tbiti\tAUX\tVa-p-sf\tGender=Fem|Number=Sing|VerbForm=Part\t_\t_\t_\tNER=O\n
+                         20\tv\tv\tADP\tSa\tCase=Acc\t_\t_\t_\tNER=O\n
+                         21\tribjo\tribji\tADJ\tAgpfsa\tCase=Acc|Degree=Pos|Gender=Fem|Number=Sing\t_\t_\t_\tNER=O\n
+                         22\tmast\tmast\tNOUN\tNcfsa\tCase=Acc|Gender=Fem|Number=Sing\t_\t_\t_\tNER=O\n
+                         23\tpomo\u010dena\tpomo\u010den\tADJ\tAppfsn\tCase=Nom|Degree=Pos|Gender=Fem|Number=Sing|VerbForm=Part\t_\t_\t_\tNER=O|SpaceAfter=No\n
+                         24\t,\t,\tPUNCT\tZ\t_\t_\t_\t_\tNER=O\n
+                         25\tpo\tpo\tADP\tSl\tCase=Loc\t_\t_\t_\tNER=O\n
+                         26\t\u017eivotu\t\u017eivot\tNOUN\tNcmsl\tCase=Loc|Gender=Masc|Number=Sing\t_\t_\t_\tNER=O\n
+                         27\tdobro\tdobro\tADV\tRgp\tDegree=Pos\t_\t_\t_\tNER=O\n
+                         28\toribajo\toribati\tVERB\tVmpr3p\tAspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin\t_\t_\t_\tNER=O|SpaceAfter=No\n
+                         29\t.\t.\tPUNCT\tZ\t_\t_\t_\t_\tNER=O\n
+                         \n
+                         # sent_id = 2.2\n
+                         # text = Ker pa ribja mast smrdi in tudi dober kup ni, so na ve\u010d krajih Nem\u010dije za bolje spoznali pelinovovodo, s katero se \u017eivina, kolikorkrrat treba, umije.\n
+                         1\tKer\tker\tSCONJ\tCs\t_\t_\t_\t_\tNER=O\n
+                         2\tpa\tpa\tCCONJ\tCc\t_\t_\t_\t_\tNER=O\n
+                         3\tribja\tribji\tADJ\tAgpfsn\tCase=Nom|Degree=Pos|Gender=Fem|Number=Sing\t_\t_\t_\tNER=O\n
+                         4\tmast\tmast\tNOUN\tNcfsn\tCase=Nom|Gender=Fem|Number=Sing\t_\t_\t_\tNER=O\n
+                         5\tsmrdi\tsmrdeti\tVERB\tVmpr3s\tAspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin\t_\t_\t_\tNER=O\n
+                         6\tin\tin\tCCONJ\tCc\t_\t_\t_\t_\tNER=O\n
+                         7\ttudi\ttudi\tPART\tQ\t_\t_\t_\t_\tNER=O\n
+                         8\tdober\tdober\tADJ\tAgpmsnn\tCase=Nom|Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing\t_\t_\t_\tNER=O\n
+                         9\tkup\tkup\tNOUN\tNcmsn\tCase=Nom|Gender=Masc|Number=Sing\t_\t_\t_\tNER=O\n
+                         10\tni\tbiti\tVERB\tVa-r3s-y\tMood=Ind|Number=Sing|Person=3|Polarity=Neg|Tense=Pres|VerbForm=Fin\t_\t_\t_\tNER=O|SpaceAfter=No\n
+                         11\t,\t,\tPUNCT\tZ\t_\t_\t_\t_\tNER=O\n
+                         12\tso\tbiti\tAUX\tVa-r3p-n\tMood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin\t_\t_\t_\tNER=O\n
+                         13\tna\tna\tADP\tSl\tCase=Loc\t_\t_\t_\tNER=O\n
+                         14\tve\u010d\tve\u010d\tDET\tRgc\tPronType=Ind\t_\t_\t_\tNER=O\n
+                         15\tkrajih\tkraj\tNOUN\tNcmpl\tCase=Loc|Gender=Masc|Number=Plur\t_\t_\t_\tNER=O\n
+                         16\tNem\u010dije\tNem\u010dija\tPROPN\tNpfsg\tCase=Gen|Gender=Fem|Number=Sing\t_\t_\t_\tNER=B-LOC\n
+                         17\tza\tza\tADP\tSa\tCase=Acc\t_\t_\t_\tNER=O\n
+                         18\tbolje\tdobro\tADV\tRgc\tDegree=Cmp\t_\t_\t_\tNER=O\n
+                         19\tspoznali\tspoznati\tVERB\tVmbp-pm\tGender=Masc|Number=Plur|VerbForm=Part\t_\t_\t_\tNER=O\n
+                         20\tpelinovovodo\tpelinovovoda\tNOUN\tNcfsa\tCase=Acc|Gender=Fem|Number=Sing\t_\t_\t_\tNER=O|SpaceAfter=No\n
+                         21\t,\t,\tPUNCT\tZ\t_\t_\t_\t_\tNER=O\n
+                         22\ts\tz\tADP\tSi\tCase=Ins\t_\t_\t_\tNER=O\n
+                         23\tkatero\tkateri\tDET\tPq-fsi\tCase=Ins|Gender=Fem|Number=Sing|PronType=Int\t_\t_\t_\tNER=O\n
+                         24\tse\tse\tPRON\tPx------y\tPronType=Prs|Reflex=Yes|Variant=Short\t_\t_\t_\tNER=O\n
+                         25\t\u017eivina\t\u017eivina\tNOUN\tNcfsn\tCase=Nom|Gender=Fem|Number=Sing\t_\t_\t_\tNER=O|SpaceAfter=No\n
+                         26\t,\t,\tPUNCT\tZ\t_\t_\t_\t_\tNER=O\n
+                         27\tkolikorkrrat\tkolikorkrrat\tNOUN\tNcmsn\tCase=Nom|Gender=Masc|Number=Sing\t_\t_\t_\tNER=O\n
+                         28\ttreba\ttreba\tADV\tRgp\tDegree=Pos\t_\t_\t_\tNER=O|SpaceAfter=No\n
+                         29\t,\t,\tPUNCT\tZ\t_\t_\t_\t_\tNER=O\n
+                         30\tumije\tumiti\tVERB\tVmer3s\tAspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin\t_\t_\t_\tNER=O|SpaceAfter=No\n
+                         31\t.\t.\tPUNCT\tZ\t_\t_\t_\t_\tNER=O\n
+                         \n
+                         "
+        }
+    ]
+}
+```
 
 * __Facsimile__: The image files for complete texts are available as PDFs from their original locations in dLib. 
-For most of the corpus per-page JPEGs are available on the Web and intergrated into the concordancer search.
+For most of the corpus per-page JPEGs are available on the Web and integrated into the concordancer search.
 However, they are not of high quality (quality: 50).
 [Here](https://nl.ijs.si/inz/speriodika/4OVRPKTJ-2.jpg) is an example.
 
@@ -107,10 +224,10 @@ For the PressMint-SI corpus we plan to:
 
     * remove texts that are not newspapers
     * remove text older than 1850 (they use the old alphabet incorrectly recognised by OCR)
-    * remove texts with too many paragraphs of low OCR quality
-    * (maybe) remove paragraphs with low OCR quality
+    * remove texts with too many paragraphs (pages) of low OCR quality
+    * (maybe) remove paragraphs (pages) with low OCR quality
 
-* Develop conversion procedure for vertical to PressMint format
-
+* Develop conversion procedure for JSON to PressMint format
     * a parameter specifies whether to produce plain text or .ana version
-    * we retain all the available metadata & do not plan to introduce new metadata
+    * Start of work in [Makefile](Makefile)
+ 
