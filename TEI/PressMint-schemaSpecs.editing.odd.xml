@@ -13,14 +13,14 @@
   <moduleRef key="textstructure"
              include="TEI text front body back div docDate"/>
   <moduleRef key="core"
-             include="bibl biblScope cb date desc email gap graphic head label lb measure media meeting name
+             include="author bibl biblScope cb date desc email gap graphic head label lb measure media meeting name
                       note num p pb pubPlace publisher ref resp respStmt teiCorpus term time title unit"/>
   <moduleRef key="header"
              include="appInfo application availability catDesc catRef category change classDecl correction edition editionStmt
                       editorialDecl encodingDesc extent fileDesc funder hyphenation idno langUsage language licence listPrefixDef
                       namespace normalization prefixDef profileDesc projectDesc publicationStmt quotation revisionDesc
                       segmentation sourceDesc tagUsage tagsDecl taxonomy teiHeader textClass titleStmt"/>
-  <!--moduleRef key="corpus" include=""/-->
+  <moduleRef key="corpus" include="setting settingDesc"/>
   <moduleRef key="transcr" include="facsimile surface zone"/>
   <moduleRef key="namesdates"
              include="orgName persName placeName"/>

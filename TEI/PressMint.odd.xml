@@ -19,7 +19,7 @@
       </titleStmt>
       <publicationStmt>
         <publisher>CLARIN</publisher>
-        <date>2025-09-30</date>
+        <date>2025-10-01</date>
         <availability status="free">
           <p>This file is freely available and you are hereby authorised to copy, modify, and
           redistribute it in any way without further reference or permissions.</p>
@@ -73,7 +73,7 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
-      <change when="2025-09-30">Tomaž Erjavec: first draft.</change>
+      <change when="2025-10-01">Tomaž Erjavec: first draft.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -83,7 +83,7 @@
           <titlePart type="main">The structure and encoding of
           <ref target="https://github.com/clarin-eric/PressMint">PressMint corpora</ref></titlePart>
         </docTitle>
-        <docDate>2025-09-30</docDate>
+        <docDate>2025-10-01</docDate>
       </titlePage>
       <p></p>
       <divGen type="toc"/>
@@ -1207,15 +1207,13 @@
             
             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-langUsage">
               <langUsage>
-                <language ident="sl" xml:lang="sl" default="true">slovenski</language>
+                <language ident="sl" xml:lang="sl">slovenski</language>
                 <language ident="en" xml:lang="sl">angleški</language>
-                <language ident="sl" xml:lang="en" default="true">Slovenian</language>
+                <language ident="sl" xml:lang="en">Slovenian</language>
                 <language ident="en" xml:lang="en">English</language>
               </langUsage>
             </egXML>
-            To distinguish the meta-language from the local language, the <att>default</att>
-            attribute is used, which has to have the value <code>true</code> for the local
-            language.</p>
+            </p>
             
             <p>In cases where the corpus contains more than one language, the
             percentage of their use can also be indicated in the <att>usage</att> element of

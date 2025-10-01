@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-10-01T10:04:37Z. 2025-09-30. 
+Schema generated from ODD source 2025-10-01T15:01:17Z. 2025-10-01. 
 TEI Edition: P5 Version 4.10.0a. Last updated on 13th August 2025, revision 73d59c946 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.10.0a/ 
   
@@ -2156,6 +2156,7 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    </define>
    <define name="tei_model.respLike">
       <choice>
+         <ref name="tei_author"/>
          <ref name="tei_respStmt"/>
          <ref name="tei_meeting"/>
          <ref name="tei_funder"/>
@@ -2205,6 +2206,11 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    </define>
    <define name="tei_model.catDescPart">
       <notAllowed/>
+   </define>
+   <define name="tei_model.settingPart">
+      <choice>
+         <ref name="tei_placeName"/>
+      </choice>
    </define>
    <define name="tei_model.addressLike">
       <choice>
@@ -2500,6 +2506,7 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
       <choice>
          <ref name="tei_langUsage"/>
          <ref name="tei_textClass"/>
+         <ref name="tei_settingDesc"/>
       </choice>
    </define>
    <define name="tei_att.personal.attributes">
@@ -2531,6 +2538,9 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
             <data type="nonNegativeInteger"/>
          </attribute>
       </optional>
+   </define>
+   <define name="tei_model.placeLike">
+      <notAllowed/>
    </define>
    <define name="tei_att.calendarSystem.attributes">
       <ref name="tei_att.calendarSystem.attribute.calendar"/>
@@ -3015,6 +3025,16 @@ Elements]</a:documentation>
          <ref name="tei_att.edition.attributes"/>
          <ref name="tei_att.spanning.attributes"/>
          <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_author">
+      <element name="author">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(author) in a bibliographic reference, contains the name(s) of an author, personal or corporate, of a work; for example in the same form as that provided by a recognized bibliographic name authority. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement]</a:documentation>
+         <ref name="tei_macro.phraseSeq"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.datable.attributes"/>
+         <ref name="tei_att.naming.attributes"/>
          <empty/>
       </element>
    </define>
@@ -4436,6 +4456,55 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
                </list>
             </attribute>
          </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_settingDesc">
+      <element name="settingDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(setting description) describes the setting or settings within which a language interaction takes place, or other places otherwise referred to in a text, edition, or metadata. [16.2. Contextual Information 2.4. The Profile Description]</a:documentation>
+         <choice>
+            <oneOrMore>
+               <ref name="tei_model.pLike"/>
+            </oneOrMore>
+            <oneOrMore>
+               <choice>
+                  <ref name="tei_setting"/>
+                  <ref name="tei_model.placeLike"/>
+               </choice>
+            </oneOrMore>
+         </choice>
+         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
+                      xmlns:egXML="http://www.tei-c.org/ns/Examples"
+                      xmlns:pm="PressMint"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                      is-a="declarable">
+            <sch:param name="tde" value="tei:settingDesc"/>
+         </sch:pattern>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.declarable.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_setting">
+      <element name="setting">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes one particular setting in which a language interaction takes place. [16.2.3. The Setting Description]</a:documentation>
+         <choice>
+            <oneOrMore>
+               <ref name="tei_model.pLike"/>
+            </oneOrMore>
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.nameLike.agent"/>
+                  <ref name="tei_model.dateLike"/>
+                  <ref name="tei_model.settingPart"/>
+               </choice>
+            </zeroOrMore>
+         </choice>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.ascribed.attributes"/>
          <empty/>
       </element>
    </define>

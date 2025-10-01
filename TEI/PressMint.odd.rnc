@@ -11,7 +11,7 @@ namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 namespace xsl = "http://www.w3.org/1999/XSL/Transform"
 
-# Schema generated from ODD source 2025-10-01T10:04:42Z. 2025-09-30. 
+# Schema generated from ODD source 2025-10-01T15:01:22Z. 2025-10-01. 
 # TEI Edition: P5 Version 4.10.0a. Last updated on 13th August 2025, revision 73d59c946 
 # TEI Edition Location: https://www.tei-c.org/Vault/P5/4.10.0a/ 
 #
@@ -1179,7 +1179,8 @@ tei_model.attributable_sequenceOptionalRepeatable =
   tei_model.quoteLike_sequenceOptionalRepeatable*
 tei_model.attributable_sequenceRepeatable =
   tei_model.quoteLike_sequenceRepeatable+
-tei_model.respLike = tei_respStmt | tei_meeting | tei_funder
+tei_model.respLike =
+  tei_author | tei_respStmt | tei_meeting | tei_funder
 tei_model.divWrapper = tei_meeting | tei_docDate
 tei_model.divTopPart = tei_model.headLike
 tei_model.divTop = tei_model.divWrapper | tei_model.divTopPart
@@ -1189,6 +1190,7 @@ tei_model.divBottomPart = notAllowed
 tei_model.divBottom = tei_model.divWrapper | tei_model.divBottomPart
 tei_model.imprintPart = tei_publisher | tei_biblScope | tei_pubPlace
 tei_model.catDescPart = notAllowed
+tei_model.settingPart = tei_placeName
 tei_model.addressLike = tei_email
 tei_model.addressLike_alternation = tei_email
 tei_model.addressLike_sequence = tei_email
@@ -1328,7 +1330,8 @@ tei_model.editorialDeclPart =
   | tei_quotation
   | tei_hyphenation
   | tei_segmentation
-tei_model.profileDescPart = tei_langUsage | tei_textClass
+tei_model.profileDescPart =
+  tei_langUsage | tei_textClass | tei_settingDesc
 tei_att.personal.attributes =
   tei_att.naming.attributes,
   tei_att.personal.attribute.full,
@@ -1352,6 +1355,7 @@ tei_att.personal.attribute.sort =
   
   ## (sort) specifies the sort order of the name component in relation to others within the name.
   attribute sort { xsd:nonNegativeInteger }?
+tei_model.placeLike = notAllowed
 tei_att.calendarSystem.attributes =
   tei_att.calendarSystem.attribute.calendar
 tei_att.calendarSystem.attribute.calendar =
@@ -1817,6 +1821,16 @@ tei_cb =
     tei_att.edition.attributes,
     tei_att.spanning.attributes,
     tei_att.typed.attributes,
+    empty
+  }
+tei_author =
+  
+  ## (author) in a bibliographic reference, contains the name(s) of an author, personal or corporate, of a work; for example in the same form as that provided by a recognized bibliographic name authority. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement]
+  element author {
+    tei_macro.phraseSeq,
+    tei_att.global.attributes,
+    tei_att.datable.attributes,
+    tei_att.naming.attributes,
     empty
   }
 tei_respStmt =
@@ -2815,6 +2829,35 @@ tei_change =
         xsd:anyURI { pattern = "\S+" }+
       }
     }?,
+    empty
+  }
+tei_settingDesc =
+  
+  ## (setting description) describes the setting or settings within which a language interaction takes place, or other places otherwise referred to in a text, edition, or metadata. [16.2. Contextual Information 2.4. The Profile Description]
+  element settingDesc {
+    (tei_model.pLike+ | (tei_setting | tei_model.placeLike)+)
+    >> sch:pattern [
+         is-a = "declarable"
+         "\x{a}" ~
+         "            "
+         sch:param [ name = "tde" value = "tei:settingDesc" ]
+         "\x{a}" ~
+         "         "
+       ],
+    tei_att.global.attributes,
+    tei_att.declarable.attributes,
+    empty
+  }
+tei_setting =
+  
+  ## describes one particular setting in which a language interaction takes place. [16.2.3. The Setting Description]
+  element setting {
+    (tei_model.pLike+
+     | (tei_model.nameLike.agent
+        | tei_model.dateLike
+        | tei_model.settingPart)*),
+    tei_att.global.attributes,
+    tei_att.ascribed.attributes,
     empty
   }
 tei_att.global.facs.attributes = tei_att.global.facs.attribute.facs
