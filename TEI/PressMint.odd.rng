@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-10-01T10:00:41Z. 2025-09-30. 
+Schema generated from ODD source 2025-10-01T10:04:37Z. 2025-09-30. 
 TEI Edition: P5 Version 4.10.0a. Last updated on 13th August 2025, revision 73d59c946 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.10.0a/ 
   
@@ -3207,6 +3207,9 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
                   xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;TEI&gt;</code> (or <code xmlns="http://www.w3.org/1999/xhtml"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;teiCorpus&gt;</code>) element. [4. Default Text Structure 16.1. Varieties of Composite Text]</a:documentation>
          <ref name="tei_teiHeader"/>
+         <optional>
+            <ref name="tei_facsimile"/>
+         </optional>
          <ref name="tei_text"/>
          <ref name="tei_att.global.attribute.n"/>
          <ref name="tei_att.global.linking.attribute.corresp"/>
