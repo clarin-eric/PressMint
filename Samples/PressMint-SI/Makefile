@@ -1,6 +1,7 @@
 ### Validate SI sample
 validate:
-	$j ../../TEI/PressMint.odd.rng ????/*.xml
+	$j PressMint-SI.xml
+	$j ????/*.xml
 
 ### Produce PressMint TEI from JSON:
 convert:
@@ -13,7 +14,7 @@ get-full-corpus-from-repo:
 	tar xvz sPeriodika.1.0.json.tgz
 
 ###################################Some useful program variables
-j = java -jar ../../Scripts/bin/jing.jar
+j = java -jar ../../Scripts/bin/jing.jar ../../TEI/PressMint.odd.rng
 s = java -jar ../../Scripts/bin/saxon.jar
 P = parallel --gnu --halt 2 --jobs 5
 
