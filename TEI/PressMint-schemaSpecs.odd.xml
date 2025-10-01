@@ -1,42 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <schemaSpec xmlns="http://www.tei-c.org/ns/1.0"
             xmlns:eg="http://www.tei-c.org/ns/Examples"
             xmlns:egXML="http://www.tei-c.org/ns/Examples"
+            xmlns:pm="PressMint"
             ident="pressmint"
             start="TEI teiCorpus"
             prefix="tei_"
             docLang="en"
             xml:lang="en">
 
-  <moduleRef key="tei" except=""/>
-  <moduleRef key="core" include="bibl biblScope cb date desc email gap graphic head label lb measure media meeting name note num p pb pubPlace publisher ref resp respStmt teiCorpus term time title unit"/>
-  <moduleRef key="header"
-             include="appInfo application availability catDesc catRef category change classDecl correction edition editionStmt editorialDecl encodingDesc extent fileDesc funder hyphenation idno langUsage language licence listPrefixDef namespace normalization prefixDef profileDesc projectDesc publicationStmt quotation revisionDesc segmentation sourceDesc tagUsage tagsDecl taxonomy teiHeader textClass titleStmt"/>
-  <moduleRef key="textstructure"
-             include="TEI back body div front text docDate"/>
-  <!--moduleRef key="corpus" include=""/-->
-  <moduleRef key="transcr" include="facsimile surface zone"/>
-  <moduleRef key="namesdates"
-             include="orgName persName placeName"/>
-  <!--moduleRef key="linking"
-             include="link linkGrp seg"/-->
-  <!--moduleRef key="figures"
-             include="figure"/-->
-  <moduleRef key="analysis"
-             include="pc s w"/>
-  
-  <elementSpec ident="div" module="textstructure" mode="change">
-    <attList>
-      <attDef ident="type" mode="replace" usage="rec">
-        <valList type="open">
-          <valItem ident="article">
-            <desc xml:lang="en">An article in a newspaper</desc>
-          </valItem>
-          <valItem ident="advert">
-            <desc xml:lang="en">An advertisement in a newspaper</desc>
-          </valItem>
-        </valList>
-      </attDef>
-    </attList>
-  </elementSpec>
-  
+  <!-- Elements used in ParlaMint -->
+   <moduleRef key="tei"/>
+   <moduleRef key="textstructure" include="TEI text front body back div docDate"/>
+   <moduleRef key="core"
+              include="bibl biblScope cb date desc email gap graphic head label lb measure media meeting name                       note num p pb pubPlace publisher ref resp respStmt teiCorpus term time title unit"/>
+   <moduleRef key="header"
+              include="appInfo application availability catDesc catRef category change classDecl correction edition editionStmt                       editorialDecl encodingDesc extent fileDesc funder hyphenation idno langUsage language licence listPrefixDef                       namespace normalization prefixDef profileDesc projectDesc publicationStmt quotation revisionDesc                       segmentation sourceDesc tagUsage tagsDecl taxonomy teiHeader textClass titleStmt"/>
+   <!--moduleRef key="corpus" include=""/-->
+   <moduleRef key="transcr" include="facsimile surface zone"/>
+   <moduleRef key="namesdates" include="orgName persName placeName"/>
+   <!--moduleRef key="linking" include="link linkGrp seg"/-->
+   <!--moduleRef key="figures" include="figure"/-->
+   <moduleRef key="analysis" include="pc s w"/>
+   <!-- Attributes used in ParlaMint -->
+   <classRef key="att.global" except=""/>
+   <classRef key="att.global.analytic" include="ana"/>
+   <classRef key="att.global.linking" include="corresp next prev"/>
+   <classRef key="att.global.responsibility" include="resp"/>
+   <classRef key="att.global.source" include="source"/>
+   <classRef key="att.internetMedia" include="mimeType"/>
+   <classRef key="att.lexicographic.normalized" include="norm"/>
+   <classRef key="att.linguistic" include="lemma pos msd join"/>
+   <classRef key="att.measurement" include="unit quantity"/>
+   <classRef key="att.patternReplacement" include="matchPattern replacementPattern"/>
+   <classRef key="att.resourced" include="url"/>
+   <classRef key="att.typed" include="type subtype"/>
+   <!-- Change element content models and attributes of elements -->
+   <!-- Top level elements -->
+   <elementSpec ident="teiCorpus" module="core" mode="change">
+      <desc versionDate="2022-05-18" xml:lang="en">contains one whole corpus,
+    stored in the corpus root file comprising the corpus header and XInclude references to corpus
+    component files, each containing a <gi>TEI</gi> element.</desc>
+      <content>
+         <elementRef key="teiHeader"/>
+         <!-- We allow XIncludes in order to enable separate validation of corpus root and components -->
+         <alternate minOccurs="1" maxOccurs="unbounded">
+            <elementRef key="TEI"/>
+            <elementRef key="include"/>
+         </alternate>
+      </content>
+      <attList>
+         <attDef ident="xml:id" mode="replace" usage="req">
+            <datatype>
+               <dataRef name="ID"/>
+            </datatype>
+         </attDef>
+         <attDef ident="xml:lang" mode="replace" usage="req">
+            <datatype>
+               <dataRef key="teidata.language"/>
+            </datatype>
+         </attDef>
+         <!--teiCorpus/@corresp-->
+         <attDef ident="version" mode="delete"/>
+         <attDef ident="n" mode="delete"/>
+         <attDef ident="xml:base" mode="delete"/>
+         <attDef ident="xml:space" mode="delete"/>
+         <attDef ident="ana" mode="delete"/>
+         <attDef ident="change" mode="delete"/>
+         <attDef ident="facs" mode="delete"/>
+         <attDef ident="synch" mode="delete"/>
+         <attDef ident="sameAs" mode="delete"/>
+         <attDef ident="copyOf" mode="delete"/>
+         <attDef ident="next" mode="delete"/>
+         <attDef ident="prev" mode="delete"/>
+         <attDef ident="exclude" mode="delete"/>
+         <attDef ident="select" mode="delete"/>
+         <attDef ident="rend" mode="delete"/>
+         <attDef ident="style" mode="delete"/>
+         <attDef ident="rendition" mode="delete"/>
+         <attDef ident="cert" mode="delete"/>
+         <attDef ident="resp" mode="delete"/>
+         <attDef ident="source" mode="delete"/>
+         <attDef ident="type" mode="delete"/>
+         <attDef ident="subtype" mode="delete"/>
+      </attList>
+      <exemplum xml:lang="en">
+         <p>General structure of a PressMint corpus root:</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#PressMint">
+            <teiCorpus xml:lang="en" xml:id="PressMint-SI">
+               <teiHeader>
+            ...TEI header of the corpus...
+          </teiHeader>
+          &lt;xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+                      href="1900/PressMint-SI_1900-01-05.xml"/&gt;
+          &lt;xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+                      href="1900/ParlaMint-SI_1900-01-06.xml"/&gt;
+          ...
+        </teiCorpus>
+         </egXML>
+      </exemplum>
+   </elementSpec>
+   <!-- Definition of XInclude -->
+   <elementSpec ident="include" mode="add" ns="http://www.w3.org/2001/XInclude">
+      <desc versionDate="2022-05-18" xml:lang="en">is an element from the XML namespace of the <ref target="https://www.w3.org/TR/xinclude-11/">XML Inclusions (XInclude)</ref> W3C
+    recommendation. It is used to include, into a PressMint <gi>teiCorpus</gi> root file the
+    elements of the corpus that are stored as separate files. These are the <gi>TEI</gi> corpus
+    components and parts of the corpus root <gi>teiHeader</gi>, in particular <gi>taxonomy</gi>
+    inside <gi>classDecl</gi>.</desc>
+      <attList>
+         <attDef ident="href" mode="add">
+            <datatype>
+               <dataRef key="teidata.pointer"/>
+            </datatype>
+         </attDef>
+      </attList>
+      <exemplum xml:lang="en">
+         <p>Using XInclude in PressMint to include corpus components into the corpus root:</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#ParlaMint">
+            <teiCorpus xml:lang="en" xml:id="ParlaMint-SI">
+               <teiHeader>
+            ...TEI header of the corpus...
+          </teiHeader>
+          &lt;xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+                      href="1900/PressMint-SI_1900-01-05.xml"/&gt;
+          &lt;xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+                      href="1900/PressMint-SI_1900-01-06.xml"/&gt;
+          ...
+        </teiCorpus>
+         </egXML>
+      </exemplum>
+   </elementSpec>
+   <elementSpec ident="TEI" module="textstructure" mode="change">
+      <desc versionDate="2019-06-27" xml:lang="en">contains a single TEI-conformant document, combining
+    a single TEI header with one or more members of the <ident type="class">model.resource</ident> class. Multiple <gi>TEI</gi>
+    elements may be combined within a <gi>TEI</gi> (or <gi>teiCorpus</gi>) element.</desc>
+      <content>
+         <elementRef key="teiHeader"/>
+         <elementRef key="text"/>
+      </content>
+      <attList>
+         <attDef ident="xml:id" mode="replace" usage="req">
+            <datatype>
+               <dataRef name="ID"/>
+            </datatype>
+         </attDef>
+         <attDef ident="xml:lang" mode="replace" usage="req">
+            <datatype>
+               <dataRef key="teidata.language"/>
+            </datatype>
+         </attDef>
+         <attDef ident="ana" mode="replace" usage="req">
+            <datatype maxOccurs="unbounded">
+               <dataRef key="teidata.pointer"/>
+            </datatype>
+         </attDef>
+         <!--TEI/@corresp-->
+         <!--TEI/@ana-->
+         <!--TEI/@xml:id-->
+         <!--TEI/@xml:lang-->
+         <!--TEI/@n-->
+         <!--TEI/@source-->
+         <attDef ident="version" mode="delete"/>
+         <attDef ident="xml:base" mode="delete"/>
+         <attDef ident="xml:space" mode="delete"/>
+         <attDef ident="change" mode="delete"/>
+         <attDef ident="facs" mode="delete"/>
+         <attDef ident="synch" mode="delete"/>
+         <attDef ident="sameAs" mode="delete"/>
+         <attDef ident="copyOf" mode="delete"/>
+         <attDef ident="next" mode="delete"/>
+         <attDef ident="prev" mode="delete"/>
+         <attDef ident="exclude" mode="delete"/>
+         <attDef ident="select" mode="delete"/>
+         <attDef ident="rend" mode="delete"/>
+         <attDef ident="style" mode="delete"/>
+         <attDef ident="rendition" mode="delete"/>
+         <attDef ident="cert" mode="delete"/>
+         <attDef ident="resp" mode="delete"/>
+         <attDef ident="type" mode="delete"/>
+         <attDef ident="subtype" mode="delete"/>
+      </attList>
+      <exemplum xml:lang="en">
+         <p>Example of PressMint corpus component:</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#PressMint">
+            <TEI xml:id="PressMint-SI_1900-01-06" xml:lang="en">
+               <teiHeader>...</teiHeader>
+               <text>
+                  <body>...</body>
+               </text>
+            </TEI>
+         </egXML>
+      </exemplum>
+   </elementSpec>
+   <elementSpec ident="text" module="textstructure" mode="change">
+      <desc versionDate="2025-09-30" xml:lang="en">contains an issue or an article from a newspaper.</desc>
+      <content>
+         <elementRef key="front" minOccurs="0" maxOccurs="1"/>
+         <elementRef key="body"/>
+         <elementRef key="back" minOccurs="0" maxOccurs="1"/>
+      </content>
+      <attList><!--text/@ana--><!--text/@xml:id--><!--text/@xml:lang--><!--text/@n--><!--text/@source-->
+         <attDef ident="xml:base" mode="delete"/>
+         <attDef ident="xml:space" mode="delete"/>
+         <attDef ident="change" mode="delete"/>
+         <attDef ident="facs" mode="delete"/>
+         <attDef ident="corresp" mode="delete"/>
+         <attDef ident="synch" mode="delete"/>
+         <attDef ident="sameAs" mode="delete"/>
+         <attDef ident="copyOf" mode="delete"/>
+         <attDef ident="next" mode="delete"/>
+         <attDef ident="prev" mode="delete"/>
+         <attDef ident="exclude" mode="delete"/>
+         <attDef ident="select" mode="delete"/>
+         <attDef ident="rend" mode="delete"/>
+         <attDef ident="style" mode="delete"/>
+         <attDef ident="rendition" mode="delete"/>
+         <attDef ident="cert" mode="delete"/>
+         <attDef ident="resp" mode="delete"/>
+         <attDef ident="decls" mode="delete"/>
+         <attDef ident="type" mode="delete"/>
+         <attDef ident="subtype" mode="delete"/>
+         <attDef ident="hand" mode="delete"/>
+      </attList>
+      <exemplum xml:lang="en">
+         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#PressMint">
+            <text>
+               <body>
+                  <p>...</p>
+                  <p>...</p>
+              ...
+            </body>
+            </text>
+         </egXML>
+      </exemplum>
+   </elementSpec>
+   <elementSpec ident="div" module="textstructure" mode="change">
+      <attList>
+         <attDef ident="type" mode="replace" usage="rec">
+            <valList type="open">
+               <valItem ident="domesticNews">
+                  <desc xml:lang="en">Groups articles on domestic news</desc>
+               </valItem>
+               <valItem ident="foreignNews">
+                  <desc xml:lang="en">Groups articles on foreign news</desc>
+               </valItem>
+               <valItem ident="sportsNews">
+                  <desc xml:lang="en">Groups articles on sports events</desc>
+               </valItem>
+               <valItem ident="crimeNews">
+                  <desc xml:lang="en">Groups articles on crime and misdemeanors</desc>
+               </valItem>
+               <valItem ident="supplements">
+                  <desc xml:lang="en">Groups the supplements to the newspaper</desc>
+               </valItem>
+               <valItem ident="banner">
+                  <desc xml:lang="en">Contains the banner of a newspaper</desc>
+               </valItem>
+               <valItem ident="colophon">
+                  <desc xml:lang="en">Contains the colophon (details of printing, responsibility etc.) of the newspaper</desc>
+               </valItem>
+               <valItem ident="article">
+                  <desc xml:lang="en">Contains an individual newspaper article</desc>
+               </valItem>
+               <valItem ident="advertisement">
+                  <desc xml:lang="en">Contains an advertisement</desc>
+               </valItem>
+               <valItem ident="supplement">
+                  <desc xml:lang="en">Contains a supplement to the newspaper</desc>
+               </valItem>
+            </valList>
+         </attDef>
+         <!--div/@xml:id-->
+         <!--div/@xml:lang-->
+         <!--div/@n-->
+         <!--div/@facs-->
+         <!--div/@ana-->
+         <attDef ident="xml:base" mode="delete"/>
+         <attDef ident="xml:space" mode="delete"/>
+         <attDef ident="change" mode="delete"/>
+         <attDef ident="corresp" mode="delete"/>
+         <attDef ident="synch" mode="delete"/>
+         <attDef ident="sameAs" mode="delete"/>
+         <attDef ident="copyOf" mode="delete"/>
+         <attDef ident="next" mode="delete"/>
+         <attDef ident="prev" mode="delete"/>
+         <attDef ident="exclude" mode="delete"/>
+         <attDef ident="select" mode="delete"/>
+         <attDef ident="rend" mode="delete"/>
+         <attDef ident="style" mode="delete"/>
+         <attDef ident="rendition" mode="delete"/>
+         <attDef ident="cert" mode="delete"/>
+         <attDef ident="resp" mode="delete"/>
+         <attDef ident="source" mode="delete"/>
+         <attDef ident="decls" mode="delete"/>
+         <attDef ident="org" mode="delete"/>
+         <attDef ident="sample" mode="delete"/>
+         <attDef ident="part" mode="delete"/>
+         <attDef ident="met" mode="delete"/>
+         <attDef ident="real" mode="delete"/>
+         <attDef ident="rhyme" mode="delete"/>
+         <attDef ident="place" mode="delete"/>
+         <attDef ident="subtype" mode="delete"/>
+         <attDef ident="hand" mode="delete"/>
+      </attList>
+   </elementSpec>
+   <!-- To do:
+front
+body
+back
+docDate
+bibl
+biblScope
+cb
+date
+desc
+email
+gap
+graphic
+head
+label
+lb
+measure
+media
+meeting
+name
+note
+num
+p
+pb
+pubPlace
+publisher
+ref
+resp
+respStmt
+teiCorpus
+term
+time
+title
+unit
+appInfo
+application
+availability
+catDesc
+catRef
+category
+change
+classDecl
+correction
+edition
+editionStmt
+editorialDecl
+encodingDesc
+extent
+fileDesc
+funder
+hyphenation
+idno
+langUsage
+language
+licence
+listPrefixDef
+namespace
+normalization
+prefixDef
+profileDesc
+projectDesc
+publicationStmt
+quotation
+revisionDesc
+segmentation
+sourceDesc
+tagUsage
+tagsDecl
+taxonomy
+teiHeader
+textClass
+titleStmt
+facsimile
+surface
+zone
+orgName
+persName
+placeName
+pc
+s
+w
+-->
 </schemaSpec>
