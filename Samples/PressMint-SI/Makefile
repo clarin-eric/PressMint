@@ -1,6 +1,7 @@
 ### Validate SI sample
 validate:
 	$j PressMint-SI.xml
+	$j PressMint-SI.ana.xml
 	$j ????/*.xml
 
 ### Produce PressMint TEI from JSON:

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-SI" xml:lang="sl">
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-SI.ana" xml:lang="sl">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Korpus starejših slovenskih časopisov PressMint-SI [PressMint SAMPLE]</title>
-            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI [PressMint SAMPLE]</title>
+            <title>Korpus starejših slovenskih časopisov PressMint-SI [PressMint.ana SAMPLE]</title>
+            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI.ana [PressMint SAMPLE]</title>
             <respStmt>
               <persName ref="https://orcid.org/0000-0002-1560-4099">Tomaž Erjavec</persName>
               <resp>Kodiranje PressMint TEI XML</resp>
@@ -64,12 +64,12 @@
       <encodingDesc>
          <projectDesc>
            <p xml:lang="sl">Projekt <ref target="https://www.clarin.eu/pressmint">PressMint</ref>
-           bo izdelal večjezične, primerljive, označene in prevedene interoperabilne korpuse
+           bo izdelal večjezične, označene in interoperabilne korpuse
            starejših Evropskih časopisov z začetka 20. stoletja. Korpusi PressMint bodo
            odprto dostopni, tako za prenos v raznovrstnih formatih, kot tudi v več spletnih
            platformah za analizo korpusov.</p>
            <p xml:lang="en">The <ref target="https://www.clarin.eu/pressmint">PressMint</ref>
-           project aims to compile a multilingual, comparable, annotated, translated and
+           project aims to compile a multilingual, annotated and
            interoperable set of corpora of European historical newspapers from around the
            start of the 20th century. The PressMint corpora will be openly available, both
            for download in a variety of instances and formats, as well as via several online
@@ -102,9 +102,16 @@
                <tagUsage gi="surface" occurs="9"/>
             </namespace>
          </tagsDecl>
-         <!--classDecl>
-            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-topic.xml"/>
-         </classDecl-->
+         <classDecl>
+            <!--xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-topic.xml"/-->
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-NER.ana.xml"/>
+         </classDecl>
+         <appInfo>
+           <application version="2.0" ident="classla-stanza">
+             <label>CLASSLA-Stanza</label>
+             <desc xml:lang="en">Linguistic processing with CLASSLA-Stanza, available from <ref target="https://github.com/clarinsi/classla">https://github.com/clarinsi/classla</ref>.</desc>
+           </application>
+         </appInfo>
       </encodingDesc>
       <profileDesc>
         <settingDesc>
@@ -124,6 +131,6 @@
         <name>Tomaž Erjavec</name>: Made sample.</change>
       </revisionDesc>
    </teiHeader>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1877/PressMint-SI_1877-08-15-000TTDCE.xml"/>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-SI_1910-03-25-ZZZZWFIX.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1877/PressMint-SI_1877-08-15-000TTDCE.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-SI_1910-03-25-ZZZZWFIX.ana.xml"/>
 </teiCorpus>
