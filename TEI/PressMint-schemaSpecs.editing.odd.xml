@@ -81,7 +81,7 @@
     stored in the corpus root file comprising the corpus header and XInclude references to corpus
     component files, each containing a <gi>TEI</gi> element.</desc>
     <content>
-      <elementRef key="teiHeader"/>
+      <elementRef key="teiHeader" minOccurs="1" maxOccurs="1"/>
       <!-- We allow XIncludes in order to enable separate validation of corpus root and components -->
       <alternate minOccurs="1" maxOccurs="unbounded">
         <elementRef key="TEI"/>
@@ -155,8 +155,9 @@
     a single TEI header with one or more members of the <ident type="class">model.resource</ident> class. Multiple <gi>TEI</gi>
     elements may be combined within a <gi>TEI</gi> (or <gi>teiCorpus</gi>) element.</desc>
     <content>
-      <elementRef key="teiHeader"/>
-      <elementRef key="text"/>
+      <elementRef key="teiHeader" minOccurs="1" maxOccurs="1"/>
+      <elementRef key="facs" minOccurs="0" maxOccurs="1"/>
+      <elementRef key="text" minOccurs="1" maxOccurs="1"/>
     </content>
     <attList>
       <attDef ident="xml:id" mode="replace" usage="req">
@@ -169,7 +170,7 @@
           <dataRef key="teidata.language"/>
         </datatype>
       </attDef>
-      <attDef ident="ana" mode="replace" usage="req">
+      <attDef ident="ana" mode="replace" usage="opt">
         <datatype maxOccurs="unbounded">
           <dataRef key="teidata.pointer"/>
         </datatype>
@@ -198,7 +199,7 @@
     <desc versionDate="2025-09-30" xml:lang="en">contains an issue or an article from a newspaper.</desc>
     <content>
       <elementRef key="front" minOccurs="0" maxOccurs="1"/>
-      <elementRef key="body"/>
+      <elementRef key="body"  minOccurs="1" maxOccurs="1"/>
       <elementRef key="back" minOccurs="0" maxOccurs="1"/>
     </content>
     <attList>
