@@ -1,5 +1,9 @@
+### Validate SI sample
+validate:
+	$j ../../TEI/PressMint.odd.rng ????/*.xml
+
 ### Produce PressMint TEI from JSON:
-all:
+convert:
 	Scripts/sPeriodika-json2tei.pl text 'Sources/*.json' .
 	Scripts/sPeriodika-json2tei.pl ana  'Sources/*.json' .
 
@@ -9,6 +13,7 @@ get-full-corpus-from-repo:
 	tar xvz sPeriodika.1.0.json.tgz
 
 ###################################Some useful program variables
-j = java -jar ../Scripts/bin/jing.jar
-s = java -jar ../Scripts/bin/saxon.jar
+j = java -jar ../../Scripts/bin/jing.jar
+s = java -jar ../../Scripts/bin/saxon.jar
 P = parallel --gnu --halt 2 --jobs 5
+
