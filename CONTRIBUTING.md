@@ -1,4 +1,15 @@
-# CONTRIBUTING in PressMint
+# CONTRIBUTING to PressMint
+
+## What can be included in a PressMint corpus
+
+PressMint gathers corpora of historical newspapers, which should be stuctured and annotated as specified by the
+[Guidelines on the structure and encoding of PressMint corpora](https://clarin-eric.github.io/PressMint/).
+
+Apart from this, there are only a few requirements for the newspapers in a corpus:
+
+* The texts should be copyright free, i.e. it should be possible to make the corpora avaialable on the CC BY licence.
+* Each newspaper issue (or newspaper article) included in a corpus should have a known date of publication,
+  i.e. including year, month and day, e.g. 1900-04-30.
 
 ## Git and GitHub
 
