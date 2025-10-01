@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-10-01T15:01:17Z. 2025-10-01. 
+Schema generated from ODD source 2025-10-01T17:18:53Z. 2025-10-01. 
 TEI Edition: P5 Version 4.10.0a. Last updated on 13th August 2025, revision 73d59c946 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.10.0a/ 
   
@@ -4186,12 +4186,13 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
    </define>
    <define name="tei_classDecl">
       <element name="classDecl">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(classification declarations) contains one or more taxonomies defining any classificatory codes used elsewhere in the text. [2.3.7. The Classification Declaration 2.3. The Encoding Description]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(classification declarations) contains taxonomies defining classificatory codes used elsewhere in the text. Note that the taxonomies are in PressMint typically stored in separate files. [2.3.7. The Classification Declaration 2.3. The Encoding Description]</a:documentation>
          <oneOrMore>
-            <ref name="tei_taxonomy"/>
+            <choice>
+               <ref name="tei_taxonomy"/>
+               <ref name="tei_include"/>
+            </choice>
          </oneOrMore>
-         <ref name="tei_att.global.attributes"/>
-         <empty/>
       </element>
    </define>
    <define name="tei_taxonomy">

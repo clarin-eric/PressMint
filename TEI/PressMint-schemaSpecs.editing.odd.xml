@@ -195,6 +195,27 @@
     </exemplum>
   </elementSpec>
 
+  <elementSpec ident="classDecl" module="header" mode="change">
+    <desc versionDate="2025-10-01" xml:lang="en">contains taxonomies defining classificatory codes
+    used elsewhere in the text. Note that the taxonomies are in PressMint typically stored in
+    separate files.</desc>
+    <content>
+      <alternate minOccurs="1" maxOccurs="unbounded">
+        <elementRef key="taxonomy"/>
+        <elementRef key="include"/>
+      </alternate>
+    </content>
+    <attList/>
+    <exemplum xml:lang="en">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#ParlaMint">
+        <classDecl>
+          <![CDATA[<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+                   href="href="ParlaMint-taxonomy-topic.xml"/>]]>
+        </classDecl>
+      </egXML>
+    </exemplum>
+  </elementSpec>
+  
   <elementSpec ident="text" module="textstructure" mode="change">
     <desc versionDate="2025-09-30" xml:lang="en">contains an issue or an article from a newspaper.</desc>
     <content>
@@ -266,7 +287,7 @@
     </attList>
   </elementSpec>
   
-<!-- To do:
+<!-- Other used elements:
 front
 body
 back
@@ -307,7 +328,6 @@ catDesc
 catRef
 category
 change
-classDecl
 correction
 edition
 editionStmt
@@ -348,5 +368,4 @@ pc
 s
 w
 -->
-
 </schemaSpec>

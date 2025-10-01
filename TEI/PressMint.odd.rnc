@@ -11,7 +11,7 @@ namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 namespace xsl = "http://www.w3.org/1999/XSL/Transform"
 
-# Schema generated from ODD source 2025-10-01T15:01:22Z. 2025-10-01. 
+# Schema generated from ODD source 2025-10-01T17:18:58Z. 2025-10-01. 
 # TEI Edition: P5 Version 4.10.0a. Last updated on 13th August 2025, revision 73d59c946 
 # TEI Edition Location: https://www.tei-c.org/Vault/P5/4.10.0a/ 
 #
@@ -2654,8 +2654,8 @@ tei_listPrefixDef =
   }
 tei_classDecl =
   
-  ## (classification declarations) contains one or more taxonomies defining any classificatory codes used elsewhere in the text. [2.3.7. The Classification Declaration 2.3. The Encoding Description]
-  element classDecl { tei_taxonomy+, tei_att.global.attributes, empty }
+  ## (classification declarations) contains taxonomies defining classificatory codes used elsewhere in the text. Note that the taxonomies are in PressMint typically stored in separate files. [2.3.7. The Classification Declaration 2.3. The Encoding Description]
+  element classDecl { (tei_taxonomy | tei_include)+ }
 tei_taxonomy =
   
   ## (taxonomy) defines a typology either implicitly, by means of a bibliographic citation, or explicitly by a structured taxonomy. [2.3.7. The Classification Declaration]

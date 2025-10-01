@@ -1743,12 +1743,10 @@
           the Section on <ref target="#chp-metadata">Corpus metadata</ref> and in this section we
           detail what additions must be made to the metadata for the linguistically annotated
           version. Note that the other changes for this version of a corpus have been already explained at
-          the start of this <ref target="#chp-linguistic">Chapter</ref>. For PressMint, this information
-          has been, so far, simplified in comparison with ParlaMint; we do not foresee linguistic taxonomies (in particular,
-          for NER), so there are one obligatory and one optional metadata element dedicated to linguistic processing.
-          Both are added to the <gi>teiHeader</gi> of the root of the linguistically analysed corpus,
-          namely a description of the tool(s) used to linguistically annotate the corpus, and
-          optional taxonomies of corpus-specific PoS tags.</p>
+          the start of this <ref target="#chp-linguistic">Chapter</ref>.
+          In short, there are two additional parts that should be added to the <gi>teiHeader</gi> of the
+          corpus root, namely a description of the tool(s) used to linguistically annotate the corpus and an 
+          additional taxonomy for named entities.</p>
 
           <div xml:id="sec-ana-appInfo">
             <head>Application information for linguistic processing</head>
@@ -1777,6 +1775,41 @@
             the URL where it can be found or is at least documented.</p>
           </div>
           
+          <div xml:id="sec-ana-taxo">
+            <head>Linguistic taxonomies</head>
+
+            <p>Some linguistic annotations have fixed vocabularies and these should
+            be encoded as taxonomies in the TEI header of the linguistically analysed corpus
+            root, similarly to other taxonomies, as discussed in the Section on the <ref
+            target="#sec-classDecl">Class declaration</ref>.</p>
+
+            <p>In PressMint there is only one such taxonomy, namely that for Named Entity types,
+            which has - apart from translating the categories into the local language - a fixed structure,
+            as follows:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-ana-taxonomy-NER">
+              <taxonomy xml:id="ParlaMint-taxonomy-NER.ana">
+                <desc xml:lang="en"><term>Named entities</term></desc>
+                <category xml:id="PER">
+                  <catDesc xml:lang="sl"><term>oseba</term></catDesc>
+                  <catDesc xml:lang="en"><term>person</term></catDesc>
+                </category>
+                <category xml:id="LOC">
+                  <catDesc xml:lang="sl"><term>lokacija</term></catDesc>
+                  <catDesc xml:lang="en"><term>location</term></catDesc>
+                </category>
+                <category xml:id="ORG">
+                  <catDesc xml:lang="sl"><term>organizacija</term></catDesc>
+                  <catDesc xml:lang="en"><term>organisation</term></catDesc>
+                </category>
+                <category xml:id="MISC">
+                  <catDesc xml:lang="sl"><term>drugo</term></catDesc>
+                  <catDesc xml:lang="en"><term>miscellaneous</term></catDesc>
+                </category>
+              </taxonomy>
+            </egXML>
+            </p>
+          </div>
         </div>
       </div>
       
