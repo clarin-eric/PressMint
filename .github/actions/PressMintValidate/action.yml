@@ -16,6 +16,7 @@ runs:
     - name: Validate Schema
       working-directory: ${{github.workspace}}
       run: |
+        cd PressMint
         pwd
         ls -la
         make validate-${{inputs.press}} 
