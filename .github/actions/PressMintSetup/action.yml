@@ -44,7 +44,6 @@ runs:
       uses: actions/cache@v3
       with:
         path: |
-          PressMint/Scripts/bin/tools
           PressMint/Scripts/bin/Saxon/saxon-he-12.4.jar
           PressMint/Scripts/bin/Saxon/lib
         key: ${{ runner.os }}-PressMint-deps-V8
@@ -53,8 +52,7 @@ runs:
       run: |
         echo "::debug::Dependencies cache hit"
         pwd
-        ls -l $GITHUB_WORKSPACE/PressMint/Scripts/bin/tools \
-          $GITHUB_WORKSPACE/PressMint/Scripts/bin/Saxon/saxon-he-12.4.jar
+        ls -l $GITHUB_WORKSPACE/PressMint/Scripts/bin/Saxon/saxon-he-12.4.jar
       shell: bash
     #- name: Checkout UniversalDependencies tools
     #  if: steps.cache_deps.outputs.cache-hit != 'true'
