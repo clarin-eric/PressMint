@@ -1,0 +1,35 @@
+name: 'Detect Changes in PressMint Repository'
+#description: ''
+inputs:
+  repo_token:
+    description: 'contains repository secret token'
+    required: false
+outputs:
+  press_process:
+    description: "Parliaments that should be processes (is affected by change script or parliament change)"
+    value: '${{ steps.status.outputs.press_process }}'
+  press_all:
+    description: "List of all Parliaments"
+    value: '${{ steps.status.outputs.press_all }}'
+  press_changed:
+    description: "List of changed Parliaments"
+    value: '${{ steps.status.outputs.press_changed }}'
+  scripts_changed:
+    description: "List of changed scripts (script and schema files)"
+    value: '${{ steps.status.outputs.scripts_changed }}'
+  max_press_changed_size:
+    description: "Size of TEI xml files in changed largest parliament"
+    value: '${{ steps.status.outputs.max_press_changed_size }}'
+  all_press_changed_size:
+    description: "Size of TEI xml files in changed all parliaments"
+    value: '${{ steps.status.outputs.all_press_changed_size }}'
+runs:
+  using: "composite"
+  steps:
+    - name: Test if prereqs are installed
+      run: ${{ github.action_path }}/prereqs.sh
+      shell: bash
+    - name: Detect Changes
+      id: status
+      run: ${{ github.action_path }}/status.sh
+      shell: bash
