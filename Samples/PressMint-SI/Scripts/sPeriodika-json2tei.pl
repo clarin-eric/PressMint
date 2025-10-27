@@ -9,12 +9,20 @@ use Number::Format qw(:subs :vars);
 #use DateTime;
 setlocale(LC_TIME, "sl_SI.UTF-8");
 
-#ToDo: Bad chars in text, fix!!
+#ToDo:
+# - give place of publication for all newspapers?
+# - insert Wikipedia URL?
+
+# Good if higher i.e. closer to 0
+$perplexity_treshold = -84.00;
 
 #Prerequisite for validation:
+#In PressMint:
 $jing = 'java -jar ../../Scripts/bin/jing.jar';
 $schema = '../../TEI/PressMint.odd.rng';
-#Leave proper validation to Matyaš...
+#In sPeriodika:
+$jing = 'java -jar /project/corpora/Parla/PressMint/PressMint/Scripts/bin/jing.jar';
+$schema = '/project/corpora/Parla/PressMint/PressMint/TEI/PressMint.odd.rng';
 
 # Mode parameter should be either "text" or "ana"
 my $mode = shift;
@@ -72,6 +80,8 @@ $i = 0;
 if ($mode eq 'text') {$stamp = 'PressMint'}
 else  {$stamp = 'PressMint.ana'}
 
+mkdir $outDir unless -d $outDir;
+
 foreach $inFile (glob $inFiles) {
     print STDERR "INFO: processing $inFile\n";
 
@@ -85,7 +95,7 @@ foreach $inFile (glob $inFiles) {
             $y >= 1771 and $y <= 1914 and
             $m >= 1 and $m <= 12 and
             $d >= 1 and $d <= 31) {
-        print STDERR "WARN: Bad date $date for $inFile, skipping\n";
+        print STDERR "ERROR: Bad date $date for $inFile, skipping\n";
         next
     }
     #Make year directory for file and name file:
@@ -96,7 +106,8 @@ foreach $inFile (glob $inFiles) {
     if ($mode eq 'text') {$outName .= '.xml'}
     else  {$outName .= '.ana.xml'}
     $outFile = "$outYearDir/$outName";
-    
+    print STDERR "      -> $outFile\n";
+
     #Write file:
     open(OUT, '>:utf8', $outFile) or die "Can't open output file $outFile\n";
     print OUT $TEI;
@@ -124,6 +135,8 @@ sub processFile {
         $publisher = ${$record}{'publisher'};
         $urn       = ${$record}{'URN'};
         $dlib_url  = ${$record}{'dlib_url'};
+        
+        ($title, $newspaper, $place) = &fix_name($title, $newspaper);
         
         $fname = $urn;
 
@@ -208,16 +221,27 @@ sub prepFacs {
 
 sub prepText {
     my $text;
+    my $pbN = 0;
     foreach $page (@{${$record}{'pages'}}) {
+        $pbN++;
+        $pbID = "$id.pb$pbN";
         my $facs_id = &facs_url2id($id, ${$page}{'image_url'});
-        $text .= "        <pb facs=\"#$facs_id\"/>\n";
+        my $quality = &quality(${$page}{'text_csmtised_kenlm_perplexity'}{'mean'});
+        $text .= "        <pb xml:id=\"$pbID\" facs=\"#$facs_id\"/>\n";
         my $page = ${$page}{'text_csmtised_splitfixed'};
-        foreach my $line (split(/\n\n/, $page)) {
+        $pN = 0;
+        foreach my $line (split(/\n\n+/, $page)) {
+            $pN++;
+            $pID = "$pbID.p$pN";
             $line =~ s/^\n//;
             $line =~ s/\n$//;
-            $text .= "        <p>";
-            $text .= &xml_encode($line);
-            $text .= "</p>\n";
+            if ($line) {
+                $text .= "        <p xml:id=\"$pID\" ana=\"#$quality\">";
+                $str = &fix_chars($line);
+                $text .= &xml_encode($str);
+                $text .= "</p>\n";
+            }
+            else {print STDERR "WARN: Empty paragraph for $pID\n"}
         }
     }
     $text =~ s/\n$//;
@@ -261,7 +285,10 @@ sub conllu2tei {
         my ($n, $token, $lemma, $upos, $xpos, $ufeats, $link, $role, $extra, $local) 
             = split /\t/, $line;
         $xpos =~ s/-+$//;   # Get rid of trailing dashes sometimes introduced by Stanford NLP
-        
+
+        $token = &fix_chars($token);
+        $lemma = &fix_chars($lemma);
+
         if ($token =~ /^[[:punct:]]+$/) {
             $tag = 'pc';
             if ($token =~ /[$~%§©+−×÷=<>&#\pS]/) {
@@ -332,6 +359,76 @@ sub conllu2tei {
     return $tei
 }
 
+sub fix_name {
+    my $title = shift;
+    my $periodical = shift;
+
+    unless ($periodical) {
+        return ($title, $periodical)
+    }
+    else {
+        # Remove spurious whitespace
+        $periodical =~ s/^\s+//;
+        $periodical =~ s/\s+$//;
+        $periodical =~ s/\s+/ /g;
+        $title =~ s/^\s+//;
+        $title =~ s/\s+$//;
+        $title =~ s/\s+/ /g;
+        
+        #Get place of publication, if available
+        $pubPlace = '';
+        if ((my $xtra) = $periodical =~ / \((.+)\)/) {
+            $pubPlace = $xtra if
+                $xtra =~ /^\p{Lu}\p{Ll}+$/
+        }
+        #Remove year or place of publication, e.g. "Zora (1872)", "Popotnik (1880-1941)", "Zvonček (Ljubljana)"
+        $periodical =~ s/ \(.+\)//;
+        
+        # Check if title is same as name of periodical, then delete it, e.g.
+        # Slovenski narod	Slovenski narod
+        # Zvon: leposloven list	Zvon (1870)
+        # but also
+        # Popotnik: časopis za sodobno pedagogiko: letno kazalo	Popotnik (1880-1941)
+        if ($title eq $periodical) {$title = ''}
+        elsif (my ($ptitle) = $title =~ /^(.+): [^:]+$/) {
+            if ($ptitle eq $periodical) {$title = ''}
+        }
+        
+        # Join spread word, e.g. "D a n i c i"
+        if ($title =~ /^(\w )+\w$/) {$title =~ s/ //g}
+        # Decap title, e.g. "BASEN O SRAKI"
+        if ($title =~ /^[[:upper:] ]+$/) {$title = ucfirst($title)}
+        
+        # Fix XML entities, e.g. "Društvo ,,Straža&quot;"
+        $title =~ s/&amp;/&/g;
+        $title =~ s/&quot;/"/g;
+        
+        return ($title, $periodical, $pubPlace)
+    }
+}
+
+sub fix_chars {
+    my $str = shift;
+    my $input = $str;
+    $str =~ s|[\x{0D}\x{AD}\x{FEFF}]||g;     # CTRL-M, SOFT HYPHEN,  ZERO WIDTH NO-BREAK SPACE
+    $str =~ s|[\x{A0}\x{2000}-\x{200A}]| |g; # NO-BREAK SPACE, NON-STANDARD SPACES
+    $str =~ s|[\x{2011}]|-|g;                # NON-BREAKING HYPHEN
+    $str =~ s|[\x{E800}-\x{F8FF}]||g;        # PUA
+    $str =~ s|\s+| |g; s|^ ||; s| $||;       # Normalize spaces
+    unless ($str or $str == 0) {
+        print STDERR "ERROR: nothing left if bad chars removed in '$input'\n";
+        return $input
+    }
+    else {return $str}
+}
+
+sub quality {
+    my $perplexity = shift;
+    if (not defined $perplexity) {return 'quality.low'}
+    elsif ($perplexity > $perplexity_treshold) {return 'quality.high'}
+    else {return 'quality.low'}
+}
+
 sub xml_encode {
     my $str = shift;
     $str =~ s|&|&amp;|g;
@@ -390,6 +487,8 @@ sub prepTEI {
     else {$TEI =~ s|\n.*==ISSUE==.*||g}
     if ($publisher and $publisher ne '-') {$TEI =~ s|==PUBLISHER==|$publisher|g}
     else {$TEI =~ s|\n.*==PUBLISHER==.*||g}
+    if ($place and $place ne '-') {$TEI =~ s|==PLACE==|$place|g}
+    else {$TEI =~ s|\n.*==PLACE==.*||g}
     
     $TEI =~ s|==FACS==|$facs|;
     $TEI =~ s|==TAGUSAGE==|$tagUsage|;
@@ -410,14 +509,6 @@ __DATA__
          <titleStmt>
             <title>Korpus starejših slovenskih časopisov PressMint-SI, ==NEWSPAPER==, ==PUBDATE-SL== [==STAMP==]</title>
             <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI, "==NEWSPAPER==", ==PUBDATE-EN== [==STAMP==]</title>
-            <funder>
-               <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
-               <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
-            </funder>
-            <funder>
-               <orgName>Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
-               <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
-            </funder>
          </titleStmt>
          <editionStmt>
             <edition>==EDITION==</edition>
@@ -449,6 +540,7 @@ __DATA__
                <title level="j">==NEWSPAPER==</title>
                <title level="a">==TITLE==</title>
                <publisher>==PUBLISHER==</publisher>
+               <pubPlace>==PLACE==</pubPlace>
                <date when="==PUBDATE==">==PUBDATE-SL==</date>
                <biblScope unit="volume">==VOLUME==</biblScope>
                <biblScope unit="issue">==ISSUE==</biblScope>

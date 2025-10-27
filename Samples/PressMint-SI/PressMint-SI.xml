@@ -10,6 +10,13 @@
               <resp>Kodiranje PressMint TEI XML</resp>
               <resp xml:lang="en">PressMint TEI XML corpus encoding</resp>
             </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0003-3211-9586">Filip Dobranić</persName>
+               <persName ref="https://orcid.org/0000-0003-1096-4666">Bojan Evkoski</persName>
+               <persName ref="https://orcid.org/0000-0001-7169-9152">Nikola Ljubešić</persName>
+               <resp xml:lang="sl">Priprava izvornega korpusa sPeriodika</resp>
+               <resp xml:lang="en">Preparation of source sPeriodika corpus</resp>
+            </respStmt>
             <funder>
                <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
                <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
@@ -102,9 +109,10 @@
                <tagUsage gi="surface" occurs="9"/>
             </namespace>
          </tagsDecl>
-         <!--classDecl>
-            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-topic.xml"/>
-         </classDecl-->
+         <classDecl>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-OCR.xml"/>
+            <!--xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-topic.xml"/-->
+         </classDecl>
       </encodingDesc>
       <profileDesc>
         <settingDesc>
