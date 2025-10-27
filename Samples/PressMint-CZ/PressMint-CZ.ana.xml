@@ -10,13 +10,29 @@
                <resp xml:lang="en">TEI XML corpus encoding</resp>
                <resp xml:lang="en">Linguistic annotation</resp>
             </respStmt>
+            <funder>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <orgName xml:lang="cs">Výzkumná infrastruktura CLARIN</orgName>
+            </funder>
+            <funder>
+               <orgName xml:lang="cs">LINDAT/CLARIAH-CZ: Digitální výzkumná infrastruktura pro jazykové technologie, umění a humanitní vědy</orgName>
+               <orgName xml:lang="en">LINDAT/CLARIAH-CZ: Digital Research Infrastructure for Language Technologies, Arts and Humanities</orgName>
+            </funder>
          </titleStmt>
          <editionStmt>
             <edition>1.0</edition>
          </editionStmt>
+         <extent>
+            <measure unit="words" quantity="10062" xml:lang="en">10062 words</measure>
+            <measure unit="words" quantity="10062" xml:lang="cs">10062 slov</measure>
+         </extent>
          <publicationStmt>
-            <publisher/>
-            <idno/>
+            <publisher>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <orgName xml:lang="cs">Výzkumná infrastruktura CLARIN</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <idno type="URI">https://github.com/clarin-eric/PressMint</idno>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the
@@ -35,7 +51,18 @@
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
-            <namespace name="http://www.tei-c.org/ns/1.0"/>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="1"/>
+               <tagUsage gi="link" occurs="12552"/>
+               <tagUsage gi="linkGrp" occurs="659"/>
+               <tagUsage gi="name" occurs="1056"/>
+               <tagUsage gi="p" occurs="118"/>
+               <tagUsage gi="pb" occurs="4"/>
+               <tagUsage gi="pc" occurs="2417"/>
+               <tagUsage gi="s" occurs="659"/>
+               <tagUsage gi="text" occurs="1"/>
+               <tagUsage gi="w" occurs="10208"/>
+            </namespace>
          </tagsDecl>
       </encodingDesc>
    </teiHeader>
