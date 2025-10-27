@@ -12,7 +12,7 @@ leftBRACKET := (
 rightBRACKET := )
 LANG-CODE-LIST := $(shell echo "$(LANG-LIST)" | sed "s/$(leftBRACKET)[^$(rightBRACKET)]*$(rightBRACKET),*/ /g" | tr -s " " | sed 's/ $$//' )
 
-TAXONOMIES-TRANSLATE-INTERF = NER.ana topic
+TAXONOMIES-TRANSLATE-INTERF = NER.ana
 TAXONOMIES-TRANSLATE = $(addprefix PressMint-taxonomy-, $(TAXONOMIES-TRANSLATE-INTERF))
 
 TAXONOMIES-COPY-INTERF =
