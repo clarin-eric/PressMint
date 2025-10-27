@@ -14,5 +14,5 @@ runs:
       run: echo "REQ_TRANSLATION=${{ inputs.requireTaxonomiesTranslations || '1' }}" >> $GITHUB_ENV
       shell: bash
     - name: Validate Schema
-      run: make validate PRESS='${{inputs.press}}' 
+      run: make validate-${{inputs.press}} 
       shell: bash

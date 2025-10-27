@@ -31,13 +31,13 @@ jobs:
           fetch-depth: 2 # when called a pull_request - test is run on test merge -> full history is not needed to detect changes
       - name: Setup # initialize dependencies cache - used in next steps
         uses: ./PressMint/.github/actions/PressMintSetup
-      - name: PressMint status (Detect changed files and get list of parliaments that should be processed)
+      - name: PressMint status (Detect changed files and get list of countries that should be processed)
         id: detect-changes
         uses: ./PressMint/.github/actions/PressMintStatus
       - name: Test total TEI file size limit
         if: ${{ steps.detect-changes.outputs.max_press_changed_size > 100 && github.event.pull_request.base.ref != 'main' }} 
         run: |
-          echo "::error::100MB file limit has been exceed my one parliament"
+          echo "::error::100MB file limit has been exceed my one country folder"
           exit 1
 
   ValidateCountries:
@@ -60,7 +60,7 @@ jobs:
       - name: Validate PressMint-${{matrix.press}}
         uses: ./PressMint/.github/actions/PressMintValidate
         with:
-          press: '["${{matrix.press}}"]'
+          press: '${{matrix.press}}'
           requireTaxonomiesTranslations: '${{ vars.REQUIRE_TRANSLATIONS }}'
   Validate:
     runs-on: ubuntu-latest

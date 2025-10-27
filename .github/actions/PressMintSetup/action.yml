@@ -13,7 +13,6 @@ runs:
       run: |
           export SAMPLE_DIR=SAMPLE
           echo "SAMPLE_DIR=$SAMPLE_DIR"  >> $GITHUB_ENV
-          export SAMPLE_SCRIPT=Scripts/corpus2sample.xsl
           echo "SAMPLE_SCRIPT=$SAMPLE_SCRIPT"  >> $GITHUB_ENV
       shell: bash
     - name: Install deps
@@ -66,6 +65,7 @@ runs:
     - name: Download Saxon
       if: steps.cache_deps.outputs.cache-hit != 'true'
       run: |
+          mkdir -p $GITHUB_WORKSPACE/PressMint/Scripts/bin/Saxon
           cd $GITHUB_WORKSPACE/PressMint/Scripts/bin/Saxon
           wget https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE12-4/SaxonHE12-4J.zip
           unzip SaxonHE12-4J.zip
