@@ -1,0 +1,18 @@
+name: 'Create derived files and Validate'
+#description: ''
+inputs:
+  press:
+    description: 'list of press codes'
+    required: true
+  requireTaxonomiesTranslations:
+    description: 'require every term in common taxonomies to be translated'
+    required: false
+runs:
+  using: "composite"
+  steps:
+    - name: Set environment variables
+      run: echo "REQ_TRANSLATION=${{ inputs.requireTaxonomiesTranslations || '1' }}" >> $GITHUB_ENV
+      shell: bash
+    - name: Validate Schema
+      run: make validate PRESS='${{inputs.press}}' 
+      shell: bash
