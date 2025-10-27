@@ -15,5 +15,7 @@ runs:
       shell: bash
     - name: Validate Schema
       working-directory: ${{github.workspace}}
-      run: make validate-${{inputs.press}} 
+      run: |
+        pwd
+        make validate-${{inputs.press}} 
       shell: bash
