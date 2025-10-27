@@ -14,10 +14,7 @@ runs:
       run: echo "REQ_TRANSLATION=${{ inputs.requireTaxonomiesTranslations || '1' }}" >> $GITHUB_ENV
       shell: bash
     - name: Validate Schema
-      working-directory: ${{github.workspace}}
+      working-directory: ${{github.workspace}}/PressMint
       run: |
-        cd PressMint
-        pwd
-        ls -la
         make validate-${{inputs.press}} 
       shell: bash
