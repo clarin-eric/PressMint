@@ -184,11 +184,13 @@ $(validate-TEI-XX): validate-TEI-%: MSG-validate-TEI-start-% validate-TEI-root-%
 
 $(addprefix validate-TEI-root-, $(PRESS)): validate-TEI-root-%:
 	@echo "validating $(PATHROOT_TEI_$*)"
-	@${val_root} $(PATHROOT_TEI_$*)
+	@${val_root} $(PATHROOT_TEI_$*) \
+	  || echo "ERROR: validating ($@) $(PATHROOT_TEI_$*) failed"
 
 $(addprefix validate-TEI-comp-, $(PRESS)): validate-TEI-comp-%:
 	@echo "validating component files in $(PATHROOT_TEI_$*)"
-	@echo $(PATHROOT_TEI_$*)|$(getcomponentincludes)| xargs -I {} ${val_comp} $(PATHBASE_TEI_$*)/{}
+	@echo $(PATHROOT_TEI_$*)|$(getcomponentincludes)| xargs -I {} ${val_comp} $(PATHBASE_TEI_$*)/{} \
+	  || echo "ERROR: validating ($@) $(PATHROOT_TEI_$*) failed"
 
 
 validate-TEI.ana-XX = $(addprefix validate-TEI.ana-, $(PRESS))
@@ -202,11 +204,13 @@ $(validate-TEI.ana-XX): validate-TEI.ana-%: MSG-validate-TEI.ana-start-% validat
 
 $(addprefix validate-TEI.ana-root-, $(PRESS)): validate-TEI.ana-root-%:
 	@echo "validating $(PATHROOT_TEI.ana_$*)"
-	@${val_root} $(PATHROOT_TEI.ana_$*)
+	@${val_root} $(PATHROOT_TEI.ana_$*) \
+	  || echo "ERROR: validating ($@) $(PATHROOT_TEI.ana_$*) failed"
 
 $(addprefix validate-TEI.ana-comp-, $(PRESS)): validate-TEI.ana-comp-%:
 	@echo "validating component files in $(PATHROOT_TEI.ana_$*)"
-	@echo $(PATHROOT_TEI.ana_$*)|$(getcomponentincludes)| xargs -I {} ${val_comp} $(PATHBASE_TEI.ana_$*)/{}
+	@echo $(PATHROOT_TEI.ana_$*)|$(getcomponentincludes)| xargs -I {} ${val_comp} $(PATHBASE_TEI.ana_$*)/{} \
+	  || echo "ERROR: validating ($@) $(PATHROOT_TEI.ana_$*) failed"
 
 
 ## validateTaxonomies-XX ## validate taxonomies in folder PressMint-XX
