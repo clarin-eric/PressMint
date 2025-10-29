@@ -35,7 +35,7 @@
   exclude-result-prefixes="xsl tei et mk xs xi"
   version="2.0">
 
-  <xsl:import href="parlamint-lib.xsl"/>
+  <xsl:import href="pressmint-lib.xsl"/>
   
   <!-- Directories must have absolute paths or relative to the location of this script -->
   <xsl:param name="outDir">.</xsl:param>
@@ -68,7 +68,7 @@
   <xsl:param name="chunkStart">0</xsl:param>
   <xsl:param name="chunkSize">0</xsl:param> <!-- 0 means process all -->
   
-  <xsl:output method="xml" indent="yes"/>
+  <xsl:output method="xml" indent="yes" omit-xml-declaration="no"/>
   <xsl:preserve-space elements="catDesc p"/>
 
   <!-- Input directory -->
@@ -305,16 +305,16 @@
       <xsl:apply-templates mode="comp" select="@*"/>
       <xsl:choose>
         <xsl:when test="@xml:id"/>
-        <xsl:when test="parent::tei:*/@xml:id">
+        <xsl:when test="ancestor::tei:*[@xml:id][1]/@xml:id">
           <xsl:attribute name="xml:id">
-            <xsl:value-of select="parent::tei:u/@xml:id"/>
+            <xsl:value-of select="ancestor::tei:*[@xml:id][1]/@xml:id"/>
             <xsl:text>.p</xsl:text>
             <xsl:number/>
           </xsl:attribute>
         </xsl:when>
         <xsl:otherwise>
           <xsl:message select="concat('ERROR ', /tei:TEI/@xml:id, 
-                               ': paragrap without ID but parent also has no ID!')"/>
+                               ': paragraph without ID and no ancestor with ID!')"/>
         </xsl:otherwise>
       </xsl:choose>
       <xsl:apply-templates mode="comp"/>
