@@ -1,15 +1,14 @@
 <?xml version="1.0"?>
 <!-- Prepare a PressMint corpus for a release, i.e. fix known and automatically fixable errors in the source corpus -->
-<!-- The script can be used for both corpora in original langauge(s) or for its MTed variant -->
+<!-- The script can be used for both corpora in original langauge(s) or for their MTed variant -->
 <!-- Input is either lingustically analysed (.TEI.ana) or "plain text" (.TEI) corpus root file XIncluding the corpus components
-     Note that .TEI still needs access to .TEI.ana as that it where it takes its word measures
+     Note that .TEI needs access to .TEI.ana as that is where it takes its word extents
      Output is the corresponding .TEI / TEI.ana corpus root and corpus components, in the dicrectory given in the outDir parameter
-     If .TEI is processed, the corresponding TEI.ana directory should be given in the anaDir parameter
+     If .TEI is being processed, the corresponding TEI.ana directory should be given in the anaDir parameter
      STDERR gives a detailed log of changes.
 
      Changes to root file:
      - delete non-standard extent/measures
-     - insert textClass if missing
      - fix bad URL idno @type and @subtype
      - fix sprurious spaces in text content (multiple, leading and trailing spaces)
 
@@ -299,28 +298,6 @@
                          ': removing paragraph without content for ', ancestor-or-self::tei:*[@xml:id][1]/@xml:id)"/>
   </xsl:template>
   
-  <!-- Give IDs to paragraphs without them -->
-  <xsl:template mode="comp" match="tei:p">
-    <xsl:copy>
-      <xsl:apply-templates mode="comp" select="@*"/>
-      <xsl:choose>
-        <xsl:when test="@xml:id"/>
-        <xsl:when test="ancestor::tei:*[@xml:id][1]/@xml:id">
-          <xsl:attribute name="xml:id">
-            <xsl:value-of select="ancestor::tei:*[@xml:id][1]/@xml:id"/>
-            <xsl:text>.p</xsl:text>
-            <xsl:number/>
-          </xsl:attribute>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:message select="concat('ERROR ', /tei:TEI/@xml:id, 
-                               ': paragraph without ID and no ancestor with ID!')"/>
-        </xsl:otherwise>
-      </xsl:choose>
-      <xsl:apply-templates mode="comp"/>
-    </xsl:copy>
-  </xsl:template>
-      
   <!-- Bug where a sentence contains no tokens, remove sentence -->
   <xsl:template mode="comp" match="tei:s[not(.//tei:w or .//tei:pc)]">
     <xsl:message select="concat('WARN ', /tei:TEI/@xml:id, 

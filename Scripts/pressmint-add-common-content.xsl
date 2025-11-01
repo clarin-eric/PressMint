@@ -9,16 +9,11 @@
      - sets current date as release date
      - sets version and handles
      - sets correct top level ID so it is the same as filename
-     - sets main title ParlaMint stamp
-     - sets correct references to date-dependent subcorpora (#reference, #covid, #war)
-     - sets ParlaMint II English projectDesc
+     - sets title PressMint stamp
+     - sets PressMint English projectDesc
      - gives correct type and subtype to idno
-     - calculates speech and word extents
+     - calculates paragraph and word extents
      - calculates tagUsage
-     - inserts bi- or uni-cameralism if missing
-     - adds meeting reference to parliamentary body of the meeting, if missing
-     - changes div/@type="debateSection" to ="commentSection" if div contains no utterances
-     - removes spurious handle ref
      - removes spurious spaces
      - sorts XIncluded component files
 -->
@@ -33,21 +28,18 @@
   exclude-result-prefixes="xsl tei et mk xs xi"
   version="2.0">
 
-  <xsl:import href="parlamint-lib.xsl"/>
+  <xsl:import href="pressmint-lib.xsl"/>
   
   <!-- Directories must have absolute paths! -->
   <xsl:param name="outDir">.</xsl:param>
   <xsl:param name="anaDir">.</xsl:param>
   <xsl:param name="outHeaderDir">.</xsl:param>
   <xsl:param name="anaHeaderDir">.</xsl:param>
-  <xsl:param name="reference-date" as="xs:date">2020-01-30</xsl:param>
-  <xsl:param name="covid-date" as="xs:date">2020-01-31</xsl:param>
-  <xsl:param name="war-date" as="xs:date">2022-02-24</xsl:param>
 
   <!-- We give fake values here, the calling program should set these parameters! -->
-  <xsl:param name="version">3.0a</xsl:param>
+  <xsl:param name="version">0.1</xsl:param>
   <xsl:param name="handle-txt">http://hdl.handle.net/11356/XXXX</xsl:param>
-  <xsl:param name="handle-ana">http://hdl.handle.net/11356/XXXX</xsl:param>
+  <xsl:param name="handle-ana">http://hdl.handle.net/11356/YYYY</xsl:param>
 
   <!-- parameters for partial processing, root file is processed after processing the last component file -->
   <xsl:param name="chunkStart">0</xsl:param>
@@ -75,233 +67,23 @@
   </xsl:param>
   
   <xsl:output method="xml" indent="yes"/>
-  <xsl:preserve-space elements="catDesc seg"/>
+  <xsl:preserve-space elements="catDesc p"/>
 
   <!-- GOBAL VARIABLES -->
   
-  <!-- Project description for ParlaMint II -->
+  <!-- Project description for PressMint II -->
   <xsl:variable name="projectDesc-en">
-    <p xml:lang="en"><ref target="https://www.clarin.eu/parlamint">ParlaMint</ref> is a
-    project that aims to (1) create a multilingual set of comparable corpora of parliamentary
-    proceedings uniformly encoded according to the
-    <ref target="https://clarin-eric.github.io/ParlaMint/">ParlaMint encoding guidelines</ref>, 
-    covering the period from 2015 to mid-2022; (2) add linguistic annotations to the corpora and
-    machine-translate them to English; (3) make the corpora available through concordancers; and
-    (4) build use cases in Political Sciences and Digital Humanities based on the corpus
-    data.</p>
-  </xsl:variable>
-  
-  <xsl:variable name="houses">
-    <xsl:choose>
-      <xsl:when test="$country-code = 'AT'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'BA'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'BE'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-        <term>Committee</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'BG'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'CZ'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'DE'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'DK'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'EE'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'ES'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'ES-AN'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'ES-CT'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'ES-GA'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'ES-PV'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'FI'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'FR'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'GB'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-        <term>Upper house</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'GR'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'HR'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'HU'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'IL'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'IS'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'IT'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Upper house</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'LT'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'LV'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'NL'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-        <term>Upper house</term>
-      </xsl:when>
-      <!-- NO had two houses until 2009, then became unicameral; 
-           If lower and upper house had a join meeting, this is also marked as unicameral (arguably wrong)
-           Note that the titles do not distinguish between the three bodies, only the filenames do: -lower.xml, -upper.xml, .xml
-      -->
-      <xsl:when test="$country-code = 'NO'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-        <term>Upper house</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'PL'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-        <term>Upper house</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'PT'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'RO'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'RS'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'RO'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'SE'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'SI'">
-        <term>Legislature</term>
-        <term>Bicameralism</term>
-        <term>Lower house</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'SK'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'TR'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:when test="$country-code = 'UA'">
-        <term>Legislature</term>
-        <term>Unicameralism</term>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:message select="concat('WARN: country ', $country-code, ' without houses info')"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:variable>
-  
-  <xsl:variable name="house-refs">
-    <xsl:variable name="taxos" select="$rootHeader//tei:taxonomy"/>
-    <xsl:for-each select="$houses/tei:term">
-      <xsl:variable name="term" select="."/>
-      <xsl:variable name="term-id">
-        <xsl:choose>
-          <xsl:when test="$term = 'Legislature'">
-            <xsl:value-of select="//$taxos
-                                  [tei:desc[tei:term = $term]]
-                                  /@xml:id"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="$taxos//tei:category
-                                  [tei:catDesc[tei:term = $term]]
-                                  /@xml:id"/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:variable>
-      <ref>
-        <xsl:attribute name="target">
-          <xsl:if test="not(normalize-space($term-id))">
-            <xsl:message select="concat('ERROR ', /tei:teiCorpus/@xml:id,
-                                 ': cannot locate ID for ', $term)"/>
-          </xsl:if>
-          <xsl:text>#</xsl:text>
-          <xsl:value-of select="$term-id"/>
-        </xsl:attribute>
-        <xsl:value-of select="$term"/>
-      </ref>
-    </xsl:for-each>
+    <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a
+    project that aims to (1) create a multilingual set of corpora of historical newspapers
+    uniformly encoded according to the
+    <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>;
+    (2) add linguistic annotations to the corpora; and (3) make the corpora available through
+    concordancers.</p>
   </xsl:variable>
   
   <!-- Input directory -->
   <xsl:variable name="inDir" select="replace(base-uri(), '(.*)/.*', '$1')"/>
-  <!-- The name of the corpus directory to output to, i.e. "ParlaMint-XX" -->
+  <!-- The name of the corpus directory to output to, i.e. "PressMint-XX" -->
   <xsl:variable name="corpusDir" select="replace(base-uri(), 
                                          '.*?([^/]+)/[^/]+\.[^/]+$', '$1')"/>
 
@@ -350,21 +132,21 @@
             <xsl:value-of select="concat($anaHeaderDir, '/')"/>
             <xsl:choose>
               <xsl:when test="$type = 'ana'">
-	              <xsl:value-of select="replace(@href, '\.ana\.xml', '.ana.header.xml')"/>
-	            </xsl:when>
+	        <xsl:value-of select="replace(@href, '\.ana\.xml', '.ana.header.xml')"/>
+	      </xsl:when>
               <xsl:when test="$type = 'txt'">
-	              <xsl:value-of select="replace(@href, '\.xml', '.ana.header.xml')"/>
-	            </xsl:when>
-	          </xsl:choose>
+	        <xsl:value-of select="replace(@href, '\.xml', '.ana.header.xml')"/>
+	      </xsl:when>
+	    </xsl:choose>
           </url-ana-header>
           <url-header>
             <xsl:value-of select="concat($outHeaderDir, '/', replace(@href, '\.xml', '.header.xml'))"/>
           </url-header>
-  </xsl:if>
+        </xsl:if>
       </item>
     </xsl:for-each>
   </xsl:variable>
-
+  
   <!-- docs to process in chunk -->
   <xsl:variable name="docsChunk">
   <xsl:message select="concat('INFO: Processing chunk from ', $chunkStart, ' to ', $chunkStart + $chunkSize)"/>
@@ -423,17 +205,17 @@
       </xsl:for-each>
   </xsl:variable>
   
-  <!-- Numbers of speeches in component files -->
-  <xsl:variable name="speeches">
+  <!-- Numbers of paragraphs in component files -->
+  <xsl:variable name="paragraphs">
     <xsl:for-each select="$docs/tei:item[@type = 'component' and ($lastChunk or mk:in-chunk(@position))]">
       <item n="{tei:xi-orig}">
         <xsl:choose>
           <xsl:when test="doc-available(tei:url-header)">
-            <xsl:message select="concat('INFO: Using speeches from header file ', replace(tei:url-header,'.*/',''))"/>
-            <xsl:value-of select="document(tei:url-header)//tei:extent/tei:measure[@unit='speeches'][1]/@quantity"/>
+            <xsl:message select="concat('INFO: Using paragraphs from header file ', replace(tei:url-header,'.*/',''))"/>
+            <xsl:value-of select="document(tei:url-header)//tei:extent/tei:measure[@unit='paragraphs'][1]/@quantity"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="document(tei:url-orig)/count(//tei:u)"/>
+            <xsl:value-of select="document(tei:url-orig)/count(//tei:p)"/>
           </xsl:otherwise>
         </xsl:choose>
       </item>
@@ -495,7 +277,7 @@
         <xsl:when test="@type = 'component'">
           <xsl:variable name="componentContent">
             <xsl:apply-templates mode="comp" select="document(tei:url-orig)/tei:TEI">
-              <xsl:with-param name="speeches" select="$speeches/tei:item[@n = $this]"/>
+              <xsl:with-param name="paragraphs" select="$paragraphs/tei:item[@n = $this]"/>
               <xsl:with-param name="words" select="$words/tei:item[@n = $this]"/>
               <xsl:with-param name="tagUsages" select="$tagUsages/tei:item[@n = $this]"/>
             </xsl:apply-templates>
@@ -527,13 +309,13 @@
   <!-- PROCESSING COMPONENTS -->
   
   <xsl:template mode="comp" match="tei:*">
-    <xsl:param name="speeches"/>
+    <xsl:param name="paragraphs"/>
     <xsl:param name="words"/>
     <xsl:param name="tagUsages"/>
     <xsl:copy>
       <xsl:apply-templates mode="comp" select="@*"/>
       <xsl:apply-templates mode="comp">
-        <xsl:with-param name="speeches" select="$speeches"/>
+        <xsl:with-param name="paragraphs" select="$paragraphs"/>
         <xsl:with-param name="words" select="$words"/>
         <xsl:with-param name="tagUsages" select="$tagUsages"/>
       </xsl:apply-templates>
@@ -552,40 +334,11 @@
     </xsl:if>
   </xsl:template>
   
-  <!-- Set subcorpus or subcorpora info for component -->
-  <xsl:template mode="comp" match="tei:TEI/@ana | tei:text/@ana">
-    <xsl:variable name="id" select="ancestor::tei:TEI/@xml:id"/>
-    <xsl:variable name="date" select="ancestor::tei:TEI/tei:teiHeader//tei:setting/tei:date/@when"/>
-    <!-- Set subcorpus or subcorpora (needs to be space normalised!) -->
-    <xsl:variable name="subcorpora">
-      <xsl:if test="$reference-date &gt;= $date"> #reference </xsl:if>
-      <xsl:if test="$covid-date &lt;= $date"> #covid </xsl:if>
-      <xsl:if test="$war-date &lt;= $date"> #war </xsl:if>
-    </xsl:variable>
-    <xsl:variable name="ana">
-      <!-- Ignore old subcorpus labels (but preserve the other labels) and insert new ones -->
-      <xsl:for-each select="tokenize(., ' ')">
-        <xsl:if test=". != '#reference' and  . != '#covid' and  . != '#war'">
-	  <xsl:value-of select="."/>
-	  <xsl:text>&#32;</xsl:text>
-	</xsl:if>
-      </xsl:for-each>
-      <xsl:value-of select="normalize-space($subcorpora)"/>
-    </xsl:variable>
-    <xsl:if test="not(normalize-space($date))">
-      <xsl:message select="concat('ERROR ', $id, ': no date in setting!')"/>
-    </xsl:if>
-    <xsl:attribute name="ana">
-      <xsl:message select="concat('INFO ', $id, ': setting references ', $ana, ' for ', $date)"/>
-      <xsl:value-of select="$ana"/>
-    </xsl:attribute>
-  </xsl:template>
-  
   <!-- Same as for root -->
   <xsl:template mode="comp" match="tei:teiHeader//text()">
     <xsl:apply-templates mode="root" select="."/>
   </xsl:template>
-  <xsl:template mode="comp" match="tei:titleStmt/tei:title[@type = 'main']">
+  <xsl:template mode="comp" match="tei:titleStmt/tei:title">
     <xsl:apply-templates mode="root" select="."/>
   </xsl:template>
   <xsl:template mode="comp" match="tei:publicationStmt">
@@ -600,23 +353,20 @@
   <xsl:template mode="comp" match="tei:projectDesc">
     <xsl:apply-templates mode="root" select="."/>
   </xsl:template>
-  <xsl:template mode="comp" match="tei:meeting">
-    <xsl:apply-templates mode="root" select="."/>
-  </xsl:template>
   
-  <xsl:template mode="comp" match="tei:extent/tei:measure[@unit='speeches']">
-    <xsl:param name="speeches"/>
-    <xsl:variable name="old-speeches" select="@quantity"/>
+  <xsl:template mode="comp" match="tei:extent/tei:measure[@unit='paragraphs']">
+    <xsl:param name="paragraphs"/>
+    <xsl:variable name="old-paragraphs" select="@quantity"/>
     <xsl:copy>
       <xsl:apply-templates mode="comp" select="@*"/>
-      <xsl:if test="normalize-space($speeches) and $speeches != '0'">
-        <xsl:attribute name="quantity" select="$speeches"/>
-        <xsl:if test="$old-speeches != $speeches">
+      <xsl:if test="normalize-space($paragraphs) and $paragraphs != '0'">
+        <xsl:attribute name="quantity" select="$paragraphs"/>
+        <xsl:if test="$old-paragraphs != $paragraphs">
           <xsl:message select="concat('WARN ', /tei:TEI/@xml:id, 
-                               ': replacing speeches ', $old-speeches, ' with ', $speeches)"/>
+                               ': replacing paragraphs ', $old-paragraphs, ' with ', $paragraphs)"/>
         </xsl:if>
         <xsl:value-of select="replace(., '.+ ', concat(
-                              et:format-number(ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang, $speeches), 
+                              et:format-number(ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang, $paragraphs), 
                               ' '))"/>
       </xsl:if>
     </xsl:copy>
@@ -640,19 +390,6 @@
     </xsl:copy>
   </xsl:template>  
 
-  <!-- Fix div/@type="debateSection" to ="commentSection" if div contains no utterances -->
-  <xsl:template mode="comp" match="tei:div[@type='debateSection'][not(tei:u)]">
-    <xsl:message select="concat('WARN ', /tei:TEI/@xml:id, 
-                         ': no utterances in div/@type=debateSection, ',
-			 'replacing with commentSection')"/>
-
-    <xsl:copy>
-      <xsl:apply-templates mode="comp" select="@*"/>
-      <xsl:attribute name="type">commentSection</xsl:attribute>
-      <xsl:apply-templates mode="comp"/>
-    </xsl:copy>
-  </xsl:template>
-  
   <xsl:template mode="comp" match="tei:encodingDesc">
     <xsl:param name="tagUsages"/>
     <xsl:copy copy-namespaces="no">
@@ -668,34 +405,23 @@
     </xsl:copy>
   </xsl:template>
 
-  <!-- Silently give IDs to segs without them (if u has ID, otherwise complain) -->
-  <xsl:template mode="comp" match="tei:seg[not(@xml:id)]">
+  <!-- Silently give IDs to paragraphs without them -->
+  <xsl:template mode="comp" match="tei:p[not(@xml:id)]">
     <xsl:copy>
       <xsl:apply-templates mode="comp" select="@*"/>
-      <xsl:choose>
-        <xsl:when test="parent::tei:u/@xml:id">
-          <xsl:attribute name="xml:id">
-            <xsl:value-of select="parent::tei:u/@xml:id"/>
-            <xsl:text>.</xsl:text>
-            <xsl:number/>
-          </xsl:attribute>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:message select="concat('ERROR ', /tei:TEI/@xml:id,
-                               ': seg without ID but utterance also has no ID!')"/>
-        </xsl:otherwise>
-      </xsl:choose>
+      <xsl:attribute name="xml:id">
+        <xsl:value-of select="ancestor::TEI/@xml:id"/>
+        <xsl:text>.p</xsl:text>
+        <xsl:number level="any" from="tei:text"/>
+      </xsl:attribute>
       <xsl:apply-templates mode="comp"/>
     </xsl:copy>
   </xsl:template>
       
-  <!-- Silently give IDs to the various transcriber comments -->
+  <!-- Silently give IDs to some elements -->
   <xsl:template mode="comp" match="tei:head[not(@xml:id)] | 
 				   tei:gap[not(@xml:id)] |
-				   tei:note[not(@xml:id)] |
-				   tei:vocal[not(@xml:id)] | 
-				   tei:kinesic[not(@xml:id)] |
-				   tei:incident[not(@xml:id)]">
+				   tei:note[not(@xml:id)]">
     <xsl:copy>
       <xsl:apply-templates mode="comp" select="@*"/>
       <xsl:attribute name="xml:id">
@@ -707,6 +433,7 @@
       <xsl:apply-templates mode="comp"/>
     </xsl:copy>
   </xsl:template>
+  
   <!-- FILTERING COMPONENTS - HEADER -->
   <xsl:template mode="header" match="/tei:TEI/tei:text"/>
   <xsl:template mode="header" match="*">
@@ -718,6 +445,7 @@
   <xsl:template mode="header" match="@*">
     <xsl:copy/>
   </xsl:template>  
+
   <!-- PROCESSING ROOT -->
   
   <xsl:template mode="root" match="*">
@@ -753,7 +481,7 @@
   <!-- Check main title if it has the correct stamp, and replace if not -->
   <xsl:template mode="root" match="tei:titleStmt/tei:title[@type = 'main']">
     <xsl:variable name="okStamp">
-      <xsl:text>[ParlaMint</xsl:text>
+      <xsl:text>[PressMint</xsl:text>
       <xsl:if test="normalize-space($mt)">
 	<xsl:value-of select="concat('-', $mt)"/>
       </xsl:if>
@@ -779,20 +507,11 @@
   <xsl:template mode="root" match="tei:extent">
     <xsl:copy>
       <xsl:apply-templates mode="root" select="@*"/>
-      <!-- Schema does not allow "sessions", and it is not clear if this is the right term to use for the number of files anyway! -->
-      <!--xsl:if test="not(tei:measure[@unit='sessions'])">
+      <xsl:if test="not(tei:measure[@unit='paragraphs'])">
 	<xsl:message select="concat('WARN ', /tei:teiCorpus/@xml:id, 
-                             ': no root measure for sessions, adding it in English only!')"/>
+                             ': no root measure for paragraphs, adding it in English only!')"/>
 	<xsl:call-template name="add-measure">
-	  <xsl:with-param name="unit">sessions</xsl:with-param>
-	  <xsl:with-param name="lang">en</xsl:with-param>
-	</xsl:call-template>
-      </xsl:if-->
-      <xsl:if test="not(tei:measure[@unit='speeches'])">
-	<xsl:message select="concat('WARN ', /tei:teiCorpus/@xml:id, 
-                             ': no root measure for speeches, adding it in English only!')"/>
-	<xsl:call-template name="add-measure">
-	  <xsl:with-param name="unit">speeches</xsl:with-param>
+	  <xsl:with-param name="unit">paragraphs</xsl:with-param>
 	  <xsl:with-param name="lang">en</xsl:with-param>
 	</xsl:call-template>
       </xsl:if>
@@ -808,116 +527,10 @@
     </xsl:copy>
   </xsl:template>
   
-  <xsl:template mode="root" match="tei:measure[@unit='sessions' or @unit='speeches' or @unit='words']">
+  <xsl:template mode="root" match="tei:measure[@unit='paragraphs' or @unit='words']">
     <xsl:call-template name="add-measure"/>
   </xsl:template>
 
-  <!-- Add textClass if missing and houses information is present-->
-  <xsl:template mode="root" match="tei:settingDesc">
-    <xsl:copy>
-      <xsl:apply-templates mode="root" select="@*"/>
-      <xsl:apply-templates mode="root"/>
-    </xsl:copy>
-    <xsl:if test="not(../tei:textClass)">
-      <xsl:choose>
-        <xsl:when test="$houses/tei:term">
-          <xsl:message>
-            <xsl:value-of select="concat('INFO ', /tei:*/@xml:id,
-                                  ': inserting textClass for')"/>
-            <xsl:for-each select="$houses/tei:term">
-              <xsl:value-of select="concat(' ', .)"/>
-            </xsl:for-each>
-          </xsl:message>
-          <textClass>
-            <catRef scheme="{$house-refs/tei:ref[. = 'Legislature']/@target}">
-              <xsl:attribute name="target">
-                <xsl:variable name="targets">
-                  <xsl:for-each select="$house-refs/tei:ref">
-                    <xsl:if test=". != 'Legislature'">
-                      <xsl:value-of select="@target"/>
-                      <xsl:text>&#32;</xsl:text>
-                    </xsl:if>
-                  </xsl:for-each>
-                </xsl:variable>
-                <xsl:value-of select="normalize-space($targets)"/>
-              </xsl:attribute>
-            </catRef>
-          </textClass>
-        </xsl:when>
-        <xsl:otherwise>
-            <xsl:message select="concat('ERROR ', /tei:teiCorpus/@xml:id,
-                                 ': missing textClass and unable to add it automaticaly!')"/>
-          <xsl:comment>textClass</xsl:comment>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:if>
-  </xsl:template>
-
-  <!-- If necessary, insert information on which parliamentary body having the meeting: 
-       unicameralism, lower and/or upper (house), committe -->
-  <!-- $house-refs give info on which is which and what they contain -->
-  <!-- Some corpora have both houses, here we decide on the basis of the main title -->
-  <xsl:template mode="root" match="tei:meeting">
-    <xsl:copy>
-      <xsl:apply-templates mode="root" select="@*"/>
-      <!-- We need to collect all meeting/@ana values, so we wouldn't put the wrong body ref into one that is missing it
-           as we can have e.g.
-           <meeting corresp="#be_federal_parliament" ana="#parla.meeting.committee" n="ic001">Commissievergadering 001 van 17-07-2014</meeting>
-           <meeting ana="#parla.term #period_54" corresp="#be_federal_parliament" n="54">Zittingperiode 54</meeting>
-      -->
-      <xsl:variable name="anas">
-	<xsl:for-each select="../tei:meeting">
-	  <xsl:value-of select="@ana"/>
-	  <xsl:text>&#32;</xsl:text>
-	</xsl:for-each>
-      </xsl:variable>
-      <!-- Note that we don't make any provision for inserting reference to commitee meeting! -->
-      <xsl:if test="not(
-		    contains($anas, 'parla.uni') or 
-		    contains($anas, 'parla.upper') or contains($anas, 'parla.lower') or 
-		    contains($anas, 'parla.committee')
-		    )">
-        <xsl:variable name="house">
-          <xsl:choose>
-	    <xsl:when test="$house-refs/tei:ref[. = 'Unicameralism']">
-	      <xsl:copy-of select="$house-refs/tei:ref[. = 'Unicameralism']"/>
-            </xsl:when>
-            <xsl:when test="$house-refs/tei:ref[. = 'Lower house'] and
-                            not($house-refs/tei:ref[. = 'Upper house'])">
-	      <xsl:copy-of select="$house-refs/tei:ref[. = 'Lower house']"/>
-            </xsl:when>
-            <xsl:when test="$house-refs/tei:ref[. = 'Upper house'] and
-                            not($house-refs/tei:ref[. = 'Lower house'])">
-	      <xsl:copy-of select="$house-refs/tei:ref[. = 'Upper house']"/>
-            </xsl:when>
-            <xsl:otherwise>
-	      <xsl:message terminate="yes" select="concat('FATAL ERROR: ', ancestor::tei:*[@xml:id][1]/@xml:id,
-                                                   ': BAD HOUSES FOR COUNTRY IN THIS SCRIPT!')"/>
-	    </xsl:otherwise>
-          </xsl:choose>
-        </xsl:variable>
-        <xsl:choose>
-          <xsl:when test="normalize-space($house)">
-            <xsl:variable name="refs">
-	      <xsl:for-each select="$house/tei:ref">
-                <xsl:value-of select="@target"/>
-                <xsl:text>&#32;</xsl:text>
-	      </xsl:for-each>
-            </xsl:variable>
-            <xsl:message select="concat('WARN ', /tei:*/@xml:id,
-				 ': inserting ', $refs, 'into meeting/@ana ', @ana)"/>
-            <xsl:attribute name="ana" select="concat($refs, @ana)"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:message terminate="yes" select="concat('FATAL ERROR: ', /tei:TEI/@xml:id,
-						 ': COULD NOT FIND HOUSES FOR MEETING ELEMENT!')"/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:if>
-      <xsl:apply-templates mode="root"/>
-    </xsl:copy>
-  </xsl:template>
-  
   <xsl:template mode="root" match="tei:publicationStmt/tei:date">
     <xsl:copy>
       <xsl:apply-templates mode="root" select="@*"/>
@@ -978,11 +591,6 @@
             </xsl:when>
 	  </xsl:choose>
 	</xsl:when>
-	<xsl:when test="ancestor::tei:sourceDesc">
-	  <xsl:attribute name="type">URI</xsl:attribute>
-	  <xsl:attribute name="subtype">parliament</xsl:attribute>
-          <xsl:value-of select="normalize-space(.)"/>
-	</xsl:when>
 	<xsl:when test="@type and @subtype">
 	  <xsl:attribute name="type" select="@type"/>
 	  <xsl:attribute name="subtype" select="@subtype"/>
@@ -1001,12 +609,6 @@
 	</xsl:otherwise>
       </xsl:choose>
     </xsl:copy>
-  </xsl:template>
-
-  <xsl:template mode="root" match="tei:publicationStmt[tei:idno]/
-                       tei:pubPlace[tei:ref[matches(@target, 'hdl.handle.net')]]">
-    <xsl:message select="concat('WARN ', /tei:teiCorpus/@xml:id, 
-                         ': deleting redundant pubPlace')"/>
   </xsl:template>
 
   <xsl:template mode="root" match="tei:encodingDesc">
@@ -1034,34 +636,6 @@
     </xsl:copy>
   </xsl:template>
 
-  <!-- Insert government organisation if missing -->
-  <xsl:template mode="root" match="tei:listOrg">
-    <xsl:copy>
-      <xsl:apply-templates mode="root" select="@*"/>
-      <xsl:if test="not(.//tei:org[@role = 'government'])">
-        <xsl:variable name="government-id" select="concat('government.' , $country-code)"/>
-        <xsl:variable name="government-name" select="concat($country-name, ' Government')"/>
-        <xsl:message select="concat('WARN ', /tei:teiCorpus/@xml:id,
-                             ': inserting government organisation ', $government-name,
-                             ' with ID ', $government-id)"/>
-        <org xml:id="{$government-id}" role="government">
-          <orgName xml:lang="en" full="yes">
-            <xsl:value-of select="$government-name"/>
-          </orgName>
-        </org>
-      </xsl:if>
-      <xsl:apply-templates mode="root"/>
-    </xsl:copy>
-  </xsl:template>
-
-  <!-- Remove @xml:lang from term (not needed, as superordiante catDesc should have @xml:lang -->
-  <xsl:template mode="root" match="tei:catDesc/tei:term">
-    <xsl:copy>
-      <xsl:apply-templates mode="root" select="@*[name() != 'xml:lang']"/>
-      <xsl:apply-templates mode="root"/>
-    </xsl:copy>
-  </xsl:template>
-  
   <!-- Remove leading, trailing and multiple spaces -->
   <xsl:template mode="root" match="text()[normalize-space(.)]">
     <xsl:variable name="str">
@@ -1100,8 +674,8 @@
           <xsl:when test="$unit='sessions'">
             <xsl:value-of select="count($docs/tei:item[@type = 'component'])"/>
           </xsl:when>
-          <xsl:when test="$unit='speeches'">
-            <xsl:value-of select="sum($speeches/tei:item)"/>
+          <xsl:when test="$unit='paragraphs'">
+            <xsl:value-of select="sum($paragraphs/tei:item)"/>
           </xsl:when>
           <xsl:when test="$unit='words'">
             <xsl:value-of select="sum($words/tei:item)"/>
