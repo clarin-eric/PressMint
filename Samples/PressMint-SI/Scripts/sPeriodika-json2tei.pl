@@ -115,8 +115,10 @@ foreach $inFile (glob $inFiles) {
 
     #Validate:
     $error = `$jing $schema $outFile`;
-    print STDERR "ERROR: Mistakes in file $outFile:\n$error\n"
-        if $error
+    if ($error) {
+        print STDERR "ERROR: Mistakes in file $outFile, deleting it:\n$error\n";
+        `rm $outFile`
+    }
 }
 
 sub processFile {
@@ -399,11 +401,7 @@ sub fix_name {
         # Decap title, e.g. "BASEN O SRAKI"
         if ($title =~ /^[[:upper:] ]+$/) {$title = ucfirst($title)}
         
-        # Fix XML entities, e.g. "Društvo ,,Straža&quot;"
-        $title =~ s/&amp;/&/g;
-        $title =~ s/&quot;/"/g;
-        
-        return ($title, $periodical, $pubPlace)
+        return (&xml_encode($title), &xml_encode($periodical), &xml_encode($pubPlace))
     }
 }
 

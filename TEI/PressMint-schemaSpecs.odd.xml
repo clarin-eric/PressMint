@@ -21,7 +21,7 @@
    <moduleRef key="namesdates" include="orgName persName placeName"/>
    <!--moduleRef key="linking" include="link linkGrp seg"/-->
    <!--moduleRef key="figures" include="figure"/-->
-   <moduleRef key="analysis" include="pc s w"/>
+   <moduleRef key="analysis" include="span pc s w"/>
    <!-- Attributes used in ParlaMint -->
    <classRef key="att.global" except=""/>
    <classRef key="att.global.analytic" include="ana"/>
@@ -348,85 +348,4 @@
          <attDef ident="hand" mode="delete"/>
       </attList>
    </elementSpec>
-   <!-- Other used elements:
-front
-body
-back
-docDate
-bibl
-biblScope
-cb
-date
-desc
-email
-gap
-graphic
-head
-label
-lb
-measure
-media
-meeting
-name
-note
-num
-p
-pb
-pubPlace
-publisher
-ref
-resp
-respStmt
-teiCorpus
-term
-time
-title
-unit
-appInfo
-application
-availability
-catDesc
-catRef
-category
-change
-correction
-edition
-editionStmt
-editorialDecl
-encodingDesc
-extent
-fileDesc
-funder
-hyphenation
-idno
-langUsage
-language
-licence
-listPrefixDef
-namespace
-normalization
-prefixDef
-profileDesc
-projectDesc
-publicationStmt
-quotation
-revisionDesc
-segmentation
-sourceDesc
-tagUsage
-tagsDecl
-taxonomy
-teiHeader
-textClass
-titleStmt
-facsimile
-surface
-zone
-orgName
-persName
-placeName
-pc
-s
-w
--->
 </schemaSpec>

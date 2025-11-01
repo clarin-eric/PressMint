@@ -1,5 +1,3 @@
-make val check: prepare val-odd html mount
-
 # Validate and compile ODD to RelaxNG, validate samples, make HTML
 all:	prepare val-odd xml-schemas html
 xall:	prepare val-odd xml-schemas val-samples html

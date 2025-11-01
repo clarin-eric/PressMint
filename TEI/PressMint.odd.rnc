@@ -11,9 +11,9 @@ namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 namespace xsl = "http://www.w3.org/1999/XSL/Transform"
 
-# Schema generated from ODD source 2025-10-01T17:18:58Z. 2025-10-01. 
-# TEI Edition: P5 Version 4.10.0a. Last updated on 13th August 2025, revision 73d59c946 
-# TEI Edition Location: https://www.tei-c.org/Vault/P5/4.10.0a/ 
+# Schema generated from ODD source 2025-11-01T12:31:55Z. 2025-11-01. 
+# TEI Edition: P5 Version 4.11.0a. Last updated on 6th October 2025, revision 2d8eae701 
+# TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0a/ 
 #
 
 # This file is freely available and you are hereby authorised to copy, modify, and redistribute it in any way without further reference or permissions.
@@ -377,41 +377,6 @@ tei_att.declarable.attribute.default =
       ## This element can only be selected explicitly, unless it is the only one of its kind, in which case it is selected if its parent is selected.
       "false"
   }?
-sch:pattern [
-  id = "declarable"
-  abstract = "true"
-  "\x{a}" ~
-  "      "
-  sch:rule [
-    context =
-      "$tde[ ancestor::tei:teiHeader                                  and                                  following-sibling::$tde                                  and                                  not( preceding-sibling::$tde ) ]"
-    "\x{a}" ~
-    "         "
-    sch:report [
-      test = "../child::$tde[ not( @xml:id ) ]"
-      "\x{a}" ~
-      "            When there is more than one "
-      sch:name [ ]
-      ", each must have an @xml:id\x{a}" ~
-      "          "
-    ]
-    "\x{a}" ~
-    "         "
-    sch:assert [
-      test =
-        "count( ../child::$tde[ normalize-space( @default ) = ('1','true') ] ) eq 1"
-      "\x{a}" ~
-      "            When there is more than one "
-      sch:name [ ]
-      ", one and only one must have a @default of 'true'.\x{a}" ~
-      "          "
-    ]
-    "\x{a}" ~
-    "      "
-  ]
-  "\x{a}" ~
-  "   "
-]
 tei_att.declaring.attributes = tei_att.declaring.attribute.decls
 tei_att.declaring.attribute.decls =
   
@@ -528,6 +493,31 @@ tei_att.global.rendition.attribute.rendition =
       xsd:anyURI { pattern = "\S+" }+
     }
   }?
+tei_att.interpLike.attributes =
+  tei_att.interpLike.attribute.type,
+  tei_att.interpLike.attribute.subtype,
+  tei_att.interpLike.attribute.inst
+tei_att.interpLike.attribute.type =
+  
+  ## indicates what kind of phenomenon is being noted in the passage.
+  ## Sample values include: 1] image; 2] character; 3] theme; 4] allusion
+  attribute type {
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
+  }?
+tei_att.interpLike.attribute.subtype =
+  
+  ## (subtype) provides a sub-categorization of the phenomenon is being noted in the passage, if needed.
+  attribute subtype {
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
+  }?
+tei_att.interpLike.attribute.inst =
+  
+  ## (instances) points to instances of the analysis or interpretation represented by the current element.
+  attribute inst {
+    list {
+      xsd:anyURI { pattern = "\S+" }+
+    }
+  }?
 tei_att.notated.attributes = tei_att.notated.attribute.notation
 tei_att.notated.attribute.notation =
   
@@ -605,7 +595,7 @@ tei_att.pointing.attribute.targetLang =
        "")
   }?
 sch:pattern [
-  id = "pressmint-att.pointing-targetLang-targetLang-constraint-rule-6"
+  id = "pressmint-att.pointing-targetLang-targetLang-constraint-rule-5"
   "\x{a}" ~
   "      "
   sch:rule [
@@ -730,7 +720,7 @@ tei_att.spanning.attribute.spanTo =
   }?
 sch:pattern [
   id =
-    "pressmint-att.spanning-spanTo-spanTo-points-to-following-constraint-rule-7"
+    "pressmint-att.spanning-spanTo-spanTo-points-to-following-constraint-rule-6"
   "\x{a}" ~
   "      "
   sch:rule [
@@ -1051,12 +1041,12 @@ tei_model.lPart_sequence = empty
 tei_model.lPart_sequenceOptional = empty
 tei_model.lPart_sequenceOptionalRepeatable = empty
 tei_model.lPart_sequenceRepeatable = notAllowed
-tei_model.global.meta = notAllowed
-tei_model.global.meta_alternation = notAllowed
-tei_model.global.meta_sequence = empty
-tei_model.global.meta_sequenceOptional = empty
-tei_model.global.meta_sequenceOptionalRepeatable = empty
-tei_model.global.meta_sequenceRepeatable = notAllowed
+tei_model.global.meta = tei_span
+tei_model.global.meta_alternation = tei_span
+tei_model.global.meta_sequence = tei_span
+tei_model.global.meta_sequenceOptional = tei_span?
+tei_model.global.meta_sequenceOptionalRepeatable = tei_span*
+tei_model.global.meta_sequenceRepeatable = tei_span+
 tei_model.milestoneLike = tei_pb | tei_lb | tei_cb
 tei_model.milestoneLike_alternation = tei_pb | tei_lb | tei_cb
 tei_model.milestoneLike_sequence = tei_pb, tei_lb, tei_cb
@@ -1368,7 +1358,7 @@ tei_att.calendarSystem.attribute.calendar =
   }?
 sch:pattern [
   id =
-    "pressmint-att.calendarSystem-calendar-calendar_attr_on_empty_element-constraint-rule-8"
+    "pressmint-att.calendarSystem-calendar-calendar_attr_on_empty_element-constraint-rule-7"
   "\x{a}" ~
   "      "
   sch:rule [
@@ -1396,7 +1386,7 @@ tei_p =
     tei_macro.paraContent
     >> sch:pattern [
          id =
-           "pressmint-p-abstractModel-structure-p-in-ab-or-p-constraint-rule-9"
+           "pressmint-p-abstractModel-structure-p-in-ab-or-p-constraint-rule-8"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -1418,7 +1408,7 @@ tei_p =
        ]
     >> sch:pattern [
          id =
-           "pressmint-p-abstractModel-structure-p-in-l-constraint-rule-10"
+           "pressmint-p-abstractModel-structure-p-in-l-constraint-rule-9"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -1452,7 +1442,7 @@ tei_desc =
     tei_macro.limitedContent
     >> sch:pattern [
          id =
-           "pressmint-desc-deprecationInfo-only-in-deprecated-constraint-rule-11"
+           "pressmint-desc-deprecationInfo-only-in-deprecated-constraint-rule-10"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -1674,7 +1664,7 @@ tei_ref =
   element ref {
     tei_macro.paraContent
     >> sch:pattern [
-         id = "pressmint-ref-refAtts-constraint-rule-12"
+         id = "pressmint-ref-refAtts-constraint-rule-11"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -1933,23 +1923,15 @@ tei_bibl =
   
   ## (bibliographic citation) contains a loosely-structured bibliographic citation of which the sub-components may or may not be explicitly tagged. [3.12.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 16.3.2. Declarable Elements]
   element bibl {
-    ((text
-      | tei_model.gLike
-      | tei_model.highlighted
-      | tei_model.pPart.data
-      | tei_model.pPart.edit
-      | tei_model.segLike
-      | tei_model.ptrLike
-      | tei_model.biblPart
-      | tei_model.global)*)
-    >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:bibl" ]
-         "\x{a}" ~
-         "         "
-       ],
+    (text
+     | tei_model.gLike
+     | tei_model.highlighted
+     | tei_model.pPart.data
+     | tei_model.pPart.edit
+     | tei_model.segLike
+     | tei_model.ptrLike
+     | tei_model.biblPart
+     | tei_model.global)*,
     tei_att.global.attributes,
     tei_att.canonical.attributes,
     tei_att.cmc.attributes,
@@ -2070,7 +2052,7 @@ tei_div =
       (tei_model.divBottom, tei_model.global*)*)?)
     >> sch:pattern [
          id =
-           "pressmint-div-abstractModel-structure-div-in-l-constraint-rule-13"
+           "pressmint-div-abstractModel-structure-div-in-l-constraint-rule-12"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -2091,7 +2073,7 @@ tei_div =
        ]
     >> sch:pattern [
          id =
-           "pressmint-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-14"
+           "pressmint-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-13"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -2300,15 +2282,7 @@ tei_availability =
   
   ## (availability) supplies information about the availability of a text, for example any restrictions on its use or distribution, its copyright status, any licence applying to it, etc. [2.2.4. Publication, Distribution, Licensing, etc.]
   element availability {
-    ((tei_model.availabilityPart | tei_model.pLike)+)
-    >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:availability" ]
-         "\x{a}" ~
-         "         "
-       ],
+    (tei_model.availabilityPart | tei_model.pLike)+,
     tei_att.global.attributes,
     tei_att.declarable.attributes,
     
@@ -2343,15 +2317,7 @@ tei_sourceDesc =
     (tei_model.pLike+
      | (tei_model.biblLike
         | tei_model.sourceDescPart
-        | tei_model.listLike)+)
-    >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:sourceDesc" ]
-         "\x{a}" ~
-         "         "
-       ],
+        | tei_model.listLike)+),
     tei_att.global.attributes,
     tei_att.declarable.attributes,
     empty
@@ -2368,15 +2334,7 @@ tei_projectDesc =
   
   ## (project description) describes in detail the aim or purpose for which an electronic file was encoded, together with any other relevant information concerning the process by which it was assembled or collected. [2.3.1. The Project Description 2.3. The Encoding Description 16.3.2. Declarable Elements]
   element projectDesc {
-    (tei_model.pLike+)
-    >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:projectDesc" ]
-         "\x{a}" ~
-         "         "
-       ],
+    tei_model.pLike+,
     tei_att.global.attributes,
     tei_att.declarable.attributes,
     empty
@@ -2385,15 +2343,7 @@ tei_editorialDecl =
   
   ## (editorial practice declaration) provides details of editorial principles and practices applied during the encoding of a text. [2.3.3. The Editorial Practices Declaration 2.3. The Encoding Description 16.3.2. Declarable Elements]
   element editorialDecl {
-    ((tei_model.pLike | tei_model.editorialDeclPart)+)
-    >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:editorialDecl" ]
-         "\x{a}" ~
-         "         "
-       ],
+    (tei_model.pLike | tei_model.editorialDeclPart)+,
     tei_att.global.attributes,
     tei_att.declarable.attributes,
     empty
@@ -2402,15 +2352,7 @@ tei_correction =
   
   ## (correction principles) states how and under what circumstances corrections have been made in the text. [2.3.3. The Editorial Practices Declaration 16.3.2. Declarable Elements]
   element correction {
-    (tei_model.pLike+)
-    >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:correction" ]
-         "\x{a}" ~
-         "         "
-       ],
+    tei_model.pLike+,
     tei_att.global.attributes,
     tei_att.declarable.attributes,
     
@@ -2446,15 +2388,7 @@ tei_normalization =
   
   ## (normalization) indicates the extent of normalization or regularization of the original source carried out in converting it to electronic form. [2.3.3. The Editorial Practices Declaration 16.3.2. Declarable Elements]
   element normalization {
-    (tei_model.pLike+)
-    >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:normalization" ]
-         "\x{a}" ~
-         "         "
-       ],
+    tei_model.pLike+,
     tei_att.global.attributes,
     tei_att.declarable.attributes,
     
@@ -2476,15 +2410,7 @@ tei_quotation =
   element quotation {
     (tei_model.pLike*)
     >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:quotation" ]
-         "\x{a}" ~
-         "         "
-       ]
-    >> sch:pattern [
-         id = "pressmint-quotation-quotationContents-constraint-rule-15"
+         id = "pressmint-quotation-quotationContents-constraint-rule-14"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -2526,15 +2452,7 @@ tei_hyphenation =
   
   ## (hyphenation) summarizes the way in which hyphenation in a source text has been treated in an encoded version of it. [2.3.3. The Editorial Practices Declaration 16.3.2. Declarable Elements]
   element hyphenation {
-    (tei_model.pLike+)
-    >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:hyphenation" ]
-         "\x{a}" ~
-         "         "
-       ],
+    tei_model.pLike+,
     tei_att.global.attributes,
     tei_att.declarable.attributes,
     
@@ -2560,15 +2478,7 @@ tei_segmentation =
   
   ## (segmentation) describes the principles according to which the text has been segmented, for example into sentences, tone-units, graphemic strata, etc. [2.3.3. The Editorial Practices Declaration 16.3.2. Declarable Elements]
   element segmentation {
-    (tei_model.pLike+)
-    >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:segmentation" ]
-         "\x{a}" ~
-         "         "
-       ],
+    tei_model.pLike+,
     tei_att.global.attributes,
     tei_att.declarable.attributes,
     empty
@@ -2727,15 +2637,7 @@ tei_langUsage =
   
   ## (language usage) describes the languages, sublanguages, registers, dialects, etc. represented within a text. [2.4.2. Language Usage 2.4. The Profile Description 16.3.2. Declarable Elements]
   element langUsage {
-    (tei_model.pLike+ | tei_language+)
-    >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:langUsage" ]
-         "\x{a}" ~
-         "         "
-       ],
+    (tei_model.pLike+ | tei_language+),
     tei_att.global.attributes,
     tei_att.declarable.attributes,
     empty
@@ -2771,15 +2673,7 @@ tei_textClass =
   
   ## (text classification) groups information which describes the nature or topic of a text in terms of a standard classification scheme, thesaurus, etc. [2.4.3. The Text Classification]
   element textClass {
-    ((tei_catRef)*)
-    >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:textClass" ]
-         "\x{a}" ~
-         "         "
-       ],
+    (tei_catRef)*,
     tei_att.global.attributes,
     tei_att.declarable.attributes,
     empty
@@ -2835,15 +2729,7 @@ tei_settingDesc =
   
   ## (setting description) describes the setting or settings within which a language interaction takes place, or other places otherwise referred to in a text, edition, or metadata. [16.2. Contextual Information 2.4. The Profile Description]
   element settingDesc {
-    (tei_model.pLike+ | (tei_setting | tei_model.placeLike)+)
-    >> sch:pattern [
-         is-a = "declarable"
-         "\x{a}" ~
-         "            "
-         sch:param [ name = "tde" value = "tei:settingDesc" ]
-         "\x{a}" ~
-         "         "
-       ],
+    (tei_model.pLike+ | (tei_setting | tei_model.placeLike)+),
     tei_att.global.attributes,
     tei_att.declarable.attributes,
     empty
@@ -2957,7 +2843,7 @@ tei_facsimile =
      tei_back?)
     >> sch:pattern [
          id =
-           "pressmint-facsimile-no_facsimile_text_nodes-constraint-rule-16"
+           "pressmint-facsimile-no_facsimile_text_nodes-constraint-rule-15"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3232,7 +3118,7 @@ tei_s =
   element s {
     tei_macro.phraseSeq
     >> sch:pattern [
-         id = "pressmint-s-noNestedS-constraint-rule-17"
+         id = "pressmint-s-noNestedS-constraint-rule-16"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3307,6 +3193,121 @@ tei_pc =
     
     ## indicates whether this punctuation mark precedes or follows the unit it delimits.
     attribute pre { xsd:boolean }?,
+    empty
+  }
+tei_span =
+  
+  ## associates an interpretative annotation directly with a span of text. [18.3. Spans and Interpretations]
+  element span {
+    tei_macro.phraseSeq.limited
+    >> sch:pattern [
+         id = "pressmint-span-target-from-constraint-rule-17"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:span"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "@from and @target"
+             "\x{a}" ~
+             "          Only one of the attributes @target and @from may be supplied on "
+             sch:name [ ]
+             "\x{a}" ~
+             "               "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "pressmint-span-targetto-constraint-rule-18"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:span"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "@to and @target"
+             "\x{a}" ~
+             "          Only one of the attributes @target and @to may be supplied on "
+             sch:name [ ]
+             "\x{a}" ~
+             "               "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "pressmint-span-tonotfrom-constraint-rule-19"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:span"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "@to and not(@from)"
+             "\x{a}" ~
+             "          If @to is supplied on "
+             sch:name [ ]
+             ", @from must be supplied as well\x{a}" ~
+             "        "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "pressmint-span-tofrom-constraint-rule-20"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:span"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test =
+               "contains(normalize-space(@to),' ') or contains(normalize-space(@from),' ')"
+             "\x{a}" ~
+             "          The attributes @to and @from on "
+             sch:name [ ]
+             " may each contain only a single value\x{a}" ~
+             "        "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    tei_att.global.attributes,
+    tei_att.cmc.attributes,
+    tei_att.interpLike.attributes,
+    tei_att.pointing.attributes,
+    [
+      a:documentation [
+        "gives the identifier of the node which is the starting point of the span of text being annotated; if not accompanied by a "
+        ns1:code [ "@to" ]
+        " attribute, gives the identifier of the node of the entire span of text being annotated."
+      ]
+    ]
+    attribute from {
+      xsd:anyURI { pattern = "\S+" }
+    }?,
+    
+    ## gives the identifier of the node which is the end-point of the span of text being annotated.
+    attribute to {
+      xsd:anyURI { pattern = "\S+" }
+    }?,
     empty
   }
 tei_att.global.attributes =
@@ -3425,7 +3426,7 @@ tei_att.global.source.attribute.source =
   }?
 sch:pattern [
   id =
-    "pressmint-att.global.source-source-only_1_ODD_source-constraint-rule-18"
+    "pressmint-att.global.source-source-only_1_ODD_source-constraint-rule-21"
   "\x{a}" ~
   "      "
   sch:rule [
@@ -3602,7 +3603,7 @@ tei_att.measurement.attribute.quantity =
   }?
 sch:pattern [
   id =
-    "pressmint-att.measurement-att-measurement-unitRef-constraint-rule-19"
+    "pressmint-att.measurement-att-measurement-unitRef-constraint-rule-22"
   "\x{a}" ~
   "      "
   sch:rule [
@@ -3658,7 +3659,7 @@ tei_att.typed.attribute.subtype =
     xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 sch:pattern [
-  id = "pressmint-att.typed-subtypeTyped-constraint-rule-20"
+  id = "pressmint-att.typed-subtypeTyped-constraint-rule-23"
   "\x{a}" ~
   "      "
   sch:rule [
