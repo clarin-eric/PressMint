@@ -1,35 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-SI_1895-11-01-0034DAWA" xml:lang="sl">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-SI_1895-11-01-0034DAWA.ana" xml:lang="sl">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Korpus starejših slovenskih časopisov PressMint-SI, Kmetijske in rokodelske novice, 1.11.1895 [PressMint.ana]</title>
-            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI, "Kmetijske in rokodelske novice", 11/01/1895 [PressMint.ana]</title>
+            <title>Korpus starejših slovenskih časopisov PressMint-SI, Politični pregled, Kmetijske in rokodelske novice, 1.11.1895</title>
+            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI, "Politični pregled, Kmetijske in rokodelske novice", 11/01/1895</title>
          </titleStmt>
-         <editionStmt>
-            <edition>0.1</edition>
-         </editionStmt>
-         <extent>
-            <measure unit="pages" quantity="2" xml:lang="sl">2 strani</measure>
-            <measure unit="pages" quantity="2" xml:lang="en">2 pages</measure>
-            <measure unit="words" quantity="2066" xml:lang="sl">2,066 besed</measure>
-            <measure unit="words" quantity="2066" xml:lang="en">2,066 words</measure>
-            <measure unit="tokens" quantity="2407" xml:lang="sl">2,407 pojavnic</measure>
-            <measure unit="tokens" quantity="2407" xml:lang="en">2,407 tokens</measure>
-         </extent>
          <publicationStmt>
             <publisher>
                <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
                <orgName xml:lang="en">CLARIN research infrastructure</orgName>
                <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
             </publisher>
-            <idno type="URI" subtype="handle">http://handle.net/XXX</idno>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2025-10-26">26. oktober 2025</date>
+            <date when="2025-11-01"> 1. november 2025</date>
          </publicationStmt>
          <sourceDesc>
             <bibl>
@@ -44,43 +32,22 @@
             </bibl>
          </sourceDesc>
       </fileDesc>
-      <encodingDesc>
-         <tagsDecl>
-            <namespace name="http://www.tei-c.org/ns/1.0">
-               <tagUsage gi="graphic" occurs="2"/>
-               <tagUsage gi="name" occurs="113"/>
-               <tagUsage gi="p" occurs="21"/>
-               <tagUsage gi="pb" occurs="2"/>
-               <tagUsage gi="pc" occurs="341"/>
-               <tagUsage gi="s" occurs="140"/>
-               <tagUsage gi="surface" occurs="2"/>
-               <tagUsage gi="w" occurs="2066"/>
-            </namespace>
-         </tagsDecl>
-         <listPrefixDef>
-            <prefixDef ident="facs"
-                       matchPattern="(.+)"
-                       replacementPattern="https://nl.ijs.si/inz/speriodika/0034DAWA-$1.jpg">
-               <p xml:lang="en">The URIs with this prefix point to the facsimile images of this corpus component.</p>
-            </prefixDef>
-         </listPrefixDef>
-      </encodingDesc>
       <revisionDesc>
-         <change when="2025-10-26">
-            <name>Tomaž Erjavec</name>: Made sample.</change>
+         <change when="2025-11-01">
+            <name>Tomaž Erjavec</name>: Convert sPeriodika sample to PressMint format.</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <surface xml:id="PressMint-SI_1895-11-01-0034DAWA.page1">
-         <graphic url="facs:0"/>
+      <surface xml:id="PressMint-SI_1895-11-01-0034DAWA.ana.page1">
+         <graphic url="https://nl.ijs.si/inz/speriodika/0034DAWA-0.jpg"/>
       </surface>
-      <surface xml:id="PressMint-SI_1895-11-01-0034DAWA.page2">
-         <graphic url="facs:1"/>
+      <surface xml:id="PressMint-SI_1895-11-01-0034DAWA.ana.page2">
+         <graphic url="https://nl.ijs.si/inz/speriodika/0034DAWA-1.jpg"/>
       </surface>
    </facsimile>
    <text xml:lang="sl">
       <body>
-        <pb facs="#PressMint-SI_1895-11-01-0034DAWA.page1"/>
+        <pb facs="#PressMint-SI_1895-11-01-0034DAWA.ana.page1"/>
         <p>
 <s>
 <pc ana="mte:Z" msd="UPosTag=PUNCT" join="right">-</pc>
@@ -1181,7 +1148,7 @@
 </name>
 </s>
         </p>
-        <pb facs="#PressMint-SI_1895-11-01-0034DAWA.page2"/>
+        <pb facs="#PressMint-SI_1895-11-01-0034DAWA.ana.page2"/>
         <p>
 <s>
 <pc ana="mte:Z" msd="UPosTag=PUNCT">*</pc>
