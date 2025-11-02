@@ -1,35 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-SI_1866-02-28-ZZXGK0TY" xml:lang="sl">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-SI_1866-02-28-ZZXGK0TY.ana" xml:lang="sl">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Korpus starejših slovenskih časopisov PressMint-SI, Kmetijske in rokodelske novice, 28.02.1866 [PressMint.ana]</title>
-            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI, "Kmetijske in rokodelske novice", 2/28/1866 [PressMint.ana]</title>
+            <title>Korpus starejših slovenskih časopisov PressMint-SI, Gospodarske stvari, Kmetijske in rokodelske novice, 28.02.1866</title>
+            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI, "Gospodarske stvari, Kmetijske in rokodelske novice", 2/28/1866</title>
          </titleStmt>
-         <editionStmt>
-            <edition>0.1</edition>
-         </editionStmt>
-         <extent>
-            <measure unit="pages" quantity="1" xml:lang="sl">1 strani</measure>
-            <measure unit="pages" quantity="1" xml:lang="en">1 pages</measure>
-            <measure unit="words" quantity="720" xml:lang="sl">720 besed</measure>
-            <measure unit="words" quantity="720" xml:lang="en">720 words</measure>
-            <measure unit="tokens" quantity="933" xml:lang="sl">933 pojavnic</measure>
-            <measure unit="tokens" quantity="933" xml:lang="en">933 tokens</measure>
-         </extent>
          <publicationStmt>
             <publisher>
                <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
                <orgName xml:lang="en">CLARIN research infrastructure</orgName>
                <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
             </publisher>
-            <idno type="URI" subtype="handle">http://handle.net/XXX</idno>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2025-10-26">26. oktober 2025</date>
+            <date when="2025-11-01"> 1. november 2025</date>
          </publicationStmt>
          <sourceDesc>
             <bibl>
@@ -44,40 +32,19 @@
             </bibl>
          </sourceDesc>
       </fileDesc>
-      <encodingDesc>
-         <tagsDecl>
-            <namespace name="http://www.tei-c.org/ns/1.0">
-               <tagUsage gi="graphic" occurs="1"/>
-               <tagUsage gi="name" occurs="11"/>
-               <tagUsage gi="p" occurs="21"/>
-               <tagUsage gi="pb" occurs="1"/>
-               <tagUsage gi="pc" occurs="213"/>
-               <tagUsage gi="s" occurs="22"/>
-               <tagUsage gi="surface" occurs="1"/>
-               <tagUsage gi="w" occurs="720"/>
-            </namespace>
-         </tagsDecl>
-         <listPrefixDef>
-            <prefixDef ident="facs"
-                       matchPattern="(.+)"
-                       replacementPattern="https://nl.ijs.si/inz/speriodika/ZZXGK0TY-$1.jpg">
-               <p xml:lang="en">The URIs with this prefix point to the facsimile images of this corpus component.</p>
-            </prefixDef>
-         </listPrefixDef>
-      </encodingDesc>
       <revisionDesc>
-         <change when="2025-10-26">
-            <name>Tomaž Erjavec</name>: Made sample.</change>
+         <change when="2025-11-01">
+            <name>Tomaž Erjavec</name>: Convert sPeriodika sample to PressMint format.</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <surface xml:id="PressMint-SI_1866-02-28-ZZXGK0TY.page1">
-         <graphic url="facs:0"/>
+      <surface xml:id="PressMint-SI_1866-02-28-ZZXGK0TY.ana.page1">
+         <graphic url="https://nl.ijs.si/inz/speriodika/ZZXGK0TY-0.jpg"/>
       </surface>
    </facsimile>
    <text xml:lang="sl">
       <body>
-        <pb facs="#PressMint-SI_1866-02-28-ZZXGK0TY.page1"/>
+        <pb facs="#PressMint-SI_1866-02-28-ZZXGK0TY.ana.page1"/>
         <p>
 <s>
 <w ana="mte:Ncmsn" msd="UPosTag=NOUN|Case=Nom|Gender=Masc|Number=Sing" lemma="list">List</w>

@@ -3,7 +3,7 @@
 all:	ln_readmes
 
 SAMPLES=../../../Samples
-README_CORPORA=AT BG CZ ES GR IS LV NL PL SI
+README_CORPORA=AT BG CZ ES GR IS LV NL PL SI UA
 
 # Main readmes from Samples/, link to them in README.md
 ln_readmes:

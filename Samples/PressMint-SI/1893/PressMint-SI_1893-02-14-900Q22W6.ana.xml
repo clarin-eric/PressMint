@@ -1,35 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-SI_1893-02-14-900Q22W6" xml:lang="sl">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-SI_1893-02-14-900Q22W6.ana" xml:lang="sl">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Korpus starejših slovenskih časopisov PressMint-SI, Slovenec, 14.02.1893 [PressMint.ana]</title>
-            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI, "Slovenec", 2/14/1893 [PressMint.ana]</title>
+            <title>Korpus starejših slovenskih časopisov PressMint-SI, Slovenec, 14.02.1893</title>
+            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI, "Slovenec", 2/14/1893</title>
          </titleStmt>
-         <editionStmt>
-            <edition>0.1</edition>
-         </editionStmt>
-         <extent>
-            <measure unit="pages" quantity="4" xml:lang="sl">4 strani</measure>
-            <measure unit="pages" quantity="4" xml:lang="en">4 pages</measure>
-            <measure unit="words" quantity="7364" xml:lang="sl">7,364 besed</measure>
-            <measure unit="words" quantity="7364" xml:lang="en">7,364 words</measure>
-            <measure unit="tokens" quantity="9087" xml:lang="sl">9,087 pojavnic</measure>
-            <measure unit="tokens" quantity="9087" xml:lang="en">9,087 tokens</measure>
-         </extent>
          <publicationStmt>
             <publisher>
                <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
                <orgName xml:lang="en">CLARIN research infrastructure</orgName>
                <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
             </publisher>
-            <idno type="URI" subtype="handle">http://handle.net/XXX</idno>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
                <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
-            <date when="2025-10-26">26. oktober 2025</date>
+            <date when="2025-11-01"> 1. november 2025</date>
          </publicationStmt>
          <sourceDesc>
             <bibl>
@@ -43,49 +31,28 @@
             </bibl>
          </sourceDesc>
       </fileDesc>
-      <encodingDesc>
-         <tagsDecl>
-            <namespace name="http://www.tei-c.org/ns/1.0">
-               <tagUsage gi="graphic" occurs="4"/>
-               <tagUsage gi="name" occurs="343"/>
-               <tagUsage gi="p" occurs="179"/>
-               <tagUsage gi="pb" occurs="4"/>
-               <tagUsage gi="pc" occurs="1751"/>
-               <tagUsage gi="s" occurs="519"/>
-               <tagUsage gi="surface" occurs="4"/>
-               <tagUsage gi="w" occurs="7336"/>
-            </namespace>
-         </tagsDecl>
-         <listPrefixDef>
-            <prefixDef ident="facs"
-                       matchPattern="(.+)"
-                       replacementPattern="https://nl.ijs.si/inz/speriodika/900Q22W6-$1.jpg">
-               <p xml:lang="en">The URIs with this prefix point to the facsimile images of this corpus component.</p>
-            </prefixDef>
-         </listPrefixDef>
-      </encodingDesc>
       <revisionDesc>
-         <change when="2025-10-26">
-            <name>Tomaž Erjavec</name>: Made sample.</change>
+         <change when="2025-11-01">
+            <name>Tomaž Erjavec</name>: Convert sPeriodika sample to PressMint format.</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <surface xml:id="PressMint-SI_1893-02-14-900Q22W6.page1">
-         <graphic url="facs:0"/>
+      <surface xml:id="PressMint-SI_1893-02-14-900Q22W6.ana.page1">
+         <graphic url="https://nl.ijs.si/inz/speriodika/900Q22W6-0.jpg"/>
       </surface>
-      <surface xml:id="PressMint-SI_1893-02-14-900Q22W6.page2">
-         <graphic url="facs:1"/>
+      <surface xml:id="PressMint-SI_1893-02-14-900Q22W6.ana.page2">
+         <graphic url="https://nl.ijs.si/inz/speriodika/900Q22W6-1.jpg"/>
       </surface>
-      <surface xml:id="PressMint-SI_1893-02-14-900Q22W6.page3">
-         <graphic url="facs:2"/>
+      <surface xml:id="PressMint-SI_1893-02-14-900Q22W6.ana.page3">
+         <graphic url="https://nl.ijs.si/inz/speriodika/900Q22W6-2.jpg"/>
       </surface>
-      <surface xml:id="PressMint-SI_1893-02-14-900Q22W6.page4">
-         <graphic url="facs:3"/>
+      <surface xml:id="PressMint-SI_1893-02-14-900Q22W6.ana.page4">
+         <graphic url="https://nl.ijs.si/inz/speriodika/900Q22W6-3.jpg"/>
       </surface>
    </facsimile>
    <text xml:lang="sl">
       <body>
-        <pb facs="#PressMint-SI_1893-02-14-900Q22W6.page1"/>
+        <pb facs="#PressMint-SI_1893-02-14-900Q22W6.ana.page1"/>
         <p>
 <s>
 <w ana="mte:Agpmsnn" msd="UPosTag=ADJ|Case=Nom|Definite=Ind|Degree=Pos|Gender=Masc|Number=Sing" lemma="političen">Političen</w>
@@ -2375,7 +2342,7 @@
 <w ana="mte:Rgp" msd="UPosTag=ADV|Degree=Pos" lemma="često">često</w>
 </s>
         </p>
-        <pb facs="#PressMint-SI_1893-02-14-900Q22W6.page2"/>
+        <pb facs="#PressMint-SI_1893-02-14-900Q22W6.ana.page2"/>
         <p>
 <s>
 <w ana="mte:Cs" msd="UPosTag=SCONJ" lemma="kakor">Kakor</w>
@@ -5180,7 +5147,7 @@
 <pc ana="mte:Z" msd="UPosTag=PUNCT">.</pc>
 </s>
         </p>
-        <pb facs="#PressMint-SI_1893-02-14-900Q22W6.page3"/>
+        <pb facs="#PressMint-SI_1893-02-14-900Q22W6.ana.page3"/>
         <p>
 <s>
 <w ana="mte:Ncfpn" msd="UPosTag=NOUN|Case=Nom|Gender=Fem|Number=Plur" lemma="pravica" join="right">pravice</w>
@@ -8096,7 +8063,7 @@
 <pc ana="mte:Z" msd="UPosTag=PUNCT">.</pc>
 </s>
         </p>
-        <pb facs="#PressMint-SI_1893-02-14-900Q22W6.page4"/>
+        <pb facs="#PressMint-SI_1893-02-14-900Q22W6.ana.page4"/>
         <p>
 <s>
 <pc ana="mte:Z" msd="UPosTag=PUNCT" join="right">(</pc>

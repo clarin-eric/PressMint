@@ -48,7 +48,6 @@ $Compose = "$Bin/pressmint-composite-teiHeader.xsl";
 $Links   = "$Bin/check-links.xsl";
 $Chars   = "$Bin/check-chars.pl";
 $Valid   = "$Bin/validate-pressmint.xsl";
-$Valid_particDesc = "$Bin/validate-pressmint-particDesc.xsl";
 $Includes = "$Bin/get-includes.xsl";
 
 
@@ -96,7 +95,6 @@ sub validate {
     $interfix =~ s/^TEI//;
     print STDERR "INFO: Validating $type root $rootFile\n";
     &run($Chars, $rootFile, 1);
-    &run("$Jing $schemaDir/PressMint-teiCorpus$interfix.rng", $rootFile, 1);
     &run("$Saxon outDir=$tmpDir -xsl:$Compose", $rootFile, 1);
     &run("$Jing $schemaDir/PressMint.odd.rng", "$tmpDir/$fileName", 1);
     &run("$Saxon -xsl:$Valid", $rootFile, 1);
@@ -111,12 +109,10 @@ sub validate {
             if($file =~ m/PressMint-(?:[A-Z]{2}(?:-[A-Z0-9]{1,3})?(?:-[a-z]{2,3})?)?.?(taxonomy|listPerson|listOrg).*\.xml/){
                 $fileTasks .= &printMsg("INFO: Validating file included in teiHeader $file",$runNow);
                 $fileTasks .= &run($Chars, $file, $runNow);
-                $fileTasks .= &run("$Jing $schemaDir/PressMint-$1.rng", $file, $runNow);
                 $fileTasks .= &run("$Saxon meta=$rootFile -xsl:$Links", $file, $runNow);
             } else {
                 $fileTasks .= &printMsg("INFO: Validating component $type file $file",$runNow);
                 $fileTasks .= &run($Chars, $file, $runNow);
-                $fileTasks .= &run("$Jing $schemaDir/PressMint-TEI$interfix.rng", $file, $runNow);
                 $fileTasks .= &run("$Jing $schemaDir/PressMint.odd.rng", $file, $runNow);
                 $fileTasks .= &run("$Saxon -xsl:$Valid", $file, $runNow);
                 $fileTasks .= &run("$Saxon meta=$rootFile -xsl:$Links", $file, $runNow);

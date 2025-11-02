@@ -3,8 +3,8 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Korpus starejših slovenskih časopisov PressMint-SI [PressMint.ana SAMPLE]</title>
-            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI.ana [PressMint SAMPLE]</title>
+            <title>Korpus starejših slovenskih časopisov PressMint-SI</title>
+            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI</title>
             <respStmt>
               <persName ref="https://orcid.org/0000-0002-1560-4099">Tomaž Erjavec</persName>
               <resp>Kodiranje PressMint TEI XML</resp>
@@ -26,30 +26,18 @@
                <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
             </funder>
          </titleStmt>
-         <editionStmt>
-            <edition>0.1</edition>
-         </editionStmt>
-         <extent>
-           <measure unit="pages" quantity="9" xml:lang="sl">9 strani</measure>
-           <measure unit="pages" quantity="9" xml:lang="en">9 pages</measure>
-           <measure unit="words" quantity="22621" xml:lang="sl">22,621 besed</measure>
-           <measure unit="words" quantity="22621" xml:lang="en">22,621 words</measure>
-           <measure unit="tokens" quantity="31004" xml:lang="sl">31,004 pojavnic</measure>
-           <measure unit="tokens" quantity="31004" xml:lang="en">31,004 tokens</measure>
-         </extent>
          <publicationStmt>
            <publisher>
              <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
              <orgName xml:lang="en">CLARIN research infrastructure</orgName>
              <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
            </publisher>
-           <idno type="URI" subtype="handle">http://handle.net/XXX</idno>
            <availability status="free">
              <licence>http://creativecommons.org/licenses/by/4.0/</licence>
              <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
              <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
            </availability>
-           <date when="2025-10-01">1. oktober 2025</date>
+           <date when="2025-10-29">29. oktober 2025</date>
          </publicationStmt>
          <sourceDesc>
            <bibl>
@@ -83,6 +71,13 @@
            corpus analysis tools.</p>
          </projectDesc>
          <editorialDecl>
+           <quotation>
+             <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+           </quotation>
+           <hyphenation>
+             <p xml:lang="en">A processing step for the sPeriodika corpus attempted to join end-of-line hyphenated words,
+             although it was not sucessfull in all cases. Previously hyphenated words are not marked-up as such.</p>
+           </hyphenation>
            <correction>
              <p xml:lang="en">In the source sPeriodika corpus the OCR-ed texts were corrected
              with <ref target="https://github.com/clarinsi/csmtiser">cSMTiser</ref>,
@@ -92,28 +87,21 @@
            <normalization>
              <p xml:lang="en">Text has not been normalised, except for spacing.</p>
            </normalization>
-           <hyphenation>
-             <p xml:lang="en">No end-of-line hyphens were present in the source.</p>
-           </hyphenation>
-           <quotation>
-             <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
-           </quotation>
            <segmentation>
-             <p xml:lang="en">The texts are segmented into utterances (speeches) and segments (corresponding to paragraphs in the source transcription).</p>
+             <p xml:lang="en">The texts are split by page breaks, and then segmented into paragraphs.
+             In this linguistically analysed version, the paragraphs are segmented into sentences, and these into
+             words and punctuation symbols. Named entities are also marked up.</p>
            </segmentation>
          </editorialDecl>
-         <tagsDecl>
-            <namespace name="http://www.tei-c.org/ns/1.0">
-               <tagUsage gi="graphic" occurs="9"/>
-               <tagUsage gi="pb" occurs="9"/>
-               <tagUsage gi="surface" occurs="9"/>
-            </namespace>
-         </tagsDecl>
          <classDecl>
             <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-OCR.xml"/>
-            <!--xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-topic.xml"/-->
             <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-NER.ana.xml"/>
          </classDecl>
+         <listPrefixDef>
+            <prefixDef ident="mte" matchPattern="(.+)" replacementPattern="https://nl.ijs.si/ME/V6/msd/tables/msd-fslib-sl.xml#$1">
+               <p xml:lang="en">Private URIs with this prefix point to feature-structure elements defining the Slovenian MULTEXT-East Version 6 MSDs.</p>
+            </prefixDef>
+         </listPrefixDef>
          <appInfo>
            <application version="2.0" ident="classla-stanza">
              <label>CLASSLA-Stanza</label>
@@ -135,10 +123,11 @@
         </langUsage>
       </profileDesc>
       <revisionDesc>
-        <change when="2025-10-01">
-        <name>Tomaž Erjavec</name>: Made sample.</change>
+        <change when="2025-11-02">
+        <name>Tomaž Erjavec</name>: Conversion for sPeriodika.</change>
       </revisionDesc>
    </teiHeader>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1877/PressMint-SI_1877-08-15-000TTDCE.ana.xml"/>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-SI_1910-03-25-ZZZZWFIX.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1866/PressMint-SI_1866-02-28-ZZXGK0TY.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1893/PressMint-SI_1893-02-14-900Q22W6.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1895/PressMint-SI_1895-11-01-0034DAWA.ana.xml"/>
 </teiCorpus>

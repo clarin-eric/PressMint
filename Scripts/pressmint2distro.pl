@@ -595,20 +595,15 @@ sub cp_readme {
     close OUT;
 }
 
-#Read in the appropriate $inFile README, change XX in it to country code, and output it $outFile
+#Copy TEI schema in $schemaDir to $outDir
 sub cp_schema {
     my $schemaDir = shift;
     my $outDir = shift;
-    # Do not preserve symlinks when copying (for links in Schema/)
-    $File::Copy::Recursive::CopyLink = 0;
     die "FATAL ERROR: Can't find schema directory\n"
         unless $schemaDir and -e $schemaDir;
-    dircopy($schemaDir, "$outDir/Schema");
-    # Remove unwanted files
-    `rm -fr $outDir/Schema/.git*`;
-    `rm -f $outDir/Schema/nohup.*`;
-    `rm -f $outDir/Schema/*.log`;
-    `rm -f $outDir/Schema/Makefile`;
+    foreach my $inFile (glob "$schemaDir/PressMint.odd.*") {
+        copy($inFile, "$outDir/Schema");
+    }
 }
 
 sub logger {

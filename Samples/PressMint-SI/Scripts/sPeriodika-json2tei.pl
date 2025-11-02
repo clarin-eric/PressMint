@@ -17,12 +17,8 @@ setlocale(LC_TIME, "sl_SI.UTF-8");
 $perplexity_treshold = -84.00;
 
 #Prerequisite for validation:
-#In PressMint:
-$jing = 'java -jar ../../Scripts/bin/jing.jar';
-$schema = '../../TEI/PressMint.odd.rng';
-#In sPeriodika:
-$jing = 'java -jar /project/corpora/Parla/PressMint/PressMint/Scripts/bin/jing.jar';
-$schema = '/project/corpora/Parla/PressMint/PressMint/TEI/PressMint.odd.rng';
+$jing = 'java -jar Scripts/bin/jing.jar';
+$schema = '../../../PressMint/TEI/PressMint.odd.rng';
 
 # Mode parameter should be either "text" or "ana"
 my $mode = shift;
@@ -30,10 +26,6 @@ my $inFiles = shift;
 my $outDir = shift;
 
 binmode STDERR, 'utf8';
-
-# Probably not needed but inserted anyway:
-$edition = '0.1';
-$handle = 'http://handle.net/XXX';
 
 $xpos_prefix = 'mte';    # We assume XPOS is MULTEXT-East MSD
 
@@ -77,8 +69,8 @@ while (<DATA>) {$TEI_template .= $_}
 
 $i = 0;
 
-if ($mode eq 'text') {$stamp = 'PressMint'}
-else  {$stamp = 'PressMint.ana'}
+#if ($mode eq 'text') {$stamp = 'PressMint'}
+#else  {$stamp = 'PressMint.ana'}
 
 mkdir $outDir unless -d $outDir;
 
@@ -90,14 +82,6 @@ foreach $inFile (glob $inFiles) {
     my ($date, $fname, $TEI) = &processFile;
     close IN;
     
-    #A basic sanity check on date:
-    unless (($y, $m, $d) = $date =~ /^(\d\d\d\d)-(\d\d)-(\d\d)$/ and
-            $y >= 1771 and $y <= 1914 and
-            $m >= 1 and $m <= 12 and
-            $d >= 1 and $d <= 31) {
-        print STDERR "ERROR: Bad date $date for $inFile, skipping\n";
-        next
-    }
     #Make year directory for file and name file:
     (my $year) = $date =~ /(\d\d\d\d)/;
     $outYearDir = "$outDir/$year";
@@ -115,8 +99,10 @@ foreach $inFile (glob $inFiles) {
 
     #Validate:
     $error = `$jing $schema $outFile`;
-    print STDERR "ERROR: Mistakes in file $outFile:\n$error\n"
-        if $error
+    if ($error) {
+        print STDERR "ERROR: Mistakes in file $outFile, deleting it:\n$error\n";
+        `rm $outFile`
+    }
 }
 
 sub processFile {
@@ -131,7 +117,6 @@ sub processFile {
         $pubdate   = ${$record}{'date'};
         $volume    = ${$record}{'volume_number'};
         $issue     = ${$record}{'issue_number'};
-        $pages     = ${$record}{'number_of_pages'};
         $publisher = ${$record}{'publisher'};
         $urn       = ${$record}{'URN'};
         $dlib_url  = ${$record}{'dlib_url'};
@@ -143,11 +128,8 @@ sub processFile {
         # Compute some more variables:
         $fname =~ s/.+-(.+)/$1/;
         $id = "PressMint-SI_$pubdate-$fname";
+        $id .= '.ana' unless $mode eq 'text';
 
-        # Now substitute various pieces of the TEI file:
-        $facs = &prepFacs;
-        ($words, $tokens) = &count_wt;
-        
         $pubdate_sl = $pubdate;
         $pubdate_sl =~ s/(\d+)-(\d+)-(\d+)/$3.$2.$1/;
         $pubdate_sl =~ s/^0//; $pubdate_sl =~ s/ 0/ /g;
@@ -155,50 +137,15 @@ sub processFile {
         $pubdate_en =~ s|(\d+)-(\d+)-(\d+)|$2/$3/$1|;
         $pubdate_en =~ s/^0//; $pubdate_en =~ s/ 0/ /g;
         
-        $THOUSANDS_SEP   = '.';
-        $pages_sl = format_number($pages);
-        $words_sl = format_number($words);
-        $tokens_sl = format_number($tokens);
-        $THOUSANDS_SEP   = ',';
-        $pages_en = format_number($pages);
-        $words_en = format_number($words);
-        $tokens_en = format_number($tokens);
-        
-        # Get image url from first page, for prefixDef
-        $image_url = ${@{${$record}{'pages'}}[0]}{'image_url'};
-        # Sic!
-        # JSON "image_url": "https://nl.ijs.si/inz/periodika/0/000TTDCE/000TTDCE-0.jpg"
-        # Actual URL:        https://nl.ijs.si/inz/speriodika/000TTDCE-0.jpg
-        $image_url =~ s|https://nl.ijs.si/inz/periodika/[^/]+/[^/]+/|https://nl.ijs.si/inz/speriodika/|;
-
-        ($page_prefix) = $image_url =~ /(.+)-\d+\.jpg/;
-        
+        # Now substitute various pieces of the TEI file:
+        $facs = &prepFacs;
         if ($mode eq 'text') {$text = &prepText}
         else {$text = &prepAna}
-        
-        $tagUsage = &tagUsage($facs . $text);
-        
         $TEI = &prepTEI($TEI_template);
     }
     return ($pubdate, $fname, $TEI)
 }
     
-# Count words and tokens from CoNLL-U
-sub count_wt {
-    my $w;
-    my $t;
-    foreach $page (@{${$record}{'pages'}}) {
-        my $page = ${$page}{'text_csmtised_splitfixed_CONLLU'};
-        foreach my $line (split(/\n/, $page)) {
-            if ($line =~ /\t/) {
-                $t++;
-                $w++ if $line !~ /\tPUNCT\t/
-            }
-        }
-    }
-    return ($w, $t)
-}   
-
 sub facs_url2id {
     my $fname = shift;
     $image_url = shift;
@@ -210,9 +157,12 @@ sub prepFacs {
     my $facs;
     foreach $page (@{${$record}{'pages'}}) {
         my $url = ${$page}{'image_url'};
-        (my $suffix) = $url =~ /-(\d+)\./;
+        # Sic!
+        # JSON "image_url": "https://nl.ijs.si/inz/periodika/0/000TTDCE/000TTDCE-0.jpg"
+        # Actual URL:        https://nl.ijs.si/inz/speriodika/000TTDCE-0.jpg
+        $url =~ s|https://nl.ijs.si/inz/periodika/[^/]+/[^/]+/|https://nl.ijs.si/inz/speriodika/|;
         $facs .= "      <surface xml:id=\"". &facs_url2id($id, $url) . "\">\n";
-        $facs .= "         <graphic url=\"facs:" . $suffix . "\"/>\n";
+        $facs .= "         <graphic url=\"$url\"/>\n";
         $facs .= "      </surface>\n";
     }
     $facs =~ s/\n$//;
@@ -221,27 +171,27 @@ sub prepFacs {
 
 sub prepText {
     my $text;
-    my $pbN = 0;
     foreach $page (@{${$record}{'pages'}}) {
-        $pbN++;
-        $pbID = "$id.pb$pbN";
         my $facs_id = &facs_url2id($id, ${$page}{'image_url'});
-        my $quality = &quality(${$page}{'text_csmtised_kenlm_perplexity'}{'mean'});
-        $text .= "        <pb xml:id=\"$pbID\" facs=\"#$facs_id\"/>\n";
+        my $perplexity = ${$page}{'text_csmtised_kenlm_perplexity'}{'mean'};
+        my $quality_class = &quality($perplexity);
+        $text .= "        <pb facs=\"#$facs_id\"/>\n";
+        #$text .= "        <span type=\"quality\">\n";
+        #$text .= "          <measure type=\"kenlm_perplexity\" quantity=\"$perplexity\"/>\n";
+        #$text .= "        </span>\n";
         my $page = ${$page}{'text_csmtised_splitfixed'};
         $pN = 0;
         foreach my $line (split(/\n\n+/, $page)) {
             $pN++;
-            $pID = "$pbID.p$pN";
             $line =~ s/^\n//;
             $line =~ s/\n$//;
             if ($line) {
-                $text .= "        <p xml:id=\"$pID\" ana=\"#$quality\">";
-                $str = &fix_chars($line);
+                $text .= "        "; # Indent
+                $text .= "<p ana=\"#$quality_class\">";
+                $str   = &fix_chars($line);
                 $text .= &xml_encode($str);
                 $text .= "</p>\n";
             }
-            else {print STDERR "WARN: Empty paragraph for $pID\n"}
         }
     }
     $text =~ s/\n$//;
@@ -399,11 +349,7 @@ sub fix_name {
         # Decap title, e.g. "BASEN O SRAKI"
         if ($title =~ /^[[:upper:] ]+$/) {$title = ucfirst($title)}
         
-        # Fix XML entities, e.g. "Društvo ,,Straža&quot;"
-        $title =~ s/&amp;/&/g;
-        $title =~ s/&quot;/"/g;
-        
-        return ($title, $periodical, $pubPlace)
+        return (&xml_encode($title), &xml_encode($periodical), &xml_encode($pubPlace))
     }
 }
 
@@ -437,29 +383,12 @@ sub xml_encode {
     return $str
 }
 
-sub tagUsage {
-    my $tei = shift;
-    my %tags;
-    my $tagusage;
-    foreach my $item (split(/>/, $tei)) {
-        my ($tag) = $item =~ m|<([^/ ]+)|;
-        $tags{$tag}++ if $tag
-    }
-    foreach my $tag (sort keys %tags) {
-        $tagusage .= "               <tagUsage gi=\"" . $tag . "\" occurs=\"$tags{$tag}\"/>\n";
-    }
-    $tagusage =~ s/\n$//;
-    return $tagusage;
-}
-
 #Prepare the TEI, esp. the teiHeader
 sub prepTEI {
     my $TEI = shift;
-    $TEI =~ s|==STAMP==|$stamp|g;
+    #$TEI =~ s|==STAMP==|$stamp|g;
     $TEI =~ s|==TODAY==|$today|g;
     $TEI =~ s|==TODAY-SL==|$today_sl|g;
-    $TEI =~ s|==EDITION==|$edition|g;
-    $TEI =~ s|==HANDLE==|$handle|g;
     $TEI =~ s|==ID==|$id|g;
     $TEI =~ s|==DLIB-URL==|$dlib_url|g;
     $TEI =~ s|==URN==|$urn|g;
@@ -467,20 +396,13 @@ sub prepTEI {
     $TEI =~ s|==PUBDATE==|$pubdate|g;
     $TEI =~ s|==PUBDATE-SL==|$pubdate_sl|g;
     $TEI =~ s|==PUBDATE-EN==|$pubdate_en|g;
-    $TEI =~ s|==PAGE-PREFIX==|$page_prefix|g;
 
-    $TEI =~ s|==PAGES==|$pages|g;
-    $TEI =~ s|==PAGES-SL==|$pages_sl|g;
-    $TEI =~ s|==PAGES-EN==|$pages_en|g;
-    $TEI =~ s|==WORDS==|$words|g;
-    $TEI =~ s|==WORDS-SL==|$words_sl|g;
-    $TEI =~ s|==WORDS-EN==|$words_en|g;
-    $TEI =~ s|==TOKENS==|$tokens|g;
-    $TEI =~ s|==TOKENS-SL==|$tokens_sl|g;
-    $TEI =~ s|==TOKENS-EN==|$tokens_en|g;
 
     if ($title and $title ne '-') {$TEI =~ s|==TITLE==|$title|g}
-    else {$TEI =~ s|\n.*==TITLE==.*||g}
+    else {
+        $TEI =~ s|==TITLE==, ||g;      #In main title
+        $TEI =~ s|\n.*==TITLE==.*||g  #In sourceDesc
+    }
     if ($volume and $volume ne '-') {$TEI =~ s|==VOLUME==|$volume|g}
     else {$TEI =~ s|\n.*==VOLUME==.*||g}
     if ($issue and $issue ne '-') {$TEI =~ s|==ISSUE==|$issue|g}
@@ -491,7 +413,6 @@ sub prepTEI {
     else {$TEI =~ s|\n.*==PLACE==.*||g}
     
     $TEI =~ s|==FACS==|$facs|;
-    $TEI =~ s|==TAGUSAGE==|$tagUsage|;
     
     print STDERR "ERROR: unconsumed variables in:\n$TEI"
         if $TEI =~ m|==[A-Z-]+==|;
@@ -507,27 +428,15 @@ __DATA__
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Korpus starejših slovenskih časopisov PressMint-SI, ==NEWSPAPER==, ==PUBDATE-SL== [==STAMP==]</title>
-            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI, "==NEWSPAPER==", ==PUBDATE-EN== [==STAMP==]</title>
+            <title>Korpus starejših slovenskih časopisov PressMint-SI, ==TITLE==, ==NEWSPAPER==, ==PUBDATE-SL==</title>
+            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI, "==TITLE==, ==NEWSPAPER==", ==PUBDATE-EN==</title>
          </titleStmt>
-         <editionStmt>
-            <edition>==EDITION==</edition>
-         </editionStmt>
-         <extent>
-            <measure unit="pages" quantity="==PAGES==" xml:lang="sl">==PAGES-SL== strani</measure>
-            <measure unit="pages" quantity="==PAGES==" xml:lang="en">==PAGES-EN== pages</measure>
-            <measure unit="words" quantity="==WORDS==" xml:lang="sl">==WORDS-SL== besed</measure>
-            <measure unit="words" quantity="==WORDS==" xml:lang="en">==WORDS-EN== words</measure>
-            <measure unit="tokens" quantity="==TOKENS==" xml:lang="sl">==TOKENS-SL== pojavnic</measure>
-            <measure unit="tokens" quantity="==TOKENS==" xml:lang="en">==TOKENS-EN== tokens</measure>
-         </extent>
          <publicationStmt>
             <publisher>
                <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
                <orgName xml:lang="en">CLARIN research infrastructure</orgName>
                <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
             </publisher>
-            <idno type="URI" subtype="handle">==HANDLE==</idno>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
                <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
@@ -549,23 +458,9 @@ __DATA__
             </bibl>
          </sourceDesc>
       </fileDesc>
-      <encodingDesc>
-         <tagsDecl>
-            <namespace name="http://www.tei-c.org/ns/1.0">
-==TAGUSAGE==
-            </namespace>
-         </tagsDecl>
-         <listPrefixDef>
-            <prefixDef ident="facs"
-                       matchPattern="(.+)"
-                       replacementPattern="==PAGE-PREFIX==-$1.jpg">
-               <p xml:lang="en">The URIs with this prefix point to the facsimile images of this corpus component.</p>
-            </prefixDef>
-         </listPrefixDef>
-      </encodingDesc>
       <revisionDesc>
          <change when="==TODAY==">
-            <name>Tomaž Erjavec</name>: Made sample.</change>
+            <name>Tomaž Erjavec</name>: Convert sPeriodika sample to PressMint format.</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
