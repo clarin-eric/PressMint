@@ -58,23 +58,27 @@ master-roots:
 	$s base=${HERE}/Distro type=TEI.ana -xsl:../Scripts/pressmint2root.xsl \
 	../Scripts/PressMint-rootTemplate.xml > ${HERE}/Distro/PressMint.ana.xml
 
-###### Various tests
-test-vert5:
-	$s meta=../Build/Distro/PressMint-SI.TEI.ana/PressMint-SI.ana.xml -xsl:../Scripts/pressmint2xmlvert.xsl \
-	../Build/Distro/PressMint-SI.TEI.ana/2020/PressMint-SI_2020-03-13-SDZ8-Izredna-31.ana.xml  > Test/test-SI.vert
-test-vert4:
-	$s meta=${HERE}/Distro/PressMint-SI.TEI.ana/PressMint-SI.ana.xml -xsl:../Scripts/pressmint2xmlvert.xsl \
-	${HERE}/Distro/PressMint-SI.TEI.ana/2022/PressMint-SI_2022-01-13-SDZ8-Izredna-93.ana.xml > test-SI.vert
-test-vert3:
-	${FINALIZE} -vert -codes SI -in ${HERE}/Distro -out ${HERE}/Distro
-test-conll5:
-	../Scripts/pressmintp2conllu.pl -jobs 1 -in ../Build/Sources-TEI/PressMint-${CORPUS}.TEI.ana -out ../Build/Test
-test-conll4:
-	$s meta=../Build/Distro/PressMint-SI.TEI.ana/PressMint-SI.ana.xml \
-	-xsl:../Scripts/pressmint2conllu.xsl ../Build/Distro/PressMint-SI.TEI.ana/2000/PressMint-SI_2000-10-27-SDZ3-Redna-01.ana.xml \
-	> Test/test-SI.conllu
-test-conll1:
+###### Various tests over 1 corpus
+make-1-vert:
+	${FINALIZE} -vert -codes ${CORPUS} -in ${HERE}/Distro -out ${HERE}/Distro
+make-1-conll1:
 	${FINALIZE} -conll -codes ${CORPUS} -in ${HERE}/Distro -out ${HERE}/Distro
+make-1-tei:
+	${FINALIZE} -ana -codes ${CORPUS} -in ${HERE}/Sources-TEI -out ${HERE}/Distro
+	${FINALIZE} -tei -codes ${CORPUS} -in ${HERE}/Sources-TEI -out ${HERE}/Distro
+make-1-valid:
+	${FINALIZE} -valid -codes ${CORPUS} -in ${HERE}/Distro -out ${HERE}/Distro
+
+
+test-vert:
+	$s meta=../Build/Distro/PressMint-SI.TEI.ana/PressMint-SI.ana.xml \
+	-xsl:../Scripts/pressmint2xmlvert.xsl  ../Build/Test/test.ana.xml > Test/test.vert
+test-conll:
+	../Scripts/pressmintp2conllu.pl -jobs 1 -in ../Build/Sources-TEI/PressMint-${CORPUS}.TEI.ana -out ../Build/Test
+test-conll-1:
+	$s meta=../Build/Distro/PressMint-SI.TEI.ana/PressMint.ana.xml \
+	-xsl:../Scripts/pressmint2conllu.xsl ../Build/Test/test.ana.xml > Test/test-SI.conllu
+
 test-meta6:
 	$s out-lang=en meta=../Build/Sources-TEI/PressMint-SI.TEI.ana/PressMint-SI.ana.xml -xsl:../Scripts/pressmint2meta.ana.xsl \
 	../Build/Sources-TEI/PressMint-SI.TEI.ana/2020/PressMint-SI_2020-01-07-O1114.ana.xml > Test/test.ana-meta-en.tsv
@@ -97,14 +101,9 @@ test-text1:
 test-text2:
 	../Scripts/pressmintp-tei2text.pl -jobs 2 \
 	-in ../Build/Distro/PressMint-${CORPUS} -out ../Build/Distro/PressMint-${CORPUS}
-test-valid:
-	${FINALIZE} -valid -codes ${CORPUS} -in ${HERE}/Distro -out ${HERE}/Distro
+
 test-tei3:
 	${FINALIZE} -valid -codes ${CORPUS} -in ${HERE}/Distro -out ${HERE}/Distro
-test-tei2:
-	${FINALIZE} -tei -codes ${CORPUS} -in ${HERE}/Sources-TEI -out ${HERE}/Distro
-test-tei1:
-	${FINALIZE} -ana -codes ${CORPUS} -in ${HERE}/Sources-TEI -out ${HERE}/Distro
 test-release:
 	$s anaDir=../Build/Distro/PressMint-${CORPUS}.TEI.ana outDir=Test -xsl:../Scripts/pressmint2release.xsl \
 	../Build/Sources-TEI/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml

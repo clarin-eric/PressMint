@@ -29,7 +29,7 @@
   </xsl:template>
 
   <xsl:template match="tei:teiHeader//xi:include">
-     <xsl:message select="concat('including: ',@href)"/>
+     <xsl:message select="concat('INFO: Including: ',@href)"/>
      <xsl:copy-of select="document(@href)"/>
   </xsl:template>
 

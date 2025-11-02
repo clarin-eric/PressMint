@@ -174,8 +174,9 @@
           <!-- For .ana files, compute number of words -->
           <xsl:when test="$type = 'ana'">
             <xsl:choose>
-              <xsl:when test="doc-available(tei:url-header)">
-                <xsl:message select="concat('INFO: Using words from header file ', replace(tei:url-header,'.*/',''))"/>
+              <xsl:when test="doc-available(tei:url-header) and
+                              document(tei:url-header)//tei:extent/tei:measure[@unit='words']">
+                <xsl:message select="concat('INFO: Using words from component header file ', replace(tei:url-header,'.*/',''))"/>
                 <xsl:value-of select="document(tei:url-header)//tei:extent/tei:measure[@unit='words'][1]/@quantity"/>
               </xsl:when>
               <xsl:otherwise>
@@ -185,7 +186,7 @@
             </xsl:choose>
           </xsl:when>
           <!-- For plain files, take number of words from .ana.header files -->
-          <xsl:when test="doc-available(tei:url-ana-header)">
+          <xsl:when test="doc-available(tei:url-ana-header) and document(tei:url-ana-header)//tei:extent/tei:measure[@unit='words']">
             <xsl:message select="concat('INFO: Using words from ana-header file ', replace(tei:url-ana-header,'.*/',''))"/>
             <xsl:value-of select="document(tei:url-ana-header)//tei:extent/tei:measure[@unit='words'][1]/@quantity"/>
           </xsl:when>
@@ -215,7 +216,8 @@
             <xsl:value-of select="document(tei:url-header)//tei:extent/tei:measure[@unit='paragraphs'][1]/@quantity"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="document(tei:url-orig)/count(//tei:p)"/>
+            <!-- We don't count paragraphs in teiHeader! -->
+            <xsl:value-of select="document(tei:url-orig)/count(//tei:text/tei:p)"/>
           </xsl:otherwise>
         </xsl:choose>
       </item>
@@ -277,6 +279,7 @@
         <xsl:when test="@type = 'component'">
           <xsl:variable name="componentContent">
             <xsl:apply-templates mode="comp" select="document(tei:url-orig)/tei:TEI">
+              <xsl:with-param name="texts">1</xsl:with-param>
               <xsl:with-param name="paragraphs" select="$paragraphs/tei:item[@n = $this]"/>
               <xsl:with-param name="words" select="$words/tei:item[@n = $this]"/>
               <xsl:with-param name="tagUsages" select="$tagUsages/tei:item[@n = $this]"/>
@@ -309,12 +312,14 @@
   <!-- PROCESSING COMPONENTS -->
   
   <xsl:template mode="comp" match="tei:*">
+    <xsl:param name="texts"/>
     <xsl:param name="paragraphs"/>
     <xsl:param name="words"/>
     <xsl:param name="tagUsages"/>
     <xsl:copy>
       <xsl:apply-templates mode="comp" select="@*"/>
       <xsl:apply-templates mode="comp">
+        <xsl:with-param name="texts" select="$texts"/>
         <xsl:with-param name="paragraphs" select="$paragraphs"/>
         <xsl:with-param name="words" select="$words"/>
         <xsl:with-param name="tagUsages" select="$tagUsages"/>
@@ -344,9 +349,6 @@
   <xsl:template mode="comp" match="tei:publicationStmt">
     <xsl:apply-templates mode="root" select="."/>
   </xsl:template>
-  <xsl:template mode="comp" match="tei:editionStmt">
-    <xsl:apply-templates mode="root" select="."/>
-  </xsl:template>
   <xsl:template mode="comp" match="tei:idno">
     <xsl:apply-templates mode="root" select="."/>
   </xsl:template>
@@ -354,6 +356,85 @@
     <xsl:apply-templates mode="root" select="."/>
   </xsl:template>
   
+  <xsl:template mode="comp" match="tei:titleStmt">
+    <xsl:param name="paragraphs"/>
+    <xsl:param name="words"/>
+    <xsl:copy>
+      <xsl:apply-templates mode="comp" select="@*"/>
+      <xsl:apply-templates mode="comp"/>
+    </xsl:copy>
+    <xsl:if test="not(following-sibling::tei:editionStmt)">
+      <xsl:message select="concat('WARN ', /tei:*/@xml:id,
+                           ': no component editionStmt, inserting with edition ', $version)"/>
+      <editionStmt>
+        <edition>
+          <xsl:value-of select="$version"/>
+        </edition>
+      </editionStmt>
+    </xsl:if>
+    <xsl:if test="not(following-sibling::tei:extent)">
+      <xsl:message select="concat('WARN ', /tei:*/@xml:id, 
+                           ': no component extent, adding extent measures in English only!')"/>
+      <extent>
+        <measure unit="paragraphs" quantity="{$paragraphs}" xml:lang="en">
+          <xsl:value-of select="et:format-number('en', $paragraphs)"/>
+          <xsl:text> paragraphs</xsl:text>
+        </measure>
+        <measure unit="words" quantity="{$words}" xml:lang="en">
+          <xsl:value-of select="et:format-number('en', $words)"/>
+          <xsl:text> words</xsl:text>
+        </measure>
+      </extent>
+    </xsl:if>
+  </xsl:template>
+  
+  <xsl:template mode="comp" match="tei:editionStmt">
+    <xsl:param name="paragraphs"/>
+    <xsl:param name="words"/>
+    <xsl:copy>
+      <xsl:apply-templates mode="comp" select="@*"/>
+      <xsl:if test="$version != tei:edition">
+        <xsl:message select="concat('INFO ', /tei:*/@xml:id,
+                             ': replacing version ', tei:edition, ' with ', $version)"/>
+      </xsl:if>
+      <edition>
+        <xsl:value-of select="$version"/>
+      </edition>
+    </xsl:copy>
+    <xsl:if test="not(following-sibling::tei:extent)">
+      <xsl:message select="concat('WARN ', /tei:*/@xml:id, 
+                           ': no component extent, adding extent measures in English only!')"/>
+      <extent>
+        <measure unit="paragraphs" quantity="{$paragraphs}" xml:lang="en">
+          <xsl:value-of select="et:format-number('en', $paragraphs)"/>
+          <xsl:text> paragraphs</xsl:text>
+        </measure>
+        <measure unit="words" quantity="{$words}" xml:lang="en">
+          <xsl:value-of select="et:format-number('en', $words)"/>
+          <xsl:text> words</xsl:text>
+        </measure>
+      </extent>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template mode="comp" match="tei:extent/tei:measure[@unit='texts']">
+    <xsl:param name="texts"/>
+    <xsl:variable name="old-texts" select="@quantity"/>
+    <xsl:copy>
+      <xsl:apply-templates mode="comp" select="@*"/>
+      <xsl:if test="normalize-space($texts) and $texts != '0'">
+        <xsl:attribute name="quantity" select="$texts"/>
+        <xsl:if test="$old-texts != $texts">
+          <xsl:message select="concat('WARN ', /tei:TEI/@xml:id, 
+                               ': replacing texts ', $old-texts, ' with ', $texts)"/>
+        </xsl:if>
+        <xsl:value-of select="replace(., '.+ ', concat(
+                              et:format-number(ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang, $texts), 
+                              ' '))"/>
+      </xsl:if>
+    </xsl:copy>
+  </xsl:template>  
+
   <xsl:template mode="comp" match="tei:extent/tei:measure[@unit='paragraphs']">
     <xsl:param name="paragraphs"/>
     <xsl:variable name="old-paragraphs" select="@quantity"/>
@@ -410,7 +491,7 @@
     <xsl:copy>
       <xsl:apply-templates mode="comp" select="@*"/>
       <xsl:attribute name="xml:id">
-        <xsl:value-of select="ancestor::TEI/@xml:id"/>
+        <xsl:value-of select="ancestor::tei:TEI/@xml:id"/>
         <xsl:text>.p</xsl:text>
         <xsl:number level="any" from="tei:text"/>
       </xsl:attribute>
@@ -477,9 +558,40 @@
                                ': fixing teiCorpus/@xml:id to ', $id)"/>
     </xsl:if>
   </xsl:template>
+
+  <xsl:template mode="root" match="tei:titleStmt">
+    <xsl:copy>
+      <xsl:apply-templates mode="root" select="@*"/>
+      <xsl:apply-templates mode="root"/>
+    </xsl:copy>
+    <xsl:if test="not(following-sibling::tei:editionStmt)">
+      <xsl:message select="concat('WARN ', /tei:*/@xml:id,
+                           ': no root editionStmt, inserting with edition ', $version)"/>
+      <editionStmt>
+        <edition>
+          <xsl:value-of select="$version"/>
+        </edition>
+      </editionStmt>
+      <xsl:if test="not(following-sibling::tei:extent)">
+        <xsl:message select="concat('WARN ', /tei:teiCorpus/@xml:id, 
+                             ': no root extent, adding extent measures in English only!')"/>
+        <extent>
+  	  <xsl:call-template name="add-measure">
+	    <xsl:with-param name="unit">texts</xsl:with-param>
+	  </xsl:call-template>
+	  <xsl:call-template name="add-measure">
+	    <xsl:with-param name="unit">paragraphs</xsl:with-param>
+	  </xsl:call-template>
+	  <xsl:call-template name="add-measure">
+	    <xsl:with-param name="unit">words</xsl:with-param>
+	  </xsl:call-template>
+        </extent>
+      </xsl:if>
+    </xsl:if>
+  </xsl:template>
   
   <!-- Check main title if it has the correct stamp, and replace if not -->
-  <xsl:template mode="root" match="tei:titleStmt/tei:title[@type = 'main']">
+  <xsl:template mode="root" match="tei:titleStmt/tei:title">
     <xsl:variable name="okStamp">
       <xsl:text>[PressMint</xsl:text>
       <xsl:if test="normalize-space($mt)">
@@ -488,17 +600,22 @@
       <xsl:if test="$type = 'ana'">.ana</xsl:if>
       <xsl:text>]</xsl:text>
     </xsl:variable>
-    <xsl:variable name="stamp" select="replace(., '.+(\[.+\])$', '$1')"/>
+    <xsl:variable name="oldStamp" select="replace(substring-after(., '['), '\]$', '')"/>
     <xsl:copy>
       <xsl:apply-templates mode="root" select="@*"/>
       <xsl:choose>
-	<xsl:when test="$stamp = $okStamp">
+	<xsl:when test="$oldStamp = $okStamp">
 	  <xsl:value-of select="normalize-space(.)"/>
 	</xsl:when>
+	<xsl:when test="not($oldStamp)">
+          <xsl:message select="concat('INFO ', /tei:TEI/@xml:id, 
+                               ': adding title stamp ', $okStamp)"/>
+	  <xsl:value-of select="concat(normalize-space(.), ' ', $okStamp)"/>
+	</xsl:when>
 	<xsl:otherwise>
-	  <xsl:value-of select="replace(., '(.+?)\s*\[.+\]$', concat('$1', ' ', $okStamp))"/>
           <xsl:message select="concat('WARN ', /tei:TEI/@xml:id, 
-                               ': replacing title stamp ', $stamp, ' with ', $okStamp)"/>
+                               ': replacing title stamp ', $oldStamp, ' with ', $okStamp)"/>
+	  <xsl:value-of select="replace(., '(.+?)\s*\[.+\]$', concat('$1', ' ', $okStamp))"/>
 	</xsl:otherwise>
       </xsl:choose>
     </xsl:copy>
@@ -507,12 +624,18 @@
   <xsl:template mode="root" match="tei:extent">
     <xsl:copy>
       <xsl:apply-templates mode="root" select="@*"/>
+      <xsl:if test="not(tei:measure[@unit='text'])">
+	<xsl:message select="concat('WARN ', /tei:teiCorpus/@xml:id, 
+                             ': no root measure for texts, adding it in English only!')"/>
+	<xsl:call-template name="add-measure">
+	  <xsl:with-param name="unit">texts</xsl:with-param>
+	</xsl:call-template>
+      </xsl:if>
       <xsl:if test="not(tei:measure[@unit='paragraphs'])">
 	<xsl:message select="concat('WARN ', /tei:teiCorpus/@xml:id, 
                              ': no root measure for paragraphs, adding it in English only!')"/>
 	<xsl:call-template name="add-measure">
 	  <xsl:with-param name="unit">paragraphs</xsl:with-param>
-	  <xsl:with-param name="lang">en</xsl:with-param>
 	</xsl:call-template>
       </xsl:if>
       <xsl:if test="not(tei:measure[@unit='words'])">
@@ -520,15 +643,16 @@
                              ': no root measure for words, adding it in English only!')"/>
 	<xsl:call-template name="add-measure">
 	  <xsl:with-param name="unit">words</xsl:with-param>
-	  <xsl:with-param name="lang">en</xsl:with-param>
 	</xsl:call-template>
       </xsl:if>
       <xsl:apply-templates mode="root"/>
     </xsl:copy>
   </xsl:template>
   
-  <xsl:template mode="root" match="tei:measure[@unit='paragraphs' or @unit='words']">
-    <xsl:call-template name="add-measure"/>
+  <xsl:template mode="root" match="tei:measure[@unit='texts' or @unit='paragraphs' or @unit='words']">
+    <xsl:call-template name="add-measure">
+      <xsl:with-param name="unit" select="@unit"/>
+    </xsl:call-template>
   </xsl:template>
 
   <xsl:template mode="root" match="tei:publicationStmt/tei:date">
@@ -539,15 +663,32 @@
     </xsl:copy>
   </xsl:template>
   
-  <xsl:template mode="root" match="tei:editionStmt/tei:edition">
+  <xsl:template mode="root" match="tei:editionStmt">
     <xsl:copy>
       <xsl:apply-templates mode="root" select="@*"/>
-      <xsl:if test="$version != .">
+      <xsl:if test="$version != tei:edition">
         <xsl:message select="concat('INFO ', /tei:*/@xml:id,
-                             ': replacing version ', ., ' with ', $version)"/>
+                             ': replacing version ', tei:edition, ' with ', $version)"/>
       </xsl:if>
-      <xsl:value-of select="$version"/>
+      <edition>
+        <xsl:value-of select="$version"/>
+      </edition>
     </xsl:copy>
+    <xsl:if test="not(following-sibling::tei:extent)">
+      <xsl:message select="concat('WARN ', /tei:teiCorpus/@xml:id, 
+                           ': no root extent, adding extent measures in English only!')"/>
+      <extent>
+  	<xsl:call-template name="add-measure">
+	  <xsl:with-param name="unit">texts</xsl:with-param>
+	</xsl:call-template>
+	<xsl:call-template name="add-measure">
+	  <xsl:with-param name="unit">paragraphs</xsl:with-param>
+	</xsl:call-template>
+	<xsl:call-template name="add-measure">
+	  <xsl:with-param name="unit">words</xsl:with-param>
+	</xsl:call-template>
+      </extent>
+    </xsl:if>
   </xsl:template>
   
   <xsl:template mode="root" match="tei:projectDesc">
@@ -667,11 +808,11 @@
 	 If $lang is set, it is assumed that the unit measure is not present in input, so it has to be constructed from scratch 
     -->
     <xsl:template name="add-measure">
-      <xsl:param name="unit" select="@unit"/>
-      <xsl:param name="lang"/>
+      <xsl:param name="unit"/>
+      <xsl:param name="lang">en</xsl:param>
       <xsl:variable name="quant">
 	<xsl:choose>
-          <xsl:when test="$unit='sessions'">
+          <xsl:when test="$unit='texts'">
             <xsl:value-of select="count($docs/tei:item[@type = 'component'])"/>
           </xsl:when>
           <xsl:when test="$unit='paragraphs'">
@@ -680,15 +821,16 @@
           <xsl:when test="$unit='words'">
             <xsl:value-of select="sum($words/tei:item)"/>
           </xsl:when>
+          <xsl:otherwise>
+            <xsl:message terminate="yes" select="concat('FATAL: Bad unit ', $unit, ' for add-measure')"/>
+            <xsl:value-of select="number('0')"/>
+          </xsl:otherwise>
 	</xsl:choose>
       </xsl:variable>
-      <xsl:variable name="quant-formatted"
-		    select="et:format-number(ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang, $quant)"/>
+      <xsl:variable name="quant-formatted" select="et:format-number($lang, $quant)"/>
       <xsl:choose>
-	<xsl:when test="normalize-space($quant) and $quant != '0'">
-	  <measure>
-            <xsl:attribute name="unit" select="$unit"/>
-            <xsl:attribute name="quantity" select="format-number($quant, '#')"/>
+	<xsl:when test="$quant != 0">
+	  <measure unit="{$unit}" quantity="{format-number($quant, '#')}">
 	    <xsl:attribute name="xml:lang">
 	      <xsl:choose>
 		<xsl:when test="normalize-space($lang)">
