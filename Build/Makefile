@@ -9,11 +9,11 @@
 ### COMPLETE SET OF CORPORA
 CORPORA=AT BG CZ ES GR IS LV NL PL SI UA
 
-# Used in targets that run only for one corpus
+# Used in targets that run only on one corpus
 CORPUS=SI
 
 # Version number and PID of next PressMint release
-VERSION = 0.1
+VERSION = 1.0
 HANDLE-TEI = http://hdl.handle.net/11356/[TEXT]
 HANDLE-ANA = http://hdl.handle.net/11356/[ANA]
 
@@ -24,6 +24,8 @@ TEMP = ${HERE}/Temp
 SCH = ${PRESSMINT}/TEI
 # Where the submitted corpora are found: PressMint-XX.TEI/ and PressMint-XX.TEI.ana
 SOURCES = ${HERE}/Sources-TEI
+# Where the polished corpora in TEI and derived formats are output
+OUTPUTS = ${HERE}/Distro
 
 #Where the produced corpora are put for inspection
 WEB = tomaz@nl.ijs.si:/home/tomaz/www/tmp/PressMint
@@ -48,76 +50,75 @@ metadata-quant-tsv:
 ### This should be done once all the corpora have been built
 all-roots:	source-roots master-roots
 source-roots:
-	$s base=${HERE}/Sources-TEI type=TEI -xsl:../Scripts/pressmint2root.xsl \
-	../Scripts/PressMint-rootTemplate.xml > ${HERE}/Sources-TEI/PressMint.xml
-	$s base=${HERE}/Sources-TEI type=TEI.ana -xsl:../Scripts/pressmint2root.xsl \
-	../Scripts/PressMint-rootTemplate.xml > ${HERE}/Sources-TEI/PressMint.ana.xml
+	$s base=${SOURCES} type=TEI -xsl:../Scripts/pressmint2root.xsl \
+	../Scripts/PressMint-rootTemplate.xml > ${SOURCES}/PressMint.xml
+	$s base=${SOURCES} type=TEI.ana -xsl:../Scripts/pressmint2root.xsl \
+	../Scripts/PressMint-rootTemplate.xml > ${SOURCES}/PressMint.ana.xml
 master-roots:
-	$s base=${HERE}/Distro type=TEI -xsl:../Scripts/pressmint2root.xsl \
-	../Scripts/PressMint-rootTemplate.xml > ${HERE}/Distro/PressMint.xml
-	$s base=${HERE}/Distro type=TEI.ana -xsl:../Scripts/pressmint2root.xsl \
-	../Scripts/PressMint-rootTemplate.xml > ${HERE}/Distro/PressMint.ana.xml
+	$s base=${OUTPUTS} type=TEI -xsl:../Scripts/pressmint2root.xsl \
+	../Scripts/PressMint-rootTemplate.xml > ${OUTPUTS}/PressMint.xml
+	$s base=${OUTPUTS} type=TEI.ana -xsl:../Scripts/pressmint2root.xsl \
+	../Scripts/PressMint-rootTemplate.xml > ${OUTPUTS}/PressMint.ana.xml
 
 ###### Various tests over 1 corpus
+make-1-sample:
+	${FINALIZE} -sample -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
 make-1-vert:
-	${FINALIZE} -vert -codes ${CORPUS} -in ${HERE}/Distro -out ${HERE}/Distro
+	${FINALIZE} -vert -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
 make-1-conll1:
-	${FINALIZE} -conll -codes ${CORPUS} -in ${HERE}/Distro -out ${HERE}/Distro
+	${FINALIZE} -conll -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
 make-1-tei:
-	${FINALIZE} -ana -codes ${CORPUS} -in ${HERE}/Sources-TEI -out ${HERE}/Distro
-	${FINALIZE} -tei -codes ${CORPUS} -in ${HERE}/Sources-TEI -out ${HERE}/Distro
-make-1-valid:
-	${FINALIZE} -valid -codes ${CORPUS} -in ${HERE}/Distro -out ${HERE}/Distro
-
+	${FINALIZE} -ana -tei -valid -codes ${CORPUS} -in ${SOURCES} -out ${OUTPUTS}
 
 test-vert:
-	$s meta=../Build/Distro/PressMint-SI.TEI.ana/PressMint-SI.ana.xml \
-	-xsl:../Scripts/pressmint2xmlvert.xsl  ../Build/Test/test.ana.xml > Test/test.vert
+	$s meta=${OUTPUTS}/PressMint-SI.TEI.ana/PressMint-SI.ana.xml \
+	-xsl:../Scripts/pressmint2xmlvert.xsl  ${HERE}/Test/test.ana.xml > Test/test.vert
 test-conll:
-	../Scripts/pressmintp2conllu.pl -jobs 1 -in ../Build/Sources-TEI/PressMint-${CORPUS}.TEI.ana -out ../Build/Test
+	../Scripts/pressmintp2conllu.pl -jobs 1 -in ${HERE}/PressMint-${CORPUS}.TEI.ana -out ${HERE}/Test
 test-conll-1:
-	$s meta=../Build/Distro/PressMint-SI.TEI.ana/PressMint.ana.xml \
-	-xsl:../Scripts/pressmint2conllu.xsl ../Build/Test/test.ana.xml > Test/test-SI.conllu
+	$s meta=${OUTPUTS}/PressMint-SI.TEI.ana/PressMint.ana.xml \
+	-xsl:../Scripts/pressmint2conllu.xsl ${HERE}/Test/test.ana.xml > Test/test.conllu
+test-valid:
+	${FINALIZE} -valid -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
+test-release:
+	$s anaDir=${OUTPUTS}/PressMint-${CORPUS}.TEI.ana outDir=Test -xsl:../Scripts/pressmint2release.xsl \
+	${HERE}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml
+
+##########################
 
 test-meta6:
-	$s out-lang=en meta=../Build/Sources-TEI/PressMint-SI.TEI.ana/PressMint-SI.ana.xml -xsl:../Scripts/pressmint2meta.ana.xsl \
-	../Build/Sources-TEI/PressMint-SI.TEI.ana/2020/PressMint-SI_2020-01-07-O1114.ana.xml > Test/test.ana-meta-en.tsv
+	$s out-lang=en meta=${HERE}/PressMint-SI.TEI.ana/PressMint-SI.ana.xml -xsl:../Scripts/pressmint2meta.ana.xsl \
+	${HERE}/PressMint-SI.TEI.ana/2020/PressMint-SI_2020-01-07-O1114.ana.xml > Test/test.ana-meta-en.tsv
 test-meta5:
-	$s out-lang=en meta=../Build/Distro/PressMint-SI.TEI/PressMint-SI.xml -xsl:../Scripts/pressmint2meta.xsl \
-	../Build/Distro/PressMint-SI.TEI/2000/PressMint-SI_2000-10-27-SDZ3-Redna-01.xml > Test/test.tsv
+	$s out-lang=en meta=${OUTPUTS}/PressMint-SI.TEI/PressMint-SI.xml -xsl:../Scripts/pressmint2meta.xsl \
+	${OUTPUTS}/PressMint-SI.TEI/2000/PressMint-SI_2000-10-27-SDZ3-Redna-01.xml > Test/test.tsv
 test-meta4:
-	$s out-lang=xx meta=../Build/Distro/PressMint-SI/PressMint-SI.xml -xsl:../Scripts/pressmint2meta.xsl \
-	../Build/Distro/PressMint-SI/2007/PressMint-SI_2007-11-28-SDZ4-Izredna-30.ana.xml > Test/test.tsv
+	$s out-lang=xx meta=${OUTPUTS}/PressMint-SI/PressMint-SI.xml -xsl:../Scripts/pressmint2meta.xsl \
+	${OUTPUTS}/PressMint-SI/2007/PressMint-SI_2007-11-28-SDZ4-Izredna-30.ana.xml > Test/test.tsv
 test-meta3:
-	$s out-lang=en meta=../Build/Distro/PressMint-SI.TEI/PressMint-SI.xml -xsl:../Scripts/pressmint2meta.xsl \
-	../Build/Distro/PressMint-SI.TEI/2016/PressMint-RS_2016-06-03-0.xml  > test.tsv
+	$s out-lang=en meta=${OUTPUTS}/PressMint-SI.TEI/PressMint-SI.xml -xsl:../Scripts/pressmint2meta.xsl \
+	${OUTPUTS}/PressMint-SI.TEI/2016/PressMint-RS_2016-06-03-0.xml  > test.tsv
 test-meta2:
-	$s out-lang=en meta=../Build/Distro/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml -xsl:../Scripts/pressmint2meta.xsl \
-	../Build/Test/test-${CORPUS}.xml > test-${CORPUS}.tsv
+	$s out-lang=en meta=${OUTPUTS}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml -xsl:../Scripts/pressmint2meta.xsl \
+	${HERE}/Test/test-${CORPUS}.xml > test-${CORPUS}.tsv
 test-meta1:
 	${FINALIZE} -txt -codes ${CORPUS} -in ${HERE}/Temp -out ${HERE}/Temp
 test-text1:
-	${FINALIZE} -txt -codes ${CORPUS} -in ${HERE}/Distro -out ${HERE}/Distro
+	${FINALIZE} -txt -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
 test-text2:
 	../Scripts/pressmintp-tei2text.pl -jobs 2 \
-	-in ../Build/Distro/PressMint-${CORPUS} -out ../Build/Distro/PressMint-${CORPUS}
-
-test-tei3:
-	${FINALIZE} -valid -codes ${CORPUS} -in ${HERE}/Distro -out ${HERE}/Distro
-test-release:
-	$s anaDir=../Build/Distro/PressMint-${CORPUS}.TEI.ana outDir=Test -xsl:../Scripts/pressmint2release.xsl \
-	../Build/Sources-TEI/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml
+	-in ${OUTPUTS}/PressMint-${CORPUS} -out ${OUTPUTS}/PressMint-${CORPUS}
 
 # Post-hoc copy READMEs to master, in case they need to be changed after the corpora have been built
 cp-readmes:
 	Scripts/cp-readmes.pl -codes "${CORPORA}" -version ${VERSION} -teihandle ${HANDLE-TEI} -anahandle ${HANDLE-ANA} \
-	-docs Sources-Distro -out ${HERE}/Distro
+	-docs Sources-Distro -out ${OUTPUTS}
 
 # Make samples only
 all-samples:	samples cp-samples
 samples:
 	for CORPUS in ${CORPORA}; do \
-	${FINALIZE} -sample -codes $${CORPUS} -in ${SOURCES} -out ${HERE}/Distro 2> Logs/PressMint-$${CORPUS}-samples.log; \
+	${FINALIZE} -sample -codes $${CORPUS} -in ${SOURCES} -out ${OUTPUTS} 2> Logs/PressMint-$${CORPUS}-samples.log; \
 	done;
 #Merge original and MTed samples into official Samples directory
 cp-samples:
@@ -131,14 +132,14 @@ make-verts-xx-nohup:
 make-verts-xx:
 	for CORPUS in ${CORPORA}; do \
         ../Scripts/pressmintp-tei2vert-xx.pl -jobs ${THREADS} \
-        -in ${HERE}/Distro/PressMint-$${CORPUS}.TEI.ana -out Temp/PressMint-$${CORPUS}-xx.vert; \
+        -in ${OUTPUTS}/PressMint-$${CORPUS}.TEI.ana -out Temp/PressMint-$${CORPUS}-xx.vert; \
 	done;
 	perl ../Scripts/join-all-verts.pl -codes '${XX-CORPORA}' -in 'Temp' -out Verts/PressMint-XX.${VERSION}.vert
 
 # Make vertical files only
 make-verts:
 	for CORPUS in ${CORPORA}; do \
-	${FINALIZE} -vert -codes $${CORPUS} -in ${SOURCES} -out ${HERE}/Distro; \
+	${FINALIZE} -vert -codes $${CORPUS} -in ${SOURCES} -out ${OUTPUTS}; \
 	done;
 	make verts
 
@@ -176,7 +177,7 @@ join-verts:
 	perl Scripts/join-verts.pl -version ${VERSION} -codes '${CORPORA}' -in Distro -out Verts
 final:
 	for CORPUS in ${CORPORA}; do \
-	${FINALIZE} -all -codes $${CORPUS} -in ${SOURCES} -out ${HERE}/Distro 2> Logs/PressMint-$${CORPUS}.log; \
+	${FINALIZE} -all -codes $${CORPUS} -in ${SOURCES} -out ${OUTPUTS} 2> Logs/PressMint-$${CORPUS}.log; \
 	grep -a -i 'fatal' Logs/PressMint-$${CORPUS}.log >  Logs/PressMint-$${CORPUS}.error.log;  \
 	grep -a -i 'error' Logs/PressMint-$${CORPUS}.log >> Logs/PressMint-$${CORPUS}.error.log;  \
 	grep -a -i 'warn'  Logs/PressMint-$${CORPUS}.log >  Logs/PressMint-$${CORPUS}.warn.log;  \
