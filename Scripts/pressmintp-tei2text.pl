@@ -54,7 +54,7 @@ open(TMP, '>:utf8', $fileFile);
 @corpusFiles = glob($corpusFiles);
 foreach $inFile (@corpusFiles) {
     # Skipping teiHeader files, they can match '/*_*.xml' when _ is present in xml:id
-    next if $inFile =~ /^.*\/PressMint(?:-[A-Z]{2}(?:-[A-Z0-9]{1,3})?(?:-[a-z]{2,3})?)?-(taxonomy|listPerson|listOrg).*\.xml/;
+    next if $inFile =~ /^.*\/PressMint(?:-[A-Z]{2}(?:-[A-Z0-9]{1,3})?(?:-[a-z]{2,3})?)?-(taxonomy).*\.xml/;
     # Skip .ana files if equivalent tei file is present
     $ok = 1;
     if ($inFile =~ /(.+)\.ana\./) {

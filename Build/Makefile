@@ -86,28 +86,28 @@ test-release:
 
 ##########################
 
+test-text2:
+	${FINALIZE} -txt -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
+test-text1:
+	../Scripts/pressmintp-tei2text.pl -jobs 2 \
+	-in ${OUTPUTS}/PressMint-${CORPUS} -out ${OUTPUTS}/PressMint-${CORPUS}
+
 test-meta6:
 	$s out-lang=en meta=${HERE}/PressMint-SI.TEI.ana/PressMint-SI.ana.xml -xsl:../Scripts/pressmint2meta.ana.xsl \
 	${HERE}/PressMint-SI.TEI.ana/2020/PressMint-SI_2020-01-07-O1114.ana.xml > Test/test.ana-meta-en.tsv
 test-meta5:
 	$s out-lang=en meta=${OUTPUTS}/PressMint-SI.TEI/PressMint-SI.xml -xsl:../Scripts/pressmint2meta.xsl \
 	${OUTPUTS}/PressMint-SI.TEI/2000/PressMint-SI_2000-10-27-SDZ3-Redna-01.xml > Test/test.tsv
-test-meta4:
+test-meta3:
 	$s out-lang=xx meta=${OUTPUTS}/PressMint-SI/PressMint-SI.xml -xsl:../Scripts/pressmint2meta.xsl \
 	${OUTPUTS}/PressMint-SI/2007/PressMint-SI_2007-11-28-SDZ4-Izredna-30.ana.xml > Test/test.tsv
-test-meta3:
-	$s out-lang=en meta=${OUTPUTS}/PressMint-SI.TEI/PressMint-SI.xml -xsl:../Scripts/pressmint2meta.xsl \
-	${OUTPUTS}/PressMint-SI.TEI/2016/PressMint-RS_2016-06-03-0.xml  > test.tsv
 test-meta2:
-	$s out-lang=en meta=${OUTPUTS}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml -xsl:../Scripts/pressmint2meta.xsl \
-	${HERE}/Test/test-${CORPUS}.xml > test-${CORPUS}.tsv
-test-meta1:
 	${FINALIZE} -txt -codes ${CORPUS} -in ${HERE}/Temp -out ${HERE}/Temp
-test-text1:
-	${FINALIZE} -txt -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
-test-text2:
-	../Scripts/pressmintp-tei2text.pl -jobs 2 \
-	-in ${OUTPUTS}/PressMint-${CORPUS} -out ${OUTPUTS}/PressMint-${CORPUS}
+test-meta1:
+	$s out-lang=en meta=${OUTPUTS}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml -xsl:../Scripts/pressmint2meta.xsl \
+	${HERE}/Test/test.xml > Test/test.tei.tsv
+	$s out-lang=en meta=${OUTPUTS}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml -xsl:../Scripts/pressmint2meta.xsl \
+	${HERE}/Test/test.ana.xml > Test/test.ana.tsv
 
 # Post-hoc copy READMEs to master, in case they need to be changed after the corpora have been built
 cp-readmes:
