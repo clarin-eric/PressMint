@@ -6,8 +6,8 @@ validate:
 
 ### Produce PressMint TEI from JSON:
 convert:
-	Scripts/sPeriodika-json2tei.pl text 'Sources/*.json' .
-	Scripts/sPeriodika-json2tei.pl ana  'Sources/*.json' .
+	Scripts/sPeriodika-json2tei.pl text 'Sources/*.json' Temp
+	Scripts/sPeriodika-json2tei.pl ana  'Sources/*.json' Temp
 
 ###################This is large!
 get-full-corpus-from-repo:
