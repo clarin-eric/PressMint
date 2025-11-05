@@ -1,11 +1,10 @@
-### Validate SI sample
-validate:
-	$j PressMint-SI.xml
-	$j PressMint-SI.ana.xml
-	$j ????/*.xml
+### Copy files produced in Temp/ to PressMint/Build/Sources-TEI 
+copy-files:
+	Scripts/cp-files.pl Temp ../../Build/Sources-TEI/
+	#cp Temp/PressMint-taxonomy-NER.ana.xml ../../Build/Sources-TEI/PressMint-SI.TEI.ana
 
-### Produce PressMint TEI from JSON:
-convert:
+### Produce initial PressMint TEI from JSON:
+preconvert:
 	Scripts/sPeriodika-json2tei.pl text 'Sources/*.json' Temp
 	Scripts/sPeriodika-json2tei.pl ana  'Sources/*.json' Temp
 
