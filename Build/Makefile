@@ -14,8 +14,8 @@ CORPUS=SI
 
 # Version number and PID of next PressMint release
 VERSION = 1.0
-HANDLE-TEI = http://hdl.handle.net/11356/[TEXT]
-HANDLE-ANA = http://hdl.handle.net/11356/[ANA]
+HANDLE-TEI = http://hdl.handle.net/11356/2067
+HANDLE-ANA = http://hdl.handle.net/11356/2068
 
 #Absolute paths are needed otherwise problems with XSLT
 PRESSMINT := $(shell realpath .. | tr -d '\n')# get real absolute path to PressMint directory
@@ -61,6 +61,8 @@ master-roots:
 	../Scripts/PressMint-rootTemplate.xml > ${OUTPUTS}/PressMint.ana.xml
 
 ###### Various tests over 1 corpus
+make-1:
+	${FINALIZE} -all -codes ${CORPUS} -in ${SOURCES} -out ${OUTPUTS}
 make-1-sample:
 	${FINALIZE} -sample -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
 make-1-text:
