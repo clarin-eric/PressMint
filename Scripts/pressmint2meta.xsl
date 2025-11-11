@@ -32,10 +32,10 @@
     <xsl:text>Quality&#9;</xsl:text>
     <xsl:text>Image&#9;</xsl:text>
     <xsl:text>&#10;</xsl:text>
-    <xsl:apply-templates select=".//tei:p"/>
+    <xsl:apply-templates select="tei:text//tei:p"/>
   </xsl:template>
   
-  <xsl:template match="tei:p">
+  <xsl:template match="tei:text//tei:p">
     <xsl:variable name="lang-code" select="ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang"/>
     <xsl:variable name="lang" select="et:l10n($corpus-language, 
                                        $rootHeader//tei:langUsage/tei:language[@ident = $lang-code])"/>
@@ -67,10 +67,7 @@
     <!-- Paragraph metadata -->
     <xsl:value-of select="concat($lang, '&#9;')"/>
     <xsl:value-of select="concat($quality, '&#9;')"/>
-    <xsl:value-of select="concat($img-url, '&#9;')"/>
-    <!-- Paragraph sizes? -->
-    <!--xsl:value-of select="count(.//tei:w) + count(.//tei:pc)"/-->
-    <xsl:text>&#10;</xsl:text>
+    <xsl:value-of select="concat($img-url, '&#10;')"/>
   </xsl:template>
   
 </xsl:stylesheet>

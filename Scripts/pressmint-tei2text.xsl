@@ -14,10 +14,10 @@
 
   <xsl:template match="/">
     <xsl:message select="concat('INFO: converting ', tei:TEI/@xml:id, ' to text file')"/>
-    <xsl:apply-templates select="//tei:*[local-name() = $element]"/>
+    <xsl:apply-templates select="//tei:text//tei:*[local-name() = $element]"/>
   </xsl:template>
   
-  <xsl:template match="tei:*[local-name() = $element]">
+  <xsl:template match="tei:text//tei:*[local-name() = $element]">
     <xsl:variable name="text">
       <xsl:apply-templates/>
     </xsl:variable>
@@ -25,7 +25,7 @@
                           normalize-space($text), '&#10;')"/>
   </xsl:template>
 
-  <xsl:template match="tei:note">
+  <xsl:template match="tei:text//tei:note">
     <xsl:variable name="text">
       <xsl:value-of select="normalize-space(.)"/>
     </xsl:variable>
