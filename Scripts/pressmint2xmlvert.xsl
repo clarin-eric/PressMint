@@ -49,7 +49,7 @@
     <xsl:variable name="urn" select="$bibl/tei:idno[@type='URN']"/>
     <xsl:variable name="url" select="$bibl/tei:idno[@type='URI']"/>
     <text id="{$text_id}" lang="{$lang}" date="{$date}" year="{$year}"
-          newspaper="{$newspaper}" publisher="{$publisher}" url="{$url}">
+          newspaper="{$newspaper}" publisher="{$publisher}" source_url="{$url}">
       <xsl:if test="normalize-space($article)">
         <xsl:attribute name="article" select="$article"/>
       </xsl:if>
