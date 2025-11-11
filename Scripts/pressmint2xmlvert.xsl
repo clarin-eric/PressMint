@@ -46,10 +46,10 @@
     <xsl:variable name="publisher" select="$bibl/tei:publisher"/>
     <xsl:variable name="volume" select="$bibl/tei:biblScope[@unit='volume']"/>
     <xsl:variable name="issue" select="$bibl/tei:biblScope[@unit='issue']"/>
-    <xsl:variable name="URN" select="$bibl/tei:idno[@type='URN']"/>
-    <xsl:variable name="URL" select="$bibl/tei:idno[@type='URI']"/>
+    <xsl:variable name="urn" select="$bibl/tei:idno[@type='URN']"/>
+    <xsl:variable name="url" select="$bibl/tei:idno[@type='URI']"/>
     <text id="{$text_id}" lang="{$lang}" date="{$date}" year="{$year}"
-          newspaper="{$newspaper}" publisher="{$publisher}" URL="{$URL}">
+          newspaper="{$newspaper}" publisher="{$publisher}" url="{$url}">
       <xsl:if test="normalize-space($article)">
         <xsl:attribute name="article" select="$article"/>
       </xsl:if>
