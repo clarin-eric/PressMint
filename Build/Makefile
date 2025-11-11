@@ -63,6 +63,8 @@ master-roots:
 ###### Various tests over 1 corpus
 make-1-sample:
 	${FINALIZE} -sample -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
+make-1-text:
+	${FINALIZE} -txt -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
 make-1-vert:
 	${FINALIZE} -vert -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
 make-1-conll1:
@@ -70,12 +72,19 @@ make-1-conll1:
 make-1-tei:
 	${FINALIZE} -ana -tei -valid -codes ${CORPUS} -in ${SOURCES} -out ${OUTPUTS}
 
+test-text:
+	../Scripts/pressmintp-tei2text.pl -jobs 2 -in ${OUTPUTS}/PressMint-${CORPUS}.TEI -out Test
+test-meta:
+	$s out-lang=en meta=${OUTPUTS}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml -xsl:../Scripts/pressmint2meta.xsl \
+	${HERE}/Test/test.xml > Test/test.tei.tsv
+	$s out-lang=en meta=${OUTPUTS}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml -xsl:../Scripts/pressmint2meta.xsl \
+	${HERE}/Test/test.ana.xml > Test/test.ana.tsv
 test-vert:
 	$s meta=${OUTPUTS}/PressMint-SI.TEI.ana/PressMint-SI.ana.xml \
 	-xsl:../Scripts/pressmint2xmlvert.xsl  ${HERE}/Test/test.ana.xml > Test/test.vert
-test-conll:
+test-conll2:
 	../Scripts/pressmintp2conllu.pl -jobs 1 -in ${HERE}/PressMint-${CORPUS}.TEI.ana -out ${HERE}/Test
-test-conll-1:
+test-conll1:
 	$s meta=${OUTPUTS}/PressMint-SI.TEI.ana/PressMint.ana.xml \
 	-xsl:../Scripts/pressmint2conllu.xsl ${HERE}/Test/test.ana.xml > Test/test.conllu
 test-valid:
@@ -85,29 +94,6 @@ test-release:
 	${HERE}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml
 
 ##########################
-
-test-text2:
-	${FINALIZE} -txt -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
-test-text1:
-	../Scripts/pressmintp-tei2text.pl -jobs 2 \
-	-in ${OUTPUTS}/PressMint-${CORPUS} -out ${OUTPUTS}/PressMint-${CORPUS}
-
-test-meta6:
-	$s out-lang=en meta=${HERE}/PressMint-SI.TEI.ana/PressMint-SI.ana.xml -xsl:../Scripts/pressmint2meta.ana.xsl \
-	${HERE}/PressMint-SI.TEI.ana/2020/PressMint-SI_2020-01-07-O1114.ana.xml > Test/test.ana-meta-en.tsv
-test-meta5:
-	$s out-lang=en meta=${OUTPUTS}/PressMint-SI.TEI/PressMint-SI.xml -xsl:../Scripts/pressmint2meta.xsl \
-	${OUTPUTS}/PressMint-SI.TEI/2000/PressMint-SI_2000-10-27-SDZ3-Redna-01.xml > Test/test.tsv
-test-meta3:
-	$s out-lang=xx meta=${OUTPUTS}/PressMint-SI/PressMint-SI.xml -xsl:../Scripts/pressmint2meta.xsl \
-	${OUTPUTS}/PressMint-SI/2007/PressMint-SI_2007-11-28-SDZ4-Izredna-30.ana.xml > Test/test.tsv
-test-meta2:
-	${FINALIZE} -txt -codes ${CORPUS} -in ${HERE}/Temp -out ${HERE}/Temp
-test-meta1:
-	$s out-lang=en meta=${OUTPUTS}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml -xsl:../Scripts/pressmint2meta.xsl \
-	${HERE}/Test/test.xml > Test/test.tei.tsv
-	$s out-lang=en meta=${OUTPUTS}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml -xsl:../Scripts/pressmint2meta.xsl \
-	${HERE}/Test/test.ana.xml > Test/test.ana.tsv
 
 # Post-hoc copy READMEs to master, in case they need to be changed after the corpora have been built
 cp-readmes:
