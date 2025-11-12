@@ -8,6 +8,7 @@
 
 ### COMPLETE SET OF CORPORA
 CORPORA=AT BG CZ ES GR IS LV NL PL SI UA
+CORPORA=SI
 
 # Used in targets that run only on one corpus
 CORPUS=SI
