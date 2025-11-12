@@ -109,7 +109,7 @@ samples:
 	for CORPUS in ${CORPORA}; do \
 	${FINALIZE} -sample -codes $${CORPUS} -in ${SOURCES} -out ${OUTPUTS} 2> Logs/PressMint-$${CORPUS}-samples.log; \
 	done;
-#Merge original and MTed samples into official Samples directory
+#Merge Distro samples into official Samples directory
 cp-samples:
 	Scripts/cp-samples.pl 'Distro/PressMint-*' ../Samples
 
