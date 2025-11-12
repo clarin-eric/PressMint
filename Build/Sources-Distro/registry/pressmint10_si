@@ -6,19 +6,19 @@ LOCALE "sl_SI.UTF-8"
 DEFAULTLOCALE "sl_SI.UTF-8"
 LANGUAGE "Slovenian"
 INFOHREF "https://www.clarin.eu/pressmint"
-#INFOHREF "http://hdl.handle.net/11356/????"
+#INFOHREF "http://hdl.handle.net/11356/2068"
 TAGSETDOC "https://universaldependencies.org/guidelines.html"
 #TAGSETDOC "https://nl.ijs.si/ME/V6/msd/html/msd-sl.html#msd.msds-sl"
 
 PATH "/data/manatee-data/pressmint10_si/"
 
-VERTICAL "| zcat /data/vert/PressMint-SI.0.1.vert.gz"
+VERTICAL "| zcat /data/vert/PressMint-SI.1.0.vert.gz"
 
 DOCSTRUCTURE text
 MAXDETAIL 200
 
-SUBCORPATTRS "p.quality|text.id|text.year,text.newspaper|text.article|text.date,text.publisher|text.volume|text.number"
-FULLREF "text.article,text.newspaper,text.date,text.publisher,text.volume,text.number,text.id,p.quality,p.id"
+SUBCORPATTRS "p.quality|text.id|text.year,text.newspaper|text.article|text.date,text.publisher|text.volume|text.issue"
+FULLREF "text.article,text.newspaper,text.date,text.publisher,text.volume,text.issue,text.source_url,text.id,p.quality,p.id"
 SHORTREF "=text.year,=text.newspaper"
 
 STRUCTURE text {
@@ -33,14 +33,19 @@ STRUCTURE text {
     }
     ATTRIBUTE publisher {
       MULTISEP "÷"
+      DEFAULTVALUE "-"
     }
     ATTRIBUTE article {
       MULTISEP "÷"
+      DEFAULTVALUE "-"
     }
-    ATTRIBUTE volume
-    ATTRIBUTE issue
-    ATTRIBUTE URL
-    
+    ATTRIBUTE volume {
+      DEFAULTVALUE "-"
+    }
+    ATTRIBUTE issue {
+      DEFAULTVALUE "-"
+    }
+    ATTRIBUTE source_url
 }
 
 STRUCTURE p {
