@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-PRESS := AT BG CZ ES GR IS LV NL PL SI UA
+PRESS := AT BG CZ ES FI GB GR HU IS IT LV NL PL PT SI UA ZA
 
 ##$JAVA-MEMORY## Set a java memory maxsize in GB
 JAVA-MEMORY =
