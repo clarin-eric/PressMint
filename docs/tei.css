@@ -467,19 +467,17 @@ div.note{
 }
 
 span.noteLabel{
-    vertical-align:super;
-    font-size:smaller;
     font-style:italic;
 }
-span.note:before{
-    content:" [";
-}
-span.note:after{
-    content:"] ";
-}
 
-span.note{
-    font-size:smaller;
+
+
+.note {
+  background: #ffffee;
+  border-left: 3px solid #cc0;
+  padding: 0.5em;
+  margin-left:3em;
+  display:block;
 }
 /* address */
 span.address {
