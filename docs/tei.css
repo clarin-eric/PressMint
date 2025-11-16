@@ -123,6 +123,21 @@ body.pagetable{
 
 /* now the layers of the header */
 
+.heading-anchor {
+  margin-right: 0.4em;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+
+hover .heading-anchor{
+  opacity: 1;
+}
+
+h1,h2,h3,h4,h5,h6,header {
+    display: inline-block;
+}
+
 /* the main title */
 div.stdheader{
     border-bottom:1pt solid black;
