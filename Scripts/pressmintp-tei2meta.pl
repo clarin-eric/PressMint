@@ -41,7 +41,8 @@ binmode(STDERR, 'utf8');
 $Para  = "parallel --gnu --halt 0 --jobs $procThreads";
 $Saxon = "java -jar $Bin/bin/saxon.jar";
 $scriptMeta = "$Bin/pressmint2meta.xsl";
-$scriptMetaAna = "$Bin/pressmint2meta.ana.xsl";
+#Wo don't hvave this in PressMint for now, as sentences have no extra metadata
+#$scriptMetaAna = "$Bin/pressmint2meta.ana.xsl";
 $Includes = "$Bin/get-includes.xsl";
 
 `find $outDir -name '*-meta.tsv' -type f -delete`;
@@ -71,13 +72,13 @@ foreach my $outLang (@outLangs) {
 	    " -xsl:$scriptMeta {} > $outDir/{/.}$outSuffix";
 	`cat $fileFile | $Para '$command'`;
         # We produce .ana metadata only for .ana corpus
-        if ($inRoot =~ /\.ana/) {
-            $command = "$Saxon" .
-                " meta=$inRoot" .
-                " out-lang=$outLang" .
-                " -xsl:$scriptMetaAna {} > $outDir/{/.}-ana$outSuffix";
-            `cat $fileFile | $Para '$command'`;
-        }
+        # if ($inRoot =~ /\.ana/) {
+        #     $command = "$Saxon" .
+        #         " meta=$inRoot" .
+        #         " out-lang=$outLang" .
+        #         " -xsl:$scriptMetaAna {} > $outDir/{/.}-ana$outSuffix";
+        #     `cat $fileFile | $Para '$command'`;
+        # }
     }
 }
 `find $outDir -name '*-meta*.tsv' -type f -exec rename 's/\.ana//' {} +`;

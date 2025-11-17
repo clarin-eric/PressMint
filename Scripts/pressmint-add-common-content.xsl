@@ -217,7 +217,7 @@
           </xsl:when>
           <xsl:otherwise>
             <!-- We don't count paragraphs in teiHeader! -->
-            <xsl:value-of select="document(tei:url-orig)/count(//tei:text/tei:p)"/>
+            <xsl:value-of select="document(tei:url-orig)/count(//tei:text//tei:p)"/>
           </xsl:otherwise>
         </xsl:choose>
       </item>
@@ -499,7 +499,29 @@
     </xsl:copy>
   </xsl:template>
       
-  <!-- Silently give IDs to some elements -->
+  <!-- Silently give IDs to sentences without them -->
+  <xsl:template mode="comp" match="tei:s[not(@xml:id)]">
+    <xsl:copy>
+      <xsl:apply-templates mode="comp" select="@*"/>
+      <xsl:attribute name="xml:id">
+        <xsl:choose>
+          <xsl:when test="ancestor::tei:p[@xml:id]">
+            <xsl:value-of select="ancestor::tei:p[@xml:id]/@xml:id"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="ancestor::tei:TEI/@xml:id"/>
+            <xsl:text>.p</xsl:text>
+            <xsl:number level="any" from="tei:text"/>
+          </xsl:otherwise>
+        </xsl:choose>
+        <xsl:text>.s</xsl:text>
+        <xsl:number level="any" from="tei:p"/>
+      </xsl:attribute>
+      <xsl:apply-templates mode="comp"/>
+    </xsl:copy>
+  </xsl:template>
+      
+  <!-- Silently give IDs to some other possible elements -->
   <xsl:template mode="comp" match="tei:head[not(@xml:id)] | 
 				   tei:gap[not(@xml:id)] |
 				   tei:note[not(@xml:id)]">
