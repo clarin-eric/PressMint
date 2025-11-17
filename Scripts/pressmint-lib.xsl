@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- Library of templates for import into other ParlaMint scripts -->
+<!-- Library of templates for import into other PressMint scripts -->
 <xsl:stylesheet 
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -48,52 +48,26 @@
   <xsl:function name="mk:at-date">
     <xsl:param name="element"/>
     <xsl:variable name="TEI" select="$element/ancestor-or-self::tei:TEI"/>
-    <xsl:variable name="date" select="$TEI/tei:teiHeader//tei:setting/tei:date"/>
+    <xsl:variable name="date" select="$TEI/tei:teiHeader//tei:sourceDesc/tei:bibl/tei:date"/>
     <xsl:if test="not($date/@when)">
       <xsl:message terminate="yes">
-        <xsl:text>FATAL ERROR: Can't find TEI date/@when in setting of input file </xsl:text>
+        <xsl:text>FATAL ERROR: Can't find TEI date/@when in sourceDescof input file </xsl:text>
         <xsl:value-of select="$TEI/@xml:id"/>
       </xsl:message>
     </xsl:if>
     <xsl:value-of select="$date/@when"/>
   </xsl:function>
   
-  <!-- Localised title of a corpus component: subtitle, if exists, otherwise main title -->
+  <!-- Localised title of a corpus component -->
   <xsl:variable name="title" select="mk:title($component)"/>
   <xsl:function name="mk:title">
     <xsl:param name="element"/>
     <xsl:variable name="TEI" select="$element/ancestor-or-self::tei:TEI"/>
-    <xsl:variable name="titles">
+    <xsl:variable name="title">
       <xsl:apply-templates mode="expand" select="$TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
     </xsl:variable>
-    <xsl:variable name="subtitles" select="et:l10n($corpus-language, $titles/tei:title[@type='sub'])"/>
-    <xsl:variable name="main-title" select="et:l10n($corpus-language, $titles/tei:title[@type='main'])"/>
-    <xsl:choose>
-      <!-- Several subtitles in same language -->
-      <xsl:when test="normalize-space($subtitles[2])">
-        <xsl:variable name="joined-subtitles">
-          <xsl:variable name="j-s">
-            <xsl:for-each select="$subtitles/self::tei:*">
-              <xsl:value-of select="concat(., $multi-separator)"/>
-            </xsl:for-each>
-          </xsl:variable>
-          <xsl:value-of select="replace($j-s, '.$', '')"/>
-        </xsl:variable>
-        <xsl:message select="concat('INFO: Joining subtitles: ', $joined-subtitles, ' in ', $TEI/@xml:id)"/>
-        <xsl:value-of select="$joined-subtitles"/>
-      </xsl:when>
-      <xsl:when test="normalize-space($subtitles)">
-        <xsl:value-of select="normalize-space($subtitles)"/>
-      </xsl:when>
-      <xsl:when test="normalize-space($main-title)">
-        <!-- Remove [ParlaMint] stamp -->
-        <xsl:value-of select="replace(normalize-space($main-title), '\s*\[.+\]$', '')"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:message select="concat('ERROR: cant find title for ', $text_id)"/>
-        <xsl:text>-</xsl:text>
-      </xsl:otherwise>
-    </xsl:choose>
+    <!-- Remove [PressMint] stamp -->
+    <xsl:value-of select="replace(normalize-space($title), '\s*\[.+\]$', '')"/>
   </xsl:function>
   
   <xsl:variable name="rootHeader">
@@ -157,38 +131,6 @@
 
   <!-- NAMED TEMPLATES -->
 
-  <!-- Return the name of the language that the segments of the utterance are in -->
-  <!-- In case the segments are in several languages, the multilingual-label is output -->
-  <!-- The assumption is that this template is called with tei:u as the context node -->
-  <xsl:template name="u-langs">
-    <xsl:variable name="defaultLang" select="ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang"/>
-    <!-- Collect all the languages of utterance segments -->
-    <xsl:variable name="langs">
-      <xsl:variable name="lgs">
-        <xsl:for-each select="tei:seg">
-          <xsl:value-of select="@xml:lang"/>
-          <xsl:text>&#32;</xsl:text>
-        </xsl:for-each>
-      </xsl:variable>
-      <xsl:value-of select="distinct-values(tokenize(normalize-space($lgs)))"/>
-    </xsl:variable>
-    <xsl:choose>
-      <!-- Segments not marked for language, so name of language of utterance -->
-      <xsl:when test="not(normalize-space($langs))">
-        <xsl:value-of select="et:l10n($corpus-language, 
-                              $rootHeader//tei:langUsage/tei:language[@ident = $defaultLang])"/>
-      </xsl:when>
-      <!-- Multilingual content -->
-      <xsl:when test="tokenize($langs)[2]">
-        <xsl:value-of select="$multilingual-label"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="et:l10n($corpus-language, 
-                              $rootHeader//tei:langUsage/tei:language[@ident = $langs])"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-  
   <!-- FUNCTIONS -->
 
   <!-- Format the name of a person from persName -->
@@ -351,28 +293,10 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <!-- Part 1 are standard attributes of word -->
-    <xsl:variable name="part1" select="concat($lemma, '&#9;', $ud-pos, '&#9;', $ud-feats, '&#9;')"/>
-    <xsl:value-of select="$part1"/>
+    <xsl:value-of select="concat($lemma, '&#9;', $ud-pos, '&#9;', $ud-feats, '&#9;')"/>
   </xsl:function>
 
-  <!-- Output the sibling element in $elements that is appropriate for output language (global $out-lang) -->
-  <!-- $elements = 
-          <orgName xml:lang="el" full="yes">Κοινοβούλιο της Ελλάδος</orgName>
-          <orgName xml:lang="en" full="yes">Parliament of Greece</orgName>
-       if $out-lang = xx result =
-          <orgName xml:lang="el" full="yes">Κοινοβούλιο της Ελλάδος</orgName>
-       if $out-lang = en result =
-          <orgName xml:lang="en" full="yes">Parliament of Greece</orgName>
-
-       $elements = 
-         <orgName full="abb">Ν.Δ.</orgName>
-         <orgName full="abb" xml:lang="el-Latn">N.D.</orgName>
-       if $out-lang = xx result =
-         <orgName full="abb">Ν.Δ.</orgName>
-       if $out-lang = en result =
-         <orgName full="abb" xml:lang="el-Latn">N.D.</orgName>
-
+  <!-- Output the sibling element in $elements that is appropriate for output language (global $out-lang)
        The asssumption is that all elements in $elements have @xml:lang, i.e. have been processed with XInclude mode
   -->
   <xsl:function name="et:l10n">
@@ -390,7 +314,7 @@
     <xsl:variable name="element-lt" select="$elements[ends-with(@xml:lang, '-Latn')]"/>
     <!-- English -->
     <xsl:variable name="element-en" select="$elements[@xml:lang = 'en']"/>
-    <!-- For (the only example in ParlaMint) the French spelling of a name in GR. -->
+    <!-- For (the only example in PressMint) the French spelling of a name in GR. -->
     <!-- Note that corpus-language can be "en" for MTed corpora, so we need to choose only one result -->
     <xsl:variable name="element-yy" select="$elements[not(@xml:lang = 'en' or
                                             @xml:lang = $lang or ends-with(@xml:lang, '-Latn'))][1]"/>

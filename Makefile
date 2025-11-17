@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-PRESS := AT BG CZ ES GR IS LV NL PL SI
+PRESS := AT BG CZ ES FI GB GR HU IS IT LV NL PL PT SI UA ZA
 
 ##$JAVA-MEMORY## Set a java memory maxsize in GB
 JAVA-MEMORY =
@@ -12,7 +12,7 @@ leftBRACKET := (
 rightBRACKET := )
 LANG-CODE-LIST := $(shell echo "$(LANG-LIST)" | sed "s/$(leftBRACKET)[^$(rightBRACKET)]*$(rightBRACKET),*/ /g" | tr -s " " | sed 's/ $$//' )
 
-TAXONOMIES-TRANSLATE-INTERF = NER.ana topic
+TAXONOMIES-TRANSLATE-INTERF = NER.ana
 TAXONOMIES-TRANSLATE = $(addprefix PressMint-taxonomy-, $(TAXONOMIES-TRANSLATE-INTERF))
 
 TAXONOMIES-COPY-INTERF =
@@ -168,7 +168,7 @@ validate: $(validate-XX)
 $(addprefix MSG-validate-start-, $(PRESS)): MSG-validate-start-%:
 	@echo "INFO: $* validation start"
 
-## validate-XX ## validate corpus with all derived formats
+## validate-XX ## validate TEI and TEI.ana corpora
 $(validate-XX): validate-%: MSG-validate-start-% validateTaxonomies-% validate-TEI-% validate-TEI.ana-%
 	@echo "INFO: $* validation done"
 
@@ -178,17 +178,21 @@ validate-TEI: $(validate-TEI-XX)
 $(addprefix MSG-validate-TEI-start-, $(PRESS)): MSG-validate-TEI-start-%:
 	@echo "INFO: $* TEI validation start"
 
-## validate-TEI-XX ## validate-TEI corpus
+## validate-TEI-XX ## validate TEI corpus
 $(validate-TEI-XX): validate-TEI-%: MSG-validate-TEI-start-% validate-TEI-root-% validate-TEI-comp-%
 	@echo "INFO: $* TEI validation done"
 
+## validate-TEI-root-XX ## validate TEI teiCorpus
 $(addprefix validate-TEI-root-, $(PRESS)): validate-TEI-root-%:
 	@echo "validating $(PATHROOT_TEI_$*)"
-	@${val_root} $(PATHROOT_TEI_$*)
+	@${val_root} $(PATHROOT_TEI_$*) \
+	  || echo "ERROR: validating ($@) $(PATHROOT_TEI_$*) failed"
 
+## validate-TEI-comp-XX ## validate TEI component files included in teiCorpus
 $(addprefix validate-TEI-comp-, $(PRESS)): validate-TEI-comp-%:
 	@echo "validating component files in $(PATHROOT_TEI_$*)"
-	@echo $(PATHROOT_TEI_$*)|$(getcomponentincludes)| xargs -I {} ${val_comp} $(PATHBASE_TEI_$*)/{}
+	@echo $(PATHROOT_TEI_$*)|$(getcomponentincludes)| xargs -I {} ${val_comp} $(PATHBASE_TEI_$*)/{} \
+	  || echo "ERROR: validating ($@) $(PATHROOT_TEI_$*) failed"
 
 
 validate-TEI.ana-XX = $(addprefix validate-TEI.ana-, $(PRESS))
@@ -200,13 +204,17 @@ $(addprefix MSG-validate-TEI.ana-start-, $(PRESS)): MSG-validate-TEI.ana-start-%
 $(validate-TEI.ana-XX): validate-TEI.ana-%: MSG-validate-TEI.ana-start-% validate-TEI.ana-root-% validate-TEI.ana-comp-%
 	@echo "INFO: $* TEI.ana validation done"
 
+## validate-TEI.ana-root-XX ## validate TEI.ana teiCorpus
 $(addprefix validate-TEI.ana-root-, $(PRESS)): validate-TEI.ana-root-%:
 	@echo "validating $(PATHROOT_TEI.ana_$*)"
-	@${val_root} $(PATHROOT_TEI.ana_$*)
+	@${val_root} $(PATHROOT_TEI.ana_$*) \
+	  || echo "ERROR: validating ($@) $(PATHROOT_TEI.ana_$*) failed"
 
+## validate-TEI.ana-comp-XX ## validate TEI.ana component files included in teiCorpus
 $(addprefix validate-TEI.ana-comp-, $(PRESS)): validate-TEI.ana-comp-%:
 	@echo "validating component files in $(PATHROOT_TEI.ana_$*)"
-	@echo $(PATHROOT_TEI.ana_$*)|$(getcomponentincludes)| xargs -I {} ${val_comp} $(PATHBASE_TEI.ana_$*)/{}
+	@echo $(PATHROOT_TEI.ana_$*)|$(getcomponentincludes)| xargs -I {} ${val_comp} $(PATHBASE_TEI.ana_$*)/{} \
+	  || echo "ERROR: validating ($@) $(PATHROOT_TEI.ana_$*) failed"
 
 
 ## validateTaxonomies-XX ## validate taxonomies in folder PressMint-XX

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
   Input:
-    - single common pressmint taxonomy
+    - single common PressMint taxonomy
     - langs="" space separated language codes (if empty, all languages except en is removed from taxonomy)
   Output:
     - taxonomy with:
-      - english version
+      - English version
       - if translation for certain language missing then empty translation (in comment is stored an english origin)
       - langs version if present in common taxonomy
     - /taxonomy/xml:lang is set to "mul"

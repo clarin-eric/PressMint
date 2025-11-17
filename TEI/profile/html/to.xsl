@@ -43,4 +43,21 @@
    <xsl:param name="outputEncoding">utf-8</xsl:param>
 
    <xsl:param name="copyrightStatement"><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></xsl:param>
+
+
+   <xsl:template match="tei:head">
+      <!-- Determine section ID -->
+    <xsl:variable name="id">
+      <xsl:choose>
+        <xsl:when test="../@xml:id"><xsl:value-of select="../@xml:id"/></xsl:when>
+        <xsl:otherwise><xsl:value-of select="generate-id()"/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:attribute name="id"><xsl:value-of select="$id"/></xsl:attribute>
+
+    <a class="heading-anchor" href="#{$id}" aria-label="Anchor">⚓</a>
+
+    <!-- TEI’s default heading numbering and content -->
+    <xsl:apply-imports/>
+  </xsl:template>
 </xsl:stylesheet>

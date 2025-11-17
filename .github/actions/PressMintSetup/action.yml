@@ -13,8 +13,16 @@ runs:
       run: |
           export SAMPLE_DIR=SAMPLE
           echo "SAMPLE_DIR=$SAMPLE_DIR"  >> $GITHUB_ENV
-          export SAMPLE_SCRIPT=Scripts/corpus2sample.xsl
           echo "SAMPLE_SCRIPT=$SAMPLE_SCRIPT"  >> $GITHUB_ENV
+      shell: bash
+    - name: Fix APT sources and update
+      run: |
+        sudo rm -f /etc/apt/sources.list.d/* || true
+        sudo rm -f /etc/apt/apt-mirrors.txt || true
+        echo "deb http://archive.ubuntu.com/ubuntu noble main universe multiverse restricted" | sudo tee /etc/apt/sources.list
+        echo "deb http://archive.ubuntu.com/ubuntu noble-updates main universe multiverse restricted" | sudo tee -a /etc/apt/sources.list
+        echo "deb http://archive.ubuntu.com/ubuntu noble-security main universe multiverse restricted" | sudo tee -a /etc/apt/sources.list
+        sudo apt-get update
       shell: bash
     - name: Install deps
       run: |
@@ -45,7 +53,6 @@ runs:
       uses: actions/cache@v3
       with:
         path: |
-          PressMint/Scripts/bin/tools
           PressMint/Scripts/bin/Saxon/saxon-he-12.4.jar
           PressMint/Scripts/bin/Saxon/lib
         key: ${{ runner.os }}-PressMint-deps-V8
@@ -54,8 +61,7 @@ runs:
       run: |
         echo "::debug::Dependencies cache hit"
         pwd
-        ls -l $GITHUB_WORKSPACE/PressMint/Scripts/bin/tools \
-          $GITHUB_WORKSPACE/PressMint/Scripts/bin/Saxon/saxon-he-12.4.jar
+        ls -l $GITHUB_WORKSPACE/PressMint/Scripts/bin/Saxon/saxon-he-12.4.jar
       shell: bash
     #- name: Checkout UniversalDependencies tools
     #  if: steps.cache_deps.outputs.cache-hit != 'true'
@@ -66,6 +72,7 @@ runs:
     - name: Download Saxon
       if: steps.cache_deps.outputs.cache-hit != 'true'
       run: |
+          mkdir -p $GITHUB_WORKSPACE/PressMint/Scripts/bin/Saxon
           cd $GITHUB_WORKSPACE/PressMint/Scripts/bin/Saxon
           wget https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE12-4/SaxonHE12-4J.zip
           unzip SaxonHE12-4J.zip
