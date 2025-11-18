@@ -18,11 +18,6 @@ foreach $inDir (glob $inDirs) {
             print STDERR "WARN: $outDir does not exist, creating it\n";
             `mkdir $outDir`
         }
-        elsif (not exists $seen{$corpus}) {
-            print STDERR "INFO: First removing old $corpus files from $outDir\n";
-            `rm -fr $outDir/*`;
-            $seen{$corpus}++
-        }
         `cp -r $inDir/* $outDir`
     }
 }

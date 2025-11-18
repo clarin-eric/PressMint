@@ -99,7 +99,7 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="tei:titleStmt/tei:title[@type='main']">
+  <xsl:template match="tei:titleStmt/tei:title">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:value-of select="replace(., '( SAMPLE)?\]', ' SAMPLE]')"/>
@@ -164,7 +164,7 @@
   <!-- Here we pick the first and last $Range paragraphs and all
        immediatelly preceding and intervening other elements -->
   <xsl:template match="tei:body">
-    <xsl:variable name="all" select="count(//tei:p)"/>
+    <xsl:variable name="all" select="count(//tei:text//tei:p)"/>
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:variable name="to">
@@ -199,24 +199,21 @@
     <xsl:param name="to">0</xsl:param>
     <xsl:message select="concat('SELECTING ', /tei:TEI/@xml:id, ': ', $to, ' AND ', $from)"/>
     <xsl:variable name="text">
-      <xsl:copy>
-        <xsl:apply-templates select="@*"/>
-        <xsl:variable name="incipit">
-          <xsl:apply-templates>
-            <xsl:with-param name="to" select="$to"/>
-          </xsl:apply-templates>
-        </xsl:variable>
-        <xsl:variable name="explicit">
-          <xsl:apply-templates>
-            <xsl:with-param name="from" select="$from"/>
-          </xsl:apply-templates>
-        </xsl:variable>
-        <xsl:if test="$incipit/tei:*">
-          <xsl:copy-of select="$incipit"/>
-          <gap reason="editorial"><desc xml:lang="en">SAMPLING</desc></gap>
-        </xsl:if>
-        <xsl:copy-of select="$explicit"/>
-      </xsl:copy>
+      <xsl:variable name="incipit">
+        <xsl:apply-templates>
+          <xsl:with-param name="to" select="$to"/>
+        </xsl:apply-templates>
+      </xsl:variable>
+      <xsl:variable name="explicit">
+        <xsl:apply-templates>
+          <xsl:with-param name="from" select="$from"/>
+        </xsl:apply-templates>
+      </xsl:variable>
+      <xsl:if test="$incipit/tei:*">
+        <xsl:copy-of select="$incipit"/>
+        <gap reason="editorial"><desc xml:lang="en">SAMPLING</desc></gap>
+      </xsl:if>
+      <xsl:copy-of select="$explicit"/>
     </xsl:variable>
     <xsl:if test="$text//tei:p">
       <xsl:copy-of select="$text"/>

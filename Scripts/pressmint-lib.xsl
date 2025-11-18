@@ -48,52 +48,26 @@
   <xsl:function name="mk:at-date">
     <xsl:param name="element"/>
     <xsl:variable name="TEI" select="$element/ancestor-or-self::tei:TEI"/>
-    <xsl:variable name="date" select="$TEI/tei:teiHeader//tei:setting/tei:date"/>
+    <xsl:variable name="date" select="$TEI/tei:teiHeader//tei:sourceDesc/tei:bibl/tei:date"/>
     <xsl:if test="not($date/@when)">
       <xsl:message terminate="yes">
-        <xsl:text>FATAL ERROR: Can't find TEI date/@when in setting of input file </xsl:text>
+        <xsl:text>FATAL ERROR: Can't find TEI date/@when in sourceDescof input file </xsl:text>
         <xsl:value-of select="$TEI/@xml:id"/>
       </xsl:message>
     </xsl:if>
     <xsl:value-of select="$date/@when"/>
   </xsl:function>
   
-  <!-- Localised title of a corpus component: subtitle, if exists, otherwise main title -->
+  <!-- Localised title of a corpus component -->
   <xsl:variable name="title" select="mk:title($component)"/>
   <xsl:function name="mk:title">
     <xsl:param name="element"/>
     <xsl:variable name="TEI" select="$element/ancestor-or-self::tei:TEI"/>
-    <xsl:variable name="titles">
+    <xsl:variable name="title">
       <xsl:apply-templates mode="expand" select="$TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
     </xsl:variable>
-    <xsl:variable name="subtitles" select="et:l10n($corpus-language, $titles/tei:title[@type='sub'])"/>
-    <xsl:variable name="main-title" select="et:l10n($corpus-language, $titles/tei:title[@type='main'])"/>
-    <xsl:choose>
-      <!-- Several subtitles in same language -->
-      <xsl:when test="normalize-space($subtitles[2])">
-        <xsl:variable name="joined-subtitles">
-          <xsl:variable name="j-s">
-            <xsl:for-each select="$subtitles/self::tei:*">
-              <xsl:value-of select="concat(., $multi-separator)"/>
-            </xsl:for-each>
-          </xsl:variable>
-          <xsl:value-of select="replace($j-s, '.$', '')"/>
-        </xsl:variable>
-        <xsl:message select="concat('INFO: Joining subtitles: ', $joined-subtitles, ' in ', $TEI/@xml:id)"/>
-        <xsl:value-of select="$joined-subtitles"/>
-      </xsl:when>
-      <xsl:when test="normalize-space($subtitles)">
-        <xsl:value-of select="normalize-space($subtitles)"/>
-      </xsl:when>
-      <xsl:when test="normalize-space($main-title)">
-        <!-- Remove [PressMint] stamp -->
-        <xsl:value-of select="replace(normalize-space($main-title), '\s*\[.+\]$', '')"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:message select="concat('ERROR: cant find title for ', $text_id)"/>
-        <xsl:text>-</xsl:text>
-      </xsl:otherwise>
-    </xsl:choose>
+    <!-- Remove [PressMint] stamp -->
+    <xsl:value-of select="replace(normalize-space($title), '\s*\[.+\]$', '')"/>
   </xsl:function>
   
   <xsl:variable name="rootHeader">

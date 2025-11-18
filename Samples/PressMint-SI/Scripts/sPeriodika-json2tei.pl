@@ -18,6 +18,9 @@ $perplexity_treshold = -84.00;
 
 #Prerequisite for validation:
 $jing = 'java -jar Scripts/bin/jing.jar';
+#In sPeriodika:
+#$schema = '../PressMint/TEI/PressMint.odd.rng';
+#In PressMint:
 $schema = '../../../PressMint/TEI/PressMint.odd.rng';
 
 # Mode parameter should be either "text" or "ana"
@@ -100,8 +103,8 @@ foreach $inFile (glob $inFiles) {
     #Validate:
     $error = `$jing $schema $outFile`;
     if ($error) {
-        print STDERR "ERROR: Mistakes in file $outFile, deleting it:\n$error\n";
-        `rm $outFile`
+        print STDERR "ERROR: Mistakes in file $outFile:\n$error\n";
+        #`rm $outFile`
     }
 }
 
@@ -139,8 +142,8 @@ sub processFile {
         
         # Now substitute various pieces of the TEI file:
         $facs = &prepFacs;
-        if ($mode eq 'text') {$text = &prepText}
-        else {$text = &prepAna}
+        if ($mode eq 'text') {$text = &prepText('text')}
+        else {$text = &prepText('ana')}
         $TEI = &prepTEI($TEI_template);
     }
     return ($pubdate, $fname, $TEI)
@@ -170,8 +173,10 @@ sub prepFacs {
 }
 
 sub prepText {
+    my $mode = shift;
+    my $page_text;
     my $text;
-    foreach $page (@{${$record}{'pages'}}) {
+    foreach my $page (@{${$record}{'pages'}}) {
         my $facs_id = &facs_url2id($id, ${$page}{'image_url'});
         my $perplexity = ${$page}{'text_csmtised_kenlm_perplexity'}{'mean'};
         my $quality_class = &quality($perplexity);
@@ -179,41 +184,37 @@ sub prepText {
         #$text .= "        <span type=\"quality\">\n";
         #$text .= "          <measure type=\"kenlm_perplexity\" quantity=\"$perplexity\"/>\n";
         #$text .= "        </span>\n";
-        my $page = ${$page}{'text_csmtised_splitfixed'};
-        $pN = 0;
-        foreach my $line (split(/\n\n+/, $page)) {
-            $pN++;
-            $line =~ s/^\n//;
-            $line =~ s/\n$//;
-            if ($line) {
-                $text .= "        "; # Indent
-                $text .= "<p ana=\"#$quality_class\">";
-                $str   = &fix_chars($line);
-                $text .= &xml_encode($str);
-                $text .= "</p>\n";
+        my $first_p = 1;
+        my $pN = 0;
+        if ($mode eq 'text') {
+            $page_text = ${$page}{'text_csmtised_splitfixed'};
+            foreach my $line (split(/\n\n+/, $page_text)) {
+                $pN++;
+                $line =~ s/^\n//;
+                $line =~ s/\n$//;
+                if ($line) {
+                    $text .= "        "; # Indent
+                    $text .= "<p ana=\"#$quality_class\">";
+                    $str   = &fix_chars($line);
+                    $text .= &xml_encode($str);
+                    $text .= "</p>\n";
+                }
             }
+            $text =~ s/\n$//;
         }
-    }
-    $text =~ s/\n$//;
-    return $text
-}
-
-sub prepAna {
-    my $text;
-    foreach $page (@{${$record}{'pages'}}) {
-        my $facs_id = &facs_url2id($id, ${$page}{'image_url'});
-        $text .= "        <pb facs=\"#$facs_id\"/>\n";
-        $first_p = 1;
-        my $page = ${$page}{'text_csmtised_splitfixed_CONLLU'};
-        foreach my $sent (split(/\n\n/, $page)) {
-            if ($sent =~ /^# newpar/) {
-                if ($first_p) {$first_p = 0}
-                else {$text .= "        </p>\n"}
-                $text .= "        <p>\n";
+        elsif ($mode eq 'ana') {
+            $page_text = ${$page}{'text_csmtised_splitfixed_CONLLU'};
+            foreach my $sent (split(/\n\n/, $page_text)) {
+                if ($sent =~ /^# newpar/) {
+                    if ($first_p) {$first_p = 0}
+                    else {$text .= "        </p>\n"}
+                    $text .= "        "; # Indent
+                    $text .= "<p ana=\"#$quality_class\">\n";
+                }
+                $text .= &conllu2tei($sent);
             }
-            $text .= &conllu2tei($sent);
+            $text .= "        </p>\n" unless $first_p;
         }
-        $text .= "        </p>\n" unless $first_p;
     }
     return $text
 }
@@ -361,8 +362,8 @@ sub fix_chars {
     $str =~ s|[\x{2011}]|-|g;                # NON-BREAKING HYPHEN
     $str =~ s|[\x{E800}-\x{F8FF}]||g;        # PUA
     $str =~ s|\s+| |g; s|^ ||; s| $||;       # Normalize spaces
-    unless ($str or $str == 0) {
-        print STDERR "ERROR: nothing left if bad chars removed in '$input'\n";
+    if ($str eq '') {
+        print STDERR "WARN: nothing left if bad chars were removed in '$input', leaving alone\n";
         return $input
     }
     else {return $str}
@@ -439,8 +440,8 @@ __DATA__
             </publisher>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
-               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
-               <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="sl">To delo je ponujeno pod <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
             </availability>
             <date when="==TODAY==">==TODAY-SL==</date>
          </publicationStmt>
@@ -454,13 +455,13 @@ __DATA__
                <biblScope unit="volume">==VOLUME==</biblScope>
                <biblScope unit="issue">==ISSUE==</biblScope>
                <idno type="URN">==URN==</idno>
-               <idno type="URI">==DLIB-URL==</idno>
+               <idno type="URI" subtype="URL">==DLIB-URL==</idno>
             </bibl>
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
          <change when="==TODAY==">
-            <name>Tomaž Erjavec</name>: Convert sPeriodika sample to PressMint format.</change>
+            <name>Tomaž Erjavec</name>: Convert sampled sPeriodika to PressMint format.</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
