@@ -64,6 +64,10 @@
 
   
   <xsl:template match="tei:front">
+    <header class="front-header">
+        <xsl:apply-templates select="../tei:front/tei:titlePage"/>
+    </header>
+  
     <aside class="front-sidebar">
         <xsl:apply-templates select="*[not(self::tei:titlePage)]"/>
     </aside>
@@ -71,7 +75,6 @@
 
   <xsl:template match="tei:body">
     <main class="main-text">
-      <xsl:apply-templates select="../tei:front/tei:titlePage"/>
         <xsl:apply-templates/>
     </main>
   </xsl:template>

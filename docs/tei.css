@@ -124,14 +124,20 @@ body.pagetable{
 /* now the layers of the header */
 
 .heading-anchor {
-  margin-right: 0.4em;
+  margin-left: -1em;
+  margin-right: 1em;
   text-decoration: none;
-  opacity: 0.7;
+  color:#2090b5;
+  opacity: 0.3;
+  font-family: "Segoe UI Symbol", "Segoe UI", "Noto Sans Symbols", "Apple Symbols", "DejaVu Sans", "Times New Roman", serif;
+  font-weight: bold;
+  font-size:200%;
 }
 
 
-hover .heading-anchor{
+a:hover.heading-anchor{
   opacity: 1;
+  text-decoration: none;
 }
 
 h1,h2,h3,h4,h5,h6,header {
@@ -872,8 +878,6 @@ address {
 div.stdfooter{
     clear:both;
     padding:2em;
-    border:2px solid #2090b5;
-    border-radius: 2em;
 }
 
 div.altfigure{
@@ -1123,7 +1127,7 @@ body {
     display: grid;
     grid-template-columns: 20% 1fr;   /* sidebar + main text */
     grid-template-areas:
-        "front main"
+        "header header"
         "front main"
         "footer footer"
         "notes notes"
@@ -1132,18 +1136,23 @@ body {
     padding: 2rem;
 }
 
+/* ====== FRONT MATTER (header) ====== */
+header.front-header {
+    grid-area: header;
+    background-image: url('https://www.clarin.eu/sites/default/files/styles/max_1900x900/public/PressMint-Logo.png?itok=H9r5xkWq'); 
+    background-size: 10%;
+    padding-left: 20%;
+    background-position: left 5% top 5%;
+    background-repeat: no-repeat;
+}
+
 /* ====== FRONT MATTER (ASIDE) ====== */
 aside.front-sidebar {
     grid-area: front;
     padding: 1.5rem;
-    padding-top:100%;
     border: none;
     font-size: 0.8rem;
     width:auto;
-    background-image: url('https://www.clarin.eu/sites/default/files/styles/max_1900x900/public/PressMint-Logo.png?itok=H9r5xkWq'); 
-    background-size: 100%;
-    background-position: left 0px top 0px;
-    background-repeat: no-repeat;
 }
 
 aside.front-sidebar h1,
@@ -1157,12 +1166,16 @@ aside ul.toc {
 }
 
 /* ====== MAIN BODY (MAIN ELEMENT) ====== */
-main.main-text {
-    grid-area: main;
+section {
     background: white;
     padding: 2rem 3rem;
     border-radius: 1em;
     box-shadow: 0 0 14px rgba(0,0,0,0.05);
+    margin-bottom: 2em;
+}
+
+main.main-text {
+    grid-area: main;
 }
 
 main.main-text h1 {
@@ -1184,10 +1197,6 @@ main.main-text h3 {
 /* ====== BACK MATTER (FOOTER) ====== */
 footer.appendix-footer {
     grid-area: footer;
-    background: #f0efea1f;
-    padding: 1.5rem 2rem;
-    border: 3px solid #ccc5b9;
-    border-radius: 1em;
     margin-top: 2rem;
 }
 .notes {
@@ -1212,18 +1221,24 @@ footer.appendix-footer h2 {
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 900px) {
-    .wrapper {
-        grid-template-columns: 1fr;
+    .simple {
+        grid-template-columns: 100%;
         grid-template-areas:
+            "header"
             "front"
             "main"
             "footer"
             "notes"
             "foot";
     }
-
+    section {
+      background: white;
+      padding: 0.5rem 0.5rem;
+      border-radius: 1em;
+      box-shadow: 0 0 14px rgba(0,0,0,0.05);
+      margin-bottom: 2em;
+    }
     aside.front-sidebar {
-        border-right: none;
-        border-bottom: 2px solid #d0d7e0;
+        border: none;
     }
 }
