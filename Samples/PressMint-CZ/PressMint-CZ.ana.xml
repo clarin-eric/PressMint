@@ -46,8 +46,12 @@
             </availability>
          </publicationStmt>
          <sourceDesc>
-        
-      </sourceDesc>
+            <bibl>
+               <title type="main" xml:lang="cs">Národní knihovna České republiky</title>
+               <title type="main" xml:lang="en">National Library of the Czech Republic</title>
+               <idno type="URI" subtype="URL">https://www.nkp.cz</idno>
+            </bibl>
+         </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <tagsDecl>
@@ -69,8 +73,14 @@
                         href="PressMint-taxonomy-NER.ana.xml"/>
          </classDecl>
          <appInfo>
-            <application ident="UDPipe" version="2"/>
-            <application ident="NameTag" version="3"/>
+            <application ident="UDPipe" version="2">
+               <label>UDPipe 2 (czech-pdt-ud-2.15-241121 model)</label>
+               <desc xml:lang="en">POS tagging and lemmatization done with UDPipe 2 (<ref target="http://ufal.mff.cuni.cz/udpipe/2">http://ufal.mff.cuni.cz/udpipe/2</ref>) with czech-pdt-ud-2.15-241121 model</desc>
+            </application>
+            <application ident="NameTag" version="3">
+               <label>NameTag 3 (nametag3-czech-cnec2.0-240830 model)</label>
+               <desc xml:lang="en">Name entity recognition done with NameTag 3 (<ref target="http://ufal.mff.cuni.cz/nametag/3">http://ufal.mff.cuni.cz/nametag/3</ref>) with czech-cnec2.0-200831 model (<ref target="http://hdl.handle.net/11234/1-3443">http://hdl.handle.net/11234/1-3443</ref>). Posprocessing: nested named entities have been merged into four categories (PER, LOC, ORG, MISC).</desc>
+            </application>
          </appInfo>
       </encodingDesc>
    </teiHeader>
