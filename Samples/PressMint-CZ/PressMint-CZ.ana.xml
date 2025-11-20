@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-CZ" xml:lang="cs">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Český korpus historických novin PressMint-CZ.ana [PressMint.ana]</title>
+            <title xml:lang="en">Czech historical newspaper corpus PressMint-CZ.ana [PressMint.ana]</title>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0001-7953-8783">Matyáš Kopp</persName>
+               <resp xml:lang="en">TEI XML corpus encoding</resp>
+               <resp xml:lang="en">Linguistic annotation</resp>
+            </respStmt>
+            <funder>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <orgName xml:lang="cs">Výzkumná infrastruktura CLARIN</orgName>
+            </funder>
+            <funder>
+               <orgName xml:lang="cs">LINDAT/CLARIAH-CZ: Digitální výzkumná infrastruktura pro jazykové technologie, umění a humanitní vědy</orgName>
+               <orgName xml:lang="en">LINDAT/CLARIAH-CZ: Digital Research Infrastructure for Language Technologies, Arts and Humanities</orgName>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent>
+            <measure unit="words" quantity="10062" xml:lang="en">10062 words</measure>
+            <measure unit="words" quantity="10062" xml:lang="cs">10062 slov</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <orgName xml:lang="cs">Výzkumná infrastruktura CLARIN</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <idno type="URI">https://github.com/clarin-eric/PressMint</idno>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the
+            <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0
+            International License</ref>.
+          </p>
+               <p xml:lang="cs">Toto dílo je licencováno
+            <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Uveďte původ 4.0
+            Mezinárodní Veřejná licence</ref>.
+          </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title type="main" xml:lang="cs">Národní knihovna České republiky</title>
+               <title type="main" xml:lang="en">National Library of the Czech Republic</title>
+               <idno type="URI" subtype="URL">https://www.nkp.cz</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <tagsDecl>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="1"/>
+               <tagUsage gi="link" occurs="12552"/>
+               <tagUsage gi="linkGrp" occurs="659"/>
+               <tagUsage gi="name" occurs="1056"/>
+               <tagUsage gi="p" occurs="118"/>
+               <tagUsage gi="pb" occurs="4"/>
+               <tagUsage gi="pc" occurs="2417"/>
+               <tagUsage gi="s" occurs="659"/>
+               <tagUsage gi="text" occurs="1"/>
+               <tagUsage gi="w" occurs="10208"/>
+            </namespace>
+         </tagsDecl>
+         <classDecl>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                        href="PressMint-taxonomy-NER.ana.xml"/>
+         </classDecl>
+         <appInfo>
+            <application ident="UDPipe" version="2">
+               <label>UDPipe 2 (czech-pdt-ud-2.15-241121 model)</label>
+               <desc xml:lang="en">POS tagging and lemmatization done with UDPipe 2 (<ref target="http://ufal.mff.cuni.cz/udpipe/2">http://ufal.mff.cuni.cz/udpipe/2</ref>) with czech-pdt-ud-2.15-241121 model</desc>
+            </application>
+            <application ident="NameTag" version="3">
+               <label>NameTag 3 (nametag3-czech-cnec2.0-240830 model)</label>
+               <desc xml:lang="en">Name entity recognition done with NameTag 3 (<ref target="http://ufal.mff.cuni.cz/nametag/3">http://ufal.mff.cuni.cz/nametag/3</ref>) with czech-cnec2.0-200831 model (<ref target="http://hdl.handle.net/11234/1-3443">http://hdl.handle.net/11234/1-3443</ref>). Posprocessing: nested named entities have been merged into four categories (PER, LOC, ORG, MISC).</desc>
+            </application>
+         </appInfo>
+      </encodingDesc>
+   </teiHeader>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+               href="1848/PressMint-CZ_1848-04-05-f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f.xml"/>
+</teiCorpus>
