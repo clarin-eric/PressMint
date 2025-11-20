@@ -179,7 +179,7 @@ $(addprefix MSG-validate-TEI-start-, $(PRESS)): MSG-validate-TEI-start-%:
 	@echo "INFO: $* TEI validation start"
 
 ## validate-TEI-XX ## validate TEI corpus
-$(validate-TEI-XX): validate-TEI-%: MSG-validate-TEI-start-% validate-TEI-root-% validate-TEI-comp-%
+$(validate-TEI-XX): validate-TEI-%: MSG-validate-TEI-start-% validate-TEI-root-% validate-TEI-comp-% check-links-TEI_%
 	@echo "INFO: $* TEI validation done"
 
 ## validate-TEI-root-XX ## validate TEI teiCorpus
@@ -201,7 +201,7 @@ $(addprefix MSG-validate-TEI.ana-start-, $(PRESS)): MSG-validate-TEI.ana-start-%
 	@echo "INFO: $* TEI.ana validation start"
 
 ## validate-TEI.ana-XX ## validate-TEI.ana corpus
-$(validate-TEI.ana-XX): validate-TEI.ana-%: MSG-validate-TEI.ana-start-% validate-TEI.ana-root-% validate-TEI.ana-comp-%
+$(validate-TEI.ana-XX): validate-TEI.ana-%: MSG-validate-TEI.ana-start-% validate-TEI.ana-root-% validate-TEI.ana-comp-% check-links-TEI.ana_%
 	@echo "INFO: $* TEI.ana validation done"
 
 ## validate-TEI.ana-root-XX ## validate TEI.ana teiCorpus
@@ -255,8 +255,30 @@ $(uniqIdsTaxonomies-XX): uniqIdsTaxonomies-%:
 		echo "INFO: No duplicit IDs in taxonomies"; \
 	  fi; }
 
-
-
+###### Check links
+check-links-XX = $(addprefix check-links-, $(PRESS))
+## check-links ## validate all corpora with Scripts/check-links.xsl
+check-links: $(check-links-XX)
+## check-links-XX ## validate both TEI and TEI.ana version of XX corpus with Scripts/check-links.xsl
+$(check-links-XX): check-links-%: check-links-TEI_% check-links-TEI.ana_%
+## check-links-FF_XX ## validate both FF(TEI/TEI.ana) version of XX corpus with Scripts/check-links.xsl
+check-links-FF_XX = $(foreach f,$(ROOT_FORMATS),$(foreach p,$(PRESS),check-links-$(f)_$(p)))
+$(check-links-FF_XX): check-links-%:
+	@echo "INFO: starting link checking ($*): $(PATHBASE_$*)"
+	@root=$(PATHROOT_$*);\
+	base=$$(dirname "$${root}"); \
+	echo "$${base} is base for $${root}"; \
+	echo "checking links in root:" $${root}; \
+	${s} ${vlink} $${root}; \
+	for component in `echo $${root}| ${getheaderincludes}`; do \
+	  echo "checking links in header component:" $${base}/$${component}; \
+	  ${s} meta=$(PWD)/$${root} ${vlink} $${base}/$${component}; \
+	done; \
+	for component in `echo $${root}| ${getcomponentincludes}`; do \
+	  echo "checking links in component:" $${base}/$${component}; \
+	  ${s} meta=$(PWD)/$${root} ${vlink} $${base}/$${component}; \
+	done
+	@echo "INFO: DONE link checking ($*)"
 
 
 
@@ -303,7 +325,7 @@ $(addprefix get-corpus-path-TEI-, $(PRESS)): get-corpus-path-TEI-%:
 ###### Help
 
 help-intro:
-	@echo "replace XX with country code or run target without -XX to process all countries: \n\t ${PARLIAMENTS}\n "
+	@echo "replace XX with country code or run target without -XX to process all countries: \n\t ${PRESS}\n "
 
 help-variables:
 	@echo "\033[1m\033[32mVARIABLES:\033[0m"
@@ -322,7 +344,7 @@ help: help-intro help-variables help-targets
 ## help-advanced ## print full help
 help-advanced: help
 	@echo "\033[1m\033[32mADVANCED:\033[0m"
-	@echo "If you want to run target on multiple targets but not all, you can overwrite PARLIAMENTS variable. E.g. make check-links PARLIAMENTS=\"GB CZ\""
+	@echo "If you want to run target on multiple targets but not all, you can overwrite PRESS variable. E.g. make check-links PRESS=\"GB CZ\""
 	@grep -E '^## *![a-zA-Z_-]+.*?##.*$$|^##!##' $(MAKEFILE_LIST) |sed 's/^## *!/##/'| awk 'BEGIN {FS = " *## *"}; {printf "\033[1m%s\033[0m\033[35m%-25s\033[0m %s\n", $$4, $$2, $$3}'
 
 
@@ -332,6 +354,9 @@ SAXON = ./Scripts/bin/saxon.jar
 s = java $(JM) -jar $(SAXON)
 P = parallel --gnu --halt 2
 j = java $(JM) -jar ./Scripts/bin/jing.jar
+
+vlink = -xsl:Scripts/check-links.xsl
+
 
 getincludes = xargs -I % java -cp $(SAXON) net.sf.saxon.Query -xi:off \!method=adaptive -qs:'//*[local-name()="include"]/@href' -s:% |sed 's/^ *href="//;s/"//'
 getheaderincludes = xargs -I % java -cp $(SAXON) net.sf.saxon.Query -xi:off \!method=adaptive -qs:'//*[local-name()="teiHeader"]//*[local-name()="include"]/@href' -s:% |sed 's/^ *href="//;s/"//'
