@@ -179,7 +179,7 @@ $(addprefix MSG-validate-TEI-start-, $(PRESS)): MSG-validate-TEI-start-%:
 	@echo "INFO: $* TEI validation start"
 
 ## validate-TEI-XX ## validate TEI corpus
-$(validate-TEI-XX): validate-TEI-%: MSG-validate-TEI-start-% validate-TEI-root-% validate-TEI-comp-% check-links-TEI_%
+$(validate-TEI-XX): validate-TEI-%: MSG-validate-TEI-start-% validate-TEI-root-% validate-TEI-comp-% check-links-TEI_% check-chars-TEI_%
 	@echo "INFO: $* TEI validation done"
 
 ## validate-TEI-root-XX ## validate TEI teiCorpus
@@ -201,7 +201,7 @@ $(addprefix MSG-validate-TEI.ana-start-, $(PRESS)): MSG-validate-TEI.ana-start-%
 	@echo "INFO: $* TEI.ana validation start"
 
 ## validate-TEI.ana-XX ## validate-TEI.ana corpus
-$(validate-TEI.ana-XX): validate-TEI.ana-%: MSG-validate-TEI.ana-start-% validate-TEI.ana-root-% validate-TEI.ana-comp-% check-links-TEI.ana_%
+$(validate-TEI.ana-XX): validate-TEI.ana-%: MSG-validate-TEI.ana-start-% validate-TEI.ana-root-% validate-TEI.ana-comp-% check-links-TEI.ana_% check-chars-TEI.ana_%
 	@echo "INFO: $* TEI.ana validation done"
 
 ## validate-TEI.ana-root-XX ## validate TEI.ana teiCorpus
@@ -280,7 +280,30 @@ $(check-links-FF_XX): check-links-%:
 	done
 	@echo "INFO: DONE link checking ($*)"
 
-
+###### Check chars
+check-chars-XX = $(addprefix check-chars-, $(PRESS))
+## check-chars ## validate all corpora with Scripts/check-chars.pl
+check-chars: $(check-chars-XX)
+## check-chars-XX ## validate both TEI and TEI.ana version of XX corpus with Scripts/check-chars.pl
+$(check-chars-XX): check-chars-%: check-chars-TEI_% check-chars-TEI.ana_%
+## check-chars-FF_XX ## validate both FF(TEI/TEI.ana) version of XX corpus with Scripts/check-chars.pl
+check-chars-FF_XX = $(foreach f,$(ROOT_FORMATS),$(foreach p,$(PRESS),check-chars-$(f)_$(p)))
+$(check-chars-FF_XX): check-chars-%:
+	@echo "INFO: starting chars checking ($*): $(PATHBASE_$*)"
+	@root=$(PATHROOT_$*);\
+	base=$$(dirname "$${root}"); \
+	echo "$${base} is base for $${root}"; \
+	echo "checking chars in root:" $${root}; \
+	${vchars} $${root}; \
+	for component in `echo $${root}| ${getheaderincludes}`; do \
+	  echo "checking chars in header component:" $${base}/$${component}; \
+	  ${vchars} $${base}/$${component}; \
+	done; \
+	for component in `echo $${root}| ${getcomponentincludes}`; do \
+	  echo "checking chars in component:" $${base}/$${component}; \
+	  ${vchars} $${base}/$${component}; \
+	done
+	@echo "INFO: DONE chars checking ($*)"
 
 
 ###### Convert
@@ -356,7 +379,7 @@ P = parallel --gnu --halt 2
 j = java $(JM) -jar ./Scripts/bin/jing.jar
 
 vlink = -xsl:Scripts/check-links.xsl
-
+vchars = perl ./Scripts/check-chars.pl
 
 getincludes = xargs -I % java -cp $(SAXON) net.sf.saxon.Query -xi:off \!method=adaptive -qs:'//*[local-name()="include"]/@href' -s:% |sed 's/^ *href="//;s/"//'
 getheaderincludes = xargs -I % java -cp $(SAXON) net.sf.saxon.Query -xi:off \!method=adaptive -qs:'//*[local-name()="teiHeader"]//*[local-name()="include"]/@href' -s:% |sed 's/^ *href="//;s/"//'
