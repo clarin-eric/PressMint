@@ -16,6 +16,6 @@ runs:
     - name: Validate Schema
       working-directory: ${{github.workspace}}/PressMint
       run: |
-        make validate-${{inputs.press}} | tee PressMint-${{inputs.press}}.log
-        grep -iq error PressMint-${{inputs.press}}.log && exit 1 || echo "ParlaMint-${{inputs.press}} validation PASSED"
+        make validate-${{inputs.press}}  2>&1 | sed "s/^\(.*\)\(\berror\b\)/::error::\1\2/i;s/^\(.*\)\(\bwarn\)/::warning::\1\2/i;"  | tee PressMint-${{inputs.press}}.log
+        grep -iq error PressMint-${{inputs.press}}.log && echo "::error:: PressMint-$parla validation FAILED" && exit 1 || echo "::notice:: ParlaMint-${{inputs.press}} validation PASSED"
       shell: bash
