@@ -29,7 +29,7 @@ runs:
               make validate-TEI-${{inputs.press}}  2>&1 \
                 | sed "s/^\(.*\)\(\berror\b\)/::error::\1\2/i;s/^\(.*\)\(\bwarn\)/::warning::\1\2/i;"  \
                 | tee PressMint-${{inputs.press}}.$TYPE.log
-              grep -iq error PressMint-${{inputs.press}}.log \
+              grep -iq error PressMint-${{inputs.press}}.$TYPE.log \
                 && echo "::error:: PressMint-$parla.$TYPE validation FAILED" \
                 && STATUS=1 \
                 || echo "::notice:: ParlaMint-${{inputs.press}}.$TYPE validation PASSED"
