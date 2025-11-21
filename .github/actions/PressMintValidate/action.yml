@@ -43,3 +43,4 @@ runs:
     - name: Failing if anything is wrong
       if: ${{ steps.validate.outputs.status == '1' }}
       run: exit 1
+      shell: bash
