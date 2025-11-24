@@ -1,4 +1,4 @@
-name: 'Validate'
+name: 'Build validation'
 #description: ''
 inputs:
   press:
@@ -13,34 +13,40 @@ runs:
     - name: Set environment variables
       run: echo "REQ_TRANSLATION=${{ inputs.requireTaxonomiesTranslations || '1' }}" >> $GITHUB_ENV
       shell: bash
-    - name: Validate
-      id: validate
+    - name: Build
+      id: build
       working-directory: ${{github.workspace}}/PressMint
       run: |
         INTYPES=("" ".ana")
         STATUS=0
+        SKIP=0
         for INTYPE in "${INTYPES[@]}"; do
           TYPE="TEI${INTYPE}"
           ROOT="Samples/PressMint-${{inputs.press}}/PressMint-${{inputs.press}}${INTYPE}.xml"
           if [ ! -f "$ROOT" ]; then
               echo "::warning title=Corpus root is missing (${{inputs.press}}.$TYPE)::$ROOT not found"
-          else
-            echo "::notice:: Running validation for ParlaMint-${{inputs.press}}.$TYPE"
-              make validate-TEI-${{inputs.press}}  2>&1 \
-                | sed "s/^\(.*\)\(\berror\b\)/::error::\1\2/i;s/^\(.*\)\(\bwarn\)/::warning::\1\2/i;"  \
-                | tee PressMint-${{inputs.press}}.$TYPE.log
-              grep -iq error PressMint-${{inputs.press}}.$TYPE.log \
-                && echo "::error:: PressMint-$parla.$TYPE validation FAILED" \
-                && STATUS=1 \
-                || echo "::notice:: ParlaMint-${{inputs.press}}.$TYPE validation PASSED"
+              SKIP=1
           fi
         done
+        if [ $SKIP -eq 1 ] ; then
+          echo "::warning title=SKIPPING BUILD VALIDATION (${{inputs.press}})::"
+        else
+          echo "::notice:: Running build-validation for ParlaMint-${{inputs.press}}"
+          BUILDDIR=$(make test-build-${{inputs.press}} KEEP-DATA=1 2>&1 | sed -n 's/^OUTPUT_FOLDER=//p')
+          find ${BUILDDIR}
+          cat ${BUILDDIR}/Logs/PressMint-${{inputs.press}}.log \
+                | sed "s/^\(.*\)\(\berror\b\)/::error::\1\2/i;s/^\(.*\)\(\bfatal\b\)/::error::\1\2/i;s/^\(.*\)\(\bwarn\)/::warning::\1\2/i;"
+          test -s ${BUILDDIR}/Logs/PressMint-${{inputs.press}}.error.log \
+                && echo "::error:: PressMint-$parla build-validation FAILED" \
+                && STATUS=1 \
+                || echo "::notice:: ParlaMint-${{inputs.press}} build-validation PASSED"
+        fi
         echo "status=$STATUS" >> $GITHUB_OUTPUT
       shell: bash
       continue-on-error: true
 
 
     - name: Failing if anything is wrong
-      if: ${{ steps.validate.outputs.status == '1' }}
+      if: ${{ steps.build.outputs.status == '1' }}
       run: exit 1
       shell: bash
