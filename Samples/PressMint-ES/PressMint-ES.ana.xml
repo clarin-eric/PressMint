@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-ES.ana" xml:lang="eu">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="eu">Euskal Herriko prentsa historikoa: PressMint ES-EU [Laginketa]</title>
+            <title xml:lang="es">Corpus histórico de prensa vascaCorpus histórico de prensa vasca: PressMint ES-EU [Muestra]</title>
+            <title xml:lang="en">Basque historical newspapers corpus PressMint ES-EU [Sample]</title>
+
+            <respStmt>
+               <persName >Xabier Goenaga</persName>
+               <resp xml:lang="eu">PressMint TEI XML kodeketa</resp>
+               <resp xml:lang="es">Codificación PressMint TEI XML</resp>
+               <resp xml:lang="en">PressMint TEI XML corpus encoding</resp>
+            </respStmt>
+
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0002-1616-5665">Ainara Estarrona Ibarloza</persName>
+               <persName ref="https://orcid.org/0000-0003-0124-3007">Aritz Farwell</persName>
+             
+               <resp xml:lang="eu">Atzoko Prentsa sorburu-corpusa prestatu</resp>
+               <resp xml:lang="es">Preparación del corpus original Atzoko Prentsa</resp>
+               <resp xml:lang="en">Preparation of source Atzoko Prentsa corpus</resp>
+            </respStmt>
+
+            <funder>
+               <orgName xml:lang="eu">CLARIN ikerketa-azpiegitura</orgName>
+               <orgName xml:lang="es">Infraestructura de investigación CLARIN</orgName>
+               <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+            </funder>
+
+            <funder>
+               <orgName>CLARIN.ES</orgName>
+            </funder>
+         </titleStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="texts" quantity="2245" xml:lang="en">2,245 texts</measure>
+            <measure unit="paragraphs" quantity="518053" xml:lang="en">518,053 paragraphs</measure>
+            <measure unit="words" quantity="18594041" xml:lang="en">18,594,041 words</measure>
+         </extent>
+        
+            <publicationStmt>
+            <publisher>
+               <orgName xml:lang="eu">CLARIN ikerketa-azpiegitura</orgName>
+               <orgName xml:lang="es">Infraestructura de investigación CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="eu">
+                  Lan hau <ref target="http://creativecommons.org/licenses/by/4.0/">
+                  Creative Commons Aitortu 4.0 Nazioartekoa
+                  </ref> lizentziapean banatzen da.
+               </p>
+               <p xml:lang="es">
+                  Esta obra se distribuye bajo la 
+                  <ref target="http://creativecommons.org/licenses/by/4.0/">
+                  Licencia Creative Commons Atribución 4.0 Internacional</ref>.
+               </p>
+               <p xml:lang="en">
+                  This work is licensed under the 
+                  <ref target="http://creativecommons.org/licenses/by/4.0/">
+                  Creative Commons Attribution 4.0 International License</ref>.
+               </p>
+            </availability>
+            <date when="2025-11-24">2025-11-24</date>
+         </publicationStmt>
+        <sourceDesc>
+            <bibl>
+               <author>Estarrona Ibarloza, Ainara </author>
+               <author>Farwell, Aritz</author>
+
+               <title type="main" xml:lang="eu">Euskal Herriko prentsa historikoa</title>
+               <title type="main" xml:lang="es">Corpus histórico de prensa vasca</title>
+
+               <date>2025</date>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="eu">
+               <ref target="https://www.clarin.eu/pressmint">PressMint</ref> proiektuak 
+               Europar prentsa historikoaren corpusetan oinarritutako 
+               datu multilingue eta egituratuak sortzea du helburu, 
+               <ref target="https://clarin-eric.github.io/PressMint/">PressMint jarraibideen</ref> arabera.
+            </p>
+
+            <p xml:lang="es">
+               El proyecto <ref target="https://www.clarin.eu/pressmint">PressMint</ref> 
+               tiene como objetivo crear un conjunto multilingüe de 
+               corpus de prensa histórica, uniformemente codificados 
+               siguiendo las <ref target="https://clarin-eric.github.io/PressMint/">directrices PressMint</ref>.
+            </p>
+
+            <p xml:lang="en">
+               The PressMint project aims to create multilingual and 
+               uniformly encoded historical newspapers corpora following 
+               the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>.
+            </p>
+         </projectDesc>
+
+         <editorialDecl>
+            <quotation>
+               <p xml:lang="eu">Komatxoak testuan utzi dira eta ez dira markatu.</p>
+               <p xml:lang="es">Las comillas se mantienen en el texto y no se han marcado.</p>
+            </quotation>
+
+            <hyphenation>
+               <p xml:lang="eu">Lerro amaierako marratzeak automatikoki konpondu dira neurri batean.</p>
+               <p xml:lang="es">Las palabras divididas por guiones al final de línea han sido reconstruidas en parte.</p>
+            </hyphenation>     
+
+            <normalization>
+               <p xml:lang="eu">Testua ez da normalizatu, espazioak salbu.</p>
+               <p xml:lang="es">El texto no ha sido normalizado, salvo el espaciado.</p>
+            </normalization>
+
+         </editorialDecl>
+         <tagsDecl><!--These numbers do not reflect the size of the sample!-->
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="247"/>
+               <tagUsage gi="name" occurs="135263"/>
+               <tagUsage gi="p" occurs="57862"/>
+               <tagUsage gi="pb" occurs="1063"/>
+               <tagUsage gi="pc" occurs="472792"/>
+               <tagUsage gi="s" occurs="149907"/>
+               <tagUsage gi="text" occurs="247"/>
+               <tagUsage gi="w" occurs="1973547"/>
+            </namespace>
+         </tagsDecl>
+         <classDecl>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-OCR.xml"/>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-NER.ana.xml"/>
+         </classDecl>
+         <appInfo>
+            <application version="2.0" ident="udpipe">
+               <label>UDPipe</label>
+               <desc xml:lang="en">Linguistic processing with ud, available from <ref target="https://github.com/ufal/udpipe/tree/udpipe-2">https://github.com/ufal/udpipe/tree/udpipe-2</ref>.</desc>
+            </application>
+         </appInfo>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+               <date from="1921" to="1921">1921- 1921</date>
+            </setting>
+         </settingDesc>
+         <langUsage>
+            <language ident="eu" xml:lang="eu">euskara</language>
+            <language ident="eu" xml:lang="es">euskera</language>
+            <language ident="eu" xml:lang="en">Basque</language>
+            <language ident="es" xml:lang="eu">gaztelania</language>
+            <language ident="es" xml:lang="es">español</language>
+            <language ident="es" xml:lang="en">Spanish</language>
+            <language ident="en" xml:lang="eu">ingelesa</language>
+            <language ident="en" xml:lang="es">inglés</language>
+            <language ident="en" xml:lang="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>        
+         <change when="2025-11-22">Adapted to EU + ES PressMint corpus.</change>
+      </revisionDesc>
+   </teiHeader>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1921/PressMint-ES_1921-05-01-ARGIA1920501.ana.xml"/>
+   
+</teiCorpus>
