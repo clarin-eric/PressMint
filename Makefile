@@ -318,9 +318,9 @@ test-build: $(test-build-XX)
 $(test-build-XX): test-build-%:
 	@build=$$(mktemp -d -t Build-$*.XXXXXX);\
 	mkdir -p $${build}/Distro $${build}/Sources-TEI;\
-	ln -s $(shell realpath $(DATADIR))/PressMint-$* $${build}/Sources-TEI/PressMint-CZ.TEI;\
-	ln -s $(shell realpath $(DATADIR))/PressMint-$* $${build}/Sources-TEI/PressMint-CZ.TEI.ana;\
-	cd $(SHARED) ; make final CORPORA=CZ HERE=$${build};cd ..;\
+	ln -s $(shell realpath $(DATADIR))/PressMint-$* $${build}/Sources-TEI/PressMint-$*.TEI;\
+	ln -s $(shell realpath $(DATADIR))/PressMint-$* $${build}/Sources-TEI/PressMint-$*.TEI.ana;\
+	cd $(SHARED) ; make final CORPORA=$* HERE=$${build};cd ..;\
 	test -n "$(KEEP-DATA)" && echo "OUTPUT_FOLDER=$${build}" \
 	  || (cat $${build}/Logs/PressMint-$*.error.log; rm -r $${build} )
 
