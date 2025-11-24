@@ -316,7 +316,7 @@ test-build: $(test-build-XX)
 #	@echo "INFO: $* validation start"
 
 $(test-build-XX): test-build-%:
-	build=$$(mktemp -d -t Build-$*.XXXXXX);\
+	@build=$$(mktemp -d -t Build-$*.XXXXXX);\
 	mkdir -p $${build}/Distro $${build}/Sources-TEI;\
 	ln -s $(shell realpath $(DATADIR))/PressMint-$* $${build}/Sources-TEI/PressMint-CZ.TEI;\
 	ln -s $(shell realpath $(DATADIR))/PressMint-$* $${build}/Sources-TEI/PressMint-CZ.TEI.ana;\
