@@ -31,14 +31,15 @@ runs:
         if [ $SKIP -eq 1 ] ; then
           echo "::warning title=SKIPPING BUILD VALIDATION (${{inputs.press}})::"
         else
-          echo "::notice:: Running build-validation for ParlaMint-${{inputs.press}}.$TYPE"
+          echo "::notice:: Running build-validation for ParlaMint-${{inputs.press}}"
           BUILDDIR=$(make test-build-${{inputs.press}} KEEP-DATA=1 2>&1 | sed -n 's/^OUTPUT_FOLDER=//p')
+          find ${BUILDDIR}
           cat ${BUILDDIR}/Logs/PressMint-${{inputs.press}}.log \
                 | sed "s/^\(.*\)\(\berror\b\)/::error::\1\2/i;s/^\(.*\)\(\bfatal\b\)/::error::\1\2/i;s/^\(.*\)\(\bwarn\)/::warning::\1\2/i;"
           test -s ${BUILDDIR}/Logs/PressMint-${{inputs.press}}.error.log \
-                && echo "::error:: PressMint-$parla.$TYPE build-validation FAILED" \
+                && echo "::error:: PressMint-$parla build-validation FAILED" \
                 && STATUS=1 \
-                || echo "::notice:: ParlaMint-${{inputs.press}}.$TYPE build-validation PASSED"
+                || echo "::notice:: ParlaMint-${{inputs.press}} build-validation PASSED"
         fi
         echo "status=$STATUS" >> $GITHUB_OUTPUT
       shell: bash
