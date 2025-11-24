@@ -29,13 +29,13 @@ runs:
           fi
         done
         if [ $SKIP -eq 1 ] ; then
-          echo "::warning title=SKIPPING BUILD VALIDATION (${{inputs.press}}.$TYPE)::"
+          echo "::warning title=SKIPPING BUILD VALIDATION (${{inputs.press}})::"
         else
           echo "::notice:: Running build-validation for ParlaMint-${{inputs.press}}.$TYPE"
           BUILDDIR=$(make test-build-${{inputs.press}} KEEP-DATA=1 2>&1 | sed -n 's/^OUTPUT_FOLDER=//p')
-          cat ${BUILDDIR}/Logs/PressMint-${CORPUS}.log \
+          cat ${BUILDDIR}/Logs/PressMint-${{inputs.press}}.log \
                 | sed "s/^\(.*\)\(\berror\b\)/::error::\1\2/i;s/^\(.*\)\(\bfatal\b\)/::error::\1\2/i;s/^\(.*\)\(\bwarn\)/::warning::\1\2/i;"
-          test -s ${BUILDDIR}/Logs/PressMint-${CORPUS}.error.log \
+          test -s ${BUILDDIR}/Logs/PressMint-${{inputs.press}}.error.log \
                 && echo "::error:: PressMint-$parla.$TYPE build-validation FAILED" \
                 && STATUS=1 \
                 || echo "::notice:: ParlaMint-${{inputs.press}}.$TYPE build-validation PASSED"
