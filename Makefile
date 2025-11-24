@@ -307,6 +307,22 @@ $(check-chars-FF_XX): check-chars-%:
 
 
 ###### Convert
+###### Build
+
+###### TEST Build
+test-build-XX = $(addprefix test-build-, $(PRESS))
+test-build: $(test-build-XX)
+#$(addprefix MSG-validate-start-, $(PRESS)): MSG-validate-start-%:
+#	@echo "INFO: $* validation start"
+
+$(test-build-XX): test-build-%:
+	@build=$$(mktemp -d -t Build-$*.XXXXXX);\
+	mkdir -p $${build}/Distro $${build}/Sources-TEI;\
+	ln -s $(shell realpath $(DATADIR))/PressMint-$* $${build}/Sources-TEI/PressMint-CZ.TEI;\
+	ln -s $(shell realpath $(DATADIR))/PressMint-$* $${build}/Sources-TEI/PressMint-CZ.TEI.ana;\
+	cd $(SHARED) ; make final CORPORA=CZ HERE=$${build};cd ..;\
+	test -n "$(KEEP-DATA)" && echo "OUTPUT_FOLDER=$${build}" \
+	  || (cat $${build}/Logs/PressMint-$*.error.log; rm -r $${build} )
 
 ###### Patch
 ## patchTaxonomiesSpecific-XX ## patch corpus-specific taxonomies in folder PressMint-XX (= add XX prefix)
