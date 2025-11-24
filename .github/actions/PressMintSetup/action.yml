@@ -30,7 +30,7 @@ runs:
           sudo apt-get install -y libxml2-utils
           pip3 install --user regex
           sudo apt-get install -y cpanminus
-          cpanm File::Copy::Recursive # distro script
+          sudo cpanm File::Copy::Recursive # distro script
       shell: bash
     - name: Setup Java JDK
       uses: actions/setup-java@v3.6.0
