@@ -51,21 +51,20 @@ jobs:
               || [[ "$name" == "${d}.ana.xml" ]] \
               || [[ "$name" == "Sources" ]] \
               || [[ "$name" == "README.md" ]] ; then
-                echo "known: $entry - $name"
+                continue
+              elif [[ $name =~ ^pressmint[0-9]*_[-a-z]*\.regi$ ]] ; then
+                continue
+              elif [[ $name =~ ^PressMint-.*taxonomy.*\.xml$ ]] ; then
                 continue
               elif [[ $name =~ ^[0-9]{4}$ ]] ; then
-                echo "year: $entry - $name"
                 if [[ -d "${entry}" ]]; then
-                  echo "yeardir: $entry - $name"
                   NESTED_DIRS=$(find "$entry" -mindepth 1 -type d)
                   if [[ -n "$NESTED_DIRS" ]]; then
                     while IFS= read -r nd; do
                       echo "::error ::Nested directory found inside $entry: $nd"
                     done <<< "$NESTED_DIRS"
                     status=1
-                    echo "fail: $entry - $name"
                   else
-                    echo "ok: $entry - $name"
                     continue
                   fi
                 fi
