@@ -55,7 +55,7 @@ jobs:
                 continue
               elif [[ $name =~ ^[0-9]{4}$ ]] ; then
                 echo "year: $entry - $name"
-                if [[ ! -d "${entry}" ]]; then
+                if [[ -d "${entry}" ]]; then
                   echo "yeardir: $entry - $name"
                   NESTED_DIRS=$(find "$entry" -mindepth 1 -type d)
                   if [[ -n "$NESTED_DIRS" ]]; then
