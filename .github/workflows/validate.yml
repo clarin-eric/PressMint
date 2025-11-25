@@ -57,23 +57,19 @@ jobs:
         uses: ./PressMint/.github/actions/PressMintSetup
         with:
           press: ${{matrix.press}}
-      - name: Validate PressMint-${{matrix.press}} (as it is)
+      - name: Validate PressMint-${{matrix.press}} (as it is without modifications)
         id: validate_src
         uses: ./PressMint/.github/actions/PressMintValidate
-        continue-on-error: true
+        # continue-on-error: true
         with:
           press: '${{matrix.press}}'
           requireTaxonomiesTranslations: '${{ vars.REQUIRE_TRANSLATIONS }}'
-      - name: Validate PressMint-${{matrix.press}} with building
+      - name: Validate PressMint-${{matrix.press}} with building script
         id: validate_build
         uses: ./PressMint/.github/actions/PressMintBuild
-        if: ${{ always() }}
+        # if: ${{ always() }}
         with:
           press: '${{matrix.press}}'
-      - name: Fail if source (as it is) validation
-        if: ${{ steps.validate_src.outcome == 'failure' }}
-        shell: bash
-        run: exit 1
 
   Validate:
     runs-on: ubuntu-latest
