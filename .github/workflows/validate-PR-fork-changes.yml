@@ -1,0 +1,42 @@
+name: Validate PR changes in fork
+
+on:
+  pull_request:
+    branches:
+      - data
+
+jobs:
+  check-changed-files:
+    if: ${{ github.event.pull_request.head.repo.fork == true }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name:Validate file paths
+        id: changed
+        shell: bash
+        run: |
+          git fetch origin ${{ github.base_ref }} --depth=1
+          CHANGED=$(git diff --name-only origin/${{ github.base_ref }} ${{ github.sha }})
+          echo "$CHANGED"
+
+          OUTSIDE=$(echo "$CHANGED" | grep -v '^Samples/' || true)
+          if [[ -n "$OUTSIDE" ]]; then
+            echo "$OUTSIDE" | while read f; do
+              echo "::error ::File modified outside Samples/: $f"
+            done
+            status=1
+          fi
+
+          DIRS=$(echo "$CHANGED" \
+            | sed -n 's|^Samples/\([^/]*\)/.*|\1|p' \
+            | sort -u)
+          COUNT=$(echo "$DIRS" | wc -l)
+          if (( COUNT > 1 )); then
+            echo "::error Title=Multiple PressMint-?? folders inside Samples/ were modified::" $(echo $DIRS|tr "\n" " ")
+            status=1
+          fi
+          exit $status
