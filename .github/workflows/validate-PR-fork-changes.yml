@@ -39,4 +39,37 @@ jobs:
             echo "::error Title=Multiple PressMint-?? folders inside Samples/ were modified::" $(echo $DIRS|tr "\n" " ")
             status=1
           fi
+
+
+          for d in $DIRS; do
+            echo "Validating folder: $d"
+            BASE="Samples/$d"
+            while IFS= read -r entry; do
+              name=$(basename "$entry")
+              # Skip allowed files/dirs
+              if [[ "$name" == "${d}.xml" ]] \
+              || [[ "$name" == "${d}.ana.xml" ]] \
+              || [[ "$name" == "Sources" ]] \
+              || [[ "$name" == "README.md" ]] ; then
+                continue
+              fi
+              if [[ "$name" =~ ^[0-9]{4}$ ]] ; then
+                if [[ ! -d "${entry}" ]]; then
+                  NESTED_DIRS=$(find "$entry" -mindepth 1 -type d)
+                  if [[ -n "$NESTED_DIRS" ]]; then
+                    while IFS= read -r nd; do
+                      echo "::error ::Nested directory found inside $entry: $nd"
+                    done <<< "$NESTED_DIRS"
+                    status=1
+                  else
+                    continue
+                  fi
+                fi
+              fi
+              # Anything else is unexpected
+              echo "::error ::Unexpected entry in $BASE: $entry"
+              status=1
+            done < <(find "$BASE" -mindepth 1 -maxdepth 1)
+          done
+
           exit $status
