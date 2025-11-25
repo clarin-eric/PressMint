@@ -21,8 +21,8 @@
    <!--xsl:param name="cssFile">https://www.tei-c.org/release/xml/tei/stylesheet/tei.css</xsl:param-->
    <!--xsl:param name="cssPrintFile">https://www.tei-c.org/release/xml/tei/stylesheet/tei-print.css</xsl:param-->
 
-   <xsl:param name="homeURL">https://github.com/clarin-eric/parla-clarin</xsl:param>
-   <xsl:param name="homeLabel">Parla-CLARIN</xsl:param>
+   <xsl:param name="homeURL">https://github.com/clarin-eric/PressMint</xsl:param>
+   <xsl:param name="homeLabel">PressMint</xsl:param>
 
    <xsl:param name="STDOUT">true</xsl:param>
    <!--xsl:param name="STDOUT">false</xsl:param>
@@ -43,4 +43,45 @@
    <xsl:param name="outputEncoding">utf-8</xsl:param>
 
    <xsl:param name="copyrightStatement"><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></xsl:param>
+
+
+   <xsl:template match="tei:head">
+      <!-- Determine section ID -->
+    <xsl:variable name="id">
+      <xsl:choose>
+        <xsl:when test="../@xml:id"><xsl:value-of select="../@xml:id"/></xsl:when>
+        <xsl:otherwise><xsl:value-of select="generate-id()"/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:attribute name="id"><xsl:value-of select="$id"/></xsl:attribute>
+
+    <a class="heading-anchor" href="#{$id}" aria-label="Anchor">⚓</a>
+
+    <!-- TEI’s default heading numbering and content -->
+    <xsl:apply-imports/>
+  </xsl:template>
+
+
+  
+  <xsl:template match="tei:front">
+    <header class="front-header">
+        <xsl:apply-templates select="../tei:front/tei:titlePage"/>
+    </header>
+  
+    <aside class="front-sidebar">
+        <xsl:apply-templates select="*[not(self::tei:titlePage)]"/>
+    </aside>
+  </xsl:template>
+
+  <xsl:template match="tei:body">
+    <main class="main-text">
+        <xsl:apply-templates/>
+    </main>
+  </xsl:template>
+
+  <xsl:template match="tei:back">
+    <footer class="appendix-footer">
+        <xsl:apply-templates/>
+    </footer>
+  </xsl:template>
 </xsl:stylesheet>

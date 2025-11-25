@@ -123,6 +123,27 @@ body.pagetable{
 
 /* now the layers of the header */
 
+.heading-anchor {
+  margin-left: -1em;
+  margin-right: 1em;
+  text-decoration: none;
+  color:#2090b5;
+  opacity: 0.3;
+  font-family: "Segoe UI Symbol", "Segoe UI", "Noto Sans Symbols", "Apple Symbols", "DejaVu Sans", "Times New Roman", serif;
+  font-weight: bold;
+  font-size:200%;
+}
+
+
+a:hover.heading-anchor{
+  opacity: 1;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,header {
+    display: inline-block;
+}
+
 /* the main title */
 div.stdheader{
     border-bottom:1pt solid black;
@@ -333,11 +354,11 @@ div.eg{
     clear:both;
     margin-top:1em;
     margin-bottom:1em;
-    border-top-width:4px;
-    border-bottom-width:4px;
-    border-left-width:2px;
-    border-right-width:2px;
+    margin-left:1em;
+    margin-right:1em;
+    border: 2px;
     border-style:solid;
+    border-radius: 2em;
     padding-top:10px;
     padding-right:10px;
     padding-bottom:10px;
@@ -347,11 +368,12 @@ div.eg{
     font-family:monospace;
     font-size:10pt;
     white-space:pre;
+    text-wrap-mode: wrap;
 }
 
 div.egXML_valid{
-    background-color:#f7f9f6;
-    border-color:#c5d8bb;
+    background-color:#2090b516;
+    border-color:#2090b5;
 }
 div.egXML_feasible{
     background-color:#fff9f3;
@@ -447,9 +469,7 @@ a.toclist:link
 /* notes */
 div.noteHeading{
     margin-top:9pt;
-    border:0;
-    border-top:1pt;
-    border-style:solid;
+    border:none;
     padding-top:6pt;
     font-size:larger;
     font-weight:bold;
@@ -467,19 +487,19 @@ div.note{
 }
 
 span.noteLabel{
-    vertical-align:super;
-    font-size:smaller;
     font-style:italic;
 }
-span.note:before{
-    content:" [";
-}
-span.note:after{
-    content:"] ";
-}
 
-span.note{
-    font-size:smaller;
+
+
+.note {
+  background: #ffffee;
+  border: 1px solid #cc0;
+  border-radius: 2em;
+  padding: 0.5em;
+  margin-left:1em;
+  margin-right:1em;
+  display:block;
 }
 /* address */
 span.address {
@@ -510,11 +530,12 @@ div.letter{
 /* title page */
 div.titlePage,
 div.titlepage{
-    border-top:2pt solid #000000;
-    border-bottom:2pt solid #000000;
+    /*border:1px solid #2090b5;
+    border-radius: 10em;*/
     padding-top:6pt;
-    padding-bottom:6pt;
+    padding-bottom:4em;
     font-size:larger;
+    font-weight: bold;
     text-align:center;
 }
 div.docImprint{
@@ -529,7 +550,9 @@ div.docTitle{
     display:block;
     margin-top:6pt;
     font-weight:bold;
-    margin-bottom:18pt;
+    margin-bottom:0.5em;
+    font-size:200%;
+
 }
 div.docAuthor{
     font-style:italic;
@@ -848,13 +871,13 @@ li.headless{
 }
 
 div.footer{
-    border-top:solid black 1pt;
 }
-
+address {
+    text-align: center;
+}
 div.stdfooter{
     clear:both;
-    border-top:solid black 1pt;
-    border-bottom:solid black 1pt;
+    padding:2em;
 }
 
 div.altfigure{
@@ -1087,4 +1110,135 @@ table.border{
 }
 .orange{
     color:orange;
+}
+
+
+
+/* ====== BASIC RESET ====== */
+body {
+    margin: 0;
+    line-height: 1.55;
+    background: #fafafa;
+    color: #222;
+}
+
+/* ====== GRID LAYOUT ====== */
+.simple {
+    display: grid;
+    grid-template-columns: 20% 1fr;   /* sidebar + main text */
+    grid-template-areas:
+        "header header"
+        "front main"
+        "footer footer"
+        "notes notes"
+        "foot foot";
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* ====== FRONT MATTER (header) ====== */
+header.front-header {
+    grid-area: header;
+    background-image: url('https://www.clarin.eu/sites/default/files/styles/max_1900x900/public/PressMint-Logo.png?itok=H9r5xkWq'); 
+    background-size: 10%;
+    padding-left: 20%;
+    background-position: left 5% top 5%;
+    background-repeat: no-repeat;
+}
+
+/* ====== FRONT MATTER (ASIDE) ====== */
+aside.front-sidebar {
+    grid-area: front;
+    padding: 1.5rem;
+    border: none;
+    font-size: 0.8rem;
+    width:auto;
+}
+
+aside.front-sidebar h1,
+aside.front-sidebar h2,
+aside.front-sidebar h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+aside ul.toc {
+    padding-inline: 0.3em;
+}
+
+/* ====== MAIN BODY (MAIN ELEMENT) ====== */
+section {
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 1em;
+    box-shadow: 0 0 14px rgba(0,0,0,0.05);
+    margin-bottom: 2em;
+}
+
+main.main-text {
+    grid-area: main;
+}
+
+main.main-text h1 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+main.main-text p {
+    margin: 1em 0;
+    text-align: justify;
+}
+
+main.main-text h2,
+main.main-text h3 {
+    margin-top: 2.5em;
+    margin-bottom: 0.7em;
+}
+
+/* ====== BACK MATTER (FOOTER) ====== */
+footer.appendix-footer {
+    grid-area: footer;
+    margin-top: 2rem;
+}
+.notes {
+        grid-area: notes;
+}
+.notes .note {
+  background: none;
+  border: 0px;
+  padding: 0.5em;
+  margin-left:1em;
+  margin-right:1em;
+  display:block;
+}
+
+.stdfooter {
+        grid-area: foot;
+}
+
+footer.appendix-footer h2 {
+    margin-top: 0;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+    .simple {
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "header"
+            "front"
+            "main"
+            "footer"
+            "notes"
+            "foot";
+    }
+    section {
+      background: white;
+      padding: 0.5rem 0.5rem;
+      border-radius: 1em;
+      box-shadow: 0 0 14px rgba(0,0,0,0.05);
+      margin-bottom: 2em;
+    }
+    aside.front-sidebar {
+        border: none;
+    }
 }
