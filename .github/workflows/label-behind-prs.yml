@@ -45,19 +45,19 @@ jobs:
 
             # Skip PRs from the same repository
             if [ "$pr_owner" == "${GITHUB_REPOSITORY_OWNER}" ]; then
-              echo "::notify:: Skipping PR #$pr_number from the same repository"
+              echo "::notice:: Skipping PR #$pr_number from the same repository"
               continue
             fi
 
             # Skip PRs if the trigger is other pull_request
             if [ "${{ github.event_name }}" == "pull_request" ]; then
-              echo "::notify:: Triggered by PR #$pr_number"
-              if [ ${{ github.event.pull_request.number }} ne $pr_number ]; then
+              echo "::notice:: Triggered by PR #$pr_number"
+              if [ ${{ github.event.pull_request.number }} -ne $pr_number ]; then
                 continue
               fi
             fi
 
-            echo "::notify::Processing PR #$pr_number from $pr_owner/$pr_repo ($pr_branch)"
+            echo "::notice::Processing PR #$pr_number from $pr_owner/$pr_repo ($pr_branch)"
 
             # Add the fork as a remote
             remote_name="fork-$pr_number"
@@ -71,13 +71,13 @@ jobs:
             behind=$(git rev-list --count $remote_name/$pr_branch..origin/data)
 
             if [ "$behind" -gt 0 ]; then
-              echo "::notify:: PR #$pr_number is behind by $behind commits. Adding label..."
+              echo "::notice:: PR #$pr_number is behind by $behind commits. Adding label..."
               gh pr edit $pr_number --add-label "upstream-updated"
             else
-              echo "::notify:: PR #$pr_number is up-to-date. Removing label if exists..."
+              echo "::notice:: PR #$pr_number is up-to-date. Removing label if exists..."
               gh pr edit $pr_number --remove-label "upstream-updated" || true
             fi
 
           done
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.FORK_NOTIFY_TOKEN }}
