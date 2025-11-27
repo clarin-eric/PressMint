@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - data
+  pull_request:
+    branches:
+      - data
+    types:
+      - opened
+      - synchronize
+      - reopened
   workflow_dispatch:
 
 jobs:
@@ -38,8 +45,16 @@ jobs:
 
             # Skip PRs from the same repository
             if [ "$pr_owner" == "${GITHUB_REPOSITORY_OWNER}" ]; then
-              echo "::notify::Skipping PR #$pr_number from the same repository"
+              echo "::notify:: Skipping PR #$pr_number from the same repository"
               continue
+            fi
+
+            # Skip PRs if the trigger is other pull_request
+            if [ "${{ github.event_name }}" == "pull_request" ]; then
+              echo "::notify:: Triggered by PR #$pr_number"
+              if [ ${{ github.event.pull_request.number }} ne $pr_number ]; then
+                continue
+              fi
             fi
 
             echo "::notify::Processing PR #$pr_number from $pr_owner/$pr_repo ($pr_branch)"
@@ -56,10 +71,10 @@ jobs:
             behind=$(git rev-list --count $remote_name/$pr_branch..origin/data)
 
             if [ "$behind" -gt 0 ]; then
-              echo "::notify::PR #$pr_number is behind by $behind commits. Adding label..."
+              echo "::notify:: PR #$pr_number is behind by $behind commits. Adding label..."
               gh pr edit $pr_number --add-label "upstream-updated"
             else
-              echo "::notify::PR #$pr_number is up-to-date. Removing label if exists..."
+              echo "::notify:: PR #$pr_number is up-to-date. Removing label if exists..."
               gh pr edit $pr_number --remove-label "upstream-updated" || true
             fi
 
