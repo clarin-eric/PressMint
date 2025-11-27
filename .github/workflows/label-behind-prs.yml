@@ -19,7 +19,9 @@ jobs:
       - name: List all open PR numbers
         id: list
         run: |
-          prs=$(gh pr list --state open --json number,headRefName,headRepositoryOwner,headRepository --jq '.[] | @base64')
+          gh pr list --state open --json number,headRefName,headRepositoryOwner,headRepository > prs.json
+
+          prs=$(gh pr list --state open --json number,headRefName,headRepositoryOwner,headRepository --jq '.[] | @base64' | tr "\n" " "|sed "s/ *$//") 
           echo "prs=$prs" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
