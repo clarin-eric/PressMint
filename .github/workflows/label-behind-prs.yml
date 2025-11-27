@@ -1,6 +1,8 @@
 name: Label PRs that are behind upstream
 
 on:
+  schedule:
+    - cron: "0 * * * *"   # every hour
   push:
     branches:
       - data
@@ -80,4 +82,4 @@ jobs:
 
           done
         env:
-          GH_TOKEN: ${{ secrets.FORK_NOTIFY_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
