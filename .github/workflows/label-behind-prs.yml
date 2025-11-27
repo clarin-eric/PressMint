@@ -1,6 +1,8 @@
 name: Label PRs that are behind upstream
 
 on:
+  schedule:
+    - cron: "0 * * * *"   # every hour
   push:
     branches:
       - data
@@ -30,7 +32,7 @@ jobs:
           prs=$(gh pr list --state open --json number,headRefName,headRepositoryOwner,headRepository --jq '.[] | @base64' | tr "\n" " "|sed "s/ *$//") 
           echo "prs=$prs" >> $GITHUB_OUTPUT
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.FORK_NOTIFY_TOKEN }}
 
       - name: Process each PR
         run: |
