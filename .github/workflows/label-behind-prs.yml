@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - data      # or your main branch
+  pull_request:
+    branches: [ data ]
+    types: [opened, synchronize, reopened]
   workflow_dispatch:
 
 jobs:
