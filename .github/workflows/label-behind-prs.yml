@@ -8,6 +8,7 @@ on:
 
 jobs:
   label-behind-prs:
+    if: ${{ github.event.repository.fork == false }}
     runs-on: ubuntu-latest
 
     steps:
@@ -19,8 +20,6 @@ jobs:
       - name: List all open PR numbers
         id: list
         run: |
-          gh pr list --state open --json number,headRefName,headRepositoryOwner,headRepository > prs.json
-
           prs=$(gh pr list --state open --json number,headRefName,headRepositoryOwner,headRepository --jq '.[] | @base64' | tr "\n" " "|sed "s/ *$//") 
           echo "prs=$prs" >> $GITHUB_OUTPUT
         env:
@@ -36,6 +35,12 @@ jobs:
             pr_branch=$(echo "$pr" | jq -r '.headRefName')
             pr_owner=$(echo "$pr" | jq -r '.headRepositoryOwner.login')
             pr_repo=$(echo "$pr" | jq -r '.headRepository.name')
+
+            # Skip PRs from the same repository
+            if [ "$pr_owner" == "${GITHUB_REPOSITORY_OWNER}" ]; then
+              echo "Skipping PR #$pr_number from the same repository"
+              continue
+            fi
 
             echo "Processing PR #$pr_number from $pr_owner/$pr_repo ($pr_branch)"
 
