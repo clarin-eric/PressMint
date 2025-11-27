@@ -3,14 +3,12 @@ name: Label PRs that are behind upstream
 on:
   push:
     branches:
-      - data      # or your main branch
-  pull_request:
-    branches: [ data ]
-    types: [opened, synchronize, reopened]
+      - data
   workflow_dispatch:
 
 jobs:
   label-behind-prs:
+    if: ${{ github.event.repository.fork == false }}
     runs-on: ubuntu-latest
 
     steps:
