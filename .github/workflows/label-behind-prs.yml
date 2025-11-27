@@ -40,27 +40,28 @@ jobs:
 
             # Skip PRs from the same repository
             if [ "$pr_owner" == "${GITHUB_REPOSITORY_OWNER}" ]; then
-              echo "Skipping PR #$pr_number from the same repository"
+              echo "::notify::Skipping PR #$pr_number from the same repository"
               continue
             fi
 
-            echo "Processing PR #$pr_number from $pr_owner/$pr_repo ($pr_branch)"
+            echo "::notify::Processing PR #$pr_number from $pr_owner/$pr_repo ($pr_branch)"
 
             # Add the fork as a remote
-            git remote add fork https://github.com/$pr_owner/$pr_repo.git 2>/dev/null || true
-            git fetch fork $pr_branch
+            remote_name="fork-$pr_number"
+            git remote add $remote_name https://github.com/$pr_owner/$pr_repo.git 2>/dev/null || true
+            git fetch $remote_name $pr_branch
 
             # Fetch upstream branch
             git fetch origin data
 
             # Check if PR branch is behind upstream
-            behind=$(git rev-list --count fork/$pr_branch..origin/data)
+            behind=$(git rev-list --count $remote_name/$pr_branch..origin/data)
 
             if [ "$behind" -gt 0 ]; then
-              echo "PR #$pr_number is behind by $behind commits. Adding label..."
+              echo "::notify::PR #$pr_number is behind by $behind commits. Adding label..."
               gh pr edit $pr_number --add-label "upstream-updated"
             else
-              echo "PR #$pr_number is up-to-date. Removing label if exists..."
+              echo "::notify::PR #$pr_number is up-to-date. Removing label if exists..."
               gh pr edit $pr_number --remove-label "upstream-updated" || true
             fi
 
