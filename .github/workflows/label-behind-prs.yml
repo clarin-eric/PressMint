@@ -28,7 +28,9 @@ jobs:
 
       - name: Process each PR
         run: |
-          echo "${{ steps.list.outputs.prs }}" | while read pr_encoded; do
+          echo "${{ steps.list.outputs.prs }}" \
+          | tr " " "\n" \
+          | while read pr_encoded; do
             pr=$(echo "$pr_encoded" | base64 --decode)
             pr_number=$(echo "$pr" | jq -r '.number')
             pr_branch=$(echo "$pr" | jq -r '.headRefName')
