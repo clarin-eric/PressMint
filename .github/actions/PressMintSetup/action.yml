@@ -30,6 +30,7 @@ runs:
           sudo apt-get install -y libxml2-utils
           sudo apt-get install -y cpanminus
           sudo cpanm File::Copy::Recursive # distro script
+          cd $GITHUB_WORKSPACE/PressMint
           make setup-dependencies
           make check-prereq 
       shell: bash
