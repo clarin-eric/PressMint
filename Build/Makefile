@@ -4,6 +4,9 @@
 #### make all builds the plain text and linguistically annotated corpora
 #### and there are a lot of test- targets to test various parts of the build.
 
+VENV_DIR=../Scripts/bin/venv
+export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
+
 ### VARIABLES
 
 ### COMPLETE SET OF CORPORA

@@ -1,5 +1,11 @@
 .DEFAULT_GOAL := help
 
+UD_TOOLS_DIR=Scripts/bin/tools
+VENV_DIR=Scripts/bin/venv
+export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
+
+
+
 PRESS := AT BG CZ ES FI GB GR HU IS IT LV NL PL PT SI UA ZA
 
 ##$JAVA-MEMORY## Set a java memory maxsize in GB
@@ -20,8 +26,6 @@ TAXONOMIES-COPY = $(addprefix PressMint-taxonomy-, $(TAXONOMIES-COPY-INTERF))
 
 
 -include Makefile.local
-
-
 
 ##$DATADIR## Folder with country corpus folders. Default value is 'Samples'.
 DATADIR = Samples
@@ -51,12 +55,42 @@ check-prereq:
 	@test -f ./Scripts/bin/jing.jar && \
 	  unzip -p ./Scripts/bin/jing.jar META-INF/MANIFEST.MF|grep 'Main-Class:'| grep -q 'relaxng' && \
 	  echo "OK" || echo "FAIL"
+	@echo -n "UD tools: "
+	@test -f Scripts/bin/tools/validate.py && \
+	  python3 -m re && \
+	  echo "OK" || echo "FAIL"
 	@which parallel > /dev/null && \
 	  echo "parallel: OK" || echo "WARN: command parallel is missing"
 	@echo "INFO: Maximum java heap size (saxon needs 5-times more than the size of processed xml file)$(JM)"
 	@java $(JM) -XX:+PrintFlagsFinal -version 2>&1| grep " MaxHeapSize"|sed "s/^.*= *//;s/ .*$$//"|awk '{print "\t" $$1/1024/1024/1024 " GB"}'
 	@echo "INFO: Setup guide in CONTRIBUTING.md file"
 
+## setup-dependencies ## setup (some dependencies)
+setup-dependencies: setup-dep-udtools
+
+## setup-dep-udtools ## setup ud tools and installs a python environment
+setup-dep-udtools: setup-python-env
+	@echo "Installing UniversalDependencies/tools (shallow clone) into $(UD_TOOLS_DIR)"
+	@if [ ! -d "$(UD_TOOLS_DIR)" ]; then \
+		git clone --depth 1 https://github.com/UniversalDependencies/tools.git $(UD_TOOLS_DIR); \
+	else \
+		echo "UD tools already installed; updating..."; \
+		cd $(UD_TOOLS_DIR) && git pull --depth 1; \
+	fi
+	@echo "Installing UD python dependencies into venv"
+	. $(VENV_DIR)/bin/activate && \
+		pip install --upgrade pip && \
+		if [ -f "$(UD_TOOLS_DIR)/requirements.txt" ]; then \
+			pip install -r $(UD_TOOLS_DIR)/requirements.txt; \
+		else \
+			echo "No requirements.txt found in UD tools"; \
+		fi
+
+setup-python-env:
+	@echo "Setting up Python virtual environment in $(VENV_DIR)"
+	@if [ ! -d "$(VENV_DIR)" ]; then \
+		python3 -m venv $(VENV_DIR); \
+	fi
 
 setup-press:
 ifndef PRESS-CODE
@@ -161,7 +195,7 @@ $(initTaxonomy4translation-XX-tt): initTaxonomy4translation-%:
 	make initTaxonomy-$($@_XX)--$($@_tt) LANG-CODE-LIST="$($@_langs)"
 
 
-###### Validate
+###### Validate XML-TEI
 
 validate-XX = $(addprefix validate-, $(PRESS))
 validate: $(validate-XX)
@@ -169,6 +203,8 @@ $(addprefix MSG-validate-start-, $(PRESS)): MSG-validate-start-%:
 	@echo "INFO: $* validation start"
 
 ## validate-XX ## validate TEI and TEI.ana corpora
+####⤷  calls:
+####⤷     validateTaxonomies-XX validate-TEI-XX validate-TEI.ana-XX)
 $(validate-XX): validate-%: MSG-validate-start-% validateTaxonomies-% validate-TEI-% validate-TEI.ana-%
 	@echo "INFO: $* validation done"
 
@@ -179,6 +215,8 @@ $(addprefix MSG-validate-TEI-start-, $(PRESS)): MSG-validate-TEI-start-%:
 	@echo "INFO: $* TEI validation start"
 
 ## validate-TEI-XX ## validate TEI corpus
+####⤷  calls:
+####⤷     validate-TEI-root-XX validate-TEI-comp-XX check-links-TEI_XX check-chars-TEI_XX
 $(validate-TEI-XX): validate-TEI-%: MSG-validate-TEI-start-% validate-TEI-root-% validate-TEI-comp-% check-links-TEI_% check-chars-TEI_%
 	@echo "INFO: $* TEI validation done"
 
@@ -201,6 +239,8 @@ $(addprefix MSG-validate-TEI.ana-start-, $(PRESS)): MSG-validate-TEI.ana-start-%
 	@echo "INFO: $* TEI.ana validation start"
 
 ## validate-TEI.ana-XX ## validate-TEI.ana corpus
+####⤷  calls:
+####⤷     validate-TEI.ana-root-XX validate-TEI.ana-comp-XX check-links-TEI.ana_XX check-chars-TEI.ana_XX
 $(validate-TEI.ana-XX): validate-TEI.ana-%: MSG-validate-TEI.ana-start-% validate-TEI.ana-root-% validate-TEI.ana-comp-% check-links-TEI.ana_% check-chars-TEI.ana_%
 	@echo "INFO: $* TEI.ana validation done"
 
@@ -286,7 +326,7 @@ check-chars-XX = $(addprefix check-chars-, $(PRESS))
 check-chars: $(check-chars-XX)
 ## check-chars-XX ## validate both TEI and TEI.ana version of XX corpus with Scripts/check-chars.pl
 $(check-chars-XX): check-chars-%: check-chars-TEI_% check-chars-TEI.ana_%
-## check-chars-FF_XX ## validate both FF(TEI/TEI.ana) version of XX corpus with Scripts/check-chars.pl
+## check-chars-FF_XX ## validate FF(TEI/TEI.ana) version of XX corpus with Scripts/check-chars.pl
 check-chars-FF_XX = $(foreach f,$(ROOT_FORMATS),$(foreach p,$(PRESS),check-chars-$(f)_$(p)))
 $(check-chars-FF_XX): check-chars-%:
 	@echo "INFO: starting chars checking ($*): $(PATHBASE_$*)"
@@ -306,15 +346,20 @@ $(check-chars-FF_XX): check-chars-%:
 	@echo "INFO: DONE chars checking ($*)"
 
 
+###### Validate derived formats
 ###### Convert
+
+
 ###### Build
 
-###### TEST Build
 test-build-XX = $(addprefix test-build-, $(PRESS))
 test-build: $(test-build-XX)
-#$(addprefix MSG-validate-start-, $(PRESS)): MSG-validate-start-%:
-#	@echo "INFO: $* validation start"
-
+## test-build-XX ## run final build on the data in $(DATADIR)/PressMint-XX
+####⤷  if KEEP-DATA=1 is set then
+####⤷     - the path to the build folder is printed `/tmp/Build-XX.NNNNNN`
+####⤷  otherwise
+####⤷     - the output log is printed
+####⤷     - and Build folder is removed
 $(test-build-XX): test-build-%:
 	@build=$$(mktemp -d -t Build-$*.XXXXXX);\
 	mkdir -p $${build}/Distro $${build}/Sources-TEI;\
@@ -322,7 +367,22 @@ $(test-build-XX): test-build-%:
 	ln -s $(shell realpath $(DATADIR))/PressMint-$* $${build}/Sources-TEI/PressMint-$*.TEI.ana;\
 	cd $(SHARED) ; make final CORPORA=$* HERE=$${build};cd ..;\
 	test -n "$(KEEP-DATA)" && echo "OUTPUT_FOLDER=$${build}" \
-	  || (cat $${build}/Logs/PressMint-$*.error.log; rm -r $${build} )
+	  || (cat $${build}/Logs/PressMint-$*.log; rm -r $${build} )
+
+
+###### Stats
+
+chars-FF_XX = $(foreach f,$(ROOT_FORMATS),$(foreach p,$(PRESS),chars-$(f)_$(p)))
+## chars ## create character tables
+chars: $(chars-FF_XX)
+## chars-FF_XX ## ...
+$(chars-FF_XX): chars-%:
+	@echo "INFO: starting chars stats creating ($*): $(PATHBASE_$*)"
+	root=$(PATHROOT_$*);\
+	( echo $${root};echo $${root}| ${getincludes} | xargs -I {} echo "$(PATHBASE_$*)/{}" ) \
+	    | $P --jobs 20 'Scripts/chars.pl {} >> $(PATHBASE_$*)/chars-files-$*.tbl';\
+	Scripts/chars-summ.pl < $(PATHBASE_$*)/chars-files-$*.tbl \
+	    > $(PATHBASE_$*)/chars-$*.tbl 
 
 ###### Patch
 ## patchTaxonomiesSpecific-XX ## patch corpus-specific taxonomies in folder PressMint-XX (= add XX prefix)
