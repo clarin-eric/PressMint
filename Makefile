@@ -1,5 +1,11 @@
 .DEFAULT_GOAL := help
 
+UD_TOOLS_DIR=Scripts/bin/tools
+VENV_DIR=Scripts/bin/venv
+export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
+
+
+
 PRESS := AT BG CZ ES FI GB GR HU IS IT LV NL PL PT SI UA ZA
 
 ##$JAVA-MEMORY## Set a java memory maxsize in GB
@@ -20,8 +26,6 @@ TAXONOMIES-COPY = $(addprefix PressMint-taxonomy-, $(TAXONOMIES-COPY-INTERF))
 
 
 -include Makefile.local
-
-
 
 ##$DATADIR## Folder with country corpus folders. Default value is 'Samples'.
 DATADIR = Samples
@@ -61,6 +65,30 @@ check-prereq:
 	@java $(JM) -XX:+PrintFlagsFinal -version 2>&1| grep " MaxHeapSize"|sed "s/^.*= *//;s/ .*$$//"|awk '{print "\t" $$1/1024/1024/1024 " GB"}'
 	@echo "INFO: Setup guide in CONTRIBUTING.md file"
 
+setup-dependencies: setup-dep-udtools
+
+setup-dep-udtools: setup-python-env
+	@echo "Installing UniversalDependencies/tools (shallow clone) into $(UD_TOOLS_DIR)"
+	@if [ ! -d "$(UD_TOOLS_DIR)" ]; then \
+		git clone --depth 1 https://github.com/UniversalDependencies/tools.git $(UD_TOOLS_DIR); \
+	else \
+		echo "UD tools already installed; updating..."; \
+		cd $(UD_TOOLS_DIR) && git pull --depth 1; \
+	fi
+	@echo "Installing UD python dependencies into venv"
+	. $(VENV_DIR)/bin/activate && \
+		pip install --upgrade pip && \
+		if [ -f "$(UD_TOOLS_DIR)/requirements.txt" ]; then \
+			pip install -r $(UD_TOOLS_DIR)/requirements.txt; \
+		else \
+			echo "No requirements.txt found in UD tools"; \
+		fi
+
+setup-python-env:
+	@echo "Setting up Python virtual environment in $(VENV_DIR)"
+	@if [ ! -d "$(VENV_DIR)" ]; then \
+		python3 -m venv $(VENV_DIR); \
+	fi
 
 setup-press:
 ifndef PRESS-CODE
