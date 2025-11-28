@@ -94,7 +94,7 @@ test-vert:
 	$s meta=${OUTPUTS}/PressMint-SI.TEI.ana/PressMint-SI.ana.xml \
 	-xsl:../Scripts/pressmint2xmlvert.xsl  ${HERE}/Test/test.ana.xml > Test/test.vert
 test-conll2:
-	../Scripts/pressmintp2conllu.pl -jobs 1 -in ${HERE}/PressMint-${CORPUS}.TEI.ana -out ${HERE}/Test
+	../Scripts/pressmintp2conllu.pl -jobs 1 -in ${HERE}/Distro/PressMint-${CORPUS}.TEI.ana -out ${HERE}/Test
 test-conll1:
 	$s meta=${OUTPUTS}/PressMint-SI.TEI.ana/PressMint.ana.xml \
 	-xsl:../Scripts/pressmint2conllu.xsl ${HERE}/Test/test.ana.xml > Test/test.conllu
