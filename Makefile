@@ -65,8 +65,10 @@ check-prereq:
 	@java $(JM) -XX:+PrintFlagsFinal -version 2>&1| grep " MaxHeapSize"|sed "s/^.*= *//;s/ .*$$//"|awk '{print "\t" $$1/1024/1024/1024 " GB"}'
 	@echo "INFO: Setup guide in CONTRIBUTING.md file"
 
+## setup-dependencies ## setup (some dependencies)
 setup-dependencies: setup-dep-udtools
 
+## setup-dep-udtools ## setup ud tools and installs a python environment
 setup-dep-udtools: setup-python-env
 	@echo "Installing UniversalDependencies/tools (shallow clone) into $(UD_TOOLS_DIR)"
 	@if [ ! -d "$(UD_TOOLS_DIR)" ]; then \
