@@ -1,0 +1,39 @@
+name: Sync upstream data branch to fork data branch
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - data
+
+jobs:
+  sync:
+    if: ${{ github.event.repository.fork == true }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: data
+
+      - name: Add upstream remote
+        shell: bash
+        run: |
+          git remote add upstream https://github.com/clarin-eric/PressMint.git
+
+      - name: Fetch upstream
+        shell: bash
+        run: |
+          git fetch upstream data
+
+      - name: Merge upstream/data
+        shell: bash
+        run: |
+          git merge upstream/data || :
+
+      - name: Push changes to fork
+        shell: bash
+        run: |
+          git push origin data || :
