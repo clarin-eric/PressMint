@@ -57,11 +57,20 @@ jobs:
         uses: ./PressMint/.github/actions/PressMintSetup
         with:
           press: ${{matrix.press}}
-      - name: Validate PressMint-${{matrix.press}}
+      - name: Validate PressMint-${{matrix.press}} (as it is without modifications)
+        id: validate_src
         uses: ./PressMint/.github/actions/PressMintValidate
+        # continue-on-error: true
         with:
           press: '${{matrix.press}}'
           requireTaxonomiesTranslations: '${{ vars.REQUIRE_TRANSLATIONS }}'
+      - name: Validate PressMint-${{matrix.press}} with building script
+        id: validate_build
+        uses: ./PressMint/.github/actions/PressMintBuild
+        # if: ${{ always() }}
+        with:
+          press: '${{matrix.press}}'
+
   Validate:
     runs-on: ubuntu-latest
     needs: [ValidateCountries]

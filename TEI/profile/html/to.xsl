@@ -21,8 +21,8 @@
    <!--xsl:param name="cssFile">https://www.tei-c.org/release/xml/tei/stylesheet/tei.css</xsl:param-->
    <!--xsl:param name="cssPrintFile">https://www.tei-c.org/release/xml/tei/stylesheet/tei-print.css</xsl:param-->
 
-   <xsl:param name="homeURL">https://github.com/clarin-eric/parla-clarin</xsl:param>
-   <xsl:param name="homeLabel">Parla-CLARIN</xsl:param>
+   <xsl:param name="homeURL">https://github.com/clarin-eric/PressMint</xsl:param>
+   <xsl:param name="homeLabel">PressMint</xsl:param>
 
    <xsl:param name="STDOUT">true</xsl:param>
    <!--xsl:param name="STDOUT">false</xsl:param>
@@ -59,5 +59,29 @@
 
     <!-- TEI’s default heading numbering and content -->
     <xsl:apply-imports/>
+  </xsl:template>
+
+
+  
+  <xsl:template match="tei:front">
+    <header class="front-header">
+        <xsl:apply-templates select="../tei:front/tei:titlePage"/>
+    </header>
+  
+    <aside class="front-sidebar">
+        <xsl:apply-templates select="*[not(self::tei:titlePage)]"/>
+    </aside>
+  </xsl:template>
+
+  <xsl:template match="tei:body">
+    <main class="main-text">
+        <xsl:apply-templates/>
+    </main>
+  </xsl:template>
+
+  <xsl:template match="tei:back">
+    <footer class="appendix-footer">
+        <xsl:apply-templates/>
+    </footer>
   </xsl:template>
 </xsl:stylesheet>

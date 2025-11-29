@@ -4,6 +4,9 @@
 #### make all builds the plain text and linguistically annotated corpora
 #### and there are a lot of test- targets to test various parts of the build.
 
+VENV_DIR=../Scripts/bin/venv
+export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
+
 ### VARIABLES
 
 ### COMPLETE SET OF CORPORA
@@ -23,6 +26,7 @@ PRESSMINT := $(shell realpath .. | tr -d '\n')# get real absolute path to PressM
 HERE = ${PRESSMINT}/Build
 TEMP = ${HERE}/Temp
 SCH = ${PRESSMINT}/TEI
+LOGS = ${HERE}/Logs
 # Where the submitted corpora are found: PressMint-XX.TEI/ and PressMint-XX.TEI.ana
 SOURCES = ${HERE}/Sources-TEI
 # Where the polished corpora in TEI and derived formats are output
@@ -34,6 +38,10 @@ WEB = tomaz@nl.ijs.si:/home/tomaz/www/tmp/PressMint
 ##Note that script variables are at the end of the Makefile!
 
 ###### Targets
+
+### create folders
+$(LOGS):
+	mkdir -p $@
 
 ### Overviews to be put in Metadata/
 ### This should be done once all the corpora have been built
@@ -86,7 +94,7 @@ test-vert:
 	$s meta=${OUTPUTS}/PressMint-SI.TEI.ana/PressMint-SI.ana.xml \
 	-xsl:../Scripts/pressmint2xmlvert.xsl  ${HERE}/Test/test.ana.xml > Test/test.vert
 test-conll2:
-	../Scripts/pressmintp2conllu.pl -jobs 1 -in ${HERE}/PressMint-${CORPUS}.TEI.ana -out ${HERE}/Test
+	../Scripts/pressmintp2conllu.pl -jobs 1 -in ${HERE}/Distro/PressMint-${CORPUS}.TEI.ana -out ${HERE}/Test
 test-conll1:
 	$s meta=${OUTPUTS}/PressMint-SI.TEI.ana/PressMint.ana.xml \
 	-xsl:../Scripts/pressmint2conllu.xsl ${HERE}/Test/test.ana.xml > Test/test.conllu
@@ -105,9 +113,9 @@ cp-readmes:
 
 # Make samples only
 all-samples:	samples cp-samples
-samples:
+samples: $(LOGS)
 	for CORPUS in ${CORPORA}; do \
-	${FINALIZE} -sample -codes $${CORPUS} -in ${SOURCES} -out ${OUTPUTS} 2> Logs/PressMint-$${CORPUS}-samples.log; \
+	${FINALIZE} -sample -codes $${CORPUS} -in ${SOURCES} -out ${OUTPUTS} 2> $(LOGS)/PressMint-$${CORPUS}-samples.log; \
 	done;
 #Merge Distro samples into official Samples directory
 cp-samples:
@@ -116,8 +124,8 @@ cp-samples:
 
 # Make vertical file with en metadata, a hack:
 XX-CORPORA=AT-xx BG-xx CZ-xx ES-xx GR-xx IS-xx LV-xx NL-xx PL-xx SI-xx UA-xx
-make-verts-xx-nohup:
-	nohup time make make-verts-xx > Logs/PressMint-Verts-xx.log &
+make-verts-xx-nohup: $(LOGS)
+	nohup time make make-verts-xx > $(LOGS)/PressMint-Verts-xx.log &
 make-verts-xx:
 	for CORPUS in ${CORPORA}; do \
         ../Scripts/pressmintp-tei2vert-xx.pl -jobs ${THREADS} \
@@ -136,7 +144,7 @@ make-verts:
 web-nohup:
 	nice nohup time make web > PressMint-Web.log &
 web:
-	rsync -av Logs/*.log ${WEB}/Logs
+	rsync -av $(LOGS)/*.log ${WEB}/Logs
 	rsync -av Packed/*.tgz ${WEB}/Repo
 
 
@@ -144,8 +152,8 @@ web:
 FINALIZE = perl ../Scripts/pressmint2distro.pl -version ${VERSION} -teihandle ${HANDLE-TEI} -anahandle ${HANDLE-ANA} -schema ${SCH} -docs Sources-Distro -procMemGB ${JAVA-MEMORY} -procChunkSize ${CHUNK-SIZE} -procThreads ${THREADS}
 
 ### For real
-nohup:
-	nice nohup time make all > Logs/PressMint.log &
+nohup: $(LOGS)
+	nice nohup time make all > $(LOGS)/PressMint.log &
 all:	final join-verts pack
 xall:	final join-verts pack
 
@@ -153,7 +161,7 @@ pack-logs:
 	mkdir -p Packed/PressMint-logs
 	rm -f Packed/PressMint-logs/*
 	for CORPUS in ${CORPORA}; do \
-	cp Logs/PressMint-$${CORPUS}.*log Packed/PressMint-logs; \
+	cp $(LOGS)/PressMint-$${CORPUS}.*log Packed/PressMint-logs; \
 	done
 	cd Packed; tar -czf PressMint-logs.tgz PressMint-logs
 	rm -fr Packed/PressMint-logs
@@ -164,18 +172,18 @@ pack:
 	perl Scripts/pack-pressmint.pl -codes '${CORPORA}' -in Distro -out Packed
 join-verts:
 	perl Scripts/join-verts.pl -version ${VERSION} -codes '${CORPORA}' -in Distro -out Verts
-final:
+final: $(LOGS)
 	for CORPUS in ${CORPORA}; do \
-	${FINALIZE} -all -codes $${CORPUS} -in ${SOURCES} -out ${OUTPUTS} 2> Logs/PressMint-$${CORPUS}.log; \
-	grep -a -i 'fatal' Logs/PressMint-$${CORPUS}.log >  Logs/PressMint-$${CORPUS}.error.log;  \
-	grep -a -i 'error' Logs/PressMint-$${CORPUS}.log >> Logs/PressMint-$${CORPUS}.error.log;  \
-	grep -a -i 'warn'  Logs/PressMint-$${CORPUS}.log >  Logs/PressMint-$${CORPUS}.warn.log;  \
+	${FINALIZE} -all -codes $${CORPUS} -in ${SOURCES} -out ${OUTPUTS} 2> $(LOGS)/PressMint-$${CORPUS}.log; \
+	grep -a -i 'fatal' $(LOGS)/PressMint-$${CORPUS}.log >  $(LOGS)/PressMint-$${CORPUS}.error.log;  \
+	grep -a -i 'error' $(LOGS)/PressMint-$${CORPUS}.log >> $(LOGS)/PressMint-$${CORPUS}.error.log;  \
+	grep -a -i 'warn'  $(LOGS)/PressMint-$${CORPUS}.log >  $(LOGS)/PressMint-$${CORPUS}.warn.log;  \
 	echo "$${CORPUS}.warn"; \
-	cat Logs/PressMint-$${CORPUS}.warn.log | wc -l;  \
-	cat Logs/PressMint-$${CORPUS}.warn.log | sort | uniq | wc -l;  \
+	cat $(LOGS)/PressMint-$${CORPUS}.warn.log | wc -l;  \
+	cat $(LOGS)/PressMint-$${CORPUS}.warn.log | sort | uniq | wc -l;  \
 	echo "$${CORPUS}.error"; \
-	cat Logs/PressMint-$${CORPUS}.error.log | wc -l;  \
-	cat Logs/PressMint-$${CORPUS}.error.log | sort | uniq | wc -l;  \
+	cat $(LOGS)/PressMint-$${CORPUS}.error.log | wc -l;  \
+	cat $(LOGS)/PressMint-$${CORPUS}.error.log | sort | uniq | wc -l;  \
 	done;
 
 # Join all verts, probably doesn't work
