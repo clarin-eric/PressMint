@@ -2,7 +2,7 @@
 
 ## Data source
 
-The source of the PressMint-SI corpus will be a selection of texts from the
+The source of the PressMint-SI corpus are a selection of texts from the
 _Corpus of Slovenian periodicals (1771-1914) sPeriodika 1.0_
 ([http://hdl.handle.net/11356/1881](http://hdl.handle.net/11356/1881)).
 
@@ -218,16 +218,16 @@ However, they are not of high quality (quality: 50).
 
 ## Conversion plan
 
-For the PressMint-SI corpus we plan to:
+For the PressMint-SI corpus we:
 
 * Sample sPeriodika to:
 
     * remove texts that are not newspapers
     * remove text older than 1850 (they use the old alphabet incorrectly recognised by OCR)
     * remove texts with too many paragraphs (pages) of low OCR quality
-    * (maybe) remove paragraphs (pages) with low OCR quality
 
 * Develop conversion procedure for JSON to PressMint format
     * a parameter specifies whether to produce plain text or .ana version
-    * Start of work in [Makefile](Makefile)
+    * start of work in [Sources/Makefile](Sources/Makefile)
+
  
