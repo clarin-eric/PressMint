@@ -80,7 +80,8 @@ be possible to publish newer material now, under discussion.)
 
 ## Conversion plan
 
-For the PressMint-FI corpus we plan to:
+    For the PressMint-FI corpus we plan to:
+
     - write a script, presumably
     - may need to learn some TEI
     - possibly use a previously written conversion tool, should that
