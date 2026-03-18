@@ -14,6 +14,7 @@ use FindBin qw($Bin);
 $what = shift;
 if ($what eq 'samples') {
     $mask = 'PressMint-*/PressMint-*.xml';
+    $mask = 'PressMint-*/*/PressMint-*.xml';
 }
 elsif ($what eq 'master') {
     $mask  = 'PressMint-*.TEI/PressMint-*.xml ';
