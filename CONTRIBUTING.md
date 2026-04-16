@@ -1,4 +1,15 @@
-# CONTRIBUTING in PressMint
+# CONTRIBUTING to PressMint
+
+## What can be included in a PressMint corpus
+
+PressMint gathers corpora of historical newspapers, which should be stuctured and annotated as specified by the
+[Guidelines on the structure and encoding of PressMint corpora](https://clarin-eric.github.io/PressMint/).
+
+Apart from this, there are only a few requirements for the newspapers in a corpus:
+
+* The texts should be copyright free, i.e. it should be possible to make the corpora avaialable on the CC BY licence.
+* Each newspaper issue (or newspaper article) included in a corpus should have a known date of publication,
+  i.e. including year, month and day, e.g. 1900-04-30.
 
 ## Git and GitHub
 
@@ -9,6 +20,7 @@ Sample data should be pushed to the Data branch of the PressMint repository dire
 
 - [Create a GitHub account](https://github.com/signup) if you don't have one.
 - [Fork PressMint repository](https://github.com/clarin-eric/PressMint/fork) into your organization or private account.
+  - uncheck "Copy the main branch only"
 - Start the terminal on your computer and navigate to the folder where you want the PressMint local clone of the repository to be placed:
 
 ```bash
@@ -16,8 +28,7 @@ Sample data should be pushed to the Data branch of the PressMint repository dire
  git clone git@github.com:<USER-ORG>/PressMint.git
 ```
 
-- Set the data branch in your repository to be synchronized with the data branch in the PressMint repository:
-
+- (ONLY WHEN YOU FORGET TO UNCHECK "Copy the main branch only") Set the data branch in your repository to be synchronized with the data branch in the PressMint repository:
 ```bash
 cd PressMint
 git remote add upstream https://github.com/clarin-eric/PressMint.git

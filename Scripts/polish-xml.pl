@@ -1,0 +1,29 @@
+#!/usr/bin/env perl
+# Finalise PressMint file
+use warnings;
+use utf8;
+use Unicode::Normalize;
+binmode(STDIN,'utf8');
+binmode(STDOUT,'utf8');
+binmode(STDERR,'utf8');
+undef $/;
+$txt = NFC(<>);
+$txt =~ s|([^>])[ \t]*\n\s*|$1 |g; #join lines
+$txt =~ s|(<p [^>]*>)\s+|$1|g;
+$txt =~ s|(<p>)\s+|$1|g;
+$txt =~ s|\n\s*<term|<term|g;
+$txt =~ s|</term>\n\s*|</term>|g;
+$txt =~ s|</gap> +(\S)|</gap>$1|g;
+$txt =~ s|>(<s>)|>\n$1|g;
+$txt =~ s|>(<s .+?>)|>\n$1|g;
+$txt =~ s|\s+(</s>)|\n$1|g;
+$txt =~ s|\n\s*<w |\n<w |g;
+$txt =~ s|\n\s*<pc |\n<pc |g;
+$txt =~ s|\n\s*<link |\n<link |g;
+$txt =~ s|\n\s*(</?linkGrp)|\n$1|g;
+#Put w/w in one line, so that w/text() does not have leading/trailing \s
+$txt =~ s|[ \t]+<w |<w |g;
+$txt =~ s|(<w[^/>]+/>)\n|$1|g;
+$txt =~ s|[ \t]+</w>\n|</w>\n|g;
+print $txt;
+print "\n";

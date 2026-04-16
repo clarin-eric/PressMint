@@ -1,0 +1,124 @@
+MAINTAINER "CLARIN.SI <info@clarin.si>"
+NAME "PressMint-SI 0.1 (Slovenian historical newspapers)"
+INFO "Slovenian historical newspaper corpus PressMint-SI, 1850-1914 v0.1"
+ENCODING "UTF-8"
+LOCALE "sl_SI.UTF-8"
+DEFAULTLOCALE "sl_SI.UTF-8"
+LANGUAGE "Slovenian"
+INFOHREF "https://www.clarin.eu/pressmint"
+#INFOHREF "http://hdl.handle.net/11356/2068"
+TAGSETDOC "https://universaldependencies.org/guidelines.html"
+#TAGSETDOC "https://nl.ijs.si/ME/V6/msd/html/msd-sl.html#msd.msds-sl"
+
+PATH "/data/manatee-data/pressmint10_si/"
+
+VERTICAL "| zcat /data/vert/PressMint-SI.1.0.vert.gz"
+
+DOCSTRUCTURE text
+MAXDETAIL 200
+
+SUBCORPATTRS "p.quality|text.id|text.year,text.newspaper|text.article|text.date,text.publisher|text.volume|text.issue"
+FULLREF "text.article,text.newspaper,text.date,text.publisher,text.volume,text.issue,text.source_url,text.id,p.quality,p.id"
+SHORTREF "=text.year,=text.newspaper"
+
+STRUCTURE text {
+    ATTRIBUTE id {
+      TYPE "UNIQUE"
+    }
+    ATTRIBUTE lang
+    ATTRIBUTE date
+    ATTRIBUTE year
+    ATTRIBUTE newspaper {
+      MULTISEP "÷"
+    }
+    ATTRIBUTE publisher {
+      MULTISEP "÷"
+      DEFAULTVALUE "-"
+    }
+    ATTRIBUTE article {
+      MULTISEP "÷"
+      DEFAULTVALUE "-"
+    }
+    ATTRIBUTE volume {
+      DEFAULTVALUE "-"
+    }
+    ATTRIBUTE issue {
+      DEFAULTVALUE "-"
+    }
+    ATTRIBUTE source_url
+}
+
+STRUCTURE p {
+    ATTRIBUTE id {
+      TYPE "UNIQUE"
+    }
+    ATTRIBUTE lang
+    ATTRIBUTE quality
+    ATTRIBUTE image {
+        URLTEMPLATE "https://nl.ijs.si/inz/speriodika/%s"
+        MEDIATYPE "image"
+    }
+    DISPLAYTAG 0
+    DISPLAYBEGIN " ¶ "
+}
+
+STRUCTURE s {
+    ATTRIBUTE id {
+      LABEL "Sentence ID"
+      TYPE "UNIQUE"
+    }
+    DISPLAYTAG 0
+}
+
+STRUCTURE name {
+    ATTRIBUTE type
+    DISPLAYTAG 0
+    DISPLAYBEGIN "[%(type):"
+    DISPLAYEND "]"
+}
+
+STRUCTURE g {
+    DISPLAYTAG 0
+    DISPLAYBEGIN "_EMPTY_"
+}
+
+ATTRIBUTE word
+ATTRIBUTE lc {
+	LABEL	"word (lowercase)"
+	DYNAMIC  utf8lowercase
+	DYNLIB   internal
+	ARG1     "C"
+	FUNTYPE  s
+	FROMATTR word
+	DYNTYPE  index
+	TRANSQUERY	yes
+}
+ATTRIBUTE norm {
+	LABEL "Modernised words"
+        MULTIVALUE yes
+        MULTISEP "|"
+}
+
+ATTRIBUTE lemma {
+        MULTIVALUE yes
+        MULTISEP "|"
+}
+ATTRIBUTE lemma_lc {
+	DYNAMIC     "utf8lowercase"
+	DYNLIB      "internal"
+	ARG1        "C"
+	FUNTYPE     "s"
+	FROMATTR    "lemma"
+	DYNTYPE     "freq"
+	TRANSQUERY  "yes"
+}
+ATTRIBUTE pos {
+        LABEL   "UD PoS tag"
+        MULTIVALUE yes
+        MULTISEP "|"
+}
+ATTRIBUTE feats {
+        LABEL   "UD features"
+        MULTIVALUE yes
+        MULTISEP " "
+}

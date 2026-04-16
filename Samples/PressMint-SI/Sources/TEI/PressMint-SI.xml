@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-SI" xml:lang="sl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starejših slovenskih časopisov PressMint-SI</title>
+            <title xml:lang="en">Slovenian historical newspaper corpus PressMint-SI</title>
+            <respStmt>
+              <persName ref="https://orcid.org/0000-0002-1560-4099">Tomaž Erjavec</persName>
+              <resp>Kodiranje PressMint TEI XML</resp>
+              <resp xml:lang="en">PressMint TEI XML corpus encoding</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0003-3211-9586">Filip Dobranić</persName>
+               <persName ref="https://orcid.org/0000-0003-1096-4666">Bojan Evkoski</persName>
+               <persName ref="https://orcid.org/0000-0001-7169-9152">Nikola Ljubešić</persName>
+               <resp xml:lang="sl">Priprava izvornega korpusa sPeriodika</resp>
+               <resp xml:lang="en">Preparation of source sPeriodika corpus</resp>
+            </respStmt>
+            <funder>
+               <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
+               <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+            </funder>
+            <funder>
+               <orgName>Slovenska raziskovalna infrastruktura CLARIN.SI</orgName>
+               <orgName xml:lang="en">The Slovenian research infrastructure CLARIN.SI</orgName>
+            </funder>
+         </titleStmt>
+         <publicationStmt>
+           <publisher>
+             <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
+             <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+             <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+           </publisher>
+           <availability status="free">
+             <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+             <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+             <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
+           </availability>
+         </publicationStmt>
+         <sourceDesc>
+           <bibl>
+             <author>Dobranić, Filip</author>
+             <author>Evkoski, Bojan</author>
+             <author>Ljubešić, Nikola</author>
+             <title type="main" xml:lang="sl">Korpus slovenske periodike (1771-1914) sPeriodika 1.0</title>
+             <title type="main" xml:lang="en">Corpus of Slovenian periodicals (1771-1914) sPeriodika 1.0</title>
+             <idno type="URI" subtype="handle">http://hdl.handle.net/11356/8943</idno>
+             <date>2023</date>
+             <bibl>
+               <title type="main" xml:lang="sl">Digitalna knjižnica Slovenije dLib</title>
+               <title type="main" xml:lang="en">Digital library of Slovenia dLib</title>
+               <idno type="URI" subtype="URL">https://dlib.si/</idno>
+             </bibl>
+           </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+           <p xml:lang="sl">Projekt <ref target="https://www.clarin.eu/pressmint">PressMint</ref>
+           bo izdelal večjezične, primerljive, označene in prevedene interoperabilne korpuse
+           starejših Evropskih časopisov z začetka 20. stoletja. Korpusi PressMint bodo
+           odprto dostopni, tako za prenos v raznovrstnih formatih, kot tudi v več spletnih
+           platformah za analizo korpusov.</p>
+           <p xml:lang="en">The <ref target="https://www.clarin.eu/pressmint">PressMint</ref>
+           project aims to compile a multilingual, comparable, annotated, translated and
+           interoperable set of corpora of European historical newspapers from around the
+           start of the 20th century. The PressMint corpora will be openly available, both
+           for download in a variety of instances and formats, as well as via several online
+           corpus analysis tools.</p>
+         </projectDesc>
+         <editorialDecl>
+           <quotation>
+             <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+           </quotation>
+           <hyphenation>
+             <p xml:lang="en">A processing step for the sPeriodika corpus attempted to join end-of-line hyphenated words,
+             although it was not sucessfull in all cases. Previously hyphenated words are not marked-up as such.</p>
+           </hyphenation>
+           <correction>
+             <p xml:lang="en">In the source sPeriodika corpus the OCR-ed texts were corrected
+             with <ref target="https://github.com/clarinsi/csmtiser">cSMTiser</ref>,
+             a text normalisation tool based on character-level machine translation. No additional
+             correction was performed in the scope of PressMint.</p>
+           </correction>
+           <normalization>
+             <p xml:lang="en">Text has not been normalised, except for spacing.</p>
+           </normalization>
+           <segmentation>
+             <p xml:lang="en">The texts are split by page breaks, and then segmented into paragraphs.</p>
+           </segmentation>
+         </editorialDecl>
+         <classDecl>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-OCR.xml"/>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+        <settingDesc>
+          <setting>
+            <date from="1850" to="1914">1850--1914</date>
+          </setting>
+        </settingDesc>
+        <langUsage>
+          <language ident="sl" xml:lang="sl">slovenski</language>
+          <language ident="sl" xml:lang="en">Slovenian</language>
+          <language ident="en" xml:lang="sl">angleški</language>
+          <language ident="en" xml:lang="en">English</language>
+        </langUsage>
+      </profileDesc>
+      <revisionDesc>
+        <change when="2025-11-12">
+        <name>Tomaž Erjavec</name>: Conversion for sPeriodika.</change>
+      </revisionDesc>
+   </teiHeader>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1914/PressMint-SI_1914-03-12-NTYLFNWW.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1914/PressMint-SI_1914-08-07-2KUI6981.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1914/PressMint-SI_1914-12-31-VIMK81GZ.xml"/>
+</teiCorpus>
