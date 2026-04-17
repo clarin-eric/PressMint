@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PT" xml:lang="pt">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="pt">Corpus Português de Jornais Históricos PressMint-PT, [PressMint SAMPLE]</title>
+                <title xml:lang="en">Portuguese Historical Newspaper Corpus PressMint-PT, [PressMint SAMPLE]</title>
+                <respStmt>
+                    <persName ref="https://orcid.org/0000-0002-4345-2344">José Aires</persName>
+                    <resp xml:lang="pt">Codificação em XML TEI para PressMint</resp>
+                    <resp xml:lang="en">PressMint TEI XML corpus encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <persName ref="https://orcid.org/0000-0002-4345-2344">José Aires</persName>
+                    <resp xml:lang="pt">Preparação do corpus</resp>
+                    <resp xml:lang="en">Corpus preparation</resp>
+                </respStmt>
+                <respStmt>
+                    <persName ref="https://orcid.org/0000-0001-6815-2674">Amália Mendes</persName>
+                    <resp xml:lang="pt">Seleção dos textos do corpus</resp>
+                    <resp xml:lang="en">Corpus texts selection</resp>
+                </respStmt>
+                <funder>
+                    <orgName xml:lang="pt">Infraestrutura CLARIN ERIC</orgName>
+                    <orgName xml:lang="en">CLARIN ERIC infrastructure</orgName>
+                </funder>
+                <funder>
+                    <orgName xml:lang="pt">Infraestrutura de Investigação para a Ciência e Tecnologia da Linguagem PORTULAN CLARIN</orgName>
+                    <orgName xml:lang="en">Research Infrastructure for the Science and Technology of Language PORTULAN CLARIN</orgName>
+                </funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>1.0</edition>
+            </editionStmt>
+            <extent>
+                <measure unit="texts" quantity="436" xml:lang="en">436 texts</measure>
+                <measure unit="paragraphs" quantity="3148" xml:lang="en">3148 paragraphs</measure>
+                <measure unit="words" quantity="63178" xml:lang="en">63178 words</measure>
+            </extent>
+            <publicationStmt>
+                <publisher>
+                    <orgName xml:lang="pt">Infraestrutura CLARIN ERIC</orgName>
+                    <orgName xml:lang="en">CLARIN ERIC infrastructure</orgName>
+                    <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+                </publisher>
+                <availability status="free">
+                    <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+                    <p xml:lang="pt">O corpus é disponibilizado com a licença <ref target="http://creativecommons.org/licenses/by/4.0/">Licença Creative Commons Atribuição 4.0 Internacional</ref>.</p>
+                    <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+                </availability>
+                <date when="2026-04-05">2026-04-05</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Autores e restantes dados a confirmar</author>
+                    <title type="main" xml:lang="pt">Corpus de periódicos portugueses (1808-1945) Verifica 1.0</title>
+                    <title type="main" xml:lang="en">Corpus of Portuguese periodicals (1808-1945) Verifica 1.0</title>
+                    <idno type="URI" subtype="handle">http://verifica.o/handle</idno>
+                    <date>2023</date>
+                    <bibl>
+                        <title type="main" xml:lang="pt">Biblioteca digital de Portugal Verifica</title>
+                        <title type="main" xml:lang="en">Digital library of Portuga Verifica</title>
+                        <idno type="URI" subtype="URL">https://verifica.pt/</idno>
+                    </bibl>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p xml:lang="pt">O projeto <ref target="https://www.clarin.eu/pressmint">PressMint</ref> tem como objetivo compilar um conjunto multilingue, anotado e interoperável de corpora de jornais históricos europeus do início do século XX. Os corpora do PressMint estarão disponíveis gratuitamente, tanto para download em diversos formatos e versões, como através de várias ferramentas de análise de corpora online.</p>
+                <p xml:lang="en">The <ref target="https://www.clarin.eu/pressmint">PressMint</ref> project aims to compile a multilingual, annotated and interoperable set of corpora of European historical newspapers from around the start of the 20th century. The PressMint corpora will be openly available, both for download in a variety of instances and formats, as well as via several online corpus analysis tools.</p>
+            </projectDesc>
+            <editorialDecl>
+                <quotation>
+                    <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+                </quotation>
+                <hyphenation>
+                    <p xml:lang="en">Hyphenated words have been left in the text and are not explicitly marked-up as such.</p>
+                </hyphenation>
+                <correction>
+                    <p xml:lang="en">No correction was performed.</p>
+                </correction>
+                <normalization>
+                    <p xml:lang="en">Text has not been normalised.</p>
+                </normalization>
+                <segmentation>
+                    <p xml:lang="en">The texts are split by page breaks and then segmented into paragraphs.</p>
+                </segmentation>
+            </editorialDecl>
+            <tagsDecl>
+                <namespace name="http://www.tei-c.org/ns/1.0">
+                    <tagUsage gi="text" occurs="436"/>
+                    <tagUsage gi="body" occurs="436"/>
+                    <tagUsage gi="pb" occurs="0"/>
+                    <tagUsage gi="p" occurs="3148"/>
+                    <tagUsage gi="w" occurs="63178"/>
+                    <tagUsage gi="name" occurs="2729"/>
+                    <tagUsage gi="pc" occurs="9848"/>
+                    <tagUsage gi="s" occurs="3148"/>
+                </namespace>
+            </tagsDecl>
+            <classDecl>
+                <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-OCR.xml"/>
+                <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-NER.ana.xml"/>
+            </classDecl>
+            <appInfo>
+                <application ident="UDPipe" version="2">
+                   <label>Lemmatization and POS tagging</label>
+                   <desc xml:lang="en">Lemmatization and POS tagging carried out using UDPipe.<ref target="https://github.com/ufal/udpipe.git">https://github.com/ufal/udpipe.git</ref></desc>
+                </application>
+                <application ident="NameTag" version="3">
+                   <label>NER marking</label>
+                   <desc xml:lang="en">NER (PER, LOC, ORG, MISC) marking carried out NameTag.<ref target="https://github.com/ufal/nametag3.git">https://github.com/ufal/nametag3.git</ref></desc>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <settingDesc>
+                <setting>
+                    <date from="1808" to="1945">1808--1945</date>
+                </setting>
+            </settingDesc>
+            <langUsage>
+                <language ident="pt" xml:lang="pt">português</language>
+                <language ident="pt" xml:lang="en">Portuguese</language>
+                <language ident="en" xml:lang="pt">inglês</language>
+                <language ident="en" xml:lang="en">English</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2026-04-05"><name>José Aires</name>: Made sample.</change>
+        </revisionDesc>
+    </teiHeader>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1808/PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1808/PressMint-PT_1808-02-26-Gazeta-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1808/PressMint-PT_1808-06-03-Gazeta-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1808/PressMint-PT_1808-06-03-Gazeta-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1808/PressMint-PT_1808-07-14-Gazeta-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1808/PressMint-PT_1808-07-30-Gazeta-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1811/PressMint-PT_1811-05-17-Diário-Lisbonense-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1811/PressMint-PT_1811-05-17-Diário-Lisbonense-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1822/PressMint-PT_1822-07-01-Gazeta-de-Portugal-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1822/PressMint-PT_1822-07-03-Gazeta-de-Portugal-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1822/PressMint-PT_1822-08-08-Gazeta-de-Portugal-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1822/PressMint-PT_1822-08-08-Gazeta-de-Portugal-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1822/PressMint-PT_1822-08-09-Gazeta-de-Portugal-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1822/PressMint-PT_1822-08-12-Gazeta-de-Portugal-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1822/PressMint-PT_1822-09-04-Gazeta-de-Portugal-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1822/PressMint-PT_1822-11-14-Gazeta-de-Portugal-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1822/PressMint-PT_1822-12-16-Gazeta-de-Portugal-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1822/PressMint-PT_1822-12-16-Gazeta-de-Portugal-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1822/PressMint-PT_1822-12-16-Gazeta-de-Portugal-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1822/PressMint-PT_1822-12-16-Gazeta-de-Portugal-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1823/PressMint-PT_1823-01-04-Gazeta-de-Portugal-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1823/PressMint-PT_1823-01-04-Gazeta-de-Portugal-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1823/PressMint-PT_1823-01-04-Gazeta-de-Portugal-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1823/PressMint-PT_1823-01-04-Gazeta-de-Portugal-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1823/PressMint-PT_1823-01-23-Gazeta-de-Portugal-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1823/PressMint-PT_1823-02-03-Gazeta-de-Portugal-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1823/PressMint-PT_1823-02-03-Gazeta-de-Portugal-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1823/PressMint-PT_1823-02-03-Gazeta-de-Portugal-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-11-16-O-Grátis-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-11-16-O-Grátis-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-11-16-O-Grátis-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-11-16-O-Grátis-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-11-16-O-Grátis-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-11-16-O-Grátis-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-11-16-O-Grátis-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-11-16-O-Grátis-8.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-11-16-O-Grátis-9.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-11-16-O-Grátis-10.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-12-24-O-Grátis-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-12-24-O-Grátis-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-12-24-O-Grátis-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-12-24-O-Grátis-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-12-24-O-Grátis-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-12-24-O-Grátis-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-12-24-O-Grátis-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-12-24-O-Grátis-8.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-12-28-O-Grátis-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-12-28-O-Grátis-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-12-28-O-Grátis-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1836/PressMint-PT_1836-12-28-O-Grátis-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-01-04-O-Grátis-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-01-04-O-Grátis-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-01-04-O-Grátis-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-01-04-O-Grátis-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-01-04-O-Grátis-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-01-04-O-Grátis-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-01-04-O-Grátis-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-01-04-O-Grátis-8.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-01-04-O-Grátis-9.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-01-04-O-Grátis-10.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-12-13-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-12-18-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-12-22-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-12-30-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-12-30-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1837/PressMint-PT_1837-12-30-Correio-de-Lisboa-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-01-08-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-01-08-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-01-08-Correio-de-Lisboa-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-01-20-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-01-20-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-01-20-Correio-de-Lisboa-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-05-02-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-05-02-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-05-02-Correio-de-Lisboa-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-05-02-Correio-de-Lisboa-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-05-21-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-07-02-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-07-02-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-07-02-Correio-de-Lisboa-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-11-28-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1838/PressMint-PT_1838-11-28-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1839/PressMint-PT_1839-03-27-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1839/PressMint-PT_1839-03-27-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1839/PressMint-PT_1839-03-27-Correio-de-Lisboa-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1839/PressMint-PT_1839-04-25-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1839/PressMint-PT_1839-05-23-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1839/PressMint-PT_1839-06-11-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1839/PressMint-PT_1839-07-10-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1839/PressMint-PT_1839-07-10-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1839/PressMint-PT_1839-07-10-Correio-de-Lisboa-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1839/PressMint-PT_1839-09-07-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1839/PressMint-PT_1839-09-07-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1840/PressMint-PT_1840-02-26-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1840/PressMint-PT_1840-03-27-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1840/PressMint-PT_1840-03-27-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1840/PressMint-PT_1840-03-27-Correio-de-Lisboa-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1840/PressMint-PT_1840-03-27-Correio-de-Lisboa-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1840/PressMint-PT_1840-03-31-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1840/PressMint-PT_1840-05-29-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1840/PressMint-PT_1840-05-29-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1840/PressMint-PT_1840-05-29-Correio-de-Lisboa-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1840/PressMint-PT_1840-05-29-Correio-de-Lisboa-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1840/PressMint-PT_1840-06-10-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1840/PressMint-PT_1840-07-11-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-01-16-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-01-20-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-01-20-A-Revolução-de-Septembro-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-01-20-A-Revolução-de-Septembro-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-01-20-A-Revolução-de-Septembro-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-01-20-A-Revolução-de-Septembro-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-01-21-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-02-20-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-02-20-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-02-20-Correio-de-Lisboa-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-02-24-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-04-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-04-Correio-de-Lisboa-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-08-Correio-de-Lisboa-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-16-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-16-A-Revolução-de-Septembro-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-16-A-Revolução-de-Septembro-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-16-A-Revolução-de-Septembro-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-16-A-Revolução-de-Septembro-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-16-A-Revolução-de-Septembro-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-17-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-17-A-Revolução-de-Septembro-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-17-A-Revolução-de-Septembro-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-03-17-A-Revolução-de-Septembro-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-05-06-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-05-06-A-Revolução-de-Septembro-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-08-31-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-08-31-A-Revolução-de-Septembro-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-08-31-A-Revolução-de-Septembro-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-01-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-01-A-Revolução-de-Septembro-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-01-A-Revolução-de-Septembro-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-01-A-Revolução-de-Septembro-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-01-A-Revolução-de-Septembro-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-01-A-Revolução-de-Septembro-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-19-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-19-A-Revolução-de-Septembro-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-19-A-Revolução-de-Septembro-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-19-A-Revolução-de-Septembro-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-19-A-Revolução-de-Septembro-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-20-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-20-A-Revolução-de-Septembro-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-10-20-A-Revolução-de-Septembro-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-11-09-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-11-09-A-Revolução-de-Septembro-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-12-17-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-12-17-A-Revolução-de-Septembro-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1841/PressMint-PT_1841-12-17-A-Revolução-de-Septembro-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1845/PressMint-PT_1845-04-08-O-Correio-Portuguez-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1845/PressMint-PT_1845-04-12-O-Correio-Portuguez-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1845/PressMint-PT_1845-05-19-O-Correio-Portuguez-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1845/PressMint-PT_1845-05-20-O-Correio-Portuguez-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1845/PressMint-PT_1845-05-20-O-Correio-Portuguez-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1845/PressMint-PT_1845-05-20-O-Correio-Portuguez-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1845/PressMint-PT_1845-05-20-O-Correio-Portuguez-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1845/PressMint-PT_1845-05-23-O-Correio-Portuguez-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1845/PressMint-PT_1845-07-29-O-Correio-Portuguez-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1845/PressMint-PT_1845-11-12-O-Correio-Portuguez-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1845/PressMint-PT_1845-11-12-O-Correio-Portuguez-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1850/PressMint-PT_1850-04-06-A-Revolução-de-Septembro-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-03-09-A-Lei-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-03-09-A-Lei-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-03-09-A-Lei-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-03-09-A-Lei-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-03-10-A-Lei-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-03-10-A-Lei-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-03-10-A-Lei-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-03-10-A-Lei-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-03-10-A-Lei-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-03-10-A-Lei-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-03-31-A-Lei-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-06-08-A-Lei-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-06-08-A-Lei-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-06-08-A-Lei-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-06-08-A-Lei-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1852/PressMint-PT_1852-06-08-A-Lei-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-02-23-O-Portuguez-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-03-24-O-Portuguez-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-03-24-O-Portuguez-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-03-24-O-Portuguez-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-03-24-O-Portuguez-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-03-24-O-Portuguez-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-03-24-O-Portuguez-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-03-24-O-Portuguez-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-03-24-O-Portuguez-8.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-06-12-O-Portuguez-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-06-12-O-Portuguez-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-06-12-O-Portuguez-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-06-12-O-Portuguez-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-06-12-O-Portuguez-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-06-12-O-Portuguez-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-06-12-O-Portuguez-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1855/PressMint-PT_1855-06-12-O-Portuguez-8.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1864/PressMint-PT_1864-12-29-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1865/PressMint-PT_1865-03-22-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1865/PressMint-PT_1865-03-22-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1865/PressMint-PT_1865-03-22-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1865/PressMint-PT_1865-03-22-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1865/PressMint-PT_1865-03-22-Diário-de-Notícias-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1865/PressMint-PT_1865-03-22-Diário-de-Notícias-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1865/PressMint-PT_1865-03-22-Diário-de-Notícias-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1865/PressMint-PT_1865-03-22-Diário-de-Notícias-8.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1871/PressMint-PT_1871-07-06-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1871/PressMint-PT_1871-07-06-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1871/PressMint-PT_1871-07-06-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1871/PressMint-PT_1871-07-06-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1871/PressMint-PT_1871-07-06-Diário-de-Notícias-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1871/PressMint-PT_1871-07-06-Diário-de-Notícias-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-01-17-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-01-17-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-01-17-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-01-17-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-01-17-Diário-de-Notícias-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-01-17-Diário-de-Notícias-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-01-17-Diário-de-Notícias-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-03-25-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-03-25-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-03-25-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-03-25-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-03-25-Diário-de-Notícias-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-PT_1873-03-25-Diário-de-Notícias-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1875/PressMint-PT_1875-04-21-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1875/PressMint-PT_1875-04-21-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1875/PressMint-PT_1875-04-21-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1875/PressMint-PT_1875-04-21-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1875/PressMint-PT_1875-04-21-Diário-de-Notícias-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-07-12-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-07-12-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-07-12-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-07-12-O-Século-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-07-12-O-Século-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-07-12-O-Século-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-09-02-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-09-02-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-09-02-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-09-02-O-Século-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-09-02-O-Século-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-09-02-O-Século-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-09-02-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-09-02-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-PT_1881-09-02-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1884/PressMint-PT_1884-11-07-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1884/PressMint-PT_1884-11-07-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1884/PressMint-PT_1884-11-07-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1884/PressMint-PT_1884-11-07-O-Século-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1884/PressMint-PT_1884-11-07-O-Século-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1884/PressMint-PT_1884-11-07-O-Século-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1884/PressMint-PT_1884-11-07-O-Século-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1884/PressMint-PT_1884-11-07-O-Século-8.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1884/PressMint-PT_1884-11-07-O-Século-9.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1884/PressMint-PT_1884-11-07-O-Século-10.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1885/PressMint-PT_1885-02-24-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1885/PressMint-PT_1885-02-24-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1885/PressMint-PT_1885-02-24-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1885/PressMint-PT_1885-02-24-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1885/PressMint-PT_1885-02-24-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1885/PressMint-PT_1885-02-24-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1887/PressMint-PT_1887-10-20-Correio-da-Manhã-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1887/PressMint-PT_1887-10-20-Correio-da-Manhã-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1887/PressMint-PT_1887-11-01-Correio-da-Manhã-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1887/PressMint-PT_1887-11-01-Correio-da-Manhã-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1887/PressMint-PT_1887-11-01-Correio-da-Manhã-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-PT_1890-04-01-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-PT_1890-04-01-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-PT_1890-04-01-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-PT_1890-06-15-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-PT_1890-06-15-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-PT_1890-06-15-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-PT_1890-06-15-O-Século-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-PT_1890-06-15-O-Século-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-PT_1890-06-15-O-Século-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-PT_1890-06-15-O-Século-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-PT_1890-06-15-O-Século-8.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-PT_1890-06-15-O-Século-9.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1895/PressMint-PT_1895-08-03-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1895/PressMint-PT_1895-08-23-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1895/PressMint-PT_1895-08-23-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1895/PressMint-PT_1895-08-23-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1895/PressMint-PT_1895-08-23-O-Século-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1895/PressMint-PT_1895-11-05-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1895/PressMint-PT_1895-11-05-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1900/PressMint-PT_1900-01-05-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1900/PressMint-PT_1900-01-05-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1900/PressMint-PT_1900-01-05-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1900/PressMint-PT_1900-01-17-A-Paródia-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1900/PressMint-PT_1900-01-24-A-Paródia-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1900/PressMint-PT_1900-01-31-A-Paródia-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1900/PressMint-PT_1900-01-31-A-Paródia-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1900/PressMint-PT_1900-04-11-A-Paródia-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-8.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-9.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-10.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-11.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-12.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-13.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-01-11-Diário-de-Notícias-14.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-PT_1905-03-10-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1908/PressMint-PT_1908-06-15-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1908/PressMint-PT_1908-06-29-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1908/PressMint-PT_1908-07-05-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-07-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-09-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-09-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-09-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-09-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-09-Diário-de-Notícias-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-09-Diário-de-Notícias-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-09-Diário-de-Notícias-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-14-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-14-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-14-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-14-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-14-Diário-de-Notícias-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-14-Diário-de-Notícias-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-01-14-Diário-de-Notícias-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-02-04-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-PT_1910-02-04-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1915/PressMint-PT_1915-04-01-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1915/PressMint-PT_1915-04-05-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1915/PressMint-PT_1915-04-05-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1915/PressMint-PT_1915-04-05-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1915/PressMint-PT_1915-04-05-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1915/PressMint-PT_1915-04-06-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1915/PressMint-PT_1915-04-06-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1915/PressMint-PT_1915-04-06-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1915/PressMint-PT_1915-04-06-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1915/PressMint-PT_1915-06-03-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1915/PressMint-PT_1915-06-03-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-01-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-01-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-01-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-01-O-Século-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-01-O-Século-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-01-O-Século-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-01-O-Século-7.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-04-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-29-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-29-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-29-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-29-O-Século-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-07-29-O-Século-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-08-01-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-09-23-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-09-23-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-09-23-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-09-23-O-Século-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-09-23-O-Século-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-PT_1917-09-23-O-Século-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1922/PressMint-PT_1922-09-02-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1922/PressMint-PT_1922-09-02-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1922/PressMint-PT_1922-09-02-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1922/PressMint-PT_1922-09-02-O-Século-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1922/PressMint-PT_1922-09-02-O-Século-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1922/PressMint-PT_1922-09-02-O-Século-6.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1922/PressMint-PT_1922-09-03-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1922/PressMint-PT_1922-10-29-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1922/PressMint-PT_1922-10-29-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1922/PressMint-PT_1922-11-20-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1925/PressMint-PT_1925-01-07-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1925/PressMint-PT_1925-01-14-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1925/PressMint-PT_1925-01-23-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-01-21-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-01-21-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-01-21-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-02-02-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-02-02-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-05-24-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-05-24-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-08-11-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-08-11-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-08-11-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-08-11-O-Século-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-08-11-O-Século-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1930/PressMint-PT_1930-08-12-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-02-13-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-03-03-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-03-03-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-03-03-O-Século-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-07-06-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-07-06-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-11-04-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-11-04-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-11-04-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-11-05-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-11-05-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-11-05-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-11-05-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1935/PressMint-PT_1935-11-06-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1936/PressMint-PT_1936-01-01-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1936/PressMint-PT_1936-01-01-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1936/PressMint-PT_1936-01-01-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1936/PressMint-PT_1936-01-03-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1936/PressMint-PT_1936-01-03-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1936/PressMint-PT_1936-01-03-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1936/PressMint-PT_1936-01-03-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1940/PressMint-PT_1940-01-09-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1940/PressMint-PT_1940-01-10-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1940/PressMint-PT_1940-02-04-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1940/PressMint-PT_1940-02-15-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1940/PressMint-PT_1940-02-15-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1940/PressMint-PT_1940-02-15-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-08-19-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-08-19-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-08-19-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-08-19-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-08-19-Diário-de-Notícias-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-08-21-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-08-21-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-08-21-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-08-21-Diário-de-Notícias-4.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-08-21-Diário-de-Notícias-5.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-08-28-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-08-28-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-09-17-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1943/PressMint-PT_1943-09-17-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1945/PressMint-PT_1945-10-09-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1945/PressMint-PT_1945-10-09-O-Século-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1945/PressMint-PT_1945-10-14-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1945/PressMint-PT_1945-10-14-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1945/PressMint-PT_1945-10-14-Diário-de-Notícias-3.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1945/PressMint-PT_1945-10-18-O-Século-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1945/PressMint-PT_1945-11-03-Diário-de-Notícias-1.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1945/PressMint-PT_1945-11-03-Diário-de-Notícias-2.ana.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1945/PressMint-PT_1945-11-03-Diário-de-Notícias-3.ana.xml"/>
+</teiCorpus>
