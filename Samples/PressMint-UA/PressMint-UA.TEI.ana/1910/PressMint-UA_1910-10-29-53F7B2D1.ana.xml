@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-UA_1910-10-29-53F7B2D1.ana" xml:lang="uk">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="uk">Корпус українських історичних газет PressMint-UA (PluG), «Маргарин», Рада, №245 29.10.1910 [PressMint.ana SAMPLE]</title>
+            <title xml:lang="en">Ukrainian historical newspaper corpus PressMint-UA, "Маргарин", Рада, 1910-10-29, no. 245 [PressMint.ana SAMPLE]</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent>
+            <measure unit="paragraphs" quantity="1" xml:lang="en">1 paragraph</measure>
+            <measure unit="sentences" quantity="2" xml:lang="en">2 sentences</measure>
+            <measure unit="words" quantity="10" xml:lang="en">10 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="uk">Дослідницька інфраструктура CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+            </availability>
+            <date when="2026-04-17">2026-04-17</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Рада</title>
+               <title level="a">Маргарин</title>
+               <pubPlace>Київ</pubPlace>
+               <date when="1910-10-29">№245 29.10.1910</date>
+               <biblScope unit="issue">245</biblScope>
+               <idno type="PluG-path">R/Rada_1910_245/Rada_1910_245_Margaryn.txt</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en">
+               <ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project creating multilingual corpora of historical newspapers.</p>
+         </projectDesc>
+         <tagsDecl>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="pb" occurs="1" />
+               <tagUsage gi="p" occurs="1" />
+               <tagUsage gi="s" occurs="2" />
+               <tagUsage gi="w" occurs="10" />
+               <tagUsage gi="pc" occurs="2" />
+               <tagUsage gi="name" occurs="1" />
+            </namespace>
+         </tagsDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2026-04-17">Конвертація PluG -&gt; PressMint TEI XML .ana.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="uk">
+      <body>
+         <pb xml:id="PressMint-UA_1910-10-29-53F7B2D1.ana.page1" />
+         <p xml:id="PressMint-UA_1910-10-29-53F7B2D1.ana.p1">
+            <s xml:id="PressMint-UA_1910-10-29-53F7B2D1.ana.p1.s1">
+               <name type="LOC">
+                  <w lemma="Москва" msd="UPosTag=PROPN|Animacy=Inan|Case=Nom|Gender=Fem|NameType=Geo|Number=Sing" join="right">МОСКВА</w>
+               </name>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s xml:id="PressMint-UA_1910-10-29-53F7B2D1.ana.p1.s2">
+               <w lemma="медичний" msd="UPosTag=ADJ|Case=Nom|Gender=Fem|Number=Sing">Медична</w>
+               <w lemma="рада" msd="UPosTag=NOUN|Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing">рада</w>
+               <w lemma="дозволити" msd="UPosTag=VERB|Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin">дозволила</w>
+               <w lemma="фабрика" msd="UPosTag=NOUN|Animacy=Inan|Case=Dat|Gender=Fem|Number=Sing">фабриці</w>
+               <w lemma="Сіа" msd="UPosTag=PROPN|Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing">Сіу</w>
+               <w lemma="вживати" msd="UPosTag=VERB|Aspect=Imp|VerbForm=Inf">вживати</w>
+               <w lemma="для" msd="UPosTag=ADP|Case=Gen">для</w>
+               <w lemma="продукт" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur">продуктів</w>
+               <w lemma="маргарина" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur" join="right">маргарин</w>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-UA_1910-10-29-F1635FBF.ana" xml:lang="uk">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="uk">Корпус українських історичних газет PressMint-UA (PluG), «Чума», Рада, №245 29.10.1910 [PressMint.ana SAMPLE]</title>
+            <title xml:lang="en">Ukrainian historical newspaper corpus PressMint-UA, "Чума", Рада, 1910-10-29, no. 245 [PressMint.ana SAMPLE]</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent>
+            <measure unit="paragraphs" quantity="1" xml:lang="en">1 paragraph</measure>
+            <measure unit="sentences" quantity="5" xml:lang="en">5 sentences</measure>
+            <measure unit="words" quantity="47" xml:lang="en">47 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="uk">Дослідницька інфраструктура CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+            </availability>
+            <date when="2026-04-17">2026-04-17</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Рада</title>
+               <title level="a">Чума</title>
+               <pubPlace>Київ</pubPlace>
+               <date when="1910-10-29">№245 29.10.1910</date>
+               <biblScope unit="issue">245</biblScope>
+               <idno type="PluG-path">R/Rada_1910_245/Rada_1910_245_Chuma.txt</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en">
+               <ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project creating multilingual corpora of historical newspapers.</p>
+         </projectDesc>
+         <tagsDecl>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="pb" occurs="1" />
+               <tagUsage gi="p" occurs="1" />
+               <tagUsage gi="s" occurs="5" />
+               <tagUsage gi="w" occurs="47" />
+               <tagUsage gi="pc" occurs="11" />
+               <tagUsage gi="name" occurs="6" />
+            </namespace>
+         </tagsDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2026-04-17">Конвертація PluG -&gt; PressMint TEI XML .ana.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="uk">
+      <body>
+         <pb xml:id="PressMint-UA_1910-10-29-F1635FBF.ana.page1" />
+         <p xml:id="PressMint-UA_1910-10-29-F1635FBF.ana.p1">
+            <s xml:id="PressMint-UA_1910-10-29-F1635FBF.ana.p1.s1">
+               <name type="LOC">
+                  <w lemma="ОДЕСА" msd="UPosTag=PROPN|Animacy=Inan|Case=Nom|Gender=Fem|NameType=Geo|Number=Sing" join="right">ОДЕСА</w>
+               </name>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s xml:id="PressMint-UA_1910-10-29-F1635FBF.ana.p1.s2">
+               <w lemma="в" msd="UPosTag=ADP|Case=Acc">В</w>
+               <w lemma="село" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing">село</w>
+               <name type="PER">
+                  <w lemma="Роксоляна" msd="UPosTag=PROPN|Animacy=Inan|Case=Gen|Gender=Fem|NameType=Geo|Number=Sing" join="right">Роксоляни</w>
+               </name>
+               <pc msd="UPosTag=PUNCT">,</pc>
+               <w lemma="одеський" msd="UPosTag=ADJ|Case=Gen|Gender=Masc|Number=Sing">одеського</w>
+               <w lemma="повіт" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing" join="right">повіту</w>
+               <pc msd="UPosTag=PUNCT">,</pc>
+               <w lemma="в" msd="UPosTag=ADP|Case=Loc">в</w>
+               <w lemma="який" msd="UPosTag=DET|Case=Loc|Gender=Masc|Number=Sing|PronType=Rel">якому</w>
+               <w lemma="з'явитися" msd="UPosTag=VERB|Aspect=Perf|Mood=Ind|Number=Plur|Reflex=Yes|Tense=Past|VerbForm=Fin">з'явились</w>
+               <w lemma="перший" msd="UPosTag=ADJ|Case=Nom|Degree=Pos|Number=Plur|NumType=Ord">перші</w>
+               <w lemma="підозріль" msd="UPosTag=NOUN|Animacy=Anim|Case=Nom|Gender=Masc|Number=Plur">підозрілі</w>
+               <w lemma="по" msd="UPosTag=ADP|Case=Loc">по</w>
+               <w lemma="чума" msd="UPosTag=NOUN|Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing">чумі</w>
+               <w lemma="слабування" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing" join="right">слабування</w>
+               <pc msd="UPosTag=PUNCT">,</pc>
+               <w lemma="виїхати" msd="UPosTag=VERB|Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin">виїхав</w>
+               <w lemma="Дамекін" msd="UPosTag=PROPN|Animacy=Anim|Case=Nom|Gender=Masc|NameType=Sur|Number=Sing" join="right">Дамекін</w>
+               <pc msd="UPosTag=PUNCT">,</pc>
+               <w lemma="голова" msd="UPosTag=NOUN|Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing">голова</w>
+               <w lemma="земський" msd="UPosTag=ADJ|Case=Gen|Gender=Fem|Number=Sing">земської</w>
+               <w lemma="управа" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing">управи</w>
+               <w lemma="і" msd="UPosTag=CCONJ">і</w>
+               <w lemma="бактеріолог" msd="UPosTag=NOUN|Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing">бактеріолог</w>
+               <name type="PER">
+                  <w lemma="Скшіван" msd="UPosTag=PROPN|Animacy=Anim|Case=Nom|Gender=Masc|NameType=Sur|Number=Sing" join="right">Скшіван</w>
+               </name>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s xml:id="PressMint-UA_1910-10-29-F1635FBF.ana.p1.s3">
+               <w lemma="селяне" msd="UPosTag=NOUN|Animacy=Anim|Case=Nom|Gender=Masc|Number=Plur" join="right">Селяне</w>
+               <pc msd="UPosTag=PUNCT">,</pc>
+               <w lemma="який" msd="UPosTag=DET|Case=Nom|Number=Plur|PronType=Rel">які</w>
+               <w lemma="заслабти" msd="UPosTag=VERB|Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin">заслабли</w>
+               <w lemma="на" msd="UPosTag=ADP|Case=Acc">на</w>
+               <w lemma="чума" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing" join="right">чуму</w>
+               <pc msd="UPosTag=PUNCT">,</pc>
+               <w lemma="в" msd="UPosTag=ADP|Case=Loc">в</w>
+               <name type="LOC">
+                  <w lemma="Одеса" msd="UPosTag=PROPN|Animacy=Inan|Case=Loc|Gender=Fem|NameType=Geo|Number=Sing">Одесі</w>
+               </name>
+               <w lemma="не" msd="UPosTag=PART|Polarity=Neg">не</w>
+               <w lemma="бути" msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin">були</w>
+               <w lemma="і" msd="UPosTag=CCONJ">і</w>
+               <w lemma="взагалі" msd="UPosTag=ADV">взагалі</w>
+               <w lemma="нікуди" msd="UPosTag=ADV|PronType=Neg">нікуди</w>
+               <w lemma="не" msd="UPosTag=PART|Polarity=Neg">не</w>
+               <w lemma="виїздити" msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin">виїздили</w>
+               <w lemma="звідтіль" msd="UPosTag=ADV" join="right">звідтіль</w>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s xml:id="PressMint-UA_1910-10-29-F1635FBF.ana.p1.s4">
+               <name type="LOC">
+                  <w lemma="щурий" msd="UPosTag=NOUN|Animacy=Anim|Case=Nom|Gender=Masc|Number=Plur">Щурі</w>
+               </name>
+               <w lemma="зачумлений" msd="UPosTag=ADJ|Aspect=Perf|Case=Nom|Number=Plur|VerbForm=Part|Voice=Pass">зачумлені</w>
+               <w lemma="забігти" msd="UPosTag=VERB|Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin">забігли</w>
+               <w lemma="туди" msd="UPosTag=ADV|PronType=Dem">туди</w>
+               <w lemma="мабуть" msd="UPosTag=ADV">мабуть</w>
+               <w lemma="з" msd="UPosTag=ADP|Case=Gen">з</w>
+               <name type="LOC">
+                  <w lemma="Одеса" msd="UPosTag=PROPN|Animacy=Inan|Case=Gen|Gender=Fem|NameType=Geo|Number=Sing" join="right">Одеси</w>
+               </name>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s xml:id="PressMint-UA_1910-10-29-F1635FBF.ana.p1.s5">
+               <w lemma="послати" msd="UPosTag=VERB|Aspect=Perf|Mood=Ind|Person=0|VerbForm=Fin">Послано</w>
+               <w lemma="санітарний" msd="UPosTag=ADJ|Case=Acc|Gender=Fem|Number=Sing">санітарну</w>
+               <w lemma="комісія" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing" join="right">комісію</w>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+      </body>
+   </text>
+</TEI>

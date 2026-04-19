@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-UA_1910-10-29-7AE9B66D.ana" xml:lang="uk">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="uk">Корпус українських історичних газет PressMint-UA (PluG), «Арешт сем'ї», Рада, №245 29.10.1910 [PressMint.ana SAMPLE]</title>
+            <title xml:lang="en">Ukrainian historical newspaper corpus PressMint-UA, "Арешт сем'ї", Рада, 1910-10-29, no. 245 [PressMint.ana SAMPLE]</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent>
+            <measure unit="paragraphs" quantity="1" xml:lang="en">1 paragraph</measure>
+            <measure unit="sentences" quantity="3" xml:lang="en">3 sentences</measure>
+            <measure unit="words" quantity="16" xml:lang="en">16 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="uk">Дослідницька інфраструктура CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+            </availability>
+            <date when="2026-04-17">2026-04-17</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Рада</title>
+               <title level="a">Арешт сем'ї</title>
+               <pubPlace>Київ</pubPlace>
+               <date when="1910-10-29">№245 29.10.1910</date>
+               <biblScope unit="issue">245</biblScope>
+               <idno type="PluG-path">R/Rada_1910_245/Rada_1910_245_Aresht_semyi.txt</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en">
+               <ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project creating multilingual corpora of historical newspapers.</p>
+         </projectDesc>
+         <tagsDecl>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="pb" occurs="1" />
+               <tagUsage gi="p" occurs="1" />
+               <tagUsage gi="s" occurs="3" />
+               <tagUsage gi="w" occurs="16" />
+               <tagUsage gi="pc" occurs="4" />
+               <tagUsage gi="name" occurs="1" />
+            </namespace>
+         </tagsDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2026-04-17">Конвертація PluG -&gt; PressMint TEI XML .ana.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="uk">
+      <body>
+         <pb xml:id="PressMint-UA_1910-10-29-7AE9B66D.ana.page1" />
+         <p xml:id="PressMint-UA_1910-10-29-7AE9B66D.ana.p1">
+            <s xml:id="PressMint-UA_1910-10-29-7AE9B66D.ana.p1.s1">
+               <name type="LOC">
+                  <w lemma="могилів" msd="UPosTag=NOUN|Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing" join="right">МОГИЛІВ</w>
+               </name>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s xml:id="PressMint-UA_1910-10-29-7AE9B66D.ana.p1.s2">
+               <w lemma="арештувати" msd="UPosTag=VERB|Aspect=Perf|Mood=Ind|Person=0|VerbForm=Fin">Арештовано</w>
+               <w lemma="директор" msd="UPosTag=NOUN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing">директора</w>
+               <w lemma="психіатричний" msd="UPosTag=ADJ|Case=Gen|Gender=Fem|Number=Sing">психіатричної</w>
+               <w lemma="лікарня" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing" join="right">лікарні</w>
+               <pc msd="UPosTag=PUNCT">,</pc>
+               <w lemma="його" msd="UPosTag=DET|Case=Acc|Gender=Fem|InflClass=Ind|Number=Sing|Person=3|Poss=Yes|PronType=Prs">його</w>
+               <w lemma="жінка" msd="UPosTag=NOUN|Animacy=Anim|Case=Acc|Gender=Fem|Number=Sing">жінку</w>
+               <w lemma="і" msd="UPosTag=CCONJ">і</w>
+               <w lemma="дочка" msd="UPosTag=NOUN|Animacy=Anim|Case=Acc|Gender=Fem|Number=Sing" join="right">дочку</w>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s xml:id="PressMint-UA_1910-10-29-7AE9B66D.ana.p1.s3">
+               <w lemma="директор" msd="UPosTag=NOUN|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing">Директора</w>
+               <w lemma="через" msd="UPosTag=ADP|Case=Acc">через</w>
+               <w lemma="якийсь" msd="UPosTag=DET|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing|PronType=Ind">якийсь</w>
+               <w lemma="час" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing">час</w>
+               <w lemma="випущити" msd="UPosTag=VERB|Aspect=Perf|Mood=Ind|Person=0|VerbForm=Fin">випущено</w>
+               <w lemma="на" msd="UPosTag=ADP|Case=Acc">на</w>
+               <w lemma="воля" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing" join="right">волю</w>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+      </body>
+   </text>
+</TEI>

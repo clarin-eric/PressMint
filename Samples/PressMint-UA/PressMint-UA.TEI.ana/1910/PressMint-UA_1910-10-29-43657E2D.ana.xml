@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-UA_1910-10-29-43657E2D.ana" xml:lang="uk">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="uk">Корпус українських історичних газет PressMint-UA (PluG), «Лист до редакції», Рада, №245 29.10.1910 [PressMint.ana SAMPLE]</title>
+            <title xml:lang="en">Ukrainian historical newspaper corpus PressMint-UA, "Лист до редакції", Рада, 1910-10-29, no. 245 [PressMint.ana SAMPLE]</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent>
+            <measure unit="paragraphs" quantity="5" xml:lang="en">5 paragraphs</measure>
+            <measure unit="sentences" quantity="9" xml:lang="en">9 sentences</measure>
+            <measure unit="words" quantity="117" xml:lang="en">117 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="uk">Дослідницька інфраструктура CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+            </availability>
+            <date when="2026-04-17">2026-04-17</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Рада</title>
+               <title level="a">Лист до редакції</title>
+               <author>Микола Вільшанський</author>
+               <pubPlace>Київ</pubPlace>
+               <date when="1910-10-29">№245 29.10.1910</date>
+               <biblScope unit="issue">245</biblScope>
+               <idno type="PluG-path">R/Rada_1910_245/Rada_1910_245_Lyst_do_redakcii.txt</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en">
+               <ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project creating multilingual corpora of historical newspapers.</p>
+         </projectDesc>
+         <tagsDecl>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="pb" occurs="1" />
+               <tagUsage gi="p" occurs="5" />
+               <tagUsage gi="s" occurs="9" />
+               <tagUsage gi="w" occurs="117" />
+               <tagUsage gi="pc" occurs="21" />
+               <tagUsage gi="name" occurs="4" />
+            </namespace>
+         </tagsDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2026-04-17">Конвертація PluG -&gt; PressMint TEI XML .ana.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="uk">
+      <body>
+         <pb xml:id="PressMint-UA_1910-10-29-43657E2D.ana.page1" />
+         <p xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p1">
+            <s xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p1.s1">
+               <w lemma="високоповажаний" msd="UPosTag=ADJ|Case=Voc|Degree=Pos|Gender=Masc|Number=Sing">Високоповажаний</w>
+               <w lemma="пан" msd="UPosTag=NOUN|Animacy=Anim|Case=Voc|Gender=Masc|Number=Sing">Пане</w>
+               <w lemma="Редактор" msd="UPosTag=NOUN|Animacy=Anim|Case=Voc|Gender=Masc|Number=Sing" join="right">Редакторе</w>
+               <pc msd="UPosTag=PUNCT">!</pc>
+            </s>
+         </p>
+         <p xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p2">
+            <s xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p2.s2">
+               <w lemma="просити" msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin">Прошу</w>
+               <w lemma="ласкаво" msd="UPosTag=ADV|Degree=Pos">ласкаво</w>
+               <w lemma="умістити" msd="UPosTag=VERB|Aspect=Perf|VerbForm=Inf">умістити</w>
+               <w lemma="в" msd="UPosTag=ADP|Case=Loc">в</w>
+               <w lemma="ваш" msd="UPosTag=DET|Case=Loc|Gender=Fem|Number=Sing|Person=1|Poss=Yes|PronType=Prs">вашій</w>
+               <w lemma="шановний" msd="UPosTag=ADJ|Case=Loc|Degree=Pos|Gender=Fem|Number=Sing">шановній</w>
+               <w lemma="газета" msd="UPosTag=NOUN|Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing">газеті</w>
+               <w lemma="мій" msd="UPosTag=DET|Case=Acc|Gender=Fem|Number=Sing|Person=1|Poss=Yes|PronType=Prs">мою</w>
+               <w lemma="заява" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing">заяву</w>
+               <w lemma="на" msd="UPosTag=ADP|Case=Acc">на</w>
+               <w lemma="увага" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing">увагу</w>
+               <w lemma="весь" msd="UPosTag=DET|Case=Dat|Number=Plur|PronType=Tot">всім</w>
+               <w lemma="благодійний" msd="UPosTag=ADJ|Case=Dat|Number=Plur">благодійним</w>
+               <w lemma="товариство" msd="UPosTag=NOUN|Animacy=Inan|Case=Dat|Gender=Neut|Number=Plur">товариствам</w>
+               <w lemma="і" msd="UPosTag=CCONJ">і</w>
+               <w lemma="інституція" msd="UPosTag=NOUN|Animacy=Inan|Case=Dat|Gender=Fem|Number=Plur" join="right">інституціям</w>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+         <p xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p3">
+            <s xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p3.s3">
+               <w lemma="Торік" msd="UPosTag=PROPN|Animacy=Anim|Case=Nom|Gender=Masc|NameType=Sur|Number=Sing">Торік</w>
+               <w lemma="скластися" msd="UPosTag=VERB|Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Reflex=Yes|Tense=Past|VerbForm=Fin">склалася</w>
+               <w lemma="згода" msd="UPosTag=NOUN|Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing">згода</w>
+               <w lemma="між" msd="UPosTag=ADP|Case=Ins">між</w>
+               <w lemma="артист" msd="UPosTag=NOUN|Animacy=Anim|Case=Ins|Gender=Masc|Number=Plur">артистами</w>
+               <w lemma="г." msd="UPosTag=NOUN|Abbr=Yes|Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing|Uninflect=Yes" join="right">г</w>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p3.s4">
+               <name type="LOC">
+                  <w lemma="Київа" msd="UPosTag=PROPN|Animacy=Inan|Case=Nom|Gender=Fem|NameType=Geo|Number=Sing">Київа</w>
+               </name>
+               <w lemma="не" msd="UPosTag=PART|Polarity=Neg">не</w>
+               <w lemma="брати" msd="UPosTag=VERB|Aspect=Imp|VerbForm=Inf">брати</w>
+               <w lemma="дар" msd="UPosTag=NOUN|Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing">даром</w>
+               <w lemma="участь" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing">участі</w>
+               <w lemma="в" msd="UPosTag=ADP|Case=Loc">в</w>
+               <w lemma="благодійний" msd="UPosTag=ADJ|Case=Loc|Number=Plur">благодійних</w>
+               <w lemma="вечори" msd="UPosTag=NOUN|Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur" join="right">вечорах</w>
+               <pc msd="UPosTag=PUNCT">,</pc>
+               <w lemma="а" msd="UPosTag=CCONJ">а</w>
+               <w lemma="вносити" msd="UPosTag=VERB|Aspect=Imp|VerbForm=Inf">вносити</w>
+               <w lemma="відповідний" msd="UPosTag=ADJ|Case=Acc|Degree=Pos|Gender=Fem|Number=Sing">відповідну</w>
+               <w lemma="платня" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing">платню</w>
+               <w lemma="в" msd="UPosTag=ADP|Case=Acc">в</w>
+               <pc msd="UPosTag=PUNCT" join="right">„</pc>
+               <w lemma="русскоий" msd="UPosTag=ADJ|Case=Acc|Gender=Neut|Number=Sing">Русское</w>
+               <w lemma="театральний" msd="UPosTag=ADJ|Case=Acc|Gender=Neut|Number=Sing">театральнеє</w>
+               <w lemma="общество" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing">общество</w>
+               <pc msd="UPosTag=PUNCT" join="right">"</pc>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p3.s5">
+               <w lemma="а" msd="UPosTag=CCONJ">А</w>
+               <w lemma="як" msd="UPosTag=SCONJ">як</w>
+               <w lemma="я" msd="UPosTag=PRON|Animacy=Anim|Case=Nom|Number=Sing|Person=1|PronType=Prs">я</w>
+               <w lemma="не" msd="UPosTag=PART|Polarity=Neg">не</w>
+               <w lemma="член" msd="UPosTag=NOUN|Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing">член</w>
+               <w lemma="цей" msd="UPosTag=DET|Case=Gen|Gender=Fem|Number=Sing|PronType=Dem">цієї</w>
+               <w lemma="інституція" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing" join="right">інституції</w>
+               <pc msd="UPosTag=PUNCT">,</pc>
+               <w lemma="а" msd="UPosTag=CCONJ">а</w>
+               <w lemma="все" msd="UPosTag=PART|ExtPos=ADV">все</w>
+               <w lemma="ж" msd="UPosTag=PART">ж</w>
+               <w lemma="бажати" msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin">бажаю</w>
+               <w lemma="додержати" msd="UPosTag=VERB|Aspect=Perf|VerbForm=Inf">додержати</w>
+               <w lemma="солідарність" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing">солідарність</w>
+               <w lemma="з" msd="UPosTag=ADP|Case=Ins">з</w>
+               <w lemma="товаришами-артист" msd="UPosTag=NOUN|Animacy=Anim|Case=Ins|Gender=Masc|Number=Plur" join="right">товаришами-артистами</w>
+               <pc msd="UPosTag=PUNCT">,</pc>
+               <w lemma="то" msd="UPosTag=SCONJ">то</w>
+               <w lemma="зауважити" msd="UPosTag=VERB|Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin">зауважив</w>
+               <w lemma="себе" msd="UPosTag=PRON|Case=Dat|PronType=Prs|Reflex=Yes">собі</w>
+               <w lemma="дар" msd="UPosTag=NOUN|Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing">даром</w>
+               <w lemma="теж" msd="UPosTag=ADV">теж</w>
+               <w lemma="не" msd="UPosTag=PART|Polarity=Neg">не</w>
+               <w lemma="брати" msd="UPosTag=VERB|Aspect=Imp|VerbForm=Inf">брати</w>
+               <w lemma="участь" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing">участі</w>
+               <w lemma="в" msd="UPosTag=ADP|Case=Loc">в</w>
+               <w lemma="вечори" msd="UPosTag=NOUN|Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur" join="right">вечорах</w>
+               <pc msd="UPosTag=PUNCT">;</pc>
+               <w lemma="але" msd="UPosTag=CCONJ">але</w>
+               <w lemma="одержаний" msd="UPosTag=ADJ|Aspect=Perf|Case=Acc|Gender=Fem|Number=Sing|VerbForm=Part|Voice=Pass">одержану</w>
+               <w lemma="умовний" msd="UPosTag=ADJ|Case=Acc|Gender=Fem|Number=Sing">умовну</w>
+               <w lemma="плата" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing">плату</w>
+               <w lemma="від" msd="UPosTag=ADP|Case=Gen">від</w>
+               <w lemma="вечір" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing">вечора</w>
+               <w lemma="я" msd="UPosTag=PRON|Animacy=Anim|Case=Nom|Number=Sing|Person=1|PronType=Prs">я</w>
+               <w lemma="цілком" msd="UPosTag=ADV">цілком</w>
+               <w lemma="жертвувати" msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin">жертвую</w>
+               <w lemma="на" msd="UPosTag=ADP|Case=Acc">на</w>
+               <w lemma="моаумент" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing">моаумент</w>
+               <name type="PER">
+                  <w lemma="Т.." msd="UPosTag=PROPN|Abbr=Yes|Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing|Uninflect=Yes">Т.</w>
+                  <w lemma="Г.." msd="UPosTag=PROPN">Г.</w>
+                  <w lemma="Шевченко" msd="UPosTag=PROPN|Animacy=Anim|Case=Dat|Gender=Masc|NameType=Sur|Number=Sing">Шевченкові</w>
+               </name>
+               <w lemma="у" msd="UPosTag=ADP|Case=Loc">у</w>
+               <name type="LOC">
+                  <w lemma="Киів" msd="UPosTag=PROPN|Animacy=Inan|Case=Loc|Gender=Masc|NameType=Geo|Number=Sing" join="right">Київі</w>
+               </name>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p3.s6">
+               <w lemma="при" msd="UPosTag=ADP|Case=Loc">При</w>
+               <w lemma="це" msd="UPosTag=PRON|Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing|PronType=Dem">цьому</w>
+               <w lemma="вносити" msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin">вношу</w>
+               <w lemma="в" msd="UPosTag=ADP|Case=Acc">в</w>
+               <w lemma="редакція" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing" join="right">редакцію</w>
+               <pc msd="UPosTag=PUNCT">,</pc>
+               <w lemma="рада" msd="UPosTag=VERB|Aspect=Perf|Mood=Imp|Number=Sing|Person=2|VerbForm=Fin">Ради</w>
+               <pc msd="UPosTag=PUNCT" join="right">“</pc>
+               <w lemma="10" msd="UPosTag=NUM|Case=Acc|NumType=Card">10</w>
+               <w lemma="карбованець" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur">карбованців</w>
+               <pc msd="UPosTag=PUNCT" join="right">(</pc>
+               <w lemma="десять" msd="UPosTag=NUM|Case=Nom|NumType=Card" join="right">десять</w>
+               <pc msd="UPosTag=PUNCT" join="right">)</pc>
+               <pc msd="UPosTag=PUNCT">,</pc>
+               <w lemma="одержаний" msd="UPosTag=ADJ|Aspect=Perf|Case=Gen|Number=Plur|VerbForm=Part|Voice=Pass">одержаних</w>
+               <w lemma="я" msd="UPosTag=PRON|Animacy=Anim|Case=Ins|Number=Sing|Person=1|PronType=Prs">мною</w>
+               <w lemma="за" msd="UPosTag=ADP|Case=Acc">за</w>
+               <w lemma="участь" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing">участь</w>
+               <w lemma="у" msd="UPosTag=ADP|Case=Loc">у</w>
+               <w lemma="вечір" msd="UPosTag=NOUN|Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing">вечорі</w>
+               <w lemma="28-й" msd="UPosTag=ADJ|Case=Gen|Gender=Neut|Number=Sing|NumType=Ord">28-го</w>
+               <w lemma="жовтень" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing">жовтня</w>
+               <w lemma="в" msd="UPosTag=ADP|Case=Loc">в</w>
+               <w lemma="купецький" msd="UPosTag=ADJ|Case=Loc|Gender=Neut|Number=Sing">Купецькому</w>
+               <w lemma="зібрання" msd="UPosTag=NOUN|Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing" join="right">зібранні</w>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+         <p xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p4">
+            <s xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p4.s7">
+               <w lemma="з" msd="UPosTag=ADP|Case=Ins">З</w>
+               <w lemma="великий" msd="UPosTag=ADJ|Case=Ins|Degree=Pos|Gender=Neut|Number=Sing">великим</w>
+               <w lemma="поважання" msd="UPosTag=NOUN|Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing">поважанням</w>
+               <w lemma="артист" msd="UPosTag=NOUN|Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing">артист</w>
+               <name type="PER">
+                  <w lemma="Микола" msd="UPosTag=PROPN|Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing">Микола</w>
+               </name>
+               <w lemma="Вільшанськяй" msd="UPosTag=PROPN|Animacy=Anim|Case=Nom|Gender=Masc|NameType=Sur|Number=Sing" join="right">Вільшанськяй</w>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+         <p xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p5">
+            <s xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p5.s8">
+               <w lemma="P" msd="UPosTag=X|Foreign=Yes" join="right">P</w>
+               <pc msd="UPosTag=PUNCT">.</pc>
+               <w lemma="S" msd="UPosTag=X|Foreign=Yes" join="right">S</w>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s xml:id="PressMint-UA_1910-10-29-43657E2D.ana.p5.s9">
+               <w lemma="просити" msd="UPosTag=VERB|Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin">Прошу</w>
+               <w lemma="й" msd="UPosTag=CCONJ">й</w>
+               <w lemma="инший" msd="UPosTag=ADJ|Case=Voc|Degree=Pos|Number=Plur">инші</w>
+               <w lemma="газета" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Fem|Number=Plur">газети</w>
+               <w lemma="передрукувати" msd="UPosTag=VERB|Aspect=Perf|VerbForm=Inf">передрукувати</w>
+               <w lemma="мій" msd="UPosTag=DET|Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing|Person=1|Poss=Yes|PronType=Prs">мого</w>
+               <w lemma="лист" msd="UPosTag=NOUN|Animacy=Inan|Animacy[gram]=Anim|Case=Acc|Gender=Masc|Number=Sing" join="right">листа</w>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+      </body>
+   </text>
+</TEI>
