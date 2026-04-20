@@ -1,5 +1,5 @@
 # Validate and compile ODD to RelaxNG, validate samples, make HTML
-all:	prepare val-odd xml-schemas html
+all:	prepare val-odd xml-schemas val-samples html
 xall:	prepare val-odd xml-schemas val-samples html
 
 # Builds html and pushes it
