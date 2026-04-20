@@ -19,7 +19,7 @@
       </titleStmt>
       <publicationStmt>
         <publisher>CLARIN</publisher>
-        <date>2025-11-13</date>
+        <date>2026-03-18</date>
         <availability status="free">
           <p>This file is freely available and you are hereby authorised to copy, modify, and
           redistribute it in any way without further reference or permissions.</p>
@@ -73,8 +73,9 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
-      <change when="2025-11-01">Tomaž Erjavec: first draft.</change>
+      <change when="2026-03-18">Tomaž Erjavec: expand are re-arrange discussion about pb/cb/lb.</change>
       <change when="2025-11-13">Tomaž Erjavec: add notes about auto-inserted metadata.</change>
+      <change when="2025-11-01">Tomaž Erjavec: first draft.</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -84,7 +85,7 @@
           <titlePart type="main">The structure and encoding of
           <ref target="https://github.com/clarin-eric/PressMint">PressMint corpora</ref></titlePart>
         </docTitle>
-        <docDate>2025-11-13</docDate>
+        <docDate>2026-03-18</docDate>
       </titlePage>
       <p></p>
       <divGen type="toc"/>
@@ -110,7 +111,7 @@
         data and metadata, PressMint makes only minimal requirements for the purposes of interoperability
         although leaves considerable space for optional extensions.</p>
         
-        <!--p>The document is not meant as a tutorial on TEI or PressMint, but as a reference to
+        <!--p>This document is not meant as a tutorial on TEI or PressMint, but as a reference to
         elements, their nesting and attributes.
         Other sources can help in understanding the encoding and content of PressMint corpora:
         <list>
@@ -168,7 +169,7 @@
       <div xml:id="chp-overall">
         <head>Overall corpus structure</head>
         
-        <div xml:id="chp-xml-struct">
+        <div xml:id="sec-xml-struct">
           <head>XML structure</head>
           
           <p>The newspapers of one contributing country constitute one
@@ -1320,7 +1321,7 @@
         Representation of Primary Sources</ref> of the TEI Guidelines. In this chapter we only provide
         the basic representation that is directly supported in PressMint.</p>
 
-        <div xml:id="chp-facsimile-element">
+        <div xml:id="sec-facsimile">
           <head>The facsimile element</head>
           
           <p>The <gi>facsimile</gi> element should appear in a corpus component immediately
@@ -1353,20 +1354,21 @@
           </p>        
           
           <p>Apart from modelling pages with <gi>surface</gi>, areas inside them can also be specified.
-          For this, <gi>zone</gi> elements inside <gi>surface</gi> are used;
-          these can specify a rectangle or, in general, a polygon inside it;
-          the details are given in the TEI Section on
+          For this, possibly nested <gi>zone</gi> elements inside <gi>surface</gi> are used;
+          these can specify a rectangle or, in general, a polygon inside it.
+          Details are given in the TEI Section on
           <ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHFAX">Digital Facsimiles</ref>.
           Note, however, that if this approach is used, a mechanism needs to be implemented to show
           the correct zone on the image.</p>
           
-          <div xml:id="chp-facsimile-facs">
+          <div xml:id="sec-facsimile-ref">
             <head>Connecting the text to the facsimile</head>
 
-            <p>Elements of the transcript are connected to the <gi>facsimile</gi>, <gi>surface</gi> or <gi>zone</gi>
-            elements using the <att>facs</att> attribute, which has a series of ID references as its value.
-            For example, if a paragraph appears on the first and second page of a newspaper issue, this would
-            be modelled as in the following example:
+            <p>Elements of the transcript are connected to the <gi>surface</gi> or <gi>zone</gi>
+            elements using the <att>facs</att> attribute, which has one or more ID references as its value.
+            For example, if a paragraph appears on the first and second page (which are defined in the
+            <gi>facsimile</gi> element as two <gi>surface</gi> elements with appropriate IDs) of a newspaper issue,
+            this would  be modelled as in the following example:
 
             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-facs">
               <body>
@@ -1376,8 +1378,8 @@
               </body>
             </egXML>
 
-            The exact point where a new page or area starts can be represented by using the
-            empty page beginning (<gi>pb</gi>), column beginning (<gi>cb</gi>) or line beginning (<gi>lb</gi>) elements,
+            The exact point where a new page (<gi>surface</gi>) or area (<gi>zone</gi>) starts can be represented by using the
+            empty page (<gi>pb</gi>), column (<gi>cb</gi>) or line beginning (<gi>lb</gi>) elements,
             in this order, as shown below:
           
             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-pb">
@@ -1385,21 +1387,19 @@
                 <pb facs="#PressMint-SI_1899_KRN-NUK.pb1"/>
                 <cb facs="#PressMint-SI_1899_KRN-NUK.cb1"/>
                 <lb facs="#PressMint-SI_1899_KRN-NUK.lb1"/>
-                <p>v Ljubljani, v četrtek 16. aprila 1899.</p>
+                <p>V Ljubljani, v četrtek 16. aprila 1899.</p>
               </body>
             </egXML>
-            If these empty elements are used, they should always appear, as their name suggestst,
-            <emph>in front</emph> of the part of the text they cover, i.e. a page/line/column beginning
-            should come before the text, as above, which is different from the usual practice of
-            putting line breaks at the end of the line.
-            Furthermore, by convention, the beginnings should appear as high up in the hierarchy as
-            possible, i.e. if they appear at the begining of a paragraph, they should be placed before the start
-            of the paragraph, as in the example above. 
+            Here, <val>#PressMint-SI_1899_KRN-NUK.pb1</val> should point to the <gi>surface</gi> element giving the image of the page,
+            <val>#PressMint-SI_1899_KRN-NUK.cb1</val> to the <gi>zone</gi> element giving the image of the first column, while
+            <val>#PressMint-SI_1899_KRN-NUK.lb1</val> to the nested <gi>zone</gi> element giving the image of the first line.
+            Note that the scope of these empty elements in the transcription corresponds to the next element with the same name
+            (so, e.g., for <gi>cb</gi> to the next <gi>cb</gi> element) or, for the last such element, to the end of the
+            containing element.
             </p>
-            
-            <p>Note that these elements can appear anywhere in the text, including in the middle of a (end-of-line hyphenated)
-            word, which makes the linguistic annotation of such text more complicated, as texual data is mixed with markup, 
-            typically not otherwise the case.</p>
+            <p>The use of empty page, column, and line elements is further explained in the
+            Section on <ref target="#sec-dipl">Diplomatic view of the text</ref>.
+            </p>
         </div>
       </div>
 
@@ -1421,7 +1421,7 @@
           </text>
         </egXML>
         The paragraphs can also be mixed with empty page, column and line beginning elements, as
-        discussed in the preceding Section on <ref target="#chp-facsimile-facs">Connecting the text to the
+        discussed in the preceding Section on <ref target="#sec-facsimile-ref">Connecting the text to the
         facsimile</ref>.</p>
 
         <p>This kind of encoding is appropriate for texts with no internal structure.
@@ -1498,6 +1498,63 @@
         </egXML>
         </p>
 
+      <div xml:id="sec-dipl">
+        <head>Diplomatic view of the text</head>
+        
+        <p>PressMint gives priority to the so-called critical (or structural) transcription of the
+        text, i.e. using, as explained above, elements marking divisions, such as individual
+        newspaper articles, and paragraphs inside them.  The alternative view is the diplomatic one,
+        which does not encode structure but rather the visual apperance of the text, i.e. what is a
+        page, column or line.</p>
+
+        <p>Nevertheless, PressMint also caters for the diplomatic view by using empty elements for this
+        purpose, namely page (<gi>pb</gi>), column (<gi>cb</gi>) or line beginning (<gi>lb</gi>).
+
+        If these empty elements are used, they should always appear, as their name suggests,
+        <emph>in front</emph> of the part of the text they cover, which is different from the usual
+        practice of putting line breaks at the end of the line.
+
+        It is also not not necessary to use all three elements, e.g. only page beginning or page and
+        line beginning elements can be used. However, if one of these elements is used once, it
+        should be used throughout the transcription, as otherwise it becomes impossible to determine
+        the scope of the transcripion that corresponds to a particular page, column or line.
+        </p>
+
+        <p>As mentioned in the Section on <ref target="#sec-facsimile-ref">Connecting the text to
+        the facsimile</ref>, the textual scope of these empty elements corresponds to the
+        transcription following the element and up to the next element with the same name (so, e.g.,
+        for <gi>lb</gi> to the next <gi>lb</gi> element) or, for the last such empty element, to the
+        end of the containing element.
+        
+
+        As also discussed there, each of these three empty elements can be connected to the surface
+        or zone of the facsimile using the <att>facs</att> attribute, which points to the ID of the
+        appropriate <gi>surface</gi> or <gi>zone</gi>.
+
+        To illustrate the points above, we give below an example that uses page and line beginnings; for simplicity,
+        we do not give the <att>facs</att> attribute which would connect them to the (areas of the) image stored in the
+        <gi>facsimile</gi> element.
+        
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-lb">
+          <body>
+            <pb/>
+            <lb/>
+            <p>V Ljubljani, v četrtek 16. aprila 1899.</p>
+            <lb/>
+            <p>Pa kratko je bilo moje veselje. Bog in sv. Križ sta me kaznovala, ker sem se pre-
+            <lb/>grešil, svatoval na potu — molitve. Diržal sem še izvoljenko vedno v objemu in jej
+            <lb/>šepetal v uho: ,,Bi me vzela?''
+            </p>
+          </body>
+        </egXML>
+        </p>
+        
+        <p>Note that the three <q>diplomatic</q> elements can appear anywhere in the text,
+        including in the middle of a (end-of-line hyphenated) word, which makes the linguistic
+        annotation of such text more complicated, as texual data is mixed with markup, typically
+        not otherwise the case.</p>
+      </div>
+      
       <div xml:id="sec-gaps">
         <head>Gaps</head>
         
