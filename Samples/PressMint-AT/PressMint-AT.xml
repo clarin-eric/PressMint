@@ -6,14 +6,14 @@
             <title>Österreichisches historisches Zeitungskorpus PressMint-AT [PressMint SAMPLE]</title>
             <title xml:lang="en">Austrian historical newspaper corpus PressMint-AT [PressMint SAMPLE]</title>
             <respStmt>
-               <persName ref="https://orcid.org/????-????-????-????">Tanja Wissik</persName>
+               <persName ref=""https://orcid.org/0000-0002-1631-4560">">Tanja Wissik</persName>
                <resp xml:lang="de">PressMint-AT Projektkoordinatorin</resp>
                <resp xml:lang="en">PressMint-At project coordinator</resp>
             </respStmt>
             <respStmt>
-               <persName ref="https://orcid.org/????-????-????-????">Hannes Pirker</persName>
-               <persName ref="https://orcid.org/????-????-????-????">Someone Else</persName>
-               <persName ref="https://orcid.org/????-????-????-????">Jona Hassenbach</persName>
+               <persName>Hannes Pirker</persName>
+               <persName>Jona Hassenbach</persName>
+               <persName>Someone Else</persName>
                <resp xml:lang="de">Aufgaben</resp>
                <resp xml:lang="en">tasks</resp>
             </respStmt>
@@ -48,10 +48,10 @@
          </publicationStmt>
          <sourceDesc>
             <bibl>
-               <author> ???, ?</author><!--further details to come-->
+               <author> NN, NN</author><!--further details to come-->
                <title type="main" xml:lang="de">ANNO (AustriaN Newspaper Online)</title>
                <title type="main" xml:lang="en">ANNO (AustriaN Newspaper Online)</title>
-               <date>????</date><!--further details to come-->
+               <!-- <date>????</date> --> <!--further details to come-->
             </bibl>
          </sourceDesc>
       </fileDesc>
@@ -87,6 +87,7 @@
          </tagsDecl>
          <classDecl><!--Taxonomien?-->
             <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-OCR.xml"/>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-NER.ana.xml"/>
          </classDecl>
       </encodingDesc>
       <profileDesc>
@@ -103,8 +104,8 @@
          </langUsage>
       </profileDesc>
       <revisionDesc><!--further details to come-->
-         <change when="YYYY-MM-DD">
-            <name>Name</name>: Made sample.</change>
+         <change when="2026-04-21">
+            <name>Jona Hassenbach</name>: Made sample.</change>
       </revisionDesc>
    </teiHeader>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1914/PressMint-AT_1914_06_29.xml"/>
