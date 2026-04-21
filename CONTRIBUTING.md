@@ -65,6 +65,11 @@ git commit -m 'XX: Source sample' Samples/PressMint-XX/Sources/*
 ```bash
 git push
 ```
+### Compare your changes with PressMint 
+
+- https://github.com/clarin-eric/PressMint/compare/data...USER-ORG:PressMint:data
+- then create a pull request
+
 
 ### Synchronize your remote repository with the PressMint repository
 
