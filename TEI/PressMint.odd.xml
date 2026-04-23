@@ -19,7 +19,7 @@
       </titleStmt>
       <publicationStmt>
         <publisher>CLARIN</publisher>
-        <date>2026-04-22</date>
+        <date>2026-04-23</date>
         <availability status="free">
           <p>This file is freely available and you are hereby authorised to copy, modify, and
           redistribute it in any way without further reference or permissions.</p>
@@ -73,6 +73,7 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
+      <change when="2026-04-23">Tomaž Erjavec: insert discussion of EOL split words.</change>
       <change when="2026-04-22">Tomaž Erjavec: introduce idno/@type="local".</change>
       <change when="2026-03-18">Tomaž Erjavec: expand are re-arrange discussion about pb/cb/lb.</change>
       <change when="2025-11-13">Tomaž Erjavec: add notes about auto-inserted metadata.</change>
@@ -86,7 +87,7 @@
           <titlePart type="main">The structure and encoding of
           <ref target="https://github.com/clarin-eric/PressMint">PressMint corpora</ref></titlePart>
         </docTitle>
-        <docDate>2026-03-18</docDate>
+        <docDate>2026-04-23</docDate>
       </titlePage>
       <p></p>
       <divGen type="toc"/>
@@ -1510,7 +1511,9 @@
         
         <p>PressMint gives priority to the so-called critical (or structural) transcription of the
         text, i.e. using, as explained above, elements marking divisions, such as individual
-        newspaper articles, and paragraphs inside them.  The alternative view is the diplomatic one,
+        newspaper articles and paragraphs inside them, as well as, in the ideal case, 
+        the correct reading order of the text.
+        The alternative view is the diplomatic one,
         which does not encode structure but rather the visual apperance of the text, i.e. what is a
         page, column or line.</p>
 
@@ -1533,14 +1536,13 @@
         for <gi>lb</gi> to the next <gi>lb</gi> element) or, for the last such empty element, to the
         end of the containing element.
         
-
         As also discussed there, each of these three empty elements can be connected to the surface
         or zone of the facsimile using the <att>facs</att> attribute, which points to the ID of the
-        appropriate <gi>surface</gi> or <gi>zone</gi>.
+        appropriate <gi>surface</gi> or <gi>zone</gi>.</p>
 
-        To illustrate the points above, we give below an example that uses page and line beginnings; for simplicity,
+        <p>To illustrate the points above, we give below an example that uses page and line beginnings; for simplicity,
         we do not give the <att>facs</att> attribute which would connect them to the (areas of the) image stored in the
-        <gi>facsimile</gi> element.
+        <gi>facsimile</gi> element:
         
         <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-lb">
           <body>
@@ -1560,6 +1562,32 @@
         including in the middle of a (end-of-line hyphenated) word, which makes the linguistic
         annotation of such text more complicated, as texual data is mixed with markup, typically
         not otherwise the case.</p>
+
+        <p>A problem to note is how to treat end-of-line hyphenated words, esp. as (depending on
+        the language and the word in question) some such words need to be, at least for
+        linguistic analysis, joined together ommitting the hyphen (as would be the case with
+        <code>recom-&lt;lb/&gt;mended</code>) while others need the hyphyen retained
+        (e.g. <code>fire-&lt;lb/&gt;proof</code>).</p>
+        
+        <p>The end-of-line hyphens can (but need not) be explicitly marked with the <gi>pc</gi>
+        element, which has the advantage that <gi>lb</gi> elements need not be introduced or
+        preseved (although they still can be). Namely, TEI allows the attribute <att>force</att>
+        on <gi>pc</gi>, which indicates whether the punctuation mark is a word separator or
+        not. While the default for the hyphen would be <code>pc/@force="inter"</code>, i.e. that
+        the hyphen may or may not be a word separator, it can also be set to
+        <code>pc/@force="strong"</code> (hyphen is a word separator)
+        <code>pc/@force="weak"</code> (hyphen is not a word separator).
+        Furthermore, the <gi>lb</gi> element (as well as <gi>cb</gi> and <gi>pb</gi>)
+        can have the <att>break</att> attribute, which signals that the
+        line beginning is considered to mark the end of a word in the same way as whitespace,
+        and has the values of <code>yes</code>, <code>no</code>, and <code>maybe</code>.
+        So, if the end-of-line hypens are encoded with <gi>pc</gi> and line beginnings are preseved
+        then the default annotation  our example would thus be
+        <code>pre&lt;pc force="inter"&gt;-&lt;/pc&gt;&lt;lb break="maybe"/&gt;grešil</code>.
+        Of course, the example could also be annotated with <code>pc/@force="weak"</code> and
+        <code>lb/@break="no"</code> (or, conversely, with "strong" and "no") but this necessitates
+        deciding whether the hyphen signals only a word break or it is also a part of the word).
+        </p>
       </div>
       
       <div xml:id="sec-gaps">
@@ -1652,12 +1680,75 @@
           
           Below, we explain the encoding of each of these levels.</p>
           
+          <div xml:id="sec-ana-tokens">
+            <head>Tokenisation and sentence segmentation</head>
+            
+            <p>The basic linguistic annotation comprises sentence segmentation and tokenisation
+            (which are often performed by the same tool), as illustrated in the example below:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-ana-token">
+              <s>
+                <w>Tega</w>
+                <w>se</w>
+                <w>sploh</w>
+                <w>nisem</w>
+                <w join="right">zavedel</w>
+                <pc>.</pc>
+              </s>
+            </egXML>
+            
+            Sentences are marked up using the <gi>s</gi> element, words with the
+            <gi>w</gi> element and punctuation symbols with the <gi>pc</gi> element. To
+            retain the linguistically significant whitespace, the <att>join</att> element
+            with the fixed value <val>right</val> is used, meaning there should be no whitespace
+            to the right of the token.</p>
+
+            <p>A typical problem with tokenisation of printed sources, as already discussed at
+            the end of the Section on <ref target="#sec-dipl">Diplomatic view of the text</ref>,
+            are end-of-line hyphenated words. Namely, to correctly tokenise such words, their
+            two parts need to be joined together, and, furthermore, it needs to be decided
+            whether the end of line hyphen should be preserved or not. There are two reasons why
+            it could be preserved:
+            <list>
+              <item>the hyphen is, in fact, a part of the word, as in <code>fire-proof</code>;</item>
+
+              <item>the compilers of the corpus included line beginnings (so, the <gi>lb</gi>
+              element) in the "plain text" version of the corpus, and also wish to preserve them
+              in the linguistically annotated version.</item>
+
+            </list>
+
+            For the first case above a (typically automatic) method needs to be in place that
+            will decide which hyphen can be deleted and which not; how this is implemented will
+            very much depend on the language.
+
+            The second case needs this information as well but, futhermore, needs to retain
+            word-internal markup. The example below gives two words, where the markup of the first
+            indicates that the hyphen is not a part of the word, while in the second one it is:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-ana-token-hyph">
+              <w>recom<pc force="strong">-</pc><lb break="no"/>mended</w>
+              ...
+              <w>fire<pc force="weak">-</pc><lb break="no"/>proof</w>
+            </egXML>
+            
+            It should be noted that when such an encoding is used, then the conversion for
+            down-stream formats (such as vertical files for concordancers) where the words
+            should be output in their canonical form, should not output the value of
+            <code>w/pc[@force="strong"</code>.
+            </p>
+
+            <p>There can also be a further added complication with tokenisation if the words are
+            normalised, which is taken up in the Section on <ref target="#sec-ana-norm">Text
+            modernisation</ref>.</p>
+          </div>
+          
           <div xml:id="sec-ana-words">
             <head>Word-level annotation</head>
             
-            <p>Basic linguistic annotation comprises tokenisation, sentence segmentation,
-            part-of-speech tagging and lemmatisation, and this mark-up is illustrated in the
-            example below:
+            <p>Basic linguistic annotation comprises, apart from tokenisation and sentence
+            segmentation, also part-of-speech tagging and lemmatisation, and this mark-up is
+            illustrated in the example below:
             
             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-ana-word">
               <s>
@@ -1669,13 +1760,6 @@
                 <pc msd="UPosTag=PUNCT">.</pc>
               </s>
             </egXML>
-            
-            Sentences are marked up using the <gi>s</gi> element, words with the
-            <gi>w</gi> element and punctuation symbols with the <gi>pc</gi> element. To
-            retain the linguistically significant whitespace, the <att>join</att> element
-            with the fixed value <val>right</val> is used, meaning there should be no whitespace
-            to the right of the token. There can be an added complication with tokenisation, which is
-            further taken up in the next Section on <ref target="#sec-ana-norm">Text modernisation</ref>.
             </p>
             
             <p>The base form or lemmas of a word is given as the value of the
