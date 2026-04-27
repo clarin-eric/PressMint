@@ -20,6 +20,12 @@ runs:
         INTYPES=("" ".ana")
         STATUS=0
         SKIP=0
+        echo "DEV: "
+        ls "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/"
+        echo "Testing if README.md symlink exists for PressMint-${{inputs.press}} and creating it if not"
+        test -f "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md" \
+          || ln -s "../../../Samples/PressMint-${{inputs.press}}/README.md" \
+                   "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md"
         for INTYPE in "${INTYPES[@]}"; do
           TYPE="TEI${INTYPE}"
           ROOT="Samples/PressMint-${{inputs.press}}/PressMint-${{inputs.press}}${INTYPE}.xml"
