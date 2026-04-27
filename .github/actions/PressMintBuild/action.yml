@@ -20,6 +20,9 @@ runs:
         INTYPES=("" ".ana")
         STATUS=0
         SKIP=0
+        test ! -f "${GITHUB_WORKSPACE}/PressMint/Build/Source-Distro/README.md/README-${{inputs.press}}.md" \
+          || ln -s "${GITHUB_WORKSPACE}/PressMint/Samples/PressMint-${{inputs.press}}/README.md" \
+                   "${GITHUB_WORKSPACE}/PressMint/Build/Source-Distro/README.md/README-${{inputs.press}}.md"
         for INTYPE in "${INTYPES[@]}"; do
           TYPE="TEI${INTYPE}"
           ROOT="Samples/PressMint-${{inputs.press}}/PressMint-${{inputs.press}}${INTYPE}.xml"
