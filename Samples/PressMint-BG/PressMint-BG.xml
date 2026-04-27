@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<teiCorpus xml:id="ParlaMint-BG" xml:lang="bg" xmlns="http://www.tei-c.org/ns/1.0">
+<teiCorpus xml:id="PressMint-BG" xml:lang="bg" xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -23,19 +23,19 @@
                     <persName ref="https://orcid.org/0000-0003-3555-0179" xml:lang="bg">Кирил Симов</persName>
                     <persName ref="https://orcid.org/0000-0003-3555-0179" xml:lang="en">Kiril Simov</persName>
                     <resp xml:lang="bg">Нормализация на текста, езикови модели, лингвистична анотация</resp>
-                    <resp xml:lang="en">Text normalization, LLM models, linguistic annotation</resp>
+                    <resp xml:lang="en">Text normalization, language models, linguistic annotation</resp>
                 </respStmt>
                 <respStmt>
                     <persName ref="https://orcid.org/0009-0006-6125-2684" xml:lang="bg">Николай Паев</persName>
                     <persName ref="https://orcid.org/0009-0006-6125-2684" xml:lang="en">Nikolay Paev</persName>
                     <resp xml:lang="bg">Извличане на текст от ПДФ, езикови модели, нормализация на текст, лингвистична анотация</resp>
-                    <resp xml:lang="en">Text extraction from PDF, LLM models, text normalization, linguistic annotation</resp>
+                    <resp xml:lang="en">Text extraction from PDF, language models, text normalization, linguistic annotation</resp>
                 </respStmt>
                 <respStmt>
                     <persName ref="https://orcid.org/0009-0002-1062-3503" xml:lang="bg">Стефан Маринов</persName>
                     <persName ref="https://orcid.org/0009-0002-1062-3503" xml:lang="en">Stefan Marinov</persName>
                     <resp xml:lang="bg">Извличане на текст от ПДФ, езикови модели, нормализация на текст, лингвистична анотация, кодиране и валидация в XML</resp>
-                    <resp xml:lang="en">Text extraction from PDF, LLM models, text normalization, linguistic annotation, XML coding and validation</resp>
+                    <resp xml:lang="en">Text extraction from PDF, language models, text normalization, linguistic annotation, XML coding and validation</resp>
                 </respStmt>
                 <funder>
                     <orgName xml:lang="bg">Българска национална изследователска инфраструктура - CLaDA-BG</orgName>
@@ -75,9 +75,8 @@
         </fileDesc>
         <encodingDesc>
             <projectDesc>
-                <p xml:lang="bg">PressMint</p>
-                <p xml:lang="en"><ref target="https://www.clarin.eu/content/pressmint">PressMint</ref>is a project that aims to ...
-                    <ref target="https://github.com/clarin-eric/pressmint">PressMint descriptions</ref></p>
+                <p xml:lang="bg"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> е проект, който цели: (1) създаване на многоезично множество от корпуси с исторически вестници с обща кодировка спрямо <ref target="https://clarin-eric.github.io/PressMint/">насоките за кодиране на PressMint</ref>; (2) добавяне на лингвистични анотации към корпусите; и (3) предоставянето на корпусите чрез конкорданси.</p>
+                <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
             </projectDesc>
             <editorialDecl>
                 <correction>
@@ -119,21 +118,16 @@
                     <name type="city">Plovdiv</name>
                     <name type="country">Bulgaria</name></setting>
             </settingDesc>
-            <particDesc>
-                <listOrg>
-                    <head xml:lang="bg">Вестници в корпуса.</head>
-                    <head xml:lang="en">Newspapers in the corpus</head>
-                    <org role="rolw" xml:id="newspaper.Drankalo">
-                        <orgName xml:lang="bg">Вестник Дранкало</orgName></org></listOrg>
-            </particDesc>
             <langUsage>
                 <language ident="bg" xml:lang="bg">български</language>
                 <language ident="bg" xml:lang="en">Bulgarian</language>
+			    <language ident="en" xml:lang="bg">английски</language>
+                <language ident="en" xml:lang="en">English</language>
             </langUsage>
         </profileDesc>
         <revisionDesc xml:lang="en"><change when="2025-12-01">
                 <name>Petya Osenova</name>: the coordinator.</change>
         </revisionDesc>
     </teiHeader>
-    <xi:include href="PressMint-BG_1908-06-14-6SEP.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="1908/PressMint-BG_1908-06-14-6SEP.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
 </teiCorpus>
