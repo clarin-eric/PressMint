@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xml:id="PressMint-BG" xml:lang="bg" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Исторически корпус на български вестници PressMint-BG [PressMint]</title>
+                <title xml:lang="en">Bulgarian historical newspaper corpus PressMint-BG [PressMint]</title>
+                <title type="sub" xml:lang="bg">Исторически вестници (1878 - 1950)</title>
+                <title type="sub" xml:lang="en">Historical Newspapers (1878 - 1950)</title>
+                <respStmt>
+                    <persName ref="https://orcid.org/0000-0002-4484-5027" xml:lang="bg">Петя Осенова</persName>
+                    <persName ref="https://orcid.org/0000-0002-4484-5027" xml:lang="en">Petya Osenova</persName>
+                    <resp xml:lang="bg">Координиране на проекта PressMint, лингвистична анотация</resp>
+                    <resp xml:lang="en">PressMint project coordination, linguistic annotation</resp>
+                </respStmt>
+                <respStmt>
+                    <persName ref="https://orcid.org/0000-0002-0430-7953" xml:lang="bg">Иван Крачанов</persName>
+                    <persName ref="https://orcid.org/0000-0002-0430-7953" xml:lang="en">Ivan Kratchanov</persName>
+                    <resp xml:lang="bg">Дигитализация и OCR</resp>
+                    <resp xml:lang="en">Digitalization and OCR</resp>
+                </respStmt>
+                <respStmt>
+                    <persName ref="https://orcid.org/0000-0003-3555-0179" xml:lang="bg">Кирил Симов</persName>
+                    <persName ref="https://orcid.org/0000-0003-3555-0179" xml:lang="en">Kiril Simov</persName>
+                    <resp xml:lang="bg">Нормализация на текста, езикови модели, лингвистична анотация</resp>
+                    <resp xml:lang="en">Text normalization, language models, linguistic annotation</resp>
+                </respStmt>
+                <respStmt>
+                    <persName ref="https://orcid.org/0009-0006-6125-2684" xml:lang="bg">Николай Паев</persName>
+                    <persName ref="https://orcid.org/0009-0006-6125-2684" xml:lang="en">Nikolay Paev</persName>
+                    <resp xml:lang="bg">Извличане на текст от ПДФ, езикови модели, нормализация на текст, лингвистична анотация</resp>
+                    <resp xml:lang="en">Text extraction from PDF, language models, text normalization, linguistic annotation</resp>
+                </respStmt>
+                <respStmt>
+                    <persName ref="https://orcid.org/0009-0002-1062-3503" xml:lang="bg">Стефан Маринов</persName>
+                    <persName ref="https://orcid.org/0009-0002-1062-3503" xml:lang="en">Stefan Marinov</persName>
+                    <resp xml:lang="bg">Извличане на текст от ПДФ, езикови модели, нормализация на текст, лингвистична анотация, кодиране и валидация в XML</resp>
+                    <resp xml:lang="en">Text extraction from PDF, language models, text normalization, linguistic annotation, XML coding and validation</resp>
+                </respStmt>
+                <funder>
+                    <orgName xml:lang="bg">Българска национална изследователска инфраструктура - CLaDA-BG</orgName>
+                    <orgName xml:lang="en">Bulgarian National Research Infrastructure - CLaDA-BG</orgName>
+                </funder>
+                <funder>    
+                    <orgName xml:lang="bg">Изследователска инфраструктура CLARIN</orgName>
+                    <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+                </funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>1.0</edition>
+            </editionStmt>
+            <extent>
+            </extent>
+            <publicationStmt>
+                <publisher>
+                    <orgName xml:lang="bg">Инфраструктурата КЛАРИН</orgName>
+                    <orgName xml:lang="en">The CLARIN research infrastructure</orgName><ref target="https://www.clarin.eu/">www.clarin.eu</ref></publisher>
+                <idno type="handle">http://hdl.handle.net/11356/1345</idno><pubPlace><ref target="http://hdl.handle.net/11356/1345">http://hdl.handle.net/11356/1345</ref></pubPlace>
+                <availability status="free"><licence>http://creativecommons.org/licenses/by/4.0/</licence>
+                    <p xml:lang="bg">Корпусът е достъпен чрез международния лиценз
+ <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons</ref>.</p>
+                    <p xml:lang="en">This work is licensed under the
+ <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+                </availability>
+                <date when="2025-12-01"></date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <title xml:lang="en">Scanning and OCR processing from Bulgarian National Library Plovdiv &quot;Ivan Vazov&quot;</title>
+                    <idno type="URI">https://</idno>
+                    <idno type="URI">https://</idno>
+                    <date from="1878-01-01" to="2025-12-01"></date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p xml:lang="bg"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> е проект, който цели: (1) създаване на многоезично множество от корпуси с исторически вестници с обща кодировка спрямо <ref target="https://clarin-eric.github.io/PressMint/">насоките за кодиране на PressMint</ref>; (2) добавяне на лингвистични анотации към корпусите; и (3) предоставянето на корпусите чрез конкорданси.</p>
+                <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+            </projectDesc>
+            <editorialDecl>
+                <correction>
+                    <p xml:lang="en">No correction of source texts was performed.</p>
+                </correction>
+                <normalization>
+                    <p xml:lang="en">Normalisation was performed only on the meta-data, e.g. person names.</p>
+                </normalization>
+                <hyphenation>
+                    <p xml:lang="en">No end-of-line hyphens were present in the source.</p>
+                </hyphenation>
+                <quotation>
+                    <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+                </quotation>
+                <segmentation>
+                    <p xml:lang="en">The texts are segmented into utterances (speeches) and segments (corresponding to paragraphs in the source transcription).</p>
+                </segmentation>
+            </editorialDecl>
+            <tagsDecl>
+                <namespace name="http://www.tei-c.org/ns/1.0">
+                    <tagUsage gi="body" occurs="717"></tagUsage>
+                    <tagUsage gi="desc" occurs="34335"></tagUsage>
+                    <tagUsage gi="div" occurs="717"></tagUsage>
+                    <tagUsage gi="incident" occurs="1068"></tagUsage>
+                    <tagUsage gi="kinesic" occurs="11436"></tagUsage>
+                    <tagUsage gi="seg" occurs="727563"></tagUsage>
+                    <tagUsage gi="text" occurs="717"></tagUsage>
+                    <tagUsage gi="u" occurs="147432"></tagUsage>
+                    <tagUsage gi="vocal" occurs="21823"></tagUsage>
+                </namespace>
+            </tagsDecl><classDecl>
+                <taxonomy xml:id="press.newspaperType"><desc xml:lang="en">Newspaper Types</desc><desc xml:lang="bg">Видове вестници</desc>
+                    <category xml:id="press.partyNewspaper"><desc xml:lang="en">Party Newspaper</desc><desc xml:lang="bg">Орган на партия</desc></category>
+                </taxonomy></classDecl>
+        </encodingDesc>
+        <profileDesc>
+            <settingDesc><setting>
+                    <name type="address"></name>
+                    <name type="city">Plovdiv</name>
+                    <name type="country">Bulgaria</name></setting>
+            </settingDesc>
+            <particDesc>
+                <listOrg>
+                    <head xml:lang="bg">Вестници в корпуса.</head>
+                    <head xml:lang="en">Newspapers in the corpus</head>
+                    <org role="rolw" xml:id="newspaper.6th.of.september">
+                        <orgName xml:lang="bg">Вестник 6-ти септември</orgName></org></listOrg>
+            </particDesc>
+            <langUsage>
+                <language ident="bg" xml:lang="bg">български</language>
+                <language ident="bg" xml:lang="en">Bulgarian</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc xml:lang="en"><change when="2025-12-01">
+                <name>Petya Osenova</name>: the coordinator.</change>
+        </revisionDesc>
+    </teiHeader>
+    <xi:include href="1908/PressMint-BG_1908-06-14-6SEP.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+</teiCorpus>
