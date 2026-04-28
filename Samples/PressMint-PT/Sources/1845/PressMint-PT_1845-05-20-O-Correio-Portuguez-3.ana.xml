@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PT_1845-05-20-O-Correio-Portuguez-3.ana" xml:lang="pt">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="pt">Corpus Português de Jornais Históricos PressMint-PT, 1845-05-20, [PressMint.ana SAMPLE]</title>
+                <title xml:lang="en">Portuguese Historical Newspaper Corpus PressMint-PT, 1845-05-20, [PressMint.ana SAMPLE]</title>
+            </titleStmt>
+            <editionStmt>
+                <edition>1.0</edition>
+            </editionStmt>
+            <extent>
+                <measure unit="paragraphs" quantity="2" xml:lang="en">2 paragraphs</measure>
+                <measure unit="words" quantity="27" xml:lang="en">27 words</measure>
+            </extent>
+            <publicationStmt>
+                <publisher>
+                    <orgName xml:lang="pt">Infraestrutura CLARIN ERIC</orgName>
+                    <orgName xml:lang="en">CLARIN ERIC infrastructure</orgName>
+                    <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+                </publisher>
+                <availability status="free">
+                    <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+                    <p xml:lang="pt">O corpus é disponibilizado com a licença <ref target="http://creativecommons.org/licenses/by/4.0/">Licença Creative Commons Atribuição 4.0 Internacional</ref>.</p>
+                    <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+                </availability>
+                <date when="2026-04-05">2026-04-05</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>O Correio Portuguez</publisher>
+                    <date when="1845-05-20">20-05-1845</date>
+                    <biblScope unit="local">Lisboa</biblScope>
+                    <biblScope unit="kind">Jornalístico</biblScope>
+                    <biblScope unit="type">Notícia</biblScope>
+                    <biblScope unit="section">Noticias Diversas</biblScope>
+                    <biblScope unit="page">4</biblScope>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2026-04-05"><name>José Aires</name>: Made sample.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text xml:lang="pt">
+        <body>
+            <p xml:id="PressMint-PT_1845-05-20-O-Correio-Portuguez-3.ana.p1">
+                <s xml:id="PressMint-PT_1845-05-20-O-Correio-Portuguez-3.ana.p1.s1">
+                    <w  msd="UPosTag=NOUN" lemma="destacamento">Destacamento</w>
+                </s>
+            </p>
+            <p xml:id="PressMint-PT_1845-05-20-O-Correio-Portuguez-3.ana.p2">
+                <s xml:id="PressMint-PT_1845-05-20-O-Correio-Portuguez-3.ana.p2.s2">
+                    <w  msd="UPosTag=VERB" lemma="escrever">Escrevem</w>
+                    <w  msd="UPosTag=ADP" lemma="de">de</w>
+                    <name type="LOC">
+                        <w  msd="UPosTag=PROPN" lemma="Guimarães">Guimarães</w>
+                    </name>
+                    <w  msd="UPosTag=DET|Definite=Def|Gender=Masc|Number=Sing|PronType=Art" lemma="o">o</w>
+                    <w  msd="UPosTag=NOUN" lemma="seguinte" join="right">seguinte</w>
+                    <pc  msd="UPosTag=PUNCT" lemma=":">:</pc>
+                    <w  msd="UPosTag=ADV" lemma="hoje">hoje</w>
+                    <w  msd="UPosTag=NUM|NumType=Card" lemma="15">15</w>
+                    <w  msd="UPosTag=VERB" lemma="chegar">chegou</w>
+                    <w  msd="UPosTag=ADV" lemma="aqui">aqui</w>
+                    <w  msd="UPosTag=DET" lemma="um">um</w>
+                    <w  msd="UPosTag=NOUN" lemma="destacamento">destacamento</w>
+                    <w  msd="UPosTag=ADP" lemma="de">de</w>
+                    <w  msd="UPosTag=NUM|NumType=Card" lemma="60">60</w>
+                    <w  msd="UPosTag=NOUN" lemma="bayoneta">bayonetas</w>
+                    <w  msd="UPosTag=ADP" lemma="de">de</w>
+                    <w  msd="UPosTag=NOUN" lemma="infanteria">infanteria</w>
+                    <w  msd="UPosTag=NUM|NumType=Card" lemma="8">8</w>
+                    <w  msd="UPosTag=ADP" lemma="com">com</w>
+                    <w  msd="UPosTag=NUM|NumType=Card" lemma="2">2</w>
+                    <w  msd="UPosTag=NOUN" lemma="officiaes" join="right">officiaes</w>
+                    <pc  msd="UPosTag=PUNCT" lemma=",">,</pc>
+                    <w  msd="UPosTag=ADP" lemma="para">para</w>
+                    <w  msd="UPosTag=VERB" lemma="fazer">fazer</w>
+                    <w  msd="UPosTag=DET|Definite=Def|Gender=Fem|Number=Sing|PronType=Art" lemma="o">a</w>
+                    <w  msd="UPosTag=NOUN" lemma="guarnição">guarnição</w>
+                    <w>da<w  msd="UPosTag=ADP" lemma="de">de</w><w  msd="UPosTag=DET|Definite=Def|Gender=Fem|Number=Sing|PronType=Art" lemma="o">a</w></w>
+                    <w  msd="UPosTag=PROPN" lemma="Villa" join="right">Villa</w>
+                    <pc  msd="UPosTag=PUNCT" lemma=".">.</pc>
+                </s>
+            </p>
+        </body>
+    </text>
+</TEI>
