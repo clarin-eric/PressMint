@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-CZ" xml:lang="cs">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Český korpus historických novin PressMint-CZ [PressMint]</title>
+            <title xml:lang="en">Czech historical newspaper corpus PressMint-CZ [PressMint]</title>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0001-7953-8783">Matyáš Kopp</persName>
+               <resp xml:lang="en">TEI XML corpus encoding</resp>
+            </respStmt>
+            <funder>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <orgName xml:lang="cs">Výzkumná infrastruktura CLARIN</orgName>
+            </funder>
+            <funder>
+               <orgName xml:lang="cs">LINDAT/CLARIAH-CZ: Digitální výzkumná infrastruktura pro jazykové technologie, umění a humanitní vědy</orgName>
+               <orgName xml:lang="en">LINDAT/CLARIAH-CZ: Digital Research Infrastructure for Language Technologies, Arts and Humanities</orgName>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent>
+            <measure unit="words" quantity="0" xml:lang="en">0 words</measure>
+            <measure unit="words" quantity="0" xml:lang="cs">0 slov</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <orgName xml:lang="cs">Výzkumná infrastruktura CLARIN</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <idno type="URI">https://github.com/clarin-eric/PressMint</idno>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the
+            <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0
+            International License</ref>.
+          </p>
+               <p xml:lang="cs">Toto dílo je licencováno
+            <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Uveďte původ 4.0
+            Mezinárodní Veřejná licence</ref>.
+          </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title type="main" xml:lang="cs">Národní knihovna České republiky</title>
+               <title type="main" xml:lang="en">National Library of the Czech Republic</title>
+               <idno type="URI" subtype="URL">https://www.nkp.cz</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <tagsDecl>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="5"/>
+               <tagUsage gi="cb" occurs="87"/>
+               <tagUsage gi="lb" occurs="8365"/>
+               <tagUsage gi="p" occurs="722"/>
+               <tagUsage gi="pb" occurs="22"/>
+               <tagUsage gi="pc" occurs="2279"/>
+               <tagUsage gi="text" occurs="5"/>
+            </namespace>
+         </tagsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="cs" xml:lang="cs">čeština</language>
+            <language ident="en" xml:lang="cs">angličtina</language>
+            <language ident="cs" xml:lang="en">Czech</language>
+            <language ident="en" xml:lang="en">English</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+               href="1848/PressMint-CZ_1848-04-05-f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+               href="1861/PressMint-CZ_1861-01-01-b8cf84b6-435d-11dd-b505-00145e5790ea.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+               href="1886/PressMint-CZ_1886-07-20-0a3623ed-435e-11dd-b505-00145e5790ea.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+               href="1914/PressMint-CZ_1914-12-30-944bce70-c892-11de-8718-000d606f5dc6.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+               href="1914/PressMint-CZ_1914-12-31-dda72f90-c894-11de-b208-000d606f5dc6.xml"/>
+</teiCorpus>

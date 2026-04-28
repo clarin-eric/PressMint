@@ -3,7 +3,7 @@
             xmlns:egXML="http://www.tei-c.org/ns/Examples"
             xmlns:pm="PressMint"
             ident="pressmint"
-            start="TEI teiCorpus"
+            start="TEI teiCorpus taxonomy"
             prefix="tei_"
             docLang="en"
             xml:lang="en">
@@ -11,7 +11,7 @@
   <!-- Elements used in ParlaMint -->
   <moduleRef key="tei"/>
   <moduleRef key="textstructure"
-             include="TEI text front body back div docDate"/>
+             include="TEI text front body back byline div docDate"/>
   <moduleRef key="core"
              include="author bibl biblScope cb date desc email gap graphic head label lb measure media meeting name
                       note num p pb pubPlace publisher ref resp respStmt teiCorpus term time title unit"/>

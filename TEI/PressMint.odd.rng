@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-11-01T12:31:50Z. 2025-11-01. 
+Schema generated from ODD source 2026-04-28T09:18:44Z. 2026-04-23. 
 TEI Edition: P5 Version 4.11.0a. Last updated on 6th October 2025, revision 2d8eae701 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0a/ 
   
@@ -2196,6 +2196,7 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    <define name="tei_model.divWrapper">
       <choice>
          <ref name="tei_meeting"/>
+         <ref name="tei_byline"/>
          <ref name="tei_docDate"/>
       </choice>
    </define>
@@ -2216,6 +2217,7 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    <define name="tei_model.pLike.front">
       <choice>
          <ref name="tei_head"/>
+         <ref name="tei_byline"/>
          <ref name="tei_docDate"/>
       </choice>
    </define>
@@ -3486,6 +3488,22 @@ Sample values include: 1] domesticNews; 2] foreignNews; 3] sportsNews; 4] crimeN
                <text/>
             </attribute>
          </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_byline">
+      <element name="byline">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(byline) contains the primary statement of responsibility given for a work on its title page or at the head or end of the work. [4.2.2. Openers and Closers 4.5. Front Matter]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_model.gLike"/>
+               <ref name="tei_model.phrase"/>
+               <ref name="tei_model.global"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.cmc.attributes"/>
          <empty/>
       </element>
    </define>
@@ -5538,6 +5556,7 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
       <choice>
          <ref name="tei_TEI"/>
          <ref name="tei_teiCorpus"/>
+         <ref name="tei_taxonomy"/>
       </choice>
    </start>
    <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
