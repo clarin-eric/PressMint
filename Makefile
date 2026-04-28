@@ -6,7 +6,7 @@ export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
 
 
 
-PRESS := AT BG CZ ES FI GB GR HU IS IT LV NL PL PT SI UA ZA
+PRESS := AT BG CZ ES ES-GA ES-MD ES-PV FI GB GR HU IS IT LV NL PL PT SI UA ZA
 
 ##$JAVA-MEMORY## Set a java memory maxsize in GB
 JAVA-MEMORY =

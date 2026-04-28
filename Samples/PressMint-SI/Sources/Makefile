@@ -1,13 +1,13 @@
 ### Produce initial PressMint TEI from JSON:
 preconvert:
-	Scripts/sPeriodika-json2tei.pl text 'Sources/*.json' Temp
-	Scripts/sPeriodika-json2tei.pl ana  'Sources/*.json' Temp
+	Scripts/sPeriodika-json2tei.pl text 'JSON/*.json' TEI
+	Scripts/sPeriodika-json2tei.pl ana  'JSON/*.json' TEI
 
-### Copy files produced in Temp/ to PressMint/Build/Sources-TEI
+### Copy files produced in TEI/ to PressMint/Build/Sources-TEI
 ### Not something to be done in case the full courpus is already there!
 copy-files:
-	Scripts/cp-files.pl Temp ../../Build/Sources-TEI/
-	#cp Temp/PressMint-taxonomy-NER.ana.xml ../../Build/Sources-TEI/PressMint-SI.TEI.ana
+	Scripts/cp-files.pl TEI ../../Build/Sources-TEI/
+	#cp TEI/PressMint-taxonomy-NER.ana.xml ../../Build/Sources-TEI/PressMint-SI.TEI.ana
 
 ###################This is large!
 get-full-corpus-from-repo:
