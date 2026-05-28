@@ -1,37 +1,28 @@
 # Samples of the PressMint-GB corpus
 
-## Data source
+This directory contains a PressMint TEI sample for Great Britain, generated from the British Library / Living with Machines `Widnes Examiner` plaintext and metadata files.
 
-The source of the PressMint-GB corpus will be ...
+## Source
 
-### Details of the source:
+- Newspaper: Widnes Examiner
+- Place of publication: Widnes, Cheshire, England
+- Source page or dataset URL: https://bl.iro.bl.uk/concern/datasets/96c2c510-5b7b-4bea-97af-ca2c6bee26be
+- Corpus ID: PressMint-GB
+- Components generated: 747
+- Source items processed: 76043
 
-* __Source__: 
+## Generated structure
 
-* __Availability__: 
+- `PressMint-GB.xml`: corpus root file with XInclude links to issue components.
+- `YYYY/`: issue-level TEI component files.
+- `Sources/`: conversion manifest used for traceability.
 
-* __Content__: 
+## Validation
 
-* __Size__: 
+From the PressMint repository root, run:
 
-* __Structure__: 
+```bash
+make validate-TEI-GB
+```
 
-* __Correction__: 
-
-* __Linguistic annotation__: 
-
-* __Metadata__:
-
-    The texts in the corpus have the following metadata:
-
-    - Document ID 
-    - ...
-    
-* __Format__: 
-
-* __Facsimile__:
-
-## Conversion plan
-
-For the PressMint-GB corpus we plan to:
-
+Review the `Sources/metadata/pressmint_gb_manifest.tsv` file before submission, especially skipped OCR fragments and licensing notes.

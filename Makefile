@@ -57,7 +57,7 @@ check-prereq:
 	  echo "OK" || echo "FAIL"
 	@echo -n "UD tools: "
 	@test -f Scripts/bin/tools/validate.py && \
-	  python3 -m re && \
+	  python3 -c "import re" && \
 	  echo "OK" || echo "FAIL"
 	@which parallel > /dev/null && \
 	  echo "parallel: OK" || echo "WARN: command parallel is missing"
