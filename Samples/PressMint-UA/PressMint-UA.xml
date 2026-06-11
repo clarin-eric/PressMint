@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="PressMint-UA" xml:lang="uk">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main" xml:lang="uk">Корпус українських історичних газет PressMint-UA (PluG) [PressMint SAMPLE]</title>
+            <title type="main" xml:lang="en">Ukrainian historical newspaper corpus PressMint-UA [PressMint SAMPLE]</title>
+            <respStmt>
+               <resp xml:lang="en">PluG to PressMint TEI XML conversion</resp>
+               <name>PluG</name>
+            </respStmt>
+            <funder>
+               <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent>
+            <measure unit="texts" quantity="32" xml:lang="en">32 texts</measure>
+            <measure unit="paragraphs" quantity="238" xml:lang="en">238 paragraphs</measure>
+            <measure unit="words" quantity="8743" xml:lang="en">8,743 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="uk">Дослідницька інфраструктура CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+            </availability>
+            <date when="2026-04-17">2026-04-17</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title type="main" xml:lang="en">PluG</title>
+               <title type="main" xml:lang="uk">PluG</title>
+               <idno type="URI" subtype="URL">https://uacorpus.org/</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en">
+               <ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project creating multilingual corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>.</p>
+         </projectDesc>
+         <editorialDecl>
+            <correction>
+               <p xml:lang="en">PluG texts were manually curated by corpus editors.</p>
+            </correction>
+            <segmentation>
+               <p xml:lang="en">Paragraph segmentation follows tab-indented lines in PluG source files. Sentence segmentation by nlp_uk.</p>
+            </segmentation>
+         </editorialDecl>
+         <tagsDecl>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="p" occurs="238" />
+               <tagUsage gi="text" occurs="32" />
+            </namespace>
+         </tagsDecl>
+         <classDecl>
+            <xi:include href="PressMint-taxonomy-topic.xml" />
+            <xi:include href="PressMint-UA-taxonomy-regions.xml" />
+            <xi:include href="PressMint-UA-taxonomy-mediaAdmin.xml" />
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-UA-taxonomy-mediaAdmin" target="#PressMint-UA.mediaAdmin.RUI" />
+            <catRef scheme="#PressMint-UA-taxonomy-regions" target="#PressMint-UA.regions.loccode.UA-KYV-KYV" />
+            <catRef scheme="#PressMint-UA-taxonomy-regions" target="#PressMint-UA.regions.macroregion.KYV" />
+         </textClass>
+         <langUsage>
+            <language ident="uk" xml:lang="uk">українська</language>
+            <language ident="en" xml:lang="uk">англійська</language>
+            <language ident="uk" xml:lang="en">Ukrainian</language>
+            <language ident="en" xml:lang="en">English</language>
+         </langUsage>
+         <settingDesc>
+            <setting>
+               <date when="1910">1910</date>
+            </setting>
+         </settingDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-04-17">Первинна конвертація підкорпусу PluG у PressMint TEI XML.</change>
+      </revisionDesc>
+   </teiHeader>
+   <xi:include href="1910/PressMint-UA_1910-10-29-966E7CA4.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-7AE9B66D.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-F1635FBF.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-27D36B87.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-D5A12C46.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-A105668B.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-5967380A.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-8330D80B.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-C4D83671.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-BB11E4C3.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-3C3C1DE6.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-44792CE2.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-04BAB208.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-43657E2D.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-53F7B2D1.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-FE639115.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-3A498F41.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-9243E745.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-82FE1922.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-EEACB7B6.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-A03202BA.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-DCE792D8.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-3FEB8BA6.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-3AB253D0.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-1A1A3FE4.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-27B0EE3F.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-7E41F7FF.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-255C3A9D.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-9CBC7D15.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-3A2D6CE9.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-5392684C.xml" />
+   <xi:include href="1910/PressMint-UA_1910-10-29-2EBF77D6.xml" />
+</teiCorpus>

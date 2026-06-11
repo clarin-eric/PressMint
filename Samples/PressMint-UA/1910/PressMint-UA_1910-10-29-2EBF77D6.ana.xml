@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-UA_1910-10-29-2EBF77D6.ana" xml:lang="uk">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="uk">Корпус українських історичних газет PressMint-UA (PluG), «Запитання», Рада, №245 29.10.1910 [PressMint.ana SAMPLE]</title>
+            <title xml:lang="en">Ukrainian historical newspaper corpus PressMint-UA, "Запитання", Рада, 1910-10-29, no. 245 [PressMint.ana SAMPLE]</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent>
+            <measure unit="paragraphs" quantity="1" xml:lang="en">1 paragraph</measure>
+            <measure unit="sentences" quantity="2" xml:lang="en">2 sentences</measure>
+            <measure unit="words" quantity="21" xml:lang="en">21 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="uk">Дослідницька інфраструктура CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+            </availability>
+            <date when="2026-04-17">2026-04-17</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Рада</title>
+               <title level="a">Запитання</title>
+               <pubPlace>Київ</pubPlace>
+               <date when="1910-10-29">№245 29.10.1910</date>
+               <biblScope unit="issue">245</biblScope>
+               <idno type="local" subtype="PluG-path">R/Rada_1910_245/Rada_1910_245_Zapytannya.txt</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en">
+               <ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project creating multilingual corpora of historical newspapers.</p>
+         </projectDesc>
+         <tagsDecl>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="p" occurs="1" />
+               <tagUsage gi="s" occurs="2" />
+               <tagUsage gi="w" occurs="21" />
+               <tagUsage gi="pc" occurs="2" />
+               <tagUsage gi="name" occurs="3" />
+            </namespace>
+         </tagsDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2026-04-17">Конвертація PluG -&gt; PressMint TEI XML .ana.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="uk">
+      <body>
+         <p xml:id="PressMint-UA_1910-10-29-2EBF77D6.ana.p1">
+            <s xml:id="PressMint-UA_1910-10-29-2EBF77D6.ana.p1.s1">
+               <name type="LOC">
+                  <w lemma="відень" msd="UPosTag=NOUN|Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing" join="right">ВІДЕНЬ</w>
+               </name>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s xml:id="PressMint-UA_1910-10-29-2EBF77D6.ana.p1.s2">
+               <w lemma="соціаліст" msd="UPosTag=NOUN|Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing">Соціаліст</w>
+               <name type="PER">
+                  <w lemma="Реннер" msd="UPosTag=PROPN|Animacy=Anim|Case=Nom|Gender=Masc|NameType=Sur|Number=Sing">Реннер</w>
+               </name>
+               <w lemma="внести" msd="UPosTag=VERB|Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin">вніс</w>
+               <w lemma="запитання" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing">запитання</w>
+               <w lemma="в" msd="UPosTag=ADP|Case=Acc">в</w>
+               <w lemma="парламент" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing">парламент</w>
+               <w lemma="з" msd="UPosTag=ADP|Case=Gen">з</w>
+               <w lemma="привід" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing">приводу</w>
+               <w lemma="зносини" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Number=Ptan">зносин</w>
+               <w lemma="австрійський" msd="UPosTag=ADJ|Case=Gen|Gender=Masc|Number=Sing">австрійського</w>
+               <w lemma="уряд" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing">уряду</w>
+               <w lemma="з" msd="UPosTag=ADP|Case=Ins">з</w>
+               <w lemma="російський" msd="UPosTag=ADJ|Case=Ins|Number=Plur">російськими</w>
+               <w lemma="жандарм" msd="UPosTag=NOUN|Animacy=Anim|Case=Ins|Gender=Masc|Number=Plur">жандармами</w>
+               <w lemma="під" msd="UPosTag=ADP|Case=Acc|ExtPos=ADP">під</w>
+               <w lemma="час" msd="UPosTag=NOUN|Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing">час</w>
+               <w lemma="арешт" msd="UPosTag=NOUN|Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing">арешту</w>
+               <w lemma="росіянин" msd="UPosTag=NOUN|Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur">росіян</w>
+               <w lemma="в" msd="UPosTag=ADP|Case=Loc">в</w>
+               <name type="LOC">
+                  <w lemma="Краків" msd="UPosTag=PROPN|Animacy=Inan|Case=Loc|Gender=Masc|NameType=Geo|Number=Sing" join="right">Кракові</w>
+               </name>
+               <pc msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+      </body>
+   </text>
+</TEI>
