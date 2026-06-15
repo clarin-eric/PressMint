@@ -11,7 +11,7 @@ namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 namespace xsl = "http://www.w3.org/1999/XSL/Transform"
 
-# Schema generated from ODD source 2026-03-18T14:20:52Z. 2026-03-18. 
+# Schema generated from ODD source 2026-04-28T09:18:49Z. 2026-04-23. 
 # TEI Edition: P5 Version 4.11.0a. Last updated on 6th October 2025, revision 2d8eae701 
 # TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0a/ 
 #
@@ -1171,11 +1171,11 @@ tei_model.attributable_sequenceRepeatable =
   tei_model.quoteLike_sequenceRepeatable+
 tei_model.respLike =
   tei_author | tei_respStmt | tei_meeting | tei_funder
-tei_model.divWrapper = tei_meeting | tei_docDate
+tei_model.divWrapper = tei_meeting | tei_byline | tei_docDate
 tei_model.divTopPart = tei_model.headLike
 tei_model.divTop = tei_model.divWrapper | tei_model.divTopPart
 tei_model.frontPart.drama = notAllowed
-tei_model.pLike.front = tei_head | tei_docDate
+tei_model.pLike.front = tei_head | tei_byline | tei_docDate
 tei_model.divBottomPart = notAllowed
 tei_model.divBottom = tei_model.divWrapper | tei_model.divBottomPart
 tei_model.imprintPart = tei_publisher | tei_biblScope | tei_pubPlace
@@ -2102,6 +2102,15 @@ tei_div =
     ## 
     ## Sample values include: 1] domesticNews; 2] foreignNews; 3] sportsNews; 4] crimeNews; 5] supplements; 6] banner; 7] colophon; 8] article; 9] advertisement; 10] supplement
     attribute type { text }?,
+    empty
+  }
+tei_byline =
+  
+  ## (byline) contains the primary statement of responsibility given for a work on its title page or at the head or end of the work. [4.2.2. Openers and Closers 4.5. Front Matter]
+  element byline {
+    (text | tei_model.gLike | tei_model.phrase | tei_model.global)*,
+    tei_att.global.attributes,
+    tei_att.cmc.attributes,
     empty
   }
 tei_docDate =
