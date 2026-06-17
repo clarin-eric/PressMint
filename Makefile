@@ -216,8 +216,8 @@ $(addprefix MSG-validate-TEI-start-, $(PRESS)): MSG-validate-TEI-start-%:
 
 ## validate-TEI-XX ## validate TEI corpus
 ####⤷  calls:
-####⤷     validate-TEI-root-XX validate-TEI-comp-XX check-links-TEI_XX check-chars-TEI_XX
-$(validate-TEI-XX): validate-TEI-%: MSG-validate-TEI-start-% validate-TEI-root-% validate-TEI-comp-% check-links-TEI_% check-chars-TEI_%
+####⤷     validate-TEI-root-XX validate-TEI-comp-XX validate-content-TEI_XX check-links-TEI_XX check-chars-TEI_XX
+$(validate-TEI-XX): validate-TEI-%: MSG-validate-TEI-start-% validate-TEI-root-% validate-TEI-comp-% validate-content-TEI_% check-links-TEI_% check-chars-TEI_%
 	@echo "INFO: $* TEI validation done"
 
 ## validate-TEI-root-XX ## validate TEI teiCorpus
@@ -240,8 +240,8 @@ $(addprefix MSG-validate-TEI.ana-start-, $(PRESS)): MSG-validate-TEI.ana-start-%
 
 ## validate-TEI.ana-XX ## validate-TEI.ana corpus
 ####⤷  calls:
-####⤷     validate-TEI.ana-root-XX validate-TEI.ana-comp-XX check-links-TEI.ana_XX check-chars-TEI.ana_XX
-$(validate-TEI.ana-XX): validate-TEI.ana-%: MSG-validate-TEI.ana-start-% validate-TEI.ana-root-% validate-TEI.ana-comp-% check-links-TEI.ana_% check-chars-TEI.ana_%
+####⤷     validate-TEI.ana-root-XX validate-TEI.ana-comp-XX validate-content-TEI.ana_XX check-links-TEI.ana_XX check-chars-TEI.ana_XX
+$(validate-TEI.ana-XX): validate-TEI.ana-%: MSG-validate-TEI.ana-start-% validate-TEI.ana-root-% validate-TEI.ana-comp-% validate-content-TEI.ana_% check-links-TEI.ana_% check-chars-TEI.ana_%
 	@echo "INFO: $* TEI.ana validation done"
 
 ## validate-TEI.ana-root-XX ## validate TEI.ana teiCorpus
@@ -294,6 +294,31 @@ $(uniqIdsTaxonomies-XX): uniqIdsTaxonomies-%:
 	  else \
 		echo "INFO: No duplicit IDs in taxonomies"; \
 	  fi; }
+
+###### Content validate
+validate-content-XX = $(addprefix validate-content-, $(PRESS))
+## validate-content ## validate all corpora with Scripts/validate-pressmint.xsl
+validate-content: $(validate-content-XX)
+## validate-content-XX ## validate both TEI and TEI.ana version of XX corpus with Scripts/validate-pressmint.xsl
+$(validate-content-XX): validate-content-%: validate-content-TEI_% validate-content-TEI.ana_%
+## validate-content-FF_XX ## validate both FF(TEI/TEI.ana) version of XX corpus with Scripts/validate-pressmint.xsl
+validate-content-FF_XX = $(foreach f,$(ROOT_FORMATS),$(foreach p,$(PRESS),validate-content-$(f)_$(p)))
+$(validate-content-FF_XX): validate-content-%:
+	@echo "INFO: starting content validation ($*): $(PATHBASE_$*)"
+	@root=$(PATHROOT_$*);\
+	base=$$(dirname "$${root}"); \
+	echo "$${base} is base for $${root}"; \
+	echo "checking content in root:" $${root}; \
+	${s} ${vcontent} $${root}; \
+	for component in `echo $${root}| ${getheaderincludes}`; do \
+	  echo "checking content in header component:" $${base}/$${component}; \
+	  ${s} ${vcontent} $${base}/$${component}; \
+	done; \
+	for component in `echo $${root}| ${getcomponentincludes}`; do \
+	  echo "checking content in component:" $${base}/$${component}; \
+	  ${s} ${vcontent} $${base}/$${component}; \
+	done
+	@echo "INFO: DONE content validation ($*)"
 
 ###### Check links
 check-links-XX = $(addprefix check-links-, $(PRESS))
@@ -455,6 +480,7 @@ P = parallel --gnu --halt 2
 j = java $(JM) -jar ./Scripts/bin/jing.jar
 
 vlink = -xsl:Scripts/check-links.xsl
+vcontent = -xsl:Scripts/validate-pressmint.xsl
 vchars = perl ./Scripts/check-chars.pl
 
 getincludes = xargs -I % java -cp $(SAXON) net.sf.saxon.Query -xi:off \!method=adaptive -qs:'//*[local-name()="include"]/@href' -s:% |sed 's/^ *href="//;s/"//'
