@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-NL" xml:lang="sl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="nl">Courantencorpus [PressMint SAMPLE]</title>
+            <title xml:lang="en">Dutch 17th century newspapers [PressMint SAMPLE]</title>
+            <respStmt>
+               <persName>Jesse de Does</persName>
+               <resp xml:lang="en">PressMint TEI XML corpus encoding</resp>
+            </respStmt>
+            <respStmt>
+               <orgName ref="https://www.ivdnt.org">Dutch Language Institute</orgName>
+               <resp xml:lang="en">Preparation of source Couranten corpus</resp>
+            </respStmt>
+            <funder>
+               <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="texts" quantity="2245" xml:lang="en">2,245 texts</measure>
+            <measure unit="paragraphs" quantity="502642" xml:lang="en">502,642 paragraphs</measure>
+            <measure unit="words" quantity="18594041" xml:lang="en">18,594,041 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Nicoline van der Sijs et al.</author>
+               <title type="main" xml:lang="en">Courantencorpus, v2</title>
+               <idno type="URI" subtype="handle">http://hdl.handle.net/11356/8943</idno>
+               <date>2025</date>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+
+         </projectDesc>
+         <editorialDecl>
+            <quotation>
+               <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+            </quotation>
+            <hyphenation>
+               <p xml:lang="en">A processing step for the Courantencorpus attempted to join end-of-line hyphenated words, although it was not sucessfull in all cases. Previously hyphenated words are not marked-up as such.</p>
+            </hyphenation>
+            <normalization>
+               <p xml:lang="en">Text has not been normalised, except for spacing.</p>
+            </normalization>
+            <segmentation>
+               <p xml:lang="en">The texts are split by page breaks, and then segmented into paragraphs.</p>
+            </segmentation>
+         </editorialDecl>
+         <tagsDecl><!--These numbers do not reflect the size of the sample!-->
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="246"/>
+               <tagUsage gi="p" occurs="56032"/>
+               <tagUsage gi="pb" occurs="1057"/>
+               <tagUsage gi="text" occurs="246"/>
+            </namespace>
+         </tagsDecl>
+         <classDecl>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-OCR.xml"/>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="couranten-text-type.xml"/>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-topic.xml"/>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+		    <date from="1618" to="1700">1618--1700</date>
+            </setting>
+         </settingDesc>
+         <langUsage>
+            <language ident="nl" xml:lang="en">Dutch</language>
+            <language ident="en" xml:lang="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2025-01-14">
+            <name>Jesse de Does</name>: Made sample.</change>
+      </revisionDesc>
+   </teiHeader>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1619/PressMint-NL-1619_0.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1619/PressMint-NL-1619_10.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1619/PressMint-NL-1619_11.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1619/PressMint-NL-1619_12.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1619/PressMint-NL-1619_14.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1619/PressMint-NL-1619_2.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1619/PressMint-NL-1619_3.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1619/PressMint-NL-1619_4.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1619/PressMint-NL-1619_7.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1620/PressMint-NL-1620_54.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1621/PressMint-NL-1621_109.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1621/PressMint-NL-1621_221.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1621/PressMint-NL-1621_231.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1621/PressMint-NL-1621_287.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1624/PressMint-NL-1624_108.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1624/PressMint-NL-1624_159.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1625/PressMint-NL-1625_133.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1628/PressMint-NL-1628_42.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1628/PressMint-NL-1628_6.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1628/PressMint-NL-1628_73.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1629/PressMint-NL-1629_221.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1629/PressMint-NL-1629_44.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1631/PressMint-NL-1631_32.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1631/PressMint-NL-1631_48.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1632/PressMint-NL-1632_139.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1635/PressMint-NL-1635_81.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1635/PressMint-NL-1635_97.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1636/PressMint-NL-1636_119.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1636/PressMint-NL-1636_200.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1636/PressMint-NL-1636_262.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1636/PressMint-NL-1636_269.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1636/PressMint-NL-1636_303.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1639/PressMint-NL-1639_120.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1639/PressMint-NL-1639_140.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1639/PressMint-NL-1639_99.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1642/PressMint-NL-1642_210.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1642/PressMint-NL-1642_532.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1644/PressMint-NL-1644_613.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1645/PressMint-NL-1645_1381.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1645/PressMint-NL-1645_1672.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1645/PressMint-NL-1645_1749.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1645/PressMint-NL-1645_1802.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1645/PressMint-NL-1645_681.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1645/PressMint-NL-1645_787.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1646/PressMint-NL-1646_1014.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1646/PressMint-NL-1646_846.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1649/PressMint-NL-1649_615.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1649/PressMint-NL-1649_616.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1650/PressMint-NL-1650_192.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1650/PressMint-NL-1650_202.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1650/PressMint-NL-1650_234.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1650/PressMint-NL-1650_66.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1651/PressMint-NL-1651_156.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1651/PressMint-NL-1651_195.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1651/PressMint-NL-1651_64.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1653/PressMint-NL-1653_166.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1653/PressMint-NL-1653_54.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1656/PressMint-NL-1656_1.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1657/PressMint-NL-1657_158.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1658/PressMint-NL-1658_212.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1658/PressMint-NL-1658_258.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1660/PressMint-NL-1660_545.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1661/PressMint-NL-1661_331.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1661/PressMint-NL-1661_726.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1665/PressMint-NL-1665_455.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1666/PressMint-NL-1666_94.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1667/PressMint-NL-1667_1280.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1667/PressMint-NL-1667_1293.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1667/PressMint-NL-1667_188.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1667/PressMint-NL-1667_720.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1669/PressMint-NL-1669_1204.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1669/PressMint-NL-1669_2028.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1669/PressMint-NL-1669_2039.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1669/PressMint-NL-1669_343.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1670/PressMint-NL-1670_1036.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1670/PressMint-NL-1670_1254.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1670/PressMint-NL-1670_1424.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1670/PressMint-NL-1670_320.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1670/PressMint-NL-1670_915.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1671/PressMint-NL-1671_1320.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1671/PressMint-NL-1671_1538.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1671/PressMint-NL-1671_1703.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1671/PressMint-NL-1671_2270.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1671/PressMint-NL-1671_2349.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1671/PressMint-NL-1671_2449.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1671/PressMint-NL-1671_2762.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1671/PressMint-NL-1671_2804.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1681/PressMint-NL-1681_363.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1682/PressMint-NL-1682_360.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1683/PressMint-NL-1683_1376.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1683/PressMint-NL-1683_2421.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1683/PressMint-NL-1683_2465.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1683/PressMint-NL-1683_2921.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1683/PressMint-NL-1683_294.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1683/PressMint-NL-1683_295.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1683/PressMint-NL-1683_839.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1684/PressMint-NL-1684_1752.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1684/PressMint-NL-1684_2147.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1684/PressMint-NL-1684_2235.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1684/PressMint-NL-1684_2310.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1690/PressMint-NL-1690_1981.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1690/PressMint-NL-1690_2027.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1690/PressMint-NL-1690_2303.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1690/PressMint-NL-1690_2376.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1690/PressMint-NL-1690_2444.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1690/PressMint-NL-1690_2448.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1690/PressMint-NL-1690_2566.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1690/PressMint-NL-1690_510.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1691/PressMint-NL-1691_2194.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1691/PressMint-NL-1691_3636.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1692/PressMint-NL-1692_3511.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1692/PressMint-NL-1692_4275.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1692/PressMint-NL-1692_4343.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1700/PressMint-NL-1700_0.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1700/PressMint-NL-1700_10.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1700/PressMint-NL-1700_15.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1700/PressMint-NL-1700_16.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1700/PressMint-NL-1700_18.xml'/>
+  <xi:include xmlns:xi='http://www.w3.org/2001/XInclude' href='1700/PressMint-NL-1700_7.xml'/>
+</teiCorpus>
