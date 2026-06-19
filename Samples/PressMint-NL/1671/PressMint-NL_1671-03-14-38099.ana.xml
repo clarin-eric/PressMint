@@ -1,0 +1,1359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+      xmlns:tei="http://www.tei-c.org/ns/1.0"
+      xml:id="PressMint-NL_1671-03-14-38099.ana"
+      xml:lang="nld">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="en">Dutch historical newspaper corpus PressMint-NL, Oprechte Haerlemsche courant, 1671-03-14 [PressMint]</title>
+            <respStmt>
+               <resp>compiled by</resp>
+               <name>Nicoline van der Sijs and volunteers</name>
+            </respStmt>
+            <respStmt>
+               <resp>manual verification of the linguistic annotations by means of LAnCeLoT (https://portal.clarin.ivdnt.org/lancelot)</resp>
+               <persName>
+                  <email>jesse</email>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability>
+               <licence>This file may not be redistributed!! It is a preliminary version</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Oprechte Haerlemsche courant</title>
+               <title level="s">NEDERLANDEN</title>
+               <title level="a">'s Gravenhage den 12 Maert.</title>
+               <publisher>Ghedruckt tot Haerlem, by ABRAHAM CASTELEYN, Stadts Drucker, op de Marckt, in de Blye Druck. Den 14 Maert, Anno 1671.</publisher>
+               <date when="1671-03-14">1671-03-14</date>
+               <idno type="URN">ddd:010927010:mpeg21:a0007</idno>
+               <idno type="URI" subtype="URL">https://www.delpher.nl/nl/kranten/view?coll=ddd&amp;identifier=ddd:010927010:mpeg21:a0007</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <appInfo>
+            <application ident="LAnCeLoT" version="1.0" xml:id="kranten_17_38099.LAnCeLoT">
+               <label>tool for manual verification of linguistic annotations</label>
+               <ref target="https://portal.clarin.ivdnt.org/lancelot"/>
+            </application>
+         </appInfo>
+      </encodingDesc>
+      <revisionDesc>
+         <change when="2026-06-19+02:00">
+            <name>INT</name>: Conversion to PressMint format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text ana="#domestic-news">
+      <body>
+         <div>
+            <head>
+               <s xml:id="kranten_17_38099.s.0">
+                  <w corresp="#kranten_17_38099.w.1"
+                      lemma="'s-Gravenhage"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="kranten_17_38099.w.0">
+                     <span>'s</span>
+                  </w>
+                  <w corresp="#kranten_17_38099.w.0"
+                      lemma="'s-Gravenhage"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="kranten_17_38099.w.1">
+                     <span>Gravenhage</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.2">
+                     <span>den</span>
+                  </w>
+                  <w lemma="twaalfde"
+                      pos="NUM"
+                      msd="UPosTag=NUM|NumType=Ord"
+                      xml:id="kranten_17_38099.w.3">
+                     <span>12</span>
+                  </w>
+                  <w lemma="maart"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.4"
+                      join="right">
+                     <span>Maert</span>
+                  </w>
+                  <pc lemma="e." xml:id="kranten_17_38099.pc.5">.</pc>
+               </s>
+            </head>
+            <p>
+               <s xml:id="kranten_17_38099.s.1">
+                  <w lemma="zo"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="kranten_17_38099.w.6">
+                     <span>Soo</span>
+                  </w>
+                  <w lemma="men"
+                      pos="PRON"
+                      msd="UPosTag=PRON|PronType=Prs"
+                      xml:id="kranten_17_38099.w.7">
+                     <span>men</span>
+                  </w>
+                  <w lemma="verstaan"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.8"
+                      join="right">
+                     <span>verstaet</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.9">,</pc>
+                  <w lemma="zijn"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.10"
+                      join="right">
+                     <span>is</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.11">,</pc>
+                  <w lemma="na"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.12">
+                     <span>nae</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.13">
+                     <span>de</span>
+                  </w>
+                  <w lemma="genomen"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="kranten_17_38099.w.14">
+                     <span>genomene</span>
+                  </w>
+                  <w lemma="resolutie"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.15">
+                     <span>Resolutie</span>
+                  </w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.16">
+                     <span>van</span>
+                  </w>
+                  <w lemma="haar"
+                      pos="DET"
+                      msd="UPosTag=DET|PronType=Prs|Poss=Yes"
+                      xml:id="kranten_17_38099.w.17">
+                     <span>haer</span>
+                  </w>
+                  <w corresp="#kranten_17_38099.w.19"
+                      lemma="hoogmogende"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur|Abbr=Yes"
+                      xml:id="kranten_17_38099.w.18">
+                     <span>Hoog</span>
+                  </w>
+                  <w corresp="#kranten_17_38099.w.18"
+                      lemma="hoogmogende"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur|Abbr=Yes"
+                      xml:id="kranten_17_38099.w.19"
+                      join="right">
+                     <span>Mog</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.20">:,</pc>
+                  <w lemma="tot"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.21">
+                     <span>tot</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.22">
+                     <span>de</span>
+                  </w>
+                  <w lemma="werving"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.23">
+                     <span>Wervinge</span>
+                  </w>
+                  <w lemma="en"
+                      pos="CCONJ"
+                      msd="UPosTag=CCONJ"
+                      xml:id="kranten_17_38099.w.24">
+                     <span>ende</span>
+                  </w>
+                  <w lemma="equipage"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.25"
+                      join="right">
+                     <span>Equipagie</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.26">,</pc>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.27">
+                     <span>de</span>
+                  </w>
+                  <w lemma="nodig"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="kranten_17_38099.w.28">
+                     <span>noodige</span>
+                  </w>
+                  <w lemma="order"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="kranten_17_38099.w.29"
+                      join="right">
+                     <span>ordres</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.30">,</pc>
+                  <w lemma="zo"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.31">
+                     <span>soo</span>
+                  </w>
+                  <w lemma="wel"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.32">
+                     <span>wel</span>
+                  </w>
+                  <w lemma="tot"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.33">
+                     <span>tot</span>
+                  </w>
+                  <w lemma="het"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.34">
+                     <span>het</span>
+                  </w>
+                  <w lemma="een"
+                      pos="NUM"
+                      msd="UPosTag=NUM|NumType=Card"
+                      xml:id="kranten_17_38099.w.35">
+                     <span>eene</span>
+                  </w>
+                  <w lemma="als"
+                      pos="CCONJ"
+                      msd="UPosTag=CCONJ"
+                      xml:id="kranten_17_38099.w.36">
+                     <span>als</span>
+                  </w>
+                  <w lemma="het"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.37">
+                     <span>'t</span>
+                  </w>
+                  <w lemma="ander"
+                      pos="NUM"
+                      msd="UPosTag=NUM|NumType=Ord"
+                      xml:id="kranten_17_38099.w.38"
+                      join="right">
+                     <span>andere</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.39">,</pc>
+                  <w lemma="afgaan"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="kranten_17_38099.w.40"
+                      join="right">
+                     <span>afgegaen</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.41">,</pc>
+                  <w lemma="en"
+                      pos="CCONJ"
+                      msd="UPosTag=CCONJ"
+                      xml:id="kranten_17_38099.w.42">
+                     <span>en</span>
+                  </w>
+                  <w lemma="speciaal"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="kranten_17_38099.w.43">
+                     <span>speciael</span>
+                  </w>
+                  <w lemma="over"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.44">
+                     <span>over</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.45">
+                     <span>de</span>
+                  </w>
+                  <w lemma="equipage"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.46">
+                     <span>Equipagie</span>
+                  </w>
+                  <w lemma="aan"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.47">
+                     <span>aen</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.48">
+                     <span>de</span>
+                  </w>
+                  <w lemma="respectief"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="kranten_17_38099.w.49">
+                     <span>respective</span>
+                  </w>
+                  <w lemma="admiraliteit"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="kranten_17_38099.w.50"
+                      join="right">
+                     <span>Admiraeliteyten</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.51">;</pc>
+                  <w lemma="en"
+                      pos="CCONJ"
+                      msd="UPosTag=CCONJ"
+                      xml:id="kranten_17_38099.w.52">
+                     <span>en</span>
+                  </w>
+                  <w lemma="spreken"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.53">
+                     <span>spreeckt</span>
+                  </w>
+                  <w lemma="men"
+                      pos="PRON"
+                      msd="UPosTag=PRON|PronType=Prs"
+                      xml:id="kranten_17_38099.w.54"
+                      join="right">
+                     <span>men</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.55">,</pc>
+                  <w lemma="al"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.56">
+                     <span>al</span>
+                  </w>
+                  <w lemma="of"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="kranten_17_38099.w.57">
+                     <span>of</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.58">
+                     <span>de</span>
+                  </w>
+                  <w lemma="schip"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="kranten_17_38099.w.59">
+                     <span>Schepen</span>
+                  </w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.60">
+                     <span>van</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.61">
+                     <span>de</span>
+                  </w>
+                  <w lemma="extraordinaris"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="kranten_17_38099.w.62">
+                     <span>extraordinaris</span>
+                  </w>
+                  <w lemma="equipage"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.63">
+                     <span>Equipagie</span>
+                  </w>
+                  <w lemma="voor"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.64">
+                     <span>voor</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.65">
+                     <span>den</span>
+                  </w>
+                  <w lemma="eerste"
+                      pos="NUM"
+                      msd="UPosTag=NUM|NumType=Ord"
+                      xml:id="kranten_17_38099.w.66">
+                     <span>eersten</span>
+                  </w>
+                  <w lemma="mei"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.67">
+                     <span>Mey</span>
+                  </w>
+                  <w lemma="zullen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Past"
+                      xml:id="kranten_17_38099.w.68">
+                     <span>souden</span>
+                  </w>
+                  <w lemma="moeten"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="kranten_17_38099.w.69">
+                     <span>moeten</span>
+                  </w>
+                  <w lemma="vaardig"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="kranten_17_38099.w.70">
+                     <span>vaerdig</span>
+                  </w>
+                  <w lemma="zijn"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="kranten_17_38099.w.71"
+                      join="right">
+                     <span>zijn</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.72">,</pc>
+                  <w lemma="om"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.73">
+                     <span>omme</span>
+                  </w>
+                  <w lemma="zee"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.74">
+                     <span>Zee</span>
+                  </w>
+                  <w lemma="te"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.75">
+                     <span>te</span>
+                  </w>
+                  <w lemma="kunnen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="kranten_17_38099.w.76">
+                     <span>konnen</span>
+                  </w>
+                  <w lemma="kiezen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="kranten_17_38099.w.77"
+                      join="right">
+                     <span>kiesen</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.78">:</pc>
+                  <w lemma="met"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.79">
+                     <span>met</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.80">
+                     <span>de</span>
+                  </w>
+                  <w lemma="werving"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.81">
+                     <span>Wervinghe</span>
+                  </w>
+                  <w lemma="te"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.82">
+                     <span>te</span>
+                  </w>
+                  <w lemma="land"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.83">
+                     <span>Lande</span>
+                  </w>
+                  <w lemma="schijnen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.84">
+                     <span>schijnt</span>
+                  </w>
+                  <w lemma="dat"
+                      pos="PRON"
+                      msd="UPosTag=PRON|Definite=Def|PronType=Dem/Rel"
+                      xml:id="kranten_17_38099.w.85">
+                     <span>dat</span>
+                  </w>
+                  <w lemma="niet"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.86">
+                     <span>niet</span>
+                  </w>
+                  <w lemma="minder"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.87">
+                     <span>minder</span>
+                  </w>
+                  <w lemma="spoeden"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="kranten_17_38099.w.88">
+                     <span>gespoeyt</span>
+                  </w>
+                  <w lemma="zullen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.89">
+                     <span>sal</span>
+                  </w>
+                  <w lemma="worden"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="kranten_17_38099.w.90"
+                      join="right">
+                     <span>werden</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.91">;</pc>
+                  <w lemma="hebben"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Imp"
+                      xml:id="kranten_17_38099.w.92">
+                     <span>hebbende</span>
+                  </w>
+                  <w lemma="nog"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.93">
+                     <span>noch</span>
+                  </w>
+                  <w lemma="deze"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Dem"
+                      xml:id="kranten_17_38099.w.94">
+                     <span>desen</span>
+                  </w>
+                  <w lemma="ochtend"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.95">
+                     <span>Ochtent</span>
+                  </w>
+                  <w lemma="een"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Ind|PronType=art"
+                      xml:id="kranten_17_38099.w.96">
+                     <span>een</span>
+                  </w>
+                  <w lemma="groot"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="kranten_17_38099.w.97">
+                     <span>groot</span>
+                  </w>
+                  <w lemma="getal"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.98">
+                     <span>getal</span>
+                  </w>
+                  <w lemma="als"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="kranten_17_38099.w.99">
+                     <span>als</span>
+                  </w>
+                  <w lemma="hoofdofficier"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="kranten_17_38099.w.100">
+                     <span>Hooft-Officiers</span>
+                  </w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.101">
+                     <span>van</span>
+                  </w>
+                  <w lemma="Holland"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="kranten_17_38099.w.102">
+                     <span>Hollandt</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.103">
+                     <span>den</span>
+                  </w>
+                  <w lemma="eed"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.104">
+                     <span>Eedt</span>
+                  </w>
+                  <w lemma="afleggen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="kranten_17_38099.w.105">
+                     <span>afgeleydt</span>
+                  </w>
+                  <w lemma="voor"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.106">
+                     <span>voor</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.107">
+                     <span>den</span>
+                  </w>
+                  <w corresp="#kranten_17_38099.w.109 #kranten_17_38099.w.110"
+                      lemma="Raad van State"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="kranten_17_38099.w.108">
+                     <span>Raedt</span>
+                  </w>
+                  <w corresp="#kranten_17_38099.w.108 #kranten_17_38099.w.110"
+                      lemma="Raad van State"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="kranten_17_38099.w.109">
+                     <span>van</span>
+                  </w>
+                  <w corresp="#kranten_17_38099.w.108 #kranten_17_38099.w.109"
+                      lemma="Raad van State"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="kranten_17_38099.w.110"
+                      join="right">
+                     <span>Staete</span>
+                  </w>
+                  <pc lemma="e." xml:id="kranten_17_38099.pc.111">.</pc>
+               </s>
+               <s xml:id="kranten_17_38099.s.2">
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.112">
+                     <span>Van</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.113">
+                     <span>de</span>
+                  </w>
+                  <w lemma="Münsters"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="kranten_17_38099.w.114">
+                     <span>Munsterse</span>
+                  </w>
+                  <w lemma="zaak"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.115">
+                     <span>saecke</span>
+                  </w>
+                  <w lemma="hebben"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.116">
+                     <span>heeft</span>
+                  </w>
+                  <w lemma="men"
+                      pos="PRON"
+                      msd="UPosTag=PRON|PronType=Prs"
+                      xml:id="kranten_17_38099.w.117">
+                     <span>men</span>
+                  </w>
+                  <w lemma="niet"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.118">
+                     <span>niet</span>
+                  </w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.119">
+                     <span>van</span>
+                  </w>
+                  <w lemma="merite"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.120"
+                      join="right">
+                     <span>merite</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.121">,</pc>
+                  <w lemma="als"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="kranten_17_38099.w.122">
+                     <span>als</span>
+                  </w>
+                  <w lemma="dat"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="kranten_17_38099.w.123">
+                     <span>dat</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.124">
+                     <span>de</span>
+                  </w>
+                  <w lemma="afdoening"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.125">
+                     <span>afdoeninge</span>
+                  </w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.126">
+                     <span>van</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.127">
+                     <span>de</span>
+                  </w>
+                  <w lemma="preliminaria"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="kranten_17_38099.w.128">
+                     <span>Preliminaria</span>
+                  </w>
+                  <w lemma="daar"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.129">
+                     <span>daer</span>
+                  </w>
+                  <w lemma="nog"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.130">
+                     <span>noch</span>
+                  </w>
+                  <w lemma="niet"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.131">
+                     <span>niet</span>
+                  </w>
+                  <w lemma="wel"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.132">
+                     <span>wel</span>
+                  </w>
+                  <w corresp="#kranten_17_38099.w.135"
+                      lemma="voortwillen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.133">
+                     <span>voort</span>
+                  </w>
+                  <w lemma="ne"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.134">
+                     <span>en</span>
+                  </w>
+                  <w corresp="#kranten_17_38099.w.133"
+                      lemma="voortwillen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.135"
+                      join="right">
+                     <span>wil</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.136">:</pc>
+                  <w lemma="ondertussen"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.137">
+                     <span>Ondertusschen</span>
+                  </w>
+                  <w lemma="zullen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Past"
+                      xml:id="kranten_17_38099.w.138">
+                     <span>souden</span>
+                  </w>
+                  <w lemma="hier"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.139">
+                     <span>hier</span>
+                  </w>
+                  <w lemma="en"
+                      pos="CCONJ"
+                      msd="UPosTag=CCONJ"
+                      xml:id="kranten_17_38099.w.140">
+                     <span>en</span>
+                  </w>
+                  <w lemma="ginder"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.141">
+                     <span>ginder</span>
+                  </w>
+                  <w lemma="al"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.142">
+                     <span>al</span>
+                  </w>
+                  <w lemma="enig"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Ind"
+                      xml:id="kranten_17_38099.w.143">
+                     <span>eenighe</span>
+                  </w>
+                  <w lemma="troep"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="kranten_17_38099.w.144">
+                     <span>Troupen</span>
+                  </w>
+                  <w lemma="verlopen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="kranten_17_38099.w.145"
+                      join="right">
+                     <span>verloopen</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.146">,</pc>
+                  <w lemma="die"
+                      pos="PRON"
+                      msd="UPosTag=PRON|Definite=Def|PronType=Dem/Rel"
+                      xml:id="kranten_17_38099.w.147">
+                     <span>die</span>
+                  </w>
+                  <w lemma="elderwaarts"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.148">
+                     <span>elderwaerts</span>
+                  </w>
+                  <w lemma="dienst"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.149">
+                     <span>dienst</span>
+                  </w>
+                  <w lemma="zullen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Past"
+                      xml:id="kranten_17_38099.w.150">
+                     <span>souden</span>
+                  </w>
+                  <w lemma="zoeken"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="kranten_17_38099.w.151"
+                      join="right">
+                     <span>soecken</span>
+                  </w>
+                  <pc lemma="e." xml:id="kranten_17_38099.pc.152">.</pc>
+               </s>
+               <s xml:id="kranten_17_38099.s.3">
+                  <w lemma="op"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.153">
+                     <span>Op</span>
+                  </w>
+                  <w lemma="morgen"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.154">
+                     <span>Morgen</span>
+                  </w>
+                  <w lemma="vermenen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.155">
+                     <span>vermeynt</span>
+                  </w>
+                  <w lemma="men"
+                      pos="PRON"
+                      msd="UPosTag=PRON|PronType=Prs"
+                      xml:id="kranten_17_38099.w.156"
+                      join="right">
+                     <span>men</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.157">,</pc>
+                  <w lemma="dat"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="kranten_17_38099.w.158">
+                     <span>dat</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.159">
+                     <span>den</span>
+                  </w>
+                  <w lemma="graaf"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.160">
+                     <span>Grave</span>
+                  </w>
+                  <w xml:id="kranten_17_38099.w.161"
+                      lemma="de+Ossery"
+                      msd="UPosTag=X|Foreign=Yes+UPosTag=PROPN">
+                     <span>d'Ossery</span>
+                     <w xml:id="kranten_17_38099.w.161_1"
+                         lemma="de"
+                         pos="X"
+                         msd="UPosTag=X|Foreign=Yes"/>
+                     <w xml:id="kranten_17_38099.w.161_2"
+                         lemma="Ossery"
+                         pos="PROPN"
+                         msd="UPosTag=PROPN"/>
+                  </w>
+                  <w lemma="over"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.162">
+                     <span>over</span>
+                  </w>
+                  <w lemma="Sluis"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="kranten_17_38099.w.163">
+                     <span>Sluys</span>
+                  </w>
+                  <w corresp="#kranten_17_38099.w.165 #kranten_17_38099.w.169"
+                      lemma="terugkeren"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="kranten_17_38099.w.164">
+                     <span>te</span>
+                  </w>
+                  <w corresp="#kranten_17_38099.w.164 #kranten_17_38099.w.169"
+                      lemma="terugkeren"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="kranten_17_38099.w.165">
+                     <span>rug</span>
+                  </w>
+                  <w lemma="na"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.166">
+                     <span>na</span>
+                  </w>
+                  <w lemma="Engeland"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="kranten_17_38099.w.167">
+                     <span>Engelandt</span>
+                  </w>
+                  <w lemma="zullen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.168">
+                     <span>sal</span>
+                  </w>
+                  <w corresp="#kranten_17_38099.w.164 #kranten_17_38099.w.165"
+                      lemma="terugkeren"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="kranten_17_38099.w.169"
+                      join="right">
+                     <span>keeren</span>
+                  </w>
+                  <pc lemma="e." xml:id="kranten_17_38099.pc.170">.</pc>
+               </s>
+               <s xml:id="kranten_17_38099.s.4">
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.171">
+                     <span>Den</span>
+                  </w>
+                  <w lemma="envoyé"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.172">
+                     <span>Envoye</span>
+                  </w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.173">
+                     <span>van</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.174">
+                     <span>den</span>
+                  </w>
+                  <w lemma="keurvorst"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.175">
+                     <span>Ceurvorst</span>
+                  </w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.176">
+                     <span>van</span>
+                  </w>
+                  <w lemma="Keulen"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="kranten_17_38099.w.177"
+                      join="right">
+                     <span>Ceulen</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.178">,</pc>
+                  <w lemma="zeggen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.179">
+                     <span>seght</span>
+                  </w>
+                  <w lemma="men"
+                      pos="PRON"
+                      msd="UPosTag=PRON|PronType=Prs"
+                      xml:id="kranten_17_38099.w.180"
+                      join="right">
+                     <span>men</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.181">,</pc>
+                  <w lemma="dat"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="kranten_17_38099.w.182">
+                     <span>dat</span>
+                  </w>
+                  <w lemma="een"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Ind|PronType=art"
+                      xml:id="kranten_17_38099.w.183">
+                     <span>eene</span>
+                  </w>
+                  <w lemma="memorie"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.184">
+                     <span>Memorie</span>
+                  </w>
+                  <w lemma="alhier"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.185">
+                     <span>alhier</span>
+                  </w>
+                  <w lemma="hebben"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.186">
+                     <span>heeft</span>
+                  </w>
+                  <w lemma="overgeven"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="kranten_17_38099.w.187"
+                      join="right">
+                     <span>overgegeven</span>
+                  </w>
+                  <pc lemma="e." xml:id="kranten_17_38099.pc.188">.</pc>
+               </s>
+               <s xml:id="kranten_17_38099.s.5">
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.189">
+                     <span>Van</span>
+                  </w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.190">
+                     <span>den</span>
+                  </w>
+                  <w lemma="heer"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.191">
+                     <span>Heer</span>
+                  </w>
+                  <w lemma="Beverningh"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="kranten_17_38099.w.192">
+                     <span>Beverningh</span>
+                  </w>
+                  <w lemma="zijn"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="kranten_17_38099.w.193">
+                     <span>is</span>
+                  </w>
+                  <w lemma="tijding"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.194"
+                      join="right">
+                     <span>Tydinge</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.195">,</pc>
+                  <w lemma="dat"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="kranten_17_38099.w.196">
+                     <span>dat</span>
+                  </w>
+                  <w lemma="wel"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.197">
+                     <span>wel</span>
+                  </w>
+                  <w lemma="in"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.198">
+                     <span>in</span>
+                  </w>
+                  <w xml:id="kranten_17_38099.w.199"
+                      lemma="het+stille"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art+UPosTag=NOUN|Number=Sing">
+                     <span>t'stille</span>
+                     <w xml:id="kranten_17_38099.w.199_1"
+                         lemma="het"
+                         pos="DET"
+                         msd="UPosTag=DET|Definite=Def|PronType=Art"/>
+                     <w xml:id="kranten_17_38099.w.199_2"
+                         lemma="stille"
+                         pos="NOUN"
+                         msd="UPosTag=NOUN|Number=Sing"/>
+                  </w>
+                  <w lemma="binnen"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.200">
+                     <span>binnen</span>
+                  </w>
+                  <w lemma="Madrid"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="kranten_17_38099.w.201">
+                     <span>Madrid</span>
+                  </w>
+                  <w lemma="zijn"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Past"
+                      xml:id="kranten_17_38099.w.202">
+                     <span>was</span>
+                  </w>
+                  <w lemma="komen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="kranten_17_38099.w.203"
+                      join="right">
+                     <span>gekomen</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.204">,</pc>
+                  <w lemma="maar"
+                      pos="CCONJ"
+                      msd="UPosTag=CCONJ"
+                      xml:id="kranten_17_38099.w.205">
+                     <span>maer</span>
+                  </w>
+                  <w lemma="nog"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.206">
+                     <span>noch</span>
+                  </w>
+                  <w lemma="geen"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Ind"
+                      xml:id="kranten_17_38099.w.207">
+                     <span>geene</span>
+                  </w>
+                  <w lemma="audiëntie"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.208">
+                     <span>Audientie</span>
+                  </w>
+                  <w lemma="hebben"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Past"
+                      xml:id="kranten_17_38099.w.209">
+                     <span>hadde</span>
+                  </w>
+                  <w lemma="hebben"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="kranten_17_38099.w.210"
+                      join="right">
+                     <span>gehad</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.211">:</pc>
+                  <w lemma="doch"
+                      pos="CCONJ"
+                      msd="UPosTag=CCONJ"
+                      xml:id="kranten_17_38099.w.212">
+                     <span>doch</span>
+                  </w>
+                  <w lemma="staan"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Past"
+                      xml:id="kranten_17_38099.w.213">
+                     <span>stonde</span>
+                  </w>
+                  <w lemma="in"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.214">
+                     <span>in</span>
+                  </w>
+                  <w lemma="het"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="kranten_17_38099.w.215">
+                     <span>'t</span>
+                  </w>
+                  <w lemma="kort"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.216">
+                     <span>korte</span>
+                  </w>
+                  <w lemma="te"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="kranten_17_38099.w.217">
+                     <span>te</span>
+                  </w>
+                  <w lemma="volgen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="kranten_17_38099.w.218"
+                      join="right">
+                     <span>volgen</span>
+                  </w>
+                  <pc xml:id="kranten_17_38099.pc.219">,</pc>
+                  <w lemma="hoewel"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="kranten_17_38099.w.220">
+                     <span>hoewel</span>
+                  </w>
+                  <w lemma="zijn"
+                      pos="DET"
+                      msd="UPosTag=DET|PronType=Prs|Poss=Yes"
+                      xml:id="kranten_17_38099.w.221">
+                     <span>sijn</span>
+                  </w>
+                  <w lemma="excellentie"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="kranten_17_38099.w.222">
+                     <span>Excellentie</span>
+                  </w>
+                  <w lemma="nog"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="kranten_17_38099.w.223">
+                     <span>noch</span>
+                  </w>
+                  <w lemma="vrij"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="kranten_17_38099.w.224">
+                     <span>vry</span>
+                  </w>
+                  <w lemma="zwak"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="kranten_17_38099.w.225">
+                     <span>zwack</span>
+                  </w>
+                  <w lemma="zijn"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Past"
+                      xml:id="kranten_17_38099.w.226"
+                      join="right">
+                     <span>was</span>
+                  </w>
+                  <pc lemma="e." xml:id="kranten_17_38099.pc.227">.</pc>
+               </s>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>
