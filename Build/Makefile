@@ -10,11 +10,11 @@ export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
 ### VARIABLES
 
 ### COMPLETE SET OF CORPORA
-CORPORA=AT BG CZ ES GR IS LV NL PL SI UA
-CORPORA=SI
+CORPORA=AT BG CZ ES ES-GA ES-MD ES-PV FI FR GB GR HU IS IT-BZ LV NL PL PT SI UA ZA
+CORPORA=ES-PV
 
 # Used in targets that run only on one corpus
-CORPUS=SI
+CORPUS=ES-PV
 
 # Version number and PID of next PressMint release
 VERSION = 1.0

@@ -216,8 +216,8 @@ $(addprefix MSG-validate-TEI-start-, $(PRESS)): MSG-validate-TEI-start-%:
 
 ## validate-TEI-XX ## validate TEI corpus
 ####⤷  calls:
-####⤷     validate-TEI-root-XX validate-TEI-comp-XX validate-content-TEI_XX check-links-TEI_XX check-chars-TEI_XX
-$(validate-TEI-XX): validate-TEI-%: MSG-validate-TEI-start-% validate-TEI-root-% validate-TEI-comp-% validate-content-TEI_% check-links-TEI_% check-chars-TEI_%
+####⤷     validate-TEI-root-XX validate-TEI-comp-XX check-links-TEI_XX check-chars-TEI_XX
+$(validate-TEI-XX): validate-TEI-%: MSG-validate-TEI-start-% validate-TEI-root-% validate-TEI-comp-% check-links-TEI_% check-chars-TEI_%
 	@echo "INFO: $* TEI validation done"
 
 ## validate-TEI-root-XX ## validate TEI teiCorpus
@@ -240,8 +240,8 @@ $(addprefix MSG-validate-TEI.ana-start-, $(PRESS)): MSG-validate-TEI.ana-start-%
 
 ## validate-TEI.ana-XX ## validate-TEI.ana corpus
 ####⤷  calls:
-####⤷     validate-TEI.ana-root-XX validate-TEI.ana-comp-XX validate-content-TEI.ana_XX check-links-TEI.ana_XX check-chars-TEI.ana_XX
-$(validate-TEI.ana-XX): validate-TEI.ana-%: MSG-validate-TEI.ana-start-% validate-TEI.ana-root-% validate-TEI.ana-comp-% validate-content-TEI.ana_% check-links-TEI.ana_% check-chars-TEI.ana_%
+####⤷     validate-TEI.ana-root-XX validate-TEI.ana-comp-XX check-links-TEI.ana_XX check-chars-TEI.ana_XX
+$(validate-TEI.ana-XX): validate-TEI.ana-%: MSG-validate-TEI.ana-start-% validate-TEI.ana-root-% validate-TEI.ana-comp-% check-links-TEI.ana_% check-chars-TEI.ana_%
 	@echo "INFO: $* TEI.ana validation done"
 
 ## validate-TEI.ana-root-XX ## validate TEI.ana teiCorpus
@@ -298,6 +298,7 @@ $(uniqIdsTaxonomies-XX): uniqIdsTaxonomies-%:
 ###### Content validate
 validate-content-XX = $(addprefix validate-content-, $(PRESS))
 ## validate-content ## validate all corpora with Scripts/validate-pressmint.xsl
+#### This needs to be run after aplying add common content
 validate-content: $(validate-content-XX)
 ## validate-content-XX ## validate both TEI and TEI.ana version of XX corpus with Scripts/validate-pressmint.xsl
 $(validate-content-XX): validate-content-%: validate-content-TEI_% validate-content-TEI.ana_%
