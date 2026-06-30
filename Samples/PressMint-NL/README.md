@@ -50,8 +50,8 @@ Cf ([Documentation] (https://couranten.ivdnt.org/corpus-frontend/couranten/about
 For the PressMint-NL corpus we:
 * Convert to the PressMint TEI scheme (done, offline validation with Scripts/validate-pressmint.pl and Scripts/pressmintp2conllu.pl satisfied)
   * Problems
-    * We can not link to the facsimile, we just have a link to the online repository of the Royal Library for an article 
-    * How to encode location info
+    * We can not link to the facsimile, we just have a link to the online repository of the Royal Library for an article (e.g https://www.delpher.nl/nl/kranten/view?coll=ddd&identifier=ddd:010926959:mpeg21:a0003)
+    * How to encode the settingLocation info (cf. above)
     * Topic classification: CAP categories do not map very well to 17th century
       * Maybe look at https://huggingface.co/datasets/oberbics/Topic-specific-genre-classification_german_historical-newspapers
     * Linguistic annotation
