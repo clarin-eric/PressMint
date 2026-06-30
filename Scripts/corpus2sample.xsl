@@ -67,11 +67,19 @@
     </xsl:result-document>
     <!-- Output component file samples -->
     <xsl:variable name="inDir" select="replace(base-uri(), '/[^/]+$', '')"/>
-    <xsl:for-each select="$components/xi:include | //tei:teiHeader//xi:include">
+    <!-- process component files -->
+    <xsl:for-each select="$components/xi:include">
       <!-- Get rid of subdirectories if in original -->
       <xsl:variable name="href" select="replace(@href, '.+/', '')"/>
       <xsl:result-document href="{$outDir}/{$href}" method="xml">
         <xsl:apply-templates mode="component" select="document(concat($inDir, '/', @href))"/>
+      </xsl:result-document>
+    </xsl:for-each>
+    <!-- Output taxonomy files as raw, unparsed text copies -->
+    <xsl:for-each select="//tei:teiHeader//xi:include">
+      <xsl:variable name="href" select="replace(@href, '.+/', '')"/>
+      <xsl:result-document href="{$outDir}/{$href}" method="text">
+        <xsl:value-of select="unparsed-text(concat($inDir, '/', @href))"/>
       </xsl:result-document>
     </xsl:for-each>
   </xsl:template>
