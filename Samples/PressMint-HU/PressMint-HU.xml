@@ -15,13 +15,13 @@
       </editionStmt>
       <extent>
         <measure unit="texts" quantity="3">3 texts</measure>
-        <measure unit="paragraphs" quantity="10166">10166 paragraphs</measure>
-        <measure unit="words" quantity="73080">73080 words</measure>
+        <measure unit="paragraphs" quantity="1730">1730 paragraphs</measure>
+        <measure unit="words" quantity="72873">72873 words</measure>
       </extent>
       <publicationStmt>
         <publisher>Hungarian PressMint Project</publisher>
         <idno type="URI" subtype="handle">TBD</idno>
-        <date when="2026-06-01">2026-06-01</date>
+        <date when="2026-07-02">2026-07-02</date>
         <availability>
           <licence>Secured (Internal approval)</licence>
         </availability>
@@ -36,16 +36,13 @@
       </projectDesc>
       <editorialDecl>
         <correction>
-          <p>No manual correction at article level. Systematic errors handled via script. Raw EasyOCR baseline.</p>
+          <p>No manual correction at article level. Coordinate-based column reordering.</p>
         </correction>
         <normalization>
-          <p>TAB, NBSP, BOM, and soft hyphens removed or replaced. Whitespace collapsed. No leading/trailing spaces in text-bearing elements.</p>
+          <p>Characters restricted to strict Hungarian whitelist. Markdown elements mapped to TEI.</p>
         </normalization>
-        <hyphenation>
-          <p>End-of-line hyphens removed and split words re-joined heuristically.</p>
-        </hyphenation>
         <segmentation>
-          <p>Segmentation derived entirely from EasyOCR heuristics. Curated article boundaries are not present.</p>
+          <p>Multi-story layout split dynamically corrected using spatial coordinate sorting.</p>
         </segmentation>
       </editorialDecl>
     </encodingDesc>
@@ -61,10 +58,10 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-06-01">Initial corpus compilation for pilot delivery.</change>
+      <change when="2026-07-02">Initial corpus compilation with layout-aware sorting for pilot delivery.</change>
     </revisionDesc>
   </teiHeader>
-  <xi:include href="1884/PressMint-HU_1884-01-03-PestiHirlap.xml"/>
   <xi:include href="1884/PressMint-HU_1884-01-01-PestiHirlap.xml"/>
   <xi:include href="1884/PressMint-HU_1884-01-02-PestiHirlap.xml"/>
+  <xi:include href="1884/PressMint-HU_1884-01-03-PestiHirlap.xml"/>
 </teiCorpus>
