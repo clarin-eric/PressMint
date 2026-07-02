@@ -18,7 +18,7 @@
    <moduleRef key="header"
               include="appInfo application availability catDesc catRef category change classDecl correction edition editionStmt                       editorialDecl encodingDesc extent fileDesc funder hyphenation idno langUsage language licence listPrefixDef                       namespace normalization prefixDef profileDesc projectDesc publicationStmt quotation revisionDesc                       segmentation sourceDesc tagUsage tagsDecl taxonomy teiHeader textClass titleStmt"/>
    <moduleRef key="corpus" include="setting settingDesc"/>
-   <moduleRef key="transcr" include="facsimile surface zone"/>
+   <moduleRef key="transcr" include="facsimile surface zone path"/>
    <moduleRef key="namesdates" include="orgName persName placeName"/>
    <!--moduleRef key="linking" include="link linkGrp seg"/-->
    <!--moduleRef key="figures" include="figure"/-->
@@ -278,6 +278,76 @@
             </text>
          </egXML>
       </exemplum>
+   </elementSpec>
+   <elementSpec ident="zone" xml:id="gi-zone" module="transcr" mode="change">
+      <attList>
+         <attDef ident="type" mode="replace" usage="rec">
+            <desc versionDate="2026-06-14" xml:lang="en">characterizes the zone in terms of its text content.</desc>
+            <valList type="closed">
+               <valItem ident="block">
+                  <desc xml:lang="en">a general purpose type denoting a block (i.e. a rectangle) of text</desc>
+               </valItem>
+               <valItem ident="pageBody">
+                  <desc xml:lang="en">a zone encompasing the page text, i.e. the page without the header, page numbers, footer etc.</desc>
+               </valItem>
+               <valItem ident="column">
+                  <desc xml:lang="en">a column of text</desc>
+               </valItem>
+               <valItem ident="line">
+                  <desc xml:lang="en">a line of text</desc>
+               </valItem>
+               <valItem ident="heading">
+                  <desc xml:lang="en">a section heading</desc>
+               </valItem>
+               <valItem ident="advertisement">
+                  <desc xml:lang="en">a advertisement</desc>
+               </valItem>
+               <valItem ident="illustration">
+                  <desc xml:lang="en">an illustration</desc>
+               </valItem>
+               <valItem ident="table">
+                  <desc xml:lang="en">a table</desc>
+               </valItem>
+               <valItem ident="word">
+                  <desc xml:lang="en">an individual word</desc>
+               </valItem>
+               <valItem ident="token">
+                  <desc xml:lang="en">an individual token</desc>
+               </valItem>
+            </valList>
+         </attDef>
+         <!--zone/@xml:id-->
+         <!--zone/@xml:lang-->
+         <!--zone/@n-->
+         <!--zone/@facs-->
+         <!--zone/@rotate-->
+         <!--zone/@change-->
+         <!--zone/@corresp-->
+         <!--zone/@synch-->
+         <!--zone/@sameAs-->
+         <!--zone/@copyOf-->
+         <!--zone/@next-->
+         <!--zone/@prev-->
+         <!--zone/@exclude-->
+         <!--zone/@select-->
+         <!--zone/@rend-->
+         <!--zone/@style-->
+         <!--zone/@rendition-->
+         <!--zone/@cert-->
+         <!--zone/@resp-->
+         <!--zone/@source-->
+         <!--zone/@start-->
+         <!--zone/@ulx-->
+         <!--zone/@uly-->
+         <!--zone/@lrx-->
+         <!--zone/@lry-->
+         <!--zone/@points-->
+         <!--zone/@subtype-->
+         <!--zone/@hand-->
+         <attDef ident="xml:base" mode="delete"/>
+         <attDef ident="xml:space" mode="delete"/>
+         <attDef ident="ana" mode="delete"/>
+      </attList>
    </elementSpec>
    <elementSpec ident="div" module="textstructure" mode="change">
       <attList>

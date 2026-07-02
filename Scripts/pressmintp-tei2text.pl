@@ -5,7 +5,7 @@ use utf8;
 sub usage
 {
     print STDERR ("Usage: pressmintp-tei2text.pl -jobs <Jobs> -in <InputDirectory> -out <OutputDirectory>\n");
-    print STDERR ("       Converts PressMint .ana files in the <InputDirectory> to\n");
+    print STDERR ("       Converts PressMint plain text or .ana files in the <InputDirectory> to\n");
     print STDERR ("       .txt and -meta.tsv files in the <OutputDirectory>\n");
     print STDERR ("       using parallel <Jobs> in execution.\n");
 }
@@ -49,7 +49,6 @@ print STDERR "INFO: Converting directory $inDir\n";
 $fileFile = "$DIR/files.lst";
 $corpusFiles = "$inDir/*_*.xml $inDir/*/*_*.xml";
 
-#We can convert either plain files or .ana files
 open(TMP, '>:utf8', $fileFile);
 @corpusFiles = glob($corpusFiles);
 foreach $inFile (@corpusFiles) {
@@ -69,5 +68,6 @@ print STDERR "INFO: Making text files\n";
 $command = "$Saxon -xsl:$scriptText {} > $outDir/{/.}.txt";
 
 `cat $fileFile | $Para '$command'`;
-`find $outDir -name '*.txt' -type f -exec rename 's/\.ana//' {} +`;
 
+#We leave the .ana suffix so we know where the txt file came from
+#`find $outDir -name '*.txt' -type f -exec rename 's/\.ana//' {} +`;

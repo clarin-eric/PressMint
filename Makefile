@@ -295,6 +295,32 @@ $(uniqIdsTaxonomies-XX): uniqIdsTaxonomies-%:
 		echo "INFO: No duplicit IDs in taxonomies"; \
 	  fi; }
 
+###### Content validate
+validate-content-XX = $(addprefix validate-content-, $(PRESS))
+## validate-content ## validate all corpora with Scripts/validate-pressmint.xsl
+#### This needs to be run after aplying add common content
+validate-content: $(validate-content-XX)
+## validate-content-XX ## validate both TEI and TEI.ana version of XX corpus with Scripts/validate-pressmint.xsl
+$(validate-content-XX): validate-content-%: validate-content-TEI_% validate-content-TEI.ana_%
+## validate-content-FF_XX ## validate both FF(TEI/TEI.ana) version of XX corpus with Scripts/validate-pressmint.xsl
+validate-content-FF_XX = $(foreach f,$(ROOT_FORMATS),$(foreach p,$(PRESS),validate-content-$(f)_$(p)))
+$(validate-content-FF_XX): validate-content-%:
+	@echo "INFO: starting content validation ($*): $(PATHBASE_$*)"
+	@root=$(PATHROOT_$*);\
+	base=$$(dirname "$${root}"); \
+	echo "$${base} is base for $${root}"; \
+	echo "checking content in root:" $${root}; \
+	${s} ${vcontent} $${root}; \
+	for component in `echo $${root}| ${getheaderincludes}`; do \
+	  echo "checking content in header component:" $${base}/$${component}; \
+	  ${s} ${vcontent} $${base}/$${component}; \
+	done; \
+	for component in `echo $${root}| ${getcomponentincludes}`; do \
+	  echo "checking content in component:" $${base}/$${component}; \
+	  ${s} ${vcontent} $${base}/$${component}; \
+	done
+	@echo "INFO: DONE content validation ($*)"
+
 ###### Check links
 check-links-XX = $(addprefix check-links-, $(PRESS))
 ## check-links ## validate all corpora with Scripts/check-links.xsl
@@ -455,6 +481,7 @@ P = parallel --gnu --halt 2
 j = java $(JM) -jar ./Scripts/bin/jing.jar
 
 vlink = -xsl:Scripts/check-links.xsl
+vcontent = -xsl:Scripts/validate-pressmint.xsl
 vchars = perl ./Scripts/check-chars.pl
 
 getincludes = xargs -I % java -cp $(SAXON) net.sf.saxon.Query -xi:off \!method=adaptive -qs:'//*[local-name()="include"]/@href' -s:% |sed 's/^ *href="//;s/"//'
