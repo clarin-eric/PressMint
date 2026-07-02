@@ -2,7 +2,7 @@
 
 ## Data source
 
-The source of the PressMint-SI corpus will be a selection of texts from historical corpora available at INT.
+The source of the PressMint-NL corpus will be a selection of texts from historical corpora available at INT.
 
 We will start from the data of the current published version of the ([Couranten corpus](https://couranten.ivdnt.org/)).
 
