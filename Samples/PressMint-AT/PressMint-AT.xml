@@ -2,17 +2,17 @@
 <teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-AT" xml:lang="de">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
+         <titleStmt> <!--needs more information -->
             <title>Österreichisches historisches Zeitungskorpus PressMint-AT [PressMint SAMPLE]</title>
             <title xml:lang="en">Austrian historical newspaper corpus PressMint-AT [PressMint SAMPLE]</title>
             <respStmt>
-               <persName ref="https://orcid.org/0000-0002-1631-4560">">Tanja Wissik</persName>
+               <persName ref="https://orcid.org/0000-0002-1631-4560">Tanja Wissik</persName>
                <resp xml:lang="de">PressMint-AT Projektkoordinatorin</resp>
                <resp xml:lang="en">PressMint-At project coordinator</resp>
             </respStmt>
             <respStmt>
                <persName>Hannes Pirker</persName>
-               <persName>Jona Hassenbach</persName>
+               <persName>Jona Marie Hassenbach</persName>
                <persName>Someone Else</persName>
                <resp xml:lang="de">Aufgaben</resp>
                <resp xml:lang="en">tasks</resp>
@@ -30,9 +30,6 @@
             <edition>1.0</edition>
          </editionStmt>
          <extent><!--this happens automatically (for English) -->
-            <measure unit="texts" quantity="2245" xml:lang="en">2,245 texts</measure>
-            <measure unit="paragraphs" quantity="502642" xml:lang="en">502,642 paragraphs</measure>
-            <measure unit="words" quantity="18594041" xml:lang="en">18,594,041 words</measure>
          </extent>
          <publicationStmt>
             <publisher>
@@ -79,10 +76,6 @@
          </editorialDecl>
          <tagsDecl><!--this happens automatically (for English) -->
             <namespace name="http://www.tei-c.org/ns/1.0">
-               <tagUsage gi="body" occurs="246"/>
-               <tagUsage gi="p" occurs="56032"/>
-               <tagUsage gi="pb" occurs="1057"/>
-               <tagUsage gi="text" occurs="246"/>
             </namespace>
          </tagsDecl>
          <classDecl><!--Taxonomien?-->
@@ -92,7 +85,7 @@
       </encodingDesc>
       <profileDesc>
          <settingDesc>
-            <setting><!--further details to come-->
+            <setting>
                <date from="1863" to="1920">1863-1920</date>
             </setting>
          </settingDesc>
@@ -103,9 +96,11 @@
             <language ident="en" xml:lang="en">English</language>
          </langUsage>
       </profileDesc>
-      <revisionDesc><!--further details to come-->
+      <revisionDesc>
          <change when="2026-04-21">
-            <name>Jona Hassenbach</name>: Made sample.</change>
+            <name>Jona Marie Hassenbach</name>: Made sample (4 issues, 1914, 1915, 1917, 1918).</change>
+         <change when="2026-07-02">
+            <name>Jona Marie Hassenbach</name>: Corrected sample (4 issues, 1914, 1915, 1917, 1918).</change>
       </revisionDesc>
   </teiHeader>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1914/PressMint-AT_1914-06-29.xml"/>
