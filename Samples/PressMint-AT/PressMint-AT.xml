@@ -11,11 +11,23 @@
                <resp xml:lang="en">PressMint-At project coordinator</resp>
             </respStmt>
             <respStmt>
-               <persName>Hannes Pirker</persName>
-               <persName>Jona Marie Hassenbach</persName>
-               <persName>Someone Else</persName>
-               <resp xml:lang="de">Aufgaben</resp>
-               <resp xml:lang="en">tasks</resp>
+               <persName ref="https://orcid.org/0000-0001-8066-7363">Claudia Resch</persName>
+               <resp xml:lang="de">PressMint-AT Projektkoordinatorin</resp>
+               <resp xml:lang="en">PressMint-At project coordinator</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref= "https://orcid.org/0000-0002-8111-5584">Hannes Pirker</persName>
+               <resp xml:lang="de">Klassifikation relevanter Seiten auf ANNO</resp>
+               <resp xml:lang="en">classification of relevant pages on ANNO</resp>
+               <persName ref= "https://orcid.org/0009-0003-9200-2512">Jona Marie Hassenbach</persName>
+               <resp xml:lang="de">Layout Analyse und TEI-XML encoding</resp>
+               <resp xml:lang="en">Layout Analysis and TEI-XML encoding</resp>
+               <persName ref= "">Stefan Resch</persName>
+               <resp xml:lang="de">OCR Tool Vergleich</resp>
+               <resp xml:lang="en">OCR tool comparison</resp>
+               <persName ref= "https://orcid.org/0000-0002-0236-0224">Christian Lendl</persName>
+               <resp xml:lang="de">Layout Analyse</resp>
+               <resp xml:lang="en">Layout Analysis</resp>
             </respStmt>
             <funder>
                <orgName xml:lang="de">CLARIN Forschungsinfrastruktur</orgName>
@@ -97,10 +109,10 @@
          </langUsage>
       </profileDesc>
       <revisionDesc>
+         <change when="2026-07-07">
+            <name>Jona Marie Hassenbach</name>: Corrected sample (4 issues, 1914, 1915, 1917, 1918).</change>
          <change when="2026-04-21">
             <name>Jona Marie Hassenbach</name>: Made sample (4 issues, 1914, 1915, 1917, 1918).</change>
-         <change when="2026-07-02">
-            <name>Jona Marie Hassenbach</name>: Corrected sample (4 issues, 1914, 1915, 1917, 1918).</change>
       </revisionDesc>
   </teiHeader>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1914/PressMint-AT_1914-06-29.xml"/>
