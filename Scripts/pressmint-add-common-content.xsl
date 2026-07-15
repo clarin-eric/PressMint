@@ -66,7 +66,7 @@
     </xsl:if>
   </xsl:param>
   
-  <xsl:output method="xml" indent="yes"/>
+  <xsl:output method="xml" indent="yes" suppress-indentation="w pc"/>
   <xsl:preserve-space elements="catDesc p"/>
 
   <!-- GOBAL VARIABLES -->
