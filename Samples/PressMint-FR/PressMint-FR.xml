@@ -22,10 +22,10 @@
           <orgName xml:lang="en">CLARIN PressMint project</orgName>
         </publisher>
         <idno type="URI" subtype="handle">TBD</idno>
-        <availability status="free">
+        <availability status="unknown">
           <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</licence>
         </availability>
-        <date when="2026-06-29">2026-06-29</date>
+        <date when="2026-07-20">2026-07-20</date>
       </publicationStmt>
       <sourceDesc>
         <bibl>
@@ -45,8 +45,7 @@
         <p xml:lang="en">Line-end hyphenation is resolved using ALTO SUBS_TYPE and SUBS_CONTENT attributes where available.  Where not available, the hyphen is preserved.</p>
         <p xml:lang="en">ALTO TextBlocks are encoded as TEI paragraphs.  No article or section divisions are inferred, because the source contains no logical structMap.</p>
         <p xml:lang="en">Page order is derived from the METS physical structMap ORDER attribute. ALTO PHYSICAL_IMG_NR is not used (it is 1 on all pages in this dataset).</p>
-        <p xml:lang="en">ALTO String tokens are encoded as TEI &lt;w&gt; elements. Each &lt;w&gt; carries @facs referencing a Gallica IIIF image region for the word bounding box. OCR confidence is retained in the conversion model and omitted from strict PressMint TEI output. No &lt;zone type='word'&gt; is added to the facsimile to avoid file size inflation.</p>
-        <p xml:lang="en">Image references use Gallica IIIF URLs because the master TIFF images are not included in the BnF package.</p>
+        <p xml:lang="en">Text in an issue is encoded in ALTO reading order.  No column-aware geometric reordering is applied.Image references use Gallica IIIF URLs because the master TIFF images are not included.</p>
       </editorialDecl>
       <tagsDecl>
         <namespace name="http://www.tei-c.org/ns/1.0">
@@ -74,7 +73,7 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-06-29">Initial conversion from BnF METS/ALTO to PressMint TEI.</change>
+      <change when="2026-07-20">Second conversion from BnF METS/ALTO to PressMint TEI.</change>
     </revisionDesc>
   </teiHeader>
   <xi:include href="1920/PressMint-FR_1920-01-01-LeTemps-BnF-0243877.xml"/>
