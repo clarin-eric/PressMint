@@ -21,7 +21,7 @@
                       namespace normalization prefixDef profileDesc projectDesc publicationStmt quotation revisionDesc
                       segmentation sourceDesc tagUsage tagsDecl taxonomy teiHeader textClass titleStmt"/>
   <moduleRef key="corpus" include="setting settingDesc"/>
-  <moduleRef key="transcr" include="facsimile surface zone"/>
+  <moduleRef key="transcr" include="facsimile surface zone path"/>
   <moduleRef key="namesdates"
              include="orgName persName placeName"/>
   <!--moduleRef key="linking" include="link linkGrp seg"/-->
@@ -241,6 +241,74 @@
           </text>
       </egXML>
     </exemplum>
+  </elementSpec>
+  
+  <elementSpec ident="zone" xml:id="gi-zone" module="transcr" mode="change">
+    <attList>
+      <pm:attPreserve ident="xml:id"/>
+      <pm:attPreserve ident="xml:lang"/>
+      <pm:attPreserve ident="n"/>
+      <pm:attPreserve ident="facs"/>
+      <pm:attPreserve ident="rotate"/>
+      <pm:attPreserve ident="change"/>
+      <pm:attPreserve ident="corresp"/>
+      <pm:attPreserve ident="synch"/>
+      <pm:attPreserve ident="sameAs"/>
+      <pm:attPreserve ident="copyOf"/>
+      <pm:attPreserve ident="next"/>
+      <pm:attPreserve ident="prev"/>
+      <pm:attPreserve ident="exclude"/>
+      <pm:attPreserve ident="select"/>
+      <pm:attPreserve ident="rend"/>
+      <pm:attPreserve ident="style"/>
+      <pm:attPreserve ident="rendition"/>
+      <pm:attPreserve ident="cert"/>
+      <pm:attPreserve ident="resp"/>
+      <pm:attPreserve ident="source"/>
+      <pm:attPreserve ident="start"/>
+      <pm:attPreserve ident="ulx"/>
+      <pm:attPreserve ident="uly"/>
+      <pm:attPreserve ident="lrx"/>
+      <pm:attPreserve ident="lry"/>
+      <pm:attPreserve ident="points"/>
+      <pm:attPreserve ident="subtype"/>
+      <pm:attPreserve ident="hand"/>
+      <attDef ident="type" mode="replace" usage="rec">
+        <desc versionDate="2026-06-14" xml:lang="en">characterizes the zone in terms of its text content.</desc>
+        <valList type="closed">
+          <valItem ident="block">
+            <desc xml:lang="en">a general purpose type denoting a block (i.e. a rectangle) of text</desc>
+          </valItem>
+          <valItem ident="pageBody">
+            <desc xml:lang="en">a zone encompasing the page text, i.e. the page without the header, page numbers, footer etc.</desc>
+          </valItem>
+          <valItem ident="column">
+            <desc xml:lang="en">a column of text</desc>
+          </valItem>
+          <valItem ident="line">
+            <desc xml:lang="en">a line of text</desc>
+          </valItem>
+          <valItem ident="heading">
+            <desc xml:lang="en">a section heading</desc>
+          </valItem>
+          <valItem ident="advertisement">
+            <desc xml:lang="en">a advertisement</desc>
+          </valItem>
+          <valItem ident="illustration">
+            <desc xml:lang="en">an illustration</desc>
+          </valItem>
+          <valItem ident="table">
+            <desc xml:lang="en">a table</desc>
+          </valItem>
+          <valItem ident="word">
+            <desc xml:lang="en">an individual word</desc>
+          </valItem>
+          <valItem ident="token">
+            <desc xml:lang="en">an individual token</desc>
+          </valItem>
+        </valList>
+      </attDef>
+    </attList>
   </elementSpec>
   
   <elementSpec ident="div" module="textstructure" mode="change">

@@ -19,7 +19,7 @@
       </titleStmt>
       <publicationStmt>
         <publisher>CLARIN</publisher>
-        <date>2026-04-23</date>
+        <date>2026-06-18</date>
         <availability status="free">
           <p>This file is freely available and you are hereby authorised to copy, modify, and
           redistribute it in any way without further reference or permissions.</p>
@@ -70,9 +70,12 @@
         <language ident="sv">Swedish</language>
         <language ident="tr">Turkish</language>
         <language ident="uk">Ukrainian</language>
+        <language ident="und">undetermined</language>
       </langUsage>
     </profileDesc>
     <revisionDesc>
+      <change when="2026-06-18">Tomaž Erjavec: fix bug in lb discussion.</change>
+      <change when="2026-06-14">Tomaž Erjavec: insert discussion and definition of zones.</change>
       <change when="2026-04-23">Tomaž Erjavec: insert discussion of EOL split words.</change>
       <change when="2026-04-22">Tomaž Erjavec: introduce idno/@type="local".</change>
       <change when="2026-03-18">Tomaž Erjavec: expand are re-arrange discussion about pb/cb/lb.</change>
@@ -87,7 +90,7 @@
           <titlePart type="main">The structure and encoding of
           <ref target="https://github.com/clarin-eric/PressMint">PressMint corpora</ref></titlePart>
         </docTitle>
-        <docDate>2026-04-23</docDate>
+        <docDate>2026-06-18</docDate>
       </titlePage>
       <p></p>
       <divGen type="toc"/>
@@ -1319,7 +1322,7 @@
         <head>Newspaper facsimile</head>
         
         <p>Facsimile (i.e. images) of the newspapers are highly useful, both for providing the
-        original to the trancriptions in their analyis, as well as for allowing better OCR as the
+        original to be paired with its trancriptions, as well as for allowing better OCR as the
         state-of-the-art improves.
         If the facsimile is available it also be also published together with the PressMint corpora,
         and should be referred to from the corpus, in particular from each corpus component.</p>
@@ -1332,8 +1335,8 @@
         <div xml:id="sec-facsimile">
           <head>The facsimile element</head>
           
-          <p>The <gi>facsimile</gi> element should appear in a corpus component immediately
-          after the <gi>teiHeader</gi>, c.f.
+          <p>The <gi>facsimile</gi> element connects the TEI corpus with the images and
+          should appear in a corpus component immediately after the <gi>teiHeader</gi>, c.f.
           the Section on <ref target="#exa-docstructure">Overall XML corpus structure</ref>.
           It contains pointers to the complete facsimile or its parts, i.e. URLs of the images of
           an issue or its individual pages, and can further structure or document these images.</p>
@@ -1344,7 +1347,8 @@
           to a printed page.
           These, in turn, also contain <gi>graphic</gi> elements, each one pointing to the image of the page.
           It is important that each element containing a <gi>graphic</gi> has the <att>xml:id</att> attribute,
-          as this serves to connect the text to the images.
+          as this serves to connect the text to the images as further explained in
+          the Section on <ref target="#sec-facsimile-ref">Connecting the text to the facsimile</ref>.
           This following example illustrates this basic structure:
           
           <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-facsimile">
@@ -1364,11 +1368,62 @@
           <p>Apart from modelling pages with <gi>surface</gi>, areas inside them can also be specified.
           For this, possibly nested <gi>zone</gi> elements inside <gi>surface</gi> are used;
           these can specify a rectangle or, in general, a polygon inside it.
-          Details are given in the TEI Section on
+          General guidances on this is given in the TEI Section on
           <ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHFAX">Digital Facsimiles</ref>.
           Note, however, that if this approach is used, a mechanism needs to be implemented to show
           the correct zone on the image.</p>
+
+          <p>We here give an example of the use of nested zones in a <gi>surface</gi> element:
           
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-zones">
+            <surface xml:id="PressMint-CZ-...f.pg0" ulx="0" uly="0" lrx="3282" lry="4810">
+              <graphic url="https://api.kramerius.mzk.cz/search/iiif/uuid:268924df/full/max/0/default.jpg"/>
+              <zone xml:id="PressMint-CZ-...f.pg0.a1"
+                    type="page"
+                    points="2128,4711 24,4709 29,3406 34,2538 37,2125 48,1150 145,1098 2936,245 3141,243
+                            3214,243 3166,4649 3165,4706">
+                <zone xml:id="PressMint-CZ-....f.pg0.a1.c1"
+                      type="column"
+                      points="1054,4706 24,4709 29,3406 34,2538 37,2125 48,1150 145,1098 486,1096 1082,1093">
+                  <zone xml:id="PressMint-CZ-....f.pg0.a1.c1.l1"
+                        type="line"
+                        points="1082,1093 972,1096 870,1096 768,1096 664,1098 560,1098 486,1096 415,1097
+                                355,1098 253,1098 145,1098 145,1147 253,1147 356,1147 458,1145 560,1147
+                                666,1147 768,1145 870,1145 973,1145 1081,1142 1082,1093"/>
+                  <!-- ... -->
+                </zone>
+                <!-- ... -->
+              </zone>
+              <!-- ... -->
+            </surface>
+          </egXML>
+
+          As can be seen, the coordinate system starts at the upper left hand corner (<att>ulx</att>
+          and <att>uly</att>) and all the elements (i.e. <gi>surface</gi>s and their subordinate
+          <gi>zone</gi> elements) use the same coordinate system.  While TEI does not specify the
+          dimensions, we assume, in PressMint, that these are points (pt). Further, note that
+          rectangular zones are denoted by the values of the <att>ulx</att>, <att>uly</att>,
+          <att>lrx</att> and <att>lry</att> attributes, non-rectangular areas (i.e. polygons in
+          general) are specified by the space-separated points as the value of the <att>points</att>
+          attribute.
+          </p>
+
+          <p>The example above also shows the use the <att>type</att> attribute of the <gi>zone</gi> elements.
+          While this attribute is optional, if it is used, then its value has to be one of those defined for this
+          element, cf. the definition of <gi>zone</gi>.
+          Note also that some the values of <att>type</att> are about the logical ("critical")
+          structure of the text (such as "heading"), and, while this information should also be carried by the
+          <att>type</att> value of the, typically, <gi>div</gi> elements in the transcription, they
+          can be also used in the facsimile so that these structured can be identified wihtout
+          recourse to the transcription.
+          </p>
+
+          <p>Finally, <gi>surface</gi> and <gi>zone</gi> can also contain the <gi>path</gi> element,
+          which defines any line passing through two or more points within a surface element. How it is used
+          is explained in the
+          <ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHFAX-egXML-rl">TEI Guidelines</ref>.
+          </p>
+
           <div xml:id="sec-facsimile-ref">
             <head>Connecting the text to the facsimile</head>
 
@@ -1465,7 +1520,7 @@
               ...
               <div type="foreignNews">
                 <div type="article">
-                  <head>News for New York</head>
+                  <head>News from France</head>
                   <p>...</p>
                   ...
                   <byline>A.B.</byline>
@@ -1475,6 +1530,25 @@
               ...
             </body>
           </text>
+        </egXML>
+        </p>
+
+        <p>There can be cases where a top-level heading (such as "Foreign News") can be reliably identified in the text, however, it is
+        not clear where the division ends. For such cases we suggest that the top-level heading is grouped together within the division
+        of the lower-level heading but it is qualified by <att>type</att><code>=</code><val>top_level</val>, as is illustrated by the
+        following example:
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-top-head">
+          <div type="article">
+            <head type="top_level">Foreign News</head>
+            <head>News from France</head>
+            <p>...</p>
+            ...
+          </div>
+          <div type="article">
+            <head>News from Russia</head>
+            <p>...</p>
+            ...
+          </div>
         </egXML>
         </p>
         
@@ -1723,19 +1797,25 @@
             very much depend on the language.
 
             The second case needs this information as well but, futhermore, needs to retain
-            word-internal markup. The example below gives two words, where the markup of the first
-            indicates that the hyphen is not a part of the word, while in the second one it is:
+            word-internal markup.</p>
+
+            <p>The example below gives three end-of-line hyphenated words, where the markup of
+            the first indicates that the hyphen is not a part of the word, the second one can
+            but need not be (as both "fire-proof" and "fireproof" are valid), while for the
+            thrid one the hyphen is always part of the word:
             
             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-ana-token-hyph">
-              <w>recom<pc force="strong">-</pc><lb break="no"/>mended</w>
+              <w>recom<pc force="weak">-</pc><lb break="no"/>mended</w>
               ...
-              <w>fire<pc force="weak">-</pc><lb break="no"/>proof</w>
+              <w>fire<pc force="inter">-</pc><lb break="no"/>proof</w>
+              ...
+              <w>low<pc force="strong">-</pc><lb break="no"/>grade</w>
             </egXML>
             
             It should be noted that when such an encoding is used, then the conversion for
             down-stream formats (such as vertical files for concordancers) where the words
-            should be output in their canonical form, should not output the value of
-            <code>w/pc[@force="strong"</code>.
+            should be output in their canonical form, should not output the content of
+            <code>w/pc[@force="weak"]</code>.
             </p>
 
             <p>There can also be a further added complication with tokenisation if the words are
