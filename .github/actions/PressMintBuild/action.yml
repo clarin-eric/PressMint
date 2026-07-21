@@ -27,7 +27,7 @@ runs:
       working-directory: ${{github.workspace}}/PressMint
       run: |
         declare -a INTYPES
-        INTYPES=([""]=1 [".ana"]=2)
+        INTYPES=([1]="" [2]=".ana")
         STATUS=0
         TODO=0
         BUILDTARGET="test-build-${{inputs.press}}"
@@ -37,12 +37,13 @@ runs:
         test -f "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md" \
           || ln -s "../../../Samples/PressMint-${{inputs.press}}/README.md" \
                    "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md"
-        for INTYPE in "${!INTYPES[@]}"; do
+        for IDX in "${!INTYPES[@]}"; do
+          INTYPE=${INTYPES[$IDX]}
           TYPE="TEI${INTYPE}"
           ROOT="Samples/PressMint-${{inputs.press}}/PressMint-${{inputs.press}}${INTYPE}.xml"
           if [ ! -f "$ROOT" ]; then
               echo "::warning title=Corpus root is missing (${{inputs.press}}.$TYPE)::$ROOT not found"
-              TODO+=${INTYPES[$INTYPE]}
+              TODO+=${IDX}
           fi
         done
         if [ $TODO -eq 0 ] ; then
