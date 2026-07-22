@@ -299,7 +299,8 @@
       <xsl:number count="tei:w | tei:pc" level="any" from="tei:s"/>
     </xsl:variable>
     <xsl:variable name="ignore">
-      <xsl:number count="tei:w[tei:w]" level="any" from="tei:s"/>
+      <!-- ignore ortograph words witout subtoken and hyphens-->
+      <xsl:number count="tei:w[tei:w] | tei:pc[@force and not(@msd)]" level="any" from="tei:s"/>
     </xsl:variable>
     <xsl:choose>
       <xsl:when test="normalize-space($ignore)">
