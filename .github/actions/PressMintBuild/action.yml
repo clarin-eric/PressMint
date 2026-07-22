@@ -31,12 +31,11 @@ runs:
         STATUS=0
         TODO=0
         BUILDTARGET="test-build-${{inputs.press}}"
-        echo "DEV: "
-        ls "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/"
         echo "Testing if README.md symlink exists for PressMint-${{inputs.press}} and creating it if not"
         test -f "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md" \
           || ln -s "../../../Samples/PressMint-${{inputs.press}}/README.md" \
-                   "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md"
+                   "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md" \
+                   && echo "DEV: README.md symlink created for PressMint-${{inputs.press}}"
         for IDX in "${!INTYPES[@]}"; do
           INTYPE=${INTYPES[$IDX]}
           TYPE="TEI${INTYPE}"
@@ -46,6 +45,7 @@ runs:
               TODO+=${IDX}
           fi
         done
+        echo "DEV: TODO=$TODO"
         if [ $TODO -eq 0 ] ; then
           echo "::warning title=SKIPPING BUILD VALIDATION (${{inputs.press}})::"
         else
