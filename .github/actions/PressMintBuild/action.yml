@@ -44,7 +44,7 @@ runs:
               echo "::warning title=Corpus root is missing (${{inputs.press}}.$TYPE)::$ROOT not found"
           else
               echo "DEV: Corpus root exists (${{inputs.press}}.$TYPE)::$ROOT found"
-              TODO=$((TODO+${IDX}))
+              TODO=$((TODO+IDX))
           fi
         done
         echo "DEV: TODO=$TODO"
@@ -55,7 +55,7 @@ runs:
             echo "::warning title=SKIPPING TEI.ana BUILD VALIDATION (${{inputs.press}}):: .ana.xml is missing"
             BUILDTARGET="test-build-TEIonly-${{inputs.press}}"
           fi
-          echo "::notice:: Running build-validation for PressMint-${{inputs.press}}"
+          echo "::notice:: Running build-validation for PressMint-${{inputs.press}} (make ${BUILDTARGET} KEEP-DATA=1)"
           BUILDDIR=$(make ${BUILDTARGET} KEEP-DATA=1 2>&1 | sed -n 's/^OUTPUT_FOLDER=//p')
           find ${BUILDDIR}
           cat ${BUILDDIR}/Logs/PressMint-${{inputs.press}}.log \
