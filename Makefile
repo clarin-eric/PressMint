@@ -6,7 +6,7 @@ export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
 
 
 
-PRESS := AT BG CZ ES ES-GA ES-MD ES-PV FI GB GR HU IS IT LV NL PL PT SI UA ZA
+PRESS := AT BG CZ ES ES-GA ES-MD ES-PV FI FR GB GR HU IS IT LV NL PL PT SI UA ZA
 
 ##$JAVA-MEMORY## Set a java memory maxsize in GB
 JAVA-MEMORY =
@@ -394,6 +394,18 @@ $(test-build-XX): test-build-%:
 	cd $(SHARED) ; make final CORPORA=$* HERE=$${build};cd ..;\
 	test -n "$(KEEP-DATA)" && echo "OUTPUT_FOLDER=$${build}" \
 	  || (cat $${build}/Logs/PressMint-$*.log; rm -r $${build} )
+
+test-build-TEIonly-XX = $(addprefix test-build-TEIonly-, $(PRESS))
+$(test-build-TEIonly-XX): test-build-TEIonly-%:
+	@build=$$(mktemp -d -t BuildTEI-$*.XXXXXX);\
+	mkdir -p $${build}/Distro $${build}/Sources-TEI;\
+	ln -s $(shell realpath $(DATADIR))/PressMint-$* $${build}/Sources-TEI/PressMint-$*.TEI;\
+	cd $(SHARED) ; make final-TEIonly CORPORA=$* HERE=$${build};cd ..;\
+	ls $${build}/Distro ;\
+	test -n "$(KEEP-DATA)" && echo "OUTPUT_FOLDER=$${build}" \
+	  || (cat $${build}/Logs/PressMint-$*.log; rm -r $${build} )
+
+
 
 
 ###### Stats
