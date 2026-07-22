@@ -42,7 +42,9 @@ runs:
           ROOT="Samples/PressMint-${{inputs.press}}/PressMint-${{inputs.press}}${INTYPE}.xml"
           if [ ! -f "$ROOT" ]; then
               echo "::warning title=Corpus root is missing (${{inputs.press}}.$TYPE)::$ROOT not found"
-              TODO+=${IDX}
+          else
+              echo "DEV: Corpus root exists (${{inputs.press}}.$TYPE)::$ROOT found"
+              TODO=$((TODO+${IDX}))
           fi
         done
         echo "DEV: TODO=$TODO"
