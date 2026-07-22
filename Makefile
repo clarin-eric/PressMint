@@ -395,6 +395,18 @@ $(test-build-XX): test-build-%:
 	test -n "$(KEEP-DATA)" && echo "OUTPUT_FOLDER=$${build}" \
 	  || (cat $${build}/Logs/PressMint-$*.log; rm -r $${build} )
 
+test-build-TEIonly-XX = $(addprefix test-build-TEIonly-, $(PRESS))
+$(test-build-TEIonly-XX): test-build-TEIonly-%:
+	@build=$$(mktemp -d -t BuildTEI-$*.XXXXXX);\
+	mkdir -p $${build}/Distro $${build}/Sources-TEI;\
+	ln -s $(shell realpath $(DATADIR))/PressMint-$* $${build}/Sources-TEI/PressMint-$*.TEI;\
+	cd $(SHARED) ; make final-TEIonly CORPORA=$* HERE=$${build};cd ..;\
+	ls $${build}/Distro ;\
+	test -n "$(KEEP-DATA)" && echo "OUTPUT_FOLDER=$${build}" \
+	  || (cat $${build}/Logs/PressMint-$*.log; rm -r $${build} )
+
+
+
 
 ###### Stats
 
