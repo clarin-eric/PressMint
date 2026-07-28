@@ -1,0 +1,74 @@
+name: 'Build validation'
+#description: ''
+inputs:
+  press:
+    description: 'list of press codes'
+    required: true
+  requireTaxonomiesTranslations:
+    description: 'require every term in common taxonomies to be translated'
+    required: false
+
+outputs:
+  status:
+    value: ${{ steps.build.outputs.status }}
+  build_dir:
+    value: ${{ steps.build.outputs.build_dir }}
+  build_sample:
+    value: ${{ steps.build.outputs.build_sample }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set environment variables
+      run: echo "REQ_TRANSLATION=${{ inputs.requireTaxonomiesTranslations || '1' }}" >> $GITHUB_ENV
+      shell: bash
+    - name: Build
+      id: build
+      working-directory: ${{github.workspace}}/PressMint
+      run: |
+        INTYPES=("" ".ana")
+        STATUS=0
+        SKIP=0
+        echo "DEV: "
+        ls "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/"
+        echo "Testing if README.md symlink exists for PressMint-${{inputs.press}} and creating it if not"
+        test -f "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md" \
+          || ln -s "../../../Samples/PressMint-${{inputs.press}}/README.md" \
+                   "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md"
+        for INTYPE in "${INTYPES[@]}"; do
+          TYPE="TEI${INTYPE}"
+          ROOT="Samples/PressMint-${{inputs.press}}/PressMint-${{inputs.press}}${INTYPE}.xml"
+          if [ ! -f "$ROOT" ]; then
+              echo "::warning title=Corpus root is missing (${{inputs.press}}.$TYPE)::$ROOT not found"
+              SKIP=1
+          fi
+        done
+        if [ $SKIP -eq 1 ] ; then
+          echo "::warning title=SKIPPING BUILD VALIDATION (${{inputs.press}})::"
+        else
+          echo "::notice:: Running build-validation for PressMint-${{inputs.press}}"
+          BUILDDIR=$(make test-build-${{inputs.press}} KEEP-DATA=1 2>&1 | sed -n 's/^OUTPUT_FOLDER=//p')
+          find ${BUILDDIR}
+          cat ${BUILDDIR}/Logs/PressMint-${{inputs.press}}.log \
+                | sed "s/^\(.*\)\(\berror\b\)/::error::\1\2/i;s/^\(.*\)\(\bfatal\b\)/::error::\1\2/i;s/^\(.*\)\(\bwarn\)/::warning::\1\2/i;"
+          test -s ${BUILDDIR}/Logs/PressMint-${{inputs.press}}.error.log \
+                && echo "::error:: PressMint-${{inputs.press}} build-validation FAILED" \
+                && STATUS=1 \
+                || echo "::notice:: PressMint-${{inputs.press}} build-validation PASSED"
+        fi
+        echo "status=$STATUS" >> $GITHUB_OUTPUT
+        echo "build_dir=${BUILDDIR}" >> $GITHUB_OUTPUT
+        echo "build_sample=${BUILDDIR}/Distro/PressMint-${{inputs.press}}" >> $GITHUB_OUTPUT
+
+        echo "status=$STATUS"
+        echo "build_dir=${BUILDDIR}"
+        echo "build_sample=${BUILDDIR}/Distro/PressMint-${{inputs.press}}"
+        
+      shell: bash
+      #continue-on-error: true
+
+
+    - name: Failing if anything is wrong
+      if: ${{ steps.build.outputs.status == '1' }}
+      run: exit 1
+      shell: bash

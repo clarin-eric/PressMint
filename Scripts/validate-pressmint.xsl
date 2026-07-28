@@ -152,12 +152,12 @@
   <xsl:template match="tei:extent">
     <xsl:if test="not(tei:measure[@unit='paragraphs'])">
       <xsl:call-template name="error">
-        <xsl:with-param name="msg">Missing extent/measure[@unit='paragraphs'] in titleStmt</xsl:with-param>
+        <xsl:with-param name="msg">Missing extent/measure[@unit='paragraphs'] in fileDesc</xsl:with-param>
       </xsl:call-template>
     </xsl:if>
     <xsl:if test="not(tei:measure[@unit='words'])">
       <xsl:call-template name="error">
-        <xsl:with-param name="msg">Missing extent/measure[@unit='words'] in titleStmt</xsl:with-param>
+        <xsl:with-param name="msg">Missing extent/measure[@unit='words'] in fileDesc</xsl:with-param>
       </xsl:call-template>
     </xsl:if>
   </xsl:template>

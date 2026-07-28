@@ -51,6 +51,8 @@ $scriptValid   = "$Bin/bin/tools/validate.py";
 
 $scriptConvert = "$Bin/pressmint2conllu.xsl";
 
+$commandTestSyntaxPresence = "awk '\\''BEGIN{FS=\"\\t\"} NF>=8 && \$7!=\"_\"{found=1; exit} END{exit !found}'\\'' {}";
+$commandNoSyntaxPresenceMSG = 'echo "INFO: skypping syntax validation - no syntax presence in {}" 1>&2';
 
 #This should be somehow factorised out!!
 $country2lang{'AT'} = 'de';
@@ -130,9 +132,10 @@ $command = "$Saxon meta=$rootAnaFile -xsl:$scriptConvert {} > $outDir/{/.}.conll
 `find $outDir -name '*.conllu' -type f -exec rename 's/\.ana//' {} +`;
 $command = "python3 $scriptValid --lang $checkLang --level 1 {}";
 `find $outDir -name '*.conllu' -type f -print | $Para '$command'`;
-$command = "python3 $scriptValid --lang $checkLang --level 2 {}"
-    unless defined $MT; #MTed corpora do not have syntactic parses
-`find $outDir -name '*.conllu' -type f -print | $Para '$command'`;
+unless (defined $MT){ #MTed corpora do not have syntactic parses
+  $command = "python3 $scriptValid --lang $checkLang --level 2 {}";
+  `find $outDir -name '*.conllu' -type f -print | $Para '$commandTestSyntaxPresence && $commandNoSyntaxPresenceMSG || $command'`;
+}
 
 # Now produce CoNLL-Us for separate langauges, if we have them
 if ($langs =~ /,/) {
@@ -143,6 +146,6 @@ if ($langs =~ /,/) {
         $command = "python3 $scriptValid --lang $lang --level 1 {}";
         `find $outDir -name '*.conllu' -type f -print | $Para '$command'`;
         $command = "python3 $scriptValid --lang $lang --level 2 {}";
-        `find $outDir -name '*.conllu' -type f -print | $Para '$command'`;
+        `find $outDir -name '*.conllu' -type f -print | $Para '$commandTestSyntaxPresence && $commandNoSyntaxPresenceMSG || $command'`;
     }
 }

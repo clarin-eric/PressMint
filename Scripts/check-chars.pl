@@ -28,6 +28,7 @@ sub chars {
       ord($c) == hex('2011') or  #NON-BREAKING HYPHEN
       ord($c) == hex('00AD') or  #SOFT HYPHEN
       ord($c) == hex('FFFD') or  #REPLACEMENT CHAR
+      ord($c) == hex('FEFF') or  #ZERO WIDTH NO-BREAK SPACE
       (ord($c) >= hex('2000') and ord($c) <= hex('200A')) or #NON-STANDARD SPACES
       (ord($c) >= hex('E000') and ord($c) <= hex('F8FF'))  #PUA
       ) {
