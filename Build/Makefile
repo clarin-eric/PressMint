@@ -186,6 +186,26 @@ final: $(LOGS)
 	cat $(LOGS)/PressMint-$${CORPUS}.error.log | sort | uniq | wc -l;  \
 	done;
 
+final-TEIonly: $(LOGS)
+	for CORPUS in ${CORPORA}; do \
+	${FINALIZE} -tei -valid -txt -sample -codes $${CORPUS} -in ${SOURCES} -out ${OUTPUTS} 2> $(LOGS)/PressMint-$${CORPUS}.log; \
+	sed -i 's/ERROR\(.*cannot locate\)/WARN ALERT\1/' $(LOGS)/PressMint-$${CORPUS}.log; \
+	sed -i 's/ERROR\(.* no count for\)/WARN ALERT\1/' $(LOGS)/PressMint-$${CORPUS}.log; \
+	sed -i 's/ERROR\(.* Missing extent.*words\)/WARN ALERT\1/' $(LOGS)/PressMint-$${CORPUS}.log; \
+	sed -i 's/ERROR\(.* No .ana files for .* samples\)/WARN ALERT\1/' $(LOGS)/PressMint-$${CORPUS}.log; \
+	grep -a -i 'fatal' $(LOGS)/PressMint-$${CORPUS}.log >  $(LOGS)/PressMint-$${CORPUS}.error.log;  \
+	grep -a -i 'error' $(LOGS)/PressMint-$${CORPUS}.log >> $(LOGS)/PressMint-$${CORPUS}.error.log;  \
+	grep -a -i 'warn'  $(LOGS)/PressMint-$${CORPUS}.log >  $(LOGS)/PressMint-$${CORPUS}.warn.log;  \
+	echo "$${CORPUS}.warn"; \
+	cat $(LOGS)/PressMint-$${CORPUS}.warn.log | wc -l;  \
+	cat $(LOGS)/PressMint-$${CORPUS}.warn.log | sort | uniq | wc -l;  \
+	echo "$${CORPUS}.error"; \
+	cat $(LOGS)/PressMint-$${CORPUS}.error.log | wc -l;  \
+	cat $(LOGS)/PressMint-$${CORPUS}.error.log | sort | uniq | wc -l;  \
+	echo "$${CORPUS}.warn - suppresed errors due to missing ana files"; \
+	cat $(LOGS)/PressMint-$${CORPUS}.warn.log | grep "WARN ALERT" | sort | uniq | wc -l;  \
+	done;
+
 # Join all verts, probably doesn't work
 join-all-verts:
 	perl ../Scripts/join-all-verts.pl -codes '${CORPORA}' -in 'Distro' -out Verts/PressMint-XX.${VERSION}.vert
