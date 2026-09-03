@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="PressMint-GR" xml:lang="el">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Ιστορικές ελληνικές εφημερίδες PressMint-GR [PressMint]</title>
+        <title type="main" xml:lang="en">Greek historical newspaper corpus PressMint-GR [PressMint]</title>
+        <respStmt>
+          <persName ref="https://orcid.org/0000-0000-0000-0001">FORENAME SURNAME</persName>
+          <resp>Κωδικοποίηση PressMint TEI XML</resp>
+          <resp xml:lang="en">PressMint TEI XML corpus encoding</resp>
+        </respStmt>
+        <respStmt>
+          <persName ref="https://orcid.org/0000-0000-0000-0002">FORENAME SURNAME</persName>
+          <resp>Συλλογή δεδομένων</resp>
+          <resp xml:lang="en">Data collection</resp>
+        </respStmt>
+        <funder>
+          <orgName>Ερευνητική Υποδομή CLARIN</orgName>
+          <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+        </funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>1.0</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>
+          <orgName>Ερευνητική Υποδομή CLARIN</orgName>
+          <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+          <ref target="https://www.clarin.eu/">www.clarin.eu/</ref>
+        </publisher>
+        <availability status="free">
+          <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+          <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+          <p xml:lang="el">Αυτό το έργο διατίθεται υπό τους όρους της <ref target="http://creativecommons.org/licenses/by/4.0/">Άδειας Creative Commons Attribution 4.0 International License</ref>.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title type="main" xml:lang="el">Βιβλιοθήκη της Βουλής των Ελλήνων – Ψηφιακή Συλλογή Εφημερίδων</title>
+          <title type="main" xml:lang="en">Repository of the Hellenic Parliament Library - Digital Collections Library</title>
+          <idno type="URI">https://digitallibrary.parliament.gr/en</idno>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p xml:lang="en">
+          <ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+        <p xml:lang="el">Το <ref target="https://www.clarin.eu/pressmint">PressMint</ref> είναι ένα έργο που στοχεύει να (1) δημιουργήσει ένα πολύγλωσσο σύνολο σωμάτων κειμένων ιστορικών εφημερίδων, ομοιόμορφα κωδικοποιημένων σύμφωνα με τις <ref target="https://clarin-eric.github.io/PressMint/">οδηγίες κωδικοποίησης PressMint</ref>· (2) να προσθέσει γλωσσολογικές σημειώσεις στα σώματα κειμένων· και (3) να καταστήσει τα σώματα κειμένων διαθέσιμα μέσω συμφραστικών ευρετηρίων.</p>
+        <p>Το PressMint είναι ένα έργο που στοχεύει στη δημιουργία πολύγλωσσων σωμάτων κειμένων ιστορικών εφημερίδων.</p>
+      </projectDesc>
+      <editorialDecl>
+        <quotation>
+          <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+        </quotation>
+        <hyphenation>
+          <p xml:lang="en">End-of-line hyphenated words have been joined where possible.</p>
+        </hyphenation>
+        <correction>
+          <p xml:lang="en">No corrections were applied beyond OCR post-processing.</p>
+        </correction>
+        <normalization>
+          <p xml:lang="en">Text has not been normalised, except for spacing.</p>
+        </normalization>
+        <segmentation>
+          <p xml:lang="en">Texts are split by newspaper issue and segmented by page; each page image corresponds to one paragraph.</p>
+        </segmentation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <date from="1880" to="1930">1880--1930</date>
+        </setting>
+      </settingDesc>
+      <langUsage>
+        <language ident="el" xml:lang="el">ελληνικά</language>
+        <language ident="en" xml:lang="el">αγγλικά</language>
+        <language ident="el" xml:lang="en">Greek</language>
+        <language ident="en" xml:lang="en">English</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-06-16">
+        <name>FORENAME SURNAME</name>: Initial corpus encoding.</change>
+    </revisionDesc>
+  </teiHeader>
+  <xi:include href="1880/PressMint-GR_1880-03-07_PROIA-363-1-20_500_14199-20628086.xml"/>
+  <xi:include href="1880/PressMint-GR_1880-03-29_PROIA-385-1-20_500_14199-8820403.xml"/>
+  <xi:include href="1880/PressMint-GR_1880-04-10_PROIA-397-1-20_500_14199-8820415.xml"/>
+  <xi:include href="1882/PressMint-GR_1882-03-16_PROIA-1057-1-20_500_14199-1636131.xml"/>
+  <xi:include href="1883/PressMint-GR_1883-03-26_PROIA-1270-1-20_500_14199-8820180.xml"/>
+  <xi:include href="1883/PressMint-GR_1883-11-16_PROIA-1439-1-20_500_14199-8820349.xml"/>
+  <xi:include href="1883/PressMint-GR_1883-11-17_PROIA-1440-1-20_500_14199-8820350.xml"/>
+  <xi:include href="1884/PressMint-GR_1884-02-23_PROIA-1510-1-20_500_14199-8820152.xml"/>
+  <xi:include href="1891/PressMint-GR_1891-03-01_PROIA-3651-1-20_500_14199-6125556.xml"/>
+  <xi:include href="1891/PressMint-GR_1891-03-29_PROIA-3678-1-20_500_14199-6125618.xml"/>
+  <xi:include href="1892/PressMint-GR_1892-02-11_PROIA-3960-1-20_500_14199-6124483.xml"/>
+</teiCorpus>
