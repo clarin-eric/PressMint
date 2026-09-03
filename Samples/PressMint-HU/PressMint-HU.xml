@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="PressMint-HU" xml:lang="hu">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Hungarian historical newspaper corpus PressMint-HU [PressMint]</title>
+        <title xml:lang="en">Hungarian historical newspaper corpus PressMint-HU [PressMint]</title>
+        <respStmt>
+          <resp>Project Lead</resp>
+          <name>LNN</name>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition>0.1</edition>
+      </editionStmt>
+      <extent>
+        <measure unit="texts" quantity="3">3 texts</measure>
+        <measure unit="paragraphs" quantity="1703">1703 paragraphs</measure>
+        <measure unit="words" quantity="72082">72082 words</measure>
+      </extent>
+      <publicationStmt>
+        <publisher>Hungarian PressMint Project</publisher>
+        <idno type="URI" subtype="handle">TBD</idno>
+        <date when="2026-07-07">2026-07-07</date>
+        <availability>
+          <licence>Secured (Internal approval)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Compiled from Hungaricana pilot dataset.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Delivery of the Hungarian subcorpus for the international PressMint project.</p>
+      </projectDesc>
+      <editorialDecl>
+        <correction>
+          <p>No manual correction at article level. Coordinate-based column reordering.</p>
+        </correction>
+        <normalization>
+          <p>Characters restricted to strict Hungarian whitelist. Markdown elements mapped to TEI.</p>
+        </normalization>
+        <segmentation>
+          <p>Multi-story layout split dynamically corrected using spatial coordinate sorting.</p>
+        </segmentation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name>Hungary</name>
+        </setting>
+      </settingDesc>
+      <langUsage>
+        <language ident="hu">Hungarian</language>
+        <language ident="en">English</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-07-07">Initial corpus compilation with layout-aware sorting for pilot delivery.</change>
+    </revisionDesc>
+  </teiHeader>
+  <xi:include href="1884/PressMint-HU_1884-01-01-PestiHirlap.xml"/>
+  <xi:include href="1884/PressMint-HU_1884-01-02-PestiHirlap.xml"/>
+  <xi:include href="1884/PressMint-HU_1884-01-03-PestiHirlap.xml"/>
+</teiCorpus>
