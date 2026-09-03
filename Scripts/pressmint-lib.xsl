@@ -133,6 +133,19 @@
 
   <!-- FUNCTIONS -->
 
+
+  <!-- create measure templates -->
+
+  <xsl:function name="mk:measure-template" as="element(tei:measure)">
+    <xsl:param name="unit" as="xs:string"/>
+    <xsl:param name="quantity"/>
+    <measure unit="{$unit}" quantity="{$quantity}" xml:lang="en">
+      <xsl:value-of select="et:format-number('en', $quantity)"/>
+      <xsl:text> </xsl:text>
+      <xsl:value-of select="$unit"/>
+    </measure>
+  </xsl:function>
+  
   <!-- Format the name of a person from persName -->
   <xsl:function name="et:format-name">
     <xsl:param name="persName"/>

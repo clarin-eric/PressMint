@@ -1,0 +1,191 @@
+name: PressMint Preview Sample Generator
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "Pull Request number"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  preview:
+    if: github.event_name == 'workflow_dispatch'
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Load PR metadata
+        id: pr
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const prNumber = Number('${{ inputs.pr_number }}');
+      
+            const [owner, repo] = '${{ github.repository }}'.split('/');
+      
+            const { data: pr } = await github.rest.pulls.get({
+              owner,
+              repo,
+              pull_number: prNumber
+            });
+      
+            core.setOutput('number', pr.number);
+            core.setOutput('head_sha', pr.head.sha);
+            core.setOutput('head_repo', pr.head.repo.full_name);
+            core.setOutput('head_ref', pr.head.ref);
+            core.setOutput("base_ref", pr.base.ref);
+            core.setOutput("base_repo", pr.base.repo.full_name);
+
+      # -----------------------------
+      # 1. Checkout PR source safely
+      # -----------------------------
+      - name: Checkout PR
+        uses: actions/checkout@v5
+        with:
+          repository: ${{ github.repository }}
+          ref: refs/pull/${{ inputs.pr_number }}/merge
+          fetch-depth: 2
+          path: PressMint
+
+      - name: PressMint status (Detect changed files and get list of countries that should be processed)
+        id: detect-changes
+        uses: ./PressMint/.github/actions/PressMintStatus
+      - name: Get metadata status
+        id: meta
+        run: |
+          echo "PRESS_COUNT=$(echo  '${{ steps.detect-changes.outputs.press_changed }}' | jq '.|length')" >> $GITHUB_OUTPUT
+          echo "PRESS_CODE=$(echo  '${{ steps.detect-changes.outputs.press_changed }}' | jq -r '.[0]')" >> $GITHUB_OUTPUT
+
+      - name: Gate preview
+        if: steps.meta.outputs.PRESS_COUNT != '1'
+        run: |
+          echo "::notice:: Skipping preview generation as ${steps.meta.outputs.PRESS_COUNT} press folders were changed"
+          exit 0
+
+      - name: Setup # initialize dependencies cache - used in next steps
+        uses: ./PressMint/.github/actions/PressMintSetup
+
+      # -----------------------------
+      # 2. Run PressMintBuild
+      # -----------------------------
+      - name: Run PressMintBuild
+        id: build
+        uses: ./PressMint/.github/actions/PressMintBuild
+        with:
+          press: '${{ steps.meta.outputs.PRESS_CODE }}'
+      - name: Show outputs
+        run: |
+          echo "Status: ${{ steps.build.outputs.status }}"
+          echo "Build dir: ${{ steps.build.outputs.build_dir }}"
+          echo "Sample dir: ${{ steps.build.outputs.build_sample }}"
+      # -----------------------------
+      # 3. Prepare preview branch
+      # -----------------------------
+      - name: Publish preview branch
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          PRESS_CODE: ${{ steps.meta.outputs.PRESS_CODE }}
+          BRANCH: preview-pr-${{ steps.pr.outputs.number }}--${{ steps.meta.outputs.PRESS_CODE}}
+          BUILD_DIR: ${{ steps.build.outputs.build_dir }}
+          BUILD_SAMPLE: ${{ steps.build.outputs.build_sample }}
+          BASE_REF: ${{steps.pr.outputs.base_ref}}
+        run: |
+          set -e
+
+          echo "Publishing preview branch: $BRANCH"
+
+          git config --global user.name 'Matyáš Kopp (through GitHub Action)'
+          git config --global user.email 'matyaskopp@users.noreply.github.com'
+
+          # clone repo with token
+          git clone \
+            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git \
+            repo
+
+          cd repo
+
+          # create or switch to branch
+          git checkout origin/${BASE_REF}
+          git checkout -b "$BRANCH" || git checkout "$BRANCH"
+
+ 
+
+          # copy only sample output
+          cp -R $BUILD_SAMPLE Samples/
+          SOURCE_DIR=../PressMint/Samples/PressMint-${{ steps.meta.outputs.PRESS_CODE}}/Sources
+          if [ -d "$SOURCE_DIR" ]; then
+            cp -R $SOURCE_DIR Samples/PressMint-${{ steps.meta.outputs.PRESS_CODE}}/
+          fi
+
+          # commit only if changes exist
+          git add Samples
+
+          if git diff --cached --quiet; then
+            echo "No changes in sample"
+            exit 0
+          fi
+
+          git commit -m "$PRESS_CODE: PressMint preview for PR #$PR_NUMBER"
+
+          git push origin "$BRANCH" --force
+      - name: Create or update preview PR
+        id: preview_pr
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          PRESS_CODE: ${{ steps.meta.outputs.PRESS_CODE }}
+          BRANCH: preview-pr-${{ steps.pr.outputs.number }}--${{ steps.meta.outputs.PRESS_CODE}}
+          GH_TOKEN: ${{ github.token }}
+          BUILD_SAMPLE: ${{ steps.build.outputs.build_sample }}
+          BASE_REF: ${{steps.pr.outputs.base_ref}}
+        run: |
+          cd PressMint
+          URL=$(gh pr list --head "${BRANCH}" --json url --jq '.[0].url')
+          if [ -z "$URL" ]; then
+            URL=$(gh pr create \
+              --base "${BASE_REF}" \
+              --head "preview-pr-${PR_NUMBER}--${PRESS_CODE}" \
+              --title "[Preview] PressMint-${PRESS_CODE} sample (PR #${PR_NUMBER})" \
+              --body "Generated sample for PR #${PR_NUMBER} (${PRESS_CODE})")
+          fi
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+      # -----------------------------
+      # 4. Comment on PR (idempotent)
+      # -----------------------------
+      - name: Find existing comment
+        id: find_comment
+        uses: peter-evans/find-comment@v4
+        with:
+          issue-number: ${{ steps.pr.outputs.number }}
+          comment-author: "github-actions[bot]"
+          body-includes: "<!-- pressmint-preview -->"
+
+      - name: Create or update PR comment
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          comment-id: ${{ steps.find_comment.outputs.comment-id }}
+          issue-number: ${{ steps.pr.outputs.number }}
+          edit-mode: replace
+          body: |
+            <!-- pressmint-preview -->
+
+            ## PressMint Preview
+
+            A sample has been generated for this PR.
+
+            **Preview branch:**
+            ```
+            preview-pr-${{ steps.pr.outputs.number }}--${{ steps.meta.outputs.PRESS_CODE}}
+            ```
+
+            **Sample URL:**
+            https://github.com/${{ github.repository }}/tree/preview-pr-${{ steps.pr.outputs.number }}--${{ steps.meta.outputs.PRESS_CODE}}/Samples/PressMint-${{ steps.meta.outputs.PRESS_CODE }}
+
+            **Preview sample PR:**
+            ${{ steps.preview_pr.outputs.url }}
+
