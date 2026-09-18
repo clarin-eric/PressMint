@@ -1,2 +1,2 @@
 init-Sources-TEI:
-	rsync -av ../Distro/ParlaMint-*.TEI* .
+	rsync -av ../Distro/PressMint-*.TEI* .

@@ -10,11 +10,11 @@ export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
 ### VARIABLES
 
 ### COMPLETE SET OF CORPORA
-CORPORA=AT BG CZ ES GR IS LV NL PL SI UA
-CORPORA=SI
+CORPORA=AT BG CZ ES ES-GA ES-MD ES-PV FI FR GB GR HU IS IT-BZ LV NL PL PT SI UA ZA
+CORPORA=ES-PV
 
 # Used in targets that run only on one corpus
-CORPUS=SI
+CORPUS=ES-PV
 
 # Version number and PID of next PressMint release
 VERSION = 1.0
@@ -184,6 +184,26 @@ final: $(LOGS)
 	echo "$${CORPUS}.error"; \
 	cat $(LOGS)/PressMint-$${CORPUS}.error.log | wc -l;  \
 	cat $(LOGS)/PressMint-$${CORPUS}.error.log | sort | uniq | wc -l;  \
+	done;
+
+final-TEIonly: $(LOGS)
+	for CORPUS in ${CORPORA}; do \
+	${FINALIZE} -tei -valid -txt -sample -codes $${CORPUS} -in ${SOURCES} -out ${OUTPUTS} 2> $(LOGS)/PressMint-$${CORPUS}.log; \
+	sed -i 's/ERROR\(.*cannot locate\)/WARN ALERT\1/' $(LOGS)/PressMint-$${CORPUS}.log; \
+	sed -i 's/ERROR\(.* no count for\)/WARN ALERT\1/' $(LOGS)/PressMint-$${CORPUS}.log; \
+	sed -i 's/ERROR\(.* Missing extent.*words\)/WARN ALERT\1/' $(LOGS)/PressMint-$${CORPUS}.log; \
+	sed -i 's/ERROR\(.* No .ana files for .* samples\)/WARN ALERT\1/' $(LOGS)/PressMint-$${CORPUS}.log; \
+	grep -a -i 'fatal' $(LOGS)/PressMint-$${CORPUS}.log >  $(LOGS)/PressMint-$${CORPUS}.error.log;  \
+	grep -a -i 'error' $(LOGS)/PressMint-$${CORPUS}.log >> $(LOGS)/PressMint-$${CORPUS}.error.log;  \
+	grep -a -i 'warn'  $(LOGS)/PressMint-$${CORPUS}.log >  $(LOGS)/PressMint-$${CORPUS}.warn.log;  \
+	echo "$${CORPUS}.warn"; \
+	cat $(LOGS)/PressMint-$${CORPUS}.warn.log | wc -l;  \
+	cat $(LOGS)/PressMint-$${CORPUS}.warn.log | sort | uniq | wc -l;  \
+	echo "$${CORPUS}.error"; \
+	cat $(LOGS)/PressMint-$${CORPUS}.error.log | wc -l;  \
+	cat $(LOGS)/PressMint-$${CORPUS}.error.log | sort | uniq | wc -l;  \
+	echo "$${CORPUS}.warn - suppresed errors due to missing ana files"; \
+	cat $(LOGS)/PressMint-$${CORPUS}.warn.log | grep "WARN ALERT" | sort | uniq | wc -l;  \
 	done;
 
 # Join all verts, probably doesn't work

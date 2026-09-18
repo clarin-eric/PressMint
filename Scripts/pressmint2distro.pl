@@ -326,7 +326,7 @@ foreach my $countryCode (split(/[, ]+/, $countryCodes)) {
 	print STDERR "INFO: ***Making $countryCode samples\n";
         logger('Making samples');
 	`rm -fr $outSmpDir; mkdir $outSmpDir`;
-	&commonTaxonomies($countryCode, $outSmpDir);
+	# &commonTaxonomies($countryCode, $outSmpDir); taxonomy is copied with scriptSample
 	if (-e $outTeiRoot) {
             #Make sample files
 	    `$Saxon outDir=$outSmpDir -xsl:$scriptSample $outTeiRoot`;

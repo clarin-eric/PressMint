@@ -35,7 +35,7 @@ echo "DEBUG: press_all=${press_all}"
 
 echo "DEBUG: press_process=${press_process}"
 
-
+echo "press_count=$(echo $press_process | jq 'length')" >> $GITHUB_OUTPUT
 echo "press_process=${press_process}" >> $GITHUB_OUTPUT
 echo "press_all=${press_all}" >> $GITHUB_OUTPUT
 echo "press_changed=${press_changed}" >> $GITHUB_OUTPUT

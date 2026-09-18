@@ -1,8 +1,8 @@
-# Samples of the PressMint-IT corpus
+# Samples of the PressMint-IT-BZ corpus
 
 ## Data source
 
-The source of the PressMint-IT corpus will be ...
+The source of the PressMint-IT-BZ corpus will be ...
 
 ### Details of the source:
 
@@ -33,5 +33,5 @@ The source of the PressMint-IT corpus will be ...
 
 ## Conversion plan
 
-For the PressMint-IT corpus we plan to:
+For the PressMint-IT-BZ corpus we plan to:
 
