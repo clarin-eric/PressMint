@@ -45,8 +45,12 @@
   <xsl:param name="chunkStart">0</xsl:param>
   <xsl:param name="chunkSize">0</xsl:param> <!-- 0 means process all -->
 
+  <xsl:variable name="inFile" select="replace(base-uri(), '.+/([^/]+$)', '$1')"/>
   <!-- Is this a linguistically annotated (ana) or plain text corpus (txt)? -->
   <xsl:param name="type">
+    <xsl:if test="not(concat(/tei:teiCorpus/@xml:id, '.xml') = $inFile)">
+      <xsl:message terminate="yes" select="concat('FATAL ', /tei:teiCorpus/@xml:id,': id does not match filename ', $inFile)"/>      
+    </xsl:if>
     <xsl:choose>
       <xsl:when test="contains(/tei:teiCorpus/@xml:id, '.ana')">ana</xsl:when>
       <xsl:otherwise>txt</xsl:otherwise>
