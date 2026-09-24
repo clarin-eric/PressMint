@@ -24,6 +24,10 @@ TAXONOMIES-TRANSLATE = $(addprefix PressMint-taxonomy-, $(TAXONOMIES-TRANSLATE-I
 TAXONOMIES-COPY-INTERF =
 TAXONOMIES-COPY = $(addprefix PressMint-taxonomy-, $(TAXONOMIES-COPY-INTERF))
 
+ID_TEMPLATE_PREFIX = PressMint-
+ID_TEMPLATE_SUFFIX_root = (-[a-z]{2,3})?
+ID_TEMPLATE_SUFFIX_comp = $(ID_TEMPLATE_SUFFIX_root)_[0-9]{4}-[01][0-9]-[0123][0-9](-[-a-zA-Z0-9]+)?
+
 
 -include Makefile.local
 
@@ -228,6 +232,10 @@ $(addprefix validate-TEI-root-, $(PRESS)): validate-TEI-root-%:
 
 ## validate-TEI-comp-XX ## validate TEI component files included in teiCorpus
 $(addprefix validate-TEI-comp-, $(PRESS)): validate-TEI-comp-%:
+	@echo "validating component filenames in $(PATHROOT_TEI_$*)"
+	@echo $(PATHROOT_TEI_$*)|$(getcomponentincludes) | sed "s/^.*\///"| grep -vE "^$(ID_TEMPLATE_PREFIX)$*$(ID_TEMPLATE_SUFFIX_comp)\.xml$$" \
+	  && echo "ERROR: validating filenames ($@) $(PATHROOT_TEI_$*) failed" \
+		|| echo "INFO: validating component filenames in $(PATHROOT_TEI_$*) passed"
 	@echo "validating component files in $(PATHROOT_TEI_$*)"
 	@echo $(PATHROOT_TEI_$*)|$(getcomponentincludes)| xargs -I {} ${val_comp} $(PATHBASE_TEI_$*)/{} \
 	  || echo "ERROR: validating ($@) $(PATHROOT_TEI_$*) failed"
@@ -252,6 +260,10 @@ $(addprefix validate-TEI.ana-root-, $(PRESS)): validate-TEI.ana-root-%:
 
 ## validate-TEI.ana-comp-XX ## validate TEI.ana component files included in teiCorpus
 $(addprefix validate-TEI.ana-comp-, $(PRESS)): validate-TEI.ana-comp-%:
+	@echo "validating component filenames in $(PATHROOT_TEI.ana_$*)"
+	@echo $(PATHROOT_TEI.ana_$*)|$(getcomponentincludes) | sed "s/^.*\///"| grep -vE "^$(ID_TEMPLATE_PREFIX)$*$(ID_TEMPLATE_SUFFIX_comp)\.ana\.xml$$" \
+	  && echo "ERROR: validating filenames ($@) $(PATHROOT_TEI.ana_$*) failed" \
+		|| echo "INFO: validating component filenames in $(PATHROOT_TEI.ana_$*) passed"
 	@echo "validating component files in $(PATHROOT_TEI.ana_$*)"
 	@echo $(PATHROOT_TEI.ana_$*)|$(getcomponentincludes)| xargs -I {} ${val_comp} $(PATHBASE_TEI.ana_$*)/{} \
 	  || echo "ERROR: validating ($@) $(PATHROOT_TEI.ana_$*) failed"
@@ -280,8 +292,8 @@ _validateTaxonomySpecific:
 	@echo -n "INFO: validating ${CORPUS}-specific taxonomy ${SPECIFICTAXONOMY}\n"
 	@grep -Ho 'xml:id="[^"]*"' ${SPECIFICTAXONOMY} \
 	  | grep -vP '(PressMint-${CORPUS}-taxonomy.*)\.xml:xml:id="\1"' \
-	  | grep -vP 'xml:id="${CORPUS}-.*"' \
-		| sed 's/\(.*\):xml:id="\(.*\)"/ERROR: Missing prefix "${CORPUS}-" in xml:id="\2" in \1/'
+	  | grep -vP 'xml:id="PressMint-${CORPUS}-.*"' \
+		| sed 's/\(.*\):xml:id="\(.*\)"/ERROR: Missing prefix "PressMint-${CORPUS}-" in xml:id="\2" in \1/'
 	@${val_taxonomy} ${SPECIFICTAXONOMY} \
 	&& echo schema OK \
 	|| echo -n "\nERROR: schema validation failed ${SPECIFICTAXONOMY}\n"
