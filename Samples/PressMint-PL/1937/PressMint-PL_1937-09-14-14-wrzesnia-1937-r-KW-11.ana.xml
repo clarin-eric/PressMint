@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1937-09-14-14-wrzesnia-1937-r-KW-11.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Powróciła komisja z Madagaskaru, Kurier Wileński wraz z Kurjerem Wileńsko-Nowogrodzkim, 14 września 1937 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Powróciła komisja z Madagaskaru, Kurier Wileński wraz z Kurjerem Wileńsko-Nowogrodzkim", 14 września 1937 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurier Wileński wraz z Kurjerem Wileńsko-Nowogrodzkim</title>
+               <title level="a">Powróciła komisja z Madagaskaru</title>
+               <publisher>Drukarnia „Znicz ” Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1937-09-14">14 września 1937 r.</date>
+               <biblScope unit="issue">253</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">Kurjer Wileński wraz z Kurjerem Wileńsko-Nowogródzkim. 1937, nr 253 - Jagiellońska Biblioteka Cyfrowa</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="Warszawa">WARSZAWA</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="Pat">Pat</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="dziś">Dziś</w>
+               <w ana="nkjp:praet:sg:f:perf" msd="UPosTag=VERB" lemma="powrócić">powróciła</w>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="Madagaskar">Madagaskaru</w>
+               </name>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="polski">polska</w>
+               </name>
+               <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="komisja">komisja</w>
+               <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="studia">studiów</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="który">która</w>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="pod">pod</w>
+               <w ana="nkjp:subst:sg:inst:n:ncol" msd="UPosTag=NOUN" lemma="przewodnictwo">przewodnictwem</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="mułkownik">mjr</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Mieczysław">Mieczysława</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Lepecki">Lepeckiego</w>
+               </name>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="prezydium">prezydium</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="rada">rady</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="minister">ministrów</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="przy">przy</w>
+               <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="udział">udziale</w>
+               <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="dyrektor">dyrektora</w>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:gen:n:pos" msd="UPosTag=ADJ" lemma="żydowski">Żydowskiego</w>
+                  <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="towarzystwo">Towarzystwa</w>
+                  <w ana="nkjp:adj:sg:gen:n:pos" msd="UPosTag=ADJ" lemma="emigracyjny">emigracyjnego</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Leon">Leona</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Alter">Altera</w>
+               </name>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="oraz">oraz</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="inżynier">inż</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <name type="PER">
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="S">S</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Dyk">Dyka</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:praet:sg:f:imperf" msd="UPosTag=VERB" lemma="badać">badała</w>
+               <w ana="nkjp:prep:acc:nwok" msd="UPosTag=ADP" lemma="przez">przez</w>
+               <w ana="nkjp:adj:pl:gen:m3:pos" msd="UPosTag=ADJ" lemma="ostatni">ostatnich</w>
+               <w ana="nkjp:num:pl:acc:m3:rec:ncol" msd="UPosTag=NUM" lemma="kilka">kilka</w>
+               <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="miesiąc">miesięcy</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="przydatność">przydatność</w>
+               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="ten">tej</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="wyspa">wyspy</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="dla">dla</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="osadnictwo">osadnictwa</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

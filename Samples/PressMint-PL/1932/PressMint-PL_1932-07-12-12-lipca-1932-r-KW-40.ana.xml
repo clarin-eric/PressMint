@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1932-07-12-12-lipca-1932-r-KW-40.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, W wieku techniki, , 12 lipca 1932 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "W wieku techniki, ", 12 lipca 1932 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j"></title>
+               <title level="a">W wieku techniki</title>
+               <publisher>Drukarnia „Znicz ” Wilno</publisher>
+               <date when="1932-07-12">12 lipca 1932 r.</date>
+               <idno type="source">Biblioteka Narodowa</idno>
+               <idno type="URI" subtype="URL">https://polona.pl/preview/ae596412-9075-4f05-90e3-65634f50333f   Tytuł: Kurjer Wileński : Niezależny Organ Demokratyczny. R. 9, 1932, nr 156</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">—</pc>
+               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="to">To</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="nazywać">nazywa</w>
+               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="sprzątanie">sprzątanie</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">?</pc>
+            </s>
+            <s>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">A</w>
+               <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="co">co</w>
+               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="tu">tu</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="robić">robi</w>
+               <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="pajęczyna">pajęczyna</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">—</pc>
+               <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="myśleć">Myślał</w>
+               <w ana="nkjp:aglt:sg:pri:imperf:wok" msd="UPosTag=AUX" lemma="być">em</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
+               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="to">to</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="należeć">należy</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="radjo">radja</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <name type="ORG">
+                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Le">Le</w>
+                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Rire">Rire</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

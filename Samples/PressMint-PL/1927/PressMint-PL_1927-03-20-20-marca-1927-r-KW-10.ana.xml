@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1927-03-20-20-marca-1927-r-KW-10.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Z Państw Bałtyckich, Kurjer Wileński : Niezależny Organ Demokratyczny, 20 marca 1927 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Z Państw Bałtyckich, Kurjer Wileński : Niezależny Organ Demokratyczny", 20 marca 1927 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński : Niezależny Organ Demokratyczny</title>
+               <title level="a">Z Państw Bałtyckich</title>
+               <publisher>Drukarnia „Pax” Wilno</publisher>
+               <date when="1927-03-20">20 marca 1927 r.</date>
+               <biblScope unit="issue">65</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">https://jbc.bj.uj.edu.pl/dlibra/publication/280982/edition/268563/content</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <pc ana="nkjp:sym" msd="UPosTag=SYM">#</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=SYM">#</pc>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="kandydat">Kandydat</w>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:subst:sg:acc:m1" msd="UPosTag=NOUN" lemma="prezydent">prezydenta</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="Ryga">RYGA</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <name type="MISC">
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="18">18</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+                  <w ana="nkjp:romandig" msd="UPosTag=X" lemma="III">III</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Pat">Pat</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="przy">Przy</w>
+               <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="wybory">wyborach</w>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:subst:sg:acc:m1" msd="UPosTag=NOUN" lemma="prezydent">prezydenta</w>
+               <w ana="nkjp:adj:sg:acc:f:pos" msd="UPosTag=ADJ" lemma="wielki">wielką</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="rola">rolę</w>
+               <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="móc">mogą</w>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="odegrać">odegrać</w>
+               <w ana="nkjp:subst:pl:nom:m3" msd="UPosTag=NOUN" lemma="głos">głosy</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="mniejszość">mniejszości</w>
+               <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="narodowy">narodowych</w>
+               <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="ponieważ">ponieważ</w>
+               <w ana="nkjp:adj:sg:nom:n:pos" msd="UPosTag=ADJ" lemma="prawy">prawe</w>
+               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="skrzydło">skrzydło</w>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="sejm">sejmu</w>
+               </name>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="zamierzać">zamierza</w>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="zjednoczyć">zjednoczyć</w>
+               <w ana="nkjp:adj:pl:acc:f:pos" msd="UPosTag=ADJ" lemma="wszystek">wszystkie</w>
+               <w ana="nkjp:subst:pl:acc:f" msd="UPosTag=NOUN" lemma="grupa">grupy</w>
+               <w ana="nkjp:adj:pl:acc:f:pos" msd="UPosTag=ADJ" lemma="antysocjalistyczny">antysocjalistyczne</w>
+               <w ana="nkjp:pcon:imperf" msd="UPosTag=VERB" lemma="wysuwać">wysuwając</w>
+               <w ana="nkjp:adj:sg:acc:m1:pos" msd="UPosTag=ADJ" lemma="wspólny">wspólnego</w>
+               <w ana="nkjp:subst:sg:acc:m1" msd="UPosTag=NOUN" lemma="kandydat">kandydata</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">Z</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="pośród">pośród</w>
+               <w ana="nkjp:ppas:pl:gen:m1:imperf:aff" msd="UPosTag=ADJ" lemma="wymieniać">wymienianych</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="kandydat">kandydatów</w>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="bardzo">bardzo</w>
+               <w ana="nkjp:adj:pl:acc:f:pos" msd="UPosTag=ADJ" lemma="duży">duże</w>
+               <w ana="nkjp:subst:pl:acc:f" msd="UPosTag=NOUN" lemma="szansa">szanse</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="mieć">ma</w>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="członek">członek</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="związek">związku</w>
+               <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="włościański">włościańskiego</w>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Paulik">Paulik</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

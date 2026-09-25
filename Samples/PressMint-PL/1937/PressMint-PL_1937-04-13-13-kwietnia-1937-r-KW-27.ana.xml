@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1937-04-13-13-kwietnia-1937-r-KW-27.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Zakaz zjazdu ludowców w Racławicach, Kurjer Wileński wraz z Kurjerem Wileńsko-Nowogródzkim, 13 kwietnia 1937 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Zakaz zjazdu ludowców w Racławicach, Kurjer Wileński wraz z Kurjerem Wileńsko-Nowogródzkim", 13 kwietnia 1937 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński wraz z Kurjerem Wileńsko-Nowogródzkim</title>
+               <title level="a">Zakaz zjazdu ludowców w Racławicach</title>
+               <publisher>Drukarnia „Znicz” Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1937-04-13">13 kwietnia 1937 r.</date>
+               <biblScope unit="issue">100</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">https://jbc.bj.uj.edu.pl/dlibra/publication/280474/edition/268063/content</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="urząd">Urząd</w>
+                  <w ana="nkjp:adj:sg:nom:m3:pos" msd="UPosTag=ADJ" lemma="wojewódzki">Wojewódzki</w>
+                  <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               </name>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="Kielce">Kielcach</w>
+               </name>
+               <w ana="nkjp:praet:sg:m3:perf" msd="UPosTag=VERB" lemma="zakazać">zakazał</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <name type="MISC">
+                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="dzień">dniu</w>
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="18">18</w>
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="kwiecień">kwietnia</w>
+               </name>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rb">rb</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="Racławice">Racławicach</w>
+               </name>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <name type="LOC">
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="powiat">pow</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               </name>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:loc:m3:pos" msd="UPosTag=ADJ" lemma="miechowski">miechowskim</w>
+               </name>
+               <w ana="nkjp:ger:sg:gen:n:imperf:aff" msd="UPosTag=NOUN" lemma="urządzać">urządzania</w>
+               <w ana="nkjp:adj:sg:gen:n:pos" msd="UPosTag=ADJ" lemma="publiczny">publicznego</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="zgromadzenie">zgromadzenia</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="zjazd">zjazdu</w>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="stronnictwo">Stronnictwa</w>
+                  <w ana="nkjp:adj:sg:gen:n:pos" msd="UPosTag=ADJ" lemma="ludowy">Ludowego</w>
+               </name>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:adj:pl:gen:m3:pos" msd="UPosTag=ADJ" lemma="okoliczny">okolicznych</w>
+               <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="powiat">powiatów</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">Na</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="decyzja">decyzję</w>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="urząd">Urzędu</w>
+                  <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="wojewódzki">Wojewódzkiego</w>
+               </name>
+               <w ana="nkjp:praet:sg:f:perf" msd="UPosTag=VERB" lemma="wpłynąć">wpłynęła</w>
+               <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="okoliczność">okoliczność</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
+               <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="zjazd">zjazd</w>
+               <w ana="nkjp:adj:sg:nom:m3:pos" msd="UPosTag=ADJ" lemma="ten">ten</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:pact:sg:nom:m3:imperf:aff" msd="UPosTag=ADJ" lemma="mieć">mający</w>
+               <w ana="nkjp:inf:imperf" msd="UPosTag=VERB" lemma="być">być</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="jakoby">jakoby</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="wyłącznie">wyłącznie</w>
+               <w ana="nkjp:subst:sg:inst:m3" msd="UPosTag=NOUN" lemma="obchód">obchodem</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="rocznica">rocznicy</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="bitwa">bitwy</w>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="pod">pod</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:inst:n:pt" msd="UPosTag=NOUN" lemma="Racławice">Racławicami</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="rzeczywistość">rzeczywistości</w>
+               <w ana="nkjp:praet:sg:m3:imperf" msd="UPosTag=VERB" lemma="mieć">miał</w>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="cel">celu</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="wbrew">wbrew</w>
+               <w ana="nkjp:ppas:sg:gen:m3:perf:aff" msd="UPosTag=ADJ" lemma="zgłosić">zgłoszonego</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="program">programu</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:ger:sg:acc:n:perf:aff" msd="UPosTag=NOUN" lemma="zorganizować">zorganizowanie</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="manifestacja">manifestacji</w>
+               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="polityczny">politycznej</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:ger:sg:gen:n:perf:aff" msd="UPosTag=NOUN" lemma="podnieść">podniesienia</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="umysł">umysły</w>
+               <w ana="nkjp:ppas:pl:gen:m1:perf:aff" msd="UPosTag=ADJ" lemma="zebrać">zebranych</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="co">co</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="konsekwencja">konsekwencji</w>
+               <w ana="nkjp:praet:sg:n:perf" msd="UPosTag=VERB" lemma="zagrozić">zagroziło</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="by">by</w>
+               <w ana="nkjp:praet:sg:m3:imperf:nagl" msd="UPosTag=VERB" lemma="móc">mógł</w>
+               <w ana="nkjp:subst:sg:dat:n:ncol" msd="UPosTag=NOUN" lemma="bezpieczeństwo">bezpieczeństwu</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:subst:sg:dat:m3" msd="UPosTag=NOUN" lemma="porządek">porządkowi</w>
+               <w ana="nkjp:adj:sg:dat:m3:pos" msd="UPosTag=ADJ" lemma="publiczny">publicznemu</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

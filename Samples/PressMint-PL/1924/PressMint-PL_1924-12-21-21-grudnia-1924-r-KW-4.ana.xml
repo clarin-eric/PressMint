@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1924-12-21-21-grudnia-1924-r-KW-4.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Ucieczka uczestnika powstania w Kłajpedzie, Kurjer Wileński, R. 1, 21 grudnia 1924 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Ucieczka uczestnika powstania w Kłajpedzie, Kurjer Wileński, R. 1", 21 grudnia 1924 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, R. 1</title>
+               <title level="a">Ucieczka uczestnika powstania w Kłajpedzie</title>
+               <publisher>Drukarnia „Zorza” Wilno</publisher>
+               <date when="1924-12-21">21 grudnia 1924 r.</date>
+               <biblScope unit="issue">147</biblScope>
+               <idno type="source">Biblioteka Narodowa</idno>
+               <idno type="URI" subtype="URL">https://polona.pl/item-view/b7c91149-2510-4ecc-8032-85b57cb99a76?page=0</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <w ana="nkjp:pact:sg:nom:n:imperf:aff" msd="UPosTag=ADJ" lemma="wychodzić">Wychodzące</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="Szyłokarczma">Szyłokarczmie</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">„</pc>
+               <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Mem">Mem</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Rundschau">Rundschau</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">”</pc>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="informować">informuje</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
+               <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="jeden">jeden</w>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="uczestnik">uczestników</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="powstanie">powstania</w>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:gen:n:pos" msd="UPosTag=ADJ" lemma="kłajpedzki">kłajpedzkiego</w>
+               </name>
+               <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="były">były</w>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="podoficer">podoficer</w>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Kinder">Kinder</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="uciec">uciekł</w>
+               <w ana="nkjp:prep:gen:wok" msd="UPosTag=ADP" lemma="z">ze</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="szpital">szpitala</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="Kowno">Kownie</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:inst:m3" msd="UPosTag=NOUN" lemma="pociąg">pociągiem</w>
+               <w ana="nkjp:adj:sg:inst:m3:pos" msd="UPosTag=ADJ" lemma="towarowy">towarowym</w>
+               <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="przybyć">przybył</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="Kłajpeda">Kłajpedy</w>
+               </name>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="stąd">stąd</w>
+               <w ana="nkjp:prep:acc:nwok" msd="UPosTag=ADP" lemma="przez">przez</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="Ruśnia">Ruśnię</w>
+               </name>
+               <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="umknąć">umknął</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="Niemcy">Niemiec</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:pcon:imperf" msd="UPosTag=VERB" lemma="zatrzymywać">zatrzymując</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="Tylża">Tylży</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

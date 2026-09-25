@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1924-10-01-1-pazdziernika-1924-r-KW-20.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Kradzież maszyny, Kurjer Wileński, R. 1, 1 października 1924 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Kradzież maszyny, Kurjer Wileński, R. 1", 1 października 1924 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, R. 1</title>
+               <title level="a">Kradzież maszyny</title>
+               <publisher>Drukarnia „Zorza” Wilno</publisher>
+               <date when="1924-10-01">1 października 1924 r.</date>
+               <biblScope unit="issue">79</biblScope>
+               <idno type="source">Biblioteka Narodowa</idno>
+               <idno type="URI" subtype="URL">https://polona.pl/item-view/e632a3cf-4de5-48f6-b913-98b470a10456?page=0</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="pani">P</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:dat:f" msd="UPosTag=NOUN" lemma="Mara">Marji</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:dat:f" msd="UPosTag=NOUN" lemma="Łazarewicz">Łazarewicz</w>
+               </name>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="mieszkanie">mieszkania</w>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="przy">przy</w>
+               <name type="LOC">
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="ulica">ul</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+                  <w ana="nkjp:adj:sg:loc:f:pos" msd="UPosTag=ADJ" lemma="prosty">Prostej</w>
+               </name>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="5">5</w>
+               <w ana="nkjp:imps:perf" msd="UPosTag=VERB" lemma="ukraść">ukradziono</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="maszyna">maszynę</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="szycie">szycia</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="firma">firmy</w>
+               <name type="ORG">
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">„</pc>
+                  <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="Singer">Singer</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">”</pc>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="wartość">wartości</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="100">100</w>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="złoty">zł</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1939-08-21-21-sierpnia-1939-r-KW-19.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Pomoc ofiarom klęsk i w pow. brasławskim, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński, 21 sierpnia 1939 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Pomoc ofiarom klęsk i w pow. brasławskim, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński", 21 sierpnia 1939 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński</title>
+               <title level="a">Pomoc ofiarom klęsk i w pow. brasławskim</title>
+               <publisher>Drukarnia „Znicz“ Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1939-08-21">21 sierpnia 1939 r.</date>
+               <biblScope unit="issue">230</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">https://jbc.bj.uj.edu.pl/dlibra/publication/282321/edition/269802/content</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <w ana="nkjp:praet:sg:n:perf" msd="UPosTag=VERB" lemma="odbyć">Odbyło</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="Brasław">Brasławiu</w>
+               </name>
+               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="zebranie">zebranie</w>
+               <w ana="nkjp:adj:sg:nom:n:pos" msd="UPosTag=ADJ" lemma="organizacyjny">organizacyjne</w>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="komitet">Komitetu</w>
+                  <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="powiatowy">Powiatowego</w>
+                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="pomoc">Pomocy</w>
+                  <w ana="nkjp:subst:pl:dat:m1" msd="UPosTag=NOUN" lemma="poszkodowany">poszkodowanym</w>
+               </name>
+               <w ana="nkjp:prep:acc:nwok" msd="UPosTag=ADP" lemma="przez">przez</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="burza">burzę</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <name type="MISC">
+                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="dzień">dniu</w>
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1">1</w>
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="sierpień">sierpnia</w>
+               </name>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rb">rb</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:adj:sg:loc:n:pos" msd="UPosTag=ADJ" lemma="który">którym</w>
+               <w ana="nkjp:imps:perf" msd="UPosTag=VERB" lemma="omówić">omówiono</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="sprawa">sprawę</w>
+               <w ana="nkjp:ger:sg:gen:n:perf:aff" msd="UPosTag=NOUN" lemma="przyjść">przyjścia</w>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="pomoc">pomocą</w>
+               <w ana="nkjp:prep:inst:wok" msd="UPosTag=ADP" lemma="przed">przede</w>
+               <w ana="nkjp:subst:sg:inst:n:ncol" msd="UPosTag=NOUN" lemma="wszystko">wszystkim</w>
+               <w ana="nkjp:prep:acc:nwok" msd="UPosTag=ADP" lemma="przez">przez</w>
+               <w ana="nkjp:ger:sg:acc:n:perf:aff" msd="UPosTag=NOUN" lemma="przeprowadzić">przeprowadzenie</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="zbiórka">zbiórki</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="natura">naturze</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="wśród">wśród</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="rolnik">rolników</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="samoopodatkowanie">samoopodatkowania</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="sfera">sfer</w>
+               <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="pozarolniczy">pozarolniczych</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="oraz">oraz</w>
+               <w ana="nkjp:ger:sg:gen:n:perf:aff" msd="UPosTag=NOUN" lemma="zwrócić">zwrócenia</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="organizacja">organizacji</w>
+               <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="społeczny">społecznych</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="by">by</w>
+               <w ana="nkjp:adj:pl:acc:m3:pos" msd="UPosTag=ADJ" lemma="wszelki">wszelkie</w>
+               <w ana="nkjp:subst:pl:acc:m3" msd="UPosTag=NOUN" lemma="dochód">dochody</w>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="impreza">imprez</w>
+               <w ana="nkjp:praet:pl:f:perf" msd="UPosTag=VERB" lemma="przeznaczyć">przeznaczyły</w>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="pomoc">pomoc</w>
+               <w ana="nkjp:subst:pl:dat:m1" msd="UPosTag=NOUN" lemma="poszkodowany">poszkodowanym</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <w ana="nkjp:imps:perf" msd="UPosTag=VERB" lemma="wyłonić">Wyłoniono</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="również">również</w>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="wydział">Wydział</w>
+                  <w ana="nkjp:adj:sg:acc:m3:pos" msd="UPosTag=ADJ" lemma="wykonawczy">Wykonawczy</w>
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="komitet">Komitetu</w>
+               </name>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="skład">składzie</w>
+               <w ana="nkjp:adj:sg:loc:m3:pos" msd="UPosTag=ADJ" lemma="następujący">następującym</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">:</pc>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="prezes">Prezes</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">–</pc>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Bohdan">Bohdan</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Wendorff">Wendorff</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">–</pc>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="starosta">starosta</w>
+               <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="powiatowy">powiatowy</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="wiceprezes">wiceprezes</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">–</pc>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Eliasz">Eliasz</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Trabszo">Trabszo</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="sekretarz">sekretarz</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">–</pc>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Janusz">Janusz</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Beynar">Beynar</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="skarbnik">skarbnik</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">–</pc>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Jan">Jan</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Ruszkowski">Ruszkowski</w>
+               </name>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="człent">czł</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="prezydium">prezydium</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">–</pc>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Stanisław">Stanisław</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Jeśman">Jeśman</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">W</w>
+               <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="czas">czasie</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="posiedzenie">posiedzenia</w>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="prezes">Prezes</w>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="oddział">Oddziału</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="P.">P.</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="C.">C.</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="K">K</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               </name>
+               <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="zadeklarować">zadeklarował</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="100">100</w>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="złoty">zł</w>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:ger:sg:acc:n:imperf:aff" msd="UPosTag=NOUN" lemma="dożywiać">dożywianie</w>
+               <w ana="nkjp:subst:pl:gen:n:col" msd="UPosTag=NOUN" lemma="dziecko">dzieci</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:subst:pl:loc:f" msd="UPosTag=NOUN" lemma="miejscowość">miejscowościach</w>
+               <w ana="nkjp:ppas:pl:loc:f:perf:aff" msd="UPosTag=ADJ" lemma="dotknąć">dotkniętych</w>
+               <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="klęska">klęską</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="gradobicie">gradobicia</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

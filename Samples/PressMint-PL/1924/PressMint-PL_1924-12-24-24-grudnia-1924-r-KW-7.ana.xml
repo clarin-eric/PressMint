@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1924-12-24-24-grudnia-1924-r-KW-7.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Bezrobocie w Szawlach, Kurjer Wileński, R. 1, 24 grudnia 1924 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Bezrobocie w Szawlach, Kurjer Wileński, R. 1", 24 grudnia 1924 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, R. 1</title>
+               <title level="a">Bezrobocie w Szawlach</title>
+               <publisher>Drukarnia „Zorza” Wilno</publisher>
+               <date when="1924-12-24">24 grudnia 1924 r.</date>
+               <biblScope unit="issue">149</biblScope>
+               <idno type="source">Biblioteka Narodowa</idno>
+               <idno type="URI" subtype="URL">https://polona.pl/preview/43e86bdb-5520-4cdc-9c9d-c66c67e287ab</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <name type="ORG">
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">„</pc>
+                  <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="Soc">Soc</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="Dem">Dem</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">"</pc>
+               </name>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="zamieszczać">zamieszcza</w>
+               <w ana="nkjp:adj:sg:acc:f:pos" msd="UPosTag=ADJ" lemma="następujący">następującą</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="depesza">depeszę</w>
+               <name type="ORG">
+                  <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="szawelski">Szawelskiego</w>
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="komitet">Komitetu</w>
+                  <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="bezrobotny">Bezrobotnych</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:ppas:sg:acc:f:perf:aff" msd="UPosTag=ADJ" lemma="skierować">skierowaną</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="prezes">Prezesa</w>
+               <name type="ORG">
+                  <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="minister">Ministrów</w>
+               </name>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:subst:pl:inst:m3" msd="UPosTag=NOUN" lemma="odpis">odpisami</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="marszalek">Marszalka</w>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="sejm">Sejmu</w>
+               </name>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <name type="ORG">
+                  <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="sejmowy">Sejmowej</w>
+                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="frakcja">Frakcji</w>
+                  <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="socjaldemokratyczny">Socjaldemokratycznej</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="ponieważ">Ponieważ</w>
+               <w ana="nkjp:subst:sg:inst:m3" msd="UPosTag=NOUN" lemma="obowiązek">obowiązkiem</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="państwo">państwa</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="być">jest</w>
+               <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="opieka">opieka</w>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="nad">nad</w>
+               <w ana="nkjp:subst:pl:inst:m1" msd="UPosTag=NOUN" lemma="bezrobotny">bezrobotnymi</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="komitet">Komitet</w>
+                  <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="bezrobotny">Bezrobotnych</w>
+               </name>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="Szawle">Szawlach</w>
+               </name>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="moc">mocy</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="uchwała">uchwał</w>
+               <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="zebranie">zebrań</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="bezrobotny">bezrobotnych</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="prosić">prosi</w>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="o">o</w>
+               <w ana="nkjp:ger:sg:acc:n:perf:aff" msd="UPosTag=NOUN" lemma="zorganizować">zorganizowanie</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:adj:sg:loc:m3:sup" msd="UPosTag=ADJ" lemma="prędki">najprędszym</w>
+               <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="czas">czasie</w>
+               <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="roboty">robót</w>
+               <w ana="nkjp:adj:pl:gen:n:pos" msd="UPosTag=ADJ" lemma="publiczny">publicznych</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="ten">tego</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="czas">czasu</w>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="wyznaczyć">wyznaczyć</w>
+               <w ana="nkjp:subst:pl:acc:f" msd="UPosTag=NOUN" lemma="suma">sumy</w>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:ger:sg:acc:n:perf:aff" msd="UPosTag=NOUN" lemma="zaopatrzyć">zaopatrzenie</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="bezrobotny">bezrobotnych</w>
+               <w ana="nkjp:prep:acc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="żywność">żywność</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="opał">opał</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="zmniejszyć">zmniejszyć</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="drożyzna">drożyznę</w>
+               <w ana="nkjp:prep:acc:nwok" msd="UPosTag=ADP" lemma="przez">przez</w>
+               <w ana="nkjp:ger:sg:acc:n:perf:aff" msd="UPosTag=NOUN" lemma="znieść">zniesienie</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="cło">cła</w>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:subst:pl:acc:m3" msd="UPosTag=NOUN" lemma="produkt">produkty</w>
+               <w ana="nkjp:adj:pl:acc:m3:pos" msd="UPosTag=ADJ" lemma="spożywczy">spożywcze</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:pl:acc:m3" msd="UPosTag=NOUN" lemma="artykuł">artykuły</w>
+               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="pierwszy">pierwszej</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="potrzeba">potrzeby</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="ograniczyć">ograniczyć</w>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="wywóz">wywóz</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="zboże">zboża</w>
+               <pc ana="nkjp:conj" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="ziemniak">ziemniaków</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="usunąć">usunąć</w>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="wyzysk">wyzysk</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="bezrobotny">bezrobotnych</w>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="przy">przy</w>
+               <w ana="nkjp:ger:sg:loc:n:imperf:aff" msd="UPosTag=NOUN" lemma="wywozić">wywożeniu</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="Francja">Francji</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">W</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="Szawle">Szawlach</w>
+               </name>
+               <w ana="nkjp:imps:perf" msd="UPosTag=VERB" lemma="zarejestrować">zarejestrowano</w>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="góra">górą</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="500">500</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="bezrobotny">bezrobotnych</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="po">Po</w>
+               <w ana="nkjp:ger:sg:loc:n:perf:aff" msd="UPosTag=NOUN" lemma="ukończyć">ukończeniu</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="sezon">sezonu</w>
+               <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="budowlany">budowlanego</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="bezrobotny">bezrobotnych</w>
+               <w ana="nkjp:bedzie:sg:ter:imperf" msd="UPosTag=VERB" lemma="być">będzie</w>
+               <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="tysiąc">tysiąc</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:subst:pl:inst:f" msd="UPosTag=NOUN" lemma="rodzina">rodzinami</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="zaś">zaś</w>
+               <w ana="nkjp:num:pl:nom:m3:rec:ncol" msd="UPosTag=NUM" lemma="kilka">kilka</w>
+               <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="tysiąc">tysięcy</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="człowiek">ludzi</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:adj:pl:dat:m1:pos" msd="UPosTag=ADJ" lemma="który">którym</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="grozić">grozi</w>
+               <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="głód">głód</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

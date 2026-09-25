@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1924-11-12-12-listopada-1924-r-KW-10.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Nadzieja powrotu Gorkiego, Kurjer Wileński, R. 1, 12 listopada 1924 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Nadzieja powrotu Gorkiego, Kurjer Wileński, R. 1", 12 listopada 1924 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, R. 1</title>
+               <title level="a">Nadzieja powrotu Gorkiego</title>
+               <publisher>Drukarnia „Zorza” Wilno</publisher>
+               <date when="1924-11-12">12 listopada 1924 r.</date>
+               <biblScope unit="issue">114</biblScope>
+               <idno type="source">Biblioteka Narodowa</idno>
+               <idno type="URI" subtype="URL">https://polona.pl/item-view/8d5e2896-70de-4ae2-a3c2-bb27a4485ae3?page=0</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="Moskwa">MOSKWA</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="spodziewać">Spodziewają</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="tu">tu</w>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="powszechnie">powszechnie</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="powrót">powrotu</w>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Gorki">Gorkiego</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="o">o</w>
+               <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="co">czem</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="nawet">nawet</w>
+               <w ana="nkjp:imps:perf" msd="UPosTag=VERB" lemma="dać">dano</w>
+               <w ana="nkjp:inf:imperf" msd="UPosTag=VERB" lemma="znać">znać</w>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="Włochy">Włoch</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="gdzie">gdzie</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="przebywać">przebywa</w>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="obecnie">obecnie</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

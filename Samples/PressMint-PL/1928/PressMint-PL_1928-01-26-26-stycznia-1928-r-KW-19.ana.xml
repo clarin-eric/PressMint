@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1928-01-26-26-stycznia-1928-r-KW-19.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Zamordowanie siostrzenicy Papieża, Kurjer Wileński : Niezależny Organ Demokratyczny, 26 stycznia 1928 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Zamordowanie siostrzenicy Papieża, Kurjer Wileński : Niezależny Organ Demokratyczny", 26 stycznia 1928 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński : Niezależny Organ Demokratyczny</title>
+               <title level="a">Zamordowanie siostrzenicy Papieża</title>
+               <publisher>Drukarnia „Pax” Wilno</publisher>
+               <date when="1928-01-26">26 stycznia 1928 r.</date>
+               <biblScope unit="issue">20</biblScope>
+               <idno type="source">Biblioteka Narodowa</idno>
+               <idno type="URI" subtype="URL">https://polona.pl/preview/a734eb6b-2d76-453b-8ef1-b0aa07bab8d0</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="Berlin">BERLIN</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <name type="MISC">
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="25">25</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+                  <w ana="nkjp:romandig" msd="UPosTag=X" lemma="I">I</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Pat">Pat</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
+               <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="prasa">Prasa</w>
+               <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="tutejszy">tutejsza</w>
+               <w ana="nkjp:praet:sg:f:perf" msd="UPosTag=VERB" lemma="otrzymać">otrzymała</w>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="Medjolan">Medjolanu</w>
+               </name>
+               <w ana="nkjp:subst:pl:acc:m3" msd="UPosTag=NOUN" lemma="szczegół">szczegóły</w>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="o">o</w>
+               <w ana="nkjp:ger:sg:loc:n:perf:aff" msd="UPosTag=NOUN" lemma="zamordować">zamordowaniu</w>
+               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="tam">tam</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="siostrzenica">siostrzenicy</w>
+               <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="papież">Papieża</w>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="Angelika">Angeliki</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="Ratti">Ratti</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="zbrodnia">Zbrodni</w>
+               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="ten">tej</w>
+               <w ana="nkjp:praet:pl:m1:perf" msd="UPosTag=VERB" lemma="dokonać">dokonali</w>
+               <w ana="nkjp:subst:pl:nom:m1" msd="UPosTag=NOUN" lemma="włamywacz">włamywacze</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:subst:sg:dat:f" msd="UPosTag=NOUN" lemma="policja">Policji</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="nie">nie</w>
+               <w ana="nkjp:praet:sg:n:perf" msd="UPosTag=VERB" lemma="udać">udało</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="dotychczas">dotychczas</w>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="odnaleść">odnaleść</w>
+               <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="ślad">śladów</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="zbrodniarz">zbrodniarzy</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:ppas:sg:nom:f:perf:aff" msd="UPosTag=ADJ" lemma="zamordować">Zamordowana</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="być">jest</w>
+               <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="córka">córką</w>
+               <w ana="nkjp:adj:sg:gen:m1:pos" msd="UPosTag=ADJ" lemma="znany">znanego</w>
+               <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="przemysłowiec">przemysłowca</w>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:gen:m1:pos" msd="UPosTag=ADJ" lemma="medjolański">medjolańskiego</w>
+               </name>
+               <w ana="nkjp:adj:sg:gen:m1:pos" msd="UPosTag=ADJ" lemma="jedyny">jedynego</w>
+               <w ana="nkjp:pact:sg:gen:m1:imperf:aff" msd="UPosTag=ADJ" lemma="żyć">żyjącego</w>
+               <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="brat">brata</w>
+               <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="papież">Papieża</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

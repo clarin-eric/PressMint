@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1938-12-21-21-grudnia-1938-r-KW-11.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Incydent graniczny słowacko-węgierski, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński, 21 grudnia 1938 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Incydent graniczny słowacko-węgierski, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński", 21 grudnia 1938 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński</title>
+               <title level="a">Incydent graniczny słowacko-węgierski</title>
+               <publisher>Drukarnia „Znicz” Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1938-12-21">21 grudnia 1938 r.</date>
+               <biblScope unit="issue">350</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">https://jbc.bj.uj.edu.pl/dlibra/publication/281665/edition/269175/content</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:nom:n:pt" msd="UPosTag=NOUN" lemma="Koszyce">KOSZYCE</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Pał">Pał</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="na">Na</w>
+               <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="odcinek">odcinku</w>
+               <w ana="nkjp:adj:sg:loc:m3:pos" msd="UPosTag=ADJ" lemma="graniczny">granicznym</w>
+               <w ana="nkjp:prep:inst" msd="UPosTag=ADP" lemma="pomiędzy">pomiędzy</w>
+               <w ana="nkjp:subst:pl:inst:f" msd="UPosTag=NOUN" lemma="miejscowość">miejscowościami</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="Slamec">Slamec</w>
+               </name>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="Kuźnica">Kuźnica</w>
+               </name>
+               <w ana="nkjp:praet:sg:n:perf" msd="UPosTag=VERB" lemma="dojść">doszło</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <w ana="nkjp:adj:sg:gen:n:pos" msd="UPosTag=ADJ" lemma="krwawy">krwawego</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="starcie">starcia</w>
+               <w ana="nkjp:prep:inst" msd="UPosTag=ADP" lemma="między">między</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:inst:n:pt" msd="UPosTag=NOUN" lemma="Węgry">Węgrami</w>
+               </name>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">a</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:inst:n:pt" msd="UPosTag=NOUN" lemma="Słowak">Słowakami</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="po">Po</w>
+               <w ana="nkjp:num:pl:loc:f:congr:ncol" msd="UPosTag=NUM" lemma="oba">obu</w>
+               <w ana="nkjp:subst:pl:loc:f" msd="UPosTag=NOUN" lemma="strona">stronach</w>
+               <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="być">są</w>
+               <w ana="nkjp:ppas:pl:nom:m1:perf:aff" msd="UPosTag=ADJ" lemma="zabić">zabici</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:adj:pl:nom:m1:pos" msd="UPosTag=ADJ" lemma="ranny">ranni</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="Praga">PRAGA</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="Pat">Pat</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="według">Według</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="wiadomość">wiadomości</w>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="koło">kół</w>
+               <w ana="nkjp:adj:pl:gen:n:pos" msd="UPosTag=ADJ" lemma="urzędowy">urzędowych</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="incydent">incydent</w>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="pogranicze">pograniczu</w>
+               <name type="LOC">
+                  <w ana="nkjp:adja" msd="UPosTag=ADJ" lemma="węgierski">węgiersko</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">-</pc>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:loc:n:pos" msd="UPosTag=ADJ" lemma="słowacki">słowackim</w>
+               </name>
+               <w ana="nkjp:praet:sg:m3:perf" msd="UPosTag=VERB" lemma="zostać">został</w>
+               <w ana="nkjp:ppas:sg:nom:m3:perf:aff" msd="UPosTag=ADJ" lemma="zlikwidować">zlikwidowany</w>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

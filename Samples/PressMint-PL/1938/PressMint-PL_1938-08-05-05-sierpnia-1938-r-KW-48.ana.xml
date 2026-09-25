@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1938-08-05-05-sierpnia-1938-r-KW-48.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Nowe punkty celne na pograniczu polsko-litewskim, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński, R. 15, 05 sierpnia 1938 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Nowe punkty celne na pograniczu polsko-litewskim, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński, R. 15", 05 sierpnia 1938 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński, R. 15</title>
+               <title level="a">Nowe punkty celne na pograniczu polsko-litewskim</title>
+               <publisher>Drukarnia „Znicz” Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1938-08-05">05 sierpnia 1938 r.</date>
+               <biblScope unit="issue">213</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński. 1938, nr 213 - Jagiellońska Biblioteka Cyfrowa</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">W</w>
+               <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="związek">związku</w>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:ger:sg:inst:n:imperf:aff" msd="UPosTag=NOUN" lemma="nawiązywać">nawiązywaniem</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="komunikacja">komunikacji</w>
+               <w ana="nkjp:prep:inst" msd="UPosTag=ADP" lemma="między">między</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="Polska">Polską</w>
+               </name>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">a</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="Litwa">Litwą</w>
+               </name>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="pogranicze">pograniczu</w>
+               <name type="LOC">
+                  <w ana="nkjp:adja" msd="UPosTag=ADJ" lemma="polski">polsko</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">-</pc>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:loc:n:pos" msd="UPosTag=ADJ" lemma="litewski">litewskim</w>
+               </name>
+               <w ana="nkjp:ppas:pl:nom:m3:imperf:aff" msd="UPosTag=ADJ" lemma="zakładać">zakładane</w>
+               <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="być">są</w>
+               <w ana="nkjp:adj:pl:nom:m3:pos" msd="UPosTag=ADJ" lemma="nowy">nowe</w>
+               <w ana="nkjp:subst:pl:nom:m3" msd="UPosTag=NOUN" lemma="punkt">punkty</w>
+               <w ana="nkjp:adj:pl:nom:m3:pos" msd="UPosTag=ADJ" lemma="celny">celne</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">a</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="mianowicie">mianowicie</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">:</pc>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="Dąbie">Dąbiach</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="Orane">Oranach</w>
+               </name>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="Skirmuciszki">Skirmuciszkach</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

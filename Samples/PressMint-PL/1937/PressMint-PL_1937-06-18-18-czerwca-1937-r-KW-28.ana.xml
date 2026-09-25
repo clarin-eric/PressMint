@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1937-06-18-18-czerwca-1937-r-KW-28.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Kleck ogarnięty pożarem, Kurjer Wileński wraz z Kurjerem Wileńsko-Nowogródzkim, 18 czerwca 1937 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Kleck ogarnięty pożarem, Kurjer Wileński wraz z Kurjerem Wileńsko-Nowogródzkim", 18 czerwca 1937 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński wraz z Kurjerem Wileńsko-Nowogródzkim</title>
+               <title level="a">Kleck ogarnięty pożarem</title>
+               <publisher>Drukarnia „Znicz ” Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1937-06-18">18 czerwca 1937 r.</date>
+               <biblScope unit="issue">165</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">https://jbc.bj.uj.edu.pl/dlibra/publication/280539/edition/268128/content</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">W</w>
+               <name type="MISC">
+                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="dzień">dniu</w>
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="17">17</w>
+               </name>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="bm">bm</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:ppas:pl:gen:f:perf:neg" msd="UPosTag=ADJ" lemma="ustalić">nieustalonych</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="przyczyna">przyczyn</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="miasto">m</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="Klecko">Klecku</w>
+               </name>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="koło">koło</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="Nieśwież">Nieświeża</w>
+               </name>
+               <w ana="nkjp:praet:sg:m3:perf" msd="UPosTag=VERB" lemma="wybuchnąć">wybuchł</w>
+               <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="pożar">pożar</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:adj:sg:nom:m3:pos" msd="UPosTag=ADJ" lemma="który">który</w>
+               <w ana="nkjp:praet:sg:m3:perf" msd="UPosTag=VERB" lemma="ogarnąć">ogarnął</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="niemal">niemal</w>
+               <w ana="nkjp:adj:sg:acc:n:pos" msd="UPosTag=ADJ" lemma="cały">całe</w>
+               <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="miasteczko">miasteczko</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="pastwa">Pastwą</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="pożar">pożaru</w>
+               <w ana="nkjp:praet:sg:n:perf" msd="UPosTag=VERB" lemma="paść">padło</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="około">około</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="150">150</w>
+               <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="dom">domów</w>
+               <w ana="nkjp:adj:pl:gen:m3:pos" msd="UPosTag=ADJ" lemma="mieszkalny">mieszkalnych</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="około">około</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="300">300</w>
+               <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="budynek">budynków</w>
+               <w ana="nkjp:adj:pl:gen:m3:pos" msd="UPosTag=ADJ" lemma="gospodarczy">gospodarczych</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:praet:pl:f:perf" msd="UPosTag=VERB" lemma="spalić">Spaliły</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:adj:pl:nom:f:pos" msd="UPosTag=ADJ" lemma="cały">całe</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:nom:f" msd="UPosTag=NOUN" lemma="ulica">ulice</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">:</pc>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="pankratowski">Pankratowska</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="szoferski">Szoferska</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="sowiński">Sowińska</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="zawalny">Zawalna</w>
+               </name>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="częściowo">częściowo</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="Rynek">Rynek</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="pożar">Pożar</w>
+               <w ana="nkjp:praet:sg:m3:perf" msd="UPosTag=VERB" lemma="strawić">strawił</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="m.in">m.in</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="dom">dom</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:adj:sg:loc:m3:pos" msd="UPosTag=ADJ" lemma="który">którym</w>
+               <w ana="nkjp:praet:sg:m3:imperf" msd="UPosTag=VERB" lemma="mieścić">mieścił</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="urząd">urząd</w>
+               <w ana="nkjp:adj:sg:nom:m3:pos" msd="UPosTag=ADJ" lemma="pocztowy">pocztowy</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="budynek">budynek</w>
+               <name type="ORG">
+                  <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="chrześcijański">Chrześcijańskiego</w>
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="bank">Banku</w>
+                  <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="spółdzielczy">Spółdzielczego</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">;</pc>
+               <w ana="nkjp:praet:sg:f:perf" msd="UPosTag=VERB" lemma="spłonąć">spłonęła</w>
+               <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="cerkiew">cerkiew</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="synagoga">synagoga</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="remiza">remiza</w>
+               <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="strażacki">strażacka</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="t.pny">t.p</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">W</w>
+               <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="akcja">akcji</w>
+               <w ana="nkjp:adj:sg:loc:f:pos" msd="UPosTag=ADJ" lemma="ratowniczy">ratowniczej</w>
+               <w ana="nkjp:praet:pl:f:perf" msd="UPosTag=VERB" lemma="wziąć">wzięły</w>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="udział">udział</w>
+               <w ana="nkjp:subst:pl:nom:f" msd="UPosTag=NOUN" lemma="straż">straże</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">:</pc>
+               <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="miejscowy">miejscowa</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="nieświeski">nieświeska</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="baranowicki">baranowicka</w>
+               </name>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="oraz">oraz</w>
+               <w ana="nkjp:subst:pl:nom:f" msd="UPosTag=NOUN" lemma="straż">straże</w>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="okoliczny">okolicznych</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="wioska">wiosek</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">W</w>
+               <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="czas">czasie</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="akcja">akcji</w>
+               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="ratunkowy">ratunkowej</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="16">16</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="osoba">osób</w>
+               <w ana="nkjp:praet:sg:n:perf" msd="UPosTag=VERB" lemma="odnieść">odniosło</w>
+               <w ana="nkjp:subst:pl:acc:n:ncol" msd="UPosTag=NOUN" lemma="oparzenie">oparzenia</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:subst:pl:nom:f" msd="UPosTag=NOUN" lemma="strata">Straty</w>
+               <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="wynosić">wynoszą</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="około">około</w>
+               <w ana="nkjp:num:sg:acc:m3:rec" msd="UPosTag=NUM" lemma="półtora">półtora</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="milion">miliona</w>
+               <w ana="nkjp:subst:pl:gen:m2" msd="UPosTag=NOUN" lemma="złoty">złotych</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="wobec">Wobec</w>
+               <w ana="nkjp:ger:sg:gen:n:perf:aff" msd="UPosTag=NOUN" lemma="spalić">spalenia</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="urząd">urzędu</w>
+               <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="pocztowy">pocztowego</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="Klecko">Klecku</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="szczegółowy">szczegółowych</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="informacja">informacji</w>
+               <w ana="nkjp:bedzie:pl:pri:imperf" msd="UPosTag=VERB" lemma="być">będziemy</w>
+               <w ana="nkjp:praet:pl:m1:imperf" msd="UPosTag=VERB" lemma="móc">mogli</w>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="udzielić">udzielić</w>
+               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="jutro">jutro</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

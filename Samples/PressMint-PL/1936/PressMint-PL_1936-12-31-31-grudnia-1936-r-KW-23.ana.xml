@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1936-12-31-31-grudnia-1936-r-KW-23.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Nowy herb Katowic, Kurjer Wileński, 31 grudnia 1936 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Nowy herb Katowic, Kurjer Wileński", 31 grudnia 1936 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński</title>
+               <title level="a">Nowy herb Katowic</title>
+               <publisher>Drukarnia „Znicz” Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1936-12-31">31 grudnia 1936 r.</date>
+               <biblScope unit="issue">358</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">https://jbc.bj.uj.edu.pl/dlibra/publication/276078/edition/263969/content</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="rada">Rada</w>
+                  <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="miejski">Miejska</w>
+               </name>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="miasto">miasta</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="Katowice">Katowic</w>
+               </name>
+               <w ana="nkjp:praet:sg:f:perf" msd="UPosTag=VERB" lemma="zdecydować">zdecydowała</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="sprawa">sprawę</w>
+               <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="nowy">nowego</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="herb">herbu</w>
+               <w ana="nkjp:adj:sg:gen:n:pos" msd="UPosTag=ADJ" lemma="swój">swego</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="miasto">miasta</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:ppas:sg:nom:m3:imperf:aff" msd="UPosTag=ADJ" lemma="reprodukować">Reprodukowany</w>
+               <w ana="nkjp:prep:acc:nwok" msd="UPosTag=ADP" lemma="przez">przez</w>
+               <w ana="nkjp:ppron12:pl:acc:m1:pri" msd="UPosTag=PRON" lemma="my">nas</w>
+               <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="herb">herb</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="przedstawiać">przedstawia</w>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:adj:sg:loc:n:pos" msd="UPosTag=ADJ" lemma="złoty">złotym</w>
+               <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="tło">tle</w>
+               <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="urządzenie">urządzenie</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="młotownia">młotowni</w>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:adj:sg:inst:n:pos" msd="UPosTag=ADJ" lemma="zębaty">zębatym</w>
+               <w ana="nkjp:subst:sg:inst:n:ncol" msd="UPosTag=NOUN" lemma="koło">kołem</w>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="prawy">prawej</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="strona">strony</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:subst:sg:inst:n:ncol" msd="UPosTag=NOUN" lemma="kowadło">kowadłem</w>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="lewy">lewej</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="fundament">Fundament</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="młotownia">młotowni</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="tworzyć">tworzy</w>
+               <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="belka">belka</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="kolor">koloru</w>
+               <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="brunatny">brunatnego</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="pod">Pod</w>
+               <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="belka">belką</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="znajdować">znajduje</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="pas">pas</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="kolor">koloru</w>
+               <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="niebieski">niebieskiego</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:pact:sg:nom:m3:imperf:aff" msd="UPosTag=ADJ" lemma="symbolizować">symbolizujący</w>
+               <w ana="nkjp:adj:sg:acc:m3:pos" msd="UPosTag=ADJ" lemma="historyczny">historyczny</w>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="młot">młot</w>
+               <w ana="nkjp:adj:sg:acc:m3:pos" msd="UPosTag=ADJ" lemma="wodny">wodny</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:adj:sg:nom:m3:pos" msd="UPosTag=ADJ" lemma="jaki">jaki</w>
+               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="niegdyś">niegdyś</w>
+               <w ana="nkjp:praet:sg:m3:imperf" msd="UPosTag=VERB" lemma="znajdować">znajdował</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="kuźnia">kuźni</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="gmina">gminy</w>
+               </name>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="bogucicki">Bogucickiej</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="który">której</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:nom:n:pt" msd="UPosTag=NOUN" lemma="Katowice">Katowice</w>
+               </name>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:subst:pl:loc:m3" msd="UPosTag=NOUN" lemma="początek">początkach</w>
+               <w ana="nkjp:adj:sg:gen:n:pos" msd="UPosTag=ADJ" lemma="swój">swego</w>
+               <w ana="nkjp:ger:sg:gen:n:imperf:aff" msd="UPosTag=NOUN" lemma="istnieć">istnienia</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:praet:pl:n:imperf" msd="UPosTag=VERB" lemma="należeć">należały</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="oraz">oraz</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="rzeczka">rzeczkę</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="Rawa">Rawę</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:pact:sg:acc:f:imperf:aff" msd="UPosTag=ADJ" lemma="płynąć">płynącą</w>
+               <w ana="nkjp:prep:acc:nwok" msd="UPosTag=ADP" lemma="przez">przez</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:pl:acc:n:pt" msd="UPosTag=NOUN" lemma="Katowice">Katowice</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

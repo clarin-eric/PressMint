@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1924-10-01-1-pazdziernika-1924-r-KW-10.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Oberwanie się chmury we Francji, Kurjer Wileński, R. 1, 1 października 1924 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Oberwanie się chmury we Francji, Kurjer Wileński, R. 1", 1 października 1924 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, R. 1</title>
+               <title level="a">Oberwanie się chmury we Francji</title>
+               <publisher>Drukarnia „Zorza” Wilno</publisher>
+               <date when="1924-10-01">1 października 1924 r.</date>
+               <biblScope unit="issue">79</biblScope>
+               <idno type="source">Biblioteka Narodowa</idno>
+               <idno type="URI" subtype="URL">https://polona.pl/item-view/e632a3cf-4de5-48f6-b913-98b470a10456?page=0</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="Paryż">PARYŻ</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <w ana="nkjp:subst:pl:nom:f" msd="UPosTag=NOUN" lemma="burza">Burze</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:ger:sg:nom:n:perf:aff" msd="UPosTag=NOUN" lemma="oberwać">oberwanie</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="chmura">chmury</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:adj:sg:loc:f:pos" msd="UPosTag=ADJ" lemma="południowy">południowej</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="Francja">Francji</w>
+               </name>
+               <w ana="nkjp:praet:pl:n:perf" msd="UPosTag=VERB" lemma="wyrządzić">wyrządziły</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="szkoda">szkód</w>
+               <w ana="nkjp:subst:sg:inst:m3" msd="UPosTag=NOUN" lemma="ogół">ogółem</w>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:num:pl:acc:m3:rec:ncol" msd="UPosTag=NUM" lemma="piętnaście">piętnaście</w>
+               <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="miljon">miljonów</w>
+               <w ana="nkjp:subst:pl:gen:m2" msd="UPosTag=NOUN" lemma="frank">franków</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

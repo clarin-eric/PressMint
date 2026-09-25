@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1938-12-21-21-grudnia-1938-r-KW-7.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Nowy diament „olbrzym”, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński, 21 grudnia 1938 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Nowy diament „olbrzym”, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński", 21 grudnia 1938 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński</title>
+               <title level="a">Nowy diament „olbrzym”</title>
+               <publisher>Drukarnia „Znicz” Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1938-12-21">21 grudnia 1938 r.</date>
+               <biblScope unit="issue">350</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">https://jbc.bj.uj.edu.pl/dlibra/publication/281665/edition/269175/content</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="porto">PORTO</w>
+               <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Alegro">ALEGRO</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="Pat">Pat</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="donosić">Donoszą</w>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="Minase">Minase</w>
+                  <w ana="nkjp:xxs:gen" msd="UPosTag=X" lemma="Geraes">Geraes</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="nad">nad</w>
+               <w ana="nkjp:subst:sg:inst:m3" msd="UPosTag=NOUN" lemma="strumyk">strumykiem</w>
+               <name type="LOC">
+                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Santo">Santo</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Antonio">Antonio</w>
+               </name>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="powiat">powiecie</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="Coromandel">Coromandel</w>
+               </name>
+               <w ana="nkjp:imps:perf" msd="UPosTag=VERB" lemma="znaleźć">znaleziono</w>
+               <w ana="nkjp:adj:sg:acc:m3:pos" msd="UPosTag=ADJ" lemma="piękny">piękny</w>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="diament">diament</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:pact:sg:acc:m3:imperf:aff" msd="UPosTag=ADJ" lemma="ważyć">ważący</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="26">26</w>
+               <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="karat">karatów</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
+               <w ana="nkjp:ppas:sg:acc:m3:perf:aff" msd="UPosTag=ADJ" lemma="sprzedać">sprzedany</w>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="za">za</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="230">230</w>
+               <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="tysiąc">tysięcy</w>
+               <w ana="nkjp:subst:pl:gen:m2" msd="UPosTag=NOUN" lemma="milrejs">milrejsów</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="diament">Diament</w>
+               <w ana="nkjp:adj:sg:acc:m3:pos" msd="UPosTag=ADJ" lemma="ten">ten</w>
+               <w ana="nkjp:imps:perf" msd="UPosTag=VERB" lemma="znaleźć">znaleziono</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="niedaleko">niedaleko</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="miejsce">miejsca</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="gdzie">gdzie</w>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="niedawno">niedawno</w>
+               <w ana="nkjp:imps:perf" msd="UPosTag=VERB" lemma="wyłowić">wyłowiono</w>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="diament">diament</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">„</pc>
+               <name type="PER">
+                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Getulio">Getulio</w>
+               </name>
+               <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Vargas">Vargas</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">"</pc>
+               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="ogromny">ogromnej</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="wartość">wartości</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1938-08-05-05-sierpnia-1938-r-KW-23.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Min. spr. zagr. Finlandii o stosunkach sąsiedzkich, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński, R. 15, 05 sierpnia 1938 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Min. spr. zagr. Finlandii o stosunkach sąsiedzkich, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński, R. 15", 05 sierpnia 1938 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński, R. 15</title>
+               <title level="a">Min. spr. zagr. Finlandii o stosunkach sąsiedzkich</title>
+               <publisher>Drukarnia „Znicz” Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1938-08-05">05 sierpnia 1938 r.</date>
+               <biblScope unit="issue">213</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński. 1938, nr 213 - Jagiellońska Biblioteka Cyfrowa</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:nom:m3:pos" msd="UPosTag=ADJ" lemma="bukareszteński">Bukareszteński</w>
+               </name>
+               <name type="ORG">
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">„</pc>
+                  <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="Semmalul">Semmalul</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">”</pc>
+               </name>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="zamieszczać">zamieszcza</w>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="wywiad">wywiad</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:acc:m1" msd="UPosTag=NOUN" lemma="minister">ministra</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="se">spr</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="zagrowany">zagr</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="Funlandi">Funlandii</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Holstin">Holstinego</w>
+               </name>
+               <w ana="nkjp:adj:sg:dat:m1:pos" msd="UPosTag=ADJ" lemma="specjalny">specjalnemu</w>
+               <w ana="nkjp:subst:sg:dat:m1" msd="UPosTag=NOUN" lemma="wysłannik">wysłannikowi</w>
+               <w ana="nkjp:adj:sg:gen:n:pos" msd="UPosTag=ADJ" lemma="ten">tego</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="pismo">pisma</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">Na</w>
+               <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="zapytanie">zapytanie</w>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="o">o</w>
+               <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="stosunki">stosunkach</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="Finlandia">Finlandii</w>
+               </name>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="Polska">Polską</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="pan">p</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Holsti">Holsti</w>
+               </name>
+               <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="oświadczyć">oświadczył</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">:</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">„</pc>
+               <w ana="nkjp:subst:pl:nom:n:pt" msd="UPosTag=NOUN" lemma="stosunki">stosunki</w>
+               <w ana="nkjp:adj:pl:nom:n:pos" msd="UPosTag=ADJ" lemma="nasz">nasze</w>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="Polska">Polską</w>
+               </name>
+               <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="być">są</w>
+               <w ana="nkjp:adj:pl:nom:n:pos" msd="UPosTag=ADJ" lemma="dobry">dobre</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="ponieważ">ponieważ</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="nie">nie</w>
+               <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="istnieć">istnieją</w>
+               <w ana="nkjp:adj:pl:nom:m3:pos" msd="UPosTag=ADJ" lemma="żaden">żadne</w>
+               <w ana="nkjp:subst:pl:nom:m3" msd="UPosTag=NOUN" lemma="spór">spory</w>
+               <w ana="nkjp:prep:inst" msd="UPosTag=ADP" lemma="między">między</w>
+               <w ana="nkjp:ppron12:pl:inst:m1:pri" msd="UPosTag=PRON" lemma="my">nami</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">”</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">Na</w>
+               <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="zapytanie">zapytanie</w>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="o">o</w>
+               <w ana="nkjp:subst:pl:loc:f" msd="UPosTag=NOUN" lemma="możliwość">możliwościach</w>
+               <w ana="nkjp:ger:sg:gen:n:perf:aff" msd="UPosTag=NOUN" lemma="utrzymać">utrzymania</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="statut">statut</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="quo">quo</w>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="nad">nad</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:inst:m3" msd="UPosTag=NOUN" lemma="Bałtyk">Bałtykiem</w>
+               </name>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="minimum">min</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Holsti">Holsti</w>
+               </name>
+               <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="odpowiedzieć">odpowiedział</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">:</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">—</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">„</pc>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:adj:pl:loc:n:pos" msd="UPosTag=ADJ" lemma="nasz">naszych</w>
+               <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="stosunki">stosunkach</w>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:num:pl:inst:m3:congr:ncol" msd="UPosTag=NUM" lemma="trzy">trzema</w>
+               <w ana="nkjp:subst:pl:inst:n:ncol" msd="UPosTag=NOUN" lemma="państwo">państwami</w>
+               <name type="LOC">
+                  <w ana="nkjp:adj:pl:nom:n:pos" msd="UPosTag=ADJ" lemma="bałtycki">bałtyckimi</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="nie">nie</w>
+               <w ana="nkjp:fin:sg:pri:imperf" msd="UPosTag=VERB" lemma="przewidywać">przewiduję</w>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="obecnie">obecnie</w>
+               <w ana="nkjp:adj:pl:gen:n:pos" msd="UPosTag=ADJ" lemma="żaden">żadnych</w>
+               <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="nieporozumienie">nieporozumień</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="dla">Dla</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="Finlandia">Finlandii</w>
+               </name>
+               <w ana="nkjp:ger:sg:nom:n:perf:aff" msd="UPosTag=NOUN" lemma="utrzymać">utrzymanie</w>
+               <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="obecny">obecnego</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="statut">statut</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="quo">quo</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="posiadać">posiada</w>
+               <w ana="nkjp:adj:sg:acc:n:pos" msd="UPosTag=ADJ" lemma="wyjątkowy">wyjątkowe</w>
+               <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="znaczenie">znaczenie</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">”</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="o">O</w>
+               <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="stosunki">stosunkach</w>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <name type="ORG">
+                  <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="Rosja">Rosją</w>
+               </name>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="minister">minister</w>
+               <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="zaznaczyć">zaznaczył</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
+               <w ana="nkjp:bedzie:sg:ter:imperf" msd="UPosTag=VERB" lemma="być">będzie</w>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="o">o</w>
+               <w ana="nkjp:ppron3:pl:loc:m3:ter:akc:praep" msd="UPosTag=PRON" lemma="on">nich</w>
+               <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="mówić">mówił</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="gdy">gdy</w>
+               <w ana="nkjp:subst:pl:nom:n:ncol" msd="UPosTag=NOUN" lemma="nieporozumienie">nieporozumienia</w>
+               <w ana="nkjp:adj:pl:nom:n:pos" msd="UPosTag=ADJ" lemma="morski">morskie</w>
+               <w ana="nkjp:adj:pl:nom:n:pos" msd="UPosTag=ADJ" lemma="obecny">obecne</w>
+               <w ana="nkjp:fin:pl:ter:perf" msd="UPosTag=VERB" lemma="zostać">zostaną</w>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="całkowicie">całkowicie</w>
+               <w ana="nkjp:ppas:pl:nom:n:perf:aff" msd="UPosTag=ADJ" lemma="usunąć">usunięte</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:fin:sg:pri:imperf" msd="UPosTag=VERB" lemma="mieć">Mam</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="nadzieja">nadzieję</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">—</pc>
+               <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="dodać">dodał</w>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Holsti">Holsti</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">—</pc>
+               <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
+               <w ana="nkjp:subst:pl:nom:n:pt" msd="UPosTag=NOUN" lemma="stosunki">stosunki</w>
+               <name type="LOC">
+                  <w ana="nkjp:adja" msd="UPosTag=ADJ" lemma="fiński">fińsko</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">-</pc>
+               <name type="LOC">
+                  <w ana="nkjp:adj:pl:nom:n:pos" msd="UPosTag=ADJ" lemma="rosyjski">rosyjskie</w>
+               </name>
+               <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="doznawać">doznają</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:adj:sg:loc:f:sup" msd="UPosTag=ADJ" lemma="bliski">najbliższej</w>
+               <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="przyszłość">przyszłości</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="poprawa">poprawy</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="nad">nad</w>
+               <w ana="nkjp:subst:sg:inst:n:ncol" msd="UPosTag=NOUN" lemma="co">czym</w>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="usilnie">usilnie</w>
+               <w ana="nkjp:fin:pl:pri:imperf" msd="UPosTag=VERB" lemma="pracować">pracujemy</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1935-03-11-11-marca-1935-r-Jezyk-polski-KW-11.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Tłoczyński opuścił Monte Carlo, Kurjer Wileński : Niezależny Organ Demokratyczny, 11 marca 1935 r.
+Język: polski [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Tłoczyński opuścił Monte Carlo, Kurjer Wileński : Niezależny Organ Demokratyczny", 11 marca 1935 r.
+Język: polski [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński : Niezależny Organ Demokratyczny</title>
+               <title level="a">Tłoczyński opuścił Monte Carlo</title>
+               <publisher>Drukarnia „Znicz ” Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1935-03-11">11 marca 1935 r.
+Język: polski</date>
+               <biblScope unit="issue">69</biblScope>
+               <idno type="source">Biblioteka Narodowa</idno>
+               <idno type="URI" subtype="URL">https://polona.pl/preview/e6bdb7f0-364f-41b6-8b1b-109f02f79d01</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="Monte">MONTE</w>
+                  <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="Carlo">CARLO</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="Pat">PAT</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">—</pc>
+               <w ana="nkjp:prep:acc:nwok" msd="UPosTag=ADP" lemma="w">W</w>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="poniedziałek">poniedziałek</w>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Tłoczyński">Tłoczyński</w>
+               </name>
+               <w ana="nkjp:fin:sg:ter:perf" msd="UPosTag=VERB" lemma="wyjechać">wyjedzie</w>
+               <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="spowrotem">spowrotem</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="Warszawa">Warszawy</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:adj:pl:nom:m1:pos" msd="UPosTag=ADJ" lemma="pozostały">Pozostali</w>
+               <w ana="nkjp:subst:pl:nom:m1" msd="UPosTag=NOUN" lemma="tenisista">tenisiści</w>
+               <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="wyjeżdżać">wyjeżdżają</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="jak">jak</w>
+               <w ana="nkjp:pred" msd="UPosTag=VERB" lemma="wiadomo">wiadomo</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
+               <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="turniej">turniej</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <name type="LOC">
+                  <w ana="nkjp:frag" msd="UPosTag=X" lemma="San">San</w>
+                  <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="Beron">Beron</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

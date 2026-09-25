@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1938-12-21-21-grudnia-1938-r-KW-54.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Przerwa w zamiejskiej komunikacji autobusowej., Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński, 21 grudnia 1938 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Przerwa w zamiejskiej komunikacji autobusowej., Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński", 21 grudnia 1938 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński</title>
+               <title level="a">Przerwa w zamiejskiej komunikacji autobusowej.</title>
+               <publisher>Drukarnia „Znicz” Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1938-12-21">21 grudnia 1938 r.</date>
+               <biblScope unit="issue">350</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">https://jbc.bj.uj.edu.pl/dlibra/publication/281665/edition/269175/content</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="jak">Jak</w>
+               <w ana="nkjp:ppron12:pl:acc:m1:pri" msd="UPosTag=PRON" lemma="my">nas</w>
+               <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="informować">informują</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="komunikacja">komunikacja</w>
+               <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="autobusowy">autobusowa</w>
+               <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="zamiejski">zamiejska</w>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:adj:sg:loc:m3:pos" msd="UPosTag=ADJ" lemma="pierwszy">pierwszym</w>
+               <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="dzień">dniu</w>
+               <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="święto">świąt</w>
+               <name type="PER">
+                  <w ana="nkjp:adj:sg:gen:n:pos" msd="UPosTag=ADJ" lemma="boży">Bożego</w>
+               </name>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="narodzenie">Narodzenia</w>
+               <w ana="nkjp:bedzie:sg:ter:imperf" msd="UPosTag=VERB" lemma="być">będzie</w>
+               <w ana="nkjp:ppas:sg:nom:f:perf:aff" msd="UPosTag=ADJ" lemma="przerwać">przerwana</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:adj:sg:loc:m3:pos" msd="UPosTag=ADJ" lemma="drugi">drugim</w>
+               <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="zaś">zaś</w>
+               <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="dzień">dniu</w>
+               <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="święto">świąt</w>
+               <w ana="nkjp:subst:pl:nom:m3" msd="UPosTag=NOUN" lemma="autobus">autobusy</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="komunikacja">komunikacji</w>
+               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="zamiejski">zamiejskiej</w>
+               <w ana="nkjp:bedzie:pl:ter:imperf" msd="UPosTag=VERB" lemma="być">będą</w>
+               <w ana="nkjp:praet:pl:m3:imperf" msd="UPosTag=VERB" lemma="kursować">kursowały</w>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="normalnie">normalnie</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="oczywiście">oczywiście</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="jeżeli">jeżeli</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="nie">nie</w>
+               <w ana="nkjp:fin:pl:ter:perf" msd="UPosTag=VERB" lemma="powstać">powstaną</w>
+               <w ana="nkjp:adj:pl:nom:f:pos" msd="UPosTag=ADJ" lemma="żaden">żadne</w>
+               <w ana="nkjp:subst:pl:nom:f" msd="UPosTag=NOUN" lemma="przeszkoda">przeszkody</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="natura">natury</w>
+               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="atmosferyczny">atmosferycznej</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1938-12-21-21-grudnia-1938-r-KW-48.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Drezdener Bank w Lipsku domaga się 300 tys. zł. od kupca wileńskiego, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński, 21 grudnia 1938 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Drezdener Bank w Lipsku domaga się 300 tys. zł. od kupca wileńskiego, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński", 21 grudnia 1938 r. [PressMint.ana]</title>
+            <author>c</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński</title>
+               <title level="a">Drezdener Bank w Lipsku domaga się 300 tys. zł. od kupca wileńskiego</title>
+               <publisher>Drukarnia „Znicz” Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1938-12-21">21 grudnia 1938 r.</date>
+               <biblScope unit="issue">350</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">https://jbc.bj.uj.edu.pl/dlibra/publication/281665/edition/269175/content</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="wileński">Wileński</w>
+               </name>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="adwokat">adwokat</w>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Korngold">Korngold</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:pcon:imperf" msd="UPosTag=VERB" lemma="działać">działając</w>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="ramię">ramienia</w>
+               <name type="ORG">
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">„</pc>
+               </name>
+               <name type="LOC">
+                  <w ana="nkjp:xxs:gen" msd="UPosTag=X" lemma="Drezdener">Drezdener</w>
+                  <w ana="nkjp:xxs:gen" msd="UPosTag=X" lemma="Bank">Bank</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">”</pc>
+               </name>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="Lipsk">Lipsku</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="wytoczyć">wytoczył</w>
+               <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="powództwo">powództwo</w>
+               <w ana="nkjp:prep:dat" msd="UPosTag=ADP" lemma="przeciwko">przeciwko</w>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:dat:m1:pos" msd="UPosTag=ADJ" lemma="żydowski">żydowskiemu</w>
+               </name>
+               <w ana="nkjp:subst:sg:dat:m1" msd="UPosTag=NOUN" lemma="kupiec">kupcowi</w>
+               <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="Wilno">Wilna</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:dat:m1" msd="UPosTag=NOUN" lemma="Goldberg">Goldbergowi</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:pcon:imperf" msd="UPosTag=VERB" lemma="domagać">domagając</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="300">300</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="tysiąc">tys</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="złoty">zł</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

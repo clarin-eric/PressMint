@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1924-12-21-21-grudnia-1924-r-KW-3.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Prof. Waldemarasowi wolno wrócić do Kowna, Kurjer Wileński, R. 1, 21 grudnia 1924 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Prof. Waldemarasowi wolno wrócić do Kowna, Kurjer Wileński, R. 1", 21 grudnia 1924 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, R. 1</title>
+               <title level="a">Prof. Waldemarasowi wolno wrócić do Kowna</title>
+               <publisher>Drukarnia „Zorza” Wilno</publisher>
+               <date when="1924-12-21">21 grudnia 1924 r.</date>
+               <biblScope unit="issue">147</biblScope>
+               <idno type="source">Biblioteka Narodowa</idno>
+               <idno type="URI" subtype="URL">https://polona.pl/item-view/b7c91149-2510-4ecc-8032-85b57cb99a76?page=0</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="na">Na</w>
+               <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="moc">mocy</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="rozporządzenie">rozporządzenia</w>
+               <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="minister">ministra</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="sprawa">spraw</w>
+               <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="wewnętrzny">wewnętrznych</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="profesor">prof</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:dat:m1" msd="UPosTag=NOUN" lemma="Woldemaras">Woldemarasowi</w>
+               </name>
+               <w ana="nkjp:imps:perf" msd="UPosTag=VERB" lemma="pozwolić">pozwolono</w>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="wrócić">wrócić</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="Kowno">Kowna</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">„</pc>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="dziennik">Dz</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="kowasny">Kow</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">”</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+

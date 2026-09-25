@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PL_1938-12-21-21-grudnia-1938-r-KW-42.ana" xml:lang="pl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Korpus starszych polskich czasopism PressMint-PL, Chciała otruć swe dziecko wlewając mu do ust naftę, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński, 21 grudnia 1938 r. [PressMint.ana]</title>
+            <title xml:lang="en">Polish historical newspaper corpus PressMint-PL, "Chciała otruć swe dziecko wlewając mu do ust naftę, Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński", 21 grudnia 1938 r. [PressMint.ana]</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pl">Infrastruktura badawcza CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
+            </availability>
+            <date when="2026-09-24">24 września 2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Kurjer Wileński, Nowogródzki, Grodzieński, Suwalski, Poleski i Wołyński</title>
+               <title level="a">Chciała otruć swe dziecko wlewając mu do ust naftę</title>
+               <publisher>Drukarnia „Znicz” Wilno</publisher>
+               <pubPlace>Wilno</pubPlace>
+               <date when="1938-12-21">21 grudnia 1938 r.</date>
+               <biblScope unit="issue">350</biblScope>
+               <idno type="source">Biblioteka Jagiellońska</idno>
+               <idno type="URI" subtype="URL">https://jbc.bj.uj.edu.pl/dlibra/publication/281665/edition/269175/content</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-PL-taxonomy-genre" target="#PressMint-PL-genre.czasopismo"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-09-24">
+            <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pl">
+      <body>
+         <pb n="1"/>
+         <p>
+            <s>
+               <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="mieszkanka">Mieszkanka</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="wieś">wsi</w>
+               <name type="LOC">
+                  <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="Marynowo">Marynowo</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <name type="LOC">
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="powiat">pow</w>
+                  <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+               </name>
+               <name type="LOC">
+                  <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="baranowski">baranowskiego</w>
+               </name>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="Kicun">Kicun</w>
+               </name>
+               <name type="PER">
+                  <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="Barbara">Barbara</w>
+               </name>
+               <w ana="nkjp:praet:sg:f:imperf" msd="UPosTag=VERB" lemma="usiłować">usiłowała</w>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="otruć">otruć</w>
+               <w ana="nkjp:adj:sg:acc:n:pos" msd="UPosTag=ADJ" lemma="swój">swoje</w>
+               <w ana="nkjp:adj:sg:acc:n:pos" msd="UPosTag=ADJ" lemma="nieślubny">nieślubne</w>
+               <w ana="nkjp:subst:sg:acc:n:col" msd="UPosTag=NOUN" lemma="dziecko">dziecko</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
+               <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="wiek">wieku</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="7">7</w>
+               <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="miesiąc">miesięcy</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:pcon:imperf" msd="UPosTag=VERB" lemma="wlewać">wlewając</w>
+               <w ana="nkjp:ppron3:sg:dat:m1:ter:nakc:npraep" msd="UPosTag=PRON" lemma="on">mu</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
+               <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="usta">ust</w>
+               <w ana="nkjp:adj:sg:acc:f:com" msd="UPosTag=ADJ" lemma="duży">większą</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="ilość">ilość</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="nafta">nafty</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+            <s>
+               <w ana="nkjp:subst:sg:acc:n:col" msd="UPosTag=NOUN" lemma="dziecko">Dziecko</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:prep:dat" msd="UPosTag=ADP" lemma="dzięki">dzięki</w>
+               <w ana="nkjp:adj:sg:dat:f:pos" msd="UPosTag=ADJ" lemma="natychmiastowy">natychmiastowej</w>
+               <w ana="nkjp:subst:sg:dat:f" msd="UPosTag=NOUN" lemma="pomoc">pomocy</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
+               <w ana="nkjp:imps:perf" msd="UPosTag=VERB" lemma="uratować">uratowano</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
+            </s>
+         </p>
+
+      </body>
+   </text>
+</TEI>
+
