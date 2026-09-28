@@ -18,7 +18,7 @@
                <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
                <p xml:lang="pl">To dzieło jest udostępnione na <ref target="https://creativecommons.org/licenses/by/4.0/">licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe</ref>.</p>
             </availability>
-            <date when="2026-09-25">25 września 2026</date>
+            <date when="2026-09-28">28 września 2026</date>
          </publicationStmt>
          <sourceDesc>
             <bibl>
@@ -38,7 +38,7 @@
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change when="2026-09-25">
+         <change when="2026-09-28">
             <name>PressMint-PL converter</name>: Convert Polish periodical JSON to PressMint TEI format.</change>
       </revisionDesc>
    </teiHeader>
@@ -49,7 +49,7 @@
             <s>
                <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">Z</w>
                <w ana="nkjp:subst:sg:inst:m3" msd="UPosTag=NOUN" lemma="list">listem</w>
-               <w ana="nkjp:adj:sg:inst:m3:pos" msd="UPosTag=ADJ" lemma="ten">tym</w>
+               <w ana="nkjp:adj:sg:inst:m3:pos" msd="UPosTag=ADJ" lemma="ten" join="right">tym</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:ppas:sg:inst:m3:perf:aff" msd="UPosTag=ADJ" lemma="ułożyć">ułożonym</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="zapewne">zapewne</w>
@@ -61,7 +61,7 @@
                <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="na">na</w>
                <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="podstawa">podstawie</w>
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="uchwała">uchwały</w>
-               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="wiec">wiecu</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="wiec" join="right">wiecu</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
                <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="który">której</w>
@@ -79,8 +79,8 @@
                <name type="LOC">
                   <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="Pyzdry">Pyzdrach</w>
                </name>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="1">1</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="1" join="right">1</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <name type="PER">
                   <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Łokietek">Łokietek</w>
@@ -96,7 +96,7 @@
                   <w ana="nkjp:dig" msd="UPosTag=X" lemma="29">29</w>
                   <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="czerwiec">czerwca</w>
                   <w ana="nkjp:dig" msd="UPosTag=X" lemma="1318">1318</w>
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok">r</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok" join="right">r</w>
                   <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                </name>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">a</w>
@@ -108,7 +108,7 @@
                <w ana="nkjp:adj:pl:nom:m1:pos" msd="UPosTag=ADJ" lemma="obecny">obecni</w>
                <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="opat">opat</w>
                <name type="PER">
-                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="Lubiński">Lubiński</w>
+                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="Lubiński" join="right">Lubiński</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <name type="PER">
@@ -119,7 +119,7 @@
                </name>
                <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="starosta">starosta</w>
                <name type="LOC">
-                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="wielkopolski">wielkopolski</w>
+                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="wielkopolski" join="right">wielkopolski</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <name type="PER">
@@ -127,7 +127,7 @@
                </name>
                <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="wojewoda">wojewoda</w>
                <name type="LOC">
-                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="poznański">poznański</w>
+                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="poznański" join="right">poznański</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <name type="PER">
@@ -135,7 +135,7 @@
                </name>
                <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="wojewoda">wojewoda</w>
                <name type="LOC">
-                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="kaliski">kaliski</w>
+                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="kaliski" join="right">kaliski</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <name type="PER">
@@ -156,32 +156,32 @@
                </name>
                <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="kanclerz">kanclerz</w>
                <name type="LOC">
-                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="poznański">poznański</w>
+                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="poznański" join="right">poznański</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="Kdwp">KDWP</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="Kdwp" join="right">KDWP</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="II">II</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="II" join="right">II</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="1000">1000</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="1000" join="right">1000</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
             </s>
             <s>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
-               <w ana="nkjp:praet:sg:f:perf" msd="UPosTag=VERB" lemma="przystąpić">przystąpiła</w>
+               <w ana="nkjp:praet:sg:f:perf" msd="UPosTag=VERB" lemma="przystąpić" join="right">przystąpiła</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:imps:perf" msd="UPosTag=VERB" lemma="postanowić">postanowiono</w>
                <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="wysłać">wysłać</w>
                <w ana="nkjp:adj:sg:acc:n:pos" msd="UPosTag=ADJ" lemma="osobny">osobne</w>
-               <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="poselstwo">poselstwo</w>
+               <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="poselstwo" join="right">poselstwo</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -194,7 +194,7 @@
                   <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="włocławski">włocławski</w>
                </name>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Gerward">Gerward</w>
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Gerward" join="right">Gerward</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
@@ -207,12 +207,12 @@
                <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="dziedziczny">dziedzicznej</w>
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="dzielnica">dzielnicy</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Łokietek">Łokietka</w>
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Łokietek" join="right">Łokietka</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="Kujawy">Kujaw</w>
+                  <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="Kujawy" join="right">Kujaw</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="może">może</w>
@@ -221,41 +221,41 @@
                <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="bratanek">bratanek</w>
                <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="komes">komesa</w>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Gerward">Gerwarda</w>
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Gerward" join="right">Gerwarda</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="dziedzic">dziedzica</w>
                <name type="LOC">
                   <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="Koszuty">Koszut</w>
                </name>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="2">2</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="2" join="right">2</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <name type="LOC">
                   <w ana="nkjp:subst:pl:nom:n:pt" msd="UPosTag=NOUN" lemma="Koszuty">Koszuty</w>
                </name>
                <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="pod">pod</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="Słupca">Słupcą</w>
+                  <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="Słupca" join="right">Słupcą</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="Kdwp">KDWP</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="Kdwp" join="right">KDWP</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="II">II</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="II" join="right">II</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="747">747</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="747" join="right">747</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
             </s>
             <s>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="niegdyś">niegdyś</w>
                <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="proboszcz">proboszcz</w>
@@ -266,14 +266,14 @@
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">a</w>
                <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="od">od</w>
                <name type="MISC">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok">r</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok" join="right">r</w>
                   <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                   <w ana="nkjp:dig" msd="UPosTag=X" lemma="1300">1300</w>
                </name>
-               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="biskup">biskup</w>
+               <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="biskup" join="right">biskup</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="być">był</w>
-               <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="osobistość">osobistością</w>
+               <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="osobistość" join="right">osobistością</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="który">która</w>
                <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
@@ -282,13 +282,13 @@
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="misya">misyi</w>
                <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="bardzo">bardzo</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
-               <w ana="nkjp:praet:sg:f:imperf" msd="UPosTag=VERB" lemma="nadawać">nadawała</w>
+               <w ana="nkjp:praet:sg:f:imperf" msd="UPosTag=VERB" lemma="nadawać" join="right">nadawała</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
                <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="ruchliwy">Ruchliwy</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
-               <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="sprężysty">sprężysty</w>
+               <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="sprężysty" join="right">sprężysty</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="doświadczony">doświadczony</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
@@ -297,13 +297,13 @@
                <w ana="nkjp:praet:sg:m1:imperf:nagl" msd="UPosTag=VERB" lemma="móc">mógł</w>
                <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="sprawa">sprawą</w>
                <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="pokierować">pokierować</w>
-               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="dobrze">dobrze</w>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="dobrze" join="right">dobrze</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="przytem">przytem</w>
                <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="bardzo">bardzo</w>
                <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="majętny">majętny</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="3">3</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="3" join="right">3</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="świadczyć">Świadczą</w>
                <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="o">o</w>
@@ -311,48 +311,48 @@
                <w ana="nkjp:adj:pl:nom:f:pos" msd="UPosTag=ADJ" lemma="liczny">liczne</w>
                <w ana="nkjp:ppron3:sg:gen:m1:ter:akc:npraep" msd="UPosTag=PRON" lemma="on">jego</w>
                <w ana="nkjp:subst:pl:nom:f" msd="UPosTag=NOUN" lemma="transakcya">transakcye</w>
-               <w ana="nkjp:adj:pl:nom:f:pos" msd="UPosTag=ADJ" lemma="majątkowy">majątkowe</w>
+               <w ana="nkjp:adj:pl:nom:f:pos" msd="UPosTag=ADJ" lemma="majątkowy" join="right">majątkowe</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">{{</pc>
-               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Cod">Cod</w>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">{{</pc>
+               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Cod" join="right">Cod</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="dipl">Dipl</w>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="dipl" join="right">Dipl</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
                <name type="LOC">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="polski">Pol</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="polski" join="right">Pol</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="II">II</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="II" join="right">II</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="196">196</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="196" join="right">196</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="200">200</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="200" join="right">200</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="202">202</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="202" join="right">202</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="209">209</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="209" join="right">209</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="211">211</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="211" join="right">211</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="213">213</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="213" join="right">213</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="228">228</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="228" join="right">228</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="224">224</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">-</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="226">226</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="224" join="right">224</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">-</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="226" join="right">226</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
             </s>
             <s>
@@ -362,7 +362,7 @@
                <w ana="nkjp:adv:com" msd="UPosTag=ADV" lemma="korzystnie">korzystniej</w>
                <w ana="nkjp:inf:imperf" msd="UPosTag=VERB" lemma="reprezentować">reprezentować</w>
                <w ana="nkjp:adj:sg:acc:m1:pos" msd="UPosTag=ADJ" lemma="swój">swego</w>
-               <w ana="nkjp:subst:sg:acc:m1" msd="UPosTag=NOUN" lemma="książę">księcia</w>
+               <w ana="nkjp:subst:sg:acc:m1" msd="UPosTag=NOUN" lemma="książę" join="right">księcia</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -373,7 +373,7 @@
                <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="wzgląd">wzgląd</w>
                <w ana="nkjp:prep:inst" msd="UPosTag=ADP" lemma="za">za</w>
                <w ana="nkjp:ppron3:sg:inst:m1:ter:akc:praep" msd="UPosTag=PRON" lemma="on">nim</w>
-               <w ana="nkjp:praet:sg:m3:imperf" msd="UPosTag=VERB" lemma="przemawiać">przemawiał</w>
+               <w ana="nkjp:praet:sg:m3:imperf" msd="UPosTag=VERB" lemma="przemawiać" join="right">przemawiał</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -384,7 +384,7 @@
                <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="sprawa">sprawę</w>
                <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
                <name type="ORG">
-                  <w ana="nkjp:subst:sg:inst:m3" msd="UPosTag=NOUN" lemma="zakon">Zakonem</w>
+                  <w ana="nkjp:subst:sg:inst:m3" msd="UPosTag=NOUN" lemma="zakon" join="right">Zakonem</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="nad">nad</w>
@@ -395,7 +395,7 @@
                <name type="LOC">
                   <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="Sulejów">Sulejowie</w>
                </name>
-               <w ana="nkjp:imps:imperf" msd="UPosTag=VERB" lemma="radzić">radzono</w>
+               <w ana="nkjp:imps:imperf" msd="UPosTag=VERB" lemma="radzić" join="right">radzono</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">a</w>
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="sprawa">sprawy</w>
@@ -406,13 +406,13 @@
                <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="nieznał">nieznał</w>
                <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="jak">jak</w>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Gerward">Gerward</w>
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Gerward" join="right">Gerward</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="bo">bo</w>
                <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="część">część</w>
                <w ana="nkjp:ppron3:sg:gen:m1:ter:akc:npraep" msd="UPosTag=PRON" lemma="on">jego</w>
-               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="dyecezya">dyecezyi</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="dyecezya" join="right">dyecezyi</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:sg:nom:n:pos" msd="UPosTag=ADJ" lemma="ów">owo</w>
                <name type="LOC">
@@ -427,7 +427,7 @@
                <name type="ORG">
                   <w ana="nkjp:subst:pl:acc:m1" msd="UPosTag=NOUN" lemma="Krzyżak">Krzyżaków</w>
                </name>
-               <w ana="nkjp:ppas:sg:nom:n:perf:aff" msd="UPosTag=ADJ" lemma="zająć">zajęte</w>
+               <w ana="nkjp:ppas:sg:nom:n:perf:aff" msd="UPosTag=ADJ" lemma="zająć" join="right">zajęte</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="stąd">stąd</w>
                <w ana="nkjp:adj:pl:nom:m3:pos" msd="UPosTag=ADJ" lemma="ciągły">ciągłe</w>
@@ -446,7 +446,7 @@
                   <w ana="nkjp:subst:sg:dat:m3" msd="UPosTag=NOUN" lemma="kościół">kościołowi</w>
                </name>
                <name type="LOC">
-                  <w ana="nkjp:adj:sg:dat:m3:pos" msd="UPosTag=ADJ" lemma="włocławski">włocławskiemu</w>
+                  <w ana="nkjp:adj:sg:dat:m3:pos" msd="UPosTag=ADJ" lemma="włocławski" join="right">włocławskiemu</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
@@ -461,7 +461,7 @@
                <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="wzrost">wzrost</w>
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="potęga">potęgi</w>
                <name type="ORG">
-                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="zakon">Zakonu</w>
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="zakon" join="right">Zakonu</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
@@ -469,24 +469,24 @@
                <w ana="nkjp:adj:sg:acc:f:pos" msd="UPosTag=ADJ" lemma="misterny">misterną</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">a</w>
                <w ana="nkjp:adj:sg:acc:f:pos" msd="UPosTag=ADJ" lemma="podstępny">podstępną</w>
-               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="polityka">politykę</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="polityka" join="right">politykę</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
                <w ana="nkjp:subst:pl:acc:m3" msd="UPosTag=NOUN" lemma="gwałt">gwałty</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
-               <w ana="nkjp:subst:pl:acc:f" msd="UPosTag=NOUN" lemma="zdrada">zdrady</w>
+               <w ana="nkjp:subst:pl:acc:f" msd="UPosTag=NOUN" lemma="zdrada" join="right">zdrady</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:pl:nom:f:pos" msd="UPosTag=ADJ" lemma="który">które</w>
                <w ana="nkjp:adj:sg:acc:f:pos" msd="UPosTag=ADJ" lemma="ów">ową</w>
                <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="potęga">potęgę</w>
-               <w ana="nkjp:praet:pl:f:perf" msd="UPosTag=VERB" lemma="zbudować">zbudowały</w>
+               <w ana="nkjp:praet:pl:f:perf" msd="UPosTag=VERB" lemma="zbudować" join="right">zbudowały</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">A</w>
                <w ana="nkjp:inf:imperf" msd="UPosTag=VERB" lemma="spodziewać">spodziewać</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
-               <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="należeć">należało</w>
+               <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="należeć" join="right">należało</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <name type="ORG">
@@ -498,14 +498,14 @@
                </name>
                <w ana="nkjp:fin:sg:ter:perf" msd="UPosTag=VERB" lemma="poruszyć">poruszy</w>
                <w ana="nkjp:adj:pl:acc:f:pos" msd="UPosTag=ADJ" lemma="wszelki">wszelkie</w>
-               <w ana="nkjp:subst:pl:acc:f" msd="UPosTag=NOUN" lemma="sprężyna">sprężyny</w>
+               <w ana="nkjp:subst:pl:acc:f" msd="UPosTag=NOUN" lemma="sprężyna" join="right">sprężyny</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:fin:sg:ter:perf" msd="UPosTag=VERB" lemma="wytężyć">wytęży</w>
                <w ana="nkjp:adj:sg:acc:f:pos" msd="UPosTag=ADJ" lemma="cały">całą</w>
                <w ana="nkjp:adj:sg:acc:f:pos" msd="UPosTag=ADJ" lemma="swój">swą</w>
                <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="siła">siłę</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
-               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="zręczność">zręczność</w>
+               <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="zręczność" join="right">zręczność</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="aby">aby</w>
                <w ana="nkjp:prep:gen:wok" msd="UPosTag=ADP" lemma="z">ze</w>
@@ -515,7 +515,7 @@
                   <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="Polska">Polską</w>
                </name>
                <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="wyjść">wyjść</w>
-               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="zwycięsko">zwycięsko</w>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="zwycięsko" join="right">zwycięsko</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:subst:pl:acc:m3" msd="UPosTag=NOUN" lemma="plan">plany</w>
                <name type="PER">
@@ -526,7 +526,7 @@
                <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="państwo">państwo</w>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="niedawno">niedawno</w>
                <w ana="nkjp:ppas:sg:acc:n:perf:aff" msd="UPosTag=ADJ" lemma="wzmocnić">wzmocnione</w>
-               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="osłabić">osłabić</w>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="osłabić" join="right">osłabić</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -536,7 +536,7 @@
                <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="być">było</w>
                <w ana="nkjp:adj:sg:acc:m1:pos" msd="UPosTag=ADJ" lemma="wytrawny">wytrawnego</w>
                <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="przeciwstawić">przeciwstawić</w>
-               <w ana="nkjp:subst:sg:acc:m1" msd="UPosTag=NOUN" lemma="poseł">posła</w>
+               <w ana="nkjp:subst:sg:acc:m1" msd="UPosTag=NOUN" lemma="poseł" join="right">posła</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -546,7 +546,7 @@
                <name type="PER">
                   <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Gerward">Gerward</w>
                </name>
-               <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="zadanie">zadanie</w>
+               <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="zadanie" join="right">zadanie</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="lecz">lecz</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
@@ -554,7 +554,7 @@
                <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
                <w ana="nkjp:ppron3:sg:gen:m3:ter:akc:praep" msd="UPosTag=PRON" lemma="on">niego</w>
                <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="po">po</w>
-               <w ana="nkjp:adjp:dat" msd="UPosTag=ADJ" lemma="mistrzowski">mistrzowsku</w>
+               <w ana="nkjp:adjp:dat" msd="UPosTag=ADJ" lemma="mistrzowski" join="right">mistrzowsku</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">a</w>
                <w ana="nkjp:praet:pl:f:perf" msd="UPosTag=VERB" lemma="utorować">utorowały</w>
@@ -565,20 +565,20 @@
                <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="wiec">wiecu</w>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="Sulejów">Sulejowie</w>
+                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="Sulejów" join="right">Sulejowie</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="wraz">Wraz</w>
                <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
-               <w ana="nkjp:subst:sg:inst:n:ncol" msd="UPosTag=NOUN" lemma="pismo">pismem</w>
+               <w ana="nkjp:subst:sg:inst:n:ncol" msd="UPosTag=NOUN" lemma="pismo" join="right">pismem</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:sg:nom:n:pos" msd="UPosTag=ADJ" lemma="który">które</w>
                <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
                <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="ten">tych</w>
                <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="uchwała">uchwał</w>
-               <w ana="nkjp:praet:sg:n:perf" msd="UPosTag=VERB" lemma="wypłynąć">wypłynęło</w>
+               <w ana="nkjp:praet:sg:n:perf" msd="UPosTag=VERB" lemma="wypłynąć" join="right">wypłynęło</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:praet:sg:m1:imperf:nagl" msd="UPosTag=VERB" lemma="wieźć">wiózł</w>
                <w ana="nkjp:prep:inst:wok" msd="UPosTag=ADP" lemma="z">ze</w>
@@ -600,7 +600,7 @@
                <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="cel">celu</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
                <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="sposób">sposobów</w>
-               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="postępowanie">postępowania</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="postępowanie" join="right">postępowania</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -618,7 +618,7 @@
                <w ana="nkjp:adj:sg:gen:m1:pos" msd="UPosTag=ADJ" lemma="ówczesny">ówczesnego</w>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="Polska">Polsce</w>
+                  <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="Polska" join="right">Polsce</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <name type="PER">
@@ -626,7 +626,7 @@
                   <w ana="nkjp:frag" msd="UPosTag=X" lemma="de">de</w>
                </name>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Fabriano">Fabriano</w>
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Fabriano" join="right">Fabriano</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="który">który</w>
@@ -638,31 +638,31 @@
                <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="ów">owego</w>
                <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="wiec">wiecu</w>
                <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="bawić">bawił</w>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="4">4</w>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="4" join="right">4</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Theiner">Theiner</w>
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Theiner" join="right">Theiner</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Mon">Mon</w>
+               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Mon" join="right">Mon</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
                <name type="LOC">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="polski">Pol</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="polski" join="right">Pol</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="I">I</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="I" join="right">I</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="223">223</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="223" join="right">223</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
             </s>
             <s>
@@ -677,11 +677,11 @@
                   <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Łokietek">Łokietka</w>
                </name>
                <w ana="nkjp:adj:sg:gen:n:pos" msd="UPosTag=ADJ" lemma="nieprzychylny">nieprzychylnego</w>
-               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="stanowisko">stanowiska</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="stanowisko" join="right">stanowiska</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="II">II</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="II" join="right">II</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="kiedy">Kiedy</w>
                <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="poselstwo">poselstwo</w>
@@ -692,39 +692,39 @@
                <name type="LOC">
                   <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="Avignon">Avignonu</w>
                </name>
-               <w ana="nkjp:praet:sg:n:perf" msd="UPosTag=VERB" lemma="przybyć">przybyło</w>
+               <w ana="nkjp:praet:sg:n:perf" msd="UPosTag=VERB" lemma="przybyć" join="right">przybyło</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="trudno">trudno</w>
-               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="oznaczyć">oznaczyć</w>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="oznaczyć" join="right">oznaczyć</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">;</pc>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="może">może</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="jeszcze">jeszcze</w>
                <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
                <w ana="nkjp:subst:sg:inst:m3" msd="UPosTag=NOUN" lemma="koniec">końcem</w>
                <name type="MISC">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok">r</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok" join="right">r</w>
                   <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                   <w ana="nkjp:dig" msd="UPosTag=X" lemma="1318">1318</w>
                </name>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="1">1</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="1" join="right">1</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">{{</pc>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">{{</pc>
                <name type="PER">
-                  <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Grünhagen">Grünhagen</w>
+                  <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Grünhagen" join="right">Grünhagen</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Regesten">Regesten</w>
+               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Regesten" join="right">Regesten</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="lata">l</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="lata" join="right">l</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="c">c</w>
+               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="c" join="right">c</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">;</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="3867">3867</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="3867" join="right">3867</w>
                <pc ana="nkjp:sym" msd="UPosTag=PUNCT">}}</pc>
                <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="rejestrować">rejestruje</w>
                <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="pod">pod</w>
@@ -735,7 +735,7 @@
                   <w ana="nkjp:dig" msd="UPosTag=X" lemma="1318">1318</w>
                </name>
                <w ana="nkjp:subst:sg:acc:m3" msd="UPosTag=NOUN" lemma="dokument">dokument</w>
-               <w ana="nkjp:adj:sg:acc:m3:pos" msd="UPosTag=ADJ" lemma="papieski">papieski</w>
+               <w ana="nkjp:adj:sg:acc:m3:pos" msd="UPosTag=ADJ" lemma="papieski" join="right">papieski</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <w ana="nkjp:adj:sg:loc:m3:pos" msd="UPosTag=ADJ" lemma="który">którym</w>
@@ -754,7 +754,7 @@
                <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="dziesięcina">dziesięcin</w>
                <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="na">na</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="Śląsk">Śląsku</w>
+                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="Śląsk" join="right">Śląsku</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
@@ -769,7 +769,7 @@
                <name type="LOC">
                   <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="Kury">Kuryi</w>
                </name>
-               <w ana="nkjp:subst:pl:dat:m1" msd="UPosTag=NOUN" lemma="biskup">biskupom</w>
+               <w ana="nkjp:subst:pl:dat:m1" msd="UPosTag=NOUN" lemma="biskup" join="right">biskupom</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="więc">więc</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="może">może</w>
@@ -782,10 +782,10 @@
                <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="bawić">bawił</w>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="Avignona">Avignonie</w>
+                  <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="Avignona" join="right">Avignonie</w>
                </name>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -798,22 +798,22 @@
                <name type="LOC">
                   <w ana="nkjp:adj:sg:dat:m1:pos" msd="UPosTag=ADJ" lemma="włocławski">włocławskiemu</w>
                </name>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="2">2</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="2" join="right">2</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="być">Jest</w>
                <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="bardzo">bardzo</w>
-               <w ana="nkjp:adj:sg:inst:n:pos" msd="UPosTag=ADJ" lemma="prawdopodobne">prawdopodobnem</w>
+               <w ana="nkjp:adj:sg:inst:n:pos" msd="UPosTag=ADJ" lemma="prawdopodobne" join="right">prawdopodobnem</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <w ana="nkjp:adj:pl:nom:m1:pos" msd="UPosTag=ADJ" lemma="ten">ci</w>
-               <w ana="nkjp:subst:pl:nom:m1" msd="UPosTag=NOUN" lemma="duchowny">duchowni</w>
+               <w ana="nkjp:subst:pl:nom:m1" msd="UPosTag=NOUN" lemma="duchowny" join="right">duchowni</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:pl:dat:m1:pos" msd="UPosTag=ADJ" lemma="który">którym</w>
                <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="papież">papież</w>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <name type="MISC">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok">r</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok" join="right">r</w>
                   <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                   <w ana="nkjp:dig" msd="UPosTag=X" lemma="1319">1319</w>
                </name>
@@ -823,7 +823,7 @@
                <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
                <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="prośba">prośbę</w>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Gerward">Gerwarda</w>
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Gerward" join="right">Gerwarda</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:praet:pl:m1:imperf" msd="UPosTag=VERB" lemma="być">byli</w>
@@ -834,7 +834,7 @@
                <name type="LOC">
                   <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="Avignona">Avignonie</w>
                </name>
-               <w ana="nkjp:adj:pl:nom:m1:pos" msd="UPosTag=ADJ" lemma="obecny">obecni</w>
+               <w ana="nkjp:adj:pl:nom:m1:pos" msd="UPosTag=ADJ" lemma="obecny" join="right">obecni</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:prep:nom" msd="UPosTag=ADP" lemma="jak">jak</w>
                <name type="PER">
@@ -842,7 +842,7 @@
                </name>
                <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="kanonik">kanonik</w>
                <name type="LOC">
-                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="krakowski">krakowski</w>
+                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="krakowski" join="right">krakowski</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <name type="PER">
@@ -855,33 +855,33 @@
                <name type="LOC">
                   <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="włocławski">włocławski</w>
                </name>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">(</pc>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Theiner">Theiner</w>
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Theiner" join="right">Theiner</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="mon">Mon</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="mon" join="right">Mon</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
                <name type="LOC">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="polski">Pol</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="polski" join="right">Pol</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="I">I</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="I" join="right">I</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="227">227</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">-</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="229">229</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="227" join="right">227</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">-</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="229" join="right">229</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">)</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <name type="PER">
                   <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Dobiesław">Dobiesław</w>
@@ -892,7 +892,7 @@
                </name>
                <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="Kowal">Kowala</w>
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="Kowal" join="right">Kowala</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <name type="PER">
@@ -900,35 +900,35 @@
                </name>
                <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="Września">Wrześni</w>
+                  <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="Września" join="right">Wrześni</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">(</pc>
                <w ana="nkjp:adj:sg:nom:n:pos" msd="UPosTag=ADJ" lemma="mój">Moje</w>
                <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="sprawozdanie">Sprawozdanie</w>
                <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
-               <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="poszukiwanie">poszukiwań</w>
+               <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="poszukiwanie" join="right">poszukiwań</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">{{</pc>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">{{</pc>
                <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="l.">l.</w>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="córka">c</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="córka" join="right">c</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona">str</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona" join="right">str</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <w ana="nkjp:dig" msd="UPosTag=X" lemma="39">39</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="87">87</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="87" join="right">87</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">)</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
             </s>
             <s>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="ani">ani</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="czy">czy</w>
@@ -940,12 +940,12 @@
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="także">także</w>
                <w ana="nkjp:subst:pl:nom:m1" msd="UPosTag=NOUN" lemma="dostojnik">dostojnicy</w>
-               <w ana="nkjp:adj:pl:nom:m1:pos" msd="UPosTag=ADJ" lemma="świecki">świeccy</w>
+               <w ana="nkjp:adj:pl:nom:m1:pos" msd="UPosTag=ADJ" lemma="świecki" join="right">świeccy</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">;</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="jakby">jakby</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
                <w ana="nkjp:inf:imperf" msd="UPosTag=VERB" lemma="domyślać">domyślać</w>
-               <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="należeć">należało</w>
+               <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="należeć" join="right">należało</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -973,69 +973,69 @@
                <name type="LOC">
                   <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="Marszewice">Marszewic</w>
                </name>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="3">3</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="3" join="right">3</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <w ana="nkjp:adj:sg:nom:n:pos" msd="UPosTag=ADJ" lemma="mój">Moje</w>
                <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="sprawozdanie">Sprawozdanie</w>
                <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
-               <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="poszukiwanie">poszukiwań</w>
+               <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="poszukiwanie" join="right">poszukiwań</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="l.ata">l.</w>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="córka">c</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="córka" join="right">c</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona">str</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="215">215</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona" join="right">str</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="215" join="right">215</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="o">O</w>
                <name type="PER">
                   <w ana="nkjp:subst:sg:loc:m1" msd="UPosTag=NOUN" lemma="Szymon">Szymonie</w>
                </name>
                <w ana="nkjp:adj:sg:loc:m1:pos" msd="UPosTag=ADJ" lemma="ten">tym</w>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="zobacz">zob</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="zobacz" join="right">zob</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">{{</pc>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">{{</pc>
                <name type="PER">
-                  <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Grünhagen">Grünhagen</w>
+                  <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Grünhagen" join="right">Grünhagen</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Regesten">Regesten</w>
+               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Regesten" join="right">Regesten</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="l.ak">l.</w>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="córka">c</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="córka" join="right">c</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:dig" msd="UPosTag=X" lemma="3835">3835</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="cod">Cod</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="cod" join="right">Cod</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="dipl">dipl</w>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="dipl" join="right">dipl</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
                <name type="LOC">
-                  <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Silesiae">Silesiae</w>
+                  <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Silesiae" join="right">Silesiae</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="tom">T</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="tom" join="right">T</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="V">V</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="V" join="right">V</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona">str</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona" join="right">str</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <w ana="nkjp:dig" msd="UPosTag=X" lemma="115">115</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="222">222</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="222" join="right">222</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
             </s>
             <s>
@@ -1052,7 +1052,7 @@
                <name type="PER">
                   <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Verulis">Verulis</w>
                </name>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">(</pc>
                <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="dla">dla</w>
                <w ana="nkjp:adj:sg:gen:m1:pos" msd="UPosTag=ADJ" lemma="który">którego</w>
                <name type="PER">
@@ -1064,39 +1064,39 @@
                <w ana="nkjp:adj:pl:acc:m3:pos" msd="UPosTag=ADJ" lemma="pewien">pewne</w>
                <w ana="nkjp:subst:pl:acc:m3" msd="UPosTag=NOUN" lemma="powód">powody</w>
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="wdzięczność">wdzięczności</w>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="4">4</w>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="4" join="right">4</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Theiner">Theiner</w>
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Theiner" join="right">Theiner</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="mon">Mon</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="mon" join="right">Mon</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
                <name type="LOC">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="polski">Pol</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="polski" join="right">Pol</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="I">I</w>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="I" join="right">I</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="244">244</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">}</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="244" join="right">244</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="udzielić">udzielił</w>
                <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="pierwszy">pierwszych</w>
                <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="konieczny">koniecznych</w>
                <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="informacja">informacyj</w>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:dat:m1" msd="UPosTag=NOUN" lemma="Gerward">Gerwardowi</w>
+                  <w ana="nkjp:subst:sg:dat:m1" msd="UPosTag=NOUN" lemma="Gerward" join="right">Gerwardowi</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
@@ -1105,7 +1105,7 @@
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="góra">góry</w>
                <w ana="nkjp:pred" msd="UPosTag=VERB" lemma="można">można</w>
                <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="być">było</w>
-               <w ana="nkjp:inf:imperf" msd="UPosTag=VERB" lemma="przewidywać">przewidywać</w>
+               <w ana="nkjp:inf:imperf" msd="UPosTag=VERB" lemma="przewidywać" join="right">przewidywać</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <w ana="nkjp:adj:pl:acc:f:pos" msd="UPosTag=ADJ" lemma="poważny">poważne</w>
@@ -1118,7 +1118,7 @@
                <w ana="nkjp:prep:gen:wok" msd="UPosTag=ADP" lemma="z">ze</w>
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="strona">strony</w>
                <name type="ORG">
-                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="zakon">Zakonu</w>
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="zakon" join="right">Zakonu</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
@@ -1128,13 +1128,13 @@
                <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="prowadzić">prowadził</w>
                <w ana="nkjp:adj:sg:acc:f:pos" msd="UPosTag=ADJ" lemma="cały">całą</w>
                <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="akcya">akcyę</w>
-               <w ana="nkjp:adj:sg:acc:f:pos" msd="UPosTag=ADJ" lemma="przeciwny">przeciwną</w>
+               <w ana="nkjp:adj:sg:acc:f:pos" msd="UPosTag=ADJ" lemma="przeciwny" join="right">przeciwną</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:pcon:imperf" msd="UPosTag=VERB" lemma="nieszczędć">nieszczędząc</w>
                <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="staranie">starań</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">a</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nawet">nawet</w>
-               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="ofiara">ofiar</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="ofiara" join="right">ofiar</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -1150,7 +1150,7 @@
                <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="być">było</w>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="wówczas">wówczas</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="dość">dość</w>
-               <w ana="nkjp:adj:sg:nom:n:pos" msd="UPosTag=ADJ" lemma="nadwątlony">nadwątlone</w>
+               <w ana="nkjp:adj:sg:nom:n:pos" msd="UPosTag=ADJ" lemma="nadwątlony" join="right">nadwątlone</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -1164,7 +1164,7 @@
                <w ana="nkjp:subst:sg:inst:n:ncol" msd="UPosTag=NOUN" lemma="arcybiskupstwo">arcybiskupstwem</w>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="Ryga">Rydze</w>
+                  <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="Ryga" join="right">Rydze</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:pact:sg:nom:f:imperf:aff" msd="UPosTag=ADJ" lemma="odsłaniać">odsłaniająca</w>
@@ -1177,29 +1177,29 @@
                <w ana="nkjp:adj:sg:inst:m3:pos" msd="UPosTag=ADJ" lemma="chrześcijański">chrześcijańskim</w>
                <w ana="nkjp:ppas:pl:acc:n:perf:aff" msd="UPosTag=ADJ" lemma="przejąć">przejęte</w>
                <w ana="nkjp:subst:pl:acc:n:ncol" msd="UPosTag=NOUN" lemma="dążenie">dążenia</w>
-               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="mnich">mnichów</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">-</pc>
-               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="rycerz">rycerzy</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="mnich" join="right">mnichów</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">-</pc>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="rycerz" join="right">rycerzy</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:pl:nom:f:pos" msd="UPosTag=ADJ" lemma="wewnętrzny">wewnętrzne</w>
                <w ana="nkjp:subst:pl:nom:f" msd="UPosTag=NOUN" lemma="rozterka">rozterki</w>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <name type="ORG">
-                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="zakon">Zakonie</w>
+                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="zakon" join="right">Zakonie</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:pl:nom:f:pos" msd="UPosTag=ADJ" lemma="który">które</w>
                <w ana="nkjp:praet:pl:f:perf" msd="UPosTag=VERB" lemma="skłonić">skłoniły</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nawet">nawet</w>
                <name type="PER">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="W">W</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="W" join="right">W</w>
                   <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                </name>
                <w ana="nkjp:subst:sg:acc:m1" msd="UPosTag=NOUN" lemma="mistrz">Mistrza</w>
                <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
                <w ana="nkjp:ger:sg:gen:n:perf:aff" msd="UPosTag=NOUN" lemma="opuścić">opuszczenia</w>
                <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="swój">swego</w>
-               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="urząd">urzędu</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="urząd" join="right">urzędu</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="dość">dość</w>
                <w ana="nkjp:adj:sg:nom:n:pos" msd="UPosTag=ADJ" lemma="oporny">oporne</w>
@@ -1223,18 +1223,18 @@
                <w ana="nkjp:subst:sg:dat:m3" msd="UPosTag=NOUN" lemma="obowiązek">obowiązkowi</w>
                <w ana="nkjp:subst:sg:dat:n:ncol" msd="UPosTag=NOUN" lemma="to">temu</w>
                <w ana="nkjp:adv:com" msd="UPosTag=ADV" lemma="dawno">dawniej</w>
-               <w ana="nkjp:ppas:pl:gen:f:perf:aff" msd="UPosTag=ADJ" lemma="poddać">poddanych</w>
+               <w ana="nkjp:ppas:pl:gen:f:perf:aff" msd="UPosTag=ADJ" lemma="poddać" join="right">poddanych</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="bo">bo</w>
                <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="to">to</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nie">nie</w>
                <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="sprzyjać">sprzyjało</w>
                <w ana="nkjp:subst:sg:dat:f" msd="UPosTag=NOUN" lemma="kolonizacya">kolonizacyi</w>
-               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="kraj">kraju</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="kraj" join="right">kraju</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">—</pc>
                <w ana="nkjp:pred" msd="UPosTag=VERB" lemma="oto">oto</w>
-               <w ana="nkjp:subst:pl:nom:m3" msd="UPosTag=NOUN" lemma="powód">powody</w>
+               <w ana="nkjp:subst:pl:nom:m3" msd="UPosTag=NOUN" lemma="powód" join="right">powody</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="dla">dla</w>
                <w ana="nkjp:adj:pl:gen:m3:pos" msd="UPosTag=ADJ" lemma="który">których</w>
@@ -1256,7 +1256,7 @@
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="ówdzie">ówdzie</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nawet">nawet</w>
-               <w ana="nkjp:imps:imperf" msd="UPosTag=VERB" lemma="natrącać">natrącano</w>
+               <w ana="nkjp:imps:imperf" msd="UPosTag=VERB" lemma="natrącać" join="right">natrącano</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <w ana="nkjp:ppron3:sg:dat:m1:ter:nakc:npraep" msd="UPosTag=PRON" lemma="on">mu</w>
@@ -1267,66 +1267,66 @@
                   <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="zakon">Zakonu</w>
                   <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="templaryusz">Templaryuszów</w>
                </name>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="5">5</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="5" join="right">5</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="zobacz">Zob</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="zobacz" join="right">Zob</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <name type="PER">
-                  <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Voigt">Voigt</w>
+                  <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Voigt" join="right">Voigt</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Handbuch">Handbuch</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="der">der</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Geschichte">Geschichte</w>
                <name type="LOC">
-                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Preussens">Preussens</w>
+                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Preussens" join="right">Preussens</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="T.">T.</w>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="I">I</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="I" join="right">I</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <name type="LOC">
                   <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Königsberg">Königsberg</w>
                </name>
                <name type="MISC">
-                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1841">1841</w>
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1841" join="right">1841</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona">str</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona" join="right">str</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <w ana="nkjp:dig" msd="UPosTag=X" lemma="440">440</w>
                <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
                <w ana="nkjp:dig" msd="UPosTag=X" lemma="443">443</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
                <name type="PER">
-                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Prutz">Prutz</w>
+                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Prutz" join="right">Prutz</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <name type="LOC">
                   <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Preussische">Preussische</w>
                </name>
-               <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Geschichte">Geschichte</w>
+               <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Geschichte" join="right">Geschichte</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="T.">T.</w>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="I">I</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="I" join="right">I</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <name type="LOC">
                   <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="Stuttgart">Stuttgart</w>
                </name>
                <name type="MISC">
-                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1900">1900</w>
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1900" join="right">1900</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona">str</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona" join="right">str</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <w ana="nkjp:dig" msd="UPosTag=X" lemma="61">61</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="nastny">nast</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="nastny" join="right">nast</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -1344,7 +1344,7 @@
                <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="energia">energią</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
                <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="siła">siłę</w>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="W">W</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="W" join="right">W</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="mistrz">Mistrz</w>
                <w ana="nkjp:pcon:imperf" msd="UPosTag=VERB" lemma="zapominać">zapominając</w>
@@ -1364,7 +1364,7 @@
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="obrona">obronie</w>
                <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="sprawa">spraw</w>
-               <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="zakonny">zakonnych</w>
+               <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="zakonny" join="right">zakonnych</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="dyplomacya">dyplomacya</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="zaś">zaś</w>
@@ -1378,7 +1378,7 @@
                <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="dla">dla</w>
                <w ana="nkjp:ger:sg:gen:n:perf:aff" msd="UPosTag=NOUN" lemma="poprzeć">poparcia</w>
                <w ana="nkjp:adj:pl:gen:n:pos" msd="UPosTag=ADJ" lemma="swój">swych</w>
-               <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="dążenie">dążeń</w>
+               <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="dążenie" join="right">dążeń</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -1389,18 +1389,18 @@
                   <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="Pomorze">Pomorze</w>
                </name>
                <w ana="nkjp:prep:acc:nwok" msd="UPosTag=ADP" lemma="przez">przez</w>
-               <w ana="nkjp:ger:sg:acc:n:imperf:aff" msd="UPosTag=NOUN" lemma="wyczekiwać">wyczekiwanie</w>
+               <w ana="nkjp:ger:sg:acc:n:imperf:aff" msd="UPosTag=NOUN" lemma="wyczekiwać" join="right">wyczekiwanie</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:ger:sg:acc:n:imperf:aff" msd="UPosTag=NOUN" lemma="unikać">unikanie</w>
                <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="wszelki">wszelkiej</w>
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="rozprawa">rozprawy</w>
                <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
-               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="seryo">seryo</w>
+               <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="seryo" join="right">seryo</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:ger:sg:acc:n:imperf:aff" msd="UPosTag=NOUN" lemma="dopełniać">dopełnianie</w>
                <w ana="nkjp:adj:sg:acc:n:pos" msd="UPosTag=ADJ" lemma="skrupulatny">skrupulatne</w>
                <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="formalność">formalności</w>
-               <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="procesowy">procesowych</w>
+               <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="procesowy" join="right">procesowych</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:praet:pl:m1:imperf" msd="UPosTag=VERB" lemma="nużyć">nużyli</w>
                <w ana="nkjp:subst:pl:nom:m1" msd="UPosTag=NOUN" lemma="zastępca">zastępcy</w>
@@ -1411,31 +1411,31 @@
                <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="przeciwnik">przeciwników</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
                <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="sędzia">sędziów</w>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="1">1</w>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="1" join="right">1</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Prutz">Prutz</w>
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Prutz" join="right">Prutz</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="l.ak">l.</w>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="córka">c</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="córka" join="right">c</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona">str</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona" join="right">str</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="70">70</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="70" join="right">70</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">a</w>
                <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="próbka">próbka</w>
                <w ana="nkjp:ppron3:pl:gen:m1:ter:akc:npraep" msd="UPosTag=PRON" lemma="on">ich</w>
                <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="pismo">pism</w>
-               <w ana="nkjp:adj:pl:gen:n:pos" msd="UPosTag=ADJ" lemma="sporny">spornych</w>
+               <w ana="nkjp:adj:pl:gen:n:pos" msd="UPosTag=ADJ" lemma="sporny" join="right">spornych</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="wzór">wzór</w>
                <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="zręczny">zręcznej</w>
@@ -1444,7 +1444,7 @@
                <w ana="nkjp:adj:pl:gen:m3:pos" msd="UPosTag=ADJ" lemma="jurydyczny">jurydycznych</w>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="obrona">obronie</w>
-               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="bezprawie">bezprawia</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="bezprawie" join="right">bezprawia</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:praet:sg:f:perf" msd="UPosTag=VERB" lemma="dochować">dochowała</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
@@ -1452,30 +1452,30 @@
                <w ana="nkjp:prep:loc:wok" msd="UPosTag=ADP" lemma="w">we</w>
                <w ana="nkjp:adj:sg:loc:m3:pos" msd="UPosTag=ADJ" lemma="fragmentaryczny">fragmentarycznym</w>
                <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="ułomek">ułomku</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="2">2</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="2" join="right">2</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <name type="PER">
-                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Perlbach">Perlbach</w>
+                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Perlbach" join="right">Perlbach</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Pomerellisches">Pomerellisches</w>
-               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Urkundenbuch">Urkundenbuch</w>
+               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Urkundenbuch" join="right">Urkundenbuch</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <name type="LOC">
                   <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Danzig">Danzig</w>
                </name>
                <name type="MISC">
-                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1882">1882</w>
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1882" join="right">1882</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="696">696</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="696" join="right">696</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -1490,7 +1490,7 @@
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="sprawa">sprawy</w>
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="koronacya">koronacyi</w>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Łokietek">Łokietka</w>
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Łokietek" join="right">Łokietka</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="który">która</w>
@@ -1512,7 +1512,7 @@
                </name>
                <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="żywioł">żywiołu</w>
                <name type="LOC">
-                  <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="niemiecki">niemieckiego</w>
+                  <w ana="nkjp:adj:sg:gen:m3:pos" msd="UPosTag=ADJ" lemma="niemiecki" join="right">niemieckiego</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
@@ -1533,7 +1533,7 @@
                <name type="ORG">
                   <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="zakon">Zakon</w>
                </name>
-               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="tytuł">tytułu</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="tytuł" join="right">tytułu</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:praet:sg:m3:imperf" msd="UPosTag=VERB" lemma="pracować">pracował</w>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="więc">więc</w>
@@ -1543,7 +1543,7 @@
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
                <w ana="nkjp:ger:sg:acc:n:imperf:aff" msd="UPosTag=NOUN" lemma="pobudzać">pobudzanie</w>
                <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="pretensya">pretensyi</w>
-               <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="inny">innych</w>
+               <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="inny" join="right">innych</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -1551,7 +1551,7 @@
                <w ana="nkjp:adj:pl:acc:m3:pos" msd="UPosTag=ADJ" lemma="wszelki">wszelkie</w>
                <w ana="nkjp:subst:pl:acc:m3" msd="UPosTag=NOUN" lemma="powód">powody</w>
                <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
-               <w ana="nkjp:ger:sg:gen:n:perf:aff" msd="UPosTag=NOUN" lemma="przypuścić">przypuszczenia</w>
+               <w ana="nkjp:ger:sg:gen:n:perf:aff" msd="UPosTag=NOUN" lemma="przypuścić" join="right">przypuszczenia</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="jak">jak</w>
@@ -1559,22 +1559,22 @@
                   <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Długosz">Długosz</w>
                </name>
                <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="podawać">podaje</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="3">3</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="3" join="right">3</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="ksiądz">Ks</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="ksiądz" join="right">Ks</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <w ana="nkjp:romandig" msd="UPosTag=X" lemma="IX">IX</w>
                <w ana="nkjp:prep:acc:nwok" msd="UPosTag=ADP" lemma="pod">pod</w>
                <name type="MISC">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok">r</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok" join="right">r</w>
                   <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1317">1317</w>
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1317" join="right">1317</w>
                </name>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <name type="ORG">
                   <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="zakon">Zakon</w>
@@ -1601,7 +1601,7 @@
                <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="do">do</w>
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="korona">korony</w>
                <name type="LOC">
-                  <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="polski">polskiej</w>
+                  <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="polski" join="right">polskiej</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
@@ -1610,22 +1610,22 @@
                   <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Jan">Jan</w>
                </name>
                <name type="LOC">
-                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="luksemburski">luksemburski</w>
+                  <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="luksemburski" join="right">luksemburski</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:subst:sg:nom:m2" msd="UPosTag=NOUN" lemma="duch">duch</w>
                <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="niespokojny">niespokojny</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
-               <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="ruchliwy">ruchliwy</w>
+               <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="ruchliwy" join="right">ruchliwy</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <w ana="nkjp:adj:pl:loc:f:pos" msd="UPosTag=ADJ" lemma="ciągły">ciągłych</w>
-               <w ana="nkjp:subst:pl:loc:f" msd="UPosTag=NOUN" lemma="podróż">podróżach</w>
+               <w ana="nkjp:subst:pl:loc:f" msd="UPosTag=NOUN" lemma="podróż" join="right">podróżach</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:sg:nom:m3:pos" msd="UPosTag=ADJ" lemma="pełny">pełen</w>
                <w ana="nkjp:adj:pl:gen:m3:sup" msd="UPosTag=ADJ" lemma="rozmaity">najrozmaitszych</w>
                <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="plan">planów</w>
-               <w ana="nkjp:adj:pl:gen:m3:pos" msd="UPosTag=ADJ" lemma="polityczny">politycznych</w>
+               <w ana="nkjp:adj:pl:gen:m3:pos" msd="UPosTag=ADJ" lemma="polityczny" join="right">politycznych</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:pact:sg:nom:m3:imperf:aff" msd="UPosTag=ADJ" lemma="brać">biorący</w>
                <w ana="nkjp:adj:sg:acc:m3:pos" msd="UPosTag=ADJ" lemma="żywy">żywy</w>
@@ -1633,7 +1633,7 @@
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="polityka">polityce</w>
                <name type="ORG">
-                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="zachód">Zachodu</w>
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="zachód" join="right">Zachodu</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="chociaż">chociaż</w>
@@ -1645,7 +1645,7 @@
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
                <w ana="nkjp:adj:pl:nom:n:pos" msd="UPosTag=ADJ" lemma="groźny">groźne</w>
                <w ana="nkjp:subst:pl:nom:n:ncol" msd="UPosTag=NOUN" lemma="powstanie">powstania</w>
-               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="możnowładztwo">możnowładztwa</w>
+               <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="możnowładztwo" join="right">możnowładztwa</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nie">nie</w>
                <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="mieć">miał</w>
@@ -1653,7 +1653,7 @@
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nawet">nawet</w>
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="chęć">chęci</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
-               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="czas">czasu</w>
+               <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="czas" join="right">czasu</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="aby">aby</w>
                <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="poświęcić">poświęcić</w>
@@ -1663,21 +1663,21 @@
                <w ana="nkjp:subst:pl:dat:f" msd="UPosTag=NOUN" lemma="sprawa">sprawom</w>
                <w ana="nkjp:ger:sg:gen:n:imperf:aff" msd="UPosTag=NOUN" lemma="realizować">realizowania</w>
                <w ana="nkjp:adj:pl:gen:f:pos" msd="UPosTag=ADJ" lemma="wątpliwy">wątpliwych</w>
-               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="pretensja">pretensyj</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="pretensja" join="right">pretensyj</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="co">co</w>
+               <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="co" join="right">co</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="by">by</w>
                <w ana="nkjp:ppron3:sg:acc:m1:ter:nakc:npraep" msd="UPosTag=PRON" lemma="on">go</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="zresztą">zresztą</w>
                <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="odciągać">odciągało</w>
                <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="od">od</w>
-               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="sprawa">spraw</w>
+               <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="sprawa" join="right">spraw</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:pl:nom:f:pos" msd="UPosTag=ADJ" lemma="który">które</w>
                <w ana="nkjp:ppron3:sg:acc:m1:ter:nakc:npraep" msd="UPosTag=PRON" lemma="on">go</w>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="zupełność">zupełności</w>
-               <w ana="nkjp:praet:pl:f:imperf" msd="UPosTag=VERB" lemma="pochłaniać">pochłaniały</w>
+               <w ana="nkjp:praet:pl:f:imperf" msd="UPosTag=VERB" lemma="pochłaniać" join="right">pochłaniały</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -1690,7 +1690,7 @@
                   <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="Prusy">Prus</w>
                </name>
                <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="o">o</w>
-               <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="to">tem</w>
+               <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="to" join="right">tem</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="co">co</w>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
@@ -1708,25 +1708,25 @@
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="może">może</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="także">także</w>
                <w ana="nkjp:subst:pl:inst:m3" msd="UPosTag=NOUN" lemma="środek">środkami</w>
-               <w ana="nkjp:adj:pl:inst:m3:pos" msd="UPosTag=ADJ" lemma="materyalny">materyalnymi</w>
+               <w ana="nkjp:adj:pl:inst:m3:pos" msd="UPosTag=ADJ" lemma="materyalny" join="right">materyalnymi</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:pl:gen:m3:pos" msd="UPosTag=ADJ" lemma="który">których</w>
                <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="wiecznie">wiecznie</w>
-               <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="potrzebować">potrzebował</w>
+               <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="potrzebować" join="right">potrzebował</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="bo">bo</w>
                <w ana="nkjp:subst:pl:acc:m3" msd="UPosTag=NOUN" lemma="pieniądz">pieniądze</w>
                <w ana="nkjp:prep:inst:nwok" msd="UPosTag=ADP" lemma="z">z</w>
                <w ana="nkjp:adj:sg:inst:f:pos" msd="UPosTag=ADJ" lemma="dziwny">dziwną</w>
                <w ana="nkjp:subst:sg:inst:f" msd="UPosTag=NOUN" lemma="lekkomyślność">lekkomyślnością</w>
-               <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="rozrzucać">rozrzucał</w>
+               <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="rozrzucać" join="right">rozrzucał</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="postanowić">postanowił</w>
                <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="zaprotestować">zaprotestować</w>
                <w ana="nkjp:prep:dat" msd="UPosTag=ADP" lemma="przeciwko">przeciwko</w>
                <w ana="nkjp:subst:sg:dat:f" msd="UPosTag=NOUN" lemma="prośba">prośbie</w>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Łokietek">Łokietka</w>
+                  <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Łokietek" join="right">Łokietka</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
@@ -1745,14 +1745,14 @@
                   <w ana="nkjp:subst:pl:loc:n:pt" msd="UPosTag=NOUN" lemma="Czechy">Czechach</w>
                </name>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Leon">Leon</w>
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Leon" join="right">Leon</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="który">który</w>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <name type="MISC">
                   <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="maj">maju</w>
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok">r</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok" join="right">r</w>
                   <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                   <w ana="nkjp:dig" msd="UPosTag=X" lemma="1318">1318</w>
                </name>
@@ -1766,20 +1766,20 @@
                   <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Jan">Jana</w>
                </name>
                <w ana="nkjp:praet:sg:m1:imperf" msd="UPosTag=VERB" lemma="stawać">stawał</w>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="4">4</w>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="4" join="right">4</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
-               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Emler">Emler</w>
+               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Emler" join="right">Emler</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="regesta">Regesta</w>
-               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="diplom">diplom</w>
+               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="diplom" join="right">diplom</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="nec">nec</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="non">non</w>
-               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="epistol">epistol</w>
+               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="epistol" join="right">epistol</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -1788,28 +1788,28 @@
                </name>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="et">et</w>
                <name type="LOC">
-                  <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Moraviae">Moraviae</w>
+                  <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Moraviae" join="right">Moraviae</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="P">P</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="P" join="right">P</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="III">III</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="III" join="right">III</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <name type="LOC">
                   <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Pragae">Pragae</w>
                </name>
                <name type="MISC">
-                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1890">1890</w>
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1890" join="right">1890</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <w ana="nkjp:dig" msd="UPosTag=X" lemma="444">444</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="446">446</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="446" join="right">446</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="a">a</w>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
@@ -1826,7 +1826,7 @@
                </name>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="Avignona">Avignonie</w>
+                  <w ana="nkjp:subst:sg:loc:f" msd="UPosTag=NOUN" lemma="Avignona" join="right">Avignonie</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="aby">aby</w>
@@ -1836,21 +1836,21 @@
                   <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Gerward">Gerwarda</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="5">5</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="5" join="right">5</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="ibidem">Ibid</w>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="ibidem" join="right">Ibid</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="487">487</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">-</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="490">490</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="487" join="right">487</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">-</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="490" join="right">490</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
             </s>
             <s>
@@ -1865,7 +1865,7 @@
                <name type="LOC">
                   <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="Czechy">Czech</w>
                </name>
-               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="świadczyć">świadczy</w>
+               <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="świadczyć" join="right">świadczy</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="stąd">stąd</w>
@@ -1873,11 +1873,11 @@
                <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="odchodzić">odchodziło</w>
                <w ana="nkjp:subst:sg:nom:n:ncol" msd="UPosTag=NOUN" lemma="poselstwo">poselstwo</w>
                <name type="LOC">
-                  <w ana="nkjp:adj:sg:nom:n:pos" msd="UPosTag=ADJ" lemma="czeski">czeskie</w>
+                  <w ana="nkjp:adj:sg:nom:n:pos" msd="UPosTag=ADJ" lemma="czeski" join="right">czeskie</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="tem">tem</w>
-               <w ana="nkjp:adv:com" msd="UPosTag=ADV" lemma="bardzo">bardziej</w>
+               <w ana="nkjp:adv:com" msd="UPosTag=ADV" lemma="bardzo" join="right">bardziej</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <w ana="nkjp:prep:inst" msd="UPosTag=ADP" lemma="między">między</w>
@@ -1889,7 +1889,7 @@
                <w ana="nkjp:subst:pl:acc:m3" msd="UPosTag=NOUN" lemma="przywilej">przywileje</w>
                <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="dla">dla</w>
                <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="para">pary</w>
-               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="monarszy">monarszej</w>
+               <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="monarszy" join="right">monarszej</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:pl:nom:m3:pos" msd="UPosTag=ADJ" lemma="który">które</w>
                <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="przy">przy</w>
@@ -1898,9 +1898,9 @@
                <w ana="nkjp:subst:pl:loc:f" msd="UPosTag=NOUN" lemma="sposobność">sposobnościach</w>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="zawsze">zawsze</w>
                <w ana="nkjp:praet:pl:m3:imperf" msd="UPosTag=VERB" lemma="być">były</w>
-               <w ana="nkjp:ppas:pl:nom:m3:imperf:aff" msd="UPosTag=ADJ" lemma="wydawać">wydawane</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:ppas:pl:nom:m3:imperf:aff" msd="UPosTag=ADJ" lemma="wydawać" join="right">wydawane</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -1913,17 +1913,17 @@
                <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="rząd">rzędzie</w>
                <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="na">na</w>
                <w ana="nkjp:ger:sg:loc:n:perf:aff" msd="UPosTag=NOUN" lemma="przewlec">przewleczeniu</w>
-               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="sprawa">sprawy</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="sprawa" join="right">sprawy</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">;</pc>
                <w ana="nkjp:subst:sg:nom:f" msd="UPosTag=NOUN" lemma="taktyka">taktyka</w>
                <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="ten">ta</w>
-               <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="sam">sama</w>
+               <w ana="nkjp:adj:sg:nom:f:pos" msd="UPosTag=ADJ" lemma="sam" join="right">sama</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="jaki">jakiej</w>
                <name type="ORG">
                   <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="zakon">Zakon</w>
                </name>
-               <w ana="nkjp:praet:sg:m3:imperf" msd="UPosTag=VERB" lemma="używać">używał</w>
+               <w ana="nkjp:praet:sg:m3:imperf" msd="UPosTag=VERB" lemma="używać" join="right">używał</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:ppron3:sg:gen:m1:ter:akc:npraep" msd="UPosTag=PRON" lemma="on">jego</w>
                <w ana="nkjp:subst:pl:nom:m1" msd="UPosTag=NOUN" lemma="poseł">posłowie</w>
@@ -1934,14 +1934,14 @@
                </name>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="ani">ani</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nie">nie</w>
-               <w ana="nkjp:praet:pl:m1:imperf" msd="UPosTag=VERB" lemma="wykazywać">wykazywali</w>
+               <w ana="nkjp:praet:pl:m1:imperf" msd="UPosTag=VERB" lemma="wykazywać" join="right">wykazywali</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="ani">ani</w>
                <w ana="nkjp:adv:com" msd="UPosTag=ADV" lemma="blisko">bliżej</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nie">nie</w>
                <w ana="nkjp:praet:pl:m1:imperf" msd="UPosTag=VERB" lemma="uzasadniać">uzasadniali</w>
                <w ana="nkjp:pcon:imperf" msd="UPosTag=VERB" lemma="oświadczać">oświadczając</w>
-               <w ana="nkjp:part" msd="UPosTag=PART" lemma="tylko">tylko</w>
+               <w ana="nkjp:part" msd="UPosTag=PART" lemma="tylko" join="right">tylko</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
@@ -1962,31 +1962,31 @@
                   <w ana="nkjp:adj:sg:gen:n:pos" msd="UPosTag=ADJ" lemma="polski">Polskiego</w>
                </name>
                <w ana="nkjp:fin:pl:ter:perf" msd="UPosTag=VERB" lemma="przedłożyć">przedłożą</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="1">1</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="1" join="right">1</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Theiner">Theiner</w>
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Theiner" join="right">Theiner</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="mon">Mon</w>
+               <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="mon" join="right">Mon</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
                <name type="LOC">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="polski">Pol</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="polski" join="right">Pol</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="I">I</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="I" join="right">I</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="226">226</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="226" join="right">226</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">»</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">»</pc>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="quod">quod</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="se">se</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="offerebant">offerebant</w>
@@ -1994,20 +1994,20 @@
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="loco">loco</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="et">et</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="tempore">tempore</w>
-               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="probaturos">probaturos</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">«</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="probaturos" join="right">probaturos</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">«</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="pomimo">Pomimo</w>
+               <w ana="nkjp:prep:gen" msd="UPosTag=ADP" lemma="pomimo" join="right">Pomimo</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <w ana="nkjp:subst:pl:gen:m3" msd="UPosTag=NOUN" lemma="dowód">dowodów</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nie">nie</w>
-               <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="być">było</w>
+               <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="być" join="right">było</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <name type="PER">
@@ -2021,7 +2021,7 @@
                <w ana="nkjp:subst:pl:acc:n:ncol" msd="UPosTag=NOUN" lemma="orzeczenie">orzeczenia</w>
                <name type="PER">
                   <w ana="nkjp:subst:sg:gen:m1" msd="UPosTag=NOUN" lemma="Bonifacy">Bonifacego</w>
-                  <w ana="nkjp:romandig" msd="UPosTag=X" lemma="VIII">VIII</w>
+                  <w ana="nkjp:romandig" msd="UPosTag=X" lemma="VIII" join="right">VIII</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:sg:nom:m3:pos" msd="UPosTag=ADJ" lemma="sam">sam</w>
@@ -2038,7 +2038,7 @@
                <w ana="nkjp:subst:pl:gen:n:ncol" msd="UPosTag=NOUN" lemma="staranie">starań</w>
                <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="poseł">posłów</w>
                <name type="LOC">
-                  <w ana="nkjp:adj:pl:gen:m1:pos" msd="UPosTag=ADJ" lemma="polski">polskich</w>
+                  <w ana="nkjp:adj:pl:gen:m1:pos" msd="UPosTag=ADJ" lemma="polski" join="right">polskich</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="gdyż">gdyż</w>
@@ -2062,7 +2062,7 @@
                   <w ana="nkjp:subst:sg:acc:m1" msd="UPosTag=NOUN" lemma="Jan">Jana</w>
                </name>
                <name type="PER">
-                  <w ana="nkjp:adj:sg:acc:m1:pos" msd="UPosTag=ADJ" lemma="luksemburski">luksemburskiego</w>
+                  <w ana="nkjp:adj:sg:acc:m1:pos" msd="UPosTag=ADJ" lemma="luksemburski" join="right">luksemburskiego</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
@@ -2070,13 +2070,13 @@
                <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="zakon">Zakon</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="jednak">jednak</w>
                <w ana="nkjp:praet:sg:m3:imperf" msd="UPosTag=VERB" lemma="pracować">pracował</w>
-               <w ana="nkjp:adv:com" msd="UPosTag=ADV" lemma="daleko">dalej</w>
+               <w ana="nkjp:adv:com" msd="UPosTag=ADV" lemma="daleko" join="right">dalej</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
                <w ana="nkjp:praet:pl:m3:imperf" msd="UPosTag=VERB" lemma="mnożyć">Mnożyły</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
-               <w ana="nkjp:subst:pl:nom:m3" msd="UPosTag=NOUN" lemma="zarzut">zarzuty</w>
+               <w ana="nkjp:subst:pl:nom:m3" msd="UPosTag=NOUN" lemma="zarzut" join="right">zarzuty</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="tak">tak</w>
                <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="często">często</w>
@@ -2087,7 +2087,7 @@
                <name type="LOC">
                   <w ana="nkjp:subst:sg:dat:f" msd="UPosTag=NOUN" lemma="Polska">Polsce</w>
                </name>
-               <w ana="nkjp:ppas:pl:nom:m3:imperf:aff" msd="UPosTag=ADJ" lemma="podnosić">podnoszone</w>
+               <w ana="nkjp:ppas:pl:nom:m3:imperf:aff" msd="UPosTag=ADJ" lemma="podnosić" join="right">podnoszone</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <name type="PER">
@@ -2102,7 +2102,7 @@
                <w ana="nkjp:subst:pl:inst:m1" msd="UPosTag=NOUN" lemma="pogan">poganami</w>
                <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
                <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="zguba">zgubę</w>
-               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="chrześcijanin">chrześcijan</w>
+               <w ana="nkjp:subst:pl:gen:m1" msd="UPosTag=NOUN" lemma="chrześcijanin" join="right">chrześcijan</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nie">nie</w>
@@ -2111,7 +2111,7 @@
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="wcale">wcale</w>
                <w ana="nkjp:subst:pl:inst:f" msd="UPosTag=NOUN" lemma="sprawa">sprawami</w>
                <name type="ORG">
-                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="kościół">Kościoła</w>
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="kościół" join="right">Kościoła</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="gdy">gdy</w>
@@ -2120,7 +2120,7 @@
                   <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="zakon">Zakon</w>
                </name>
                <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="postępować">postępuje</w>
-               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="inaczej">inaczej</w>
+               <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="inaczej" join="right">inaczej</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -2137,9 +2137,9 @@
                <w ana="nkjp:praet:sg:m3:imperf" msd="UPosTag=VERB" lemma="znajdować">znajdował</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
                <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="jak">jak</w>
-               <w ana="nkjp:praet:pl:m1:perf" msd="UPosTag=VERB" lemma="wspomnieć">wspomnieli</w>
+               <w ana="nkjp:praet:pl:m1:perf" msd="UPosTag=VERB" lemma="wspomnieć" join="right">wspomnieli</w>
                <w ana="nkjp:aglt:pl:pri:imperf:nwok" msd="UPosTag=AUX" lemma="być">śmy</w>
-               <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="ustęp">ustęp</w>
+               <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="ustęp" join="right">ustęp</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adj:sg:nom:m3:pos" msd="UPosTag=ADJ" lemma="który">który</w>
                <w ana="nkjp:praet:sg:m3:imperf" msd="UPosTag=VERB" lemma="mieć">miał</w>
@@ -2156,7 +2156,7 @@
                <w ana="nkjp:adj:pl:gen:n:pos" msd="UPosTag=ADJ" lemma="misyjny">misyjnych</w>
                <w ana="nkjp:prep:loc" msd="UPosTag=ADP" lemma="na">na</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="wschód">Wschodzie</w>
+                  <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="wschód" join="right">Wschodzie</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="lecz">lecz</w>
@@ -2170,7 +2170,7 @@
                </name>
                <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="przeciwstawić">przeciwstawić</w>
                <w ana="nkjp:adj:pl:acc:f:pos" msd="UPosTag=ADJ" lemma="swój">swoje</w>
-               <w ana="nkjp:subst:pl:acc:f" msd="UPosTag=NOUN" lemma="zasługa">zasługi</w>
+               <w ana="nkjp:subst:pl:acc:f" msd="UPosTag=NOUN" lemma="zasługa" join="right">zasługi</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <w ana="nkjp:frag" msd="UPosTag=X" lemma="obek">obec</w>
@@ -2188,7 +2188,7 @@
                <w ana="nkjp:praet:pl:n:imperf" msd="UPosTag=VERB" lemma="móc">mogły</w>
                <w ana="nkjp:inf:imperf" msd="UPosTag=VERB" lemma="przedstawiać">przedstawiać</w>
                <w ana="nkjp:adj:sg:gen:f:com" msd="UPosTag=ADJ" lemma="wielki">większej</w>
-               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="wartość">wartości</w>
+               <w ana="nkjp:subst:sg:gen:f" msd="UPosTag=NOUN" lemma="wartość" join="right">wartości</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -2196,7 +2196,7 @@
                <w ana="nkjp:prep:inst:wok" msd="UPosTag=ADP" lemma="przedewszystkie">przedewszystkiem</w>
                <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="o">o</w>
                <name type="LOC">
-                  <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="Ruś">Ruś</w>
+                  <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="Ruś" join="right">Ruś</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
@@ -2211,7 +2211,7 @@
                </name>
                <w ana="nkjp:subst:sg:acc:f" msd="UPosTag=NOUN" lemma="ziemia">ziemię</w>
                <name type="LOC">
-                  <w ana="nkjp:adj:sg:acc:f:pos" msd="UPosTag=ADJ" lemma="pomorski">pomorską</w>
+                  <w ana="nkjp:adj:sg:acc:f:pos" msd="UPosTag=ADJ" lemma="pomorski" join="right">pomorską</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nie">nie</w>
@@ -2221,7 +2221,7 @@
                </name>
                <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="skutecznie">skutecznie</w>
                <w ana="nkjp:subst:sg:dat:n:ncol" msd="UPosTag=NOUN" lemma="to">temu</w>
-               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="zapobiedz">zapobiedz</w>
+               <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="zapobiedz" join="right">zapobiedz</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="bo">bo</w>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="właśnie">właśnie</w>
@@ -2229,21 +2229,21 @@
                <w ana="nkjp:prep:inst:wok" msd="UPosTag=ADP" lemma="z">ze</w>
                <w ana="nkjp:adj:sg:inst:m1:pos" msd="UPosTag=ADJ" lemma="wschodni">wschodnim</w>
                <w ana="nkjp:subst:sg:inst:m1" msd="UPosTag=NOUN" lemma="sąsiad">sąsiadem</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="2">2</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="2" join="right">2</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">W</w>
                <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="proces">procesie</w>
                <w ana="nkjp:prep:gen:nwok" msd="UPosTag=ADP" lemma="z">z</w>
                <name type="MISC">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok">r</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok" join="right">r</w>
                   <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                   <w ana="nkjp:dig" msd="UPosTag=X" lemma="1320">1320</w>
                </name>
                <w ana="nkjp:fin:sg:ter:imperf" msd="UPosTag=VERB" lemma="zeznawać">zeznaje</w>
                <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="biskup">biskup</w>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Gerward">Gerward</w>
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Gerward" join="right">Gerward</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
@@ -2256,9 +2256,9 @@
                </name>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <w ana="nkjp:subst:sg:loc:m3" msd="UPosTag=NOUN" lemma="czas">czasie</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">»</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">»</pc>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="dicto">dicto</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="domino">domino</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="rege">rege</w>
@@ -2270,9 +2270,9 @@
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="et">et</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="contra">contra</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="scismaticos">scismaticos</w>
-               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="pugnante">pugnante</w>
+               <w ana="nkjp:xxx" msd="UPosTag=X" lemma="pugnante" join="right">pugnante</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">«</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">(</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">(</pc>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Lites">Lites</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="ac">ac</w>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="res">res</w>
@@ -2282,26 +2282,26 @@
                   <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Polonos">Polonos</w>
                </name>
                <w ana="nkjp:xxx" msd="UPosTag=X" lemma="Ordinemque">Ordinemque</w>
-               <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Cruciferorum">Cruciferorum</w>
+               <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Cruciferorum" join="right">Cruciferorum</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="T">T</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="T" join="right">T</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="I">I</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="I" join="right">I</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="wydanie">wyd</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="wydanie" join="right">wyd</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="2">2</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="2" join="right">2</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona">str</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="strona" join="right">str</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="19">19</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="19" join="right">19</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">)</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
             </s>
             <s>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">;</pc>
                <w ana="nkjp:adv:com" msd="UPosTag=ADV" lemma="późno">później</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="jednak">jednak</w>
@@ -2309,10 +2309,10 @@
                <w ana="nkjp:subst:pl:nom:n:pt" msd="UPosTag=NOUN" lemma="stosunki">stosunki</w>
                <w ana="nkjp:adj:pl:nom:n:pos" msd="UPosTag=ADJ" lemma="przyjazny">przyjazne</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nawet">nawet</w>
-               <w ana="nkjp:adj:pl:nom:m3:com" msd="UPosTag=ADJ" lemma="ścisły">ściślejsze</w>
+               <w ana="nkjp:adj:pl:nom:m3:com" msd="UPosTag=ADJ" lemma="ścisły" join="right">ściślejsze</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:adv:pos" msd="UPosTag=ADV" lemma="tak">tak</w>
-               <w ana="nkjp:adv:com" msd="UPosTag=ADV" lemma="dalece">dalece</w>
+               <w ana="nkjp:adv:com" msd="UPosTag=ADV" lemma="dalece" join="right">dalece</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:comp" msd="UPosTag=SCONJ" lemma="że">że</w>
                <w ana="nkjp:subst:pl:nom:m1" msd="UPosTag=NOUN" lemma="książę">książęta</w>
@@ -2335,20 +2335,20 @@
                <name type="LOC">
                   <w ana="nkjp:subst:sg:dat:f" msd="UPosTag=NOUN" lemma="Brandenburgia">Brandenburgii</w>
                </name>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="3">3</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="3" join="right">3</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
-               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="Kdwp">KDWP</w>
+               <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="Kdwp" join="right">KDWP</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="II">II</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="II" join="right">II</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="nr">Nr</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="nr" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="976">976</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="976" join="right">976</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
@@ -2357,7 +2357,7 @@
                <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="nieustać">nieustają</w>
                <w ana="nkjp:subst:pl:nom:f" msd="UPosTag=NOUN" lemma="intryga">intrygi</w>
                <name type="ORG">
-                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="zakon">Zakonu</w>
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="zakon" join="right">Zakonu</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
@@ -2382,7 +2382,7 @@
                <w ana="nkjp:subst:sg:gen:n:ncol" msd="UPosTag=NOUN" lemma="połączenie">połączenia</w>
                <w ana="nkjp:subst:pl:gen:f" msd="UPosTag=NOUN" lemma="granica">granic</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="nie">nie</w>
-               <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="być">było</w>
+               <w ana="nkjp:praet:sg:n:imperf" msd="UPosTag=VERB" lemma="być" join="right">było</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:fin:pl:ter:imperf" msd="UPosTag=VERB" lemma="zawiązywać">zawiązują</w>
                <w ana="nkjp:part" msd="UPosTag=PART" lemma="się">się</w>
@@ -2396,32 +2396,32 @@
                <w ana="nkjp:subst:sg:loc:n:ncol" msd="UPosTag=NOUN" lemma="tło">tle</w>
                <w ana="nkjp:subst:pl:gen:n:pt" msd="UPosTag=NOUN" lemma="stosunki">stosunków</w>
                <w ana="nkjp:adj:pl:gen:m3:pos" msd="UPosTag=ADJ" lemma="handlowy">handlowych</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="4">4</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="4" join="right">4</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Codex">Codex</w>
                <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="diplomaticus">diplomaticus</w>
                <name type="LOC">
-                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Prussicus">Prussicus</w>
+                  <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="Prussicus" join="right">Prussicus</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="tom">T</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="tom" join="right">T</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="II">II</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="II" join="right">II</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <name type="LOC">
                   <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="Königsberg">Königsberg</w>
                </name>
                <name type="MISC">
-                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1842">1842</w>
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1842" join="right">1842</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="75">75</w>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="75" join="right">75</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok">r</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok" join="right">r</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <name type="MISC">
                   <w ana="nkjp:dig" msd="UPosTag=X" lemma="1316">1316</w>
@@ -2430,21 +2430,21 @@
                <w ana="nkjp:adv:com" msd="UPosTag=ADV" lemma="późno">później</w>
                <w ana="nkjp:brev:npun" msd="UPosTag=X" lemma="numer">Nr</w>
                <w ana="nkjp:dig" msd="UPosTag=X" lemma="116">116</w>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok">r</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok" join="right">r</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <name type="MISC">
-                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1325">1325</w>
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1325" join="right">1325</w>
                </name>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:pact:pl:nom:n:imperf:aff" msd="UPosTag=ADJ" lemma="otwierać">otwierające</w>
                <w ana="nkjp:adj:pl:acc:m3:com" msd="UPosTag=ADJ" lemma="daleki">dalsze</w>
                <w ana="nkjp:subst:pl:acc:m3" msd="UPosTag=NOUN" lemma="widok">widoki</w>
                <w ana="nkjp:subst:pl:dat:m3" msd="UPosTag=NOUN" lemma="wpływ">wpływom</w>
                <name type="ORG">
-                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="zakon">Zakonu</w>
+                  <w ana="nkjp:subst:sg:gen:m3" msd="UPosTag=NOUN" lemma="zakon" join="right">Zakonu</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
@@ -2456,7 +2456,7 @@
                <w ana="nkjp:subst:pl:nom:m3" msd="UPosTag=NOUN" lemma="wpływ">wpływy</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
                <w ana="nkjp:adv" msd="UPosTag=ADV" lemma="dokąd">dokąd</w>
-               <w ana="nkjp:praet:pl:m3:imperf" msd="UPosTag=VERB" lemma="dążyć">dążyły</w>
+               <w ana="nkjp:praet:pl:m3:imperf" msd="UPosTag=VERB" lemma="dążyć" join="right">dążyły</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:fin:pl:pri:imperf" msd="UPosTag=VERB" lemma="móc">możemy</w>
                <w ana="nkjp:inf:perf" msd="UPosTag=VERB" lemma="ocenić">ocenić</w>
@@ -2472,9 +2472,9 @@
                </name>
                <w ana="nkjp:prep:loc:nwok" msd="UPosTag=ADP" lemma="w">w</w>
                <name type="MISC">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok">r</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="rok" join="right">r</w>
                   <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1320">1320</w>
+                  <w ana="nkjp:dig" msd="UPosTag=X" lemma="1320" join="right">1320</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <w ana="nkjp:subst:sg:inst:m1" msd="UPosTag=NOUN" lemma="biskup">Biskupem</w>
@@ -2497,34 +2497,34 @@
                <name type="LOC">
                   <w ana="nkjp:adj:sg:gen:f:pos" msd="UPosTag=ADJ" lemma="kamieński">kamieńskiej</w>
                </name>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="5">5</w>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="5" join="right">5</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
                <name type="PER">
-                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Theiner">Theiner</w>
+                  <w ana="nkjp:subst:sg:nom:m1" msd="UPosTag=NOUN" lemma="Theiner" join="right">Theiner</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
-               <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="mon">Mon</w>
+               <w ana="nkjp:xxs:nom" msd="UPosTag=X" lemma="mon" join="right">Mon</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
                <name type="LOC">
-                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="polski">Pol</w>
+                  <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="polski" join="right">Pol</w>
                </name>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="I">I</w>
+               <w ana="nkjp:romandig" msd="UPosTag=X" lemma="I" join="right">I</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
                <w ana="nkjp:dig" msd="UPosTag=X" lemma="252">252</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="i">i</w>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="255">255</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="255" join="right">255</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="ale">ale</w>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="nie">nie</w>
@@ -2534,7 +2534,7 @@
                <w ana="nkjp:prep:acc" msd="UPosTag=ADP" lemma="na">na</w>
                <w ana="nkjp:adj:sg:acc:n:pos" msd="UPosTag=ADJ" lemma="ów">owo</w>
                <w ana="nkjp:subst:sg:acc:n:ncol" msd="UPosTag=NOUN" lemma="biskupstwo">biskupstwo</w>
-               <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="naznaczyć">naznaczył</w>
+               <w ana="nkjp:praet:sg:m1:perf" msd="UPosTag=VERB" lemma="naznaczyć" join="right">naznaczył</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">,</pc>
                <w ana="nkjp:conj" msd="UPosTag=CCONJ" lemma="lecz">lecz</w>
                <name type="PER">
@@ -2544,27 +2544,27 @@
                <name type="LOC">
                   <w ana="nkjp:adj:sg:nom:m1:pos" msd="UPosTag=ADJ" lemma="lubuski">lubuski</w>
                </name>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="6">6</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="6" join="right">6</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">)</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">{</pc>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="ibidem">ibid</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">{</pc>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="ibidem" join="right">ibid</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
             <s>
-               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer">Nr</w>
+               <w ana="nkjp:brev:pun" msd="UPosTag=X" lemma="numer" join="right">Nr</w>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <w ana="nkjp:dig" msd="UPosTag=X" lemma="252">252</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">:</pc>
-               <pc ana="nkjp:sym" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:dig" msd="UPosTag=X" lemma="252" join="right">252</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">:</pc>
+               <pc ana="nkjp:sym" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">[</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">[</pc>
                <w ana="nkjp:subst:sg:nom:m3" msd="UPosTag=NOUN" lemma="tekst">tekst</w>
-               <w ana="nkjp:adj:sg:nom:m3:pos" msd="UPosTag=ADJ" lemma="łaciński">łaciński</w>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">]</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
-               <pc ana="nkjp:interp" msd="UPosTag=PUNCT">}</pc>
+               <w ana="nkjp:adj:sg:nom:m3:pos" msd="UPosTag=ADJ" lemma="łaciński" join="right">łaciński</w>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">]</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">.</pc>
+               <pc ana="nkjp:interp" msd="UPosTag=PUNCT" join="right">}</pc>
                <pc ana="nkjp:interp" msd="UPosTag=PUNCT">.</pc>
             </s>
          </p>
