@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-AT_1885-10-31" xml:lang="de">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="de">Österreichisches historisches Zeitungskorpus PressMint-AT, "Wiener Abendpost", 31.10.1885 [PressMint SAMPLE]</title>
+            <title xml:lang="en">Austrian historical newspaper corpus PressMint-AT, "Wiener Abendpost", 10/31/1885 [PressMint SAMPLE]</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="paragraphs" quantity="89" xml:lang="en">89 paragraphs</measure>
+            <measure unit="words" quantity="0" xml:lang="en">0 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="de">CLARIN Forschungsinfrastruktur</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="de">Dieses Werk ist lizenziert unter der <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</ref>.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Wiener Abendpost</title>
+               <publisher>Friedrich Uhl</publisher>
+               <date when="1885-10-31">31.10.1885</date>
+               <idno type="URI" subtype="URL">https://anno.onb.ac.at/cgi-content/anno?aid=wrz&amp;datum=18851031</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2026-09-28">
+            <name>corpus2sample.xsl</name>: Made sample.</change>
+         <change when="2026-07-14">
+            <name>Jona Marie Hassenbach</name>: Made sample.</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="PressMint-AT_1885-10-31.page1">
+         <graphic url="https://anno.onb.ac.at/cgi-content/anno?aid=wrz&amp;datum=18851031&amp;seite=11&amp;zoom=33"/>
+      </surface>
+   </facsimile>
+   <text xml:lang="de">
+      <body>
+         <pb n="1" facs="#PressMint-AT_1885-10-31.page1"/>
+         <div type="banner">
+            <head xml:id="PressMint-AT_1885-10-31.head1">Wiener Abendpost.</head>
+         </div>
+         <div type="colophon">
+            <p xml:id="PressMint-AT_1885-10-31.p1">1885. — Nr. 250. Beilage zur Wiener Zeitung. Samstag, 31. October.</p>
+         </div>
+         <div type="colophon">
+            <p xml:id="PressMint-AT_1885-10-31.p2">Pränumerationspreise: Für Wien: „Wiener Abendgift" vierteljährlich 1 fl., monatlich 40 kr. Für die Zustellung ins Haus monatlick 20 kr., Gimmelne Nummern, 2 kr.; Mit Vollversendung vierteiljärlich 1 f. 50 kr</p>
+         </div>
+         <gap reason="editorial">
+            <desc xml:lang="en">SAMPLING</desc>
+         </gap>
+         <div type="article">
+            <head xml:id="PressMint-AT_1885-10-31.head36">Theater von heute:</head>
+            <p xml:id="PressMint-AT_1885-10-31.p85">K. k. Hofburgtheater. „Krieg im Frieden“, Lustspiel in fünf Acten von G. von Moser und Franz von Schönthan.</p>
+            <p xml:id="PressMint-AT_1885-10-31.p86">K. k. Hofoverntheater. Für das Pensions=Institut dieses Hoftheaters. Neu einstudirt: „Des Teufels Anthei komische Oper in drei Acten, nach dem Französischen des, Scribe. Musik von Auber. (Carlo Broschi — Frau Pauline Lucca, k. k. österreichische und kön. preußische Kammersängerin. — Anfang 7 Uhr.)</p>
+            <p xml:id="PressMint-AT_1885-10-31.p87">Carl=Theater. „'s Nullerl“. Volksstück mit Gesang in fünf Aufzügen von Karl Morre. Musik nach steirischen Motiven von Vincenz Pertl. Ouverture und das Lied mit Chor im zweiten Aufzuge von Franz Roth.</p>
+            <p xml:id="PressMint-AT_1885-10-31.p88">Theater an der Wien. „Der Zigeunerbaron“, Operette in drei Acten nach einer Erzählung von Maurus Jókai von J. Schnitzer. Musik von Johann Strauß.</p>
+            <p xml:id="PressMint-AT_1885-10-31.p89">Theater in der Josephstadt. „Die beiden Wenzel“, Posse mit Gesang in vier Acten von W. Mannstädt und Karl Lindau. Musik vom Capellmeister Paul Mestrozi.</p>
+         </div>
+         <div type="article">
+            <gap reason="editorial" xml:id="PressMint-AT_1885-10-31.gap1">
+               <desc xml:lang="en">An advertisement.</desc>
+            </gap>
+         </div>
+         <div type="article">
+            <gap reason="editorial" xml:id="PressMint-AT_1885-10-31.gap2">
+               <desc xml:lang="en">A table.</desc>
+            </gap>
+         </div>
+      </body>
+   </text>
+</TEI>
+
