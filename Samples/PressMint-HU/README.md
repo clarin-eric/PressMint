@@ -12,7 +12,7 @@ The source of the PressMint-HU corpus will be the Hungaricana digital library da
 
 * __Content__: *Pesti Hírlap*, a highly influential daily political newspaper published in Budapest, Hungary.
 
-* __Size__: 3 daily issues from January 1884 (45 total pages, containing 134 paragraphs and 18,924 words).
+* __Size__: 3 daily issues from January 1884 (45 total pages, containing 1,703 paragraphs and 72,082 words).
 
 * __Structure__: Structured into daily TEI XML component files containing text body segments nested inside paragraphs (`<p>`).
 
@@ -30,14 +30,12 @@ The source of the PressMint-HU corpus will be the Hungaricana digital library da
     The texts in the corpus have the following metadata:
 
     - Document ID (e.g. `PressMint-HU_1884-01-01-PestiHirlap`)
-    - Source (Original digitised document URL at Hungaricana)
     - Newspaper Title
     - Date of publication (ISO 8601: YYYY-MM-DD)
-    - Publisher (Budapest)
     - Extent measures (texts, paragraphs, and words)
     - Language (hu, en)
 
-* __Format__: TEI XML (with XInclude), raw plain text (.txt), metadata tables (.tsv), and vertical format (.vert) for corpus engine indexing.
+* __Format__: TEI XML with XInclude. The pilot is currently TEI-only and does not include a linguistically annotated TEI (`.ana.xml`) version or derived formats.
 
 * __Facsimile__: High-quality page PDFs sourced from Hungaricana.
 
@@ -48,4 +46,4 @@ For the PressMint-HU corpus we plan to:
 1. Segment monthly aggregated source PDFs into separate daily issue PDFs.
 2. Run high-accuracy OCR via the Google Cloud Vision API to handle multi-column layouts without manual transcriptions.
 3. Run python-based cleaning and normalization scripts (`package_tei_xml.py`) to structure the raw OCR into TEI XML components with robust metadata.
-4. Utilize the central PressMint build pipelines to automatically validate and export derived formats (.txt, .tsv, .vert).
+4. Use the central PressMint build pipeline to validate the TEI and generate applicable derived formats. Linguistic formats, including vertical corpus data, require a future annotated version.
