@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="PressMint-HU" xml:lang="hu">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Hungarian historical newspaper corpus PressMint-HU [PressMint SAMPLE]</title>
+            <title xml:lang="en">Hungarian historical newspaper corpus PressMint-HU [PressMint SAMPLE]</title>
+            <respStmt>
+               <resp>Project Lead</resp>
+               <name>LNN</name>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="texts" quantity="3" xml:lang="en">3 texts</measure>
+            <measure unit="paragraphs" quantity="1703" xml:lang="en">1,703 paragraphs</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>Hungarian PressMint Project</publisher>
+            <idno type="URI" subtype="handle">LNN</idno>
+            <date when="2026-10-01">2026-10-01</date>
+            <availability>
+               <licence>Secured (Internal approval)</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Compiled from Hungaricana pilot dataset.</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+            <p>Delivery of the Hungarian subcorpus for the international PressMint project.</p>
+         </projectDesc>
+         <editorialDecl>
+            <correction>
+               <p>No manual correction at article level. Coordinate-based column reordering.</p>
+            </correction>
+            <normalization>
+               <p>Characters restricted to strict Hungarian whitelist. Markdown elements mapped to TEI.</p>
+            </normalization>
+            <segmentation>
+               <p>Multi-story layout split dynamically corrected using spatial coordinate sorting.</p>
+            </segmentation>
+         </editorialDecl>
+         <tagsDecl><!--These numbers do not reflect the size of the sample!-->
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="3"/>
+               <tagUsage gi="label" occurs="198"/>
+               <tagUsage gi="lb" occurs="420"/>
+               <tagUsage gi="p" occurs="1703"/>
+               <tagUsage gi="pb" occurs="45"/>
+               <tagUsage gi="span" occurs="386"/>
+               <tagUsage gi="text" occurs="3"/>
+            </namespace>
+         </tagsDecl>
+         <classDecl>
+            <xi:include href="PressMint-taxonomy-topic.xml"/>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+               <name>Hungary</name>
+            </setting>
+         </settingDesc>
+         <langUsage>
+            <language ident="hu">Hungarian</language>
+            <language ident="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-10-01">
+            <name>corpus2sample.xsl</name>: Made sample.</change>
+         <change when="2026-10-01">parlamint2release script: Fix some identifiable erros for the release.</change>
+         <change when="2026-10-01">Initial corpus compilation with layout-aware sorting for pilot delivery.</change>
+         <change when="2026-10-01">parlamint-add-common-content script: Adding common content.</change>
+      </revisionDesc>
+   </teiHeader>
+   <xi:include href="1884/PressMint-HU_1884-01-01-PestiHirlap.xml"/>
+   <xi:include href="1884/PressMint-HU_1884-01-02-PestiHirlap.xml"/>
+   <xi:include href="1884/PressMint-HU_1884-01-03-PestiHirlap.xml"/>
+</teiCorpus>
+
