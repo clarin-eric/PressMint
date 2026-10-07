@@ -115,9 +115,10 @@
                <p xml:lang="es">Las palabras divididas por guiones al final de línea han sido reconstruidas en parte.</p>
             </hyphenation>     
 
+           
             <normalization>
-               <p xml:lang="eu">Testua ez da normalizatu, espazioak salbu.</p>
-               <p xml:lang="es">El texto no ha sido normalizado, salvo el espaciado.</p>
+               <p xml:lang="eu">Testua automatikoki normalizatu da neurri batean.</p>
+               <p xml:lang="es">El texto ha sido normalizado automáticamente en parte</p>
             </normalization>
 
          </editorialDecl>        
@@ -130,7 +131,7 @@
       <profileDesc>
          <settingDesc>
             <setting>
-               <date from="1911" to="1911">1911–1911</date>
+               <date from="1923" to="1923">1923–1923</date>
             </setting>
          </settingDesc>
 
@@ -151,7 +152,8 @@
          <change when="2025-11-22">Adapted to EU + ES PressMint corpus.</change>
       </revisionDesc>
    </teiHeader>
-
-   <!-- Ejemplo de includes adaptados a EU-ES -->
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1911/PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.xml"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1923/PressMint-ES-PV_1923-01-07-ARGIA.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1923/PressMint-ES-PV_1923-01-14-ARGIA.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1923/PressMint-ES-PV_1923-01-21-ARGIA.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1923/PressMint-ES-PV_1923-01-28-ARGIA.xml"/>   
 </teiCorpus>

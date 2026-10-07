@@ -112,22 +112,24 @@
                <p xml:lang="es">Las palabras divididas por guiones al final de línea han sido reconstruidas en parte.</p>
             </hyphenation>     
 
+
             <normalization>
-               <p xml:lang="eu">Testua ez da normalizatu, espazioak salbu.</p>
-               <p xml:lang="es">El texto no ha sido normalizado, salvo el espaciado.</p>
+               <p xml:lang="eu">Testua automatikoki normalizatu da neurri batean.</p>
+               <p xml:lang="es">El texto ha sido normalizado automáticamente en parte</p>
             </normalization>
 
+
          </editorialDecl>
-         <tagsDecl><!--These numbers do not reflect the size of the sample!-->
+         <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
-               <tagUsage gi="body" occurs="247"/>
-               <tagUsage gi="name" occurs="135263"/>
-               <tagUsage gi="p" occurs="57862"/>
-               <tagUsage gi="pb" occurs="1063"/>
-               <tagUsage gi="pc" occurs="472792"/>
-               <tagUsage gi="s" occurs="149907"/>
-               <tagUsage gi="text" occurs="247"/>
-               <tagUsage gi="w" occurs="1973547"/>
+                  <tagUsage gi="body" occurs="247"/>
+                  <tagUsage gi="name" occurs="135263"/>
+                  <tagUsage gi="p" occurs="57862"/>
+                  <tagUsage gi="pb" occurs="1063"/>
+                  <tagUsage gi="pc" occurs="472792"/>
+                  <tagUsage gi="s" occurs="149907"/>
+                  <tagUsage gi="text" occurs="247"/>
+                  <tagUsage gi="w" occurs="1973547"/>
             </namespace>
          </tagsDecl>
          <classDecl>
@@ -135,9 +137,9 @@
             <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-NER.ana.xml"/>
          </classDecl>
          <appInfo>
-            <application ident="UDPipe" version="2">
-               <label>UDPipe 2 (basque-bdt-ud-2.17-251125 model)</label>
-            <desc xml:lang="en">POS tagging and lemmatization done with UDPipe 2 (<ref target="http://ufal.mff.cuni.cz/udpipe/2">http://ufal.mff.cuni.cz/udpipe/2</ref>) with basque-bdt-ud-2.17-251125 model</desc>
+           <application ident="Basque-pos-tagger" version="1">
+               <label>Basque Pos-tagger</label>
+            <desc xml:lang="en">POS tagging and lemmatization done with Basque Pos-tagger (<ref target="https://zerbitzuak.hitz.eus/tresnak/pos-tagger">https://zerbitzuak.hitz.eus/tresnak/pos-tagger</ref> - OpenAPI <ref target="https://zerbitzuak.hitz.eus/api/docs#/pos/pos_private_proxy_pos_private_post">https://zerbitzuak.hitz.eus/api/docs#/pos/pos_private_proxy_pos_private_post</ref> )</desc>
             </application>
          </appInfo>
       </encodingDesc>
@@ -163,6 +165,8 @@
          <change when="2025-11-22">Adapted to EU + ES PressMint corpus.</change>
       </revisionDesc>
    </teiHeader>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1911/PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.xml"/>
-   
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1923/PressMint-ES-PV_1923-01-07-ARGIA.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1923/PressMint-ES-PV_1923-01-14-ARGIA.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1923/PressMint-ES-PV_1923-01-21-ARGIA.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1923/PressMint-ES-PV_1923-01-28-ARGIA.ana.xml"/>  
 </teiCorpus>
