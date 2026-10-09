@@ -1,0 +1,136 @@
+# newdoc id = PressMint-PT_1808-02-26-Gazeta-de-Lisboa-1.ana
+# newpar id = PressMint-PT_1808-02-26-Gazeta-de-Lisboa-1.ana.p1
+# lang = pt
+# sent_id = PressMint-PT_1808-02-26-Gazeta-de-Lisboa-1.ana.p1.s1
+# text = Copenhague 19 de Janeiro
+1	Copenhague	Copenhague	PROPN	_	_	0	_	_	NER=B-LOC
+2	19	19	NUM	_	NumType=Card	0	_	_	NER=O
+3	de	de	ADP	_	_	0	_	_	NER=O
+4	Janeiro	Janeiro	PROPN	_	_	0	_	_	NER=O
+
+# newpar id = PressMint-PT_1808-02-26-Gazeta-de-Lisboa-1.ana.p2
+# lang = pt
+# sent_id = PressMint-PT_1808-02-26-Gazeta-de-Lisboa-1.ana.p2.s2
+# text = Na Ilha de França já no mez de Julho proximo passado se havia por inevitavel a guerra entre a Dinamarca e a Inglaterra, e conseguintemente se poz embargo em todos os navios Dinamarquezes que se achavaõ nos portos daquella ilha.
+1-2	Na	_	_	_	_	_	_	_	NER=O
+1	Em	em	ADP	_	_	0	_	_	_
+2	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	_
+3	Ilha	Ilha	PROPN	_	_	0	_	_	NER=B-LOC
+4	de	de	ADP	_	_	0	_	_	NER=I-LOC
+5	França	França	PROPN	_	_	0	_	_	NER=I-LOC
+6	já	já	ADV	_	_	0	_	_	NER=O
+7-8	no	_	_	_	_	_	_	_	NER=O
+7	em	em	ADP	_	_	0	_	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	0	_	_	_
+9	mez	mez	NOUN	_	_	0	_	_	NER=O
+10	de	de	ADP	_	_	0	_	_	NER=O
+11	Julho	Julho	PROPN	_	_	0	_	_	NER=O
+12	proximo	proximo	ADJ	_	_	0	_	_	NER=O
+13	passado	passado	ADJ	_	_	0	_	_	NER=O
+14	se	se	PART	_	_	0	_	_	NER=O
+15	havia	haver	VERB	_	_	0	_	_	NER=O
+16	por	por	ADP	_	_	0	_	_	NER=O
+17	inevitavel	inevitavel	ADJ	_	_	0	_	_	NER=O
+18	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+19	guerra	guerra	NOUN	_	_	0	_	_	NER=O
+20	entre	entre	ADP	_	_	0	_	_	NER=O
+21	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+22	Dinamarca	Dinamarca	PROPN	_	_	0	_	_	NER=B-LOC
+23	e	e	CCONJ	_	_	0	_	_	NER=O
+24	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+25	Inglaterra	Inglaterra	PROPN	_	_	0	_	_	NER=B-LOC|SpaceAfter=No
+26	,	,	PUNCT	_	_	0	_	_	NER=O
+27	e	e	CCONJ	_	_	0	_	_	NER=O
+28	conseguintemente	conseguintemente	ADV	_	_	0	_	_	NER=O
+29	se	se	PART	_	_	0	_	_	NER=O
+30	poz	poz	VERB	_	_	0	_	_	NER=O
+31	embargo	embargo	NOUN	_	_	0	_	_	NER=O
+32	em	em	ADP	_	_	0	_	_	NER=O
+33	todos	todos	DET	_	_	0	_	_	NER=O
+34	os	o	DET	_	_	0	_	_	NER=O
+35	navios	navio	NOUN	_	_	0	_	_	NER=O
+36	Dinamarquezes	Dinamarquezes	PROPN	_	_	0	_	_	NER=O
+37	que	que	PRON	_	_	0	_	_	NER=O
+38	se	se	PRON	_	_	0	_	_	NER=O
+39	achavaõ	achar	VERB	_	_	0	_	_	NER=O
+40-41	nos	_	_	_	_	_	_	_	NER=O
+40	em	em	ADP	_	_	0	_	_	_
+41	os	o	DET	_	Definite=Def|Gender=Masc|Number=Plur|PronType=Art	0	_	_	_
+42	portos	porto	NOUN	_	_	0	_	_	NER=O
+43	daquella	daquella	ADP	_	_	0	_	_	NER=O
+44	ilha	ilha	NOUN	_	_	0	_	_	NER=O|SpaceAfter=No
+45	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# newpar id = PressMint-PT_1808-02-26-Gazeta-de-Lisboa-1.ana.p14
+# lang = pt
+# sent_id = PressMint-PT_1808-02-26-Gazeta-de-Lisboa-1.ana.p14.s14
+# text = A cada momento se esperaõ despachos do Conde de Moltke, nosso Ministro junto da Corte de Stockholmo, os quaes provavelmente daráõ a conhecer a resoluçaõ definitiva daquella Corte.
+1	A	A	ADP	_	_	0	_	_	NER=O
+2	cada	cada	DET	_	_	0	_	_	NER=O
+3	momento	momento	NOUN	_	_	0	_	_	NER=O
+4	se	se	PART	_	_	0	_	_	NER=O
+5	esperaõ	esperaõr	VERB	_	_	0	_	_	NER=O
+6	despachos	despacho	NOUN	_	_	0	_	_	NER=O
+7-8	do	_	_	_	_	_	_	_	NER=O
+7	de	de	ADP	_	_	0	_	_	_
+8	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	0	_	_	_
+9	Conde	Conde	PROPN	_	_	0	_	_	NER=B-PER
+10	de	de	ADP	_	_	0	_	_	NER=I-PER
+11	Moltke	Moltke	PROPN	_	_	0	_	_	NER=I-PER|SpaceAfter=No
+12	,	,	PUNCT	_	_	0	_	_	NER=O
+13	nosso	nosso	DET	_	_	0	_	_	NER=O
+14	Ministro	Ministro	PROPN	_	_	0	_	_	NER=O
+15	junto	junto	ADV	_	_	0	_	_	NER=O
+16-17	da	_	_	_	_	_	_	_	NER=O
+16	de	de	ADP	_	_	0	_	_	_
+17	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	_
+18	Corte	Corte	PROPN	_	_	0	_	_	NER=B-ORG
+19	de	de	ADP	_	_	0	_	_	NER=I-ORG
+20	Stockholmo	Stockholmo	PROPN	_	_	0	_	_	NER=I-ORG|SpaceAfter=No
+21	,	,	PUNCT	_	_	0	_	_	NER=O
+22	os	o	DET	_	_	0	_	_	NER=O
+23	quaes	quaes	PRON	_	_	0	_	_	NER=O
+24	provavelmente	provavelmente	ADV	_	_	0	_	_	NER=O
+25	daráõ	daráõ	VERB	_	_	0	_	_	NER=O
+26	a	a	ADP	_	_	0	_	_	NER=O
+27	conhecer	conhecer	VERB	_	_	0	_	_	NER=O
+28	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+29	resoluçaõ	resoluçaõ	NOUN	_	_	0	_	_	NER=O
+30	definitiva	definitivo	ADJ	_	_	0	_	_	NER=O
+31	daquella	daquella	ADP	_	_	0	_	_	NER=O
+32	Corte	Corte	PROPN	_	_	0	_	_	NER=B-ORG|SpaceAfter=No
+33	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# newpar id = PressMint-PT_1808-02-26-Gazeta-de-Lisboa-1.ana.p15
+# lang = pt
+# sent_id = PressMint-PT_1808-02-26-Gazeta-de-Lisboa-1.ana.p15.s15
+# text = A náo de linha Dinamarqueza o Christiano Friderico, havendo tornado a partir para a Noruega, chegou felizmente á sua destinaçaõ com varios navios de transporte.
+1	A	A	ADP	_	_	0	_	_	NER=O
+2	náo	náo	ADV	_	_	0	_	_	NER=O
+3	de	de	ADP	_	_	0	_	_	NER=O
+4	linha	linha	NOUN	_	_	0	_	_	NER=O
+5	Dinamarqueza	Dinamarqueza	PROPN	_	_	0	_	_	NER=B-MISC
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	0	_	_	NER=O
+7	Christiano	Christiano	PROPN	_	_	0	_	_	NER=B-MISC
+8	Friderico	Friderico	PROPN	_	_	0	_	_	NER=I-MISC|SpaceAfter=No
+9	,	,	PUNCT	_	_	0	_	_	NER=O
+10	havendo	haver	AUX	_	_	0	_	_	NER=O
+11	tornado	tornar	VERB	_	_	0	_	_	NER=O
+12	a	a	ADP	_	_	0	_	_	NER=O
+13	partir	partir	VERB	_	_	0	_	_	NER=O
+14	para	para	ADP	_	_	0	_	_	NER=O
+15	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+16	Noruega	Noruega	PROPN	_	_	0	_	_	NER=B-LOC|SpaceAfter=No
+17	,	,	PUNCT	_	_	0	_	_	NER=O
+18	chegou	chegar	VERB	_	_	0	_	_	NER=O
+19	felizmente	felizmente	ADV	_	_	0	_	_	NER=O
+20	á	á	ADP	_	_	0	_	_	NER=O
+21	sua	sua	DET	_	_	0	_	_	NER=O
+22	destinaçaõ	destinaçaõ	NOUN	_	_	0	_	_	NER=O
+23	com	com	ADP	_	_	0	_	_	NER=O
+24	varios	varios	DET	_	_	0	_	_	NER=O
+25	navios	navio	NOUN	_	_	0	_	_	NER=O
+26	de	de	ADP	_	_	0	_	_	NER=O
+27	transporte	transporte	NOUN	_	_	0	_	_	NER=O|SpaceAfter=No
+28	.	.	PUNCT	_	_	0	_	_	NER=O
+
