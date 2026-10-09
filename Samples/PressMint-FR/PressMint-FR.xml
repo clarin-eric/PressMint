@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="PressMint-FR" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main" xml:lang="en">French historical newspaper corpus PressMint-FR [PressMint]</title>
+        <title type="main" xml:lang="fr">Corpus français de presse historique PressMint-FR [PressMint]</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>0.1</edition>
+      </editionStmt>
+      <extent>
+        <measure unit="texts" quantity="1" xml:lang="fr">1 texte</measure>
+        <measure unit="texts" quantity="1" xml:lang="en">1 text</measure>
+        <measure unit="paragraphs" quantity="781" xml:lang="fr">781 paragraphs</measure>
+        <measure unit="paragraphs" quantity="781" xml:lang="en">781 paragraphs</measure>
+        <measure unit="words" quantity="31721" xml:lang="fr">31 721 mots</measure>
+        <measure unit="words" quantity="31721" xml:lang="en">31,721 words</measure>
+      </extent>
+      <publicationStmt>
+        <publisher>
+          <orgName xml:lang="en">CLARIN PressMint project</orgName>
+        </publisher>
+        <idno type="URI" subtype="handle">TBD</idno>
+        <availability status="unknown">
+          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</licence>
+        </availability>
+        <date when="2026-07-21">2026-07-21</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title type="main" xml:lang="en">BnF/Gallica OCR data for Le Temps</title>
+          <title type="main" xml:lang="fr">Donnees OCR BnF/Gallica pour Le Temps</title>
+          <idno type="URI">https://gallica.bnf.fr/</idno>
+          <idno type="URI" subtype="set-ARK">ark:/12148/bc6p0j3t4</idno>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p xml:lang="en">PressMint-FR is a French historical newspaper corpus produced from BnF METS/ALTO OCR data.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p xml:lang="en">OCR text is preserved without correction, except for whitespace normalisation and line-end hyphen handling.</p>
+        <p xml:lang="en">Line-end hyphenation is resolved using ALTO SUBS_TYPE and SUBS_CONTENT attributes where available.  Where not available, the hyphen is preserved.</p>
+        <p xml:lang="en">ALTO TextBlocks are encoded as TEI paragraphs.  No article or section divisions are inferred, because the source contains no logical structMap.</p>
+        <p xml:lang="en">Page order is derived from the METS physical structMap ORDER attribute. ALTO PHYSICAL_IMG_NR is not used (it is 1 on all pages in this dataset).</p>
+        <p xml:lang="en">Text in an issue is encoded in ALTO reading order.  No column-aware geometric reordering is applied.Image references use Gallica IIIF URLs because the master TIFF images are not included.</p>
+      </editorialDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="body" occurs="1"/>
+          <tagUsage gi="facsimile" occurs="1"/>
+          <tagUsage gi="graphic" occurs="4"/>
+          <tagUsage gi="lb" occurs="4332"/>
+          <tagUsage gi="p" occurs="781"/>
+          <tagUsage gi="pb" occurs="4"/>
+          <tagUsage gi="surface" occurs="4"/>
+          <tagUsage gi="text" occurs="1"/>
+          <tagUsage gi="zone" occurs="5119"/>
+        </namespace>
+      </tagsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <date from="1920-01-01" to="1920-01-01">1920-01-01</date>
+        </setting>
+      </settingDesc>
+      <langUsage>
+        <language ident="fr">French</language>
+        <language ident="en">English</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-07-21">Second conversion from BnF METS/ALTO to PressMint TEI.</change>
+    </revisionDesc>
+  </teiHeader>
+  <xi:include href="1920/PressMint-FR_1920-01-01-LeTemps-BnF-0243877.xml"/>
+</teiCorpus>
