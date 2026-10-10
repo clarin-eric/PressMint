@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+      xmlns:tei="http://www.tei-c.org/ns/1.0"
+      xml:id="PressMint-NL_1669-10-29-35903.ana"
+      xml:lang="nl">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="en">Dutch historical newspaper corpus PressMint-NL, Oprechte Haerlemsche courant, 1669-10-29 [PressMint.ana]</title>
+            <respStmt>
+               <resp>compiled by</resp>
+               <name>Nicoline van der Sijs and volunteers</name>
+            </respStmt>
+            <respStmt>
+               <resp>manual verification of the linguistic annotations by means of LAnCeLoT (https://portal.clarin.ivdnt.org/lancelot)</resp>
+               <persName>
+                  <email>jesse</email>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability>
+               <licence>This file may not be redistributed!! It is a preliminary version</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Oprechte Haerlemsche courant</title>
+               <title level="s">NEDERLANDEN.</title>
+               <title level="a">'s Gravenhage den 17 October.</title>
+               <publisher>Gedruckt tot Haerlem, by ABRAHAM CASTELEYN, Stadts Drucker, op de Marckt, in de Blye Druck. Den 29 October, Anno 1669.</publisher>
+               <date when="1669-10-29">1669-10-29</date>
+               <idno type="URN">ddd:010926888:mpeg21:a0007</idno>
+               <idno type="URI" subtype="URL">https://www.delpher.nl/nl/kranten/view?coll=ddd&amp;identifier=ddd:010926888:mpeg21:a0007</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <appInfo>
+            <application ident="LAnCeLoT"
+                          version="1.0"
+                          xml:id="PressMint-NL_1669-10-29-35903.ana.LAnCeLoT">
+               <label>tool for manual verification of linguistic annotations</label>
+               <ref target="https://portal.clarin.ivdnt.org/lancelot"/>
+            </application>
+         </appInfo>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+               <placeName>
+                  <placeName type="country">Nederland</placeName>
+                  <placeName type="settlement">'s-Gravenhage</placeName>
+               </placeName>
+            </setting>
+         </settingDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-07-02+02:00">
+            <name>INT</name>: Conversion to PressMint format.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text ana="#domestic-news">
+      <body>
+         <div>
+            <head>
+               <s xml:id="PressMint-NL_1669-10-29-35903.ana.s.0">
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.1"
+                      lemma="'s-Gravenhage"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.0">'s</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.0"
+                      lemma="'s-Gravenhage"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.1">Gravenhage</w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.2">den</w>
+                  <w lemma="zeventiende"
+                      pos="NUM"
+                      msd="UPosTag=NUM|NumType=Ord"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.3">17</w>
+                  <w lemma="oktober"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.4"
+                      join="right">October</w>
+                  <pc msd="UPosTag=PUNCT"
+                       lemma="e."
+                       xml:id="PressMint-NL_1669-10-29-35903.ana.pc.5">.</pc>
+               </s>
+            </head>
+            <p xml:id="PressMint-NL_1669-10-29-35903.ana.p.1">
+               <s xml:id="PressMint-NL_1669-10-29-35903.ana.s.1">
+                  <w lemma="tot"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.6">Tot</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.8"
+                      lemma="gisterenavond"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.7">Gisteren</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.7"
+                      lemma="gisterenavond"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.8">Avondt</w>
+                  <w lemma="zijn"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.9">zijn</w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.10">de</w>
+                  <w lemma="extraordinaris"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.11">extraordinaris</w>
+                  <w lemma="gecommitteerde"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.12">Gecommitteerde</w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.13">van</w>
+                  <w lemma="haar"
+                      pos="DET"
+                      msd="UPosTag=DET|PronType=Prs|Poss=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.14">haer</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.17 #PressMint-NL_1669-10-29-35903.ana.w.18"
+                      lemma="edelgrootmogende"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur|Abbr=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.15"
+                      join="right">Ed</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.16">:</pc>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.15 #PressMint-NL_1669-10-29-35903.ana.w.18"
+                      lemma="edelgrootmogende"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur|Abbr=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.17">Groot</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.15 #PressMint-NL_1669-10-29-35903.ana.w.17"
+                      lemma="edelgrootmogende"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur|Abbr=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.18"
+                      join="right">Mog</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.19">:,</pc>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.21"
+                      lemma="nadat"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.20">nae</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.20"
+                      lemma="nadat"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.21">dat</w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.22">de</w>
+                  <w lemma="meest"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Ind"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.23">meeste</w>
+                  <w lemma="admiraliteit"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.24">Admiraliteyts</w>
+                  <w lemma="heer"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.25">Heeren</w>
+                  <w lemma="omtrent"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.26">omtrent</w>
+                  <w lemma="vijf"
+                      pos="NUM"
+                      msd="UPosTag=NUM|NumType=Card"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.27">5</w>
+                  <w lemma="uur"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.28">Uren</w>
+                  <w lemma="zijn"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Past"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.29">waeren</w>
+                  <w lemma="vertrekken"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.30"
+                      join="right">vertrocken</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.31">,</pc>
+                  <w lemma="vergaderen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.32">vergadert</w>
+                  <w lemma="zijn"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.33"
+                      join="right">gheweest</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.34">,</pc>
+                  <w lemma="wanneer"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.35">wanneer</w>
+                  <w lemma="mede"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.36">mede</w>
+                  <w lemma="scheiden"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.37"
+                      join="right">scheyden</w>
+                  <pc msd="UPosTag=PUNCT"
+                       lemma="e."
+                       xml:id="PressMint-NL_1669-10-29-35903.ana.pc.38">.</pc>
+               </s>
+               <s xml:id="PressMint-NL_1669-10-29-35903.ana.s.2">
+                  <w lemma="men"
+                      pos="PRON"
+                      msd="UPosTag=PRON|PronType=Prs"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.39">Men</w>
+                  <w lemma="spreken"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.40">spreeckt</w>
+                  <w lemma="als"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.41">als</w>
+                  <w lemma="voren"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.42">voren</w>
+                  <w lemma="nog"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.43">noch</w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.44">van</w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.45">de</w>
+                  <w lemma="bezwaarnis"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.46">Bezwaernisse</w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.47">der</w>
+                  <w lemma="inkomend"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.48">inkomende</w>
+                  <w lemma="waar"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.49"
+                      join="right">Waren</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.50">;</pc>
+                  <w lemma="dan"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.51">dan</w>
+                  <w lemma="men"
+                      pos="PRON"
+                      msd="UPosTag=PRON|PronType=Prs"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.52">men</w>
+                  <w lemma="zeggen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.53"
+                      join="right">seght</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.54">,</pc>
+                  <w lemma="dat"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.55">dat</w>
+                  <w lemma="aanstaand"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.56">aenstaende</w>
+                  <w lemma="dinsdag"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.57">Dingsdagh</w>
+                  <w lemma="nog"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.58">noch</w>
+                  <w lemma="een"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Ind|PronType=art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.59">een</w>
+                  <w lemma="conferentie"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.60">Conferentie</w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.61">van</w>
+                  <w lemma="resumptie"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.62">resumptie</w>
+                  <w lemma="over"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.63">over</w>
+                  <w lemma="dit"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Dem"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.64">dit</w>
+                  <w lemma="werk"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.65">werck</w>
+                  <w lemma="zullen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.66">sal</w>
+                  <w lemma="worden"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.67">werden</w>
+                  <w lemma="houden"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.68"
+                      join="right">gehouden</w>
+                  <pc msd="UPosTag=PUNCT"
+                       lemma="e."
+                       xml:id="PressMint-NL_1669-10-29-35903.ana.pc.69">.</pc>
+               </s>
+               <s xml:id="PressMint-NL_1669-10-29-35903.ana.s.3">
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.71"
+                      lemma="gisterenavond"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.70">Gisteren</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.70"
+                      lemma="gisterenavond"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.71">Avondt</w>
+                  <w lemma="arriveren"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Past"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.72">arriveerden</w>
+                  <w lemma="hier"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.73">hier</w>
+                  <w lemma="uit"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.74">uyt</w>
+                  <w lemma="Engeland"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.75">Engelandt</w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.76">den</w>
+                  <w lemma="heer"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.77">Heer</w>
+                  <w lemma="secretaris"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.78">Secretaris</w>
+                  <w lemma="Kinschot"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.79"
+                      join="right">Kintschot</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.80">,</pc>
+                  <w lemma="die"
+                      pos="PRON"
+                      msd="UPosTag=PRON|Definite=Def|PronType=Dem/Rel"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.81">die</w>
+                  <w lemma="enig"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Ind"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.82">eenige</w>
+                  <w lemma="brief"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.83">Brieven</w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.84">van</w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.85">den</w>
+                  <w lemma="heer"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.86">Heer</w>
+                  <w lemma="Boreel"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.87">Boreel</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.89"
+                      lemma="medebrengen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.88">mede</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.88"
+                      lemma="medebrengen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.89"
+                      join="right">brenght</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.90">:</pc>
+                  <w lemma="zijn"
+                      pos="DET"
+                      msd="UPosTag=DET|PronType=Prs|Poss=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.91">sijn</w>
+                  <w lemma="edelheid"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing|Abbr=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.92"
+                      join="right">Ed</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.93">:</pc>
+                  <w lemma="zullen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.94">sal</w>
+                  <w lemma="morgen"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.95">Morgen</w>
+                  <w lemma="aan"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.96">aen</w>
+                  <w lemma="haar"
+                      pos="DET"
+                      msd="UPosTag=DET|PronType=Prs|Poss=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.97">haer</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.99"
+                      lemma="hoogmogende"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur|Abbr=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.98">Hoog</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.98"
+                      lemma="hoogmogende"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur|Abbr=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.99"
+                      join="right">Mog</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.100">:</pc>
+                  <w lemma="rapport"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.101">rapport</w>
+                  <w lemma="doen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.102"
+                      join="right">doen</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.103">,</pc>
+                  <w lemma="wegens"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.104">wegens</w>
+                  <w lemma="zijn"
+                      pos="DET"
+                      msd="UPosTag=DET|PronType=Prs|Poss=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.105">sijne</w>
+                  <w lemma="verrichting"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.106">verrichtinge</w>
+                  <w lemma="aan"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.107">aen</w>
+                  <w lemma="het"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.108">het</w>
+                  <w lemma="Engels"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.109">Engelsse</w>
+                  <w lemma="hof"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.110"
+                      join="right">Hof</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.111">,</pc>
+                  <w lemma="gedurende"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.112">geduurende</w>
+                  <w lemma="het"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.113">het</w>
+                  <w lemma="afwezen"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.114">afwesen</w>
+                  <w lemma="en"
+                      pos="CCONJ"
+                      msd="UPosTag=CCONJ"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.115">en</w>
+                  <w lemma="voor"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.116">voor</w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.117">de</w>
+                  <w lemma="publiek"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.118">publijcque</w>
+                  <w lemma="audiëntie"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.119">Audientie</w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.120">van</w>
+                  <w lemma="haar"
+                      pos="DET"
+                      msd="UPosTag=DET|PronType=Prs|Poss=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.121">haer</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.123"
+                      lemma="hoogmogende"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur|Abbr=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.122">Hoog</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.122"
+                      lemma="hoogmogende"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur|Abbr=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.123"
+                      join="right">Mog</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.124">:</pc>
+                  <w lemma="ambassade"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.125">Ambassade</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.127"
+                      lemma="aldaar"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.126">al</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.126"
+                      lemma="aldaar"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.127"
+                      join="right">daer</w>
+                  <pc msd="UPosTag=PUNCT"
+                       lemma="e."
+                       xml:id="PressMint-NL_1669-10-29-35903.ana.pc.128">.</pc>
+               </s>
+               <s xml:id="PressMint-NL_1669-10-29-35903.ana.s.4">
+                  <w lemma="gisteren"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.129">Gisteren</w>
+                  <w lemma="hebben"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.130">heeft</w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.131">den</w>
+                  <w lemma="heer"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.132">Heer</w>
+                  <w lemma="ambassadeur"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.133">Ambassadeur</w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.134">van</w>
+                  <w lemma="Spanje"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.135">Spangie</w>
+                  <w lemma="bij"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.136">by</w>
+                  <w lemma="memorie"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.137">Memorie</w>
+                  <w lemma="bekend"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.138">bekent</w>
+                  <w lemma="maken"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.139"
+                      join="right">ghemaeckt</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.140">,</pc>
+                  <w lemma="dat"
+                      pos="PRON"
+                      msd="UPosTag=PRON|Definite=Def|PronType=Dem/Rel"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.141">dat</w>
+                  <w lemma="resolveren"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.142">geresolveert</w>
+                  <w lemma="hebben"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Past"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.143">haddde</w>
+                  <w lemma="een"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Ind|PronType=art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.144">een</w>
+                  <w lemma="keer"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.145">keer</w>
+                  <w lemma="na"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.146">nae</w>
+                  <w lemma="Brussel"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.147">Brussel</w>
+                  <w lemma="te"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.148">te</w>
+                  <w lemma="doen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.149"
+                      join="right">doen</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.150">,</pc>
+                  <w lemma="en"
+                      pos="CCONJ"
+                      msd="UPosTag=CCONJ"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.151">en</w>
+                  <w lemma="zullen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Past"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.152">soude</w>
+                  <w lemma="tot"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.153">tot</w>
+                  <w lemma="zijn"
+                      pos="DET"
+                      msd="UPosTag=DET|PronType=Prs|Poss=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.154">sijn</w>
+                  <w lemma="transport"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.155">Transport</w>
+                  <w lemma="een"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Ind|PronType=art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.156">een</w>
+                  <w lemma="jacht"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.157">Iacht</w>
+                  <w lemma="verzoeken"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.158">versocht</w>
+                  <w lemma="hebben"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.159"
+                      join="right">hebben</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.160">;</pc>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.162"
+                      lemma="waarmede"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.161">waer</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.161"
+                      lemma="waarmede"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.162">mede</w>
+                  <w lemma="men"
+                      pos="PRON"
+                      msd="UPosTag=PRON|PronType=Prs"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.163">men</w>
+                  <w lemma="presumeren"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.164"
+                      join="right">presumeert</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.165">,</pc>
+                  <w lemma="dat"
+                      pos="SCONJ"
+                      msd="UPosTag=SCONJ"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.166">dat</w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.167">den</w>
+                  <w lemma="heer"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.168">Heere</w>
+                  <w lemma="Vrybergen"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.169">Vryberghen</w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.170">van</w>
+                  <w lemma="Brussel"
+                      pos="PROPN"
+                      msd="UPosTag=PROPN"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.171">Brussel</w>
+                  <w lemma="dan"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.172">dan</w>
+                  <w lemma="wel"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.173">wel</w>
+                  <w lemma="weder"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.174">weder</w>
+                  <w lemma="thuis"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.175">thuys</w>
+                  <w lemma="mogen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Past"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.176">mocht</w>
+                  <w lemma="komen"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.177"
+                      join="right">komen</w>
+                  <pc msd="UPosTag=PUNCT"
+                       lemma="e."
+                       xml:id="PressMint-NL_1669-10-29-35903.ana.pc.178">.</pc>
+               </s>
+               <s xml:id="PressMint-NL_1669-10-29-35903.ana.s.5">
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.179">De</w>
+                  <w lemma="resolutie"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.180"
+                      join="right">Resolutien</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.181">,</pc>
+                  <w lemma="brief"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.182"
+                      join="right">Brieven</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.183">,</pc>
+                  <w lemma="akte"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.184">Acten</w>
+                  <w lemma="en"
+                      pos="CCONJ"
+                      msd="UPosTag=CCONJ"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.185">en</w>
+                  <w lemma="ander"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Ind|Typo=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.186">ondere</w>
+                  <w lemma="zaak"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.187"
+                      join="right">saecken</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.188">,</pc>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.191"
+                      lemma="daarvan"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.189">daer</w>
+                  <w lemma="kopie"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur|Typo=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.190">Coppen</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.189"
+                      lemma="daarvan"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.191">van</w>
+                  <w lemma="maken"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.192">ghemaeckt</w>
+                  <w lemma="worden"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.193"
+                      join="right">werden</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.194">,</pc>
+                  <w lemma="verstaan"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.195">verstaet</w>
+                  <w lemma="men"
+                      pos="PRON"
+                      msd="UPosTag=PRON|PronType=Prs"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.196"
+                      join="right">men</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.197">,</pc>
+                  <w lemma="dat"
+                      pos="PRON"
+                      msd="UPosTag=PRON|Definite=Def|PronType=Dem/Rel"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.198">dat</w>
+                  <w lemma="bij"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.199">by</w>
+                  <w lemma="haar"
+                      pos="DET"
+                      msd="UPosTag=DET|PronType=Prs|Poss=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.200">haer</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.202"
+                      lemma="hoogmogende"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur|Abbr=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.201">Hoogh</w>
+                  <w corresp="#PressMint-NL_1669-10-29-35903.ana.w.201"
+                      lemma="hoogmogende"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur|Abbr=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.202"
+                      join="right">Mog</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.203">:</pc>
+                  <w lemma="nu"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.204">nu</w>
+                  <w lemma="ook"
+                      pos="ADV"
+                      msd="UPosTag=ADV"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.205">oock</w>
+                  <w lemma="resolveren"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.206">geresolveert</w>
+                  <w lemma="zijn"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.207"
+                      join="right">is</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.208">,</pc>
+                  <w lemma="om"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.209">om</w>
+                  <w lemma="te"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.210">te</w>
+                  <w lemma="laten"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.211">laeten</w>
+                  <w lemma="drukken"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Inf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.212"
+                      join="right">drucken</w>
+                  <pc msd="UPosTag=PUNCT"
+                       lemma="e."
+                       xml:id="PressMint-NL_1669-10-29-35903.ana.pc.213">.</pc>
+               </s>
+               <s xml:id="PressMint-NL_1669-10-29-35903.ana.s.6">
+                  <w lemma="over"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.214">Over</w>
+                  <w lemma="het"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.215">het</w>
+                  <w lemma="repareren"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Sing"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.216">repareren</w>
+                  <w lemma="van"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.217">van</w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.218">de</w>
+                  <w lemma="fortificatie"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.219"
+                      join="right">Fortificatien</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.220">,</pc>
+                  <w lemma="et cetera"
+                      pos="ADV"
+                      msd="UPosTag=ADV|Abbr=Yes"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.221">etc.</w>
+                  <w lemma="verstaan"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.222">verstaet</w>
+                  <w lemma="men"
+                      pos="PRON"
+                      msd="UPosTag=PRON|PronType=Prs"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.223">men</w>
+                  <w lemma="na"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Cmp"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.224"
+                      join="right">naeder</w>
+                  <pc msd="UPosTag=PUNCT" xml:id="PressMint-NL_1669-10-29-35903.ana.pc.225">,</pc>
+                  <w lemma="aan"
+                      pos="ADP"
+                      msd="UPosTag=ADP"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.226">aen</w>
+                  <w lemma="de"
+                      pos="DET"
+                      msd="UPosTag=DET|Definite=Def|PronType=Art"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.227">de</w>
+                  <w lemma="respectief"
+                      pos="ADJ"
+                      msd="UPosTag=ADJ|Degree=Pos"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.228">respective</w>
+                  <w lemma="provincie"
+                      pos="NOUN"
+                      msd="UPosTag=NOUN|Number=Plur"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.229">Provintien</w>
+                  <w lemma="zijn"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Fin|Tense=Pres"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.230">is</w>
+                  <w lemma="schrijven"
+                      pos="VERB"
+                      msd="UPosTag=VERB|VerbForm=Part|Aspect=Perf"
+                      xml:id="PressMint-NL_1669-10-29-35903.ana.w.231"
+                      join="right">gheschreven</w>
+                  <pc msd="UPosTag=PUNCT"
+                       lemma="e."
+                       xml:id="PressMint-NL_1669-10-29-35903.ana.pc.232">.</pc>
+               </s>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>
