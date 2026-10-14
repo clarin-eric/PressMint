@@ -25,6 +25,28 @@ def parser():
 
     return parser
 
+teiHeader = '''<teiHeader>
+  <fileDesc>
+    <titleStmt>
+       <title xml:lang="fi">Suomen historiallinen sanomalehtikorpus PressMint-FI</title>
+       <title xml:lang="en">Finnish historical newspaper corpus PressMint-FI</title>
+       <respStmt>
+         <persName>Jussi Piitulainen</persName>
+         <resp xml:lang="en">PressMint TEI XML corpus encoding</resp>
+       </respStmt>
+       <funder>
+         <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+       </funder>
+    </titleStmt>
+    <publicationStmt>
+       <!-- TODO -->
+    </publicationStmt>
+    <sourceDesc>
+      <!-- TODO -->
+    </sourceDesc>
+  </fileDesc>
+</teiHeader>'''
+
 def main(args):
     here = Path('.').resolve()
     root = here.name.replace('.TEI', '')
@@ -33,7 +55,7 @@ def main(args):
     with open(f'{root}.tmp', mode = ('w' if args.force else 'x')) as ous:
         print('<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">',
               file = ous)
-        print('   <!-- TODO teiHeader here -->',
+        print(teiHeader,
               file = ous)
         for component in sorted(Path('.').glob('*.xml')):
             if component == Path(f'{root}.xml'): continue
