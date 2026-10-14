@@ -62,6 +62,10 @@ CORPUS = {
 # Also "my name"
 #
 # And CLARIN, FIN-CLARIN
+#
+# Omitted some elements that PressMint scripts will add
+# automatically. Likely not going to have counts in
+# native language at all.
 
 teiHeader = '''   <teiHeader>
       <fileDesc>
@@ -82,13 +86,6 @@ teiHeader = '''   <teiHeader>
                <orgName xml:lang="en">FIN-CLARIN-konsortio</orgName>
             </funder>
          </titleStmt>
-         <editionStmt>
-            <edition>1.0</edition>
-         </editionStmt>
-         <extent>
-            <measure unit="words" quantity="10062" xml:lang="en">10062 words</measure>
-            <measure unit="words" quantity="10062" xml:lang="cs">10062 slov</measure>
-         </extent>
          <publicationStmt>
             <publisher>
                <orgName xml:lang="en">CLARIN research infrastructure</orgName>
@@ -113,20 +110,6 @@ teiHeader = '''   <teiHeader>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <tagsDecl>
-            <namespace name="http://www.tei-c.org/ns/1.0">
-               <tagUsage gi="body" occurs="1"/>
-               <tagUsage gi="link" occurs="12552"/>
-               <tagUsage gi="linkGrp" occurs="659"/>
-               <tagUsage gi="name" occurs="1056"/>
-               <tagUsage gi="p" occurs="118"/>
-               <tagUsage gi="pb" occurs="4"/>
-               <tagUsage gi="pc" occurs="2417"/>
-               <tagUsage gi="s" occurs="659"/>
-               <tagUsage gi="text" occurs="1"/>
-               <tagUsage gi="w" occurs="10208"/>
-            </namespace>
-         </tagsDecl>
       </encodingDesc>
    </teiHeader>'''
 
