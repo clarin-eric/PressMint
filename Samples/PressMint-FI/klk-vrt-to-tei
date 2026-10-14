@@ -9,10 +9,10 @@ import re
 def parser():
     parser = ArgumentParser(description = '''
 
-    Write each "text" in the input file (CWB-VRT from KLK) in an
-    output file YEAR/ID.ana.xml (PressMint TEI) where YEAR and ID are
-    extracted from text attributes and other details are constant,
-    options, or a translation of the data.
+    Write each "text" in the input file (CWB-VRT from KLK) in a
+    PressMint-like TEI output file YEAR/ID.xml or YEAR/ID.ana.xml,
+    where YEAR and ID are extracted from text attributes and other
+    details are constant, options, or a translation of the data.
 
     ''')
 
@@ -22,6 +22,11 @@ def parser():
                         choices = ('klk-fi-v2', 'klk-sv-v2'),
                         help = '''corpus shortname for teiHeader''')
 
+    parser.add_argument('--ana', action = 'store_true',
+                        help = 'make annotated version')
+
+    # this could just depend on the source corpus? also only relevant
+    # with --ana, so maybe should be only available then?
     parser.add_argument('--syntax', default = 'TODO', help = '''
 
     a syntax type prefix or something like that (default: TODO)''')
@@ -52,6 +57,7 @@ CORPUS = {
 # Need name for the corpus (klk-fi-v2, klk-sv-v2)
 # and a way to select the appropriate name
 # - specify corpus as an option
+# - TODO check if title may need .ana when --ana
 #
 # Also "my name"
 #
@@ -60,8 +66,8 @@ CORPUS = {
 teiHeader = '''   <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="fi">Suomen historiallinen sanomalehtikorpus PressMint-FI.ana, {title}, {date}, sivu {page}</title>
-            <title xml:lang="en">Finnish historical newspaper corpus PressMint-FI.ana, {title}, {date}, page {page}</title>
+            <title xml:lang="fi">Suomen historiallinen sanomalehtikorpus PressMint-FI, {title}, {date}, sivu {page}</title>
+            <title xml:lang="en">Finnish historical newspaper corpus PressMint-FI, {title}, {date}, page {page}</title>
             <respStmt>
                <persName ref="http://orcid.org/0000-0002-3835-2189">Jussi Piitulainen</persName>
                <resp xml:lang="en">TEI XML corpus encoding</resp>
@@ -167,6 +173,19 @@ def each(begin, end, ins):
             attributes = dict(eachattribute(line))
             yield attributes, takewhile(isin, ins)
 
+def rawsentence(attribute, ins, fieldnames, args):
+    tokens = [
+        dict(zip(fieldnames, line.rstrip('\r\n').split('\t')))
+        for line in ins
+    ]
+
+    esc = str.maketrans({
+        '"' : '&quot;'
+    })
+
+    # rawish sentence, totally no-effort approximation
+    yield ' '.join(token['word'] for token in tokens)
+
 def sentence(attributes, ins, *, self_id, fieldnames, args):
     # hm. may need t_attributes here? no?
     tokens = [
@@ -218,10 +237,11 @@ def fallback_date(t_attributes):
         return f'{yyyymmdd[:4]}-{yyyymmdd[4:6]}-{yyyymmdd[6:]}'
     return '9999-01-01'
 
-def ship(xml, t_year, t_id):
+def ship(xml, t_year, t_id, args):
     '''Save content in year/t_id.ana.xml'''
     Path(t_year).mkdir(exist_ok = True)
-    out = f'{t_year}/{t_id}.ana.xml'
+    ana = ('.ana' if args.ana else '')
+    out = f'{t_year}/{t_id}{ana}.xml'
     tmp = f'{t_year}/{t_id}.ana.xml.tmp'
     with open(tmp, mode = 'x') as ous:
         print(xml, file = ous)
@@ -257,8 +277,10 @@ def main(args):
             t_attributes.get('id') or
             'TODO-no-such-id'
         )
-        
-        t_id = f"PressMint-FI-{t_date}-{t_id0}"
+
+        # they actually do want those particular underscores
+        t_id = f"PressMint-FI_{t_date}_{t_id0}"
+        if args.ana: t_id = t_id + '.ana'
 
         # TODO put in content a teiHeader and such
         # actually cannot fill these before shipping?
@@ -268,7 +290,7 @@ def main(args):
         content.extend(('<?xml version="1.0" encoding="UTF-8"?>',
                         '<TEI xmlns="http://www.tei-c.org/ns/1.0"',
                         '     xml:lang="fi"', # overriden in <s>
-                        f'     xml:id="{t_id}.ana">'))
+                        f'     xml:id="{t_id}">'))
 
         # these are needed for the facsimile link below
         # (page number may go to a text title, too)
@@ -324,19 +346,24 @@ def main(args):
                 # HeLI-OTS (extend mapping as more languages appear)
                 lang = s_attributes['lang']
                 lang = xmllangcode.get(lang) or lang
-                content.append(f'<s xml:id="{s_id}" xml:lang="{lang}">')
-                content.extend(sentence(s_attributes, s_body,
-                                        self_id = s_id,
-                                        fieldnames = names,
-                                        args = args))
-                content.append('</s>')
+                if args.ana:
+                    content.append(f'<s xml:id="{s_id}" xml:lang="{lang}">')
+                    content.extend(sentence(s_attributes, s_body,
+                                            self_id = s_id,
+                                            fieldnames = names,
+                                            args = args))
+                    args.ana and content.append('</s>')
+                else:
+                    # approximate recovery of just sentence text
+                    # unless maybe a gap?
+                    content.extend(rawsentence(s_attributes, s_body, names, args))
             content.append('</p>')
 
         content.append('</body>')
         content.append('</text>')
         content.append('</TEI>')
 
-        ship('\n'.join(content), t_year, t_id)
+        ship('\n'.join(content), t_year, t_id, args)
         content = []
 
     return

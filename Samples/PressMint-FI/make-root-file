@@ -1,0 +1,54 @@
+#! /bin/env python3
+# -*- mode: Python; -*-
+
+from argparse import ArgumentParser
+from itertools import chain, count, islice, takewhile
+from pathlib import Path
+import os, re
+
+# XINCLUDE.format(path)
+XINCLUDE = '''  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="{}"/>'''
+
+def parser():
+    parser = ArgumentParser(description = '''
+
+    Write to current directory a corpus root file that XIncludes every
+    YEAR/whatever.xml in the current directory. The root file name is
+    based on the current directory name, and there may be other files
+    to XInclude in the current directory.
+
+    ''')
+
+    parser.add_argument('--force', action = 'store_true',
+                        help = 'overwrite existing root file')
+
+    return parser
+
+def main(args):
+    here = Path('.').resolve()
+    root = here.name.replace('.TEI', '')
+    if root not in ('PressMint-FI.ana', 'PressMint-FI'):
+        raise ValueError('unexpected working directory')
+    with open(f'{root}.tmp', mode = ('w' if args.force else 'x')) as ous:
+        print('<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">',
+              file = ous)
+        print('   <!-- TODO teiHeader here -->',
+              file = ous)
+        for component in sorted(Path('.').glob('*.xml')):
+            if component == Path(f'{root}.xml'): continue
+            print(XINCLUDE.format(component),
+                  file = ous)
+        else:
+            # assume all four-character files are four-digit directories
+            # that contain a year of input components
+            for year in sorted(Path('.').glob('????')):
+                for component in sorted(Path(year).glob('*.xml')):
+                    print(XINCLUDE.format(component),
+                          file = ous)
+        print('</teiCorpus>',
+              file = ous)
+    os.rename(f'{root}.tmp', f'{root}.xml')
+
+if __name__ == '__main__':
+    main(parser().parse_args())
