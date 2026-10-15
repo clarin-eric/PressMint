@@ -136,6 +136,7 @@ $country2lang{'DK'} = 'da';
 $country2lang{'EE'} = 'et';
 $country2lang{'ES'} = 'es';
 $country2lang{'ES-AN'} = 'es';
+$country2lang{'ES-CM'} = 'es';
 $country2lang{'ES-CT'} = 'ca, es';
 $country2lang{'ES-GA'} = 'gl';
 $country2lang{'ES-PV'} = 'eu, es';
@@ -326,7 +327,7 @@ foreach my $countryCode (split(/[, ]+/, $countryCodes)) {
 	print STDERR "INFO: ***Making $countryCode samples\n";
         logger('Making samples');
 	`rm -fr $outSmpDir; mkdir $outSmpDir`;
-	&commonTaxonomies($countryCode, $outSmpDir);
+	# &commonTaxonomies($countryCode, $outSmpDir); taxonomy is copied with scriptSample
 	if (-e $outTeiRoot) {
             #Make sample files
 	    `$Saxon outDir=$outSmpDir -xsl:$scriptSample $outTeiRoot`;

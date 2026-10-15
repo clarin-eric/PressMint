@@ -67,7 +67,7 @@
   <xsl:param name="chunkStart">0</xsl:param>
   <xsl:param name="chunkSize">0</xsl:param> <!-- 0 means process all -->
   
-  <xsl:output method="xml" indent="yes" omit-xml-declaration="no"/>
+  <xsl:output method="xml" indent="yes" omit-xml-declaration="no" suppress-indentation="w pc"/>
   <xsl:preserve-space elements="catDesc p"/>
 
   <!-- Input directory -->

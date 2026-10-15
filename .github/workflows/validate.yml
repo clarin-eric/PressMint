@@ -4,11 +4,15 @@ name: Validate
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ data ]
+    branches: 
+      - data
     paths:
       - "Samples/**"
   pull_request:
-    branches: [ main , data ]
+    branches: 
+     - main 
+     - data 
+     - data-actions-tests
     types: [opened, synchronize, reopened]
     paths:
       - "Samples/**"
@@ -22,6 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       press_process:  '${{ steps.detect-changes.outputs.press_process }}'
+      press_count: ${{ steps.detect-changes.outputs.press_count }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout PressMint
@@ -35,9 +40,9 @@ jobs:
         id: detect-changes
         uses: ./PressMint/.github/actions/PressMintStatus
       - name: Test total TEI file size limit
-        if: ${{ steps.detect-changes.outputs.max_press_changed_size > 100 && github.event.pull_request.base.ref != 'main' }} 
+        if: ${{ steps.detect-changes.outputs.max_press_changed_size > 250 && github.event.pull_request.base.ref != 'main' }} 
         run: |
-          echo "::error::100MB file limit has been exceed my one country folder"
+          echo "::error::250MB file limit has been exceed my one country folder"
           exit 1
 
   ValidateCountries:
@@ -73,7 +78,19 @@ jobs:
 
   Validate:
     runs-on: ubuntu-latest
-    needs: [ValidateCountries]
+    needs: [ValidateCountries, Changes]
+    outputs:
+      press_count: ${{ needs.Changes.outputs.press_count }}
+      press_process: ${{ needs.Changes.outputs.press_process }}
     steps:
+      - name: Save metadata artifacts
+        run: |
+          echo "press_count=${{ needs.Changes.outputs.press_count }}" >> pressmint.env
+          echo "press_process=${{ needs.Changes.outputs.press_process }}" >> pressmint.env
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pressmint-meta-pr-${{ github.event.pull_request.number }}
+          path: pressmint.env
+          overwrite: true
       - run: echo Done!
 
