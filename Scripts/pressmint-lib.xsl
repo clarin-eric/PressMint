@@ -400,4 +400,30 @@
     </xsl:choose>
   </xsl:function>
 
+  <!-- Return the first item of $items.
+       If there are more than one, print a message:
+         $level = 'warning' -> continue
+         $level = 'error' -> continue
+         $level = 'fatal'   -> stop the transformation -->
+  <xsl:function name="mk:first" as="item()?">
+    <xsl:param name="items" as="item()*"/>
+    <xsl:param name="label" as="xs:string"/>
+    <xsl:param name="level" as="xs:string"/>
+    <xsl:if test="count($items) gt 1">
+      <xsl:message terminate="{if ($level = 'fatal') then 'yes' else 'no'}"
+        select="concat(upper-case($level), ': ', $label, ' has ', count($items),
+                       ' values, using first: [',
+                       string-join(for $i in $items return normalize-space(string($i)), '] ['),
+                       ']')"/>
+    </xsl:if>
+    <xsl:sequence select="$items[1]"/>
+  </xsl:function>
+
+  <!-- Shorthand: warning by default -->
+  <xsl:function name="mk:first" as="item()?">
+    <xsl:param name="items" as="item()*"/>
+    <xsl:param name="label" as="xs:string"/>
+    <xsl:sequence select="mk:first($items, $label, 'warning')"/>
+  </xsl:function>
+
 </xsl:stylesheet>
