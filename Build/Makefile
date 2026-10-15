@@ -81,7 +81,12 @@ make-1-vert:
 make-1-conll1:
 	${FINALIZE} -conll -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
 make-1-tei:
-	${FINALIZE} -ana -tei -valid -codes ${CORPUS} -in ${SOURCES} -out ${OUTPUTS}
+	${FINALIZE} -tei -valid -codes ${CORPUS} -in ${SOURCES} -out ${OUTPUTS}
+make-1-ana:
+	${FINALIZE} -ana -valid -codes ${CORPUS} -in ${SOURCES} -out ${OUTPUTS}
+
+test-sample:
+	$s outDir=${OUTPUTS}/PressMint-${CORPUS} -xsl:../Scripts/corpus2sample.xsl ${OUTPUTS}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml
 
 test-text:
 	../Scripts/pressmintp-tei2text.pl -jobs 2 -in ${OUTPUTS}/PressMint-${CORPUS}.TEI -out Test
