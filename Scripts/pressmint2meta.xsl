@@ -6,6 +6,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns="http://www.tei-c.org/ns/1.0"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:mk="http://ufal.mff.cuni.cz/matyas-kopp"
     xmlns:et="http://nl.ijs.si/et"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -39,16 +40,17 @@
     <xsl:variable name="lang-code" select="ancestor-or-self::tei:*[@xml:lang][1]/@xml:lang"/>
     <xsl:variable name="lang" select="et:l10n($corpus-language, 
                                        $rootHeader//tei:langUsage/tei:language[@ident = $lang-code])"/>
+    <!-- printing warnings, because there can possibly be multiple values due to multiple languages (this is possible issue, that needs to be handled)-->
     <xsl:variable name="bibl" select="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl"/>
-    <xsl:variable name="date" select="$bibl/tei:date/@when"/>
+    <xsl:variable name="date" select="mk:first($bibl/tei:date/@when, 'Date', 'error')"/>
     <xsl:variable name="year" select="replace($date, '-.+', '')"/>
-    <xsl:variable name="newspaper" select="$bibl/tei:title[@level='j']"/>
-    <xsl:variable name="article" select="$bibl/tei:title[@level='a']"/>
-    <xsl:variable name="publisher" select="$bibl/tei:publisher"/>
-    <xsl:variable name="volume" select="$bibl/tei:biblScope[@unit='volume']"/>
-    <xsl:variable name="issue" select="$bibl/tei:biblScope[@unit='issue']"/>
-    <xsl:variable name="URN" select="$bibl/tei:idno[@type='URN']"/>
-    <xsl:variable name="URL" select="$bibl/tei:idno[@type='URI']"/>
+    <xsl:variable name="newspaper" select="mk:first($bibl/tei:title[@level='j'], 'Newspaper', 'warning')"/>
+    <xsl:variable name="article" select="mk:first($bibl/tei:title[@level='a'], 'Article', 'warning')"/>
+    <xsl:variable name="publisher" select="mk:first($bibl/tei:publisher, 'Publisher', 'warning')"/>
+    <xsl:variable name="volume" select="mk:first($bibl/tei:biblScope[@unit='volume'], 'Volume', 'warning')"/>
+    <xsl:variable name="issue" select="mk:first($bibl/tei:biblScope[@unit='issue'], 'Issue', 'warning')"/>
+    <xsl:variable name="URN" select="mk:first($bibl/tei:idno[@type='URN'], 'URN', 'warning')"/>
+    <xsl:variable name="URL" select="mk:first($bibl/tei:idno[@type='URL'], 'URL', 'warning')"/>
     
     <xsl:variable name="quality" select="et:l10n($corpus-language, key('idr', @ana, $rootHeader)/tei:catDesc)"/>
     <xsl:variable name="img-url" select="key('idr', preceding::tei:pb[1]/@facs)/tei:graphic/@url"/>
