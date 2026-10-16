@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xml:id="PressMint-BG" xml:lang="bg"
+    xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Исторически корпус на български вестници PressMint-BG [PressMint]</title>
+                <title xml:lang="en">Bulgarian historical newspaper corpus PressMint-BG [PressMint]</title>
+                <respStmt>
+                    <persName ref="https://orcid.org/0000-0002-4484-5027" xml:lang="bg">Петя Осенова</persName>
+                    <persName ref="https://orcid.org/0000-0002-4484-5027" xml:lang="en">Petya Osenova</persName>
+                    <resp xml:lang="bg">Координиране на проекта PressMint, лингвистична анотация</resp>
+                    <resp xml:lang="en">PressMint project coordination, linguistic annotation</resp>
+                </respStmt>
+                <respStmt>
+                    <persName ref="https://orcid.org/0000-0002-0430-7953" xml:lang="bg">Иван Крачанов</persName>
+                    <persName ref="https://orcid.org/0000-0002-0430-7953" xml:lang="en">Ivan Kratchanov</persName>
+                    <resp xml:lang="bg">Дигитализация и OCR</resp>
+                    <resp xml:lang="en">Digitalization and OCR</resp>
+                </respStmt>
+                <respStmt>
+                    <persName ref="https://orcid.org/0000-0003-3555-0179" xml:lang="bg">Кирил Симов</persName>
+                    <persName ref="https://orcid.org/0000-0003-3555-0179" xml:lang="en">Kiril Simov</persName>
+                    <resp xml:lang="bg">Нормализация на текста, езикови модели, лингвистична анотация</resp>
+                    <resp xml:lang="en">Text normalization, language models, linguistic annotation</resp>
+                </respStmt>
+                <respStmt>
+                    <persName ref="https://orcid.org/0009-0006-6125-2684" xml:lang="bg">Николай Паев</persName>
+                    <persName ref="https://orcid.org/0009-0006-6125-2684" xml:lang="en">Nikolay Paev</persName>
+                    <resp xml:lang="bg">Извличане на текст от ПДФ, езикови модели, нормализация на текст, лингвистична анотация</resp>
+                    <resp xml:lang="en">Text extraction from PDF, language models, text normalization, linguistic annotation</resp>
+                </respStmt>
+                <respStmt>
+                    <persName ref="https://orcid.org/0009-0002-1062-3503" xml:lang="bg">Стефан Маринов</persName>
+                    <persName ref="https://orcid.org/0009-0002-1062-3503" xml:lang="en">Stefan Marinov</persName>
+                    <resp xml:lang="bg">Извличане на текст от ПДФ, езикови модели, нормализация на текст, лингвистична анотация, кодиране и валидация в XML</resp>
+                    <resp xml:lang="en">Text extraction from PDF, language models, text normalization, linguistic annotation, XML coding and validation</resp>
+                </respStmt>
+                <funder>
+                    <orgName xml:lang="bg">Българска национална изследователска инфраструктура - CLaDA-BG</orgName>
+                    <orgName xml:lang="en">Bulgarian National Research Infrastructure - CLaDA-BG</orgName>
+                </funder>
+                <funder>
+                    <orgName xml:lang="bg">Изследователска инфраструктура CLARIN</orgName>
+                    <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+                </funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>1.0</edition>
+            </editionStmt>
+            <extent>
+                <measure unit="texts" quantity="23" xml:lang="en">23 texts</measure>
+                <measure unit="paragraphs" quantity="233" xml:lang="en">235 paragraphs</measure>
+                <measure unit="words" quantity="7788" xml:lang="en">7788 words</measure>
+            </extent>
+            <publicationStmt>
+                <publisher>
+                    <orgName xml:lang="bg">Инфраструктурата КЛАРИН</orgName>
+                    <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+                    <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+                </publisher>
+                <idno type="handle">http://hdl.handle.net/11356/1345</idno>
+                <pubPlace>
+                    <ref target="http://hdl.handle.net/11356/1345">http://hdl.handle.net/11356/1345</ref>
+                </pubPlace>
+                <availability status="free">
+                    <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+                    <p xml:lang="bg">Корпусът е достъпен чрез международния лиценз
+                        <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons</ref>.
+                    </p>
+                    <p xml:lang="en">This work is licensed under the
+                        <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.
+                    </p>
+                </availability>
+                <date when="2025-12-01"></date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <title xml:lang="en">Scanning and OCR processing from Bulgarian National Library Plovdiv &quot;Ivan Vazov&quot;</title>
+                    <idno type="URI" subtype="URL">https://digital.libplovdiv.com</idno>
+                    <date from="1878-01-01" to="2025-12-01"></date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p xml:lang="bg">
+                    <ref target="https://www.clarin.eu/pressmint">PressMint</ref> е проект, който цели: (1) създаване на многоезично множество от корпуси с исторически вестници с обща кодировка спрямо <ref target="https://clarin-eric.github.io/PressMint/">насоките за кодиране на PressMint</ref>; (2) добавяне на лингвистични анотации към корпусите; и (3) предоставянето на корпусите чрез конкорданси.</p>
+                <p xml:lang="en">
+                    <ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+            </projectDesc>
+            <editorialDecl>
+                <correction>
+                    <p xml:lang="en">The only intervention concern the adjustment of the reading order. No other corrections of source texts were performed.</p>
+                </correction>
+                <normalization>
+                    <p xml:lang="en">Text has not been normalised.</p>
+                </normalization>
+                <hyphenation>
+                    <p xml:lang="en">No end-of-line hyphens were present in the source.</p>
+                </hyphenation>
+                <quotation>
+                    <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+                </quotation>
+                <segmentation>
+                    <p xml:lang="en">The texts are split by page breaks, and then segmented into paragraphs.</p>
+                </segmentation>
+            </editorialDecl>
+            <tagsDecl>
+                <namespace name="http://www.tei-c.org/ns/1.0">
+                    <tagUsage gi="body" occurs="717"></tagUsage>
+                    <tagUsage gi="desc" occurs="34335"></tagUsage>
+                    <tagUsage gi="div" occurs="717"></tagUsage>
+                    <tagUsage gi="incident" occurs="1068"></tagUsage>
+                    <tagUsage gi="kinesic" occurs="11436"></tagUsage>
+                    <tagUsage gi="seg" occurs="727563"></tagUsage>
+                    <tagUsage gi="text" occurs="717"></tagUsage>
+                    <tagUsage gi="vocal" occurs="21823"></tagUsage>
+                </namespace>
+            </tagsDecl>
+            <classDecl>
+                <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-OCR.xml"/>
+            </classDecl>
+        </encodingDesc>
+        <profileDesc>
+            <settingDesc>
+                <setting>
+                    <name type="address"></name>
+                    <name type="city">Plovdiv</name>
+                    <name type="country">Bulgaria</name>
+                </setting>
+            </settingDesc>
+            <langUsage>
+                <language ident="bg" xml:lang="bg">български</language>
+                <language ident="bg" xml:lang="en">Bulgarian</language>
+                <language ident="en" xml:lang="bg">английски</language>
+                <language ident="en" xml:lang="en">English</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc xml:lang="en">
+            <change when="2025-12-01">
+                <name>Petya Osenova</name>: the coordinator.</change>
+        </revisionDesc>
+    </teiHeader>
+    <xi:include href="1879/PressMint-BG_1879-08-11-DV.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="1898/PressMint-BG_1898-03-02-ZAPBUL.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1900/PressMint-BG_1900-07-07-ISTZAR.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1901/PressMint-BG_1901-08-27-ZEMGLAS.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1902/PressMint-BG_1902-05-11-ISKR.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1902/PressMint-BG_1902-11-21-RAZKR.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1903/PressMint-BG_1903-03-23-NARPODK.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1903/PressMint-BG_1903-07-09-NOVMAR.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1903/PressMint-BG_1903-07-23-USTREM.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1903/PressMint-BG_1903-10-22-ZEMNAPR.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1903/PressMint-BG_1903-11-05-RODOPEK.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1904/PressMint-BG_1904-04-15-ZOV.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1905/PressMint-BG_1905-01-01-REFORM.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1906/PressMint-BG_1906-02-20-REKL.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1907/PressMint-BG_1907-01-23-OTZV.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="1908/PressMint-BG_1908-05-16-6SEP.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="1908/PressMint-BG_1908-05-24-6SEP.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="1908/PressMint-BG_1908-05-31-6SEP.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="1908/PressMint-BG_1908-06-07-6SEP.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="1908/PressMint-BG_1908-06-14-6SEP.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="1908/PressMint-BG_1908-06-21-6SEP.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="1908/PressMint-BG_1908-07-04-6SEP.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="1908/PressMint-BG_1908-07-12-6SEP.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="1908/PressMint-BG_1908-07-26-6SEP.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="1908/PressMint-BG_1908-08-18-6SEP.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1909/PressMint-BG_1909-09-26-OTECH.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1911/PressMint-BG_1911-06-19-PLOVDNARVEST.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1911/PressMint-BG_1911-07-05-RAZV3461.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1911/PressMint-BG_1911-11-15-DEMSLOV.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1915/PressMint-BG_1915-06-08-UCHGLAS.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1918/PressMint-BG_1918-02-12-ROD.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1920/PressMint-BG_1920-01-03-MAK.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1920/PressMint-BG_1920-12-23-AVTMAK.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1923/PressMint-BG_1923-01-15-ILSEDM.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1923/PressMint-BG_1923-06-28-NEZAVMAK.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1924/PressMint-BG_1924-04-25-SVOBMAK.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1924/PressMint-BG_1924-09-01-BICH.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1925/PressMint-BG_1925-11-01-9JUN.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1926/PressMint-BG_1926-04-10-MAKDELO.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1926/PressMint-BG_1926-06-18-PODEM.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1927/PressMint-BG_1927-10-24-PLOVDPOSHT.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1928/PressMint-BG_1928-09-20-RAZV3471.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1929/PressMint-BG_1929-05-12-EHOHOL.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1930/PressMint-BG_1930-12-30-POBEDA.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1931/PressMint-BG_1931-11-06-KURIER.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1934/PressMint-BG_1934-03-29-UTRPOB.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1935/PressMint-BG_1935-07-07-LOVVEST.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1936/PressMint-BG_1936-05-04-GOTSLIST.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1936/PressMint-BG_1936-05-24-DETGRAD.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1937/PressMint-BG_1937-03-01-SERD.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1937/PressMint-BG_1937-06-26-BELOMOR.xml"
+    	xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <xi:include href="/1937/PressMint-BG_1937-09-01-PLOVDGLAS.xml"
+        xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+</teiCorpus>
