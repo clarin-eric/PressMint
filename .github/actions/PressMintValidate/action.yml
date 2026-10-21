@@ -26,7 +26,7 @@ runs:
               echo "::warning title=Corpus root is missing (${{inputs.press}}.$TYPE)::$ROOT not found"
           else
             echo "::notice:: Running validation for PressMint-${{inputs.press}}.$TYPE"
-              make validate-TEI-${{inputs.press}}  2>&1 \
+              make validate-$TYPE-${{inputs.press}}  2>&1 \
                 | sed "s/^\(.*\)\(\berror\b\)/::error::\1\2/i;s/^\(.*\)\(\bwarn\)/::warning::\1\2/i;"  \
                 | tee PressMint-${{inputs.press}}.$TYPE.log \
                   || echo "::error:: PressMint-${{inputs.press}}.$TYPE FATAL ERROR during validation"
