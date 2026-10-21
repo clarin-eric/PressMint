@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-CZ.ana" xml:lang="cs">
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0"
+           xml:id="PressMint-CZ.ana"
+           xml:lang="cs">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Český korpus historických novin PressMint-CZ [PressMint.ana SAMPLE]</title>
-            <title xml:lang="en">Czech historical newspaper corpus PressMint-CZ [PressMint.ana SAMPLE]</title>
+            <title>Český korpus historických novin PressMint-CZ [PressMint.ana]</title>
+            <title xml:lang="en">Czech historical newspaper corpus PressMint-CZ [PressMint.ana]</title>
             <respStmt>
                <persName ref="https://orcid.org/0000-0001-7953-8783">Matyáš Kopp</persName>
                <resp xml:lang="en">TEI XML corpus encoding</resp>
@@ -22,11 +24,9 @@
          <editionStmt>
             <edition>1.0</edition>
          </editionStmt>
-         <extent><!--These numbers do not reflect the size of the sample!-->
-            <measure unit="texts" quantity="5" xml:lang="en">5 texts</measure>
-            <measure unit="paragraphs" quantity="842" xml:lang="en">842 paragraphs</measure>
-            <measure unit="words" quantity="53254" xml:lang="en">53,254 words</measure>
-            <measure unit="words" quantity="53254" xml:lang="en">53,254 words</measure>
+         <extent>
+            <measure unit="words" quantity="53254" xml:lang="en">53254 words</measure>
+            <measure unit="words" quantity="53254" xml:lang="cs">53254 slov</measure>
          </extent>
          <publicationStmt>
             <publisher>
@@ -37,8 +37,14 @@
             <idno type="URI">https://github.com/clarin-eric/PressMint</idno>
             <availability status="free">
                <licence>http://creativecommons.org/licenses/by/4.0/</licence>
-               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
-               <p xml:lang="cs">Toto dílo je licencováno <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Uveďte původ 4.0 Mezinárodní Veřejná licence</ref>.</p>
+               <p xml:lang="en">This work is licensed under the
+            <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0
+            International License</ref>.
+          </p>
+               <p xml:lang="cs">Toto dílo je licencováno
+            <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Uveďte původ 4.0
+            Mezinárodní Veřejná licence</ref>.
+          </p>
             </availability>
          </publicationStmt>
          <sourceDesc>
@@ -50,12 +56,12 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <tagsDecl><!--These numbers do not reflect the size of the sample!-->
+         <tagsDecl>
             <namespace name="http://www.tei-c.org/ns/1.0">
                <tagUsage gi="body" occurs="5"/>
                <tagUsage gi="cb" occurs="87"/>
                <tagUsage gi="lb" occurs="8351"/>
-               <tagUsage gi="name" occurs="2877"/>
+               <tagUsage gi="name" occurs="2896"/>
                <tagUsage gi="p" occurs="842"/>
                <tagUsage gi="pb" occurs="22"/>
                <tagUsage gi="pc" occurs="14708"/>
@@ -65,7 +71,8 @@
             </namespace>
          </tagsDecl>
          <classDecl>
-            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-NER.ana.xml"/>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                        href="PressMint-taxonomy-NER.ana.xml"/>
          </classDecl>
          <appInfo>
             <application ident="UDPipe" version="2">
@@ -86,15 +93,15 @@
             <language ident="en" xml:lang="en">English</language>
          </langUsage>
       </profileDesc>
-      <revisionDesc>
-         <change when="2026-09-03">
-            <name>corpus2sample.xsl</name>: Made sample.</change>
-      </revisionDesc>
    </teiHeader>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1848/PressMint-CZ_1848-04-05-f2413420.ana.xml"/>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1861/PressMint-CZ_1861-01-01-b8cf84b6.ana.xml"/>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1886/PressMint-CZ_1886-07-20-0a3623ed.ana.xml"/>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1914/PressMint-CZ_1914-12-30-944bce70.ana.xml"/>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1914/PressMint-CZ_1914-12-31-dda72f90.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+               href="1848/PressMint-CZ_1848-04-05-f2413420.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+               href="1861/PressMint-CZ_1861-01-01-b8cf84b6.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+               href="1886/PressMint-CZ_1886-07-20-0a3623ed.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+               href="1914/PressMint-CZ_1914-12-30-944bce70.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+               href="1914/PressMint-CZ_1914-12-31-dda72f90.ana.xml"/>
 </teiCorpus>
-
