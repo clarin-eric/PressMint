@@ -49,6 +49,7 @@ jobs:
               # Skip allowed files/dirs
               if [[ "$name" == "${d}.xml" ]] \
               || [[ "$name" == "${d}.ana.xml" ]] \
+              || [[ "$name" == ".gitignore" ]] \
               || [[ "$name" == "Sources" ]] \
               || [[ "$name" == "README.md" ]] ; then
                 continue

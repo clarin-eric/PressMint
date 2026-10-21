@@ -7,6 +7,15 @@ inputs:
   requireTaxonomiesTranslations:
     description: 'require every term in common taxonomies to be translated'
     required: false
+
+outputs:
+  status:
+    value: ${{ steps.build.outputs.status }}
+  build_dir:
+    value: ${{ steps.build.outputs.build_dir }}
+  build_sample:
+    value: ${{ steps.build.outputs.build_sample }}
+
 runs:
   using: "composite"
   steps:
@@ -17,33 +26,55 @@ runs:
       id: build
       working-directory: ${{github.workspace}}/PressMint
       run: |
-        INTYPES=("" ".ana")
+        declare -a INTYPES
+        INTYPES=([1]="" [2]=".ana")
         STATUS=0
-        SKIP=0
-        for INTYPE in "${INTYPES[@]}"; do
+        TODO=0
+        BUILDTARGET="test-build-${{inputs.press}}"
+        echo "Testing if README.md symlink exists for PressMint-${{inputs.press}} and creating it if not"
+        test -f "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md" \
+          || ln -s "../../../Samples/PressMint-${{inputs.press}}/README.md" \
+                   "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md" \
+                   && echo "DEV: README.md symlink created for PressMint-${{inputs.press}}"
+        for IDX in "${!INTYPES[@]}"; do
+          INTYPE=${INTYPES[$IDX]}
           TYPE="TEI${INTYPE}"
           ROOT="Samples/PressMint-${{inputs.press}}/PressMint-${{inputs.press}}${INTYPE}.xml"
           if [ ! -f "$ROOT" ]; then
               echo "::warning title=Corpus root is missing (${{inputs.press}}.$TYPE)::$ROOT not found"
-              SKIP=1
+          else
+              echo "DEV: Corpus root exists (${{inputs.press}}.$TYPE)::$ROOT found"
+              TODO=$((TODO+IDX))
           fi
         done
-        if [ $SKIP -eq 1 ] ; then
+        echo "DEV: TODO=$TODO"
+        if [ $TODO -eq 0 ] ; then
           echo "::warning title=SKIPPING BUILD VALIDATION (${{inputs.press}})::"
         else
-          echo "::notice:: Running build-validation for ParlaMint-${{inputs.press}}"
-          BUILDDIR=$(make test-build-${{inputs.press}} KEEP-DATA=1 2>&1 | sed -n 's/^OUTPUT_FOLDER=//p')
+          if [ $TODO -eq 1 ] ; then
+            echo "::warning title=SKIPPING TEI.ana BUILD VALIDATION (${{inputs.press}}):: .ana.xml is missing"
+            BUILDTARGET="test-build-TEIonly-${{inputs.press}}"
+          fi
+          echo "::notice:: Running build-validation for PressMint-${{inputs.press}} (make ${BUILDTARGET} KEEP-DATA=1)"
+          BUILDDIR=$(make ${BUILDTARGET} KEEP-DATA=1 2>&1 | sed -n 's/^OUTPUT_FOLDER=//p')
           find ${BUILDDIR}
           cat ${BUILDDIR}/Logs/PressMint-${{inputs.press}}.log \
                 | sed "s/^\(.*\)\(\berror\b\)/::error::\1\2/i;s/^\(.*\)\(\bfatal\b\)/::error::\1\2/i;s/^\(.*\)\(\bwarn\)/::warning::\1\2/i;"
           test -s ${BUILDDIR}/Logs/PressMint-${{inputs.press}}.error.log \
-                && echo "::error:: PressMint-$parla build-validation FAILED" \
+                && echo "::error:: PressMint-${{inputs.press}} build-validation FAILED" \
                 && STATUS=1 \
-                || echo "::notice:: ParlaMint-${{inputs.press}} build-validation PASSED"
+                || echo "::notice:: PressMint-${{inputs.press}} build-validation PASSED"
         fi
         echo "status=$STATUS" >> $GITHUB_OUTPUT
+        echo "build_dir=${BUILDDIR}" >> $GITHUB_OUTPUT
+        echo "build_sample=${BUILDDIR}/Distro/PressMint-${{inputs.press}}" >> $GITHUB_OUTPUT
+
+        echo "status=$STATUS"
+        echo "build_dir=${BUILDDIR}"
+        echo "build_sample=${BUILDDIR}/Distro/PressMint-${{inputs.press}}"
+        
       shell: bash
-      continue-on-error: true
+      #continue-on-error: true
 
 
     - name: Failing if anything is wrong

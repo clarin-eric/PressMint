@@ -45,8 +45,12 @@
   <xsl:param name="chunkStart">0</xsl:param>
   <xsl:param name="chunkSize">0</xsl:param> <!-- 0 means process all -->
 
+  <xsl:variable name="inFile" select="replace(base-uri(), '.+/([^/]+$)', '$1')"/>
   <!-- Is this a linguistically annotated (ana) or plain text corpus (txt)? -->
   <xsl:param name="type">
+    <xsl:if test="not(concat(/tei:teiCorpus/@xml:id, '.xml') = $inFile)">
+      <xsl:message terminate="yes" select="concat('FATAL ', /tei:teiCorpus/@xml:id,': id does not match filename ', $inFile)"/>      
+    </xsl:if>
     <xsl:choose>
       <xsl:when test="contains(/tei:teiCorpus/@xml:id, '.ana')">ana</xsl:when>
       <xsl:otherwise>txt</xsl:otherwise>
@@ -66,7 +70,7 @@
     </xsl:if>
   </xsl:param>
   
-  <xsl:output method="xml" indent="yes"/>
+  <xsl:output method="xml" indent="yes" suppress-indentation="w pc"/>
   <xsl:preserve-space elements="catDesc p"/>
 
   <!-- GOBAL VARIABLES -->
@@ -405,19 +409,48 @@
       <xsl:message select="concat('WARN ', /tei:*/@xml:id, 
                            ': no component extent, adding extent measures in English only!')"/>
       <extent>
-        <measure unit="paragraphs" quantity="{$paragraphs}" xml:lang="en">
-          <xsl:value-of select="et:format-number('en', $paragraphs)"/>
-          <xsl:text> paragraphs</xsl:text>
-        </measure>
-        <measure unit="words" quantity="{$words}" xml:lang="en">
-          <xsl:value-of select="et:format-number('en', $words)"/>
-          <xsl:text> words</xsl:text>
-        </measure>
+        <xsl:copy-of select="mk:measure-template('paragraphs', $paragraphs)"/>
+        <xsl:copy-of select="mk:measure-template('words', $words)"/>
       </extent>
     </xsl:if>
   </xsl:template>
 
-  <xsl:template mode="comp" match="tei:extent/tei:measure[@unit='texts']">
+  <xsl:template mode="comp" match="tei:extent">
+    <xsl:param name="paragraphs"/>
+    <xsl:param name="words"/>
+    <xsl:copy>
+      <xsl:choose>
+        <xsl:when test="tei:measure[@unit='paragraphs']">
+          <xsl:apply-templates mode="comp" select="tei:measure[@unit='paragraphs']">
+            <xsl:with-param name="paragraphs" select="$paragraphs"/>
+            <xsl:with-param name="words" select="$words"/>
+          </xsl:apply-templates>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:message select="concat('WARN ', /tei:*/@xml:id, 
+                                 ': no paragraphs measure in extent, adding measure with quantity ', $paragraphs)"/>
+            <xsl:copy-of select="mk:measure-template('paragraphs', $paragraphs)"/>    
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:choose>
+        <xsl:when test="tei:measure[@unit='words']">
+          <xsl:apply-templates mode="comp" select="tei:measure[@unit='words']">
+            <xsl:with-param name="paragraphs" select="$paragraphs"/>
+            <xsl:with-param name="words" select="$words"/>
+          </xsl:apply-templates>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:message select="concat('WARN ', /tei:*/@xml:id, 
+                                 ': no words measure in extent, adding measure with quantity ', $words)"/>
+            <xsl:copy-of select="mk:measure-template('words', $words)"/>    
+        </xsl:otherwise>
+      </xsl:choose>
+
+    </xsl:copy>
+  </xsl:template>
+
+  <!-- not used: 
+  <xsl:template mode="comp" match="tei:measure[@unit='texts']">
     <xsl:param name="texts"/>
     <xsl:variable name="old-texts" select="@quantity"/>
     <xsl:copy>
@@ -433,9 +466,10 @@
                               ' '))"/>
       </xsl:if>
     </xsl:copy>
-  </xsl:template>  
+  </xsl:template>
+  -->  
 
-  <xsl:template mode="comp" match="tei:extent/tei:measure[@unit='paragraphs']">
+  <xsl:template mode="comp" match="tei:measure[@unit='paragraphs']">
     <xsl:param name="paragraphs"/>
     <xsl:variable name="old-paragraphs" select="@quantity"/>
     <xsl:copy>
@@ -453,7 +487,7 @@
     </xsl:copy>
   </xsl:template>  
 
-  <xsl:template mode="comp" match="tei:extent/tei:measure[@unit='words']">
+  <xsl:template mode="comp" match="tei:measure[@unit='words']">
     <xsl:param name="words"/>
     <xsl:variable name="old-words" select="@quantity"/>
     <xsl:copy>

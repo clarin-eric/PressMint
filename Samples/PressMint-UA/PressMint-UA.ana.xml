@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="PressMint-UA.ana" xml:lang="uk">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main" xml:lang="uk">Корпус українських історичних газет PressMint-UA (PluG) [PressMint.ana SAMPLE]</title>
+            <title type="main" xml:lang="en">Ukrainian historical newspaper corpus PressMint-UA [PressMint.ana SAMPLE]</title>
+            <respStmt>
+               <resp xml:lang="en">PluG to PressMint .ana TEI XML</resp>
+               <name>PluG</name>
+            </respStmt>
+            <funder>
+               <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="texts" quantity="32" xml:lang="en">32 texts</measure>
+            <measure unit="paragraphs" quantity="238" xml:lang="en">238 paragraphs</measure>
+            <measure unit="words" quantity="8742" xml:lang="en">8,742 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="uk">Дослідницька інфраструктура CLARIN</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+            </availability>
+            <date when="2026-06-17">2026-06-17</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title type="main" xml:lang="en">PluG</title>
+               <idno type="URI" subtype="URL">https://uacorpus.org/</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+         </projectDesc>
+         <editorialDecl>
+            <segmentation>
+               <p xml:lang="en">Paragraph segmentation follows PluG plain text. Tokenization and sentence boundaries from nlp_uk. Lemmas, POS tags and morphological features from UDPipe 2 (model: ukrainian-parlamint-ud-2.17-251125). Named entity tags (PER/LOC/MISC) from nlp_uk prop/geo/fname/lname/pname tags.</p>
+            </segmentation>
+         </editorialDecl>
+         <tagsDecl><!--These numbers do not reflect the size of the sample!-->
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="32"/>
+               <tagUsage gi="name" occurs="332"/>
+               <tagUsage gi="p" occurs="238"/>
+               <tagUsage gi="pc" occurs="2016"/>
+               <tagUsage gi="s" occurs="620"/>
+               <tagUsage gi="text" occurs="32"/>
+               <tagUsage gi="w" occurs="8742"/>
+            </namespace>
+         </tagsDecl>
+         <classDecl>
+            <xi:include href="PressMint-taxonomy-topic.xml"/>
+            <xi:include href="PressMint-UA-taxonomy-regions.xml"/>
+            <xi:include href="PressMint-UA-taxonomy-mediaAdmin.xml"/>
+            <xi:include href="PressMint-taxonomy-NER.ana.xml"/>
+         </classDecl>
+         <appInfo>
+            <application version="2" ident="udpipe2">
+               <label>UDPipe 2</label>
+               <desc xml:lang="en">UD POS tagging and dependency parsing with UDPipe 2, model ukrainian-parlamint-ud-2.17-251125, available from <ref target="https://lindat.mff.cuni.cz/services/udpipe/api/process">https://lindat.mff.cuni.cz/services/udpipe/api/process</ref>.</desc>
+            </application>
+         </appInfo>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#PressMint-UA-taxonomy-mediaAdmin" target="#PressMint-UA.mediaAdmin.RUI"/>
+            <catRef scheme="#PressMint-UA-taxonomy-regions" target="#PressMint-UA.regions.loccode.UA-KYV-KYV"/>
+            <catRef scheme="#PressMint-UA-taxonomy-regions" target="#PressMint-UA.regions.macroregion.KYV"/>
+         </textClass>
+         <langUsage>
+            <language ident="uk" xml:lang="uk">українська</language>
+            <language ident="en" xml:lang="uk">англійська</language>
+            <language ident="uk" xml:lang="en">Ukrainian</language>
+            <language ident="en" xml:lang="en">English</language>
+         </langUsage>
+         <settingDesc>
+            <setting>
+               <date when="1910">1910</date>
+            </setting>
+         </settingDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-06-17">
+            <name>Tomaž Erjavec</name>: Made sample.</change>
+         <change when="2026-06-17">parlamint2release script: Fix some identifiable erros for the release.</change>
+         <change when="2026-04-17">Первинна конвертація підкорпусу PluG у PressMint TEI XML .ana.</change>
+         <change when="2026-06-17">parlamint-add-common-content script: Adding common content.</change>
+      </revisionDesc>
+   </teiHeader>
+   <xi:include href="1910/PressMint-UA_1910-10-29-3C3C1DE6.ana.xml"/>
+   <xi:include href="1910/PressMint-UA_1910-10-29-8330D80B.ana.xml"/>
+   <xi:include href="1910/PressMint-UA_1910-10-29-EEACB7B6.ana.xml"/>
+</teiCorpus>
+
