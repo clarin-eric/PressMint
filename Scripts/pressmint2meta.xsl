@@ -50,7 +50,7 @@
     <xsl:variable name="volume" select="mk:first($bibl/tei:biblScope[@unit='volume'], 'Volume', 'warning')"/>
     <xsl:variable name="issue" select="mk:first($bibl/tei:biblScope[@unit='issue'], 'Issue', 'warning')"/>
     <xsl:variable name="URN" select="mk:first($bibl/tei:idno[@type='URN'], 'URN', 'warning')"/>
-    <xsl:variable name="URL" select="mk:first($bibl/tei:idno[@type='URL'], 'URL', 'warning')"/>
+    <xsl:variable name="URL" select="mk:first($bibl/tei:idno[@type='URL' or (@type='URI' and @subtype='URL')], 'URL', 'warning')"/>
     
     <xsl:variable name="quality" select="et:l10n($corpus-language, key('idr', @ana, $rootHeader)/tei:catDesc)"/>
     <xsl:variable name="img-url" select="key('idr', preceding::tei:pb[1]/@facs)/tei:graphic/@url"/>
