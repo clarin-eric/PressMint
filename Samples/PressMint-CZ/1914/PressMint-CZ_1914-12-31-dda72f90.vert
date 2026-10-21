@@ -1,4 +1,4 @@
-<text id="PressMint-CZ_1914-12-31-dda72f90" lang="čeština" date="1914-12-31" year="1914" newspaper="Moravská orlice" publisher="" source_url="">
+<text id="PressMint-CZ_1914-12-31-dda72f90" lang="čeština" date="1914-12-31" year="1914" newspaper="Moravská orlice" publisher="" source_url="https://www.digitalniknihovna.cz/mzk/view/uuid:dda72f90-c894-11de-b208-000d606f5dc6" volume="52" issue="276">
 <p id="PressMint-CZ_1914-12-31-dda72f90.p1" lang="čeština" quality="" image="">
 <s id="PressMint-CZ_1914-12-31-dda72f90.p1.s1">
 Varšavský	Varšavský	varšavský	ADJ	Animacy=Anim Case=Nom Degree=Pos Gender=Masc Number=Sing Polarity=Pos	

@@ -1,4 +1,4 @@
-<text id="PressMint-CZ_1848-04-05-f2413420" lang="čeština" date="1848-04-05" year="1848" newspaper="Národní nowiny" publisher="" source_url="https://www.digitalniknihovna.cz/mzk/view/uuid:f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f">
+<text id="PressMint-CZ_1848-04-05-f2413420" lang="čeština" date="1848-04-05" year="1848" newspaper="Národní nowiny" publisher="Wojtěch Deym" source_url="https://www.digitalniknihovna.cz/mzk/view/uuid:f2413420-c8eb-11e9-bfd1-5ef3fc9bb22f" volume="1" issue="1">
 <p id="PressMint-CZ_1848-04-05-f2413420.p1" lang="čeština" quality="" image="">
 <s id="PressMint-CZ_1848-04-05-f2413420.p1.s1">
 Počínáme	Počínáme	počínat	VERB	Aspect=Imp Mood=Ind Number=Plur Person=1 Polarity=Pos Tense=Pres VerbForm=Fin Voice=Act	
