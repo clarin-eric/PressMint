@@ -1,4 +1,4 @@
-<text id="PressMint-CZ_1886-07-20-0a3623ed" lang="čeština" date="1886-07-20" year="1886" newspaper="Národní listy" publisher="" source_url="">
+<text id="PressMint-CZ_1886-07-20-0a3623ed" lang="čeština" date="1886-07-20" year="1886" newspaper="Národní listy" publisher="Julius Grégr" source_url="https://www.digitalniknihovna.cz/mzk/view/uuid:0a3623ed-435e-11dd-b505-00145e5790ea" volume="26" issue="199">
 <p id="PressMint-CZ_1886-07-20-0a3623ed.p1" lang="čeština" quality="" image="">
 <s id="PressMint-CZ_1886-07-20-0a3623ed.p1.s1">
 Zvláštní	Zvláštní	zvláštní	ADJ	Animacy=Inan Case=Nom Degree=Pos Gender=Masc Number=Plur Polarity=Pos	
