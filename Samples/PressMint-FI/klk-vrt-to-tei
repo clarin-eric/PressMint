@@ -110,7 +110,11 @@ teiHeader = '''   <teiHeader>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
+        <!-- TODO -->
       </encodingDesc>
+      <profileDesc>
+        <!-- TODO -->
+      </profileDesc>
    </teiHeader>'''
 
 facsimile = '''   <facsimile>
@@ -198,17 +202,19 @@ def sentence(attributes, ins, *, self_id, fieldnames, args):
         yield f'<{el} xml:id="{t_id(token)}"'
         yield f'   lemma="{t_lemma(token).translate(esc)}"'
         yield f'   pos="{t_pos(token)}"'
-        yield f'   msd="{t_msd(token)}"'
-        yield f'   ana="[TODO what is this]">{t_word(token)}</{el}>'
+        yield f'   msd="{t_msd(token)}">{t_word(token)}</{el}>'
+        # yield f'   ana="[TODO what is this]">{t_word(token)}</{el}>'
 
-    syntax = args.syntax
-    yield f'<linkGrp targFunc="head argument" type="{syntax}">'
-    for token in tokens:
-        head = token['dephead']
-        target = f'#{self_id}' if head == '0' else f'#{self_id}.w{head}'
-        yield f'<link ana="{syntax}:{t_rel(token)}"'
-        yield f'      target="{target} #{t_id(token)}"/>'
-    yield f'</linkGrp>'
+    # -- Dropping dependency syntax altogether --
+    # -- Making --syntax option redundant, too --
+    # syntax = args.syntax
+    # yield f'<linkGrp targFunc="head argument" type="{syntax}">'
+    # for token in tokens:
+    #     head = token['dephead']
+    #     target = f'#{self_id}' if head == '0' else f'#{self_id}.w{head}'
+    #     yield f'<link ana="{syntax}:{t_rel(token)}"'
+    #     yield f'      target="{target} #{t_id(token)}"/>'
+    # yield f'</linkGrp>'
 
 def fallback_date(t_attributes):
     '''Needed as a dirname so return _something_.'''
