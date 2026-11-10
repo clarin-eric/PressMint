@@ -1,0 +1,286 @@
+# newdoc id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana
+# newpar id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p1
+# lang = eu
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p1.s1
+# text = EUSKAL-ESNALEA
+1	EUSKAL-ESNALEA	euskal-esnale	NOUN	_	Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p2
+# lang = eu
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p2.s1
+# text = 1'go urtea ‖ 1911 – Garagarrilla – 15 ‖ 11'g.
+1	1'	1'	NUM	_	NumType=Card	0	_	_	NER=O|SpaceAfter=No
+2	go	go	NOUN	_	_	0	_	_	NER=O
+3	urtea	urte	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+4	‖	‖	PUNCT	_	_	0	_	_	NER=O
+5	1911	1911	NUM	_	NumType=Card	0	_	_	NER=O
+6	–	–	PUNCT	_	_	0	_	_	NER=O
+7	Garagarrilla	Garagarrilla	PROPN	_	Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+8	–	–	PUNCT	_	_	0	_	_	NER=O
+9	15	15	NUM	_	NumType=Card	0	_	_	NER=O
+10	‖	‖	PUNCT	_	_	0	_	_	NER=O
+11	11'g	11'g	NUM	_	NumType=Card	0	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p3.s2
+# text = zenbakia
+1	zenbakia	zenbaki	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p5
+# lang = eu
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p11.s1
+# text = ¿Irundarrak eztiratela begi onez begiratuko?
+1	¿Irundarrak	¿irundar	NOUN	_	Animacy=Inan|Case=Erg|Definite=Def|Number=Sing	0	_	_	NER=O
+2	eztiratela	eztiratel	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+3	begi	begi	NOUN	_	_	0	_	_	NER=O
+4	onez	on	ADJ	_	Case=Ins|Definite=Ind	0	_	_	NER=O
+5	begiratuko	begiratu	VERB	_	Aspect=Prosp|VerbForm=Part	0	_	_	NER=O|SpaceAfter=No
+6	?	?	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p12.s2
+# text = Ori gero ikusiko degu.
+1	Ori	ori	ADV	_	Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+2	gero	gero	ADV	_	_	0	_	_	NER=O
+3	ikusiko	ikusi	VERB	_	Aspect=Prosp|VerbForm=Part	0	_	_	NER=O
+4	degu	eden	AUX	_	Mood=Ind|Number[abs]=Sing|Number[erg]=Plur|Person[abs]=3|Person[erg]=1|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p13.s3
+# text = ¿Zer dute bada irundarrak nere adiskide ez izateko?
+1	¿Zer	¿zer	DET	_	Case=Abs|Definite=Ind	0	_	_	NER=O
+2	dute	ukan	VERB	_	Aspect=Prog|Mood=Ind|Number[abs]=Sing|Number[erg]=Plur|Person[abs]=3|Person[erg]=3|VerbForm=Fin	0	_	_	NER=O
+3	bada	izan	VERB	_	Aspect=Prog|Mood=Ind|Number[abs]=Sing|Person[abs]=3|Polarity=Pos|VerbForm=Fin	0	_	_	NER=O
+4	irundarrak	irundar	NOUN	_	Case=Abs|Definite=Def|Number=Plur	0	_	_	NER=O
+5	nere	ni	PRON	_	PronType=Prs	0	_	_	NER=O
+6	adiskide	adiskide	NOUN	_	Case=Abs|Definite=Ind	0	_	_	NER=O
+7	ez	ez	PART	_	Polarity=Neg	0	_	_	NER=O
+8	izateko	izan	VERB	_	Case=Abs|Definite=Ind|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+9	?	?	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p14.s4
+# text = Nor- baitek bat eta beste esanagatik, irundarrak eta ni alkarrekin ibilli- ko gera.
+1	Nor-	nor-	PRON	_	PronType=Int	0	_	_	NER=O
+2	baitek	baitak	VERB	_	Aspect=Prog|Mood=Ind|Number[abs]=Sing|Person[abs]=3|Polarity=Pos|VerbForm=Fin	0	_	_	NER=O
+3	bat	bat	NUM	_	NumType=Card	0	_	_	NER=O
+4	eta	eta	CCONJ	_	_	0	_	_	NER=O
+5	beste	beste	DET	_	_	0	_	_	NER=O
+6	esanagatik	esan	NOUN	_	Case=Cau|Definite=Def|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+7	,	,	PUNCT	_	_	0	_	_	NER=O
+8	irundarrak	irundar	ADJ	_	Case=Abs|Definite=Def|Number=Plur	0	_	_	NER=O
+9	eta	eta	CCONJ	_	_	0	_	_	NER=O
+10	ni	ni	PRON	_	PronType=Prs	0	_	_	NER=O
+11	alkarrekin	alkar	PRON	_	Case=Com|Definite=Ind	0	_	_	NER=O
+12	ibilli-	ibilli-	VERB	_	VerbForm=Part	0	_	_	NER=O
+13	ko	ko	ADV	_	Case=Abs|Definite=Ind	0	_	_	NER=O
+14	gera	gera	AUX	_	Aspect=Prog|Mood=Ind|Number[abs]=Plur|Person[abs]=1|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+15	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# newpar id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p6
+# lang = eu
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p15.s1
+# text = ¿Irundarra jai-zalea da, e?
+1	¿Irundarra	¿irundar	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+2	jai-zalea	jai-zale	NOUN	_	Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+3	da	izan	AUX	_	Aspect=Prog|Mood=Ind|Number[abs]=Sing|Person[abs]=3|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+4	,	,	PUNCT	_	_	0	_	_	NER=O
+5	e	e	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+6	?	?	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p16.s2
+# text = Bai ta ni ere, neri ere jaiak poz aundia ematen dirate.
+1	Bai	bai	PART	_	Polarity=Pos	0	_	_	NER=O
+2	ta	ta	INTJ	_	_	0	_	_	NER=O
+3	ni	ni	PRON	_	PronType=Prs	0	_	_	NER=O
+4	ere	ere	CCONJ	_	_	0	_	_	NER=O|SpaceAfter=No
+5	,	,	PUNCT	_	_	0	_	_	NER=O
+6	neri	neri	PRON	_	PronType=Prs	0	_	_	NER=O
+7	ere	ere	CCONJ	_	_	0	_	_	NER=O
+8	jaiak	jai	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Plur	0	_	_	NER=O
+9	poz	poz	NOUN	_	_	0	_	_	NER=O
+10	aundia	aundi	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+11	ematen	eman	VERB	_	Aspect=Imp|VerbForm=Inf	0	_	_	NER=O
+12	dirate	edun	AUX	_	Mood=Ind|Number[abs]=Plur|Person[abs]=3|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+13	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p17.s3
+# text = Parre-zalea, atsegiña da irundarra; baita ni ere.
+1	Parre-zalea	parre-zale	NOUN	_	Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	_	_	0	_	_	NER=O
+3	atsegiña	atsegiña	NOUN	_	Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+4	da	izan	AUX	_	Aspect=Prog|Mood=Ind|Number[abs]=Sing|Person[abs]=3|VerbForm=Fin	0	_	_	NER=O
+5	irundarra	irundar	ADJ	_	Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+6	;	;	PUNCT	_	_	0	_	_	NER=O
+7	baita	baita	CCONJ	_	_	0	_	_	NER=O
+8	ni	ni	PRON	_	PronType=Prs	0	_	_	NER=O
+9	ere	ere	CCONJ	_	_	0	_	_	NER=O|SpaceAfter=No
+10	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p18.s4
+# text = Ni ere, irundarra bezela, iñon baña pozikago ibiltzen naiz soñularien artean, ots artean, biotza alai ibilli bear dan tokian.
+1	Ni	ni	PRON	_	PronType=Prs	0	_	_	NER=O
+2	ere	ere	CCONJ	_	_	0	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	_	_	0	_	_	NER=O
+4	irundarra	irundar	NOUN	_	_	0	_	_	NER=O
+5	bezela	bezela	ADP	_	_	0	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	_	_	0	_	_	NER=O
+7	iñon	iñon	NOUN	_	_	0	_	_	NER=O
+8	baña	baña	NUM	_	_	0	_	_	NER=O
+9	pozikago	pozika	ADJ	_	Degree=Cmp	0	_	_	NER=O
+10	ibiltzen	ibili	VERB	_	Aspect=Imp|VerbForm=Inf	0	_	_	NER=O
+11	naiz	izan	AUX	_	Mood=Ind|Number[abs]=Sing|Person[abs]=1|VerbForm=Fin	0	_	_	NER=O
+12	soñularien	soñulari	NOUN	_	Case=Gen	0	_	_	NER=O
+13	artean	arte	ADP	_	Case=Ine|Definite=Def|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+14	,	,	PUNCT	_	_	0	_	_	NER=O
+15	ots	ots	NOUN	_	_	0	_	_	NER=O
+16	artean	arte	ADP	_	Animacy=Inan|Case=Ine|Definite=Def|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+17	,	,	PUNCT	_	_	0	_	_	NER=O
+18	biotza	biotz	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+19	alai	alai	ADV	_	_	0	_	_	NER=O
+20	ibilli	ibilli	VERB	_	VerbForm=Part	0	_	_	NER=O
+21	bear	bear	ADJ	_	Case=Abs|Definite=Ind	0	_	_	NER=O
+22	dan	izann	VERB	_	Aspect=Prog|Mood=Ind|Number[abs]=Sing|Person[abs]=3|VerbForm=Fin	0	_	_	NER=O
+23	tokian	toki	NOUN	_	Animacy=Inan|Case=Ine|Definite=Def|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+24	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p19.s5
+# text = Ala bada, irundarrak eta ni, alkarrekin ederki ibilliko gera.
+1	Ala	ala	CCONJ	_	_	0	_	_	NER=O
+2	bada	izan	CCONJ	_	_	0	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	_	_	0	_	_	NER=O
+4	irundarrak	irundar	ADJ	_	Case=Abs|Definite=Def|Number=Plur	0	_	_	NER=O
+5	eta	eta	CCONJ	_	_	0	_	_	NER=O
+6	ni	ni	PRON	_	PronType=Prs	0	_	_	NER=O|SpaceAfter=No
+7	,	,	PUNCT	_	_	0	_	_	NER=O
+8	alkarrekin	alkar	PRON	_	Case=Com|Definite=Ind	0	_	_	NER=O
+9	ederki	ederki	ADV	_	_	0	_	_	NER=O
+10	ibilliko	ibilli	VERB	_	Aspect=Prosp|VerbForm=Part	0	_	_	NER=O
+11	gera	gera	AUX	_	Mood=Ind|Number[abs]=Plur|Person[abs]=1|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p20.s6
+# text = Oraindaño, noiz-edo-noiz gogo otzez begiratu baldin badirate irundarrak, ba- dakit zergatik izan dan:
+1	Oraindaño	oraindaño	ADV	_	_	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	_	_	0	_	_	NER=O
+3	noiz-edo-noiz	noiz-edo-noiz	ADV	_	_	0	_	_	NER=O
+4	gogo	gogo	NOUN	_	_	0	_	_	NER=O
+5	otzez	otz	ADJ	_	Case=Ins|Definite=Ind	0	_	_	NER=O
+6	begiratu	begiratu	VERB	_	Aspect=Perf|VerbForm=Part	0	_	_	NER=O
+7	baldin	baldin	CCONJ	_	_	0	_	_	NER=O
+8	badirate	tedun	AUX	_	Mood=Ind|Number[abs]=Sing|Number[dat]=Sing|Number[erg]=Plur|Person[abs]=3|Person[dat]=3|Person[erg]=3|VerbForm=Fin	0	_	_	NER=O
+9	irundarrak	irundar	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+10	,	,	PUNCT	_	_	0	_	_	NER=O
+11	ba-	ba-	NOUN	_	Case=Abs|Definite=Ind	0	_	_	NER=O
+12	dakit	jakin	VERB	_	Aspect=Prog|Mood=Ind|Number[abs]=Sing|Number[erg]=Sing|Person[abs]=3|Person[erg]=1|VerbForm=Fin	0	_	_	NER=O
+13	zergatik	zergatik	ADV	_	PronType=Int	0	_	_	NER=O
+14	izan	izan	VERB	_	Aspect=Perf|VerbForm=Part	0	_	_	NER=O
+15	dan	izann	AUX	_	Mood=Ind|Number[abs]=Sing|Person[abs]=3|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+16	:	:	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p21.s7
+# text = ondo ezagutzen ez nautelako.
+1	ondo	ondo	ADV	_	_	0	_	_	NER=O
+2	ezagutzen	ezagutu	VERB	_	Aspect=Imp|VerbForm=Inf	0	_	_	NER=O
+3	ez	ez	PART	_	Polarity=Neg	0	_	_	NER=O
+4	nautelako	elakodun	AUX	_	Mood=Ind|Number[abs]=Sing|Number[erg]=Plur|Person[abs]=1|Person[erg]=3|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p22.s8
+# text = Irundarrak, eta irundarrak eztiranak ere bai, beti kopeta zimurtuta, parrerik egin gabe, ezpañak josita, eskuan zigorra artuta nabillela uste dute.
+1	Irundarrak	irundar	NOUN	_	Case=Erg|Definite=Def|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	_	_	0	_	_	NER=O
+3	eta	eta	CCONJ	_	_	0	_	_	NER=O
+4	irundarrak	irundar	NOUN	_	Animacy=Anim|Case=Erg|Definite=Def|Number=Sing	0	_	_	NER=O
+5	eztiranak	eztiran	ADJ	_	Case=Abs|Definite=Def|Number=Plur	0	_	_	NER=O
+6	ere	ere	CCONJ	_	_	0	_	_	NER=O
+7	bai	bai	PART	_	Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+8	,	,	PUNCT	_	_	0	_	_	NER=O
+9	beti	beti	ADV	_	_	0	_	_	NER=O
+10	kopeta	kopeta	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+11	zimurtuta	zimurtu	VERB	_	VerbForm=Part	0	_	_	NER=O|SpaceAfter=No
+12	,	,	PUNCT	_	_	0	_	_	NER=O
+13	parrerik	parre	NOUN	_	Animacy=Inan|Case=Par|Definite=Ind	0	_	_	NER=O
+14	egin	egin	VERB	_	VerbForm=Part	0	_	_	NER=O
+15	gabe	gabe	ADV	_	_	0	_	_	NER=O|SpaceAfter=No
+16	,	,	PUNCT	_	_	0	_	_	NER=O
+17	ezpañak	ezpañ	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Plur	0	_	_	NER=O
+18	josita	josi	VERB	_	VerbForm=Part	0	_	_	NER=O|SpaceAfter=No
+19	,	,	PUNCT	_	_	0	_	_	NER=O
+20	eskuan	esku	NOUN	_	Case=Ine|Definite=Def|Number=Sing	0	_	_	NER=O
+21	zigorra	zigor	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+22	artuta	artu	VERB	_	VerbForm=Part	0	_	_	NER=O
+23	nabillela	ibilli	VERB	_	Aspect=Prog|Mood=Ind|Number[abs]=Sing|Person[abs]=3|VerbForm=Fin	0	_	_	NER=O
+24	uste	uste	NOUN	_	Case=Abs|Definite=Ind	0	_	_	NER=O
+25	dute	ukan	VERB	_	Aspect=Prog|Mood=Ind|Number[abs]=Sing|Number[erg]=Plur|Person[abs]=3|Person[erg]=3|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+26	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p23.s9
+# text = Ez, ¡zer arrano!
+1	Ez	ez	PART	_	Polarity=Neg	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	_	_	0	_	_	NER=O
+3	¡zer	¡zer	DET	_	Case=Abs|Definite=Ind	0	_	_	NER=O
+4	arrano	arrano	AUX	_	_	0	_	_	NER=O|SpaceAfter=No
+5	!	!	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p24.s10
+# text = ez.
+1	ez	ez	PART	_	Polarity=Neg	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p25.s11
+# text = Ez ta ez.
+1	Ez	ez	PART	_	Polarity=Neg	0	_	_	NER=O
+2	ta	ta	INTJ	_	_	0	_	_	NER=O
+3	ez	ez	PART	_	Polarity=Neg	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p26.s12
+# text = Egia da, bai, izaten ditut nere ase- rraldiak, bearrezkoak dira-ta, baña geienean pozez beteta nabil, kopeta legunaz, parrez, zigor gabe.
+1	Egia	egia	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O
+2	da	izan	AUX	_	Aspect=Prog|Mood=Ind|Number[abs]=Sing|Person[abs]=3|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	_	_	0	_	_	NER=O
+4	bai	bai	PART	_	Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+5	,	,	PUNCT	_	_	0	_	_	NER=O
+6	izaten	izan	VERB	_	Aspect=Imp|VerbForm=Inf	0	_	_	NER=O
+7	ditut	edun	AUX	_	Mood=Ind|Number[abs]=Plur|Number[erg]=Sing|Person[abs]=3|Person[erg]=1|VerbForm=Fin	0	_	_	NER=O
+8	nere	ni	PRON	_	PronType=Prs	0	_	_	NER=O
+9	ase-	ase-	NOUN	_	_	0	_	_	NER=O
+10	rraldiak	rraldi	NOUN	_	Animacy=Inan|Case=Abs|Definite=Def|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+11	,	,	PUNCT	_	_	0	_	_	NER=O
+12	bearrezkoak	bearrezko	ADJ	_	Case=Abs|Definite=Def|Number=Plur	0	_	_	NER=O
+13	dira-ta	dira-ta	AUX	_	Aspect=Prog|Mood=Ind|Number[abs]=Plur|Person[abs]=3|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+14	,	,	PUNCT	_	_	0	_	_	NER=O
+15	baña	baña	NOUN	_	_	0	_	_	NER=O
+16	geienean	geien	NOUN	_	Case=Ine|Definite=Def|Number=Sing	0	_	_	NER=O
+17	pozez	poz	NOUN	_	Case=Ins|Definite=Ind	0	_	_	NER=O
+18	beteta	bete	VERB	_	VerbForm=Part	0	_	_	NER=O
+19	nabil	nabil	ADJ	_	Case=Abs|Definite=Ind	0	_	_	NER=O|SpaceAfter=No
+20	,	,	PUNCT	_	_	0	_	_	NER=O
+21	kopeta	kopeta	NOUN	_	_	0	_	_	NER=O
+22	legunaz	legun	NOUN	_	Case=Ins|Definite=Def|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+23	,	,	PUNCT	_	_	0	_	_	NER=O
+24	parrez	parre	NOUN	_	Animacy=Inan|Case=Ins|Definite=Ind	0	_	_	NER=O|SpaceAfter=No
+25	,	,	PUNCT	_	_	0	_	_	NER=O
+26	zigor	zigor	NOUN	_	_	0	_	_	NER=O
+27	gabe	gabe	ADP	_	Animacy=Inan|Definite=Ind	0	_	_	NER=O|SpaceAfter=No
+28	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# sent_id = PressMint-ES-PV_1911-06-15-EUSKAL-ESNALEA.ana.p27.s13
+# text = Neri ere, irundarra, zuri be- zela barru-barrutik irtetzen zait poza... batez ere jai-egunetan.
+1	Neri	neri	PRON	_	_	0	_	_	NER=O
+2	ere	ere	CCONJ	_	_	0	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	_	_	0	_	_	NER=O
+4	irundarra	irundar	ADJ	_	Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+5	,	,	PUNCT	_	_	0	_	_	NER=O
+6	zuri	zuri	ADJ	_	_	0	_	_	NER=O
+7	be-	be-	ADJ	_	Case=Abs|Definite=Ind	0	_	_	NER=O
+8	zela	izan	AUX	_	Aspect=Prog|Mood=Ind|Number[abs]=Sing|Person[abs]=3|VerbForm=Fin	0	_	_	NER=O
+9	barru-barrutik	barru-barru	NOUN	_	Case=Abl|Definite=Def|Number=Sing	0	_	_	NER=O
+10	irtetzen	irten	VERB	_	Aspect=Imp|VerbForm=Inf	0	_	_	NER=O
+11	zait	izan	AUX	_	Mood=Ind|Number[abs]=Sing|Number[dat]=Sing|Person[abs]=3|Person[dat]=1|VerbForm=Fin	0	_	_	NER=O
+12	poza	poz	NOUN	_	Case=Abs|Definite=Def|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+13	...	...	PUNCT	_	_	0	_	_	NER=O
+14	batez	bat	NUM	_	NumType=Card	0	_	_	NER=O
+15	ere	ere	CCONJ	_	_	0	_	_	NER=O
+16	jai-egunetan	jai-egun	NOUN	_	Animacy=Inan|Case=Ine|Definite=Def|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+17	.	.	PUNCT	_	_	0	_	_	NER=O|SpaceAfter=No
+
