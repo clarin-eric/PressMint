@@ -154,6 +154,22 @@ FINALIZE = perl ../Scripts/pressmint2distro.pl -version ${VERSION} -teihandle ${
 ### For real
 nohup: $(LOGS)
 	nice nohup time make all > $(LOGS)/PressMint.log &
+
+## slurm-all: run "make all" as one slurm job (sbatch --wrap), log in Logs/slurm/all_<JOBID>.out/.err
+## e.g. make slurm-all CORPORA=CZ JAVA-MEMORY=1500
+## slurm memory = JAVA-MEMORY (GB), cpus = THREADS
+SLURM-PARTITION = cpu-troja,cpu-ms
+slurm-all: $(LOGS)
+	mkdir -p $(LOGS)/slurm
+	sbatch --job-name=PressMint.all \
+	       --export=ALL \
+	       --partition=$(SLURM-PARTITION) \
+	       --gres=none \
+	       --cpus-per-task=$(THREADS) \
+	       --mem=$(JAVA-MEMORY)G \
+	       --output=$(LOGS)/slurm/all_%j.out \
+	       --error=$(LOGS)/slurm/all_%j.err \
+	       --wrap="make all CORPORA='$(CORPORA)' JAVA-MEMORY=$(JAVA-MEMORY) THREADS=$(THREADS)"
 all:	final join-verts pack
 xall:	final join-verts pack
 
