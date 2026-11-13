@@ -1,0 +1,7854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-ES-GA_1936-05-01--1936-05-31_ant-414" xml:lang="gl">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="gl">Corpus de prensa histórica galega PressMint-ES-GA, A Nosa Terra, 1936, 414 [PressMint SAMPLE]</title>
+        <title xml:lang="en">Galician historical newspaper corpus PressMint-ES-GA, A Nosa Terra, 1936-05 [PressMint SAMPLE]</title>
+        <respStmt>
+          <persName ref="https://orcid.org/0000-0003-4079-2287">María Álvarez de la Granja</persName>
+          <persName ref="https://orcid.org/0000-0001-7138-373X">Vítor Míguez-Rego</persName>
+          <resp xml:lang="gl">Coordinación</resp>
+          <resp xml:lang="en">Coordination</resp>
+        </respStmt>
+        <respStmt>
+          <persName ref="https://orcid.org/0000-0001-7972-4412">Ernesto Xosé González Seoane</persName>
+          <persName ref="https://orcid.org/0000-0003-3525-1304">Carmen Magariños</persName>
+          <persName ref="https://orcid.org/0000-0002-0163-8140">Diego Rivadulla Costa</persName>
+          <persName ref="https://orcid.org/0000-0001-8388-2704">Xulio Sousa</persName>
+          <persName ref="https://orcid.org/0000-0002-3910-7820">Adina Vladu</persName>
+          <resp xml:lang="gl">Equipo de traballo</resp>
+          <resp xml:lang="en">Project team</resp>
+        </respStmt>
+        <respStmt>
+          <orgName>NLPgo Technologies, S.L.</orgName>
+          <resp xml:lang="gl">Procesamento técnico TEI/XML</resp>
+          <resp xml:lang="en">TEI/XML technical processing</resp>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition>0.1</edition>
+      </editionStmt>
+      <extent>
+        <measure unit="paragraphs" quantity="188" xml:lang="en">188 paragraphs</measure>
+        <measure unit="words" quantity="6189" xml:lang="en">6,189 words</measure>
+      </extent>
+      <publicationStmt>
+        <publisher>
+          <orgName xml:lang="gl">Infraestrutura de investigación CLARIN</orgName>
+          <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+          <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+          <orgName xml:lang="gl">CLARIAH-GAL</orgName>
+          <orgName xml:lang="en">CLARIAH-GAL</orgName>
+          <ref target="https://www.clariah.gal/">www.clariah.gal</ref>
+        </publisher>
+        <availability status="free">
+          <licence>CC BY 4.0</licence>
+        </availability>
+        <date when="2026-08-03">2026-08-03</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title level="j">A Nosa Terra. Semanario do Partido Galeguista</title>
+          <date from="1936-05-01" to="1936-05-31">1936-05</date>
+          <biblScope unit="issue">414</biblScope>
+          <idno>ant_414</idno>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p xml:lang="gl">O corpus PressMint-ES-GA parte dos textos anotados morfosintacticamente do Tesouro Informatizado da Lingua Galega (TILG) 4.1, desenvolvido no Instituto da Lingua Galega (USC). O TILG aplica sobre os textos unha regularización ortográfica destinada a permitir a análise lingüística agregada, sen conservar a grafía orixinal do impreso. En consecuencia, os textos incluídos en PressMint-ES-GA non constitúen unha edición filolóxica diplomática do orixinal, senón que herdan as decisións editoriais do TILG.
+Sobre o texto herdado do TILG aplicouse un proceso complementario de normalización léxica orientado á futura anotación en Universal Dependencies. Esta normalización cobre variantes non recollidas pola regularización do TILG (por exemplo, "outubre → outubro", "suscriución → subscrición") e o tratamento de contraccións históricas como amálgamas (por exemplo, "pró → para o"). Os criterios de normalización nesta versión 0.1 son provisionais e poden ser revisados en versións posteriores. A normalización léxica foi realizada por NLPgo Technologies, S.L. de xeito automático, combinando recursos lingüísticos dispoñibles (lexicón de XIADA) cun procesamento automático baseado en LLMs (gpt-5.6-luna medium).
+A conversión estrutural do formato XML do TILG ao esquema TEI de PressMint foi realizada por NLPgo Technologies, S.L. O procesamento inclúe: (a) tokenización preservando información de amálgamas e elisións mediante o atributo @join, (b) segmentación en parágrafos aliñando o XML co texto plano do TILG para inserir elementos &lt;p&gt;, (c) codificación parcial de entidades nomeadas empregando os tipos PER (persoa), LOC (localización) e MISC (miscelánea), aproveitando o campo información_adicional do TILG orixinal, e (d) limpeza de codificación de caracteres (UTF-8, espazos anómalos, BOMs).
+A presente versión 0.1 do corpus non inclúe vínculos a facsímiles dixitalizados dos xornais orixinais.</p>
+        <p xml:lang="en">The PressMint-ES-GA corpus is derived from the morphosyntactically annotated texts of the Tesouro Informatizado da Lingua Galega (TILG) 4.1, developed at the Instituto da Lingua Galega (USC). The TILG applies to the texts an orthographic regularisation intended to enable aggregated linguistic analysis, without preserving the original printed spelling. Consequently, the texts included in PressMint-ES-GA do not constitute a diplomatic philological edition of the original, but inherit the editorial decisions of the TILG.
+A complementary lexical normalisation process was applied to the text inherited from the TILG, oriented towards future annotation in Universal Dependencies. This normalisation covers variants not addressed by the TILG regularisation (e.g. "outubre → outubro", "suscriución → subscrición") and the treatment of historical contractions as amalgams (e.g. "pró → para o"). The normalisation criteria in this version 0.1 are provisional and may be revised in later versions. The lexical normalisation was carried out by NLPgo Technologies, S.L. automatically, combining available linguistic resources (XIADA lexicon) with automatic processing based on LLMs (gpt-5.6-luna medium).
+The structural conversion from the TILG XML format to the PressMint TEI schema was carried out by NLPgo Technologies, S.L. Processing includes: (a) tokenisation preserving information on amalgams and elisions via the @join attribute, (b) paragraph segmentation aligning the XML with the TILG plain text to insert &lt;p&gt; elements, (c) partial encoding of named entities using the types PER (person), LOC (location), and MISC (miscellaneous), leveraging the información_adicional field of the original TILG, and (d) character encoding cleanup (UTF-8, anomalous whitespace, BOMs).
+The present version 0.1 of the corpus does not include links to digitised facsimiles of the original newspapers.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="gl">Galician</language>
+        <language ident="en">English</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-08-03">Released sample.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <pb n="1"/>
+      <p>
+        <w>Do</w>
+        <w join="right">Momento</w>
+        <pc>.</pc>
+        <w>Diante</w>
+        <w>do</w>
+        <w join="right">estatuto</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w>seguridade</w>
+        <w>do</w>
+        <w norm="próximo">próisimo</w>
+        <w norm="conqueremento">conquerimento</w>
+        <w>do</w>
+        <w>Estatuto</w>
+        <w norm="pon">pón</w>
+        <w>de</w>
+        <w join="right">actualidade</w>
+        <pc>,</pc>
+        <w>entre</w>
+        <w join="right">outros</w>
+        <pc>,</pc>
+        <w>o</w>
+        <w>tema</w>
+        <w>da</w>
+        <w>actitude</w>
+        <w>que</w>
+        <w>ao</w>
+        <name type="MISC">
+          <w>Partido</w>
+          <w>Galeguista</w>
+        </name>
+        <w>lle</w>
+        <w>cómpre</w>
+        <w>adoptar</w>
+        <w>despois</w>
+        <w>que</w>
+        <w>o</w>
+        <w>Estatuto</w>
+        <w norm="estea">esteña</w>
+        <w>en</w>
+        <w join="right">marcha</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Coidan</w>
+        <w>moitos</w>
+        <w>que</w>
+        <w>a</w>
+        <w>única</w>
+        <w norm="misión">minsión</w>
+        <w>do</w>
+        <w>noso</w>
+        <w>Partido</w>
+        <w>reducíase</w>
+        <w norm="exclusivamente">excrusivamente</w>
+        <w>a</w>
+        <w>traballar</w>
+        <w>polo</w>
+        <w norm="conqueremento">conquerimento</w>
+        <w>da</w>
+        <w join="right">autonomía</w>
+        <pc>.</pc>
+        <w>E</w>
+        <w>por</w>
+        <w>virtude</w>
+        <w>dese</w>
+        <w>criterio</w>
+        <w norm="simplista">simprista</w>
+        <w>coidan</w>
+        <w>que</w>
+        <w>abranguida</w>
+        <w>a</w>
+        <w>esa</w>
+        <w>conquista</w>
+        <w>a</w>
+        <w norm="misión">minsión</w>
+        <w>do</w>
+        <w>partido</w>
+        <w>xa</w>
+        <w join="right">rematou</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Temos</w>
+        <w>tratado</w>
+        <w>o</w>
+        <w>tema</w>
+        <w>xa</w>
+        <w>outras</w>
+        <w join="right">veces</w>
+        <pc>,</pc>
+        <w>principalmente</w>
+        <w>cando</w>
+        <w>da</w>
+        <w>outra</w>
+        <w>ocasión</w>
+        <w norm="parecía">parescía</w>
+        <w>ser</w>
+        <w>un</w>
+        <w>feito</w>
+        <w>o</w>
+        <w join="right">Estatuto</w>
+        <pc>.</pc>
+        <w>Hoxe</w>
+        <w>que</w>
+        <w>novamente</w>
+        <w>se</w>
+        <w>reproduce</w>
+        <w>tal</w>
+        <w>criterio</w>
+        <w>cómpre</w>
+        <w>que</w>
+        <w>tamén</w>
+        <w>repitamos</w>
+        <w>algo</w>
+        <w>que</w>
+        <w>xa</w>
+        <w>entón</w>
+        <w join="right">dixemos</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <name type="MISC">
+          <w>Partido</w>
+          <w>Galeguista</w>
+        </name>
+        <w>non</w>
+        <w>remata</w>
+        <w>o</w>
+        <w>día</w>
+        <w>que</w>
+        <w>comence</w>
+        <w>o</w>
+        <w join="right">Estatuto</w>
+        <pc>.</pc>
+        <w>Nin</w>
+        <w>moito</w>
+        <w join="right">menos</w>
+        <pc>.</pc>
+        <w>Precisamente</w>
+        <w>será</w>
+        <w>entón</w>
+        <w>cando</w>
+        <w>o</w>
+        <w>Partido</w>
+        <w>teña</w>
+        <w>que</w>
+        <w>desenrolar</w>
+        <w>aínda</w>
+        <w>en</w>
+        <w norm="maior">maor</w>
+        <w norm="grao">grado</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>actividade</w>
+        <w>e</w>
+        <w>o</w>
+        <w>seu</w>
+        <w>pensamento</w>
+        <w join="right">galeguista</w>
+        <pc>,</pc>
+        <w join="right">nacionalista</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Certo</w>
+        <w>é</w>
+        <w>que</w>
+        <w>a</w>
+        <w>actuación</w>
+        <w>que</w>
+        <w>entón</w>
+        <w>teña</w>
+        <w>que</w>
+        <w join="right">realizar</w>
+        <pc>,</pc>
+        <w>haberá</w>
+        <w>de</w>
+        <w>axustarse</w>
+        <w>á</w>
+        <w>nova</w>
+        <w norm="táctica">táitica</w>
+        <w>que</w>
+        <w norm="estea">esteña</w>
+        <w>acompasada</w>
+        <w>coa</w>
+        <w>nova</w>
+        <w>realidade</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>.</pc>
+        <w>Serán</w>
+        <w>os</w>
+        <w norm="órganos">órgaos</w>
+        <w>do</w>
+        <w join="right">Partido</w>
+        <pc>,</pc>
+        <w>a</w>
+        <w>súa</w>
+        <w norm="asemblea">asambreia</w>
+        <w norm="soberana">soberán</w>
+        <w>a</w>
+        <w>que</w>
+        <w norm="determinen">determiñen</w>
+        <w>o</w>
+        <w>novo</w>
+        <w norm="rumbo" join="right">rumo</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>partido</w>
+        <w norm="ten">tén</w>
+        <w>un</w>
+        <w>programa</w>
+        <w>concreto</w>
+        <w>que</w>
+        <w norm="soamente">somentes</w>
+        <w>poderá</w>
+        <w>ser</w>
+        <w norm="aplicado">apricado</w>
+        <w>coa</w>
+        <w join="right">autonomía</w>
+        <pc>.</pc>
+        <w>Hai</w>
+        <w>que</w>
+        <w>supoñer</w>
+        <w>que</w>
+        <w>aínda</w>
+        <w>que</w>
+        <w>o</w>
+        <w>Partido</w>
+        <w>non</w>
+        <w>exerza</w>
+        <w>a</w>
+        <w norm="dirección">direición</w>
+        <w>política</w>
+        <w>da</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>autónoma</w>
+        <w>abondará</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>intervención</w>
+        <w>na</w>
+        <w norm="estruturación">estructuración</w>
+        <w>autonómica</w>
+        <w>para</w>
+        <w>que</w>
+        <w>algúns</w>
+        <w>puntos</w>
+        <w>do</w>
+        <w>seu</w>
+        <w>programa</w>
+        <w>poidan</w>
+        <w>seren</w>
+        <w>feitos</w>
+        <w join="right">realidade</w>
+        <pc>.</pc>
+        <w>Pero</w>
+        <w>non</w>
+        <w join="right">todos</w>
+        <pc>.</pc>
+        <w>Hai</w>
+        <w>aqueles</w>
+        <w>de</w>
+        <w>carácter</w>
+        <w>nacionalista</w>
+        <w>que</w>
+        <w norm="soamente">somentes</w>
+        <w>poderán</w>
+        <w>ser</w>
+        <w norm="conseguidos">conqueridos</w>
+        <w>de</w>
+        <w>maneira</w>
+        <w>progresiva</w>
+        <w>ou</w>
+        <w>contando</w>
+        <w>con</w>
+        <w>unha</w>
+        <w>decisiva</w>
+        <w norm="influencia">infruencia</w>
+        <w>na</w>
+        <w>gobernación</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>.</pc>
+        <w norm="Namentres">Namentras</w>
+        <w norm="isto">esto</w>
+        <w>non</w>
+        <w>se</w>
+        <w join="right">lograra</w>
+        <pc>,</pc>
+        <w>tería</w>
+        <w>o</w>
+        <w>Partido</w>
+        <w>unha</w>
+        <w norm="misión">minsión</w>
+        <w>que</w>
+        <w join="right">cumprir</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w>principal</w>
+        <w norm="misión">minsión</w>
+        <w>do</w>
+        <w>Partido</w>
+        <w>terá</w>
+        <w>de</w>
+        <w>ser</w>
+        <w>aquela</w>
+        <w>que</w>
+        <w>se</w>
+        <w>endereite</w>
+        <w>cara</w>
+        <w>á</w>
+        <w>fiscalización</w>
+        <w>da</w>
+        <w>política</w>
+        <w join="right">galega</w>
+        <pc>.</pc>
+        <w>Preocupandose</w>
+        <w>fondamente</w>
+        <w>de</w>
+        <w>que</w>
+        <w>o</w>
+        <w>Estatuto</w>
+        <w>nin</w>
+        <w>se</w>
+        <w>malogre</w>
+        <w>nin</w>
+        <w>se</w>
+        <w join="right">desvirtúe</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Aínda</w>
+        <w>sendo</w>
+        <w>o</w>
+        <w>Estatuto</w>
+        <w>unha</w>
+        <w>conquista</w>
+        <w>de</w>
+        <w>todos</w>
+        <w>non</w>
+        <w>hai</w>
+        <w>dúbida</w>
+        <w>que</w>
+        <w>por</w>
+        <w>sermos</w>
+        <w>nós</w>
+        <w>os</w>
+        <w>que</w>
+        <w norm="erguemos">erguimos</w>
+        <w>esa</w>
+        <w join="right">bandeira</w>
+        <pc>,</pc>
+        <w>a</w>
+        <w>autonomía</w>
+        <w norm="aparecerá">aparescerá</w>
+        <w norm="vencellada">avencellada</w>
+        <w>ao</w>
+        <w>Partido</w>
+        <w>como</w>
+        <w>cousa</w>
+        <w join="right">nosa</w>
+        <pc>.</pc>
+        <w>O</w>
+        <w>criterio</w>
+        <w>vulgar</w>
+        <w join="right">fará</w>
+        <pc>,</pc>
+        <w>xa</w>
+        <w>o</w>
+        <w>está</w>
+        <w join="right">facendo</w>
+        <pc>,</pc>
+        <w>do</w>
+        <w>Estatuto</w>
+        <w>e</w>
+        <w>do</w>
+        <w>Partido</w>
+        <w>unha</w>
+        <w>mesma</w>
+        <w join="right">cousa</w>
+        <pc>.</pc>
+        <w>Os</w>
+        <w norm="éxitos">éisitos</w>
+        <w>que</w>
+        <w>a</w>
+        <w>autonomía</w>
+        <w norm="traia">traiga</w>
+        <w>para</w>
+        <w>a</w>
+        <w>terra</w>
+        <w>recolleráos</w>
+        <w>en</w>
+        <w>gran</w>
+        <w>parte</w>
+        <w>o</w>
+        <w>noso</w>
+        <w join="right">Partido</w>
+        <pc>.</pc>
+        <w>Os</w>
+        <w join="right">fracasos</w>
+        <pc>,</pc>
+        <w norm="se">si</w>
+        <w>os</w>
+        <w join="right">houbera</w>
+        <pc>,</pc>
+        <w>ou</w>
+        <w>as</w>
+        <w join="right">dúbidas</w>
+        <pc>,</pc>
+        <w>repercutirán</w>
+        <w>igualmente</w>
+        <w>no</w>
+        <w join="right">Partido</w>
+        <pc>.</pc>
+        <w norm="Clarexar">Crarexar</w>
+        <w norm="isto">esto</w>
+        <w>será</w>
+        <w>mester</w>
+        <w norm="facelo">facé-lo</w>
+        <w join="right">oportunamente</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Temos</w>
+        <w>que</w>
+        <w join="right">repetir</w>
+        <pc>,</pc>
+        <w norm="incluso">incruso</w>
+        <w>na</w>
+        <w>propaganda</w>
+        <w>que</w>
+        <w>nós</w>
+        <w>fagamos</w>
+        <w>do</w>
+        <w join="right">Estatuto</w>
+        <pc>,</pc>
+        <w>o</w>
+        <w>que</w>
+        <w>dixemos</w>
+        <w join="right">sempre</w>
+        <pc>.</pc>
+        <w>Que</w>
+        <w>este</w>
+        <w>Estatuto</w>
+        <w>non</w>
+        <w>enche</w>
+        <w>por</w>
+        <w>enteiro</w>
+        <w>as</w>
+        <w>aspiracións</w>
+        <w>do</w>
+        <w join="right">Galeguismo</w>
+        <pc>.</pc>
+        <w>Defendémo-lo</w>
+        <w>con</w>
+        <w>máis</w>
+        <w>entusiasmo</w>
+        <w>que</w>
+        <w>ninguén</w>
+        <w>polas</w>
+        <w>razóns</w>
+        <w>que</w>
+        <w>non</w>
+        <w>é</w>
+        <w>mester</w>
+        <w>repetir</w>
+        <w join="right">aquí</w>
+        <pc>.</pc>
+        <w>Pero</w>
+        <w>o</w>
+        <w>Galeguismo</w>
+        <w>vai</w>
+        <w>máis</w>
+        <w>aló</w>
+        <w>no</w>
+        <w>pensamento</w>
+        <w>autonomista</w>
+        <w>e</w>
+        <w>no</w>
+        <w>que</w>
+        <w>nós</w>
+        <w>coidamos</w>
+        <w>debe</w>
+        <w>ser</w>
+        <w>unha</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>dona</w>
+        <w>enteiramente</w>
+        <w>dos</w>
+        <w>seus</w>
+        <w norm="destinos" join="right">destiños</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Correspondenos</w>
+        <w>facer</w>
+        <w>a</w>
+        <w>nós</w>
+        <w>neste</w>
+        <w>caso</w>
+        <w>concreto</w>
+        <w>o</w>
+        <w>que</w>
+        <w>os</w>
+        <w>partidos</w>
+        <w>obreiros</w>
+        <w>fan</w>
+        <w>con</w>
+        <w norm="respecto">respeito</w>
+        <w>á</w>
+        <w>súa</w>
+        <w>intelixencia</w>
+        <w>cos</w>
+        <w>partidos</w>
+        <w norm="republicáns" join="right">repubricáns</w>
+        <pc>.</pc>
+        <w>En</w>
+        <w>todo</w>
+        <w>intre</w>
+        <w>repiten</w>
+        <w>que</w>
+        <w>eles</w>
+        <w>non</w>
+        <w>hipotecan</w>
+        <w>o</w>
+        <w>seu</w>
+        <w>porvir</w>
+        <w>nin</w>
+        <w>deixan</w>
+        <w>de</w>
+        <w>traballar</w>
+        <w>polas</w>
+        <w>súas</w>
+        <w>específicas</w>
+        <w join="right">conquistas</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Nós</w>
+        <w>deixámo-lo</w>
+        <w>sempre</w>
+        <w>que</w>
+        <w>houbo</w>
+        <w>ocasión</w>
+        <w>e</w>
+        <w>teremos</w>
+        <w>que</w>
+        <w>o</w>
+        <w>repetir</w>
+        <w join="right">novamente</w>
+        <pc>.</pc>
+        <w>Tampouco</w>
+        <w>o</w>
+        <w>galeguismo</w>
+        <w>hipoteca</w>
+        <w>o</w>
+        <w>seu</w>
+        <w>futuro</w>
+        <w>por</w>
+        <w>un</w>
+        <w join="right">Estatuto</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>non</w>
+        <w>é</w>
+        <w>enteiramente</w>
+        <w>o</w>
+        <w>noso</w>
+        <w join="right">Estatuto</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>As</w>
+        <w>razóns</w>
+        <w>expostas</w>
+        <w>e</w>
+        <w>outras</w>
+        <w>máis</w>
+        <w>que</w>
+        <w>non</w>
+        <w>fai</w>
+        <w>falla</w>
+        <w norm="expor">expoñer</w>
+        <w>manifestan</w>
+        <w norm="claramente">craramente</w>
+        <w>que</w>
+        <w>o</w>
+        <w join="right">galeguismo</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>o</w>
+        <w>Partido</w>
+        <w>Galeguista</w>
+        <w>non</w>
+        <w>rematou</w>
+        <w>o</w>
+        <w>día</w>
+        <w>que</w>
+        <w>o</w>
+        <w>Estatuto</w>
+        <w>sexa</w>
+        <w join="right">conquerido</w>
+        <pc>.</pc>
+        <w>Que</w>
+        <w>o</w>
+        <w norm="saiban">seipan</w>
+        <w join="right">todos</w>
+        <pc>.</pc>
+        <w>Amigos</w>
+        <w>ou</w>
+        <w norm="inimigos" join="right">nemigos</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Precisamente</w>
+        <w>ese</w>
+        <w>día</w>
+        <w norm="nace">nasce</w>
+        <w>para</w>
+        <w>todos</w>
+        <w>nós</w>
+        <w>unha</w>
+        <w>nova</w>
+        <w>responsabilidade</w>
+        <w>á</w>
+        <w>que</w>
+        <w>faremos</w>
+        <w>frente</w>
+        <w>con</w>
+        <w>toda</w>
+        <w>a</w>
+        <w>xenerosidade</w>
+        <w>que</w>
+        <w>nos</w>
+        <w>caracteriza</w>
+        <w>e</w>
+        <w>con</w>
+        <w norm="arreglo">arregro</w>
+        <w>ás</w>
+        <w>normas</w>
+        <w>democráticas</w>
+        <w>que</w>
+        <w norm="rexen">rixen</w>
+        <w>a</w>
+        <w>actuación</w>
+        <w norm="pública">púbrica</w>
+        <w>do</w>
+        <w join="right">Partido</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w>Víctor</w>
+          <w join="right">Casas</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>Galeguismo</w>
+        <w>no</w>
+        <w norm="medio">meio</w>
+        <w join="right">rural</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Chamando</w>
+        <w>á</w>
+        <w>porta</w>
+        <w>temos</w>
+        <w>a</w>
+        <w>nosa</w>
+        <w join="right">Autonomía</w>
+        <pc>;</pc>
+        <w>témo-la</w>
+        <w>se</w>
+        <w>non</w>
+        <w>dá</w>
+        <w>volta</w>
+        <w>a</w>
+        <w join="right">roda</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>penso</w>
+        <w>nos</w>
+        <w join="right">sexa</w>
+        <pc>.</pc>
+        <w join="right">Temos</w>
+        <pc>,</pc>
+        <w join="right">pois</w>
+        <pc>,</pc>
+        <w>preto</w>
+        <w>a</w>
+        <w>data</w>
+        <w>en</w>
+        <w>que</w>
+        <w>o</w>
+        <w>pobo</w>
+        <w>galego</w>
+        <w norm="ten">tén</w>
+        <w>de</w>
+        <w>votar</w>
+        <w>o</w>
+        <w>seu</w>
+        <w join="right">estatuto</w>
+        <pc>.</pc>
+        <w norm="Pero">Pro</w>
+        <pc join="right">¿</pc>
+        <w>fica</w>
+        <w>tan</w>
+        <w>preto</w>
+        <w>do</w>
+        <w>aldeán</w>
+        <w>a</w>
+        <w norm="idea">ideia</w>
+        <w>e</w>
+        <w norm="significado">siñificado</w>
+        <w>que</w>
+        <w>aquel</w>
+        <w norm="ten">tén</w>
+        <w norm="para">pra</w>
+        <w norm="esta">ista</w>
+        <w norm="clase">cras</w>
+        <w>de</w>
+        <w join="right">pobo</w>
+        <pc>?</pc>
+        <w norm="Esa">Isa</w>
+        <w>importancia</w>
+        <w>que</w>
+        <w>para</w>
+        <w>o</w>
+        <w>pobo</w>
+        <w>dito</w>
+        <w norm="ten">tén</w>
+        <w>e</w>
+        <w>representa</w>
+        <w>a</w>
+        <w>nosa</w>
+        <w>Autonomía</w>
+        <w>non</w>
+        <w>a</w>
+        <w>olla</w>
+        <w>de</w>
+        <w>feito</w>
+        <w norm="este" join="right">iste</w>
+        <pc>,</pc>
+        <w>fica</w>
+        <w>máis</w>
+        <w>lonxe</w>
+        <w norm="del" join="right">dil</w>
+        <pc>.</pc>
+        <w>A</w>
+        <w>cousa</w>
+        <w norm="ten">tén</w>
+        <w>a</w>
+        <w>súa</w>
+        <w norm="explicación" join="right">espricación</w>
+        <pc>:</pc>
+        <w>O</w>
+        <w>galeguismo</w>
+        <w>naceu</w>
+        <w>na</w>
+        <w norm="cidade" join="right">cibdade</w>
+        <pc>,</pc>
+        <w>estendendose</w>
+        <w norm="desta">dista</w>
+        <w>polos</w>
+        <w>camiños</w>
+        <w>e</w>
+        <w>corredoiras</w>
+        <w>do</w>
+        <w norm="medio">meio</w>
+        <w join="right">rural</w>
+        <pc>;</pc>
+        <w norm="pero">pro</w>
+        <w>non</w>
+        <w>chegou</w>
+        <w>a</w>
+        <w>todos</w>
+        <w>os</w>
+        <w>rincóns</w>
+        <w>e</w>
+        <w norm="aqueles">aquiles</w>
+        <w>que</w>
+        <w join="right">chegou</w>
+        <pc>,</pc>
+        <w>foi</w>
+        <w>ren</w>
+        <w>a</w>
+        <w>forza</w>
+        <w>coa</w>
+        <w>que</w>
+        <w norm="partiu">parteu</w>
+        <w>da</w>
+        <w norm="cidade">cibdade</w>
+        <w>ou</w>
+        <w join="right">vila</w>
+        <pc>.</pc>
+        <w>Dende</w>
+        <w>logo</w>
+        <w>que</w>
+        <w>todo</w>
+        <w>o</w>
+        <w>que</w>
+        <w>camiña</w>
+        <w>perde</w>
+        <w join="right">forzas</w>
+        <pc>.</pc>
+        <w>Mais</w>
+        <w>a</w>
+        <w>cousa</w>
+        <w>vén</w>
+        <w>sendo</w>
+        <w norm="ó">ao</w>
+        <w>revés</w>
+        <w>de</w>
+        <w>como</w>
+        <w>na</w>
+        <w>realidade</w>
+        <w>debera</w>
+        <w join="right">ser</w>
+        <pc>.</pc>
+        <w>No</w>
+        <w norm="medio">meio</w>
+        <w>rural</w>
+        <w>é</w>
+        <w>onde</w>
+        <w>o</w>
+        <w>caciquismo</w>
+        <w>e</w>
+        <w>o</w>
+        <w>vello</w>
+        <w>político</w>
+        <w>teñen</w>
+        <w>maiores</w>
+        <w join="right">raíces</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>o</w>
+        <w>polo</w>
+        <w join="right">mesmo</w>
+        <pc>,</pc>
+        <w>onde</w>
+        <w>maior</w>
+        <w>forza</w>
+        <w>fai</w>
+        <w>falla</w>
+        <w>para</w>
+        <w>arrincá-las</w>
+        <w>de</w>
+        <w norm="vez" join="right">ves</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>onde</w>
+        <w>convén</w>
+        <w>unha</w>
+        <w>loita</w>
+        <w>forte</w>
+        <w>na</w>
+        <w>que</w>
+        <w>non</w>
+        <w>fallen</w>
+        <w>os</w>
+        <w>galeguistas</w>
+        <w>e</w>
+        <w join="right">simpatizantes</w>
+        <pc>,</pc>
+        <w>a</w>
+        <w>lingua</w>
+        <w>e</w>
+        <w>os</w>
+        <w norm="xornais" join="right">xornales</w>
+        <pc>,</pc>
+        <w>todos</w>
+        <w norm="xuntos e">xuntos-e</w>
+        <w norm="quizais">cecais</w>
+        <w>sexan</w>
+        <w join="right">poucos</w>
+        <pc>─</pc>
+        <w>para</w>
+        <w>ollar</w>
+        <w norm="ó">ao</w>
+        <w>noso</w>
+        <w>pobo</w>
+        <w>aldeán</w>
+        <w>libre</w>
+        <w>dos</w>
+        <w>seus</w>
+        <w norm="prexuízos">prexuícios</w>
+        <w>e</w>
+        <w>ruíns</w>
+        <w join="right">caciques</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>pobo</w>
+        <w>aldeán</w>
+        <w>escoita</w>
+        <w>ledo</w>
+        <w>e</w>
+        <w>con</w>
+        <w norm="interese">intrés</w>
+        <w>a</w>
+        <w>verba</w>
+        <w>dos</w>
+        <w join="right">galeguistas</w>
+        <pc>,</pc>
+        <w>pola</w>
+        <w>razón</w>
+        <w>de</w>
+        <w>que</w>
+        <w>son</w>
+        <w>os</w>
+        <w>que</w>
+        <w norm="Mellor">millor</w>
+        <w>ollan</w>
+        <w>as</w>
+        <w>coitas</w>
+        <w norm="daquel" join="right">daquil</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>no</w>
+        <w>fondo</w>
+        <w>do</w>
+        <w>seu</w>
+        <w>peito</w>
+        <w>xermina</w>
+        <w>a</w>
+        <w norm="idea">ideia</w>
+        <w>de</w>
+        <w>que</w>
+        <w>o</w>
+        <w>Galeguismo</w>
+        <w>predica</w>
+        <w>e</w>
+        <w>terá</w>
+        <w>de</w>
+        <w>ser</w>
+        <w>a</w>
+        <w>súa</w>
+        <w join="right">redención</w>
+        <pc>.</pc>
+        <w norm="Pero">Pro</w>
+        <w>isto</w>
+        <w>non</w>
+        <w>é</w>
+        <w join="right">dabondo</w>
+        <pc>;</pc>
+        <w>e</w>
+        <w>unha</w>
+        <w norm="idea">ideia</w>
+        <w>boa</w>
+        <w>de</w>
+        <w>trocar</w>
+        <w>nas</w>
+        <w>mans</w>
+        <w>do</w>
+        <w join="right">cacique</w>
+        <pc>,</pc>
+        <w norm="coñecendo">conocendo</w>
+        <w>como</w>
+        <w norm="este">iste</w>
+        <w norm="coñece">conoce</w>
+        <w>a</w>
+        <w norm="aquel" join="right">aquil</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>falandolle</w>
+        <w norm="desta">dista</w>
+        <w join="right">maneira</w>
+        <pc>:</pc>
+        <pc join="right">¿</pc>
+        <w>E</w>
+        <w>ti</w>
+        <w>vas</w>
+        <w>votá-lo</w>
+        <w join="right">Estatuto</w>
+        <pc>?</pc>
+        <w>Ti</w>
+        <w>fas</w>
+        <w>caso</w>
+        <w norm="Deses">dises</w>
+        <w join="right">galeguistas</w>
+        <pc>?</pc>
+        <pc join="right">¿</pc>
+        <w>Ti</w>
+        <w>sabes</w>
+        <w>que</w>
+        <w join="right">queren</w>
+        <pc>?</pc>
+        <w>Pois</w>
+        <w>digocho</w>
+        <w join="right">eu</w>
+        <pc>:</pc>
+        <w norm="enganarte" join="right">engañarte</w>
+        <pc>.</pc>
+        <w>Eu</w>
+        <w>vouche</w>
+        <w>a</w>
+        <w norm="dicir">decire</w>
+        <w>o</w>
+        <w>que</w>
+        <w join="right">queren</w>
+        <pc>:</pc>
+        <w>traé-la</w>
+        <w>Autonomía</w>
+        <w>para</w>
+        <w norm="así">asín</w>
+        <w>ter</w>
+        <w>máis</w>
+        <w>postos</w>
+        <w>onde</w>
+        <w>poñer</w>
+        <w>a</w>
+        <w>súa</w>
+        <w join="right">xente</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>desa</w>
+        <w>maneira</w>
+        <w>que</w>
+        <w>ti</w>
+        <w>teñas</w>
+        <w>que</w>
+        <w>tributar</w>
+        <w>o</w>
+        <w join="right">dobre</w>
+        <pc>:</pc>
+        <w norm="Esta">Ista</w>
+        <w>éche</w>
+        <w>a</w>
+        <w join="right">verdade</w>
+        <pc>;</pc>
+        <w>e</w>
+        <w>xa</w>
+        <w>sabes</w>
+        <w>que</w>
+        <w>non</w>
+        <w>adoito</w>
+        <w>o</w>
+        <w norm="engano" join="right">engaño</w>
+        <pc>.</pc>
+        <w>Ti</w>
+        <w>farás</w>
+        <w>logo</w>
+        <w>o</w>
+        <w>que</w>
+        <w join="right">queiras</w>
+        <pc>,</pc>
+        <w>máis</w>
+        <w norm="despois">dempois</w>
+        <w>xa</w>
+        <w>me</w>
+        <w>darás</w>
+        <w>a</w>
+        <w join="right">razón</w>
+        <pc>.</pc>
+        <w>O</w>
+        <w>labrego</w>
+        <pc join="right">─</pc>
+        <w norm="con">co</w>
+        <w norm="esta">ista</w>
+        <w join="right">verba</w>
+        <pc>─</pc>
+        <w>vai</w>
+        <w>disposto</w>
+        <w>a</w>
+        <w>non</w>
+        <w>votar</w>
+        <w>a</w>
+        <w>súa</w>
+        <w join="right">redención</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>o</w>
+        <w>cacique</w>
+        <pc join="right">─</pc>
+        <w>vampiro</w>
+        <w norm="daquel" join="right">daquil</w>
+        <pc>─</pc>
+        <w>rindose</w>
+        <w>como</w>
+        <w>se</w>
+        <w>fora</w>
+        <w>un</w>
+        <w>verdadeiro</w>
+        <w join="right">demo</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Isto</w>
+        <w>é</w>
+        <w>unha</w>
+        <w join="right">realidade</w>
+        <pc>.</pc>
+        <w>Logo</w>
+        <w>convén</w>
+        <w>unha</w>
+        <w>campaña</w>
+        <w>forte</w>
+        <w>denantes</w>
+        <w>do</w>
+        <w>plebiscito</w>
+        <w>para</w>
+        <w>que</w>
+        <w>o</w>
+        <w>pobo</w>
+        <w>non</w>
+        <w norm="arrepía">arropíe</w>
+        <w>das</w>
+        <w>verbas</w>
+        <w>galeguistas</w>
+        <w>cando</w>
+        <w>veña</w>
+        <w>a</w>
+        <w>parolar</w>
+        <w>o</w>
+        <w>seu</w>
+        <w>vello</w>
+        <w join="right">chupantín</w>
+        <pc>.</pc>
+        <w join="right">Ademais</w>
+        <pc>,</pc>
+        <w>se</w>
+        <w>o</w>
+        <w>pobo</w>
+        <w norm="coñece">conoce</w>
+        <w>ben</w>
+        <w>o</w>
+        <w>que</w>
+        <w norm="significa">sinifica</w>
+        <w>o</w>
+        <w>Galeguismo</w>
+        <w>para</w>
+        <w join="right">el</w>
+        <pc>,</pc>
+        <w>votará</w>
+        <w norm="consciente">conscente</w>
+        <w>encol</w>
+        <w norm="daquel" join="right">daquil</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w norm="mañá">mañán</w>
+        <w>axudará</w>
+        <w>na</w>
+        <w>laboura</w>
+        <w>aos</w>
+        <w>gobernantes</w>
+        <w>vindeiros</w>
+        <w>da</w>
+        <w>nosa</w>
+        <pc join="right">─</pc>
+        <w>tamén</w>
+        <w join="right">vindeira</w>
+        <pc>─</pc>
+        <w join="right">Autonomía</w>
+        <pc>.</pc>
+        <w norm="Namentres">Namentras</w>
+        <w>que</w>
+        <w>se</w>
+        <w>o</w>
+        <w>pobo</w>
+        <w>non</w>
+        <w>fica</w>
+        <w>en</w>
+        <w>condicións</w>
+        <w>de</w>
+        <w>recibí-la</w>
+        <w>súa</w>
+        <w join="right">liberación</w>
+        <pc>,</pc>
+        <w>os</w>
+        <w>que</w>
+        <w>chegasen</w>
+        <w>a</w>
+        <w>gobernar</w>
+        <w>ollarían</w>
+        <w>moitas</w>
+        <w join="right">dificultades</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w join="right">Adiante</w>
+        <pc>,</pc>
+        <w join="right">pois</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>á</w>
+        <w join="right">loita</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>a</w>
+        <w>cousa</w>
+        <w>non</w>
+        <w>fica</w>
+        <w>para</w>
+        <w join="right">lonxe</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>Estatuto</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Aragón</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Como</w>
+        <w>xa</w>
+        <w join="right">dixemos</w>
+        <pc>,</pc>
+        <w>o</w>
+        <w>día</w>
+        <w>2</w>
+        <w>dos</w>
+        <w>correntes</w>
+        <w>celebrouse</w>
+        <w>en</w>
+        <name type="LOC">
+          <w>Caspe</w>
+        </name>
+        <w>unha</w>
+        <w norm="asemblea">asambreia</w>
+        <w>con</w>
+        <w norm="obxecto">ouxeto</w>
+        <w>de</w>
+        <w>tratar</w>
+        <w>das</w>
+        <w>bases</w>
+        <w>para</w>
+        <w>un</w>
+        <w>Estatuto</w>
+        <w join="right">aragonés</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w norm="asemblea">asambreia</w>
+        <w>constituíu</w>
+        <w>un</w>
+        <w norm="éxito">éisito</w>
+        <w>que</w>
+        <w>posibilita</w>
+        <w>o</w>
+        <w norm="conqueremento">conquerimento</w>
+        <w>da</w>
+        <w>autonomía</w>
+        <w join="right">aragonesa</w>
+        <pc>,</pc>
+        <w>feito</w>
+        <w>do</w>
+        <w>que</w>
+        <w>nos</w>
+        <w>alegramos</w>
+        <w>fondamente</w>
+        <w>e</w>
+        <w>felicitamos</w>
+        <w>aos</w>
+        <w>irmáns</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Aragón</w>
+        </name>
+        <w>aos</w>
+        <w>que</w>
+        <w>desexamos</w>
+        <w>grandes</w>
+        <w norm="éxitos">éisitos</w>
+        <w>na</w>
+        <w>súa</w>
+        <w>patriótica</w>
+        <w join="right">empresa</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>As</w>
+        <w>bases</w>
+        <w>aprobadas</w>
+        <w join="right">son</w>
+        <pc>:</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w norm="personalidade">persoalidade</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Aragón</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w norm="personalidade">persoalidade</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Aragón</w>
+        </name>
+        <w>fica</w>
+        <w norm="definida">defiñida</w>
+        <w>polo</w>
+        <w>feito</w>
+        <w>histórico</w>
+        <w>e</w>
+        <w>na</w>
+        <w>actualidade</w>
+        <w>querer</w>
+        <w join="right">ser</w>
+        <pc>.</pc>
+        <w>Como</w>
+        <w>consecuencia</w>
+        <w>da</w>
+        <w>anterior</w>
+        <w join="right">afirmación</w>
+        <pc>,</pc>
+        <w norm="proclamamos">procramamos</w>
+        <w>a</w>
+        <w>liberdade</w>
+        <w>absoluta</w>
+        <w>da</w>
+        <w>rexión</w>
+        <w>aragonesa</w>
+        <w>para</w>
+        <w>o</w>
+        <w norm="pleno">preno</w>
+        <w>desenrolo</w>
+        <w>da</w>
+        <w>súa</w>
+        <w>vida</w>
+        <w norm="pública">púbrica</w>
+        <w>e</w>
+        <w>esta</w>
+        <w>se</w>
+        <w>constitúe</w>
+        <w>en</w>
+        <w>Rexión</w>
+        <w>Autónoma</w>
+        <w>dentro</w>
+        <w>do</w>
+        <w>Estado</w>
+        <w join="right">español</w>
+        <pc>.</pc>
+        <w>As</w>
+        <w>materias</w>
+        <w>da</w>
+        <w>súa</w>
+        <w>competencia</w>
+        <w>se</w>
+        <w norm="determinarán">determiñarán</w>
+        <w>con</w>
+        <w norm="arreglo">arregro</w>
+        <w>aos</w>
+        <w>artigos</w>
+        <w>14</w>
+        <w>ao</w>
+        <w>22</w>
+        <w>da</w>
+        <w>Constitución</w>
+        <w join="right">vixente</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Do</w>
+        <w join="right">territorio</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>territorio</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Aragón</w>
+        </name>
+        <w norm="constitúeno">constituieno</w>
+        <w>as</w>
+        <w norm="actuais">actuaes</w>
+        <w>provincias</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Zaragoza</w>
+        </name>
+        <pc>,</pc>
+        <name type="LOC">
+          <w>Huesca</w>
+        </name>
+        <w>e</w>
+        <name type="LOC">
+          <w join="right">Teruel</w>
+        </name>
+        <pc>.</pc>
+        <w>As</w>
+        <w>posibles</w>
+        <w>agresións</w>
+        <w>poderánse</w>
+        <w>realizar</w>
+        <w>conforme</w>
+        <w>a</w>
+        <w>razón</w>
+        <w>natural</w>
+        <w>por</w>
+        <w norm="vencellamento">avencellamento</w>
+        <w>de</w>
+        <w norm="intereses" join="right">intreses</w>
+        <pc>.</pc>
+        <w>As</w>
+        <w>riquezas</w>
+        <w>do</w>
+        <w>chan</w>
+        <w>e</w>
+        <w norm="sochán">subchán</w>
+        <w>e</w>
+        <w>as</w>
+        <w>forzas</w>
+        <w norm="naturais">naturaes</w>
+        <w>forman</w>
+        <w>o</w>
+        <w>patrimonio</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Aragón</w>
+        </name>
+        <pc>.</pc>
+        <w>O</w>
+        <w>Goberno</w>
+        <w>poderá</w>
+        <w norm="establecer">estabrecer</w>
+        <w>dentro</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Aragón</w>
+        </name>
+        <w>as</w>
+        <w>demarcacións</w>
+        <w norm="territoriais">territoriaes</w>
+        <w>que</w>
+        <w>estime</w>
+        <w norm="convenientes">comenentes</w>
+        <w>con</w>
+        <w norm="obxecto">ouxeto</w>
+        <w>de</w>
+        <w>que</w>
+        <w>sexan</w>
+        <w norm="administradas">adeministradas</w>
+        <w>coa</w>
+        <w>maior</w>
+        <w join="right">eficacia</w>
+        <pc>,</pc>
+        <w>a</w>
+        <w>vida</w>
+        <w>dos</w>
+        <w norm="intereses">intreses</w>
+        <w join="right">aragoneses</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Do</w>
+        <w norm="cidadán">cibdadán</w>
+        <w join="right">aragonés</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w norm="cidadán">cibdadán</w>
+        <w>aragonés</w>
+        <w>o</w>
+        <w>é</w>
+        <w>polo</w>
+        <w>só</w>
+        <w>feito</w>
+        <w>de</w>
+        <w norm="suxeitarse">suxetarse</w>
+        <w>ás</w>
+        <w>leis</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Aragón</w>
+        </name>
+        <w norm="e">i</w>
+        <w>estar</w>
+        <w>baixo</w>
+        <w>a</w>
+        <w>súa</w>
+        <w norm="xurisdición">xuridición</w>
+        <w join="right">directa</w>
+        <pc>.</pc>
+        <w>Todo</w>
+        <w norm="cidadán">cibdadán</w>
+        <w>pode</w>
+        <w>ser</w>
+        <w>elector</w>
+        <w norm="e">i</w>
+        <w norm="elixido">elexido</w>
+        <w>nos</w>
+        <w norm="cargos">cárregos</w>
+        <w norm="públicos">púbricos</w>
+        <w>e</w>
+        <w>maxistraturas</w>
+        <w>co</w>
+        <w norm="arreglo">arregro</w>
+        <w>ás</w>
+        <w>leis</w>
+        <w norm="constitucionais">constitucionaes</w>
+        <w>e</w>
+        <w>á</w>
+        <w>lexislación</w>
+        <w norm="complementaria">comprementaria</w>
+        <w join="right">aragonesa</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>As</w>
+        <w join="right">Cortes</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w join="right">a</w>
+        <pc>)</pc>
+        <w>As</w>
+        <w>Cortes</w>
+        <w>aragonesas</w>
+        <w>esencialmente</w>
+        <w join="right">democráticas</w>
+        <pc>,</pc>
+        <w>constituiránse</w>
+        <w>por</w>
+        <w>sufraxio</w>
+        <w>directo</w>
+        <w>e</w>
+        <w>segredo</w>
+        <w>do</w>
+        <w norm="cidadán">cibdadán</w>
+        <w join="right">aragonés</w>
+        <pc>.</pc>
+        <w join="right">b</w>
+        <pc>)</pc>
+        <w>O</w>
+        <w>Poder</w>
+        <w>lexislativo</w>
+        <w>reside</w>
+        <w>nas</w>
+        <w>cortes</w>
+        <w>e</w>
+        <w>o</w>
+        <w>executivo</w>
+        <w>no</w>
+        <w>consello</w>
+        <w norm="elixido">elexido</w>
+        <w>no</w>
+        <w>seo</w>
+        <w>das</w>
+        <w join="right">mesmas</w>
+        <pc>.</pc>
+        <w join="right">c</w>
+        <pc>)</pc>
+        <w>Este</w>
+        <w>consello</w>
+        <w>de</w>
+        <w join="right">Cortes</w>
+        <pc>,</pc>
+        <w>terá</w>
+        <w>un</w>
+        <w>presidente</w>
+        <w norm="elixido">elexido</w>
+        <w>polo</w>
+        <w join="right">Parlamento</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Do</w>
+        <w>Poder</w>
+        <w join="right">Xudicial</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Residirá</w>
+        <w>un</w>
+        <w>tribunal</w>
+        <w>de</w>
+        <w>Casación</w>
+        <w>que</w>
+        <w>entenderá</w>
+        <w>en</w>
+        <w>derradeira</w>
+        <w>instancia</w>
+        <w>das</w>
+        <w>materias</w>
+        <w>de</w>
+        <w>dereito</w>
+        <w>civil</w>
+        <w>aragonés</w>
+        <w>e</w>
+        <w>no</w>
+        <w>contencioso</w>
+        <w norm="administrativo">adeministrativo</w>
+        <w norm="proveniente">provinte</w>
+        <w>de</w>
+        <w norm="Tribunais">Tribunaes</w>
+        <w>e</w>
+        <w norm="Xulgados">Xuzgados</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Aragón</w>
+        </name>
+        <pc>.</pc>
+        <w>Tamén</w>
+        <w>poderá</w>
+        <w>entender</w>
+        <w>en</w>
+        <w>todos</w>
+        <w>aqueles</w>
+        <w>asuntos</w>
+        <w>que</w>
+        <w>a</w>
+        <w>lei</w>
+        <w>lle</w>
+        <w>confira</w>
+        <w join="right">especialmente</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Os</w>
+        <w join="right">Municipios</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Os</w>
+        <w>concellos</w>
+        <w join="right">aragoneses</w>
+        <pc>,</pc>
+        <w>alma</w>
+        <w>e</w>
+        <w join="right">berce</w>
+        <pc>,</pc>
+        <w>do</w>
+        <w>noso</w>
+        <w join="right">pobo</w>
+        <pc>,</pc>
+        <w>serán</w>
+        <w>libres</w>
+        <w>para</w>
+        <w>facer</w>
+        <w>e</w>
+        <w>desfacer</w>
+        <w>e</w>
+        <w norm="posuirán">poseerán</w>
+        <w>a</w>
+        <w norm="estrutura">estructura</w>
+        <w>dunha</w>
+        <w>autonomía</w>
+        <w norm="plena" join="right">prena</w>
+        <pc>,</pc>
+        <w norm="sen">sin</w>
+        <w>máis</w>
+        <w>limitacións</w>
+        <w>que</w>
+        <w>a</w>
+        <w>lei</w>
+        <w>orgánica</w>
+        <w>dimanada</w>
+        <w>das</w>
+        <w>Cortes</w>
+        <w join="right">aragonesas</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Funcións</w>
+        <w>e</w>
+        <w join="right">delegacións</w>
+        <pc>.</pc>
+        <w norm="Recoñécese">Reconocese</w>
+        <w>tacitamente</w>
+        <w>a</w>
+        <w norm="facultade">faculdade</w>
+        <w>do</w>
+        <w>poder</w>
+        <w>central</w>
+        <w>para</w>
+        <w>todas</w>
+        <w>aquelas</w>
+        <w>funcións</w>
+        <w>que</w>
+        <w>pola</w>
+        <w>Constitución</w>
+        <w>vixente</w>
+        <w>reservase</w>
+        <w>ao</w>
+        <w join="right">mesmo</w>
+        <pc>.</pc>
+        <w>Contribuirá</w>
+        <w>aos</w>
+        <w>gastos</w>
+        <w>do</w>
+        <w>Estado</w>
+        <w>proporcionalmente</w>
+        <w>á</w>
+        <w>súa</w>
+        <w>riqueza</w>
+        <w>e</w>
+        <w join="right">poboación</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w join="right">Cultura</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>ensino</w>
+        <w>primario</w>
+        <w>será</w>
+        <w join="right">obrigatorio</w>
+        <pc>,</pc>
+        <w>gratuíto</w>
+        <w>e</w>
+        <w join="right">laico</w>
+        <pc>.</pc>
+        <w>O</w>
+        <w>ingreso</w>
+        <w>nos</w>
+        <w>centros</w>
+        <w>superiores</w>
+        <w>de</w>
+        <w>cultura</w>
+        <w>faráse</w>
+        <w>mediante</w>
+        <w norm="selección">seleición</w>
+        <w>limitada</w>
+        <w>e</w>
+        <w>o</w>
+        <w>seu</w>
+        <w>ensino</w>
+        <w>será</w>
+        <w>tamén</w>
+        <w join="right">gratuíto</w>
+        <pc>.</pc>
+        <w>A</w>
+        <w>Universidade</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Aragón</w>
+        </name>
+        <w>debe</w>
+        <w>ser</w>
+        <w>elemento</w>
+        <w>director</w>
+        <w>da</w>
+        <w>cultura</w>
+        <w join="right">aragonesa</w>
+        <pc>.</pc>
+        <w>Asumirá</w>
+        <w>funcións</w>
+        <w>de</w>
+        <w>extensión</w>
+        <w>universitaria</w>
+        <w norm="segundo">según</w>
+        <w>o</w>
+        <w>formato</w>
+        <w>da</w>
+        <w>derradeira</w>
+        <w join="right">modernidade</w>
+        <pc>,</pc>
+        <w>con</w>
+        <w>carácter</w>
+        <w>de</w>
+        <w norm="máxima">máisima</w>
+        <w>autonomía</w>
+        <w>económica</w>
+        <w>e</w>
+        <w norm="intelectual" join="right">inteleitual</w>
+        <pc>.</pc>
+        <w>Crearáse</w>
+        <w>un</w>
+        <w>centro</w>
+        <w>de</w>
+        <w>estudos</w>
+        <w join="right">aragoneses</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Economía</w>
+        <w>e</w>
+        <w join="right">facenda</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w>economía</w>
+        <w join="right">aragonesa</w>
+        <pc>,</pc>
+        <w>aspirará</w>
+        <w>a</w>
+        <w>encher</w>
+        <w>en</w>
+        <w norm="tódolos">tódo-los</w>
+        <w norm="ordes">ordens</w>
+        <w norm="posibles">posíbeles</w>
+        <w>da</w>
+        <w>súa</w>
+        <w>vida</w>
+        <w>as</w>
+        <w>propias</w>
+        <w join="right">necesidades</w>
+        <pc>,</pc>
+        <w>regulará</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>produción</w>
+        <w>e</w>
+        <w join="right">consumo</w>
+        <pc>,</pc>
+        <w>estimulará</w>
+        <w>o</w>
+        <w>ensaio</w>
+        <w>para</w>
+        <w>asimilar</w>
+        <w>novos</w>
+        <w>xéneros</w>
+        <w>que</w>
+        <w>lle</w>
+        <w>son</w>
+        <w>mester</w>
+        <w>e</w>
+        <w>inspiraráse</w>
+        <w>nunha</w>
+        <w>evolución</w>
+        <w>cara</w>
+        <w>a</w>
+        <w>un</w>
+        <w>senso</w>
+        <w>social</w>
+        <w>que</w>
+        <w norm="garanta">garantice</w>
+        <w>a</w>
+        <w>vida</w>
+        <w norm="digna">diña</w>
+        <w>de</w>
+        <w norm="tódolos">tódo-los</w>
+        <w norm="cidadáns">cibdadáns</w>
+        <w join="right">aragoneses</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Creránse</w>
+        <w>para</w>
+        <w>elo</w>
+        <w>os</w>
+        <w norm="organismos">orgaísmos</w>
+        <w>técnicos</w>
+        <w>que</w>
+        <w>plasmen</w>
+        <w>na</w>
+        <w>realidade</w>
+        <w>este</w>
+        <w>dereito</w>
+        <w>e</w>
+        <w norm="orientación" join="right">ourentación</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>En</w>
+        <name type="LOC">
+          <w join="right">Francia</w>
+        </name>
+        <pc>.</pc>
+        <w>Dúas</w>
+        <w norm="notables">notábeles</w>
+        <w norm="conferencias">confrencias</w>
+        <w>de</w>
+        <name type="PER">
+          <w>Nieto</w>
+          <w join="right">Pena</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>21</w>
+        <w>do</w>
+        <w>pasado</w>
+        <w>pronunciou</w>
+        <w>na</w>
+        <name type="MISC">
+          <w norm="Sorbona">Sorbonne</w>
+        </name>
+        <w>encol</w>
+        <w>do</w>
+        <w>tema</w>
+        <pc join="right">«</pc>
+        <w>A</w>
+        <w>lírica</w>
+        <w>galega</w>
+        <w>medieval</w>
+        <w>e</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>relación</w>
+        <w>cos</w>
+        <w>ciclos</w>
+        <w>bretón</w>
+        <w>e</w>
+        <w join="right">provenzal</w>
+        <pc join="right">»</pc>
+        <pc>,</pc>
+        <w>unha</w>
+        <w norm="conferencia">confrencia</w>
+        <w>do</w>
+        <w>noso</w>
+        <w>querido</w>
+        <w>amigo</w>
+        <w>o</w>
+        <w>gran</w>
+        <w>poeta</w>
+        <name type="PER">
+          <w>Xesús</w>
+          <w>Nieto</w>
+          <w join="right">Pena</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>día</w>
+        <w>30</w>
+        <w>en</w>
+        <name type="LOC">
+          <w>Rouen</w>
+        </name>
+        <pc join="right">(</pc>
+        <name type="LOC">
+          <w join="right">Normandía</w>
+        </name>
+        <pc>)</pc>
+        <w>na</w>
+        <w>escola</w>
+        <w>superior</w>
+        <w>de</w>
+        <w join="right">Comercio</w>
+        <pc>,</pc>
+        <w>con</w>
+        <w>asistencia</w>
+        <w>das</w>
+        <w>autoridades</w>
+        <w join="right">académicas</w>
+        <pc>,</pc>
+        <w>encol</w>
+        <w>de</w>
+        <pc join="right">«</pc>
+        <w>A</w>
+        <w>alma</w>
+        <w>melancólica</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>;</pc>
+        <w norm="orixes">orixens</w>
+        <w norm="célticos" join="right">céltigos</w>
+        <pc>,</pc>
+        <w>medievo</w>
+        <w>e</w>
+        <w join="right">actualidade</w>
+        <pc join="right">»</pc>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Unha</w>
+        <w>e</w>
+        <w>outra</w>
+        <w norm="conferencia">confrencia</w>
+        <w>foron</w>
+        <w>fondamente</w>
+        <w>gabadas</w>
+        <w>tendo</w>
+        <w>acreditado</w>
+        <name type="PER">
+          <w>Nieto</w>
+          <w>Pena</w>
+        </name>
+        <w>os</w>
+        <w>seus</w>
+        <w>profundos</w>
+        <w norm="coñecementos">conoscementos</w>
+        <w>nos</w>
+        <w>temas</w>
+        <w>e</w>
+        <w>despertando</w>
+        <w>nos</w>
+        <w>auditorios</w>
+        <w>un</w>
+        <w>gran</w>
+        <w norm="interese">intrés</w>
+        <w>polas</w>
+        <w>cousas</w>
+        <w join="right">galegas</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Con</w>
+        <w>verdadeira</w>
+        <w>ledicia</w>
+        <w>por</w>
+        <w>esta</w>
+        <w norm="labor">laboura</w>
+        <w>de</w>
+        <name type="PER">
+          <w>Nieto</w>
+          <w>Pena</w>
+        </name>
+        <w>enviamoslle</w>
+        <w>tamén</w>
+        <w>a</w>
+        <w>nosa</w>
+        <w norm="enhoraboa">embora</w>
+        <w join="right">cordialísima</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Delegación</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Tui</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>irmán</w>
+        <name type="PER">
+          <w>Darío</w>
+          <w>Álvarez</w>
+          <w join="right">Blázquez</w>
+        </name>
+        <pc>,</pc>
+        <w>anda</w>
+        <w>a</w>
+        <w>realizar</w>
+        <w>entusiastas</w>
+        <w>traballos</w>
+        <w>para</w>
+        <w norm="organizar">orgaizar</w>
+        <w>un</w>
+        <w>Grupo</w>
+        <w>Galeguista</w>
+        <w>en</w>
+        <name type="LOC">
+          <w join="right">Tui</w>
+        </name>
+        <pc>.</pc>
+        <w>Estes</w>
+        <w>traballos</w>
+        <w>están</w>
+        <w>sendo</w>
+        <w norm="coroados">coronados</w>
+        <w>polo</w>
+        <w norm="éxito">éisito</w>
+        <w>pois</w>
+        <w>xa</w>
+        <w>na</w>
+        <w norm="Oficina">Oficiña</w>
+        <w>teñense</w>
+        <w>recibido</w>
+        <w>as</w>
+        <w>primeiras</w>
+        <w>fichas</w>
+        <w>de</w>
+        <w>novos</w>
+        <w>irmáns</w>
+        <w>que</w>
+        <w>de</w>
+        <w>momento</w>
+        <w>fican</w>
+        <w>constituídos</w>
+        <w>como</w>
+        <w join="right">delegación</w>
+        <pc>,</pc>
+        <w>na</w>
+        <w>seguranza</w>
+        <w>de</w>
+        <w>que</w>
+        <w>non</w>
+        <w>pasará</w>
+        <w>moito</w>
+        <w>tempo</w>
+        <w>en</w>
+        <w>que</w>
+        <w>pase</w>
+        <w>a</w>
+        <w>ser</w>
+        <w>un</w>
+        <w>Grupo</w>
+        <w>xa</w>
+        <w>legalmente</w>
+        <w join="right">constituído</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Saudamos</w>
+        <w>aos</w>
+        <w>irmáns</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Tui</w>
+        </name>
+        <w>cobizando</w>
+        <w>non</w>
+        <w>tarden</w>
+        <w>en</w>
+        <w>ser</w>
+        <w>un</w>
+        <w>dos</w>
+        <w>máis</w>
+        <w>numerosos</w>
+        <w>grupos</w>
+        <w>do</w>
+        <w join="right">Partido</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Pensión</w>
+        <name type="LOC">
+          <w join="right">Compostela</w>
+        </name>
+        <pc>,</pc>
+        <name type="LOC">
+          <w>Avenida</w>
+          <w>de</w>
+          <w>Eduardo</w>
+          <w join="right">Dato</w>
+        </name>
+        <pc>,</pc>
+        <w join="right">25</w>
+        <pc>.</pc>
+        <name type="LOC">
+          <w join="right">Madrid</w>
+        </name>
+        <pc>.</pc>
+        <pc join="right">¡</pc>
+        <w>Eis</w>
+        <w>a</w>
+        <w>pensión</w>
+        <w>dos</w>
+        <w join="right">galeguistas</w>
+        <pc>!</pc>
+      </p>
+      <pb n="2"/>
+      <p>
+        <w norm="Acción">Aición</w>
+        <w>e</w>
+        <w join="right">loita</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Ás</w>
+        <w>veces</w>
+        <w>topase</w>
+        <w>un</w>
+        <w>nunha</w>
+        <w>situación</w>
+        <w>tan</w>
+        <w norm="diferente">difrente</w>
+        <w>á</w>
+        <w join="right">normal</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w norm="parece">paresce</w>
+        <w>como</w>
+        <w norm="se">si</w>
+        <w>fora</w>
+        <w>o</w>
+        <w join="right">mesmo</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Acaso</w>
+        <w>o</w>
+        <w>corpo</w>
+        <w>é</w>
+        <w>escravo</w>
+        <w>dun</w>
+        <w>réxime</w>
+        <w>en</w>
+        <w>que</w>
+        <w>por</w>
+        <w>forza</w>
+        <w>hai</w>
+        <w>que</w>
+        <w>estar</w>
+        <w>no</w>
+        <w norm="medio">meio</w>
+        <w>de</w>
+        <w>grandes</w>
+        <w>murallas</w>
+        <w>e</w>
+        <w>de</w>
+        <w>fortes</w>
+        <w join="right">paredes</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>que</w>
+        <w>xa</w>
+        <w>non</w>
+        <w>é</w>
+        <w norm="posible">posíbel</w>
+        <w>é</w>
+        <w norm="suxeitar">suxetar</w>
+        <w>o</w>
+        <w norm="espírito" join="right">esprito</w>
+        <pc>,</pc>
+        <w norm="aprisioná-lo">aprisioá-lo</w>
+        <w>e</w>
+        <w>impedir</w>
+        <w norm="que este">qu'iste</w>
+        <w>voe</w>
+        <w>á</w>
+        <w>súa</w>
+        <w join="right">maneira</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>se</w>
+        <w>exteriorice</w>
+        <w>dalgún</w>
+        <w>xeito</w>
+        <w>e</w>
+        <w join="right">que</w>
+        <pc>,</pc>
+        <w>en</w>
+        <w join="right">definitiva</w>
+        <pc>,</pc>
+        <w>busque</w>
+        <w>unha</w>
+        <w norm="satisfacción">satisfación</w>
+        <w>e</w>
+        <w>un</w>
+        <w join="right">degaro</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Sentía</w>
+        <w>arelas</w>
+        <w>de</w>
+        <w>crebar</w>
+        <w>un</w>
+        <w>silencio</w>
+        <w>ao</w>
+        <w>que</w>
+        <w>estou</w>
+        <w norm="condenado" join="right">condeado</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>dispoñome</w>
+        <w>a</w>
+        <w join="right">facé-lo</w>
+        <pc>,</pc>
+        <w>pondome</w>
+        <w>en</w>
+        <w norm="contacto">contaito</w>
+        <w>cos</w>
+        <w>meus</w>
+        <w join="right">irmáns</w>
+        <pc>,</pc>
+        <w>decote</w>
+        <w>os</w>
+        <w>meus</w>
+        <w norm="mellores">millores</w>
+        <w join="right">amigos</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Non</w>
+        <w>son</w>
+        <w norm="estes">istes</w>
+        <w>os</w>
+        <w>momentos</w>
+        <w>máis</w>
+        <w>axeitados</w>
+        <w norm="para">pra</w>
+        <w>que</w>
+        <w>se</w>
+        <w>reduza</w>
+        <w>o</w>
+        <w>número</w>
+        <w>de</w>
+        <w>afiliados</w>
+        <w>nas</w>
+        <w>nosas</w>
+        <w join="right">agrupacións</w>
+        <pc>;</pc>
+        <w>todo</w>
+        <w>o</w>
+        <w join="right">contrario</w>
+        <pc>.</pc>
+        <w>Habemos</w>
+        <w>ir</w>
+        <w>á</w>
+        <w>catequización</w>
+        <w>dos</w>
+        <w>máis</w>
+        <w norm="para">pra</w>
+        <w>tamén</w>
+        <w>facer</w>
+        <w>sentir</w>
+        <w>máis</w>
+        <w>forte</w>
+        <w>o</w>
+        <w>noso</w>
+        <w>peso</w>
+        <w>na</w>
+        <w>política</w>
+        <w join="right">galega</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w>nosa</w>
+        <w>laboura</w>
+        <w>debe</w>
+        <w norm="caracterizarse">caraiterizarse</w>
+        <w>pola</w>
+        <w>forza</w>
+        <w>dos</w>
+        <w>nosos</w>
+        <w join="right">grupos</w>
+        <pc>.</pc>
+        <w norm="Se">Si</w>
+        <w>temos</w>
+        <w>a</w>
+        <w>razón</w>
+        <w>debemos</w>
+        <w>ter</w>
+        <w>a</w>
+        <w join="right">forza</w>
+        <pc>.</pc>
+        <w>Imos</w>
+        <w>por</w>
+        <w>ela</w>
+        <w>lanzando</w>
+        <w>a</w>
+        <w norm="tódolos">tódo-los</w>
+        <w>ventos</w>
+        <w>as</w>
+        <w>nosas</w>
+        <w>angueiras</w>
+        <w>redencionistas</w>
+        <w norm="para a">prá</w>
+        <w>nosa</w>
+        <w>Patria</w>
+        <w join="right">oprimida</w>
+        <pc>;</pc>
+        <w>inzados</w>
+        <w norm="desa">disa</w>
+        <w>moral</w>
+        <w>tan</w>
+        <w join="right">nosa</w>
+        <pc>,</pc>
+        <w>falar</w>
+        <w>da</w>
+        <w>nosa</w>
+        <w>verdade</w>
+        <w>por</w>
+        <w norm="tódolos">tódo-los</w>
+        <w join="right">camiños</w>
+        <pc>,</pc>
+        <w>por</w>
+        <w norm="tódalas">tóda-las</w>
+        <w>estradas</w>
+        <w>da</w>
+        <w>Terra</w>
+        <w>chegando</w>
+        <w>ao</w>
+        <w>máis</w>
+        <w>apartado</w>
+        <w join="right">recuncho</w>
+        <pc>;</pc>
+        <w>petando</w>
+        <w>nas</w>
+        <w>almas</w>
+        <w>dos</w>
+        <w>nosos</w>
+        <w>irmáns</w>
+        <w norm="dormentes">durmintes</w>
+        <w>co</w>
+        <w>argumento</w>
+        <w>da</w>
+        <w>nosa</w>
+        <w norm="sacra">sagra</w>
+        <w join="right">misión</w>
+        <pc>;</pc>
+        <w norm="convertendo">convertindo</w>
+        <w>á</w>
+        <w>nosa</w>
+        <w>causa</w>
+        <w>a</w>
+        <w norm="tódolos">tódo-los</w>
+        <w norm="indiferentes" join="right">indifrentes</w>
+        <pc>,</pc>
+        <w>falandolles</w>
+        <w>da</w>
+        <w>nosa</w>
+        <w join="right">emoción</w>
+        <pc>,</pc>
+        <w>do</w>
+        <w>noso</w>
+        <w join="right">entusiasmo</w>
+        <pc>,</pc>
+        <w>da</w>
+        <w>nosa</w>
+        <w join="right">fe</w>
+        <pc>,</pc>
+        <w>nos</w>
+        <w norm="destinos">destiños</w>
+        <w>da</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>,</pc>
+        <w>no</w>
+        <w>meu</w>
+        <w>fermoso</w>
+        <w join="right">idioma</w>
+        <pc>,</pc>
+        <w>na</w>
+        <w>súa</w>
+        <w join="right">cultura</w>
+        <pc>,</pc>
+        <w>na</w>
+        <w>súa</w>
+        <w join="right">arte</w>
+        <pc>,</pc>
+        <w>en</w>
+        <w join="right">todo</w>
+        <pc>,</pc>
+        <w>en</w>
+        <w join="right">fin</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>fai</w>
+        <w>da</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>a</w>
+        <w>nai</w>
+        <w>Patria</w>
+        <w>de</w>
+        <w norm="tódolos">tódo-los</w>
+        <w join="right">galegos</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>En</w>
+        <w>nós</w>
+        <w>os</w>
+        <w join="right">mozos</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>coa</w>
+        <w>nosa</w>
+        <w>inquedanza</w>
+        <w>e</w>
+        <w>paixón</w>
+        <w>andamos</w>
+        <w>a</w>
+        <w>espertar</w>
+        <w>as</w>
+        <w norm="conciencias">concencias</w>
+        <w>durmiñentas</w>
+        <w>dos</w>
+        <w>nosos</w>
+        <w join="right">conterráneos</w>
+        <pc>,</pc>
+        <w>está</w>
+        <w>o</w>
+        <w>levar</w>
+        <w>a</w>
+        <w>bo</w>
+        <w norm="destino">destiño</w>
+        <w>a</w>
+        <w norm="nave">nao</w>
+        <w>da</w>
+        <w>nosa</w>
+        <w join="right">nación</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w norm="Acción" join="right">Aición</w>
+        <pc>.</pc>
+        <w norm="Acción">Aición</w>
+        <w join="right">intensa</w>
+        <pc>,</pc>
+        <w join="right">intransixente</w>
+        <pc>,</pc>
+        <w join="right">rexa</w>
+        <pc>,</pc>
+        <w>nos</w>
+        <w>diversos</w>
+        <w>aspectos</w>
+        <w>que</w>
+        <w>aperta</w>
+        <w>a</w>
+        <w>nosa</w>
+        <w join="right">loita</w>
+        <pc>.</pc>
+        <w>Un</w>
+        <w>entusiasmo</w>
+        <w>afervoado</w>
+        <w>a</w>
+        <w>prol</w>
+        <w>dos</w>
+        <w>nosos</w>
+        <w join="right">traballos</w>
+        <pc>,</pc>
+        <w>cunha</w>
+        <w>predisposición</w>
+        <w>ao</w>
+        <w norm="sacrificio">sagrificio</w>
+        <w norm="para">pra</w>
+        <w>ver</w>
+        <w>palmados</w>
+        <w>nunha</w>
+        <w>belida</w>
+        <w>e</w>
+        <w>xa</w>
+        <w>cercana</w>
+        <w>realidade</w>
+        <w>os</w>
+        <w>nosos</w>
+        <w>lexítimos</w>
+        <w join="right">anceios</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Endexamais</w>
+        <w>tan</w>
+        <w>xusto</w>
+        <w>o</w>
+        <w>noso</w>
+        <w norm="optimismo" join="right">outimismo</w>
+        <pc>.</pc>
+        <w>Nunca</w>
+        <w norm="Mellor">millor</w>
+        <w norm="para">pra</w>
+        <w norm="despregar">desplegar</w>
+        <w>a</w>
+        <w>meirande</w>
+        <w join="right">actividade</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Hoxe</w>
+        <w>en</w>
+        <w>que</w>
+        <w>rivalizan</w>
+        <w>cos</w>
+        <w>vellos</w>
+        <w join="right">grupos</w>
+        <pc>,</pc>
+        <w>novas</w>
+        <w>xentes</w>
+        <w>que</w>
+        <w norm="constitúen">constituien</w>
+        <w join="right">outros</w>
+        <pc>,</pc>
+        <w>hoxe</w>
+        <w>en</w>
+        <w>que</w>
+        <w>as</w>
+        <w>nosas</w>
+        <w>ringleiras</w>
+        <w>veñen</w>
+        <w>mulleres</w>
+        <w>que</w>
+        <w>traen</w>
+        <w>nos</w>
+        <w>seus</w>
+        <w>beizos</w>
+        <w>a</w>
+        <w>sorrisa</w>
+        <w>dunha</w>
+        <w>promesa</w>
+        <w>e</w>
+        <w>o</w>
+        <w>cantar</w>
+        <w>do</w>
+        <w>noso</w>
+        <w norm="triunfo" join="right">trunfo</w>
+        <pc>.</pc>
+        <w>E</w>
+        <w>no</w>
+        <w join="right">corazón</w>
+        <pc>,</pc>
+        <w>na</w>
+        <w join="right">alma</w>
+        <pc>,</pc>
+        <w>no</w>
+        <w norm="espírito" join="right">esprito</w>
+        <pc>,</pc>
+        <w>todo</w>
+        <w>o</w>
+        <w>que</w>
+        <w>é</w>
+        <w>preciso</w>
+        <w norm="para">pra</w>
+        <w>esmagar</w>
+        <w>aos</w>
+        <w norm="inimigos">enemigos</w>
+        <w>e</w>
+        <w>soerguer</w>
+        <w>a</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>:</pc>
+        <w>un</w>
+        <w>gran</w>
+        <w>amor</w>
+        <w>á</w>
+        <w>Terra</w>
+        <w>e</w>
+        <w>nos</w>
+        <w>afáns</w>
+        <w>incontidos</w>
+        <w>de</w>
+        <w>traballar</w>
+        <w>pola</w>
+        <w>súa</w>
+        <w join="right">liberación</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w join="right">Adiante</w>
+        <pc>,</pc>
+        <w>pola</w>
+        <w>nosa</w>
+        <w norm="liberdade">libertade</w>
+        <w>que</w>
+        <w>será</w>
+        <w>o</w>
+        <w>comenzo</w>
+        <w>dunha</w>
+        <w>nova</w>
+        <w>e</w>
+        <w norm="magnífica">mañífica</w>
+        <w>vida</w>
+        <w>na</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w>loitar</w>
+        <w join="right">irmáns</w>
+        <pc>.</pc>
+        <w norm="Sen">Sin</w>
+        <w join="right">acougo</w>
+        <pc>,</pc>
+        <w>con</w>
+        <w>ardentía</w>
+        <w join="right">e</w>
+        <pc>,</pc>
+        <w>sobor</w>
+        <w>de</w>
+        <w join="right">todo</w>
+        <pc>,</pc>
+        <w>con</w>
+        <w join="right">fe</w>
+        <pc>,</pc>
+        <w>cunha</w>
+        <w>inmensa</w>
+        <w>fe</w>
+        <w>no</w>
+        <w>noso</w>
+        <w join="right">porvir</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <pc join="right">¡</pc>
+        <w>Quen</w>
+        <w>poidera</w>
+        <w>compartir</w>
+        <w>con</w>
+        <w>vós</w>
+        <w>doutra</w>
+        <w>forma</w>
+        <w norm="nesta">nista</w>
+        <w>sublime</w>
+        <w norm="e">i</w>
+        <w>espléndida</w>
+        <w>tarefa</w>
+        <w>de</w>
+        <w>facer</w>
+        <w>por</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>e</w>
+        <w norm="para">pra</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w norm="Neste">Niste</w>
+        <w>deserto</w>
+        <w>polo</w>
+        <w>que</w>
+        <w>voa</w>
+        <w>o</w>
+        <w>meu</w>
+        <w join="right">maxín</w>
+        <pc>,</pc>
+        <w>dúas</w>
+        <w>verbas</w>
+        <w norm="expresan">eispresan</w>
+        <w>o</w>
+        <w>fondo</w>
+        <w>sentir</w>
+        <w>da</w>
+        <w>miña</w>
+        <w join="right">alma</w>
+        <pc>,</pc>
+        <w>elas</w>
+        <w>recollen</w>
+        <w>o</w>
+        <w>latexar</w>
+        <w>do</w>
+        <w>meu</w>
+        <w join="right">corazón</w>
+        <pc>,</pc>
+        <w>dúas</w>
+        <w>verbas</w>
+        <w>que</w>
+        <w>din</w>
+        <w>moito</w>
+        <w>e</w>
+        <w>que</w>
+        <w norm="xorden">xurden</w>
+        <w>á</w>
+        <w>miña</w>
+        <w>pluma</w>
+        <pc join="right">─</pc>
+        <w>a</w>
+        <w>máis</w>
+        <w norm="pobre">probe</w>
+        <w>das</w>
+        <w>que</w>
+        <w norm="escriben" join="right">esquirben</w>
+        <pc>─</pc>
+        <w norm="para">pra</w>
+        <w>berrá-las</w>
+        <w>con</w>
+        <w norm="apaixonamento" join="right">apaixoamento</w>
+        <pc>,</pc>
+        <w>dúas</w>
+        <w>verbas</w>
+        <w>que</w>
+        <w>falan</w>
+        <w>por</w>
+        <w>si</w>
+        <w>das</w>
+        <w>inquedanzas</w>
+        <w>dun</w>
+        <w norm="espírito" join="right">esprito</w>
+        <pc>:</pc>
+        <pc join="right">¡</pc>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w join="right">libre</w>
+        <pc>!</pc>
+        <name type="LOC">
+          <w join="right">Monforte</w>
+        </name>
+        <pc>.</pc>
+        <name type="PER">
+          <w join="right">X</w>
+          <pc>.</pc>
+          <w join="right">Vázquez</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w norm="Fiestra" join="right">Fenestra</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Estamos</w>
+        <w>asistindo</w>
+        <w>a</w>
+        <w>un</w>
+        <w>repentino</w>
+        <w norm="espertar">despertar</w>
+        <w>do</w>
+        <w>autonomismo</w>
+        <w>en</w>
+        <w>toda</w>
+        <name type="LOC">
+          <w join="right">España</w>
+        </name>
+        <pc>.</pc>
+        <w>Deixando</w>
+        <w>xa</w>
+        <w>a</w>
+        <w>unha</w>
+        <w>beira</w>
+        <w>os</w>
+        <w>casos</w>
+        <w>particulares</w>
+        <w>e</w>
+        <w>xa</w>
+        <w>vellos</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Cataluña</w>
+        </name>
+        <pc>,</pc>
+        <name type="LOC">
+          <w>Vasconia</w>
+        </name>
+        <w>e</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>onde</w>
+        <w>non</w>
+        <w>se</w>
+        <w>está</w>
+        <w>a</w>
+        <w>producir</w>
+        <w>nin</w>
+        <w>máis</w>
+        <w>nin</w>
+        <w>menos</w>
+        <w>que</w>
+        <w>unha</w>
+        <w>cousa</w>
+        <w>natural</w>
+        <w>por</w>
+        <w>virtude</w>
+        <w>do</w>
+        <w norm="troco">troque</w>
+        <w>verificado</w>
+        <w>na</w>
+        <w>política</w>
+        <w>española</w>
+        <w>agudizado</w>
+        <w>pola</w>
+        <w>necesidade</w>
+        <w>de</w>
+        <w>que</w>
+        <w>as</w>
+        <w>tres</w>
+        <w>nacionalidades</w>
+        <w join="right">resolvan</w>
+        <pc>,</pc>
+        <w>agora</w>
+        <w>e</w>
+        <w join="right">axiña</w>
+        <pc>,</pc>
+        <w>os</w>
+        <w>seus</w>
+        <w norm="problemas" join="right">probremas</w>
+        <pc>,</pc>
+        <w>habemos</w>
+        <w>de</w>
+        <w>reparar</w>
+        <w>como</w>
+        <w>por</w>
+        <w>aí</w>
+        <w>adiante</w>
+        <w>producese</w>
+        <w>un</w>
+        <w norm="movemento">movimento</w>
+        <w>autonomista</w>
+        <w>que</w>
+        <w>comenza</w>
+        <w>a</w>
+        <w>callar</w>
+        <w>en</w>
+        <w norm="proxectos">proietos</w>
+        <w>de</w>
+        <w join="right">Estatutos</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="LOC">
+          <w>Aragón</w>
+        </name>
+        <w>e</w>
+        <name type="LOC">
+          <w>Valencia</w>
+        </name>
+        <w>andan</w>
+        <w>xa</w>
+        <w>de</w>
+        <w>cheo</w>
+        <w>metidos</w>
+        <w>na</w>
+        <w norm="cuestión" join="right">custión</w>
+        <pc>.</pc>
+        <w>Falase</w>
+        <w>tamén</w>
+        <w>dun</w>
+        <w>estatuto</w>
+        <w join="right">andaluz</w>
+        <pc>.</pc>
+        <w>E</w>
+        <w join="right">agora</w>
+        <pc>,</pc>
+        <w>por</w>
+        <w norm="se">si</w>
+        <w norm="isto">esto</w>
+        <w>non</w>
+        <w join="right">abonda</w>
+        <pc>,</pc>
+        <w>o</w>
+        <w>señor</w>
+        <name type="PER">
+          <w>Gil</w>
+          <w>Robles</w>
+        </name>
+        <w norm="concibiu">concebiu</w>
+        <w>o</w>
+        <w>propósito</w>
+        <w>de</w>
+        <w>convocar</w>
+        <w>aos</w>
+        <w norm="deputados">diputados</w>
+        <w>casteláns</w>
+        <w>para</w>
+        <w>facer</w>
+        <w>o</w>
+        <w>Estatuto</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Castela</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Moitos</w>
+        <w>comentarios</w>
+        <w norm="poderiamos">poderíamos</w>
+        <w>tirar</w>
+        <w>de</w>
+        <w>todo</w>
+        <w norm="isto" join="right">esto</w>
+        <pc>.</pc>
+        <w>Abonda</w>
+        <w>con</w>
+        <w join="right">algúns</w>
+        <pc>.</pc>
+        <w>En</w>
+        <w>primeiro</w>
+        <w>termo</w>
+        <w>o</w>
+        <w>que</w>
+        <w>se</w>
+        <w>deduce</w>
+        <w>facilmente</w>
+        <w>de</w>
+        <w>que</w>
+        <w>a</w>
+        <w norm="República">Repúbrica</w>
+        <w>vai</w>
+        <w>camiño</w>
+        <w>da</w>
+        <w>súa</w>
+        <w>consolidación</w>
+        <w join="right">absoluta</w>
+        <pc>.</pc>
+        <w>Cada</w>
+        <w>estatuto</w>
+        <w>é</w>
+        <w>un</w>
+        <w>novo</w>
+        <w join="right">apuntalamento</w>
+        <pc>.</pc>
+        <w join="right">Si</w>
+        <pc>,</pc>
+        <w norm="incluso" join="right">incruso</w>
+        <pc>,</pc>
+        <w>o</w>
+        <w>señor</w>
+        <name type="PER">
+          <w>Gil</w>
+          <w>Robles</w>
+        </name>
+        <w>está</w>
+        <w>disposto</w>
+        <w>a</w>
+        <w>patrocinar</w>
+        <w join="right">estatutos</w>
+        <pc>,</pc>
+        <w>resulta</w>
+        <w>que</w>
+        <w join="right">tamén</w>
+        <pc>,</pc>
+        <w>de</w>
+        <w norm="bo">bon</w>
+        <w>grado</w>
+        <w>ou</w>
+        <w>por</w>
+        <w join="right">forza</w>
+        <pc>,</pc>
+        <w norm="aparece">aparesce</w>
+        <w>como</w>
+        <w>un</w>
+        <w>colaborador</w>
+        <w>nesta</w>
+        <w>obra</w>
+        <w>de</w>
+        <w>consolidación</w>
+        <w norm="republicana" join="right">repubricán</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Si</w>
+        <w>se</w>
+        <w join="right">conquire</w>
+        <pc>,</pc>
+        <w>en</w>
+        <w>prazo</w>
+        <w>máis</w>
+        <w>ou</w>
+        <w>menos</w>
+        <w join="right">longo</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>haxa</w>
+        <w>varios</w>
+        <w>estatutos</w>
+        <w>teremos</w>
+        <w>que</w>
+        <w>a</w>
+        <w norm="República">Repúbrica</w>
+        <w>española</w>
+        <w>non</w>
+        <w>tardará</w>
+        <w>en</w>
+        <w norm="converterse">convertirse</w>
+        <w>nunha</w>
+        <w norm="república">repúbrica</w>
+        <w join="right">federal</w>
+        <pc>.</pc>
+        <w>O</w>
+        <w>que</w>
+        <w>non</w>
+        <w>se</w>
+        <w>fixo</w>
+        <w>no</w>
+        <w>ano</w>
+        <w>31</w>
+        <w>vaise</w>
+        <w>facendo</w>
+        <w>pouco</w>
+        <w>a</w>
+        <w>pouco</w>
+        <w>e</w>
+        <w>dese</w>
+        <w>xeito</w>
+        <w join="right">lograráse</w>
+        <pc>,</pc>
+        <w>entre</w>
+        <w>outras</w>
+        <w join="right">cousas</w>
+        <pc>,</pc>
+        <w>que</w>
+        <name type="LOC">
+          <w>España</w>
+        </name>
+        <w>atope</w>
+        <w>por</w>
+        <w>fin</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>específica</w>
+        <w>e</w>
+        <w>natural</w>
+        <w norm="estruturación">estructuración</w>
+        <w>rachandose</w>
+        <w>os</w>
+        <w>moldes</w>
+        <w join="right">monárquicos</w>
+        <pc>,</pc>
+        <w>por</w>
+        <w join="right">centralistas</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>algúns</w>
+        <w norm="republicanos">repubricáns</w>
+        <w>aínda</w>
+        <w>querían</w>
+        <w join="right">conservar</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w>min</w>
+        <w>alarmame</w>
+        <w>un</w>
+        <w>pouco</w>
+        <w>este</w>
+        <w>frenético</w>
+        <w join="right">autonomismo</w>
+        <pc>.</pc>
+        <w>Eu</w>
+        <w>que</w>
+        <w>son</w>
+        <w>un</w>
+        <w>autonomista</w>
+        <w>de</w>
+        <w>toda</w>
+        <w>a</w>
+        <w>vida</w>
+        <w>comenzo</w>
+        <w>a</w>
+        <w>sospeitar</w>
+        <w norm="se">si</w>
+        <w>non</w>
+        <w>chegará</w>
+        <w>un</w>
+        <w>intre</w>
+        <w>en</w>
+        <w>que</w>
+        <w>non</w>
+        <w>suceda</w>
+        <w>como</w>
+        <w>sucedeu</w>
+        <w>cos</w>
+        <w norm="republicáns">repubricáns</w>
+        <w>de</w>
+        <w>toda</w>
+        <w>a</w>
+        <w join="right">vida</w>
+        <pc>.</pc>
+        <w>Que</w>
+        <w>os</w>
+        <w>novos</w>
+        <w>autonomistas</w>
+        <w join="right">desvirtúen</w>
+        <pc>,</pc>
+        <w>como</w>
+        <w>sucedeu</w>
+        <w>co</w>
+        <w norm="republicanismo">repubricanismo</w>
+        <w>de</w>
+        <w>tan</w>
+        <w>rancio</w>
+        <w norm="avoengo" join="right">avolengo</w>
+        <pc>,</pc>
+        <w>o</w>
+        <w>verdadeiro</w>
+        <w join="right">autonomismo</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Sería</w>
+        <w norm="terrible">terríbel</w>
+        <w>que</w>
+        <w norm="calquera">calqueira</w>
+        <w>dos</w>
+        <w>vellos</w>
+        <w>autonomistas</w>
+        <w>galegos</w>
+        <w>chegara</w>
+        <w>a</w>
+        <w>ser</w>
+        <w>o</w>
+        <name type="PER">
+          <pc join="right">«</pc>
+          <pc join="right">*</pc>
+          <w join="right">Lerroux</w>
+          <pc>»</pc>
+        </name>
+        <w>do</w>
+        <w join="right">autonomismo</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>En</w>
+        <w join="right">fin</w>
+        <pc>:</pc>
+        <w>o</w>
+        <w>mundo</w>
+        <w>camiña</w>
+        <w>e</w>
+        <w>as</w>
+        <w>cousas</w>
+        <w>son</w>
+        <w>como</w>
+        <w join="right">son</w>
+        <pc>.</pc>
+        <w>De</w>
+        <w>todos</w>
+        <w>xeitos</w>
+        <w>non</w>
+        <w>estará</w>
+        <w>de</w>
+        <w>máis</w>
+        <w>que</w>
+        <w>comencemos</w>
+        <w>a</w>
+        <w>preocuparnos</w>
+        <w>da</w>
+        <w>cousa</w>
+        <w>e</w>
+        <w>procuremos</w>
+        <w>vacunarnos</w>
+        <w>contra</w>
+        <w>esta</w>
+        <w>febre</w>
+        <w>autonomista</w>
+        <w>que</w>
+        <w>vai</w>
+        <w>camiño</w>
+        <w>de</w>
+        <w join="right">epidemia</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>E</w>
+        <w>polo</w>
+        <w join="right">derradeiro</w>
+        <pc>,</pc>
+        <w>neste</w>
+        <w join="right">comentario</w>
+        <pc>,</pc>
+        <w norm="ocórrensenos">ocurresenos</w>
+        <w>pensar</w>
+        <w>quen</w>
+        <w>dende</w>
+        <w>agora</w>
+        <w>en</w>
+        <w>adiante</w>
+        <w>vai</w>
+        <w>a</w>
+        <w>ser</w>
+        <w>o</w>
+        <w>defensor</w>
+        <w>da</w>
+        <w>unidade</w>
+        <w>da</w>
+        <w join="right">Patria</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>ademais</w>
+        <w>conceptos</w>
+        <w>que</w>
+        <w norm="ata">até</w>
+        <w>fai</w>
+        <w>uns</w>
+        <w>meses</w>
+        <w>se</w>
+        <w>opoñían</w>
+        <w>en</w>
+        <w>contra</w>
+        <w>do</w>
+        <w>autonomismo</w>
+        <w>desintegrador</w>
+        <w>e</w>
+        <w>separatista</w>
+        <w>de</w>
+        <w>que</w>
+        <w>tanto</w>
+        <w>se</w>
+        <w norm="ten">tén</w>
+        <w join="right">falado</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w norm="Se">Si</w>
+        <name type="PER">
+          <w>Royo</w>
+          <w>Vilanova</w>
+        </name>
+        <w>xa</w>
+        <w>non</w>
+        <w norm="existe">eisiste</w>
+        <w>e</w>
+        <name type="PER">
+          <w>Gil</w>
+          <w>Robles</w>
+        </name>
+        <w>e</w>
+        <name type="PER">
+          <w>Calvo</w>
+          <w>Sotelo</w>
+        </name>
+        <w>son</w>
+        <w>autonomistas</w>
+        <pc join="right">¿</pc>
+        <w>non</w>
+        <w>vos</w>
+        <w>acusa</w>
+        <w>certa</w>
+        <w>pena</w>
+        <w>ollar</w>
+        <w>a</w>
+        <w>morte</w>
+        <w>daqueles</w>
+        <w norm="ideais">ideaes</w>
+        <w>patrióticos</w>
+        <w>que</w>
+        <w>tan</w>
+        <w>denodadamente</w>
+        <w join="right">defenderon</w>
+        <pc>?</pc>
+        <pc join="right">¿</pc>
+        <w>Ou</w>
+        <w>será</w>
+        <w>que</w>
+        <w>se</w>
+        <w>intenta</w>
+        <w>ensanchar</w>
+        <w>a</w>
+        <w>base</w>
+        <w>do</w>
+        <w join="right">autonomismo</w>
+        <pc join="right">?</pc>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w join="right">Ofrenda</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>As</w>
+        <w>mulleres</w>
+        <w>e</w>
+        <w>homes</w>
+        <w>de</w>
+        <name type="MISC">
+          <w>Abrente</w>
+        </name>
+        <w>afeitos</w>
+        <w>a</w>
+        <w>ollar</w>
+        <w>dende</w>
+        <w>os</w>
+        <w>cumes</w>
+        <w>a</w>
+        <w>nosa</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>,</pc>
+        <w>chegamos</w>
+        <w>agora</w>
+        <w>a</w>
+        <w norm="esta">ista</w>
+        <w norm="montaña">montana</w>
+        <w norm="para">pra</w>
+        <w norm="renderlle">rendirlle</w>
+        <w norm="homenaxe">homaxe</w>
+        <w>ao</w>
+        <w norm="bo">bon</w>
+        <w>e</w>
+        <w>xeneroso</w>
+        <name type="PER">
+          <w>Antón</w>
+          <w>Vilar</w>
+          <w join="right">Ponte</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w norm="Este">Iste</w>
+        <w>home</w>
+        <w norm="esclarecido" join="right">escrarecido</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>naceu</w>
+        <w>en</w>
+        <name type="LOC">
+          <w join="right">Viveiro</w>
+        </name>
+        <pc>,</pc>
+        <w>xunto</w>
+        <w>ao</w>
+        <w>río</w>
+        <name type="LOC">
+          <w join="right">Landro</w>
+        </name>
+        <pc>,</pc>
+        <w>e</w>
+        <w>morreu</w>
+        <w>na</w>
+        <name type="LOC">
+          <w norm="Coruña" join="right">Cruña</w>
+        </name>
+        <pc>,</pc>
+        <w>foi</w>
+        <w>un</w>
+        <w>namorado</w>
+        <w>do</w>
+        <w>mar</w>
+        <w>e</w>
+        <w>da</w>
+        <w norm="liberdade" join="right">libertade</w>
+        <pc>.</pc>
+        <w>E</w>
+        <w>por</w>
+        <w>iso</w>
+        <w>ficará</w>
+        <w>o</w>
+        <w>seu</w>
+        <w>nome</w>
+        <w norm="nesta">nista</w>
+        <w norm="altura" join="right">outura</w>
+        <pc>,</pc>
+        <w>diante</w>
+        <w>do</w>
+        <w>mar</w>
+        <w join="right">infindo</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Cando</w>
+        <w>os</w>
+        <w>fillos</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>se</w>
+        <w>deteñan</w>
+        <w>xunto</w>
+        <w>a</w>
+        <w norm="estes">istes</w>
+        <w join="right">penedos</w>
+        <pc>,</pc>
+        <w join="right">ollarán</w>
+        <pc>,</pc>
+        <w>cheos</w>
+        <w>de</w>
+        <w join="right">saudade</w>
+        <pc>,</pc>
+        <w>a</w>
+        <w>lonxanía</w>
+        <w norm="azulada" join="right">azuada</w>
+        <pc>,</pc>
+        <w>deixando</w>
+        <w>voar</w>
+        <w norm="estas">istas</w>
+        <w>verbas</w>
+        <w>do</w>
+        <w>inesquecente</w>
+        <name type="PER">
+          <w join="right">Antón</w>
+        </name>
+        <pc>:</pc>
+        <pc join="right">«</pc>
+        <w>O</w>
+        <w>mar</w>
+        <w>é</w>
+        <w>o</w>
+        <w>único</w>
+        <w>espello</w>
+        <w>do</w>
+        <w join="right">infinito</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>forma</w>
+        <w>co</w>
+        <w norm="ceo">ceio</w>
+        <w>o</w>
+        <w norm="paréntese">paréntesis</w>
+        <w>grandioso</w>
+        <w>onde</w>
+        <w>a</w>
+        <w>cativez</w>
+        <w>do</w>
+        <w>home</w>
+        <w>se</w>
+        <w>aprecia</w>
+        <w norm="claramente" join="right">craramente</w>
+        <pc join="right">»</pc>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w join="right">Despois</w>
+        <pc>,</pc>
+        <w norm="ó">ao</w>
+        <w>fixarse</w>
+        <w>no</w>
+        <w norm="luminoso">lumioso</w>
+        <w>nome</w>
+        <w>do</w>
+        <w>escritor</w>
+        <w>que</w>
+        <w>lembramos</w>
+        <w join="right">agora</w>
+        <pc>,</pc>
+        <w>deixarán</w>
+        <w>en</w>
+        <w norm="liberdade">libertade</w>
+        <w norm="este">iste</w>
+        <w join="right">berro</w>
+        <pc>:</pc>
+        <pc join="right">¡</pc>
+        <w>Terra</w>
+        <w>a</w>
+        <w join="right">Nosa</w>
+        <pc>!</pc>
+        <w>E</w>
+        <w join="right">logo</w>
+        <pc>,</pc>
+        <w>cando</w>
+        <w>vaian</w>
+        <w>espallandose</w>
+        <w norm="estas">istas</w>
+        <w join="right">verbas</w>
+        <pc>,</pc>
+        <w>ollarán</w>
+        <w>os</w>
+        <w>viaxeiros</w>
+        <w>as</w>
+        <w>ondas</w>
+        <w>do</w>
+        <w join="right">mar</w>
+        <pc>,</pc>
+        <w>axexando</w>
+        <w>quizais</w>
+        <w>a</w>
+        <w>volta</w>
+        <w>de</w>
+        <name type="PER">
+          <w>Antón</w>
+          <w>Vilar</w>
+          <w join="right">Ponte</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <pc join="right">(</pc>
+        <w>Do</w>
+        <w norm="homenaxe">homaxe</w>
+        <w>do</w>
+        <name type="MISC">
+          <w>Grupo</w>
+          <w>Abrente</w>
+        </name>
+        <w>a</w>
+        <name type="PER">
+          <w>Antón</w>
+          <w>Vilar</w>
+          <w join="right">Ponte</w>
+        </name>
+        <pc join="right">.</pc>
+        <pc>)</pc>
+      </p>
+      <p>
+        <w>Lembranza</w>
+        <w>de</w>
+        <name type="PER">
+          <w join="right">A</w>
+          <pc>.</pc>
+          <w>Vilar</w>
+          <w join="right">Ponte</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Cando</w>
+        <w>lle</w>
+        <w norm="demos">dimos</w>
+        <w>terra</w>
+        <w>no</w>
+        <w norm="cemiterio">cimiterio</w>
+        <w>da</w>
+        <name type="LOC">
+          <w norm="Coruña" join="right">Cruña</w>
+        </name>
+        <pc>,</pc>
+        <w>diante</w>
+        <w>do</w>
+        <w>mar</w>
+        <w>dos</w>
+        <w>innúmeros</w>
+        <w join="right">roteiros</w>
+        <pc>,</pc>
+        <w join="right">pensei</w>
+        <pc>:</pc>
+        <w>Agora</w>
+        <name type="PER">
+          <w>Vilar</w>
+          <w>Ponte</w>
+        </name>
+        <w norm="nace">nasce</w>
+        <w>a</w>
+        <w>outro</w>
+        <w>vivir</w>
+        <w>na</w>
+        <w>lembranza</w>
+        <w join="right">saudosa</w>
+        <pc>,</pc>
+        <w>na</w>
+        <w>cotián</w>
+        <w norm="veciñanza">viciñanza</w>
+        <w>do</w>
+        <w>seu</w>
+        <w norm="espírito">esprito</w>
+        <w>coas</w>
+        <w norm="mellores" join="right">millores</w>
+        <pc>,</pc>
+        <w>coas</w>
+        <w>máis</w>
+        <w>espertas</w>
+        <w>e</w>
+        <w norm="serenas">sereas</w>
+        <w>enerxías</w>
+        <w>da</w>
+        <w>Patria</w>
+        <w join="right">Galega</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Agora</w>
+        <w norm="neste">niste</w>
+        <w>abrileiro</w>
+        <w>agromar</w>
+        <w>das</w>
+        <w>campías</w>
+        <w>a</w>
+        <w>sementeira</w>
+        <w>que</w>
+        <w norm="el">il</w>
+        <w>con</w>
+        <w>xesto</w>
+        <w norm="patrucio">petrucio</w>
+        <w>espallou</w>
+        <w>polos</w>
+        <w>eidos</w>
+        <w>da</w>
+        <w>palabra</w>
+        <w>e</w>
+        <w>da</w>
+        <w join="right">pluma</w>
+        <pc>,</pc>
+        <w norm="florece">frolece</w>
+        <w>maina</w>
+        <w>e</w>
+        <w join="right">podente</w>
+        <pc>,</pc>
+        <w>coa</w>
+        <w>seguridade</w>
+        <w>das</w>
+        <w>colleitas</w>
+        <w>do</w>
+        <w>pan</w>
+        <w>do</w>
+        <w norm="espírito" join="right">esprito</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>de</w>
+        <w norm="aquelas">aquilas</w>
+        <w>outras</w>
+        <w>sementadas</w>
+        <w>na</w>
+        <w norm="esperanza">espranza</w>
+        <w>sen</w>
+        <w>remate</w>
+        <w>da</w>
+        <w>nosa</w>
+        <w>Raza</w>
+        <w>e</w>
+        <w>da</w>
+        <w>nosa</w>
+        <w norm="lingua" join="right">língoa</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Vive</w>
+        <w>no</w>
+        <w join="right">consello</w>
+        <pc>,</pc>
+        <w>no</w>
+        <w norm="exemplo" join="right">exempro</w>
+        <pc>,</pc>
+        <w>na</w>
+        <w norm="ruta">roita</w>
+        <w join="right">trazada</w>
+        <pc>,</pc>
+        <w>na</w>
+        <w norm="claridade">craridade</w>
+        <w>do</w>
+        <w join="right">feito</w>
+        <pc>,</pc>
+        <w>pois</w>
+        <w>ninguén</w>
+        <w>coma</w>
+        <w norm="el">il</w>
+        <w norm="soubo">soupo</w>
+        <w norm="facer">faguer</w>
+        <w>do</w>
+        <w>Galeguismo</w>
+        <w>romántico</w>
+        <w>de</w>
+        <w>outrora</w>
+        <w>un</w>
+        <w>programa</w>
+        <w>de</w>
+        <w norm="máxima">máisima</w>
+        <w join="right">eficacia</w>
+        <pc>.</pc>
+        <w>Fixo</w>
+        <w>a</w>
+        <w>política</w>
+        <w>do</w>
+        <w join="right">idioma</w>
+        <pc>.</pc>
+        <w>E</w>
+        <w>o</w>
+        <w>idioma</w>
+        <w>halle</w>
+        <w>adicar</w>
+        <w>sempre</w>
+        <w>seus</w>
+        <w norm="varudos">barudos</w>
+        <w>e</w>
+        <w>tenros</w>
+        <w join="right">acentos</w>
+        <pc>.</pc>
+        <w>Ao</w>
+        <w>seu</w>
+        <w join="right">guieiro</w>
+        <pc>,</pc>
+        <w>ao</w>
+        <w>seu</w>
+        <w join="right">patrón</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Cando</w>
+        <w>o</w>
+        <w>grupo</w>
+        <name type="MISC">
+          <w>Abrente</w>
+        </name>
+        <w>dende</w>
+        <w>o</w>
+        <w>cumio</w>
+        <w>do</w>
+        <w join="right">monte</w>
+        <pc>,</pc>
+        <w>vaia</w>
+        <w>abranguendo</w>
+        <w>o</w>
+        <w>desenrolar</w>
+        <w norm="harmonioso">harmoñoso</w>
+        <w>dous</w>
+        <w norm="horizontes">hourizontes</w>
+        <w>do</w>
+        <w>mar</w>
+        <w>e</w>
+        <w>da</w>
+        <w join="right">terra</w>
+        <pc>,</pc>
+        <w>no</w>
+        <w>sentir</w>
+        <w>as</w>
+        <w>esencias</w>
+        <w norm="triunfadoras">trunfadoras</w>
+        <w>da</w>
+        <w norm="primavera" join="right">primadeira</w>
+        <pc>,</pc>
+        <w>no</w>
+        <w>canto</w>
+        <w>coral</w>
+        <w>das</w>
+        <w>ondas</w>
+        <w>e</w>
+        <w>dos</w>
+        <w join="right">bosques</w>
+        <pc>,</pc>
+        <w>no</w>
+        <w>vibrar</w>
+        <w>das</w>
+        <w join="right">agras</w>
+        <pc>,</pc>
+        <w>no</w>
+        <w>narigar</w>
+        <w>das</w>
+        <w>velas</w>
+        <w>aos</w>
+        <w join="right">lonxes</w>
+        <pc>,</pc>
+        <w>na</w>
+        <w norm="peregrinaxe">pelerinaxe</w>
+        <w>dos</w>
+        <w>camiños</w>
+        <w norm="peregrinando">pelegriñando</w>
+        <w>arelosas</w>
+        <w>de</w>
+        <w norm="horizontes" join="right">hourizontes</w>
+        <pc>,</pc>
+        <w>os</w>
+        <w>alpinistas</w>
+        <w>han</w>
+        <w norm="sentir">sentire</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>alegría</w>
+        <w>magoada</w>
+        <w>por</w>
+        <w>a</w>
+        <w>falla</w>
+        <w>de</w>
+        <name type="PER">
+          <w>Antón</w>
+          <w>Vilar</w>
+          <w join="right">Ponte</w>
+        </name>
+        <pc>,</pc>
+        <w>grande</w>
+        <w>e</w>
+        <w join="right">xeneroso</w>
+        <pc>,</pc>
+        <w>alpinista</w>
+        <w>dos</w>
+        <w>picoutos</w>
+        <w>do</w>
+        <w norm="espírito" join="right">esprito</w>
+        <pc>.</pc>
+        <w>Mais</w>
+        <w>deseguida</w>
+        <w>han</w>
+        <w norm="sentir">sentire</w>
+        <w norm="aquela">aquila</w>
+        <w norm="dor">door</w>
+        <w>ausencia</w>
+        <w norm="glorificada">grorificada</w>
+        <w>pola</w>
+        <w>nova</w>
+        <w norm="e">i</w>
+        <w>eterna</w>
+        <w>vida</w>
+        <w>que</w>
+        <w>entre</w>
+        <w>nós</w>
+        <w>collen</w>
+        <w>os</w>
+        <w>mortos</w>
+        <w join="right">amados</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>unha</w>
+        <w>doce</w>
+        <w norm="melancolía" join="right">melanconía</w>
+        <pc>,</pc>
+        <w>darálles</w>
+        <w>a</w>
+        <w>presidencia</w>
+        <w>de</w>
+        <name type="PER">
+          <w>Villar</w>
+          <w join="right">Ponte</w>
+        </name>
+        <pc>,</pc>
+        <w>alí</w>
+        <w>no</w>
+        <w>coto</w>
+        <w join="right">ergueito</w>
+        <pc>,</pc>
+        <w>por</w>
+        <w>riba</w>
+        <w>das</w>
+        <w norm="rutas">roitas</w>
+        <w join="right">malladas</w>
+        <pc>,</pc>
+        <w>no</w>
+        <w>ar</w>
+        <w>ceibe</w>
+        <w>e</w>
+        <w>puro</w>
+        <w>onde</w>
+        <w>seu</w>
+        <w norm="espírito">esprito</w>
+        <w join="right">alenta</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w join="right">R</w>
+          <pc>.</pc>
+          <w>Otero</w>
+          <w join="right">Pedraio</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w join="right">Ferrete</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Os</w>
+        <w norm="inimigos">nemigos</w>
+        <w>da</w>
+        <w>nosa</w>
+        <w join="right">autonomía</w>
+        <pc>,</pc>
+        <w>segundo</w>
+        <w>eles</w>
+        <w join="right">din</w>
+        <pc>,</pc>
+        <w>teñen</w>
+        <w>medo</w>
+        <pc join="right">─</pc>
+        <w>os</w>
+        <w join="right">coitadiños</w>
+        <pc>─</pc>
+        <w>de</w>
+        <w>que</w>
+        <w>non</w>
+        <w>haxa</w>
+        <w>na</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>homes</w>
+        <w>capaces</w>
+        <w>de</w>
+        <w join="right">gobernar</w>
+        <pc>.</pc>
+        <w norm="Eses">Ises</w>
+        <w norm="inimigos">nemigos</w>
+        <w>da</w>
+        <w>nosa</w>
+        <w>Terra</w>
+        <w>recordan</w>
+        <w>a</w>
+        <w norm="aquel">aquil</w>
+        <w>maño</w>
+        <w>da</w>
+        <w>cántiga</w>
+        <w>aragonesa</w>
+        <w>que</w>
+        <w join="right">di</w>
+        <pc>:</pc>
+        <pc join="right">"</pc>
+        <w>Un</w>
+        <w>baturro</w>
+        <w>en</w>
+        <w>un</w>
+        <w>espejo</w>
+        <w>se</w>
+        <w>contemplaba</w>
+        <w>y</w>
+        <w>decía</w>
+        <w>que</w>
+        <w>cara</w>
+        <w>de</w>
+        <w>bruto</w>
+        <w>tiene</w>
+        <w>ese</w>
+        <w>hombre</w>
+        <w>que</w>
+        <w>me</w>
+        <w join="right">mira</w>
+        <pc join="right">.</pc>
+        <pc>"</pc>
+      </p>
+      <p>
+        <w>Non</w>
+        <w>hai</w>
+        <w>que</w>
+        <w norm="prexulgar" join="right">prexusgar</w>
+        <pc>.</pc>
+        <w>Mandase</w>
+        <w>un</w>
+        <w>así</w>
+        <w join="right">mesmo</w>
+        <pc>.</pc>
+        <w>Hai</w>
+        <w>que</w>
+        <w>ollar</w>
+        <w>cara</w>
+        <w norm="a fóra">afora</w>
+        <w>e</w>
+        <w>tamén</w>
+        <w>se</w>
+        <w>lembrar</w>
+        <w>do</w>
+        <w>que</w>
+        <w>dixo</w>
+        <w>o</w>
+        <w>clásico</w>
+        <w join="right">castelán</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Arrojar</w>
+        <w>la</w>
+        <w>cara</w>
+        <w join="right">importa</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>el</w>
+        <w join="right">espejo</w>
+        <pc>,</pc>
+        <w>no</w>
+        <w>hay</w>
+        <w>por</w>
+        <w join="right">qué</w>
+        <pc>"</pc>
+      </p>
+      <p>
+        <w>Algúns</w>
+        <w join="right">preguntanse</w>
+        <pc>:</pc>
+      </p>
+      <p>
+        <pc join="right">¿</pc>
+        <w>De</w>
+        <w>onde</w>
+        <w>vai</w>
+        <w>sacá-los</w>
+        <w>cartos</w>
+        <w>o</w>
+        <w>goberno</w>
+        <w>da</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w join="right">autónoma</w>
+        <pc>?</pc>
+        <w>Xa</w>
+        <w>o</w>
+        <w>dixo</w>
+        <name type="PER">
+          <w>Xil</w>
+          <w join="right">Robles</w>
+        </name>
+        <pc>:</pc>
+        <pc join="right">«</pc>
+        <w>De</w>
+        <w>onde</w>
+        <w>os</w>
+        <w join="right">haxa</w>
+        <pc join="right">»</pc>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Pero</w>
+        <w norm="este">iste</w>
+        <w>non</w>
+        <w>é</w>
+        <w>o</w>
+        <w join="right">problema</w>
+        <pc>.</pc>
+        <w>O</w>
+        <w>diñeiro</w>
+        <w norm="ponse">pónse</w>
+        <w>decote</w>
+        <w>a</w>
+        <w>carón</w>
+        <w>dos</w>
+        <w>que</w>
+        <w join="right">mandan</w>
+        <pc>.</pc>
+        <w>Por</w>
+        <w>iso</w>
+        <w>os</w>
+        <w>da</w>
+        <w>patria</w>
+        <w>grande</w>
+        <w>queren</w>
+        <w>mandar</w>
+        <w>nunha</w>
+        <w>patria</w>
+        <w>canto</w>
+        <w>máis</w>
+        <w>grande</w>
+        <w norm="mellor" join="right">millor</w>
+        <pc>.</pc>
+        <w>É</w>
+        <w>xente</w>
+        <w>que</w>
+        <w>sabe</w>
+        <w>das</w>
+        <w join="right">proporcións</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Moito</w>
+        <w>coidadiño</w>
+        <w>co</w>
+        <w>xogo</w>
+        <w>de</w>
+        <w join="right">verbas</w>
+        <pc>.</pc>
+        <w>Non</w>
+        <w>digades</w>
+        <w>nin</w>
+        <w>escribades</w>
+        <pc join="right">«</pc>
+        <w>Votade</w>
+        <w>ó</w>
+        <w join="right">Estatuto</w>
+        <pc join="right">»</pc>
+        <pc>.</pc>
+        <w>Os</w>
+        <w>paisanos</w>
+        <w>non</w>
+        <w>saben</w>
+        <w>ortografía</w>
+        <w>e</w>
+        <w>os</w>
+        <w norm="inimigos">enemigos</w>
+        <w>da</w>
+        <w>autonomía</w>
+        <w>son</w>
+        <w>moi</w>
+        <w norm="afeccionados">afeizoados</w>
+        <w>ao</w>
+        <w join="right">xogo</w>
+        <pc>.</pc>
+        <pc join="right">¿</pc>
+        <w>Non</w>
+        <w>vos</w>
+        <w>lembrades</w>
+        <w>do</w>
+        <w join="right">estraperlo</w>
+        <pc>?</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w>Ribas</w>
+          <w join="right">Montenegro</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Liñas</w>
+        <w>de</w>
+        <w join="right">loito</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>En</w>
+        <name type="LOC">
+          <w join="right">Viveiro</w>
+        </name>
+        <pc>,</pc>
+        <w>onde</w>
+        <w join="right">residía</w>
+        <pc>,</pc>
+        <w norm="faleceu">falesceu</w>
+        <w>fai</w>
+        <w>días</w>
+        <w>o</w>
+        <w>noso</w>
+        <w>querido</w>
+        <w>irmán</w>
+        <name type="PER">
+          <w>Vicente</w>
+          <w>López</w>
+          <w join="right">Sueiras</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>irmán</w>
+        <name type="PER">
+          <w>López</w>
+          <w>Sueiras</w>
+        </name>
+        <w>era</w>
+        <w>dos</w>
+        <w>primeiros</w>
+        <w>galeguistas</w>
+        <w>e</w>
+        <w>fundador</w>
+        <w>do</w>
+        <w>grupo</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Viveiro</w>
+        </name>
+        <w>no</w>
+        <w>que</w>
+        <w>traballou</w>
+        <w>sempre</w>
+        <w>con</w>
+        <w>fondo</w>
+        <w join="right">entusiasmo</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w>noticia</w>
+        <w>da</w>
+        <w>súa</w>
+        <w>morte</w>
+        <w>causou</w>
+        <w>en</w>
+        <w>nós</w>
+        <w>a</w>
+        <w>impresión</w>
+        <w norm="dolorosa">dorosa</w>
+        <w>da</w>
+        <w norm="desaparición">desaparisción</w>
+        <w>de</w>
+        <w>un</w>
+        <w join="right">irmán</w>
+        <pc>.</pc>
+        <w>Un</w>
+        <w>menos</w>
+        <w>na</w>
+        <w>cadea</w>
+        <w>de</w>
+        <w>bos</w>
+        <w>e</w>
+        <w join="right">xenerosos</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Repouse</w>
+        <w>na</w>
+        <w>paz</w>
+        <w>da</w>
+        <w>Terra</w>
+        <w>o</w>
+        <w>irmán</w>
+        <name type="PER">
+          <w>López</w>
+          <w>Sueiras</w>
+        </name>
+        <w>e</w>
+        <w>reciba</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>estimada</w>
+        <w>familia</w>
+        <w>o</w>
+        <w>testemuño</w>
+        <w norm="sincero">sinceiro</w>
+        <w>do</w>
+        <w>noso</w>
+        <w join="right">sentimento</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w>nosa</w>
+        <w join="right">propaganda</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>domingo</w>
+        <w>vindeiro</w>
+        <w>día</w>
+        <w>31</w>
+        <w>celebrará</w>
+        <w>o</w>
+        <w>partido</w>
+        <w>tres</w>
+        <w>mitins</w>
+        <w>de</w>
+        <w>gran</w>
+        <w join="right">importancia</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Un</w>
+        <w>deles</w>
+        <w>será</w>
+        <w>en</w>
+        <name type="LOC">
+          <w>Chantada</w>
+        </name>
+        <w>para</w>
+        <w>inaugurar</w>
+        <w>o</w>
+        <w>novo</w>
+        <w>Grupo</w>
+        <w>Galeguista</w>
+        <w>e</w>
+        <w>con</w>
+        <w>tal</w>
+        <w>motivo</w>
+        <w norm="concorrerán">concurrirán</w>
+        <w>representacións</w>
+        <w>de</w>
+        <w norm="tódolos">tódo-los</w>
+        <w>Grupos</w>
+        <w>da</w>
+        <w norm="circunscrición" join="right">circunscripción</w>
+        <pc>.</pc>
+        <w>Será</w>
+        <w>un</w>
+        <w>dos</w>
+        <w>actos</w>
+        <w>de</w>
+        <w norm="maior">maor</w>
+        <w norm="concorrencia">concurrencia</w>
+        <w>e</w>
+        <w>importancia</w>
+        <w>celebrados</w>
+        <w>na</w>
+        <w join="right">provincia</w>
+        <pc>.</pc>
+        <w>Intervirán</w>
+        <w>nel</w>
+        <w>irmáns</w>
+        <w>do</w>
+        <w>Grupo</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Chantada</w>
+        </name>
+        <w>e</w>
+        <name type="LOC">
+          <w>Lugo</w>
+        </name>
+        <w>e</w>
+        <w>un</w>
+        <w>dos</w>
+        <w>nosos</w>
+        <w norm="deputados">diputados</w>
+        <w>que</w>
+        <w>seguramente</w>
+        <w>será</w>
+        <name type="PER">
+          <w join="right">Castelao</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>En</w>
+        <name type="LOC">
+          <w>Paradela</w>
+        </name>
+        <pc join="right">(</pc>
+        <name type="LOC">
+          <w join="right">Meis</w>
+        </name>
+        <pc>)</pc>
+        <w>e</w>
+        <name type="LOC">
+          <w>Godos</w>
+        </name>
+        <pc join="right">(</pc>
+        <name type="LOC">
+          <w join="right">Caldas</w>
+        </name>
+        <pc>)</pc>
+        <w>celebranse</w>
+        <w>outros</w>
+        <w>dous</w>
+        <w>tamén</w>
+        <w>para</w>
+        <w>inaugurar</w>
+        <w>dous</w>
+        <w>novos</w>
+        <w>Grupos</w>
+        <w>do</w>
+        <w join="right">Partido</w>
+        <pc>.</pc>
+        <w>Falarán</w>
+        <w>neles</w>
+        <w>os</w>
+        <w>irmáns</w>
+        <name type="PER">
+          <w join="right">Bóveda</w>
+        </name>
+        <pc>,</pc>
+        <name type="PER">
+          <w>Núñez</w>
+          <w>Búa</w>
+        </name>
+        <w>e</w>
+        <name type="PER">
+          <w>Víctor</w>
+          <w join="right">Casas</w>
+        </name>
+        <pc>.</pc>
+        <w>De</w>
+        <name type="LOC">
+          <w>Pontevedra</w>
+        </name>
+        <w>e</w>
+        <name type="LOC">
+          <w>Vilagarcía</w>
+        </name>
+        <w>asistirán</w>
+        <w>a</w>
+        <w>estes</w>
+        <w>mitins</w>
+        <w>moitos</w>
+        <w join="right">irmáns</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>La</w>
+        <w join="right">Erizana</w>
+        <pc>.</pc>
+        <w>Fábrica</w>
+        <w>de</w>
+        <w norm="serrado">aserrado</w>
+        <w>de</w>
+        <w>madeiras</w>
+        <w>para</w>
+        <w norm="construcións" join="right">construccións</w>
+        <pc>.</pc>
+        <w>Especialidade</w>
+        <w>en</w>
+        <w norm="machembrados" join="right">machihembrados</w>
+        <pc>.</pc>
+        <w>Forno</w>
+        <w>de</w>
+        <w>Cal</w>
+        <w>en</w>
+        <name type="LOC">
+          <w join="right">Vigo</w>
+        </name>
+        <pc>.</pc>
+        <pc join="right">(</pc>
+        <name type="LOC">
+          <w join="right">Cataboi</w>
+        </name>
+        <pc>)</pc>
+      </p>
+      <p>
+        <w>Dirixirse</w>
+        <w>a</w>
+        <name type="PER">
+          <w>Román</w>
+          <w join="right">Martín</w>
+        </name>
+        <pc>.</pc>
+        <w>Teléfono</w>
+        <w join="right">1657</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Traballos</w>
+        <w>de</w>
+        <w norm="Encadernación" join="right">Encuadernación</w>
+        <pc>.</pc>
+        <w>Facer</w>
+        <w>os</w>
+        <w norm="encargos">encárregos</w>
+        <w>na</w>
+        <w>Imprenta</w>
+        <w>La</w>
+        <w join="right">Popular</w>
+        <pc>.</pc>
+        <name type="LOC">
+          <w>Chariño</w>
+          <w join="right">7</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <pb n="3"/>
+      <p>
+        <w>Cara</w>
+        <w>a</w>
+        <w>unha</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w join="right">autónoma</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <pc join="right">¡</pc>
+        <w>Votemos</w>
+        <w>o</w>
+        <w>Estatuto</w>
+        <w>para</w>
+        <w join="right">redimirnos</w>
+        <pc>!</pc>
+      </p>
+      <p>
+        <w>Xa</w>
+        <w>teño</w>
+        <w>dito</w>
+        <w>dende</w>
+        <w>as</w>
+        <w>columnas</w>
+        <w>de</w>
+        <w>algúns</w>
+        <w norm="xornais" join="right">xornaes</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>por</w>
+        <w>dúas</w>
+        <w>vegadas</w>
+        <w>foi</w>
+        <w>xestor</w>
+        <w join="right">municipal</w>
+        <pc>.</pc>
+        <w>A</w>
+        <w>primeira</w>
+        <w>foi</w>
+        <w>na</w>
+        <w norm="implantación">imprantación</w>
+        <w>da</w>
+        <w norm="República" join="right">Repúbrica</w>
+        <pc>.</pc>
+        <w>Pensaba</w>
+        <w join="right">eu</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>a</w>
+        <w>nosa</w>
+        <w>Terra</w>
+        <w>lograría</w>
+        <w>as</w>
+        <w>súas</w>
+        <w join="right">reivindicacións</w>
+        <pc>,</pc>
+        <w>nun</w>
+        <w>réxime</w>
+        <w>desta</w>
+        <w join="right">índole</w>
+        <pc>.</pc>
+        <w>Acaso</w>
+        <w join="right">talvez</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w norm="sen">sin</w>
+        <w>talvez</w>
+        <w>aínda</w>
+        <w>que</w>
+        <w>fose</w>
+        <w>algo</w>
+        <w>máis</w>
+        <w norm="extremista" join="right">estremista</w>
+        <pc>,</pc>
+        <w>nós</w>
+        <w>non</w>
+        <w norm="perderiamos">perderíamos</w>
+        <w join="right">nada</w>
+        <pc>.</pc>
+        <w>Xa</w>
+        <w>que</w>
+        <w>sei</w>
+        <w>por</w>
+        <w>isto</w>
+        <w>os</w>
+        <w>meus</w>
+        <w>escritos</w>
+        <w>son</w>
+        <w>duramente</w>
+        <w join="right">criticados</w>
+        <pc>,</pc>
+        <w>por</w>
+        <w>uns</w>
+        <w>irmáns</w>
+        <w>que</w>
+        <w>dentro</w>
+        <w>do</w>
+        <w>partido</w>
+        <w>me</w>
+        <w>teñen</w>
+        <w>por</w>
+        <w>un</w>
+        <w join="right">futurista</w>
+        <pc>.</pc>
+        <w>Non</w>
+        <w>me</w>
+        <w norm="doen">doien</w>
+        <w>prendas</w>
+        <w>e</w>
+        <w norm="así">asín</w>
+        <w norm="recoñecelo" join="right">recoñecé-lo</w>
+        <pc>,</pc>
+        <w>pero</w>
+        <w>mil</w>
+        <w>veces</w>
+        <w>prefiro</w>
+        <w>que</w>
+        <w>o</w>
+        <w>noso</w>
+        <w>pobo</w>
+        <w>deixe</w>
+        <w>a</w>
+        <w>un</w>
+        <w>lado</w>
+        <w>esa</w>
+        <w>tara</w>
+        <w join="right">pasiva</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w norm="só">soio</w>
+        <w norm="serve">sirve</w>
+        <w>para</w>
+        <w>que</w>
+        <w>a</w>
+        <w>nosa</w>
+        <w>terra</w>
+        <w>fose</w>
+        <w>unha</w>
+        <w>colonia</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Castela</w>
+        </name>
+        <pc>,</pc>
+        <w>e</w>
+        <w>se</w>
+        <w>abondase</w>
+        <w>a</w>
+        <w>un</w>
+        <w>poder</w>
+        <w join="right">centralista</w>
+        <pc>,</pc>
+        <w>con</w>
+        <w>esa</w>
+        <w norm="fraqueza">flaqueza</w>
+        <w>con</w>
+        <w>que</w>
+        <w>as</w>
+        <w>mulleres</w>
+        <w>se</w>
+        <w join="right">entregan</w>
+        <pc>,</pc>
+        <w>á</w>
+        <w>forza</w>
+        <w>arbitraria</w>
+        <w>dos</w>
+        <w>seus</w>
+        <w join="right">castigadores</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w join="right">Non</w>
+        <pc>,</pc>
+        <w>en</w>
+        <w>verdade</w>
+        <w>levo</w>
+        <w>moito</w>
+        <w>tempo</w>
+        <w>aínda</w>
+        <w>perdido</w>
+        <w>nas</w>
+        <w>filas</w>
+        <w>do</w>
+        <w join="right">Partido</w>
+        <pc>,</pc>
+        <w>tan</w>
+        <w>inquedo</w>
+        <w>e</w>
+        <w norm="apaixonado">apasionado</w>
+        <w>como</w>
+        <w>o</w>
+        <w>que</w>
+        <w join="right">máis</w>
+        <pc>,</pc>
+        <w>porque</w>
+        <w>a</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>cobre</w>
+        <w>esa</w>
+        <w norm="personalidade">persoalidade</w>
+        <w>a</w>
+        <w>que</w>
+        <w norm="ten">tén</w>
+        <w join="right">dereito</w>
+        <pc>,</pc>
+        <w>deixemos</w>
+        <w>a</w>
+        <w>un</w>
+        <w>lado</w>
+        <w>toda</w>
+        <w>esa</w>
+        <w>gama</w>
+        <w>de</w>
+        <w>cousas</w>
+        <w norm="tradicionais" join="right">tradicioales</w>
+        <pc join="right">.</pc>
+        <pc>,</pc>
+        <w>que</w>
+        <w>nos</w>
+        <w>retratan</w>
+        <w>como</w>
+        <w>individuos</w>
+        <w>de</w>
+        <w>raza</w>
+        <w join="right">inferior</w>
+        <pc>.</pc>
+        <w>Nin</w>
+        <w>os</w>
+        <w>caracteres</w>
+        <w join="right">inferiores</w>
+        <pc>,</pc>
+        <w>nin</w>
+        <w>ningunha</w>
+        <w>outra</w>
+        <w>razón</w>
+        <w join="right">hai</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w norm="aboe">abone</w>
+        <w>que</w>
+        <w>nós</w>
+        <w>teñamos</w>
+        <w>que</w>
+        <w>vivir</w>
+        <w>xunguidos</w>
+        <w>a</w>
+        <w join="right">ninguén</w>
+        <pc>.</pc>
+        <w>Mais</w>
+        <w>para</w>
+        <w>isto</w>
+        <w>será</w>
+        <w join="right">preciso</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>no</w>
+        <w norm="troco">troque</w>
+        <w>biolóxico</w>
+        <w>que</w>
+        <w>supón</w>
+        <w>o</w>
+        <w join="right">estatuto</w>
+        <pc>,</pc>
+        <w>quede</w>
+        <w norm="plasmada">prasmada</w>
+        <w>a</w>
+        <w>nosa</w>
+        <w join="right">actuación</w>
+        <pc>.</pc>
+        <w join="right">Non</w>
+        <pc>,</pc>
+        <w>o</w>
+        <w>día</w>
+        <w>que</w>
+        <w>teñamos</w>
+        <w>votado</w>
+        <w norm="este" join="right">iste</w>
+        <pc>,</pc>
+        <w>é</w>
+        <w>precisamente</w>
+        <w>a</w>
+        <w>data</w>
+        <w>que</w>
+        <w norm="mostra" join="right">amostra</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>espertamos</w>
+        <w>dun</w>
+        <w>sono</w>
+        <w join="right">letárxico</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>entón</w>
+        <w>é</w>
+        <w>chegada</w>
+        <w>a</w>
+        <w>hora</w>
+        <w>de</w>
+        <w>que</w>
+        <w>pensemos</w>
+        <w>no</w>
+        <w norm="troco" join="right">troque</w>
+        <pc>,</pc>
+        <w>de</w>
+        <w>todos</w>
+        <w>nosos</w>
+        <w join="right">organismos</w>
+        <pc>,</pc>
+        <w>de</w>
+        <w>tal</w>
+        <w>sorte</w>
+        <w>que</w>
+        <w norm="rendan">rindan</w>
+        <w>con</w>
+        <w>arreglo</w>
+        <w>aos</w>
+        <w>caracteres</w>
+        <w join="right">paideumáticos</w>
+        <pc>,</pc>
+        <w>do</w>
+        <w>noso</w>
+        <w join="right">pobo</w>
+        <pc>,</pc>
+        <w>como</w>
+        <w>diría</w>
+        <w>un</w>
+        <w>amigo</w>
+        <w>meu</w>
+        <w>que</w>
+        <w norm="le">lee</w>
+        <w>a</w>
+        <w norm="ese">ise</w>
+        <w join="right">alemán</w>
+        <pc>,</pc>
+        <w>algo</w>
+        <w>truculento</w>
+        <w>que</w>
+        <w>chama</w>
+        <name type="PER">
+          <w join="right">Frobenious</w>
+        </name>
+        <pc>.</pc>
+        <w>Non</w>
+        <w>quero</w>
+        <w>seguir</w>
+        <w>este</w>
+        <w join="right">camiño</w>
+        <pc>,</pc>
+        <w>porque</w>
+        <w>alguén</w>
+        <w>pensara</w>
+        <w>que</w>
+        <w norm="este">iste</w>
+        <w join="right">traballo</w>
+        <pc>,</pc>
+        <w norm="serve">sirve</w>
+        <w>de</w>
+        <w>contestación</w>
+        <w>á</w>
+        <w>maneira</w>
+        <w>de</w>
+        <w>pensar</w>
+        <w join="right">miña</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>que</w>
+        <w>deixo</w>
+        <w>para</w>
+        <w>outro</w>
+        <w join="right">día</w>
+        <pc>.</pc>
+        <w>Hoxe</w>
+        <w>matino</w>
+        <w>nun</w>
+        <w join="right">acordo</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>me</w>
+        <w>enche</w>
+        <w>de</w>
+        <w join="right">ledicia</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>que</w>
+        <w>tomou</w>
+        <w>o</w>
+        <w>Concello</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Leiro</w>
+        </name>
+        <pc join="right">(</pc>
+        <name type="LOC">
+          <w join="right">Ourense</w>
+        </name>
+        <pc join="right">)</pc>
+        <pc>,</pc>
+        <w>a</w>
+        <w>miña</w>
+        <w>instancia</w>
+        <w>onde</w>
+        <w>son</w>
+        <w join="right">xestor</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w norm="Nesta">Nista</w>
+        <w>corporación</w>
+        <w>son</w>
+        <w>o</w>
+        <w>representante</w>
+        <w>do</w>
+        <w>Partido</w>
+        <w join="right">Galeguista</w>
+        <pc>,</pc>
+        <w>cando</w>
+        <w norm="esta">ista</w>
+        <w norm="mañá">mañán</w>
+        <w>fixen</w>
+        <w>a</w>
+        <w join="right">proposta</w>
+        <pc>,</pc>
+        <w>de</w>
+        <w>que</w>
+        <w>se</w>
+        <w>apoiase</w>
+        <w>o</w>
+        <w>acordo</w>
+        <w>de</w>
+        <w>plebiscitación</w>
+        <w>da</w>
+        <w>Autonomía</w>
+        <w join="right">Galega</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>nos</w>
+        <w norm="libere">liberte</w>
+        <w>dunha</w>
+        <w>tutela</w>
+        <w>noxenta</w>
+        <w>de</w>
+        <w join="right">séculos</w>
+        <pc>,</pc>
+        <w>todos</w>
+        <w>os</w>
+        <w>meus</w>
+        <w>compañeiros</w>
+        <w norm="apoiárona">apoiáro-na</w>
+        <w>por</w>
+        <w join="right">unanimidade</w>
+        <pc>.</pc>
+        <w>Quedaba</w>
+        <w>outra</w>
+        <w>cousa</w>
+        <w>que</w>
+        <w>facía</w>
+        <w join="right">falta</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w norm="esa">isa</w>
+        <w>era</w>
+        <w>que</w>
+        <w>se</w>
+        <w norm="dese">dise</w>
+        <w>algunha</w>
+        <w join="right">cantidade</w>
+        <pc>.</pc>
+        <w>Pero</w>
+        <w>a</w>
+        <w>situación</w>
+        <w>económica</w>
+        <w>nosa</w>
+        <w>é</w>
+        <w join="right">mala</w>
+        <pc>,</pc>
+        <w>porque</w>
+        <w>as</w>
+        <w>corporacións</w>
+        <w>que</w>
+        <w>nos</w>
+        <w join="right">antecederon</w>
+        <pc>,</pc>
+        <w>encargaronse</w>
+        <w>de</w>
+        <w>deixar</w>
+        <w>a</w>
+        <w join="right">facenda</w>
+        <pc>,</pc>
+        <w>nunha</w>
+        <w>situación</w>
+        <w join="right">precaria</w>
+        <pc>.</pc>
+        <w>De</w>
+        <w>esta</w>
+        <w join="right">sorte</w>
+        <pc>,</pc>
+        <w>nós</w>
+        <w norm="só">solo</w>
+        <w norm="poderemos">podremos</w>
+        <w>sufragar</w>
+        <w>os</w>
+        <w join="right">gastos</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>o</w>
+        <w>plebiscito</w>
+        <w>aquí</w>
+        <w join="right">teñen</w>
+        <pc>.</pc>
+        <w>Xa</w>
+        <w>nós</w>
+        <w>logramos</w>
+        <w>algo</w>
+        <w>que</w>
+        <w>na</w>
+        <w>hora</w>
+        <w>presente</w>
+        <w join="right">vexan</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>estamos</w>
+        <w>prontos</w>
+        <w>que</w>
+        <w>nosa</w>
+        <w join="right">terra</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>nos</w>
+        <w>veu</w>
+        <w>nacer</w>
+        <w norm="sexa">sea</w>
+        <w join="right">libre</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>que</w>
+        <w>aqueles</w>
+        <w>irmáns</w>
+        <w>que</w>
+        <w>están</w>
+        <w>no</w>
+        <w norm="estranxeiro" join="right">extranxeiro</w>
+        <pc>,</pc>
+        <w>se</w>
+        <w>decaten</w>
+        <w>que</w>
+        <w>somos</w>
+        <w>uns</w>
+        <w>cidadáns</w>
+        <w norm="conscientes">coscentes</w>
+        <w>de</w>
+        <w>que</w>
+        <w>representamos</w>
+        <w>a</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>de</w>
+        <w join="right">hoxe</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>será</w>
+        <w>libre</w>
+        <w>porque</w>
+        <w>nós</w>
+        <w>o</w>
+        <w join="right">queremos</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>aquelas</w>
+        <w>disposicións</w>
+        <w>que</w>
+        <w>un</w>
+        <w>poder</w>
+        <w>centralista</w>
+        <w norm="ditaba" join="right">dictaba</w>
+        <pc>,</pc>
+        <w>por</w>
+        <w>favorecer</w>
+        <w>a</w>
+        <w join="right">uns</w>
+        <pc>,</pc>
+        <w>con</w>
+        <w>evidente</w>
+        <w norm="prexuízo">perxuício</w>
+        <w join="right">noso</w>
+        <pc>,</pc>
+        <w>xa</w>
+        <w>non</w>
+        <w>voltarán</w>
+        <w join="right">máis</w>
+        <pc>.</pc>
+        <w>Para</w>
+        <w norm="iso">ilo</w>
+        <w>foi</w>
+        <w>mester</w>
+        <w>que</w>
+        <w>tivésemos</w>
+        <w>un</w>
+        <w>Goberno</w>
+        <w>de</w>
+        <w join="right">esquerda</w>
+        <pc>.</pc>
+        <w norm="Desengáñense">Desengañense</w>
+        <w>os</w>
+        <w>que</w>
+        <w join="right">pensan</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>as</w>
+        <w>dereitas</w>
+        <w>non</w>
+        <w>ían</w>
+        <w>a</w>
+        <w>facer</w>
+        <w>o</w>
+        <w join="right">mesmo</w>
+        <pc>.</pc>
+        <w>Un</w>
+        <w>goberno</w>
+        <w>de</w>
+        <w>dereitas</w>
+        <w>no</w>
+        <w>seu</w>
+        <w join="right">sono</w>
+        <pc>,</pc>
+        <w>dun</w>
+        <w>imperialismo</w>
+        <w join="right">megalómano</w>
+        <pc>,</pc>
+        <w norm="non">no'</w>
+        <w>nos</w>
+        <w>consentiría</w>
+        <w>máis</w>
+        <w>que</w>
+        <w>vivir</w>
+        <w>como</w>
+        <w norm="ata">asta</w>
+        <w>a</w>
+        <w join="right">data</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Fai</w>
+        <w>algúns</w>
+        <w>anos</w>
+        <w>que</w>
+        <w>o</w>
+        <w>meu</w>
+        <w join="right">pobo</w>
+        <pc>,</pc>
+        <w>a</w>
+        <w>min</w>
+        <w>e</w>
+        <w>a</w>
+        <w>outro</w>
+        <w>amigo</w>
+        <w>tiñannos</w>
+        <w>por</w>
+        <w>soñadores</w>
+        <w>dunha</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w join="right">autónoma</w>
+        <pc>,</pc>
+        <w>porque</w>
+        <w>pensaban</w>
+        <w>que</w>
+        <w>era</w>
+        <w>outro</w>
+        <w>novo</w>
+        <w>sistema</w>
+        <w join="right">caciquil</w>
+        <pc>.</pc>
+        <w>Agora</w>
+        <w>xa</w>
+        <w>pensan</w>
+        <w>de</w>
+        <w>outra</w>
+        <w join="right">maneira</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>unha</w>
+        <w>nova</w>
+        <w>vida</w>
+        <w>empeza</w>
+        <w>a</w>
+        <w norm="alborexar" join="right">alborear</w>
+        <pc>,</pc>
+        <w>mais</w>
+        <w>eu</w>
+        <w>penso</w>
+        <w norm="neste">niste</w>
+        <w join="right">intre</w>
+        <pc>,</pc>
+        <w>con</w>
+        <pc join="right">¡</pc>
+        <w>con</w>
+        <w>tanto</w>
+        <w join="right">carallo</w>
+        <pc>!</pc>
+        <pc join="right">¿</pc>
+        <w>a</w>
+        <w norm="que">qué</w>
+        <w norm="prezo" join="right">precio</w>
+        <pc>?</pc>
+        <w>as</w>
+        <w>cousas</w>
+        <w>pasan</w>
+        <w>e</w>
+        <w>nós</w>
+        <w join="right">quedamos</w>
+        <pc>.</pc>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>libre</w>
+        <w>e</w>
+        <w join="right">autónoma</w>
+        <pc>,</pc>
+        <w>deixa</w>
+        <w>con</w>
+        <w norm="el">ilo</w>
+        <w>de</w>
+        <w>ser</w>
+        <w join="right">aldraxada</w>
+        <pc>.</pc>
+        <w norm="Velaquí">Veleiquí</w>
+        <w>o</w>
+        <w>que</w>
+        <w>supón</w>
+        <w>o</w>
+        <w>noso</w>
+        <w>acordo</w>
+        <w>de</w>
+        <w join="right">hoxe</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w>Agustín</w>
+          <w join="right">Baladrón</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Un</w>
+        <w norm="homenaxe">homaxe</w>
+        <w>a</w>
+        <name type="PER">
+          <w>Antón</w>
+          <w>Vilar</w>
+          <w join="right">Ponte</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>grupo</w>
+        <w>alpinista</w>
+        <w>ferrolán</w>
+        <name type="MISC">
+          <w>Abrente</w>
+        </name>
+        <w>tributou</w>
+        <w>fai</w>
+        <w>días</w>
+        <w>un</w>
+        <w>sinxelo</w>
+        <w>e</w>
+        <w>orixinal</w>
+        <w norm="homenaxe">homaxe</w>
+        <w>a</w>
+        <name type="PER">
+          <w>Antón</w>
+          <w>Vilar</w>
+          <w>Ponte</w>
+        </name>
+        <w>consistente</w>
+        <w norm="no">na</w>
+        <w>colocación</w>
+        <w>de</w>
+        <w>unha</w>
+        <w>roca</w>
+        <w>no</w>
+        <w>monte</w>
+        <name type="LOC">
+          <w join="right">Laurel</w>
+        </name>
+        <pc>,</pc>
+        <w norm="preto">perto</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Ferrol</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Na</w>
+        <w>roca</w>
+        <w>foi</w>
+        <w norm="gravada">grabada</w>
+        <w>a</w>
+        <w>seguinte</w>
+        <w norm="inscrición" join="right">inscripción</w>
+        <pc>:</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w>Antón</w>
+          <w>Vilar</w>
+          <w>Ponte</w>
+        </name>
+        <w>Galego</w>
+        <w norm="esclarecido" join="right">escrarecido</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <pc join="right">«</pc>
+        <w>O</w>
+        <w>mar</w>
+        <w>é</w>
+        <w>o</w>
+        <w>único</w>
+        <w>espello</w>
+        <w>do</w>
+        <w join="right">infinito</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>forma</w>
+        <w>co</w>
+        <w>ceo</w>
+        <w>o</w>
+        <w norm="paréntese">paréntesis</w>
+        <w>grandioso</w>
+        <w>onde</w>
+        <w>a</w>
+        <w>cativez</w>
+        <w>do</w>
+        <w>home</w>
+        <w>se</w>
+        <w>aprecia</w>
+        <w norm="claramente" join="right">craramente</w>
+        <pc join="right">»</pc>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Neste</w>
+        <w join="right">acto</w>
+        <pc>,</pc>
+        <w>ao</w>
+        <w>que</w>
+        <w norm="concorreron">concurriron</w>
+        <w>representacións</w>
+        <w>de</w>
+        <w>diversas</w>
+        <w>entidades</w>
+        <w join="right">galegas</w>
+        <pc>,</pc>
+        <w>foron</w>
+        <w norm="lidos">leídos</w>
+        <w>varios</w>
+        <w norm="interesantes">intresantes</w>
+        <w>traballos</w>
+        <w>en</w>
+        <w>lembranza</w>
+        <w>de</w>
+        <name type="PER">
+          <w>Vilar</w>
+          <w join="right">Ponte</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>grupo</w>
+        <name type="MISC">
+          <w>Abrente</w>
+        </name>
+        <w>tivo</w>
+        <w>a</w>
+        <w>xentileza</w>
+        <w>de</w>
+        <w>ofrendar</w>
+        <w>estes</w>
+        <w>traballos</w>
+        <w>a</w>
+        <name type="MISC">
+          <w>A</w>
+          <w>Nosa</w>
+          <w>Terra</w>
+        </name>
+        <w>para</w>
+        <w>a</w>
+        <w>súa</w>
+        <w norm="publicación">pubricación</w>
+        <w>que</w>
+        <w>facemos</w>
+        <w>con</w>
+        <w>enteira</w>
+        <w norm="satisfacción">satisfación</w>
+        <w>e</w>
+        <w join="right">contentamento</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Neste</w>
+        <w>número</w>
+        <w norm="publicamos">pubricamos</w>
+        <w>algún</w>
+        <w>deles</w>
+        <w>e</w>
+        <w>nos</w>
+        <w>sucesivos</w>
+        <w>iremos</w>
+        <w norm="publicando">pubricando</w>
+        <w>os</w>
+        <w join="right">restantes</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Agradecemos</w>
+        <w>a</w>
+        <name type="MISC">
+          <w>Abrente</w>
+        </name>
+        <w>a</w>
+        <w>súa</w>
+        <w>xentileza</w>
+        <w>á</w>
+        <w>par</w>
+        <w>que</w>
+        <w>o</w>
+        <w>felicitamos</w>
+        <w>pola</w>
+        <w>súa</w>
+        <w>iniciativa</w>
+        <w>patriótica</w>
+        <w>e</w>
+        <w norm="digna">dina</w>
+        <w join="right">imitación</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w join="right">Gratitude</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Moitas</w>
+        <w>vegadas</w>
+        <w>vacilei</w>
+        <w>denantes</w>
+        <w>de</w>
+        <w norm="facer">faguer</w>
+        <w norm="estas">istas</w>
+        <w join="right">liñas</w>
+        <pc>.</pc>
+        <w>Non</w>
+        <w>sabía</w>
+        <w>eu</w>
+        <w norm="se">si</w>
+        <w>debía</w>
+        <w>ou</w>
+        <w>non</w>
+        <w>deixar</w>
+        <w norm="oír">ouvir</w>
+        <w>a</w>
+        <w>miña</w>
+        <w join="right">voz</w>
+        <pc>,</pc>
+        <w>plasmada</w>
+        <w>nos</w>
+        <w>trazos</w>
+        <w>inseguros</w>
+        <w>que</w>
+        <w>leva</w>
+        <w norm="esta">ista</w>
+        <w norm="cuartilla" join="right">coartela</w>
+        <pc>,</pc>
+        <w>no</w>
+        <w>singular</w>
+        <w>e</w>
+        <w>macio</w>
+        <w>homenaxe</w>
+        <w>que</w>
+        <w>hoxe</w>
+        <w>adicades</w>
+        <w>ao</w>
+        <w>meu</w>
+        <w>inesquecente</w>
+        <w join="right">irmán</w>
+        <pc>,</pc>
+        <w norm="cuxa">cuia</w>
+        <w>perda</w>
+        <w>choro</w>
+        <w>eu</w>
+        <w>e</w>
+        <w>chorarei</w>
+        <w>decote</w>
+        <w>ateigado</w>
+        <w>de</w>
+        <w join="right">dor</w>
+        <pc>,</pc>
+        <w>aliviado</w>
+        <w norm="soamente">somentes</w>
+        <w>polas</w>
+        <w>xurdias</w>
+        <w>mostras</w>
+        <w>de</w>
+        <w>agarimo</w>
+        <w>e</w>
+        <w>de</w>
+        <w>consideración</w>
+        <w>que</w>
+        <w>a</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>enteira</w>
+        <w>vén</w>
+        <w>dando</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>lembranza</w>
+        <w>e</w>
+        <w>das</w>
+        <w>que</w>
+        <w norm="este">iste</w>
+        <w>acto</w>
+        <w>hoxe</w>
+        <w join="right">celebraredes</w>
+        <pc>,</pc>
+        <w>irmáns</w>
+        <w>e</w>
+        <w>amigos</w>
+        <w>da</w>
+        <w>entidade</w>
+        <name type="MISC">
+          <w join="right">Abrente</w>
+        </name>
+        <pc>,</pc>
+        <w>é</w>
+        <w norm="admirable">admirábel</w>
+        <w>e</w>
+        <w>delicado</w>
+        <w norm="exemplar" join="right">exemprar</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Obrigado</w>
+        <w>por</w>
+        <w>forza</w>
+        <w norm="irresistible">irresistíbel</w>
+        <w>a</w>
+        <w>non</w>
+        <w norm="mostrarme">amostrarme</w>
+        <w>ausente</w>
+        <w>do</w>
+        <w join="right">homenaxe</w>
+        <pc>,</pc>
+        <w>eis</w>
+        <w>o</w>
+        <w>froito</w>
+        <w>da</w>
+        <w>miña</w>
+        <w join="right">decisión</w>
+        <pc>.</pc>
+        <w>Vós</w>
+        <w>saberedes</w>
+        <w norm="interpretalo">interpretá-lo</w>
+        <w>como</w>
+        <w>o</w>
+        <w>que</w>
+        <w join="right">é</w>
+        <pc>.</pc>
+        <w>A</w>
+        <w norm="expresión">eispresión</w>
+        <w norm="fiel">fidel</w>
+        <w>da</w>
+        <w>gratitude</w>
+        <w>do</w>
+        <w>máis</w>
+        <w>directo</w>
+        <w>herdeiro</w>
+        <w>e</w>
+        <w join="right">continuador</w>
+        <pc>,</pc>
+        <w norm="aínda">inda</w>
+        <w>que</w>
+        <w>cativo</w>
+        <w>e</w>
+        <w norm="pobre" join="right">probe</w>
+        <pc>,</pc>
+        <w>de</w>
+        <w>aquel</w>
+        <w norm="cuxo">cuio</w>
+        <w>nome</w>
+        <w>vós</w>
+        <w norm="decidistes">decidíchedes</w>
+        <w>esculpir</w>
+        <w>nun</w>
+        <w join="right">penedo</w>
+        <pc>,</pc>
+        <w>dende</w>
+        <w>agora</w>
+        <w norm="para">pra</w>
+        <w>min</w>
+        <w>e</w>
+        <w norm="para">pra</w>
+        <w norm="tódolos">tódo-los</w>
+        <w>bos</w>
+        <w>galegos</w>
+        <w norm="sacro" join="right">sagro</w>
+        <pc>,</pc>
+        <w>de</w>
+        <w norm="esta">ista</w>
+        <w>terra</w>
+        <w>bendita</w>
+        <w>que</w>
+        <w norm="el">il</w>
+        <w>tanto</w>
+        <w join="right">amou</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>a</w>
+        <w norm="cuxa">cuia</w>
+        <w>redención</w>
+        <w norm="el">il</w>
+        <w>consagrou</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>vida</w>
+        <w join="right">enteira</w>
+        <pc>.</pc>
+        <w>Por</w>
+        <w>mal</w>
+        <w>fado</w>
+        <w>crebada</w>
+        <w>no</w>
+        <w>intre</w>
+        <w>culminante</w>
+        <w>en</w>
+        <w>que</w>
+        <w>semella</w>
+        <w>que</w>
+        <w>as</w>
+        <w>prédicas</w>
+        <w>do</w>
+        <w>morto</w>
+        <w>ben</w>
+        <w>amado</w>
+        <w>van</w>
+        <w>a</w>
+        <w>teren</w>
+        <w>solución</w>
+        <w>e</w>
+        <w>arranxamento</w>
+        <w join="right">definitivos</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Por</w>
+        <w>todo</w>
+        <w>a</w>
+        <w>miña</w>
+        <w>gratitude</w>
+        <w join="right">infinda</w>
+        <pc>,</pc>
+        <w norm="sen">sin</w>
+        <w join="right">lindeiros</w>
+        <pc>.</pc>
+        <w>E</w>
+        <w>con</w>
+        <w>ela</w>
+        <w>a</w>
+        <w>de</w>
+        <w norm="uns">unhos</w>
+        <w norm="pobres">probes</w>
+        <w join="right">orfos</w>
+        <pc>,</pc>
+        <w>que</w>
+        <w>hoxe</w>
+        <w>choran</w>
+        <w>a</w>
+        <w>perda</w>
+        <w>de</w>
+        <w>aquel</w>
+        <w>que</w>
+        <w>si</w>
+        <w>foi</w>
+        <w>modelo</w>
+        <w>de</w>
+        <w>patriotas</w>
+        <w>e</w>
+        <w>homes</w>
+        <w join="right">sans</w>
+        <pc>,</pc>
+        <w join="right">foi</w>
+        <pc>,</pc>
+        <w join="right">asemade</w>
+        <pc>,</pc>
+        <w>modelo</w>
+        <w>de</w>
+        <w>pais</w>
+        <w>agarimosos</w>
+        <w>e</w>
+        <w>cumpridores</w>
+        <w>do</w>
+        <w>seu</w>
+        <w join="right">deber</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Irmáns</w>
+        <w>e</w>
+        <w>amigos</w>
+        <w>de</w>
+        <name type="MISC">
+          <w join="right">Abrente</w>
+        </name>
+        <pc>,</pc>
+        <w>dignadevos</w>
+        <w join="right">pois</w>
+        <pc>,</pc>
+        <w>recibir</w>
+        <w norm="estas">istas</w>
+        <w>liñas</w>
+        <w>mal</w>
+        <w>arranxadas</w>
+        <w>como</w>
+        <w>o</w>
+        <w>que</w>
+        <w join="right">son</w>
+        <pc>:</pc>
+        <w>como</w>
+        <w>esvaído</w>
+        <w norm="reflexo">refrexo</w>
+        <w>de</w>
+        <w>un</w>
+        <w norm="agradecemento">agradescimento</w>
+        <w>que</w>
+        <w>eu</w>
+        <w norm="só">soio</w>
+        <w>sei</w>
+        <w>manifestar</w>
+        <w>apertandovos</w>
+        <w>a</w>
+        <w>todos</w>
+        <w>contra</w>
+        <w>o</w>
+        <w>meu</w>
+        <w join="right">corazón</w>
+        <pc>,</pc>
+        <w>nunha</w>
+        <w>magna</w>
+        <w>aperta</w>
+        <w norm="espiritual">espritual</w>
+        <w norm="que endexamais">qu'endexamais</w>
+        <w>terá</w>
+        <w>de</w>
+        <w>se</w>
+        <w join="right">crebare</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w>Ramón</w>
+          <w>Vilar</w>
+          <w join="right">Ponte</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <pc join="right">(</pc>
+        <w>Do</w>
+        <w norm="homenaxe">homaxe</w>
+        <w>do</w>
+        <w>grupo</w>
+        <name type="MISC">
+          <w>Abrente</w>
+        </name>
+        <w>a</w>
+        <name type="PER">
+          <w>Antón</w>
+          <w>Villar</w>
+          <w join="right">Ponte</w>
+        </name>
+        <pc join="right">)</pc>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Os</w>
+        <w norm="temperáns">tempranos</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Eirís</w>
+        </name>
+        <pc>.</pc>
+        <w>Cuarteto</w>
+        <w>para</w>
+        <w>festas</w>
+        <w>e</w>
+        <w join="right">romaxes</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w join="right">Galegos</w>
+        <pc>:</pc>
+        <w>consumide</w>
+        <w>chocolate</w>
+        <w>fabricado</w>
+        <w>en</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>.</pc>
+        <w>Así</w>
+        <w>defenderedes</w>
+        <w>a</w>
+        <w>economía</w>
+        <w>da</w>
+        <w>nosa</w>
+        <w join="right">Terra</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Chocolateiros</w>
+        <w join="right">galegos</w>
+        <pc>:</pc>
+        <w>Para</w>
+        <w>defender</w>
+        <w>os</w>
+        <w>vosos</w>
+        <w join="right">intereses</w>
+        <pc>,</pc>
+        <w>os</w>
+        <w>da</w>
+        <w>vosa</w>
+        <w>industria</w>
+        <w>e</w>
+        <w>os</w>
+        <w>da</w>
+        <w>nosa</w>
+        <w join="right">Terra</w>
+        <pc>,</pc>
+        <w>non</w>
+        <w>debe</w>
+        <w>haber</w>
+        <w>ningún</w>
+        <w>que</w>
+        <w>non</w>
+        <w norm="pertenza">perteneza</w>
+        <w>á</w>
+        <name type="MISC">
+          <w>Asociación</w>
+          <w>de</w>
+          <w>Fabricantes</w>
+          <w>de</w>
+          <w>Chocolates</w>
+          <w>de</w>
+          <w join="right">Galicia</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Café</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>.</pc>
+        <name type="LOC">
+          <w>Cantón</w>
+          <w join="right">Grande</w>
+        </name>
+        <pc>.</pc>
+        <name type="LOC">
+          <w>A</w>
+          <w join="right">Cruña</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <pb n="4"/>
+      <p>
+        <w>Os</w>
+        <w>tempos</w>
+        <w>son</w>
+        <w join="right">chegados</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Cara</w>
+        <w>ó</w>
+        <w join="right">Plebiscito</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w>histórica</w>
+        <w norm="Asemblea">Asambreia</w>
+        <w>do</w>
+        <w>domingo</w>
+        <w>en</w>
+        <name type="LOC">
+          <w join="right">Santiago</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Unanimidade</w>
+        <w>na</w>
+        <w>arela</w>
+        <w join="right">autonomista</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>De</w>
+        <w>romaxe</w>
+        <w>da</w>
+        <w>galeguidade</w>
+        <w>podemos</w>
+        <w norm="cualificar">calificar</w>
+        <w>a</w>
+        <w norm="asemblea">asambreia</w>
+        <w>do</w>
+        <w join="right">domingo</w>
+        <pc>.</pc>
+        <w>Foina</w>
+        <w>polo</w>
+        <w norm="espírito">esprito</w>
+        <w>unanimemente</w>
+        <w>autonomista</w>
+        <w>que</w>
+        <w>reinou</w>
+        <w>en</w>
+        <w>todo</w>
+        <w join="right">intre</w>
+        <pc>.</pc>
+        <w>Nas</w>
+        <w>intervencións</w>
+        <w>e</w>
+        <w>no</w>
+        <w>fervor</w>
+        <w>manifestado</w>
+        <w>por</w>
+        <w norm="tódolos">tódo-los</w>
+        <w norm="concorrentes" join="right">concurrentes</w>
+        <pc>.</pc>
+        <w>Polo</w>
+        <w norm="convencemento">convencimento</w>
+        <w>absoluto</w>
+        <w>de</w>
+        <w>que</w>
+        <w>para</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>chegou</w>
+        <w>a</w>
+        <w>súa</w>
+        <w join="right">hora</w>
+        <pc>.</pc>
+        <w>Pola</w>
+        <w>enorme</w>
+        <w>e</w>
+        <w norm="cualificada">calificada</w>
+        <w norm="concorrencia" join="right">concurrencia</w>
+        <pc>.</pc>
+        <w>E</w>
+        <w>tamén</w>
+        <w>por</w>
+        <w>esta</w>
+        <w>circunstancia</w>
+        <w>para</w>
+        <w>nós</w>
+        <w>lediciosa</w>
+        <w>e</w>
+        <w norm="altamente">outamente</w>
+        <w norm="significativa" join="right">siñificativa</w>
+        <pc>:</pc>
+        <w>a</w>
+        <w>de</w>
+        <w>que</w>
+        <w>salvo</w>
+        <w>contadísimas</w>
+        <w norm="excepcións">exceicións</w>
+        <w>foi</w>
+        <w>o</w>
+        <w>noso</w>
+        <w>idioma</w>
+        <w>o</w>
+        <w>vehículo</w>
+        <w>que</w>
+        <w norm="vencellou">avencellou</w>
+        <w>a</w>
+        <w norm="tódolos">tódo-los</w>
+        <w>que</w>
+        <w>interviron</w>
+        <w>no</w>
+        <w join="right">debate</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Dixose</w>
+        <w>na</w>
+        <w>mesma</w>
+        <w norm="asemblea">asambreia</w>
+        <w>que</w>
+        <w>o</w>
+        <w>intre</w>
+        <w>veu</w>
+        <w>imposto</w>
+        <w>porque</w>
+        <w>a</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>tiñalle</w>
+        <w>chegado</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>hora</w>
+        <w join="right">histórica</w>
+        <pc>.</pc>
+        <w>Eis</w>
+        <w>a</w>
+        <w join="right">cousa</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Esta</w>
+        <w>é</w>
+        <w>a</w>
+        <w>hora</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>.</pc>
+        <w>Ninguén</w>
+        <w>pode</w>
+        <w>furtá-la</w>
+        <w>nin</w>
+        <w>fuxir</w>
+        <w>de</w>
+        <w>tal</w>
+        <w join="right">imperativo</w>
+        <pc>.</pc>
+        <w>Quen</w>
+        <w>o</w>
+        <w>fixera</w>
+        <w>acadaría</w>
+        <w>para</w>
+        <w>si</w>
+        <w>a</w>
+        <w>repulsa</w>
+        <w>unánime</w>
+        <w>e</w>
+        <w>violenta</w>
+        <w>da</w>
+        <w>opinión</w>
+        <w>galega</w>
+        <w>que</w>
+        <w>chegou</w>
+        <w>xa</w>
+        <w>á</w>
+        <w join="right">madureza</w>
+        <pc>.</pc>
+        <w>Na</w>
+        <w norm="conciencia">concencia</w>
+        <w>viva</w>
+        <w>do</w>
+        <w>noso</w>
+        <w>país</w>
+        <w>afincouse</w>
+        <w>definitivamente</w>
+        <w>a</w>
+        <w>idea</w>
+        <w>da</w>
+        <w>súa</w>
+        <w>liberación</w>
+        <w>e</w>
+        <w>o</w>
+        <w>domingo</w>
+        <w>afirmouse</w>
+        <w>a</w>
+        <w>vontade</w>
+        <w>férrea</w>
+        <w norm="indestrutible">indestructíbel</w>
+        <w>de</w>
+        <w>poñer</w>
+        <w>os</w>
+        <w>cimentos</w>
+        <w>da</w>
+        <w>nova</w>
+        <w>vida</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>que</w>
+        <w>vai</w>
+        <w>a</w>
+        <w join="right">comenzar</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Cómpre</w>
+        <w>agora</w>
+        <w>comenzar</w>
+        <w>urxentemente</w>
+        <w>os</w>
+        <w>traballos</w>
+        <w>preparatorios</w>
+        <w>da</w>
+        <w>gran</w>
+        <w>xornada</w>
+        <w>que</w>
+        <w>se</w>
+        <w join="right">aveciña</w>
+        <pc>.</pc>
+        <w>Temos</w>
+        <w>fe</w>
+        <w>e</w>
+        <w>seguridade</w>
+        <w>na</w>
+        <w join="right">conquista</w>
+        <pc>.</pc>
+        <w>O</w>
+        <w>plebiscito</w>
+        <w>será</w>
+        <w>un</w>
+        <w norm="triunfo">trunfo</w>
+        <w join="right">absoluto</w>
+        <pc>.</pc>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>en</w>
+        <w>pé</w>
+        <w>poñerá</w>
+        <w>no</w>
+        <w>mes</w>
+        <w>vindeiro</w>
+        <w>a</w>
+        <w>primeira</w>
+        <w>pedra</w>
+        <w>do</w>
+        <w>seu</w>
+        <w>novo</w>
+        <w>edificio</w>
+        <w>revalidando</w>
+        <w>nas</w>
+        <w>furnas</w>
+        <w>a</w>
+        <w>arela</w>
+        <w>manifestada</w>
+        <w>o</w>
+        <w join="right">domingo</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>vai</w>
+        <w>a</w>
+        <w>ser</w>
+        <w join="right">libre</w>
+        <pc>.</pc>
+        <w>Diante</w>
+        <w>deste</w>
+        <w norm="próximo">próisimo</w>
+        <w>e</w>
+        <w>seguro</w>
+        <w>futuro</w>
+        <w>obrigado</w>
+        <w>é</w>
+        <w>que</w>
+        <w>nós</w>
+        <w>os</w>
+        <w>que</w>
+        <w>a</w>
+        <w>elo</w>
+        <w>adicamos</w>
+        <w>todo</w>
+        <w>ao</w>
+        <w>longo</w>
+        <w>dos</w>
+        <w join="right">anos</w>
+        <pc>,</pc>
+        <w>deixamos</w>
+        <w>brincar</w>
+        <w>lediciosamente</w>
+        <w>o</w>
+        <w>noso</w>
+        <w>entusiasmo</w>
+        <w>que</w>
+        <w>é</w>
+        <w>tamén</w>
+        <w>o</w>
+        <w>pago</w>
+        <w>a</w>
+        <w>unha</w>
+        <w>laboura</w>
+        <w>ao</w>
+        <w>fin</w>
+        <w norm="vitoriosa" join="right">victoriosa</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Vinte</w>
+        <w>anos</w>
+        <w>de</w>
+        <w>sementeira</w>
+        <w>poideron</w>
+        <w norm="doarnos">donarnos</w>
+        <w>esta</w>
+        <w>hora</w>
+        <w>de</w>
+        <w join="right">recolleita</w>
+        <pc>.</pc>
+        <w>Comprendede</w>
+        <w>a</w>
+        <w>nosa</w>
+        <w join="right">emoción</w>
+        <pc>.</pc>
+        <w>Nova</w>
+        <w>ofrenda</w>
+        <w>que</w>
+        <w>facemos</w>
+        <w>hoxe</w>
+        <w norm="preto">perto</w>
+        <w>do</w>
+        <w norm="triunfo" join="right">trunfo</w>
+        <pc>,</pc>
+        <w>á</w>
+        <w>Terra</w>
+        <w>que</w>
+        <w>vai</w>
+        <w>acadar</w>
+        <w>a</w>
+        <w>súa</w>
+        <w join="right">liberdade</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Como</w>
+        <w norm="resumo">resume</w>
+        <w>do</w>
+        <w>noso</w>
+        <w>pensamento</w>
+        <w>repitamos</w>
+        <w>os</w>
+        <w>tres</w>
+        <w>vivas</w>
+        <w>que</w>
+        <w>constantemente</w>
+        <w>voaron</w>
+        <w>por</w>
+        <w>riba</w>
+        <w>da</w>
+        <w norm="asemblea" join="right">asambreia</w>
+        <pc>:</pc>
+      </p>
+      <p>
+        <w>Viva</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w join="right">libre</w>
+        <pc>.</pc>
+        <w>Viva</w>
+        <w>a</w>
+        <w norm="República" join="right">Repúbrica</w>
+        <pc>.</pc>
+        <w>Viva</w>
+        <w>o</w>
+        <name type="MISC">
+          <w norm="Fronte">Frente</w>
+          <w join="right">Popular</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Celebrouse</w>
+        <w>o</w>
+        <w>domingo</w>
+        <w>a</w>
+        <w>anunciada</w>
+        <w norm="Asemblea">Asambreia</w>
+        <w>de</w>
+        <w join="right">Concellos</w>
+        <pc>,</pc>
+        <w norm="Deputacións" join="right">Diputacións</w>
+        <pc>,</pc>
+        <w>partidos</w>
+        <w join="right">políticos</w>
+        <pc>,</pc>
+        <w>entidades</w>
+        <w join="right">económicas</w>
+        <pc>,</pc>
+        <w norm="deputados" join="right">diputados</w>
+        <pc>,</pc>
+        <w norm="etcétera" join="right">etc</w>
+        <pc>.</pc>
+        <w>para</w>
+        <w>o</w>
+        <w>sinalamento</w>
+        <w>da</w>
+        <w>data</w>
+        <w>a</w>
+        <w>facer</w>
+        <w>o</w>
+        <w>Plebiscito</w>
+        <w>do</w>
+        <w>Estatuto</w>
+        <w join="right">Galego</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w norm="Concorrentes">Concurrentes</w>
+        <w>a</w>
+        <w join="right">adhesións</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w norm="Imposible">Imposíbel</w>
+        <w>recoller</w>
+        <w>aquí</w>
+        <w>detalladamente</w>
+        <w>a</w>
+        <w>enorme</w>
+        <w>cantidade</w>
+        <w>de</w>
+        <w>representantes</w>
+        <w>que</w>
+        <w>asistiron</w>
+        <w>á</w>
+        <w norm="Asemblea">Asambreia</w>
+        <w>a</w>
+        <w>adhesións</w>
+        <w join="right">recibidas</w>
+        <pc>.</pc>
+        <w>A</w>
+        <w>prensa</w>
+        <w>cotián</w>
+        <w>deu</w>
+        <w>xa</w>
+        <w norm="amplamente">ampramente</w>
+        <w>detallada</w>
+        <w join="right">relación</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Abonda</w>
+        <w norm="dicir">decir</w>
+        <w>que</w>
+        <w>endexamais</w>
+        <w>en</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>celebrouse</w>
+        <w>unha</w>
+        <w norm="Asemblea">Asambreia</w>
+        <w>con</w>
+        <w>tal</w>
+        <w norm="concorrencia" join="right">concurrencia</w>
+        <pc>.</pc>
+        <w>Sumaban</w>
+        <w>moitos</w>
+        <w>centos</w>
+        <w>os</w>
+        <w>representantes</w>
+        <w>autorizados</w>
+        <w>de</w>
+        <w>todo</w>
+        <w>canto</w>
+        <w>en</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w norm="constitúe">constituie</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>vida</w>
+        <w>en</w>
+        <w norm="tódolos">tódo-los</w>
+        <w norm="ordes" join="right">ordens</w>
+        <pc>.</pc>
+        <w>Eran</w>
+        <w>milleiros</w>
+        <w>os</w>
+        <w>presentes</w>
+        <w>que</w>
+        <w>de</w>
+        <w norm="tódolos">tódo-los</w>
+        <w>currunchos</w>
+        <w>da</w>
+        <w>Terra</w>
+        <w>viñeron</w>
+        <w>a</w>
+        <w>asistir</w>
+        <w>aos</w>
+        <w>debates</w>
+        <w>pendentes</w>
+        <w>dunha</w>
+        <w join="right">arela</w>
+        <pc>:</pc>
+        <w>a</w>
+        <w>de</w>
+        <w>que</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>se</w>
+        <w>dispón</w>
+        <w>a</w>
+        <w norm="conquerer">conquerir</w>
+        <w>a</w>
+        <w>súa</w>
+        <w join="right">liberdade</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>entusiasmo</w>
+        <w>era</w>
+        <w norm="inenarrable" join="right">inenarrábel</w>
+        <pc>.</pc>
+        <w>O</w>
+        <w norm="amplísimo">amprísimo</w>
+        <w>salón</w>
+        <w>onde</w>
+        <w>tivo</w>
+        <w>lugar</w>
+        <w>a</w>
+        <w norm="asemblea">asambreia</w>
+        <w>estaba</w>
+        <w>materialmente</w>
+        <w>ateigado</w>
+        <w>e</w>
+        <w>polas</w>
+        <w>contiguas</w>
+        <w>e</w>
+        <w>pasillos</w>
+        <w>apiñabase</w>
+        <w>a</w>
+        <w>xente</w>
+        <w>que</w>
+        <w>non</w>
+        <w>cabía</w>
+        <w>no</w>
+        <w join="right">salón</w>
+        <pc>.</pc>
+        <w>Moitos</w>
+        <w norm="deputados" join="right">diputados</w>
+        <pc>,</pc>
+        <w>a</w>
+        <w norm="maioría">maoría</w>
+        <w>dos</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>.</pc>
+        <w norm="Tódolos">Tódo-los</w>
+        <w>partidos</w>
+        <w>enviaron</w>
+        <w>numerosas</w>
+        <w join="right">representacións</w>
+        <pc>.</pc>
+        <w>Centos</w>
+        <w>de</w>
+        <w>galeguistas</w>
+        <w>vidos</w>
+        <w>de</w>
+        <w>toda</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Mesa</w>
+        <w>da</w>
+        <w norm="Asemblea" join="right">Asambreia</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Presidiron</w>
+        <w>a</w>
+        <w norm="asemblea">asambreia</w>
+        <w>o</w>
+        <w>alcalde</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Santiago</w>
+        </name>
+        <pc>,</pc>
+        <w>irmán</w>
+        <name type="PER">
+          <w>Casal</w>
+        </name>
+        <w>que</w>
+        <w>xustificou</w>
+        <w>a</w>
+        <w>ausencia</w>
+        <w>do</w>
+        <w>Presidente</w>
+        <w>do</w>
+        <w>Comité</w>
+        <w join="right">Central</w>
+        <pc>,</pc>
+        <w>señor</w>
+        <name type="PER">
+          <w>Osorio</w>
+          <w join="right">Tafall</w>
+        </name>
+        <pc>,</pc>
+        <w>cos</w>
+        <w>presidentes</w>
+        <w>das</w>
+        <w>catro</w>
+        <w norm="Deputacións">Diputacións</w>
+        <w>e</w>
+        <w>os</w>
+        <w>alcaldes</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>A</w>
+          <w join="right">Coruña</w>
+        </name>
+        <pc>,</pc>
+        <name type="LOC">
+          <w join="right">Vigo</w>
+        </name>
+        <pc>,</pc>
+        <name type="LOC">
+          <w join="right">Pontevedra</w>
+        </name>
+        <pc>,</pc>
+        <name type="LOC">
+          <w join="right">Lalín</w>
+        </name>
+        <pc>,</pc>
+        <name type="LOC">
+          <w>Lugo</w>
+        </name>
+        <w>e</w>
+        <w>outros</w>
+        <w join="right">alcaldes</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w join="right">Intervencións</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Ao</w>
+        <w>comenzar</w>
+        <w>a</w>
+        <w norm="asemblea">asambreia</w>
+        <w>a</w>
+        <w>banda</w>
+        <w>municipal</w>
+        <w>executa</w>
+        <w>o</w>
+        <w norm="himno">hino</w>
+        <w>galego</w>
+        <w>que</w>
+        <w>a</w>
+        <w norm="asemblea">asambreia</w>
+        <w>en</w>
+        <w>pé</w>
+        <w>corea</w>
+        <w>con</w>
+        <w>gran</w>
+        <w join="right">entusiasmo</w>
+        <pc>.</pc>
+        <w>Seguidamente</w>
+        <w>toca</w>
+        <w>o</w>
+        <w>himno</w>
+        <w>de</w>
+        <name type="PER">
+          <w join="right">Riego</w>
+        </name>
+        <pc>.</pc>
+        <w>Danse</w>
+        <w>gran</w>
+        <w>cantidade</w>
+        <w>de</w>
+        <w>vivas</w>
+        <w>á</w>
+        <w norm="República">Repúbrica</w>
+        <w>e</w>
+        <w>a</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w join="right">libre</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>presidente</w>
+        <w>en</w>
+        <w>galego</w>
+        <w>dá</w>
+        <w>conta</w>
+        <w>do</w>
+        <w norm="obxecto">ouxeto</w>
+        <w>da</w>
+        <w norm="asemblea" join="right">asambreia</w>
+        <pc>.</pc>
+        <w>Intervén</w>
+        <name type="PER">
+          <w>Suárez</w>
+          <w>Picallo</w>
+        </name>
+        <w>para</w>
+        <w>facer</w>
+        <w>un</w>
+        <w>breve</w>
+        <w>discurso</w>
+        <w>emocionado</w>
+        <w>lembrando</w>
+        <w>o</w>
+        <w>proceso</w>
+        <w>autonomista</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>e</w>
+        <w>o</w>
+        <w>intre</w>
+        <w>histórico</w>
+        <w join="right">actual</w>
+        <pc>.</pc>
+        <w>Adica</w>
+        <w>uns</w>
+        <w norm="parágrafos">párrafos</w>
+        <w norm="ó">ao</w>
+        <w>irmán</w>
+        <w>e</w>
+        <w>mestre</w>
+        <w join="right">desaparecido</w>
+        <pc>,</pc>
+        <name type="PER">
+          <w>Antón</w>
+          <w>Vilar</w>
+          <w join="right">Ponte</w>
+        </name>
+        <pc>,</pc>
+        <w>pedindo</w>
+        <w>uns</w>
+        <w>momentos</w>
+        <w>de</w>
+        <w>silencio</w>
+        <w>á</w>
+        <w>súa</w>
+        <w join="right">lembranza</w>
+        <pc>.</pc>
+        <w>A</w>
+        <w norm="asemblea">asambreia</w>
+        <w>nun</w>
+        <w>intre</w>
+        <w>emocionante</w>
+        <w norm="ponse">pónse</w>
+        <w>de</w>
+        <w>pé</w>
+        <w>e</w>
+        <w>garda</w>
+        <w>un</w>
+        <w>silencio</w>
+        <w join="right">elocuente</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w>Álvaro</w>
+          <w>das</w>
+          <w>Casas</w>
+        </name>
+        <w>en</w>
+        <w join="right">galego</w>
+        <pc>,</pc>
+        <w>intervén</w>
+        <w>para</w>
+        <w>pedir</w>
+        <w>unha</w>
+        <w norm="aclaración">acraración</w>
+        <w>que</w>
+        <w>o</w>
+        <w>señor</w>
+        <name type="PER">
+          <w>Rajoi</w>
+        </name>
+        <w>lle</w>
+        <w join="right">fai</w>
+        <pc>,</pc>
+        <w>encol</w>
+        <w>da</w>
+        <w>ausencia</w>
+        <w>do</w>
+        <w norm="reitor">rector</w>
+        <w>da</w>
+        <w join="right">Universidade</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w norm="deputado">diputado</w>
+        <w>por</w>
+        <name type="LOC">
+          <w>Lugo</w>
+        </name>
+        <w>señor</w>
+        <name type="PER">
+          <w>Peñamaría</w>
+        </name>
+        <w>en</w>
+        <w join="right">galego</w>
+        <pc>,</pc>
+        <w>adhirese</w>
+        <w>á</w>
+        <w norm="asemblea">asambreia</w>
+        <w>en</w>
+        <w>nome</w>
+        <w>propio</w>
+        <w>e</w>
+        <w>no</w>
+        <w>do</w>
+        <w>señor</w>
+        <name type="PER">
+          <w>Portela</w>
+          <w join="right">Valladares</w>
+        </name>
+        <pc>,</pc>
+        <w>que</w>
+        <w>ofrece</w>
+        <w>á</w>
+        <w>causa</w>
+        <w>autonomista</w>
+        <w>os</w>
+        <w>seus</w>
+        <w norm="xornais">xornaes</w>
+        <w>e</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>aportación</w>
+        <w>de</w>
+        <w>todo</w>
+        <w join="right">carácter</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w norm="secretario">segredario</w>
+        <w>da</w>
+        <w norm="asemblea" join="right">asambreia</w>
+        <pc>,</pc>
+        <w>señor</w>
+        <name type="PER">
+          <w join="right">Raxoi</w>
+        </name>
+        <pc>,</pc>
+        <w>dá</w>
+        <w>lectura</w>
+        <w>ás</w>
+        <w>actas</w>
+        <w>da</w>
+        <w norm="asemblea">asambreia</w>
+        <w>que</w>
+        <w>aprobou</w>
+        <w>o</w>
+        <w>estatuto</w>
+        <w>e</w>
+        <w>das</w>
+        <w>efectuadas</w>
+        <w join="right">sucesivamente</w>
+        <pc>.</pc>
+        <w>Le</w>
+        <w>tamén</w>
+        <w>o</w>
+        <w>decreto</w>
+        <w>que</w>
+        <w>faculta</w>
+        <w>ao</w>
+        <w>comité</w>
+        <w>central</w>
+        <w>para</w>
+        <w>a</w>
+        <w>convocatoria</w>
+        <w>do</w>
+        <w>plebiscito</w>
+        <w>e</w>
+        <w>a</w>
+        <w>acta</w>
+        <w>da</w>
+        <w>xuntanza</w>
+        <w>de</w>
+        <w norm="deputados">diputados</w>
+        <w>e</w>
+        <w>compromisarios</w>
+        <w>feita</w>
+        <w>en</w>
+        <name type="LOC">
+          <w>Madrid</w>
+        </name>
+        <w>na</w>
+        <w>que</w>
+        <w>se</w>
+        <w>acordou</w>
+        <w>convocar</w>
+        <w>a</w>
+        <w norm="asemblea">asambreia</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Santiago</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Lense</w>
+        <w>tres</w>
+        <w>propostas</w>
+        <w>firmadas</w>
+        <w>polo</w>
+        <w>representante</w>
+        <w>da</w>
+        <name type="MISC">
+          <w>Unión</w>
+          <w>Republicana</w>
+          <w>de</w>
+          <w join="right">Pontevedra</w>
+        </name>
+        <pc>,</pc>
+        <w>señor</w>
+        <name type="PER">
+          <w join="right">Adrio</w>
+        </name>
+        <pc>;</pc>
+        <w>da</w>
+        <name type="MISC">
+          <w>Dereita</w>
+          <w>Galeguista</w>
+        </name>
+        <w>e</w>
+        <w>do</w>
+        <name type="MISC">
+          <w>Partido</w>
+          <w join="right">Galeguista</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Defende</w>
+        <name type="PER">
+          <w>Adrio</w>
+        </name>
+        <w>en</w>
+        <w>galego</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>na</w>
+        <w>que</w>
+        <w>se</w>
+        <w>sinala</w>
+        <w>que</w>
+        <w>a</w>
+        <w>data</w>
+        <w>do</w>
+        <w>plebiscito</w>
+        <w>debe</w>
+        <w>ser</w>
+        <w>o</w>
+        <w>21</w>
+        <w>de</w>
+        <w norm="xuño" join="right">xunio</w>
+        <pc>.</pc>
+        <w>Argumenta</w>
+        <w>no</w>
+        <w>seu</w>
+        <w join="right">favor</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w>Filgueira</w>
+          <w>Valverde</w>
+        </name>
+        <w>defende</w>
+        <w>a</w>
+        <w>da</w>
+        <name type="MISC">
+          <w>Dereita</w>
+          <w>Galeguista</w>
+        </name>
+        <w>non</w>
+        <w>facendo</w>
+        <w>fincapé</w>
+        <w>na</w>
+        <w>data</w>
+        <w>que</w>
+        <w>debe</w>
+        <w>ser</w>
+        <w>urxente</w>
+        <w>e</w>
+        <w>coas</w>
+        <w>garantías</w>
+        <w norm="constitucionais">constitucionaes</w>
+        <w>en</w>
+        <w join="right">vigor</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w>Alonso</w>
+          <w>Ríos</w>
+        </name>
+        <w>en</w>
+        <w>galego</w>
+        <w>fai</w>
+        <w>un</w>
+        <w>emocionado</w>
+        <w norm="e">i</w>
+        <w>elocuente</w>
+        <w>discurso</w>
+        <w>no</w>
+        <w>que</w>
+        <w>fala</w>
+        <w>da</w>
+        <w>hora</w>
+        <w>histórica</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>a</w>
+        <w>quen</w>
+        <w>chegou</w>
+        <w>o</w>
+        <w>intre</w>
+        <w>da</w>
+        <w>súa</w>
+        <w join="right">liberación</w>
+        <pc>.</pc>
+        <w>Avoga</w>
+        <w>porque</w>
+        <w>se</w>
+        <w>sinale</w>
+        <w>a</w>
+        <w>data</w>
+        <w norm="sen">sin</w>
+        <w>ter</w>
+        <w>en</w>
+        <w>conta</w>
+        <w>ningunha</w>
+        <w norm="clase">cras</w>
+        <w>de</w>
+        <w>circunstancias</w>
+        <w>alleas</w>
+        <w>que</w>
+        <w>poidan</w>
+        <w>demorar</w>
+        <w>o</w>
+        <w join="right">plebiscito</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w>Gumersindo</w>
+          <w>Montero</w>
+        </name>
+        <w>en</w>
+        <w join="right">galego</w>
+        <pc>,</pc>
+        <w>polo</w>
+        <name type="MISC">
+          <w>Partido</w>
+          <w>Comunista</w>
+        </name>
+        <w>fai</w>
+        <w>unha</w>
+        <w>intervención</w>
+        <w>sinxela</w>
+        <w>e</w>
+        <w>simpática</w>
+        <w>na</w>
+        <w>que</w>
+        <w>di</w>
+        <w>que</w>
+        <w>os</w>
+        <w>comunistas</w>
+        <w>están</w>
+        <w>dispostos</w>
+        <w>a</w>
+        <w>axudar</w>
+        <w>con</w>
+        <w>todo</w>
+        <w>entusiasmo</w>
+        <w>o</w>
+        <w>plebiscito</w>
+        <w>e</w>
+        <w>que</w>
+        <w>debe</w>
+        <w>ser</w>
+        <w>o</w>
+        <name type="MISC">
+          <w norm="Fronte">Frente</w>
+          <w>Popular</w>
+        </name>
+        <w>o</w>
+        <w>que</w>
+        <w>máis</w>
+        <w>directamente</w>
+        <w>dirixa</w>
+        <w>a</w>
+        <w>campaña</w>
+        <w>de</w>
+        <w>propaganda</w>
+        <w>e</w>
+        <w join="right">organización</w>
+        <pc>.</pc>
+        <w>Alude</w>
+        <w>á</w>
+        <w>necesidade</w>
+        <w>de</w>
+        <w>que</w>
+        <w>non</w>
+        <w>se</w>
+        <w>produza</w>
+        <w>ningún</w>
+        <w>contrabando</w>
+        <w>do</w>
+        <w>bienio</w>
+        <w join="right">mouro</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>irmán</w>
+        <name type="PER">
+          <w>Domínguez</w>
+        </name>
+        <w>en</w>
+        <w>nome</w>
+        <w>do</w>
+        <name type="MISC">
+          <w>Sindicato</w>
+          <w>de</w>
+          <w>Carballedo</w>
+        </name>
+        <w>ofrece</w>
+        <w>cincocentas</w>
+        <w>pesetas</w>
+        <w>e</w>
+        <w>todo</w>
+        <w>o</w>
+        <w>apoio</w>
+        <w>daquel</w>
+        <w join="right">sindicato</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w join="right">Bergueiro</w>
+        </name>
+        <pc>,</pc>
+        <w>en</w>
+        <w join="right">castelán</w>
+        <pc>,</pc>
+        <w>polo</w>
+        <name type="MISC">
+          <w>Sindicato</w>
+          <w>de</w>
+          <w>Tabeirós</w>
+        </name>
+        <w>ofrece</w>
+        <w>a</w>
+        <w>aportación</w>
+        <w>das</w>
+        <w>masas</w>
+        <w norm="rurais">ruraes</w>
+        <w join="right">galegas</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w>Suárez</w>
+          <w>Picallo</w>
+        </name>
+        <w>recolle</w>
+        <w>unhas</w>
+        <w>das</w>
+        <w>intervencións</w>
+        <w>e</w>
+        <w>defende</w>
+        <w>o</w>
+        <w>criterio</w>
+        <w>de</w>
+        <w>que</w>
+        <w>o</w>
+        <w>comité</w>
+        <w norm="de acordo">d'acordo</w>
+        <w>co</w>
+        <w>goberno</w>
+        <w>sinale</w>
+        <w>a</w>
+        <w join="right">data</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w join="right">Bóveda</w>
+        </name>
+        <pc>,</pc>
+        <w>polo</w>
+        <name type="MISC">
+          <w>Partido</w>
+          <w>Galeguista</w>
+        </name>
+        <w>defende</w>
+        <w>a</w>
+        <w>proposta</w>
+        <w>do</w>
+        <w>Partido</w>
+        <w>na</w>
+        <w>súa</w>
+        <w>primeira</w>
+        <w>parte</w>
+        <w>que</w>
+        <w>se</w>
+        <w>refire</w>
+        <w>á</w>
+        <w>urxencia</w>
+        <w>da</w>
+        <w join="right">convocatoria</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Interveñen</w>
+        <w>tamén</w>
+        <name type="PER">
+          <w>Alfredo</w>
+          <w join="right">Somoza</w>
+        </name>
+        <pc>,</pc>
+        <w norm="deputado">diputado</w>
+        <w>pola</w>
+        <name type="LOC">
+          <w norm="Coruña">Cruña</w>
+        </name>
+        <w>que</w>
+        <w>fala</w>
+        <w>en</w>
+        <w join="right">galego</w>
+        <pc>,</pc>
+        <w>para</w>
+        <w norm="dicir">decir</w>
+        <w>que</w>
+        <w>cómpre</w>
+        <w>deixar</w>
+        <w norm="sen">sin</w>
+        <w>sinalar</w>
+        <w>a</w>
+        <w>data</w>
+        <w>para</w>
+        <w>que</w>
+        <w>o</w>
+        <w>comité</w>
+        <w>se</w>
+        <w>poña</w>
+        <w>á</w>
+        <w>fala</w>
+        <w>co</w>
+        <w>goberno</w>
+        <w>buscando</w>
+        <w>a</w>
+        <w>data</w>
+        <w>máis</w>
+        <w>propicia</w>
+        <w norm="segundo">según</w>
+        <w>as</w>
+        <w>circunstancias</w>
+        <w join="right">políticas</w>
+        <pc>;</pc>
+        <name type="PER">
+          <w join="right">Méndez</w>
+        </name>
+        <pc>,</pc>
+        <w>de</w>
+        <name type="MISC">
+          <w>Unión</w>
+          <w>Republicana</w>
+          <w>de</w>
+          <w>Pontevedra</w>
+        </name>
+        <w>para</w>
+        <w>insistir</w>
+        <w>en</w>
+        <w>que</w>
+        <w>se</w>
+        <w>sinale</w>
+        <w>a</w>
+        <w>data</w>
+        <w>urxentemente</w>
+        <w>e</w>
+        <w>para</w>
+        <w>facer</w>
+        <w>alusións</w>
+        <w>de</w>
+        <w>carácter</w>
+        <w>político</w>
+        <w>que</w>
+        <w>non</w>
+        <w>encaixan</w>
+        <w>no</w>
+        <w join="right">intre</w>
+        <pc>;</pc>
+        <name type="PER">
+          <w>Insua</w>
+          <w>Sánchez</w>
+        </name>
+        <w>para</w>
+        <w>avogar</w>
+        <w>pola</w>
+        <w>proposta</w>
+        <w>de</w>
+        <w>sinalamento</w>
+        <w>da</w>
+        <w>data</w>
+        <w>polo</w>
+        <w>comité</w>
+        <w>do</w>
+        <w join="right">goberno</w>
+        <pc>;</pc>
+        <w>o</w>
+        <w norm="deputado">diputado</w>
+        <w>de</w>
+        <name type="MISC">
+          <w>Unión</w>
+          <w>Republicana</w>
+          <w>pola</w>
+          <w norm="Coruña">Cruña</w>
+        </name>
+        <w>señor</w>
+        <name type="PER">
+          <w>García</w>
+          <w join="right">Ramos</w>
+        </name>
+        <pc>,</pc>
+        <w>en</w>
+        <w join="right">galego</w>
+        <pc>,</pc>
+        <w>para</w>
+        <w>ofrecer</w>
+        <w>entusiasta</w>
+        <w>apoio</w>
+        <w>do</w>
+        <w>seu</w>
+        <w join="right">partido</w>
+        <pc>;</pc>
+        <w>e</w>
+        <w join="right">algúns</w>
+        <pc>,</pc>
+        <w>como</w>
+        <w>o</w>
+        <w>representante</w>
+        <w>do</w>
+        <name type="MISC">
+          <w>Partido</w>
+          <w>Federal</w>
+          <w>de</w>
+          <w norm="Esquerda">Izquierda</w>
+          <w join="right">Galega</w>
+        </name>
+        <pc>,</pc>
+        <w>que</w>
+        <w>tamén</w>
+        <w>fala</w>
+        <w>en</w>
+        <w join="right">galego</w>
+        <pc>,</pc>
+        <w>e</w>
+        <w>outros</w>
+        <w>que</w>
+        <w>avogan</w>
+        <w>nos</w>
+        <w>dous</w>
+        <w>criterios</w>
+        <w join="right">sustentados</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w join="right">acordo</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Despois</w>
+        <w>dunha</w>
+        <w>nova</w>
+        <w>intervención</w>
+        <w>de</w>
+        <name type="PER">
+          <w>Adrio</w>
+        </name>
+        <w>no</w>
+        <w>senso</w>
+        <w>de</w>
+        <w>engadir</w>
+        <w>que</w>
+        <w>o</w>
+        <w>sinalamento</w>
+        <w>da</w>
+        <w join="right">data</w>
+        <pc>,</pc>
+        <w>do</w>
+        <w>comité</w>
+        <w>co</w>
+        <w join="right">goberno</w>
+        <pc>,</pc>
+        <w>non</w>
+        <w>exceda</w>
+        <w>do</w>
+        <w>mes</w>
+        <w>de</w>
+        <w norm="xuño">xunio</w>
+        <w>e</w>
+        <w>outra</w>
+        <w>de</w>
+        <name type="PER">
+          <w>Bóveda</w>
+        </name>
+        <w>para</w>
+        <w>adherirse</w>
+        <w>en</w>
+        <w>nome</w>
+        <w>do</w>
+        <w>Partido</w>
+        <w>facendo</w>
+        <w>un</w>
+        <w>vibrante</w>
+        <w>discurso</w>
+        <w>conducente</w>
+        <w>a</w>
+        <w>destruír</w>
+        <w>os</w>
+        <w>recelos</w>
+        <w>que</w>
+        <w>poidera</w>
+        <w>haber</w>
+        <w>e</w>
+        <w>afirmando</w>
+        <w>as</w>
+        <w>arelas</w>
+        <w>e</w>
+        <w>vontade</w>
+        <w>de</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>de</w>
+        <w>aproveitar</w>
+        <w>este</w>
+        <w>intre</w>
+        <w>para</w>
+        <w>acadar</w>
+        <w>a</w>
+        <w>súa</w>
+        <w>liberdade</w>
+        <w>tomase</w>
+        <w>o</w>
+        <w>acordo</w>
+        <w join="right">seguinte</w>
+        <pc>:</pc>
+        <pc join="right">«</pc>
+        <w>A</w>
+        <w norm="asemblea">asambreia</w>
+        <w norm="declara">decrara</w>
+        <w>urxente</w>
+        <w>a</w>
+        <w>realización</w>
+        <w>do</w>
+        <w>plebiscito</w>
+        <w>e</w>
+        <w>que</w>
+        <w>o</w>
+        <w>comité</w>
+        <w>central</w>
+        <w>da</w>
+        <w>autonomía</w>
+        <w>se</w>
+        <w>poña</w>
+        <w norm="de acordo">d'acordo</w>
+        <w>co</w>
+        <w>goberno</w>
+        <w>para</w>
+        <w>fixar</w>
+        <w>a</w>
+        <w>data</w>
+        <w norm="sen">sin</w>
+        <w>que</w>
+        <w>aquela</w>
+        <w>poida</w>
+        <w>pasar</w>
+        <w>do</w>
+        <w>mes</w>
+        <w>de</w>
+        <w norm="xuño">xunio</w>
+        <w>que</w>
+        <w>se</w>
+        <w>considera</w>
+        <w>data</w>
+        <w join="right">tope</w>
+        <pc join="right">»</pc>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w join="right">Final</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <name type="PER">
+          <w>Bóveda</w>
+        </name>
+        <w>di</w>
+        <w>que</w>
+        <w>a</w>
+        <w>proposta</w>
+        <w>do</w>
+        <w>Partido</w>
+        <w>no</w>
+        <w>que</w>
+        <w norm="atinxe">atingue</w>
+        <w>á</w>
+        <w>organización</w>
+        <w>dos</w>
+        <w>traballos</w>
+        <w>de</w>
+        <w norm="organización" join="right">orgaización</w>
+        <pc>,</pc>
+        <w join="right">propaganda</w>
+        <pc>,</pc>
+        <w norm="etcétera" join="right">etc</w>
+        <pc join="right">.</pc>
+        <pc>,</pc>
+        <w>pase</w>
+        <w>ao</w>
+        <w join="right">comité</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>presidente</w>
+        <w>dá</w>
+        <w>por</w>
+        <w>rematado</w>
+        <w>o</w>
+        <w>acto</w>
+        <w>cunhas</w>
+        <w>breves</w>
+        <w>palabras</w>
+        <w>cheas</w>
+        <w>de</w>
+        <w>patriótico</w>
+        <w join="right">entusiasmo</w>
+        <pc>.</pc>
+        <w>A</w>
+        <w norm="asemblea">asambreia</w>
+        <w>en</w>
+        <w>pé</w>
+        <w>canta</w>
+        <w>o</w>
+        <w norm="himno">hino</w>
+        <w>galego</w>
+        <w>escoitandose</w>
+        <w>infindos</w>
+        <w>vivas</w>
+        <w>á</w>
+        <w norm="República" join="right">Repúbrica</w>
+        <pc>,</pc>
+        <w>ao</w>
+        <w>estatuto</w>
+        <w>e</w>
+        <w>a</w>
+        <name type="LOC">
+          <w>Galicia</w>
+        </name>
+        <w>libre</w>
+        <w>e</w>
+        <w join="right">autónoma</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Son</w>
+        <w norm="preto">perto</w>
+        <w>das</w>
+        <w>tres</w>
+        <w>da</w>
+        <w>tarde</w>
+        <w>e</w>
+        <w>os</w>
+        <w norm="asembleístas">asambreístas</w>
+        <w>desfilan</w>
+        <w>ateigados</w>
+        <w>de</w>
+        <w>entusiasmo</w>
+        <w>e</w>
+        <w>ledicia</w>
+        <w>polo</w>
+        <w>acordo</w>
+        <w>e</w>
+        <w>desenrolo</w>
+        <w>da</w>
+        <w norm="asemblea" join="right">asambreia</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>comité</w>
+        <w>celebrou</w>
+        <w>despois</w>
+        <w>unha</w>
+        <w>troque</w>
+        <w>de</w>
+        <w>impresión</w>
+        <w>encol</w>
+        <w>do</w>
+        <w>acordo</w>
+        <w>e</w>
+        <w>disposición</w>
+        <w>de</w>
+        <w>executá-lo</w>
+        <w>axiña</w>
+        <w>reinando</w>
+        <w>nas</w>
+        <w>deliberacións</w>
+        <w>unha</w>
+        <w>unanimidade</w>
+        <w>absoluta</w>
+        <w>a</w>
+        <w>prol</w>
+        <w>de</w>
+        <w>comenzar</w>
+        <w>axiña</w>
+        <w>os</w>
+        <w join="right">traballos</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>No</w>
+        <w>mes</w>
+        <w>vindeiro</w>
+        <w>plebiscitaráse</w>
+        <w>o</w>
+        <w>estatuto</w>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Galicia</w>
+        </name>
+        <pc>.</pc>
+        <w norm="Tódolos">Tódo-los</w>
+        <w>galegos</w>
+        <w>por</w>
+        <w norm="dignidade">dinidade</w>
+        <w>e</w>
+        <w>patriotismo</w>
+        <w>colaborarán</w>
+        <w>na</w>
+        <w>conquista</w>
+        <w>da</w>
+        <w>liberdade</w>
+        <w>da</w>
+        <w join="right">Terra</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Novas</w>
+        <w norm="achegas">aportacións</w>
+        <w>dos</w>
+        <w>concellos</w>
+        <w>para</w>
+        <w>o</w>
+        <w join="right">plebiscito</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Nestes</w>
+        <w>derradeiros</w>
+        <w>días</w>
+        <w>acordaron</w>
+        <w>botar</w>
+        <w>cantidades</w>
+        <w>para</w>
+        <w>os</w>
+        <w>gastos</w>
+        <w>que</w>
+        <w>orixine</w>
+        <w>o</w>
+        <w>plebiscito</w>
+        <w>os</w>
+        <w>seguintes</w>
+        <w join="right">concellos</w>
+        <pc>:</pc>
+      </p>
+      <p>
+        <w>A</w>
+        <w norm="deputación">diputación</w>
+        <w>da</w>
+        <name type="LOC">
+          <w norm="Coruña">Cruña</w>
+        </name>
+        <w>acordou</w>
+        <w>tamén</w>
+        <w>contribuír</w>
+        <w>con</w>
+        <w join="right">50</w>
+        <pc join="right">.</pc>
+        <w>000</w>
+        <w>pesetas</w>
+        <w>aos</w>
+        <w>gastos</w>
+        <w>do</w>
+        <w join="right">plebiscito</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>O</w>
+        <w>comité</w>
+        <w>executivo</w>
+        <w>da</w>
+        <w>Autonomía</w>
+        <w>celebrou</w>
+        <w>unha</w>
+        <w>xuntanza</w>
+        <w>na</w>
+        <w>que</w>
+        <w>acordou</w>
+        <w>o</w>
+        <w join="right">seguinte</w>
+        <pc>:</pc>
+        <w>que</w>
+        <w>o</w>
+        <w norm="secretario">segredario</w>
+        <w>do</w>
+        <w join="right">comité</w>
+        <pc>,</pc>
+        <w>señor</w>
+        <name type="PER">
+          <w join="right">Raxoi</w>
+        </name>
+        <pc>,</pc>
+        <w norm="saia">salla</w>
+        <w>para</w>
+        <name type="LOC">
+          <w norm="Madrid">Madrí</w>
+        </name>
+        <w>con</w>
+        <w norm="obxecto">ouxeto</w>
+        <w>de</w>
+        <w>entrevistarse</w>
+        <w>co</w>
+        <w>xefe</w>
+        <w>do</w>
+        <w>goberno</w>
+        <w>acompañado</w>
+        <w>dos</w>
+        <w norm="deputados">diputados</w>
+        <w>e</w>
+        <w>do</w>
+        <w>señor</w>
+        <name type="PER">
+          <w>Tafall</w>
+        </name>
+        <w>para</w>
+        <w>fixar</w>
+        <w>a</w>
+        <w>data</w>
+        <w>do</w>
+        <w join="right">plebiscito</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Convocar</w>
+        <w>para</w>
+        <w>o</w>
+        <w>día</w>
+        <w>31</w>
+        <w>ao</w>
+        <w>comité</w>
+        <w>central</w>
+        <w>para</w>
+        <w>facer</w>
+        <w norm="pública">púbrica</w>
+        <w>a</w>
+        <w join="right">data</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Facer</w>
+        <w>un</w>
+        <w>chamamento</w>
+        <w>aos</w>
+        <w>partidos</w>
+        <w>con</w>
+        <w norm="obxecto">ouxeto</w>
+        <w>de</w>
+        <w>que</w>
+        <w norm="designen">desiñen</w>
+        <w>os</w>
+        <w>seus</w>
+        <w>representantes</w>
+        <w>no</w>
+        <w>comité</w>
+        <w join="right">central</w>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Encarecer</w>
+        <w>que</w>
+        <w>as</w>
+        <w>remesas</w>
+        <w>de</w>
+        <w>aportacións</w>
+        <w>se</w>
+        <w>fagan</w>
+        <w>a</w>
+        <w>nome</w>
+        <w>de</w>
+        <w norm="Don" join="right">D</w>
+        <pc>.</pc>
+        <name type="PER">
+          <w>Esteban</w>
+          <w>Mariño</w>
+        </name>
+        <w>en</w>
+        <w>conta</w>
+        <w>aberta</w>
+        <w>no</w>
+        <name type="MISC">
+          <w>Banco</w>
+          <w norm="Hispanoamericano">Hispañoamericano</w>
+        </name>
+        <w>de</w>
+        <name type="LOC">
+          <w join="right">Santiago</w>
+        </name>
+        <pc>.</pc>
+      </p>
+      <p>
+        <w>Onte</w>
+        <w>xuntaronse</w>
+        <w>en</w>
+        <name type="LOC">
+          <w>Santiago</w>
+        </name>
+        <w>os</w>
+        <w>presidentes</w>
+        <w>das</w>
+        <w>catro</w>
+        <w norm="deputacións">diputacións</w>
+        <w>para</w>
+        <w>o</w>
+        <w>comenzo</w>
+        <w>da</w>
+        <w norm="organización">orgaización</w>
+        <w>da</w>
+        <w>propaganda</w>
+        <w>e</w>
+        <w>demais</w>
+        <w join="right">traballos</w>
+        <pc>.</pc>
+      </p>
+    </body>
+  </text>
+</TEI>
