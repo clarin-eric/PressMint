@@ -80,6 +80,28 @@ git push
 - update PressMint repository with data in your repository:
   - create a pull request: https://github.com/clarin-eric/PressMint/compare/data...USER-ORG:data
 
+#### Synchronization troubleshooting
+
+Sometimes it can happen that changes are, due to a conflict, more complicated to merge. Then the easiest way is to merge upstream data, and in case of conflict, use clarin-eric/PressMint changes:
+
+- test if upstream is set:
+```bash
+git remote -v | grep "upstream.*fetch"
+```
+expected output
+```
+upstream	https://github.com/clarin-eric/PressMint.git (fetch)
+```
+- add upstream, if not present
+```bash
+git remote add upstream https://github.com/clarin-eric/PressMint.git
+```
+- fetch upstream, merge, and push to your remote fork
+```bash
+git fetch upstream
+git merge -X theirs upstream/data
+git push
+```
 
 
 
