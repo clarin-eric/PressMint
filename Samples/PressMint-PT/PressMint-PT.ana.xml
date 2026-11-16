@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PT.ana" xml:lang="pt">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="pt">Corpus português de jornais históricos PressMint-PT [PressMint.ana SAMPLE]</title>
+            <title xml:lang="en">Portuguese historical newspaper corpus PressMint-PT [PressMint.ana SAMPLE]</title>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0002-4345-2344">José Aires</persName>
+               <resp xml:lang="pt">Codificação em XML TEI para PressMint</resp>
+               <resp xml:lang="en">PressMint TEI XML corpus encoding</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0002-4345-2344">José Aires</persName>
+               <resp xml:lang="pt">Preparação do corpus</resp>
+               <resp xml:lang="en">Corpus preparation</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0001-6815-2674">Amália Mendes</persName>
+               <resp xml:lang="pt">Seleção dos textos do corpus</resp>
+               <resp xml:lang="en">Corpus texts selection</resp>
+            </respStmt>
+            <funder>
+               <orgName xml:lang="pt">Infraestrutura CLARIN ERIC</orgName>
+               <orgName xml:lang="en">CLARIN ERIC infrastructure</orgName>
+            </funder>
+            <funder>
+               <orgName xml:lang="pt">Infraestrutura de Investigação para a Ciência e Tecnologia da Linguagem PORTULAN CLARIN</orgName>
+               <orgName xml:lang="en">Research Infrastructure for the Science and Technology of Language PORTULAN CLARIN</orgName>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="texts" quantity="4" xml:lang="en">4 texts</measure>
+            <measure unit="paragraphs" quantity="43" xml:lang="en">43 paragraphs</measure>
+            <measure unit="words" quantity="1385" xml:lang="en">1,385 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pt">Infraestrutura CLARIN ERIC</orgName>
+               <orgName xml:lang="en">CLARIN ERIC infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="pt">O corpus é disponibilizado com a licença <ref target="http://creativecommons.org/licenses/by/4.0/">Licença Creative Commons Atribuição 4.0 Internacional</ref>.</p>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+            </availability>
+            <date when="2026-10-09">2026-10-09</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>AAVV</author>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+            <p xml:lang="pt">O projeto <ref target="https://www.clarin.eu/pressmint">PressMint</ref> tem como objetivo compilar um conjunto multilingue, anotado e interoperável de corpora de jornais históricos europeus do início do século XX. Os corpora do PressMint estarão disponíveis gratuitamente, tanto para download em diversos formatos e versões, como através de várias ferramentas de análise de corpora online.</p>
+         </projectDesc>
+         <editorialDecl>
+            <quotation>
+               <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+            </quotation>
+            <hyphenation>
+               <p xml:lang="en">Hyphenated words have been left in the text and are not explicitly marked-up as such.</p>
+            </hyphenation>
+            <correction>
+               <p xml:lang="en">No correction was performed.</p>
+            </correction>
+            <normalization>
+               <p xml:lang="en">Text has not been normalised.</p>
+            </normalization>
+            <segmentation>
+               <p xml:lang="en">The texts are segmented into paragraphs.</p>
+            </segmentation>
+         </editorialDecl>
+         <tagsDecl><!--These numbers do not reflect the size of the sample!-->
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="4"/>
+               <tagUsage gi="name" occurs="64"/>
+               <tagUsage gi="p" occurs="43"/>
+               <tagUsage gi="pc" occurs="142"/>
+               <tagUsage gi="s" occurs="43"/>
+               <tagUsage gi="text" occurs="4"/>
+               <tagUsage gi="w" occurs="1531"/>
+            </namespace>
+         </tagsDecl>
+         <classDecl>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-OCR.xml"/>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-NER.ana.xml"/>
+         </classDecl>
+         <appInfo>
+            <application ident="UDPipe" version="2">
+               <label>Lemmatization and POS tagging</label>
+               <desc xml:lang="en">Lemmatization and POS tagging carried out using UDPipe.<ref target="https://github.com/ufal/udpipe.git">https://github.com/ufal/udpipe.git</ref>
+               </desc>
+            </application>
+            <application ident="NameTag" version="3">
+               <label>NER marking</label>
+               <desc xml:lang="en">NER (PER, LOC, ORG, MISC) marking carried out NameTag.<ref target="https://github.com/ufal/nametag3.git">https://github.com/ufal/nametag3.git</ref>
+               </desc>
+            </application>
+         </appInfo>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+               <date from="1808" to="1945">1808--1945</date>
+            </setting>
+         </settingDesc>
+         <langUsage>
+            <language ident="pt" xml:lang="pt">português</language>
+            <language ident="pt" xml:lang="en">Portuguese</language>
+            <language ident="en" xml:lang="pt">inglês</language>
+            <language ident="en" xml:lang="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-10-09">
+            <name>corpus2sample.xsl</name>: Made sample.</change>
+         <change when="2026-10-09">parlamint2release script: Fix some identifiable erros for the release.</change>
+         <change when="2026-04-05">
+            <name>José Aires</name>: Made sample.</change>
+         <change when="2026-10-09">parlamint-add-common-content script: Adding common content.</change>
+      </revisionDesc>
+   </teiHeader>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1808/PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1808/PressMint-PT_1808-02-26-Gazeta-de-Lisboa-1.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1808/PressMint-PT_1808-06-03-Gazeta-de-Lisboa-1.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1808/PressMint-PT_1808-06-03-Gazeta-de-Lisboa-2.ana.xml"/>
+</teiCorpus>
+
