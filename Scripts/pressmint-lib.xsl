@@ -306,7 +306,7 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:value-of select="concat($lemma, '&#9;', $ud-pos, '&#9;', $ud-feats, '&#9;')"/>
+    <xsl:value-of select="concat($lemma, '&#9;', $ud-pos, '&#9;', $ud-feats)"/>
   </xsl:function>
 
   <!-- Output the sibling element in $elements that is appropriate for output language (global $out-lang)
