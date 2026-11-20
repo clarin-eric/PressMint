@@ -1,4 +1,4 @@
-<text id="PressMint-CZ_1914-12-30-944bce70" lang="čeština" date="1914-12-30" year="1914" newspaper="Moravská orlice" publisher="" source_url="">
+<text id="PressMint-CZ_1914-12-30-944bce70" lang="čeština" date="1914-12-30" year="1914" newspaper="Moravská orlice" publisher="" source_url="https://www.digitalniknihovna.cz/mzk/view/uuid:944bce70-c892-11de-8718-000d606f5dc6" volume="52" issue="275">
 <p id="PressMint-CZ_1914-12-30-944bce70.p1" lang="čeština" quality="" image="">
 <s id="PressMint-CZ_1914-12-30-944bce70.p1.s1">
 NA	NA	na	ADP	AdpType=Prep Case=Acc	

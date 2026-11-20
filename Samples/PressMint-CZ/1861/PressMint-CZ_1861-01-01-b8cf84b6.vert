@@ -1,4 +1,4 @@
-<text id="PressMint-CZ_1861-01-01-b8cf84b6" lang="čeština" date="1861-01-01" year="1861" newspaper="Národní listy" publisher="" source_url="">
+<text id="PressMint-CZ_1861-01-01-b8cf84b6" lang="čeština" date="1861-01-01" year="1861" newspaper="Národní listy" publisher="Julius Grégr" source_url="https://www.digitalniknihovna.cz/mzk/view/uuid:b8cf84b6-435d-11dd-b505-00145e5790ea" volume="1" issue="1">
 <p id="PressMint-CZ_1861-01-01-b8cf84b6.p1" lang="čeština" quality="" image="">
 <s id="PressMint-CZ_1861-01-01-b8cf84b6.p1.s1">
 Telegramy	Telegramy	telegram	NOUN	Animacy=Inan Case=Nom Gender=Masc Number=Plur	
