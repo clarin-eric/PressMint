@@ -4,7 +4,10 @@
 
 The source of the PressMint-FR corpus is the digitised French daily *Le Temps* (Paris), held by the Bibliothèque nationale de France (BnF) and available through [Gallica](https://gallica.bnf.fr/).
 
-The sample is the issue of 1920-01-01 (no. 21340), [ark:/12148/bpt6k243877q](https://gallica.bnf.fr/ark:/12148/bpt6k243877q).
+The sample consists of two issues:
+
+* 1920-01-01 (no. 21340), [ark:/12148/bpt6k243877q](https://gallica.bnf.fr/ark:/12148/bpt6k243877q)
+* 1920-01-14 (no. 21352), [ark:/12148/bpt6k243890r](https://gallica.bnf.fr/ark:/12148/bpt6k243890r)
 
 ### Details of the source:
 
@@ -12,9 +15,9 @@ The sample is the issue of 1920-01-01 (no. 21340), [ark:/12148/bpt6k243877q](htt
 
 * __Availability__: Publicly available through Gallica. Terms of reuse are subject to BnF/Gallica licensing; the licence for the corpus is still to be confirmed (the period 1900-1942 is of uncertain status, CC BY-NC is suggested).
 
-* __Content__: Newspaper issues of *Le Temps*. The sample contains one issue (1920-01-01).
+* __Content__: Newspaper issues of *Le Temps*. The sample contains two issues (1920-01-01 and 1920-01-14).
 
-* __Size__: Sample: 1 issue, 4 pages, 781 paragraphs, 31,721 words. Size of the whole corpus: to be decided.
+* __Size__: Sample: 2 issues, 8 pages, 1,649 paragraphs, 59,963 words. Size of the whole corpus: to be decided.
 
 * __Structure__: METS (issue metadata and physical page order) with one ALTO file per page (text blocks, lines, words, coordinates and OCR confidence). The source has no logical structure (articles, sections).
 
@@ -35,7 +38,7 @@ The sample is the issue of 1920-01-01 (no. 21340), [ark:/12148/bpt6k243877q](htt
     - BnF production and version identifiers
     - links to the page images
 
-* __Format__: BnF METS/ALTO (`alto_prod` namespace). The original files of the sample are in `Sources/0243877/` (`manifest.xml` and `ocr/X0000001.xml` to `X0000004.xml`).
+* __Format__: BnF METS/ALTO (`alto_prod` namespace). The original files of the sample are in `Sources/0243877/` and `Sources/0243890/` (each with `manifest.xml` and `ocr/X0000001.xml` to `X0000004.xml`).
 
 * __Facsimile__: Page images are served by Gallica through IIIF. The TEI sample links to them and encodes the layout (page body, text blocks, lines, tables and illustrations) as facsimile zones.
 
