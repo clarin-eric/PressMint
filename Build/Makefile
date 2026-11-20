@@ -1,6 +1,6 @@
 ########### Makefile for making a distributable version of the PressMint TEI and TEI.ana corpora and metadata overviews
 #### Variables give the included countries, version, handle, paths and scripts to use
-#### make nohup1 starts make all and saves the log in Logs/ 
+#### make nohup starts make all and saves the log in Logs/ 
 #### make all builds the plain text and linguistically annotated corpora
 #### and there are a lot of test- targets to test various parts of the build.
 
@@ -11,10 +11,10 @@ export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
 
 ### COMPLETE SET OF CORPORA
 CORPORA=AT BG CZ ES ES-GA ES-MD ES-PV FI FR GB GR HU IS IT-BZ LV NL PL PT SI UA ZA
-CORPORA=ES-PV
+CORPORA=AT
 
 # Used in targets that run only on one corpus
-CORPUS=ES-PV
+CORPUS=AT
 
 # Version number and PID of next PressMint release
 VERSION = 1.0
@@ -81,7 +81,12 @@ make-1-vert:
 make-1-conll1:
 	${FINALIZE} -conll -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
 make-1-tei:
-	${FINALIZE} -ana -tei -valid -codes ${CORPUS} -in ${SOURCES} -out ${OUTPUTS}
+	${FINALIZE} -tei -valid -codes ${CORPUS} -in ${SOURCES} -out ${OUTPUTS}
+make-1-ana:
+	${FINALIZE} -ana -valid -codes ${CORPUS} -in ${SOURCES} -out ${OUTPUTS}
+
+test-sample:
+	$s outDir=${OUTPUTS}/PressMint-${CORPUS} -xsl:../Scripts/corpus2sample.xsl ${OUTPUTS}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml
 
 test-text:
 	../Scripts/pressmintp-tei2text.pl -jobs 2 -in ${OUTPUTS}/PressMint-${CORPUS}.TEI -out Test
@@ -176,6 +181,9 @@ slurm-all: $(LOGS)
 all:	final join-verts pack
 xall:	final join-verts pack
 
+nohup-TEIonly: $(LOGS)
+	nice nohup time make final-TEIonly > $(LOGS)/PressMint.log &
+
 pack-logs:
 	mkdir -p Packed/PressMint-logs
 	rm -f Packed/PressMint-logs/*
@@ -184,8 +192,6 @@ pack-logs:
 	done
 	cd Packed; tar -czf PressMint-logs.tgz PressMint-logs
 	rm -fr Packed/PressMint-logs
-	mkdir -p Packed/PressMint-en-logs
-	rm -f Packed/PressMint-en-logs/*
 
 pack:
 	perl Scripts/pack-pressmint.pl -codes '${CORPORA}' -in Distro -out Packed

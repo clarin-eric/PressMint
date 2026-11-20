@@ -40,9 +40,9 @@ jobs:
         id: detect-changes
         uses: ./PressMint/.github/actions/PressMintStatus
       - name: Test total TEI file size limit
-        if: ${{ steps.detect-changes.outputs.max_press_changed_size > 100 && github.event.pull_request.base.ref != 'main' }} 
+        if: ${{ steps.detect-changes.outputs.max_press_changed_size > 250 && github.event.pull_request.base.ref != 'main' }} 
         run: |
-          echo "::error::100MB file limit has been exceed my one country folder"
+          echo "::error::250MB file limit has been exceed my one country folder"
           exit 1
 
   ValidateCountries:

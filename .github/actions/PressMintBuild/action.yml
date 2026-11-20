@@ -26,28 +26,37 @@ runs:
       id: build
       working-directory: ${{github.workspace}}/PressMint
       run: |
-        INTYPES=("" ".ana")
+        declare -a INTYPES
+        INTYPES=([1]="" [2]=".ana")
         STATUS=0
-        SKIP=0
-        echo "DEV: "
-        ls "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/"
+        TODO=0
+        BUILDTARGET="test-build-${{inputs.press}}"
         echo "Testing if README.md symlink exists for PressMint-${{inputs.press}} and creating it if not"
         test -f "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md" \
           || ln -s "../../../Samples/PressMint-${{inputs.press}}/README.md" \
-                   "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md"
-        for INTYPE in "${INTYPES[@]}"; do
+                   "${GITHUB_WORKSPACE}/PressMint/Build/Sources-Distro/README.md/README-${{inputs.press}}.md" \
+                   && echo "DEV: README.md symlink created for PressMint-${{inputs.press}}"
+        for IDX in "${!INTYPES[@]}"; do
+          INTYPE=${INTYPES[$IDX]}
           TYPE="TEI${INTYPE}"
           ROOT="Samples/PressMint-${{inputs.press}}/PressMint-${{inputs.press}}${INTYPE}.xml"
           if [ ! -f "$ROOT" ]; then
               echo "::warning title=Corpus root is missing (${{inputs.press}}.$TYPE)::$ROOT not found"
-              SKIP=1
+          else
+              echo "DEV: Corpus root exists (${{inputs.press}}.$TYPE)::$ROOT found"
+              TODO=$((TODO+IDX))
           fi
         done
-        if [ $SKIP -eq 1 ] ; then
+        echo "DEV: TODO=$TODO"
+        if [ $TODO -eq 0 ] ; then
           echo "::warning title=SKIPPING BUILD VALIDATION (${{inputs.press}})::"
         else
-          echo "::notice:: Running build-validation for PressMint-${{inputs.press}}"
-          BUILDDIR=$(make test-build-${{inputs.press}} KEEP-DATA=1 2>&1 | sed -n 's/^OUTPUT_FOLDER=//p')
+          if [ $TODO -eq 1 ] ; then
+            echo "::warning title=SKIPPING TEI.ana BUILD VALIDATION (${{inputs.press}}):: .ana.xml is missing"
+            BUILDTARGET="test-build-TEIonly-${{inputs.press}}"
+          fi
+          echo "::notice:: Running build-validation for PressMint-${{inputs.press}} (make ${BUILDTARGET} KEEP-DATA=1)"
+          BUILDDIR=$(make ${BUILDTARGET} KEEP-DATA=1 2>&1 | sed -n 's/^OUTPUT_FOLDER=//p')
           find ${BUILDDIR}
           cat ${BUILDDIR}/Logs/PressMint-${{inputs.press}}.log \
                 | sed "s/^\(.*\)\(\berror\b\)/::error::\1\2/i;s/^\(.*\)\(\bfatal\b\)/::error::\1\2/i;s/^\(.*\)\(\bwarn\)/::warning::\1\2/i;"
