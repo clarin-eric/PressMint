@@ -1,18 +1,18 @@
 name: Label PRs that are behind upstream
 
 on:
-  schedule:
-    - cron: "0 * * * *"   # every hour
-  push:
-    branches:
-      - data
-  pull_request:
-    branches:
-      - data
-    types:
-      - opened
-      - synchronize
-      - reopened
+  #schedule:
+  #  - cron: "0 * * * *"   # every hour
+  #push:
+  #  branches:
+  #    - data
+  #pull_request:
+  #  branches:
+  #    - data
+  #  types:
+  #    - opened
+  #    - synchronize
+  #    - reopened
   workflow_dispatch:
 
 jobs:

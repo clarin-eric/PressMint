@@ -1,6 +1,6 @@
 ########### Makefile for making a distributable version of the PressMint TEI and TEI.ana corpora and metadata overviews
 #### Variables give the included countries, version, handle, paths and scripts to use
-#### make nohup1 starts make all and saves the log in Logs/ 
+#### make nohup starts make all and saves the log in Logs/ 
 #### make all builds the plain text and linguistically annotated corpora
 #### and there are a lot of test- targets to test various parts of the build.
 
@@ -10,11 +10,11 @@ export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
 ### VARIABLES
 
 ### COMPLETE SET OF CORPORA
-CORPORA=AT BG CZ ES GR IS LV NL PL SI UA
-CORPORA=SI
+CORPORA=AT BG CZ ES ES-GA ES-MD ES-PV FI FR GB GR HU IS IT-BZ LV NL PL PT SI UA ZA
+CORPORA=AT
 
 # Used in targets that run only on one corpus
-CORPUS=SI
+CORPUS=AT
 
 # Version number and PID of next PressMint release
 VERSION = 1.0
@@ -81,7 +81,12 @@ make-1-vert:
 make-1-conll1:
 	${FINALIZE} -conll -codes ${CORPUS} -in ${OUTPUTS} -out ${OUTPUTS}
 make-1-tei:
-	${FINALIZE} -ana -tei -valid -codes ${CORPUS} -in ${SOURCES} -out ${OUTPUTS}
+	${FINALIZE} -tei -valid -codes ${CORPUS} -in ${SOURCES} -out ${OUTPUTS}
+make-1-ana:
+	${FINALIZE} -ana -valid -codes ${CORPUS} -in ${SOURCES} -out ${OUTPUTS}
+
+test-sample:
+	$s outDir=${OUTPUTS}/PressMint-${CORPUS} -xsl:../Scripts/corpus2sample.xsl ${OUTPUTS}/PressMint-${CORPUS}.TEI/PressMint-${CORPUS}.xml
 
 test-text:
 	../Scripts/pressmintp-tei2text.pl -jobs 2 -in ${OUTPUTS}/PressMint-${CORPUS}.TEI -out Test
@@ -157,6 +162,9 @@ nohup: $(LOGS)
 all:	final join-verts pack
 xall:	final join-verts pack
 
+nohup-TEIonly: $(LOGS)
+	nice nohup time make final-TEIonly > $(LOGS)/PressMint.log &
+
 pack-logs:
 	mkdir -p Packed/PressMint-logs
 	rm -f Packed/PressMint-logs/*
@@ -165,8 +173,6 @@ pack-logs:
 	done
 	cd Packed; tar -czf PressMint-logs.tgz PressMint-logs
 	rm -fr Packed/PressMint-logs
-	mkdir -p Packed/PressMint-en-logs
-	rm -f Packed/PressMint-en-logs/*
 
 pack:
 	perl Scripts/pack-pressmint.pl -codes '${CORPORA}' -in Distro -out Packed
@@ -184,6 +190,26 @@ final: $(LOGS)
 	echo "$${CORPUS}.error"; \
 	cat $(LOGS)/PressMint-$${CORPUS}.error.log | wc -l;  \
 	cat $(LOGS)/PressMint-$${CORPUS}.error.log | sort | uniq | wc -l;  \
+	done;
+
+final-TEIonly: $(LOGS)
+	for CORPUS in ${CORPORA}; do \
+	${FINALIZE} -tei -valid -txt -sample -codes $${CORPUS} -in ${SOURCES} -out ${OUTPUTS} 2> $(LOGS)/PressMint-$${CORPUS}.log; \
+	sed -i 's/ERROR\(.*cannot locate\)/WARN ALERT\1/' $(LOGS)/PressMint-$${CORPUS}.log; \
+	sed -i 's/ERROR\(.* no count for\)/WARN ALERT\1/' $(LOGS)/PressMint-$${CORPUS}.log; \
+	sed -i 's/ERROR\(.* Missing extent.*words\)/WARN ALERT\1/' $(LOGS)/PressMint-$${CORPUS}.log; \
+	sed -i 's/ERROR\(.* No .ana files for .* samples\)/WARN ALERT\1/' $(LOGS)/PressMint-$${CORPUS}.log; \
+	grep -a -i 'fatal' $(LOGS)/PressMint-$${CORPUS}.log >  $(LOGS)/PressMint-$${CORPUS}.error.log;  \
+	grep -a -i 'error' $(LOGS)/PressMint-$${CORPUS}.log >> $(LOGS)/PressMint-$${CORPUS}.error.log;  \
+	grep -a -i 'warn'  $(LOGS)/PressMint-$${CORPUS}.log >  $(LOGS)/PressMint-$${CORPUS}.warn.log;  \
+	echo "$${CORPUS}.warn"; \
+	cat $(LOGS)/PressMint-$${CORPUS}.warn.log | wc -l;  \
+	cat $(LOGS)/PressMint-$${CORPUS}.warn.log | sort | uniq | wc -l;  \
+	echo "$${CORPUS}.error"; \
+	cat $(LOGS)/PressMint-$${CORPUS}.error.log | wc -l;  \
+	cat $(LOGS)/PressMint-$${CORPUS}.error.log | sort | uniq | wc -l;  \
+	echo "$${CORPUS}.warn - suppresed errors due to missing ana files"; \
+	cat $(LOGS)/PressMint-$${CORPUS}.warn.log | grep "WARN ALERT" | sort | uniq | wc -l;  \
 	done;
 
 # Join all verts, probably doesn't work
