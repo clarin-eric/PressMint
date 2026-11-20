@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="PressMint-FR" xml:lang="fr">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main" xml:lang="en">French historical newspaper corpus PressMint-FR [PressMint SAMPLE]</title>
+            <title type="main" xml:lang="fr">Corpus français de presse historique PressMint-FR [PressMint SAMPLE]</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="texts" quantity="1" xml:lang="en">1 texts</measure>
+            <measure unit="paragraphs" quantity="781" xml:lang="en">781 paragraphs</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="en">CLARIN PressMint project</orgName>
+            </publisher>
+            <idno type="URI" subtype="handle">TBD</idno>
+            <availability status="unknown">
+               <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</licence>
+            </availability>
+            <date when="2026-10-15">2026-10-15</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title type="main" xml:lang="en">BnF/Gallica OCR data for Le Temps</title>
+               <title type="main" xml:lang="fr">Donnees OCR BnF/Gallica pour Le Temps</title>
+               <idno type="URI">https://gallica.bnf.fr/</idno>
+               <idno type="URN" subtype="set-ARK">ark:/12148/bc6p0j3t4</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+         </projectDesc>
+         <editorialDecl>
+            <p xml:lang="en">OCR text is preserved without correction, except for whitespace normalisation and line-end hyphen handling.</p>
+            <p xml:lang="en">Line-end hyphenation is resolved using ALTO SUBS_TYPE and SUBS_CONTENT attributes where available. Where not available, the hyphen is preserved.</p>
+            <p xml:lang="en">ALTO TextBlocks are encoded as TEI paragraphs. No article or section divisions are inferred, because the source contains no logical structMap.</p>
+            <p xml:lang="en">Page order is derived from the METS physical structMap ORDER attribute. ALTO PHYSICAL_IMG_NR is not used (it is 1 on all pages in this dataset).</p>
+            <p xml:lang="en">Text in an issue is encoded in ALTO reading order. No column-aware geometric reordering is applied.Image references use Gallica IIIF URLs because the master TIFF images are not included.</p>
+         </editorialDecl>
+         <tagsDecl><!--These numbers do not reflect the size of the sample!-->
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="1"/>
+               <tagUsage gi="lb" occurs="4310"/>
+               <tagUsage gi="p" occurs="781"/>
+               <tagUsage gi="pb" occurs="4"/>
+               <tagUsage gi="text" occurs="1"/>
+            </namespace>
+         </tagsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+               <date from="1920-01-01" to="1920-01-01">1920-01-01</date>
+            </setting>
+         </settingDesc>
+         <langUsage>
+            <language ident="fr">French</language>
+            <language ident="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-10-15">
+            <name>corpus2sample.xsl</name>: Made sample.</change>
+         <change when="2026-10-15">parlamint2release script: Fix some identifiable erros for the release.</change>
+         <change when="2026-10-14">Second conversion from BnF METS/ALTO to PressMint TEI.</change>
+         <change when="2026-10-15">parlamint-add-common-content script: Adding common content.</change>
+      </revisionDesc>
+   </teiHeader>
+   <xi:include href="1920/PressMint-FR_1920-01-01-LeTemps-BnF-0243877.xml"/>
+</teiCorpus>
+
