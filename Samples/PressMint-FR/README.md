@@ -23,7 +23,12 @@ The sample consists of two issues:
 
 * __Correction__: Uncorrected BnF OCR. Only whitespace is normalised and line-end hyphens are joined.
 
-* __Linguistic annotation__: None in the source. Annotation of the corpus is still to be decided.
+* __Linguistic annotation__: None in the source. The TEI.ana sample (`PressMint-FR.ana.xml` and `1920/*.ana.xml`) is annotated automatically on the uncorrected OCR text:
+
+    - sentences, tokens, lemmas, UD part-of-speech tags and morphological features: [spaCy](https://spacy.io/models/fr) `fr_core_news_md`
+    - named entities: [historical-ner-baseline](https://huggingface.co/emanuelaboros/historical-ner-baseline) (BERT fine-tuned on HIPE-2022). Its labels are mapped to the PressMint categories: `pers` to PER, `loc` to LOC, `org` to ORG and `prod` to MISC. Entities labelled `time` or `scope` are not marked.
+
+    The OCR is not corrected, so the annotation is unreliable where the OCR is poor (e.g. mastheads and advertisements). The annotation was produced with `src/annotate_ana.py` of the converter. The sample has 2 issues, 62,818 words (plus 11,838 punctuation tokens), 6,682 sentences and 3,652 named entities.
 
 * __Metadata__:
 
@@ -48,5 +53,5 @@ For the PressMint-FR corpus we plan to:
 * Convert the BnF METS/ALTO data to the PressMint TEI scheme
 * Convert/supplement metadata to the common scheme
 * Encode the text in reading order
-* Decide how to add linguistic annotation (UD) and named entities
+* Evaluate the linguistic annotation and named entities on a manually checked part of the sample
 * Process the whole corpus once the sample is accepted
