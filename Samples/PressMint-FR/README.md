@@ -13,11 +13,20 @@ The sample consists of two issues:
 
 * __Source__: BnF / Gallica, *Le Temps* (journal ARK `ark:/12148/cb34431794k`, set ARK `ark:/12148/bc6p0j3t4`)
 
+* __Delivery__: The BnF METS/ALTO packages of the whole corpus were obtained from a file share of La Rochelle Université (`ao.univ-lr.fr`, folder `Mill-Ehnas-tout-LeTemps/2026-01-17`). The delivery has one zip per issue.
+
 * __Availability__: Publicly available through Gallica. Terms of reuse are subject to BnF/Gallica licensing; the licence for the corpus is still to be confirmed (the period 1900-1942 is of uncertain status, CC BY-NC is suggested).
 
 * __Content__: Newspaper issues of *Le Temps*. The sample contains two issues (1920-01-01 and 1920-01-14).
 
-* __Size__: Sample: 2 issues, 8 pages, 1,649 paragraphs, 59,963 words. Size of the whole corpus: to be decided.
+* __Size__: Sample: 2 issues, 8 pages, 1,649 paragraphs, 59,963 words. Whole corpus (counted from the delivery, not yet converted): 15,819 issues from 1900-01-01 to 1942-11-17, 77,009 pages and about 603 million words (ALTO word strings; a word split at a line end counts twice). Issues per year: 345 to 462 in 1900-1940, 33 in 1941, 272 in 1942. Statistics per year: `viewer/corpus-stats.html` of the converter.
+
+* __Known issues in the delivery__:
+
+    - 1,560 issues (9.9%) have the placeholder date `1861-1942` in the METS. Their issue number is in the title, and the date is estimated from the issue numbers of the dated issues around it (marked `cert="medium"` on `date`). 27 of them cannot be dated this way.
+    - 453 issues (2.9%) have a manifest but no OCR files and cannot be converted.
+    - 78 issues cover two days (e.g. `1928/07/15-1928/07/16`); the first day is used as the date.
+    - OCR quality: mean word confidence 0.825; 15.8% of the words are below 0.5. It is best in 1915-1917 (about 10% of words below 0.5) and worst in 1935-1937 (about 25%).
 
 * __Structure__: METS (issue metadata and physical page order) with one ALTO file per page (text blocks, lines, words, coordinates and OCR confidence). The source has no logical structure (articles, sections).
 
