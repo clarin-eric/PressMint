@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="PressMint-FR.ana" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main" xml:lang="en">French historical newspaper corpus PressMint-FR [PressMint.ana]</title>
+        <title type="main" xml:lang="fr">Corpus français de presse historique PressMint-FR [PressMint.ana]</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>0.1</edition>
+      </editionStmt>
+      <extent>
+        <measure unit="texts" quantity="2" xml:lang="fr">2 textes</measure>
+        <measure unit="texts" quantity="2" xml:lang="en">2 texts</measure>
+        <measure unit="paragraphs" quantity="1649" xml:lang="fr">1 649 paragraphs</measure>
+        <measure unit="paragraphs" quantity="1649" xml:lang="en">1,649 paragraphs</measure>
+        <measure unit="words" quantity="62818" xml:lang="fr">62 818 mots</measure>
+        <measure unit="words" quantity="62818" xml:lang="en">62,818 words</measure>
+      </extent>
+      <publicationStmt>
+        <publisher>
+          <orgName xml:lang="en">CLARIN PressMint project</orgName>
+        </publisher>
+        <idno type="URI" subtype="handle">TBD</idno>
+        <availability status="unknown">
+          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</licence>
+        </availability>
+        <date when="2026-11-20">2026-11-20</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title type="main" xml:lang="en">BnF/Gallica OCR data for Le Temps</title>
+          <title type="main" xml:lang="fr">Donnees OCR BnF/Gallica pour Le Temps</title>
+          <idno type="URI">https://gallica.bnf.fr/</idno>
+          <idno type="URN" subtype="set-ARK">ark:/12148/bc6p0j3t4</idno>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p xml:lang="en">PressMint-FR is a French historical newspaper corpus produced from BnF METS/ALTO OCR data.</p>
+      </projectDesc>
+      <editorialDecl>
+        <p xml:lang="en">OCR text is preserved without correction, except for whitespace normalisation and line-end hyphen handling.</p>
+        <p xml:lang="en">Line-end hyphenation is resolved using ALTO SUBS_TYPE and SUBS_CONTENT attributes where available.  Where not available, the hyphen is preserved.</p>
+        <p xml:lang="en">ALTO TextBlocks are encoded as TEI paragraphs.  No article or section divisions are inferred, because the source contains no logical structMap.</p>
+        <p xml:lang="en">Page order is derived from the METS physical structMap ORDER attribute. ALTO PHYSICAL_IMG_NR is not used (it is 1 on all pages in this dataset).</p>
+        <p xml:lang="en">Text in an issue is encoded in ALTO reading order.  No column-aware geometric reordering is applied.Image references use Gallica IIIF URLs because the master TIFF images are not included.</p>
+        <p xml:lang="en">In this linguistically analysed version, the paragraphs are segmented into sentences, and these into words and punctuation marks, with lemmas and UD part-of-speech tags and features, and named entities (PER, LOC, ORG, MISC) are marked. The annotation is applied to uncorrected OCR text and is therefore unreliable where the OCR is poor.</p>
+      </editorialDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="body" occurs="2"/>
+          <tagUsage gi="facsimile" occurs="2"/>
+          <tagUsage gi="graphic" occurs="8"/>
+          <tagUsage gi="lb" occurs="8298"/>
+          <tagUsage gi="name" occurs="3652"/>
+          <tagUsage gi="p" occurs="1649"/>
+          <tagUsage gi="pb" occurs="8"/>
+          <tagUsage gi="pc" occurs="11838"/>
+          <tagUsage gi="s" occurs="6682"/>
+          <tagUsage gi="surface" occurs="8"/>
+          <tagUsage gi="text" occurs="2"/>
+          <tagUsage gi="w" occurs="62818"/>
+          <tagUsage gi="zone" occurs="10025"/>
+        </namespace>
+      </tagsDecl>
+      <classDecl>
+        <xi:include href="PressMint-taxonomy-NER.ana.xml"/>
+      </classDecl>
+      <appInfo>
+        <application version="3.7.5" ident="spaCy">
+          <label>spaCy fr_core_news_md</label>
+          <desc xml:lang="en">Tokenisation, sentence segmentation, part-of-speech tagging, morphological analysis and lemmatisation with the spaCy model fr_core_news_md (model version 3.7.0, LGPL-LR), available from <ref target="https://spacy.io/models/fr">https://spacy.io/models/fr</ref>.</desc>
+        </application>
+        <application version="1.0" ident="historical-ner-baseline">
+          <label>historical-ner-baseline</label>
+          <desc xml:lang="en">Named entity recognition with the model <ref target="https://huggingface.co/emanuelaboros/historical-ner-baseline">emanuelaboros/historical-ner-baseline</ref> (BERT fine-tuned on HIPE-2022 historical newspaper data). Its labels pers, loc, org and prod are mapped to PER, LOC, ORG and MISC; time and scope labels are not used.</desc>
+        </application>
+      </appInfo>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <date from="1920-01-01" to="1920-01-14">1920-01-01--1920-01-14</date>
+        </setting>
+      </settingDesc>
+      <langUsage>
+        <language ident="fr">French</language>
+        <language ident="en">English</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-11-20">Second conversion from BnF METS/ALTO to PressMint TEI.</change>
+      <change when="2026-11-20">Linguistic annotation added (TEI.ana).</change>
+    </revisionDesc>
+  </teiHeader>
+  <xi:include href="1920/PressMint-FR_1920-01-01-LeTemps-BnF-0243877.ana.xml"/>
+  <xi:include href="1920/PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.xml"/>
+</teiCorpus>
