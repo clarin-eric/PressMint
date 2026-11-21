@@ -13,8 +13,6 @@ The sample consists of two issues:
 
 * __Source__: BnF / Gallica, *Le Temps* (journal ARK `ark:/12148/cb34431794k`, set ARK `ark:/12148/bc6p0j3t4`)
 
-* __Delivery__: The BnF METS/ALTO packages of the whole corpus were obtained from a file share of La Rochelle Université (`ao.univ-lr.fr`, folder `Mill-Ehnas-tout-LeTemps/2026-01-17`). The delivery has one zip per issue.
-
 * __Availability__: Publicly available through Gallica. Terms of reuse are subject to BnF/Gallica licensing; the licence for the corpus is still to be confirmed (the period 1900-1942 is of uncertain status, CC BY-NC is suggested).
 
 * __Content__: Newspaper issues of *Le Temps*. The sample contains two issues (1920-01-01 and 1920-01-14).
