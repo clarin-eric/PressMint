@@ -1,0 +1,183 @@
+# newdoc id = PressMint-AT_1902-07-19.ana
+# sent_id = PressMint-AT_1902-07-19.head1.s1
+# text = Wiener Abendpost.
+1	Wiener	wiener	ADJ	ADJA	Degree=Pos	0	_	_	NER=B-ORG
+2	Abendpost	Abendpost	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+3	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1902-07-19.p1
+# lang = de
+# sent_id = PressMint-AT_1902-07-19.p1.s1
+# text = Beilage zur Wiener Zeitung.
+1	Beilage	Beilage	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+2-3	zur	_	_	_	_	_	_	_	NER=O
+2	zu	zu	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	_
+3	der	der	DET	ART	Case=Dat|Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	_
+4	Wiener	wiener	ADJ	ADJA	Degree=Pos	0	_	_	NER=B-ORG
+5	Zeitung	Zeitung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+6	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p1.s2
+# text = 1902.
+1	1902.	1902.	NOUN	NN	_	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p1.s3
+# text = — Nr. 165. Samstag, 19. Juli.
+1	—	—	X	FM	Foreign=Yes	0	_	_	NER=O
+2	Nr.	Nummer	NOUN	NN	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+3	165.	165.	ADJ	ADJA	_	0	_	_	NER=O
+4	Samstag	Samstag	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+5	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+6	19.	19.	ADJ	ADJA	_	0	_	_	NER=O
+7	Juli	Juli	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1902-07-19.p2
+# lang = de
+# sent_id = PressMint-AT_1902-07-19.p2.s1
+# text = Pränumerations-Preise:
+1	Pränumerations-Preise	Pränumerations-Preis	NOUN	NN	Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p2.s2
+# text = Ganzj. 8 Kronen, halbj.
+1	Ganzj.	Ganzj.	ADJ	NE	_	0	_	_	NER=O
+2	8	8	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+3	Kronen	Krone	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+4	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+5	halbj.	halbj.	X	ADJD	Foreign=Yes	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p2.s3
+# text = 4 Kronen, vierteli.
+1	4	4	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+2	Kronen	Krone	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+4	vierteli.	vierteli.	X	FM	_	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p2.s4
+# text = 2 Kronen, monatl.
+1	2	2	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+2	Kronen	Krone	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+4	monatl.	monatl.	PROPN	NE	_	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p2.s5
+# text = 80 Heller.
+1	80	80	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+2	Heller	Heller	NOUN	NN	Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p2.s6
+# text = Die Zustellungsgebühr beträgt monatlich 40 Heller.
+1	Die	der	DET	ART	Case=Nom|Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+2	Zustellungsgebühr	Zustellungsgebühr	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+3	beträgt	betragen	VERB	VVFIN	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	_	_	NER=O
+4	monatlich	monatlich	ADJ	ADJD	Degree=Pos|Variant=Short	0	_	_	NER=O
+5	40	40	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+6	Heller	Heller	NOUN	NN	Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+7	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p2.s7
+# text = — Mit Vostversendung:
+1	—	—	X	FM	Foreign=Yes	0	_	_	NER=O
+2	Mit	mit	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+3	Vostversendung	Vostversendung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p2.s8
+# text = Ganzi. 12 Kronen, halbt.
+1	Ganzi	ganzi	ADJ	ADJD	Degree=Pos|Variant=Short	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+3	12	12	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+4	Kronen	Krone	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+5	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+6	halbt	halben	VERB	VVFIN	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+7	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p2.s9
+# text = 6 Kronen, viertelf.
+1	6	6	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+2	Kronen	Krone	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+4	viertelf.	viertelf.	X	FM	Foreign=Yes	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p2.s10
+# text = 3 Kronen, monatl.
+1	3	3	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+2	Kronen	Krone	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+4	monatl	monatl	ADJ	ADJD	Degree=Pos|Variant=Short	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p2.s11
+# text = 1 Krone 20 Heller:
+1	1	1	NUM	CARD	Number=Sing|NumType=Card	0	_	_	NER=O
+2	Krone	Krone	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+3	20	20	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+4	Heller	Heller	NOUN	NN	Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+5	:	:	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p2.s12
+# text = Einzelne Nummern 4 Heller.
+1	Einzelne	einzeln	ADJ	ADJA	Degree=Pos|Number=Plur	0	_	_	NER=O
+2	Nummern	Nummer	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O
+3	4	4	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+4	Heller	Heller	NOUN	NN	Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p2.s13
+# text = Redaktion, Komptoir und Druckerei der „Wiener Zeitung“, 1. Bezirk, Bückerstraße Nr. 28. Einzelne Nummern 4 Heller.
+1	Redaktion	Redaktion	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+3	Komptoir	unknown	NOUN	NN	_	0	_	_	NER=O
+4	und	und	CCONJ	KON	_	0	_	_	NER=O
+5	Druckerei	Druckerei	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+6	der	der	DET	ART	Case=Gen|Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+7	„	„	PUNCT	$(	PunctType=Brck	0	_	_	NER=O|SpaceAfter=No
+8	Wiener	wiener	ADJ	ADJA	Degree=Pos	0	_	_	NER=B-ORG
+9	Zeitung	Zeitung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+10	“	“	X	FM	Foreign=Yes	0	_	_	NER=O|SpaceAfter=No
+11	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+12	1.	1.	ADJ	ADJA	_	0	_	_	NER=O
+13	Bezirk	Bezirk	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+14	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+15	Bückerstraße	Bückerstrasse	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=B-LOC
+16	Nr.	Nummer	NOUN	NN	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+17	28	28	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+18	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+19	Einzelne	einzeln	ADJ	ADJA	Degree=Pos|Number=Plur	0	_	_	NER=O
+20	Nummern	Nummer	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O
+21	4	4	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+22	Heller	Heller	NOUN	NN	Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+23	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1902-07-19.p133
+# lang = de
+# sent_id = PressMint-AT_1902-07-19.p133.s1
+# text = Druckerei der kaiserlichen „Wiener Zeitung“.
+1	Druckerei	Druckerei	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+2	der	der	DET	ART	Case=Gen|Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+3	kaiserlichen	kaiserlich	ADJ	ADJA	Degree=Pos|Number=Sing	0	_	_	NER=O
+4	„	„	PUNCT	$(	PunctType=Brck	0	_	_	NER=O|SpaceAfter=No
+5	Wiener	wiener	ADJ	ADJA	Degree=Pos	0	_	_	NER=B-ORG
+6	Zeitung	Zeitung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+7	“	“	X	FM	Foreign=Yes	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1902-07-19.p134
+# lang = de
+# sent_id = PressMint-AT_1902-07-19.p134.s1
+# text = Verantwortlicher Redakteur:
+1	Verantwortlicher	verantwortlich	ADJ	ADJA	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	Redakteur	Redakteur	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1902-07-19.p134.s2
+# text = In Vertretung Dr. Emil Löbl.
+1	In	in	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+2	Vertretung	Vertretung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+3	Dr.	Doktor	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O
+4	Emil	Emil	PROPN	NE	Gender=Masc|Number=Sing	0	_	_	NER=B-PER
+5	Löbl	Löbl	PROPN	NE	Number=Sing	0	_	_	NER=I-PER|SpaceAfter=No
+6	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+

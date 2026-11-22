@@ -1,0 +1,292 @@
+# newdoc id = PressMint-AT_1882-12-06.ana
+# sent_id = PressMint-AT_1882-12-06.head1.s1
+# text = Wiener Abendpost.
+1	Wiener	wiener	ADJ	ADJA	Degree=Pos	0	_	_	NER=B-ORG
+2	Abendpost	Abendpost	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+3	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1882-12-06.p1
+# lang = de
+# sent_id = PressMint-AT_1882-12-06.p1.s1
+# text = 1882. — Nr. 279.
+1	1882.	1882.	NOUN	NN	_	0	_	_	NER=O
+2	—	—	X	FM	Foreign=Yes	0	_	_	NER=O
+3	Nr.	Nummer	NOUN	NN	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+4	279.	279.	ADJ	ADJA	_	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p1.s2
+# text = Beilage zur Wiener Zeitung.
+1	Beilage	Beilage	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+2-3	zur	_	_	_	_	_	_	_	NER=O
+2	zu	zu	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	_
+3	der	der	DET	ART	Case=Dat|Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	_
+4	Wiener	wiener	ADJ	ADJA	Degree=Pos	0	_	_	NER=B-ORG
+5	Zeitung	Zeitung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+6	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p1.s3
+# text = Mittwoch, 6. December.
+1	Mittwoch	Mittwoch	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+3	6.	6.	ADJ	ADJA	_	0	_	_	NER=O
+4	December	December	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1882-12-06.p2
+# lang = de
+# sent_id = PressMint-AT_1882-12-06.p2.s1
+# text = Pränumerationspreise.
+1	Pränumerationspreise	Pränumerationspreis	NOUN	NN	Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p2.s2
+# text = Für Wien:
+1	Für	für	ADP	APPR	AdpType=Prep|Case=Acc	0	_	_	NER=O
+2	Wien	Wien	PROPN	NE	Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+3	:	:	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p2.s3
+# text = „Wiener Abendpost“ vierteljährig 1 fl., monatlich 50 kr.
+1	„	„	PUNCT	$(	PunctType=Brck	0	_	_	NER=O|SpaceAfter=No
+2	Wiener	wiener	ADJ	ADJA	Degree=Pos	0	_	_	NER=B-ORG
+3	Abendpost	Abendpost	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+4	“	“	X	FM	Foreign=Yes	0	_	_	NER=O
+5	vierteljährig	vierteljährig	ADJ	ADJD	Degree=Pos|Variant=Short	0	_	_	NER=O
+6	1	1	NUM	CARD	Number=Sing|NumType=Card	0	_	_	NER=O
+7	fl.	fl.	X	FM	Foreign=Yes	0	_	_	NER=O|SpaceAfter=No
+8	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+9	monatlich	monatlich	ADJ	ADJD	Degree=Pos|Variant=Short	0	_	_	NER=O
+10	50	50	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+11	kr	kr	X	FM	Foreign=Yes	0	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p2.s4
+# text = Für die Zustellung ins Haus monatlich 20 kr., Einzelne Nummern 2 kr.
+1	Für	für	ADP	APPR	AdpType=Prep|Case=Acc	0	_	_	NER=O
+2	die	der	DET	ART	Case=Acc|Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+3	Zustellung	Zustellung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+4-5	ins	_	_	_	_	_	_	_	NER=O
+4	in	in	ADP	APPR	AdpType=Prep|Case=Acc	0	_	_	_
+5	das	der	DET	ART	Case=Acc|Definite=Def|Gender=Neut|Number=Sing|PronType=Art	0	_	_	_
+6	Haus	Haus	NOUN	NN	Gender=Neut|Number=Sing	0	_	_	NER=O
+7	monatlich	monatlich	ADJ	ADJD	Degree=Pos|Variant=Short	0	_	_	NER=O
+8	20	20	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+9	kr.	kr.	X	FM	Foreign=Yes	0	_	_	NER=O|SpaceAfter=No
+10	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+11	Einzelne	einzeln	ADJ	ADJA	Degree=Pos|Number=Plur	0	_	_	NER=O
+12	Nummern	Nummer	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O
+13	2	2	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+14	kr	kr	X	FM	Foreign=Yes	0	_	_	NER=O|SpaceAfter=No
+15	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p2.s5
+# text = Mit Postversendung vierteljährig 1 fl. 50 kr.
+1	Mit	mit	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+2	Postversendung	Postversendung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+3	vierteljährig	vierteljährig	ADJ	ADJD	Degree=Pos|Variant=Short	0	_	_	NER=O
+4	1	1	NUM	CARD	Number=Sing|NumType=Card	0	_	_	NER=O
+5	fl.	fl.	X	NE	_	0	_	_	NER=O
+6	50	50	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+7	kr.	kr.	X	FM	Foreign=Yes	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.head33.s1
+# text = Theater von heute.
+1	Theater	Theater	NOUN	NN	Gender=Neut|Number=Sing	0	_	_	NER=O
+2	von	von	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+3	heute	heute	ADV	ADV	_	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1882-12-06.p105
+# lang = de
+# sent_id = PressMint-AT_1882-12-06.p105.s1
+# text = K. k. Hofburgtheater, Geschlossen.
+1	K.	K.	PROPN	NE	Number=Sing	0	_	_	NER=B-LOC
+2	k.	k.	PROPN	NE	_	0	_	_	NER=O
+3	Hofburgtheater	Hofburgtheater	NOUN	NN	_	0	_	_	NER=B-LOC|SpaceAfter=No
+4	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+5	Geschlossen	schließen	VERB	VVPP	Aspect=Perf|VerbForm=Part	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1882-12-06.p106
+# lang = de
+# sent_id = PressMint-AT_1882-12-06.p106.s1
+# text = K. k.
+1	K.	K.	PROPN	NE	Number=Sing	0	_	_	NER=O
+2	k	k	PROPN	NE	Number=Sing	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p106.s2
+# text = Hofoverntheater.
+1	Hofoverntheater	Hofoverntheater	NOUN	NN	_	0	_	_	NER=B-LOC|SpaceAfter=No
+2	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p106.s3
+# text = „Flick und Flock“, komisches Zauberballet in drei Acten und sechs Bildern von Paul Taglioni.
+1	„	„	PUNCT	$(	PunctType=Brck	0	_	_	NER=O|SpaceAfter=No
+2	Flick	Flick	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=B-MISC
+3	und	und	CCONJ	KON	_	0	_	_	NER=I-MISC
+4	Flock	Flock	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=I-MISC|SpaceAfter=No
+5	“	“	X	FM	_	0	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+7	komisches	komisch	ADJ	ADJA	Degree=Pos|Gender=Neut|Number=Sing	0	_	_	NER=O
+8	Zauberballet	Zauberballet	NOUN	NN	Gender=Neut|Number=Sing	0	_	_	NER=O
+9	in	in	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+10	drei	drei	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+11	Acten	Acte	NOUN	NN	Case=Dat|Gender=Neut|Number=Plur	0	_	_	NER=O
+12	und	und	CCONJ	KON	_	0	_	_	NER=O
+13	sechs	sechs	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+14	Bildern	Bild	NOUN	NN	Case=Dat|Gender=Neut|Number=Plur	0	_	_	NER=O
+15	von	von	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+16	Paul	Paul	PROPN	NE	Gender=Masc|Number=Sing	0	_	_	NER=B-PER
+17	Taglioni	Taglioni	PROPN	NE	_	0	_	_	NER=I-PER|SpaceAfter=No
+18	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p106.s4
+# text = Musik vom kön. preußischen Hofcomponisten Hertel.
+1	Musik	Musik	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+2-3	vom	_	_	_	_	_	_	_	NER=O
+2	von	von	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	_
+3	dem	der	DET	ART	Case=Dat|Definite=Def|Gender=Masc,Neut|Number=Sing|PronType=Art	0	_	_	_
+4	kön.	kön.	ADJ	ADJA	_	0	_	_	NER=O
+5	preußischen	preußisch	ADJ	ADJA	Degree=Pos|Number=Sing	0	_	_	NER=B-MISC
+6	Hofcomponisten	Hofcomponist	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O
+7	Hertel	Hertel	PROPN	NE	Number=Sing	0	_	_	NER=B-PER|SpaceAfter=No
+8	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1882-12-06.p107
+# lang = de
+# sent_id = PressMint-AT_1882-12-06.p107.s1
+# text = Wiener Stadttheater.
+1	Wiener	wiener	ADJ	ADJA	Degree=Pos	0	_	_	NER=B-LOC
+2	Stadttheater	Stadttheater	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=I-LOC|SpaceAfter=No
+3	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p107.s2
+# text = „Eine Perle“, Lustspiel in drei Acten von Crisafulli und Bocage.
+1	„	„	PUNCT	$(	PunctType=Brck	0	_	_	NER=O|SpaceAfter=No
+2	Eine	ein	DET	ART	Case=Acc|Definite=Ind|Gender=Fem|Number=Sing|NumType=Card|PronType=Art	0	_	_	NER=B-MISC
+3	Perle	Perle	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=I-MISC|SpaceAfter=No
+4	“	“	X	FM	_	0	_	_	NER=O|SpaceAfter=No
+5	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+6	Lustspiel	Lustspiel	NOUN	NN	Gender=Neut|Number=Sing	0	_	_	NER=O
+7	in	in	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+8	drei	drei	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+9	Acten	Acte	NOUN	NN	Case=Dat|Gender=Neut|Number=Plur	0	_	_	NER=O
+10	von	von	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+11	Crisafulli	Crisafulli	PROPN	NE	_	0	_	_	NER=B-PER
+12	und	und	CCONJ	KON	_	0	_	_	NER=O
+13	Bocage	Bocage	PROPN	NE	_	0	_	_	NER=B-PER|SpaceAfter=No
+14	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p107.s3
+# text = Deutsch von Oskar Blumenthal.
+1	Deutsch	deutsch	ADJ	ADJD	Degree=Pos|Variant=Short	0	_	_	NER=B-MISC
+2	von	von	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+3	Oskar	Oskar	PROPN	NE	Gender=Masc|Number=Sing	0	_	_	NER=B-PER
+4	Blumenthal	Blumenthal	PROPN	NE	_	0	_	_	NER=I-PER|SpaceAfter=No
+5	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p107.s4
+# text = (Gastspiel der Frau Hedwig Niemann=Raabe.)
+1	(	(	PUNCT	$(	PunctType=Brck	0	_	_	NER=O|SpaceAfter=No
+2	Gastspiel	Gastspiel	NOUN	NN	Gender=Neut|Number=Sing	0	_	_	NER=O
+3	der	der	DET	ART	Case=Gen|Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+4	Frau	Frau	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+5	Hedwig	Hedwig	PROPN	NE	Gender=Fem|Number=Sing	0	_	_	NER=B-PER
+6	Niemann=Raabe	Niemann=Raabe	PROPN	NE	_	0	_	_	NER=I-PER|SpaceAfter=No
+7	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O|SpaceAfter=No
+8	)	)	PUNCT	$(	PunctType=Brck	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1882-12-06.p108
+# lang = de
+# sent_id = PressMint-AT_1882-12-06.p108.s1
+# text = Carl=Theater.
+1	Carl=Theater	Carl=Theater	PROPN	NE	_	0	_	_	NER=B-LOC|SpaceAfter=No
+2	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p108.s2
+# text = „Kosiki“, komische Operette in drei Acten von Busnach und Liorat.
+1	„	„	PUNCT	$(	PunctType=Brck	0	_	_	NER=O|SpaceAfter=No
+2	Kosiki	Kosiki	PROPN	NE	_	0	_	_	NER=B-MISC|SpaceAfter=No
+3	“	“	X	FM	Foreign=Yes	0	_	_	NER=O|SpaceAfter=No
+4	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+5	komische	komisch	ADJ	ADJA	Degree=Pos|Gender=Fem|Number=Sing	0	_	_	NER=O
+6	Operette	Operette	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+7	in	in	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+8	drei	drei	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+9	Acten	Acte	NOUN	NN	Case=Dat|Gender=Neut|Number=Plur	0	_	_	NER=O
+10	von	von	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+11	Busnach	Busnach	PROPN	NE	_	0	_	_	NER=B-PER
+12	und	und	CCONJ	KON	_	0	_	_	NER=O
+13	Liorat	Liorat	NOUN	NN	_	0	_	_	NER=B-PER|SpaceAfter=No
+14	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p108.s3
+# text = Deutsch von Karl Treumann.
+1	Deutsch	deutsch	ADJ	ADJD	Degree=Pos|Variant=Short	0	_	_	NER=B-MISC
+2	von	von	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+3	Karl	Karl	PROPN	NE	Number=Sing	0	_	_	NER=B-PER
+4	Treumann	Treumann	PROPN	NE	_	0	_	_	NER=I-PER|SpaceAfter=No
+5	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p108.s4
+# text = Musik von Charles Lecocg.
+1	Musik	Musik	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+2	von	von	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+3	Charles	Charles	PROPN	NE	Case=Dat|Gender=Masc|Number=Sing	0	_	_	NER=B-PER
+4	Lecocg	Lecocg	PROPN	NE	_	0	_	_	NER=I-PER|SpaceAfter=No
+5	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1882-12-06.p109
+# lang = de
+# sent_id = PressMint-AT_1882-12-06.p109.s1
+# text = Theater an der Wien.
+1	Theater	Theater	NOUN	NN	Gender=Neut|Number=Sing	0	_	_	NER=B-LOC
+2	an	an	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=B-ORG
+3	der	der	DET	ART	Case=Dat|Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=I-ORG
+4	Wien	Wien	PROPN	NE	Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+5	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p109.s2
+# text = Zum ersten Male:
+1-2	Zum	_	_	_	_	_	_	_	NER=O
+1	Zu	zu	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	_
+2	dem	der	DET	ART	Case=Dat|Definite=Def|Gender=Masc,Neut|Number=Sing|PronType=Art	0	_	_	_
+3	ersten	erst	ADJ	ADJA	Degree=Pos|Number=Sing|NumType=Ord	0	_	_	NER=O
+4	Male	Mal	NOUN	NN	Case=Dat|Gender=Neut|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+5	:	:	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p109.s3
+# text = „Der Bettelstudent“, Operette in drei Acten von F. Zell und Richard Genée.
+1	„	„	PUNCT	$(	PunctType=Brck	0	_	_	NER=O|SpaceAfter=No
+2	Der	der	DET	ART	Case=Nom|Definite=Def|Gender=Masc|Number=Sing|PronType=Art	0	_	_	NER=B-MISC
+3	Bettelstudent	Bettelstudent	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=I-MISC|SpaceAfter=No
+4	“	“	X	FM	_	0	_	_	NER=O|SpaceAfter=No
+5	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+6	Operette	Operette	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+7	in	in	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+8	drei	drei	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+9	Acten	Acte	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O
+10	von	von	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+11	F.	F.	PROPN	NE	Number=Sing	0	_	_	NER=B-PER
+12	Zell	Zell	PROPN	NE	Number=Sing	0	_	_	NER=I-PER
+13	und	und	CCONJ	KON	_	0	_	_	NER=O
+14	Richard	Richard	PROPN	NE	Gender=Masc|Number=Sing	0	_	_	NER=B-PER
+15	Genée	Genée	PROPN	NE	_	0	_	_	NER=I-PER|SpaceAfter=No
+16	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p109.s4
+# text = Musik von Karl Millöcker.
+1	Musik	Musik	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+2	von	von	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+3	Karl	Karl	PROPN	NE	Number=Sing	0	_	_	NER=B-PER
+4	Millöcker	Millöcker	PROPN	NE	_	0	_	_	NER=I-PER|SpaceAfter=No
+5	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1882-12-06.p109.s5
+# text = Anfang 6½ Uhr.
+1	Anfang	Anfang	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O
+2	6½	6½	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+3	Uhr	Uhr	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+

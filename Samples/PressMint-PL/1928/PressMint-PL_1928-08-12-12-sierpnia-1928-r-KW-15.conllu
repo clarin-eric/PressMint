@@ -1,0 +1,105 @@
+# newdoc id = PressMint-PL_1928-08-12-12-sierpnia-1928-r-KW-15.ana
+# newpar id = PressMint-PL_1928-08-12-12-sierpnia-1928-r-KW-15.ana.p1
+# lang = pl
+# sent_id = PressMint-PL_1928-08-12-12-sierpnia-1928-r-KW-15.ana.p1.s1
+# text = MOSKWA. U.
+1	MOSKWA.	Moskwa.	NOUN	f	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=B-LOC
+2	U	U	X	pun	Abbr=Yes	0	_	_	NER=I-LOC|SpaceAfter=No
+3	.	.	PUNCT	interp	_	0	_	_	NER=I-LOC
+
+# sent_id = PressMint-PL_1928-08-12-12-sierpnia-1928-r-KW-15.ana.p2.s2
+# text = V111. (Pat.)
+1	V111	V111	X	npun	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	interp	_	0	_	_	NER=O
+3	(	(	PUNCT	interp	_	0	_	_	NER=O|SpaceAfter=No
+4	Pat	pat	X	pun	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	interp	_	0	_	_	NER=O|SpaceAfter=No
+6	)	)	PUNCT	interp	_	0	_	_	NER=O
+
+# sent_id = PressMint-PL_1928-08-12-12-sierpnia-1928-r-KW-15.ana.p3.s3
+# text = Agencja Tass omawiając liczne echa w prasie zagranicznej w związku z ostatniem wystąpieniem Cziczerina w sprawie dopuszczenia Rosji Sowieckiej do podpisania paktu Kelloga oświadcza, że jeżeli dobra wola rządu sowieckiego, który zgłosił chęć podpisania paktu Kelloga wraz z innemi mocarstwami nie doznała przychylnego przyjęcia, to nie można tego interpretować inaczej jak tylko w ten sposób,
+1	Agencja	agencja	NOUN	f	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=B-ORG
+2	Tass	Tass	X	nom	Foreign=Yes	0	_	_	NER=I-ORG
+3	omawiając	omawiać	VERB	imperf	Aspect=Imp|Tense=Pres|VerbForm=Conv|Voice=Act	0	_	_	NER=O
+4	liczne	liczny	ADJ	pos	Case=Acc|Degree=Pos|Gender=Neut|Number=Plur	0	_	_	NER=O
+5	echa	echo	NOUN	ncol	Case=Acc|Gender=Neut|Number=Plur	0	_	_	NER=O
+6	w	w	ADP	nwok	AdpType=Prep|Variant=Short	0	_	_	NER=O
+7	prasie	prasa	NOUN	f	Case=Loc|Gender=Fem|Number=Sing	0	_	_	NER=O
+8	zagranicznej	zagraniczny	ADJ	pos	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing	0	_	_	NER=O
+9	w	w	ADP	nwok	AdpType=Prep|Variant=Short	0	_	_	NER=O
+10	związku	związek	NOUN	m3	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	0	_	_	NER=O
+11	z	z	ADP	nwok	AdpType=Prep|Variant=Short	0	_	_	NER=O
+12	ostatniem	ostatnie	ADJ	pos	Case=Ins|Degree=Pos|Gender=Neut|Number=Sing	0	_	_	NER=O
+13	wystąpieniem	wystąpienie	NOUN	ncol	Case=Ins|Gender=Neut|Number=Sing	0	_	_	NER=O
+14	Cziczerina	Cziczerin	NOUN	m1	Animacy=Hum|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=B-PER
+15	w	w	ADP	nwok	AdpType=Prep|Variant=Short	0	_	_	NER=O
+16	sprawie	sprawa	NOUN	f	Case=Loc|Gender=Fem|Number=Sing	0	_	_	NER=O
+17	dopuszczenia	dopuścić	NOUN	aff	Aspect=Perf|Case=Gen|Gender=Neut|Number=Sing|Polarity=Pos|VerbForm=Vnoun	0	_	_	NER=O
+18	Rosji	Rosja	NOUN	f	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=B-LOC
+19	Sowieckiej	sowiecki	ADJ	pos	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	0	_	_	NER=I-LOC
+20	do	do	ADP	gen	AdpType=Prep	0	_	_	NER=O
+21	podpisania	podpisać	NOUN	aff	Aspect=Perf|Case=Gen|Gender=Neut|Number=Sing|Polarity=Pos|VerbForm=Vnoun	0	_	_	NER=O
+22	paktu	pakt	NOUN	m3	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+23	Kelloga	Kellog	NOUN	m1	Animacy=Hum|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=B-PER
+24	oświadcza	oświadczać	VERB	imperf	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O|SpaceAfter=No
+25	,	,	PUNCT	interp	_	0	_	_	NER=O
+26	że	że	SCONJ	comp	_	0	_	_	NER=O
+27	jeżeli	jeżeli	SCONJ	comp	_	0	_	_	NER=O
+28	dobra	dobry	ADJ	pos	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	0	_	_	NER=O
+29	wola	wola	NOUN	f	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+30	rządu	rząd	NOUN	m3	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+31	sowieckiego	sowiecki	ADJ	pos	Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+32	,	,	PUNCT	interp	_	0	_	_	NER=O
+33	który	który	ADJ	pos	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	0	_	_	NER=O
+34	zgłosił	zgłosić	VERB	perf	Animacy=Inan|Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+35	chęć	chęć	NOUN	f	Case=Acc|Gender=Fem|Number=Sing	0	_	_	NER=O
+36	podpisania	podpisać	NOUN	aff	Aspect=Perf|Case=Gen|Gender=Neut|Number=Sing|Polarity=Pos|VerbForm=Vnoun	0	_	_	NER=O
+37	paktu	pakt	NOUN	m3	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+38	Kelloga	Kellog	NOUN	m1	Animacy=Hum|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=B-PER
+39	wraz	wraz	ADV	adv	_	0	_	_	NER=O
+40	z	z	ADP	nwok	AdpType=Prep|Variant=Short	0	_	_	NER=O
+41	innemi	inne	ADJ	pos	Case=Ins|Degree=Pos|Gender=Neut|Number=Plur	0	_	_	NER=O
+42	mocarstwami	mocarstwo	NOUN	ncol	Case=Ins|Gender=Neut|Number=Plur	0	_	_	NER=O
+43	nie	nie	PART	part	_	0	_	_	NER=O
+44	doznała	doznać	VERB	perf	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+45	przychylnego	przychylny	ADJ	pos	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	0	_	_	NER=O
+46	przyjęcia	przyjąć	NOUN	aff	Aspect=Perf|Case=Gen|Gender=Neut|Number=Sing|Polarity=Pos|VerbForm=Vnoun	0	_	_	NER=O|SpaceAfter=No
+47	,	,	PUNCT	interp	_	0	_	_	NER=O
+48	to	to	SCONJ	comp	_	0	_	_	NER=O
+49	nie	nie	PART	part	_	0	_	_	NER=O
+50	można	można	VERB	pred	Mood=Ind|Tense=Pres|VerbForm=Fin|VerbType=Quasi	0	_	_	NER=O
+51	tego	to	NOUN	ncol	Case=Gen|Gender=Neut|Number=Sing	0	_	_	NER=O
+52	interpretować	interpretować	VERB	imperf	Aspect=Imp|VerbForm=Inf|Voice=Act	0	_	_	NER=O
+53	inaczej	inaczej	ADV	pos	Degree=Pos	0	_	_	NER=O
+54	jak	jak	ADV	pos	Degree=Pos	0	_	_	NER=O
+55	tylko	tylko	PART	part	_	0	_	_	NER=O
+56	w	w	ADP	nwok	AdpType=Prep|Variant=Short	0	_	_	NER=O
+57	ten	ten	ADJ	pos	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	0	_	_	NER=O
+58	sposób	sposób	NOUN	m3	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+59	,	,	PUNCT	interp	_	0	_	_	NER=O
+
+# sent_id = PressMint-PL_1928-08-12-12-sierpnia-1928-r-KW-15.ana.p4.s4
+# text = że uczestnicy paktu nie pragną przyjąć na siebie nawet formalnych zobowiązań dotyczących wyrzeczenia się wojny, o ile chodzi o ZSRR.
+1	że	że	SCONJ	comp	_	0	_	_	NER=O
+2	uczestnicy	uczestnik	NOUN	m1	Animacy=Hum|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+3	paktu	pakt	NOUN	m3	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+4	nie	nie	PART	part	_	0	_	_	NER=O
+5	pragną	pragnąć	VERB	imperf	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+6	przyjąć	przyjąć	VERB	perf	Aspect=Perf|VerbForm=Inf|Voice=Act	0	_	_	NER=O
+7	na	na	ADP	acc	AdpType=Prep	0	_	_	NER=O
+8	siebie	siebie	PRON	acc	Case=Acc|PronType=Prs|Reflex=Yes	0	_	_	NER=O
+9	nawet	nawet	PART	part	_	0	_	_	NER=O
+10	formalnych	formalny	ADJ	pos	Case=Gen|Degree=Pos|Gender=Neut|Number=Plur	0	_	_	NER=O
+11	zobowiązań	zobowiązanie	NOUN	ncol	Case=Gen|Gender=Neut|Number=Plur	0	_	_	NER=O
+12	dotyczących	dotyczyć	ADJ	aff	Aspect=Imp|Case=Gen|Gender=Neut|Number=Plur|Polarity=Pos|VerbForm=Part|Voice=Act	0	_	_	NER=O
+13	wyrzeczenia	wyrzec	NOUN	aff	Aspect=Perf|Case=Gen|Gender=Neut|Number=Sing|Polarity=Pos|VerbForm=Vnoun	0	_	_	NER=O
+14	się	się	PART	part	_	0	_	_	NER=O
+15	wojny	wojna	NOUN	f	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+16	,	,	PUNCT	interp	_	0	_	_	NER=O
+17	o	o	ADP	acc	AdpType=Prep	0	_	_	NER=O
+18	ile	ile	NUM	rec	Case=Acc|Gender=Neut|Number=Plur|NumForm=Word	0	_	_	NER=O
+19	chodzi	chodzić	VERB	imperf	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+20	o	o	ADP	acc	AdpType=Prep	0	_	_	NER=O
+21	ZSRR	ZSRR	NOUN	m3	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+22	.	.	PUNCT	interp	_	0	_	_	NER=O
+

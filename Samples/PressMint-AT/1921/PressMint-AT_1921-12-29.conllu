@@ -1,0 +1,183 @@
+# newdoc id = PressMint-AT_1921-12-29.ana
+# sent_id = PressMint-AT_1921-12-29.head1.s1
+# text = Wiener Abendpost.
+1	Wiener	wiener	ADJ	ADJA	Degree=Pos	0	_	_	NER=B-ORG
+2	Abendpost	Abendpost	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+3	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1921-12-29.p1
+# lang = de
+# sent_id = PressMint-AT_1921-12-29.p1.s1
+# text = Donnerstag, 29. Dezember Beilage zur Wiener Zeitung.
+1	Donnerstag	Donnerstag	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+3	29.	29.	ADJ	ADJA	_	0	_	_	NER=O
+4	Dezember	Dezember	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O
+5	Beilage	Beilage	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+6-7	zur	_	_	_	_	_	_	_	NER=O
+6	zu	zu	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	_
+7	der	der	DET	ART	Case=Dat|Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	_
+8	Wiener	wiener	ADJ	ADJA	Degree=Pos	0	_	_	NER=B-ORG
+9	Zeitung	Zeitung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+10	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1921-12-29.p1.s2
+# text = 1921 — Nr.
+1	1921	1921	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+2	—	—	X	FM	Foreign=Yes	0	_	_	NER=O
+3	Nr	Nr	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1921-12-29.p1.s3
+# text = 295
+1	295	295	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1921-12-29.p2
+# lang = de
+# sent_id = PressMint-AT_1921-12-29.p2.s1
+# text = Bezugspreise:
+1	Bezugspreise	Bezugspreis	NOUN	NN	Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1921-12-29.p2.s2
+# text = Ohne Zustellung monatlich 40 Kronen, mit Zustellung oder Postversendung monatlich 50 Kronen.
+1	Ohne	ohne	ADP	APPR	AdpType=Prep|Case=Acc	0	_	_	NER=O
+2	Zustellung	Zustellung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+3	monatlich	monatlich	ADJ	ADJD	Degree=Pos|Variant=Short	0	_	_	NER=O
+4	40	40	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+5	Kronen	Krone	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+7	mit	mit	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+8	Zustellung	Zustellung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+9	oder	oder	CCONJ	KON	_	0	_	_	NER=O
+10	Postversendung	Postversendung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+11	monatlich	monatlich	ADJ	ADJD	Degree=Pos|Variant=Short	0	_	_	NER=O
+12	50	50	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+13	Kronen	Krone	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+14	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1921-12-29.p2.s3
+# text = Rodaktion: I. Bäckerstraße 13 (Fernsprecher Nr. 13464 und 18528;
+1	Rodaktion	Rodaktion	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+3	I	I	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=B-LOC|SpaceAfter=No
+4	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=I-LOC
+5	Bäckerstraße	Bäckerstrasse	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=I-LOC
+6	13	13	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+7	(	(	PUNCT	$(	PunctType=Brck	0	_	_	NER=O|SpaceAfter=No
+8	Fernsprecher	Fernsprecher	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O
+9	Nr.	Nummer	NOUN	NN	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+10	13464	13464	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+11	und	und	CCONJ	KON	_	0	_	_	NER=O
+12	18528	18528	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+13	;	;	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1921-12-29.p2.s4
+# text = Direktion: I. Bäckerstraße 13 (Fernsprecher Nr. 2.549;
+1	Direktion	Direktion	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+3	I	I	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=B-LOC|SpaceAfter=No
+4	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=I-LOC
+5	Bäckerstraße	Bäckerstrasse	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=I-LOC
+6	13	13	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+7	(	(	PUNCT	$(	PunctType=Brck	0	_	_	NER=O|SpaceAfter=No
+8	Fernsprecher	Fernsprecher	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O
+9	Nr.	Nummer	NOUN	NN	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+10	2.549	2.549	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+11	;	;	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1921-12-29.p2.s5
+# text = Druckerei: 1. Bäckerstraße 20 Gfernfprecher Nr. 14.8241 Postiparkassen-Konto Nr. 88800
+1	Druckerei	Druckerei	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+3	1.	1.	ADJ	ADJA	_	0	_	_	NER=B-LOC
+4	Bäckerstraße	Bäckerstrasse	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=I-LOC
+5	20	20	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+6	Gfernfprecher	Gfernfprecher	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O
+7	Nr.	Nummer	NOUN	NN	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+8	14.8241	14.8241	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+9	Postiparkassen-Konto	Postiparkassen-Konto	NOUN	NN	Gender=Neut|Number=Sing	0	_	_	NER=O
+10	Nr.	Nummer	NOUN	NN	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+11	88800	88800	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1921-12-29.head25.s1
+# text = Volkswirtschaftliches.
+1	Volkswirtschaftliches	volkswirtschaftlich	ADJ	ADJA	Degree=Pos|Gender=Neut|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1921-12-29.p57
+# lang = de
+# sent_id = PressMint-AT_1921-12-29.p57.s1
+# text = Bodenkreditanstalt.
+1	Bodenkreditanstalt	Bodenkreditanstalt	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1921-12-29.p57.s2
+# text = Heute mittags wurde unter Vorsitz des Präsidenten Dr. Sieghart eine außerordentliche Generalversammlung der Allgemeinen österreichischen Bodenkreditanstalt abgehalten, in der der Antrag der Verwaltung auf Erhöhung des Aktienkapitals von 210 auf 410 Millionen Kronen einstimmig zum Beschlusse erhoben wurde.
+1	Heute	heute	ADV	ADV	_	0	_	_	NER=O
+2	mittags	mittags	ADV	ADV	_	0	_	_	NER=O
+3	wurde	werden	AUX	VAFIN	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	_	_	NER=O
+4	unter	unter	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+5	Vorsitz	Vorsitz	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O
+6	des	der	DET	ART	Case=Gen|Definite=Def|Gender=Masc|Number=Sing|PronType=Art	0	_	_	NER=O
+7	Präsidenten	Präsident	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O
+8	Dr.	Doktor	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O
+9	Sieghart	Sieghart	PROPN	NE	Number=Sing	0	_	_	NER=B-PER
+10	eine	ein	DET	ART	Case=Nom|Definite=Ind|Gender=Fem|Number=Sing|NumType=Card|PronType=Art	0	_	_	NER=O
+11	außerordentliche	außerordentlich	ADJ	ADJA	Degree=Pos|Gender=Fem|Number=Sing	0	_	_	NER=O
+12	Generalversammlung	Generalversammlung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+13	der	der	DET	ART	Case=Gen|Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+14	Allgemeinen	allgemein	ADJ	ADJA	Degree=Pos|Number=Sing	0	_	_	NER=B-ORG
+15	österreichischen	österreichisch	ADJ	ADJA	Degree=Pos|Number=Sing	0	_	_	NER=I-ORG
+16	Bodenkreditanstalt	Bodenkreditanstalt	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=I-ORG
+17	abgehalten	abhalten	VERB	VVPP	Aspect=Perf|VerbForm=Part	0	_	_	NER=O|SpaceAfter=No
+18	,	,	PUNCT	$,	PunctType=Comm	0	_	_	NER=O
+19	in	in	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+20	der	der	PRON	PRELS	Case=Dat|Gender=Fem|Number=Sing|PronType=Dem,Rel	0	_	_	NER=O
+21	der	der	DET	ART	Case=Nom|Definite=Def|Gender=Masc|Number=Sing|PronType=Art	0	_	_	NER=O
+22	Antrag	Antrag	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O
+23	der	der	DET	ART	Case=Gen|Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+24	Verwaltung	Verwaltung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+25	auf	auf	ADP	APPR	AdpType=Prep|Case=Acc	0	_	_	NER=O
+26	Erhöhung	Erhöhung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+27	des	der	DET	ART	Case=Gen|Definite=Def|Gender=Neut|Number=Sing|PronType=Art	0	_	_	NER=O
+28	Aktienkapitals	Aktienkapital	NOUN	NN	Case=Gen|Gender=Neut|Number=Sing	0	_	_	NER=O
+29	von	von	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	NER=O
+30	210	210	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+31	auf	auf	ADP	APPR	AdpType=Prep|Case=Acc	0	_	_	NER=O
+32	410	410	NUM	CARD	Number=Plur|NumType=Card	0	_	_	NER=O
+33	Millionen	Million	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O
+34	Kronen	Krone	NOUN	NN	Gender=Fem|Number=Plur	0	_	_	NER=O
+35	einstimmig	einstimmig	ADJ	ADJD	Degree=Pos|Variant=Short	0	_	_	NER=O
+36-37	zum	_	_	_	_	_	_	_	NER=O
+36	zu	zu	ADP	APPR	AdpType=Prep|Case=Dat	0	_	_	_
+37	dem	der	DET	ART	Case=Dat|Definite=Def|Gender=Masc,Neut|Number=Sing|PronType=Art	0	_	_	_
+38	Beschlusse	Beschluss	NOUN	NN	Case=Dat|Gender=Masc|Number=Sing	0	_	_	NER=O
+39	erhoben	erheben	VERB	VVPP	Aspect=Perf|VerbForm=Part	0	_	_	NER=O
+40	wurde	werden	AUX	VAFIN	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	_	_	NER=O|SpaceAfter=No
+41	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# newpar id = PressMint-AT_1921-12-29.p58
+# lang = de
+# sent_id = PressMint-AT_1921-12-29.p58.s1
+# text = Verantwortlicher Redakteur:
+1	Verantwortlicher	verantwortlich	ADJ	ADJA	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	Redakteur	Redakteur	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1921-12-29.p58.s2
+# text = Dr. Friedrich Sträßle.
+1	Dr.	Doktor	NOUN	NN	Gender=Masc|Number=Sing	0	_	_	NER=O
+2	Friedrich	Friedrich	PROPN	NE	Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=B-PER
+3	Sträßle	Strässle	PROPN	NE	_	0	_	_	NER=I-PER|SpaceAfter=No
+4	.	.	PUNCT	$.	PunctType=Peri	0	_	_	NER=O
+
+# sent_id = PressMint-AT_1921-12-29.p58.s3
+# text = Druckerei der „Wiener Zeitung“
+1	Druckerei	Druckerei	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=O
+2	der	der	DET	ART	Case=Gen|Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+3	„	„	PUNCT	$(	PunctType=Brck	0	_	_	NER=O|SpaceAfter=No
+4	Wiener	wiener	ADJ	ADJA	Degree=Pos	0	_	_	NER=B-ORG
+5	Zeitung	Zeitung	NOUN	NN	Gender=Fem|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+6	“	“	X	FM	Foreign=Yes	0	_	_	NER=O
+

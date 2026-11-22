@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-AT_1902-07-19" xml:lang="de">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="de">Österreichisches historisches Zeitungskorpus PressMint-AT, "Wiener Abendpost", 19.07.1902 [PressMint SAMPLE]</title>
+            <title xml:lang="en">Austrian historical newspaper corpus PressMint-AT, "Wiener Abendpost", 07/19/1902 [PressMint SAMPLE]</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="paragraphs" quantity="134" xml:lang="en">134 paragraphs</measure>
+            <measure unit="words" quantity="10207" xml:lang="en">10,207 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="de">CLARIN Forschungsinfrastruktur</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by-nc/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</ref>.</p>
+               <p xml:lang="de">Dieses Werk ist lizenziert unter der <ref target="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Namensnennung-Nicht kommerziell 4.0 International Lizenz</ref>.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Wiener Abendpost</title>
+               <publisher>Dr. Emil Löbl</publisher>
+               <pubPlace>Vienna</pubPlace>
+               <date when="1902-07-19">19.07.1902</date>
+               <idno type="URI" subtype="URL">https://anno.onb.ac.at/cgi-content/anno?aid=wrz&amp;datum=19020719</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2026-11-21">
+            <name>corpus2sample.xsl</name>: Made sample.</change>
+         <change when="2026-08-24">
+            <name>Jona Marie Hassenbach</name>: Encoded corpus.</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="PressMint-AT_1902-07-19.page1">
+         <graphic url="https://anno.onb.ac.at/cgi-content/anno?aid=wrz&amp;datum=19020719&amp;seite=21&amp;zoom=33"/>
+      </surface>
+   </facsimile>
+   <text xml:lang="de">
+      <body>
+         <pb n="1" facs="#PressMint-AT_1902-07-19.page1"/>
+         <div type="banner">
+            <head xml:id="PressMint-AT_1902-07-19.head1">Wiener Abendpost.</head>
+         </div>
+         <div type="colophon">
+            <p xml:id="PressMint-AT_1902-07-19.p1">Beilage zur Wiener Zeitung. 1902. — Nr. 165. Samstag, 19. Juli.</p>
+         </div>
+         <div type="colophon">
+            <p xml:id="PressMint-AT_1902-07-19.p2">Pränumerations-Preise: Ganzj. 8 Kronen, halbj. 4 Kronen, vierteli. 2 Kronen, monatl. 80 Heller. Die Zustellungsgebühr beträgt monatlich 40 Heller. — Mit Vostversendung: Ganzi. 12 Kronen, halbt. 6 Kronen, viertelf. 3 Kronen, monatl. 1 Krone 20 Heller: Einzelne Nummern 4 Heller. Redaktion, Komptoir und Druckerei der „Wiener Zeitung“, 1. Bezirk, Bückerstraße Nr. 28. Einzelne Nummern 4 Heller.</p>
+         </div>
+         <gap reason="editorial">
+            <desc xml:lang="en">SAMPLING</desc>
+         </gap>
+         <div type="colophon">
+            <p xml:id="PressMint-AT_1902-07-19.p133">Druckerei der kaiserlichen „Wiener Zeitung“.</p>
+         </div>
+         <div type="colophon">
+            <p xml:id="PressMint-AT_1902-07-19.p134">Verantwortlicher Redakteur: In Vertretung Dr. Emil Löbl.</p>
+         </div>
+      </body>
+   </text>
+</TEI>
+

@@ -1,0 +1,47 @@
+# newdoc id = PressMint-PL_1934-04-19-19-kwietnia-1934-r-KW-30.ana
+# newpar id = PressMint-PL_1934-04-19-19-kwietnia-1934-r-KW-30.ana.p1
+# lang = pl
+# sent_id = PressMint-PL_1934-04-19-19-kwietnia-1934-r-KW-30.ana.p1.s1
+# text = ##OBOZY LETNIE NA POGRANICZU Pierwsze grupy harcerzy i młodzieży szkolnej przybędą do obozów letnich na pograniczu polsko-litewskiem w pierwszych dniach czerwca r. b.
+1	#	#	SYM	sym	_	0	_	_	NER=O|SpaceAfter=No
+2	#	#	SYM	interp	_	0	_	_	NER=O|SpaceAfter=No
+3	OBOZY	Obóz	NOUN	m3	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+4	LETNIE	letni	ADJ	pos	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	0	_	_	NER=O
+5	NA	na	ADP	loc	AdpType=Prep	0	_	_	NER=O
+6	POGRANICZU	pogranicze	NOUN	ncol	Case=Loc|Gender=Neut|Number=Sing	0	_	_	NER=O
+7	Pierwsze	pierwszy	ADJ	pos	Case=Nom|Degree=Pos|Gender=Fem|Number=Plur	0	_	_	NER=O
+8	grupy	grupa	NOUN	f	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+9	harcerzy	harcerz	NOUN	m1	Animacy=Hum|Case=Gen|Gender=Masc|Number=Plur	0	_	_	NER=O
+10	i	i	CCONJ	conj	_	0	_	_	NER=O
+11	młodzieży	młodzież	NOUN	f	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=O
+12	szkolnej	szkolny	ADJ	pos	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	0	_	_	NER=O
+13	przybędą	przybyć	VERB	perf	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+14	do	do	ADP	gen	AdpType=Prep	0	_	_	NER=O
+15	obozów	obóz	NOUN	m3	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	0	_	_	NER=O
+16	letnich	letni	ADJ	pos	Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Plur	0	_	_	NER=O
+17	na	na	ADP	loc	AdpType=Prep	0	_	_	NER=O
+18	pograniczu	pogranicze	NOUN	ncol	Case=Loc|Gender=Neut|Number=Sing	0	_	_	NER=O
+19	polsko	polski	ADJ	adja	Hyph=Yes	0	_	_	NER=B-LOC|SpaceAfter=No
+20	-	-	PUNCT	interp	_	0	_	_	NER=O|SpaceAfter=No
+21	litewskiem	litewskie	ADJ	pos	Case=Loc|Degree=Pos|Gender=Neut|Number=Sing	0	_	_	NER=B-LOC
+22	w	w	ADP	nwok	AdpType=Prep|Variant=Short	0	_	_	NER=O
+23	pierwszych	pierwszy	ADJ	pos	Animacy=Inan|Case=Loc|Degree=Pos|Gender=Masc|Number=Plur	0	_	_	NER=O
+24	dniach	dzień	NOUN	m3	Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur	0	_	_	NER=O
+25	czerwca	czerwiec	NOUN	m3	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=B-MISC
+26	r.	r.ok	X	pun	Abbr=Yes	0	_	_	NER=O
+27	b	bardzo	X	pun	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+28	.	.	PUNCT	interp	_	0	_	_	NER=O
+
+# sent_id = PressMint-PL_1934-04-19-19-kwietnia-1934-r-KW-30.ana.p2.s2
+# text = Przyjadą grupy harcerzv z Warszawy, Katowic i Poznania.
+1	Przyjadą	przyjechać	VERB	perf	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+2	grupy	grupa	NOUN	f	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+3	harcerzv	harceriec	NOUN	m1	Animacy=Hum|Case=Gen|Gender=Masc|Number=Plur	0	_	_	NER=O
+4	z	z	ADP	nwok	AdpType=Prep|Variant=Short	0	_	_	NER=O
+5	Warszawy	Warszawa	NOUN	f	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+6	,	,	PUNCT	interp	_	0	_	_	NER=O
+7	Katowic	Katowice	NOUN	pt	Case=Gen|Gender=Neut|Number=Ptan	0	_	_	NER=B-LOC
+8	i	i	CCONJ	conj	_	0	_	_	NER=O
+9	Poznania	Poznań	NOUN	m3	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+10	.	.	PUNCT	interp	_	0	_	_	NER=O
+

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-AT.ana" xml:lang="de">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Österreichisches historisches Zeitungskorpus PressMint-AT [PressMint.ana SAMPLE]</title>
+            <title xml:lang="en">Austrian historical newspaper corpus PressMint-AT [PressMint.ana SAMPLE]</title>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0002-1631-4560">Tanja Wissik</persName>
+               <resp xml:lang="de">PressMint-AT Projektkoordinatorin</resp>
+               <resp xml:lang="en">PressMint-At project coordinator</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0001-8066-7363">Claudia Resch</persName>
+               <resp xml:lang="de">PressMint-AT Projektkoordinatorin</resp>
+               <resp xml:lang="en">PressMint-At project coordinator</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0002-8111-5584">Hannes Pirker</persName>
+               <resp xml:lang="de">Klassifikation relevanter Seiten auf ANNO</resp>
+               <resp xml:lang="en">Classification of relevant pages on ANNO</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0009-0003-9200-2512">Jona Marie Hassenbach</persName>
+               <resp xml:lang="de">Gold Standard Annotation, Layout Analyse und TEI-XML encoding</resp>
+               <resp xml:lang="en">Gold Standard Annotation, Layout Analysis, and TEI-XML encoding</resp>
+            </respStmt>
+            <respStmt>
+               <persName>Stefan Resch</persName>
+               <resp xml:lang="de">OCR Tool Vergleich</resp>
+               <resp xml:lang="en">OCR tool comparison</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0002-0236-0224">Christian Lendl</persName>
+               <resp xml:lang="de">Layout Analyse und TEI-XML encoding</resp>
+               <resp xml:lang="en">Layout Analysis and TEI-XML encoding</resp>
+            </respStmt>
+            <respStmt>
+               <persName>Hannah Lea Drexel</persName>
+               <resp xml:lang="de">Gold Standard Annotation</resp>
+               <resp xml:lang="en">Gold Standard Annotation</resp>
+            </respStmt>
+            <respStmt>
+               <persName>Tanja Pokorny</persName>
+               <resp xml:lang="de">Gold Standard Annotation</resp>
+               <resp xml:lang="en">Gold Standard Annotation</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0001-7953-8783">Matyáš Kopp</persName>
+               <resp xml:lang="en">Linguistic annotation</resp>
+            </respStmt>
+            <funder>
+               <orgName xml:lang="de">CLARIN Forschungsinfrastruktur</orgName>
+               <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+            </funder>
+            <funder>
+               <orgName xml:lang="de">CLARIAH-AT Konsortium</orgName>
+               <orgName xml:lang="en">CLARIAH-AT consortium</orgName>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="texts" quantity="17320" xml:lang="en">17,320 texts</measure>
+            <measure unit="paragraphs" quantity="2089248" xml:lang="en">2,089,248 paragraphs</measure>
+            <measure unit="words" quantity="144219494" xml:lang="en">144,219,494 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="de">CLARIN Forschungsinfrastruktur</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by-nc/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</ref>.</p>
+               <p xml:lang="de">Dieses Werk ist lizenziert unter der <ref target="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Namensnennung-Nicht kommerziell 4.0 International Lizenz</ref>.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title type="main" xml:lang="de">ANNO (AustriaN Newspaper Online)</title>
+               <title type="main" xml:lang="en">ANNO (AustriaN Newspaper Online)</title>
+               <publisher>Österreichische Nationalbibliothek</publisher>
+               <idno type="URI" subtype="URL">https://anno.onb.ac.at/</idno>
+               <note type="accessed">15 July 2026</note>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+            <p xml:lang="de"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> ist ein Projekt, das darauf abzielt, (1) eine mehrsprachige Sammlung von Korpora historischer Zeitungen zu erstellen, die einheitlich gemäß den <ref target="https://clarin-eric.github.io/PressMint/">PressMint-Encoding-Richtlinien</ref> kodiert sind; (2) die Korpora mit linguistischen Annotationen zu versehen; und (3) die Korpora über Konkordanzwerkzeuge zugänglich zu machen.</p>
+         </projectDesc>
+         <editorialDecl>
+            <quotation>
+               <p xml:lang="en">Quotation marks were left in the text and are not explicitly marked up.</p>
+            </quotation>
+            <hyphenation>
+               <p xml:lang="en">Line breaks were removed and enhyphend words joined (except at page breaks) if they were composita and joined with "=" otherwise. Previously hyphenated words are not marked-up as such.</p>
+            </hyphenation>
+            <correction>
+               <p xml:lang="en">After layout recognition with YOLO and text recognition with Transkribus, further correction was performed on the corpus as a whole:</p>
+            </correction>
+            <normalization>
+               <p xml:lang="en">Spacing was normalized.</p>
+            </normalization>
+            <segmentation>
+               <p xml:lang="en">Issues are split by page breaks. Within each page, paragraph boundaries are determined based on headings and byline elements, and paragraphs crossing a column were merged where possible.</p>
+            </segmentation>
+         </editorialDecl>
+         <tagsDecl><!--These numbers do not reflect the size of the sample!-->
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="322"/>
+               <tagUsage gi="byline" occurs="129"/>
+               <tagUsage gi="desc" occurs="400"/>
+               <tagUsage gi="div" occurs="9849"/>
+               <tagUsage gi="gap" occurs="400"/>
+               <tagUsage gi="head" occurs="10093"/>
+               <tagUsage gi="name" occurs="121763"/>
+               <tagUsage gi="p" occurs="20440"/>
+               <tagUsage gi="pb" occurs="858"/>
+               <tagUsage gi="pc" occurs="214088"/>
+               <tagUsage gi="s" occurs="93400"/>
+               <tagUsage gi="text" occurs="322"/>
+               <tagUsage gi="w" occurs="1336768"/>
+            </namespace>
+         </tagsDecl>
+         <classDecl>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-OCR.xml"/>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-NER.ana.xml"/>
+         </classDecl>
+         <appInfo>
+            <application ident="UDPipe" version="2">
+               <label>UDPipe 2 (german-hdt-ud-2.17-251125 model)</label>
+               <desc xml:lang="en">Tokenization, sentence segmentation, POS tagging and lemmatization done with UDPipe 2 (<ref target="http://ufal.mff.cuni.cz/udpipe/2">http://ufal.mff.cuni.cz/udpipe/2</ref>) with german-hdt-ud-2.17-251125 model.</desc>
+            </application>
+            <application ident="NameTag" version="3">
+               <label>NameTag 3 (nametag3-multilingual-conll-250203 model)</label>
+               <desc xml:lang="en">Name entity recognition done with NameTag 3 (<ref target="http://ufal.mff.cuni.cz/nametag/3">http://ufal.mff.cuni.cz/nametag/3</ref>) with nametag3-multilingual-conll-250203 model (categories PER, LOC, ORG, MISC).</desc>
+            </application>
+         </appInfo>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+               <date from="1863" to="1920">1863-1920</date>
+            </setting>
+         </settingDesc>
+         <langUsage>
+            <language ident="de" xml:lang="de">Deutsch</language>
+            <language ident="de" xml:lang="en">German</language>
+            <language ident="en" xml:lang="de">Englisch</language>
+            <language ident="en" xml:lang="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-11-21">
+            <name>corpus2sample.xsl</name>: Made sample.</change>
+         <change when="2026-11-21">parlamint2release script: Fix some identifiable erros for the release.</change>
+         <change when="2026-08-24">
+            <name>Jona Marie Hassenbach</name>: Encoded Corpus (17320 issues, 1863, 1864, 1865, 1866, 1867, 1868, 1869, 1870, 1871, 1872, 1873, 1874, 1875, 1876, 1877, 1878, 1879, 1880, 1881, 1882, 1883, 1884, 1885, 1886, 1887, 1888, 1889, 1890, 1891, 1892, 1893, 1894, 1895, 1896, 1897, 1898, 1899, 1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910, 1911, 1912, 1913, 1914, 1915, 1916, 1917, 1918, 1919, 1920, 1921).</change>
+         <change when="2026-07-07">
+            <name>Jona Marie Hassenbach</name>: Corrected sample (4 issues, 1914, 1915, 1917, 1918).</change>
+         <change when="2026-04-21">
+            <name>Jona Marie Hassenbach</name>: Made sample (4 issues, 1914, 1915, 1917, 1918).</change>
+         <change when="2026-11-21">parlamint-add-common-content script: Adding common content.</change>
+      </revisionDesc>
+   </teiHeader>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1882/PressMint-AT_1882-12-06.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1902/PressMint-AT_1902-07-19.ana.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1921/PressMint-AT_1921-12-29.ana.xml"/>
+</teiCorpus>
+

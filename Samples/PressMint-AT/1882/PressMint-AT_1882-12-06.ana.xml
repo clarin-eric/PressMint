@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-AT_1882-12-06.ana" xml:lang="de">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="de">Österreichisches historisches Zeitungskorpus PressMint-AT, "Wiener Abendpost", 06.12.1882 [PressMint.ana SAMPLE]</title>
+            <title xml:lang="en">Austrian historical newspaper corpus PressMint-AT, "Wiener Abendpost", 12/06/1882 [PressMint.ana SAMPLE]</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="paragraphs" quantity="109" xml:lang="en">109 paragraphs</measure>
+            <measure unit="words" quantity="7633" xml:lang="en">7,633 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="de">CLARIN Forschungsinfrastruktur</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by-nc/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</ref>.</p>
+               <p xml:lang="de">Dieses Werk ist lizenziert unter der <ref target="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Namensnennung-Nicht kommerziell 4.0 International Lizenz</ref>.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Wiener Abendpost</title>
+               <publisher>Friedrich Uhl</publisher>
+               <pubPlace>Vienna</pubPlace>
+               <date when="1882-12-06">06.12.1882</date>
+               <idno type="URI" subtype="URL">https://anno.onb.ac.at/cgi-content/anno?aid=wrz&amp;datum=18821206</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2026-11-21">
+            <name>corpus2sample.xsl</name>: Made sample.</change>
+         <change when="2026-08-24">
+            <name>Jona Marie Hassenbach</name>: Encoded corpus.</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="PressMint-AT_1882-12-06.page1">
+         <graphic url="https://anno.onb.ac.at/cgi-content/anno?aid=wrz&amp;datum=18821206&amp;seite=15&amp;zoom=33"/>
+      </surface>
+   </facsimile>
+   <text xml:lang="de">
+      <body>
+         <pb n="1" facs="#PressMint-AT_1882-12-06.page1"/>
+         <div type="banner">
+            <head xml:id="PressMint-AT_1882-12-06.head1">
+               <s n="1" xml:id="PressMint-AT_1882-12-06.head1.s1">
+                  <name type="ORG">
+<w msd="UPosTag=ADJ|Degree=Pos" lemma="wiener" pos="ADJA" xml:id="PressMint-AT_1882-12-06.head1.s1.w1">Wiener</w>
+<w msd="UPosTag=NOUN|Gender=Masc|Number=Sing" lemma="Abendpost" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.head1.s1.w2">Abendpost</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.head1.s1.w3">.</pc>
+</s>
+            </head>
+         </div>
+         <div type="colophon">
+            <p xml:id="PressMint-AT_1882-12-06.p1">
+<s n="2" xml:id="PressMint-AT_1882-12-06.p1.s1">
+<w msd="UPosTag=NOUN" lemma="1882." pos="NN" xml:id="PressMint-AT_1882-12-06.p1.s1.w1">1882.</w>
+<w msd="UPosTag=X|Foreign=Yes" lemma="—" pos="FM" xml:id="PressMint-AT_1882-12-06.p1.s1.w2">—</w>
+<w msd="UPosTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="Nummer" pos="NN" xml:id="PressMint-AT_1882-12-06.p1.s1.w3">Nr.</w>
+<w msd="UPosTag=ADJ" lemma="279." pos="ADJA" xml:id="PressMint-AT_1882-12-06.p1.s1.w4">279.</w>
+</s>
+               <s n="3" xml:id="PressMint-AT_1882-12-06.p1.s2">
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Beilage" pos="NN" xml:id="PressMint-AT_1882-12-06.p1.s2.w1">Beilage</w>
+<w xml:id="PressMint-AT_1882-12-06.p1.s2.w2">zur<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" norm="zu" lemma="zu" pos="APPR" xml:id="PressMint-AT_1882-12-06.p1.s2.w3"/><w msd="UPosTag=DET|Case=Dat|Definite=Def|Gender=Fem|Number=Sing|PronType=Art" norm="der" lemma="der" pos="ART" xml:id="PressMint-AT_1882-12-06.p1.s2.w4"/></w>
+                  <name type="ORG">
+<w msd="UPosTag=ADJ|Degree=Pos" lemma="wiener" pos="ADJA" xml:id="PressMint-AT_1882-12-06.p1.s2.w5">Wiener</w>
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Zeitung" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p1.s2.w6">Zeitung</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p1.s2.w7">.</pc>
+</s>
+               <s n="4" xml:id="PressMint-AT_1882-12-06.p1.s3">
+<w msd="UPosTag=NOUN|Gender=Masc|Number=Sing" lemma="Mittwoch" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p1.s3.w1">Mittwoch</w>
+<pc msd="UPosTag=PUNCT|PunctType=Comm" lemma="," pos="$," xml:id="PressMint-AT_1882-12-06.p1.s3.w2">,</pc>
+<w msd="UPosTag=ADJ" lemma="6." pos="ADJA" xml:id="PressMint-AT_1882-12-06.p1.s3.w3">6.</w>
+<w msd="UPosTag=NOUN|Gender=Masc|Number=Sing" lemma="December" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p1.s3.w4">December</w>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p1.s3.w5">.</pc>
+</s>
+            </p>
+         </div>
+         <div type="colophon">
+            <p xml:id="PressMint-AT_1882-12-06.p2">
+<s n="5" xml:id="PressMint-AT_1882-12-06.p2.s1">
+<w msd="UPosTag=NOUN|Gender=Masc|Number=Plur" lemma="Pränumerationspreis" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p2.s1.w1">Pränumerationspreise</w>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p2.s1.w2">.</pc>
+</s>
+               <s n="6" xml:id="PressMint-AT_1882-12-06.p2.s2">
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Acc" lemma="für" pos="APPR" xml:id="PressMint-AT_1882-12-06.p2.s2.w1">Für</w>
+                  <name type="LOC">
+<w msd="UPosTag=PROPN|Number=Sing" lemma="Wien" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p2.s2.w2">Wien</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma=":" pos="$." xml:id="PressMint-AT_1882-12-06.p2.s2.w3">:</pc>
+</s>
+               <s n="7" xml:id="PressMint-AT_1882-12-06.p2.s3">
+<pc msd="UPosTag=PUNCT|PunctType=Brck" lemma="„" pos="$(" join="right" xml:id="PressMint-AT_1882-12-06.p2.s3.w1">„</pc>
+                  <name type="ORG">
+<w msd="UPosTag=ADJ|Degree=Pos" lemma="wiener" pos="ADJA" xml:id="PressMint-AT_1882-12-06.p2.s3.w2">Wiener</w>
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Abendpost" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p2.s3.w3">Abendpost</w>
+                  </name>
+<w msd="UPosTag=X|Foreign=Yes" lemma="“" pos="FM" xml:id="PressMint-AT_1882-12-06.p2.s3.w4">“</w>
+<w msd="UPosTag=ADJ|Degree=Pos|Variant=Short" lemma="vierteljährig" pos="ADJD" xml:id="PressMint-AT_1882-12-06.p2.s3.w5">vierteljährig</w>
+<w msd="UPosTag=NUM|Number=Sing|NumType=Card" lemma="1" pos="CARD" xml:id="PressMint-AT_1882-12-06.p2.s3.w6">1</w>
+<w msd="UPosTag=X|Foreign=Yes" lemma="fl." pos="FM" join="right" xml:id="PressMint-AT_1882-12-06.p2.s3.w7">fl.</w>
+<pc msd="UPosTag=PUNCT|PunctType=Comm" lemma="," pos="$," xml:id="PressMint-AT_1882-12-06.p2.s3.w8">,</pc>
+<w msd="UPosTag=ADJ|Degree=Pos|Variant=Short" lemma="monatlich" pos="ADJD" xml:id="PressMint-AT_1882-12-06.p2.s3.w9">monatlich</w>
+<w msd="UPosTag=NUM|Number=Plur|NumType=Card" lemma="50" pos="CARD" xml:id="PressMint-AT_1882-12-06.p2.s3.w10">50</w>
+<w msd="UPosTag=X|Foreign=Yes" lemma="kr" pos="FM" join="right" xml:id="PressMint-AT_1882-12-06.p2.s3.w11">kr</w>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p2.s3.w12">.</pc>
+</s>
+               <s n="8" xml:id="PressMint-AT_1882-12-06.p2.s4">
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Acc" lemma="für" pos="APPR" xml:id="PressMint-AT_1882-12-06.p2.s4.w1">Für</w>
+<w msd="UPosTag=DET|Case=Acc|Definite=Def|Gender=Fem|Number=Sing|PronType=Art" lemma="der" pos="ART" xml:id="PressMint-AT_1882-12-06.p2.s4.w2">die</w>
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Zustellung" pos="NN" xml:id="PressMint-AT_1882-12-06.p2.s4.w3">Zustellung</w>
+<w xml:id="PressMint-AT_1882-12-06.p2.s4.w4">ins<w msd="UPosTag=ADP|AdpType=Prep|Case=Acc" norm="in" lemma="in" pos="APPR" xml:id="PressMint-AT_1882-12-06.p2.s4.w5"/><w msd="UPosTag=DET|Case=Acc|Definite=Def|Gender=Neut|Number=Sing|PronType=Art" norm="das" lemma="der" pos="ART" xml:id="PressMint-AT_1882-12-06.p2.s4.w6"/></w>
+<w msd="UPosTag=NOUN|Gender=Neut|Number=Sing" lemma="Haus" pos="NN" xml:id="PressMint-AT_1882-12-06.p2.s4.w7">Haus</w>
+<w msd="UPosTag=ADJ|Degree=Pos|Variant=Short" lemma="monatlich" pos="ADJD" xml:id="PressMint-AT_1882-12-06.p2.s4.w8">monatlich</w>
+<w msd="UPosTag=NUM|Number=Plur|NumType=Card" lemma="20" pos="CARD" xml:id="PressMint-AT_1882-12-06.p2.s4.w9">20</w>
+<w msd="UPosTag=X|Foreign=Yes" lemma="kr." pos="FM" join="right" xml:id="PressMint-AT_1882-12-06.p2.s4.w10">kr.</w>
+<pc msd="UPosTag=PUNCT|PunctType=Comm" lemma="," pos="$," xml:id="PressMint-AT_1882-12-06.p2.s4.w11">,</pc>
+<w msd="UPosTag=ADJ|Degree=Pos|Number=Plur" lemma="einzeln" pos="ADJA" xml:id="PressMint-AT_1882-12-06.p2.s4.w12">Einzelne</w>
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Plur" lemma="Nummer" pos="NN" xml:id="PressMint-AT_1882-12-06.p2.s4.w13">Nummern</w>
+<w msd="UPosTag=NUM|Number=Plur|NumType=Card" lemma="2" pos="CARD" xml:id="PressMint-AT_1882-12-06.p2.s4.w14">2</w>
+<w msd="UPosTag=X|Foreign=Yes" lemma="kr" pos="FM" join="right" xml:id="PressMint-AT_1882-12-06.p2.s4.w15">kr</w>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p2.s4.w16">.</pc>
+</s>
+               <s n="9" xml:id="PressMint-AT_1882-12-06.p2.s5">
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="mit" pos="APPR" xml:id="PressMint-AT_1882-12-06.p2.s5.w1">Mit</w>
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Postversendung" pos="NN" xml:id="PressMint-AT_1882-12-06.p2.s5.w2">Postversendung</w>
+<w msd="UPosTag=ADJ|Degree=Pos|Variant=Short" lemma="vierteljährig" pos="ADJD" xml:id="PressMint-AT_1882-12-06.p2.s5.w3">vierteljährig</w>
+<w msd="UPosTag=NUM|Number=Sing|NumType=Card" lemma="1" pos="CARD" xml:id="PressMint-AT_1882-12-06.p2.s5.w4">1</w>
+<w msd="UPosTag=X" lemma="fl." pos="NE" xml:id="PressMint-AT_1882-12-06.p2.s5.w5">fl.</w>
+<w msd="UPosTag=NUM|Number=Plur|NumType=Card" lemma="50" pos="CARD" xml:id="PressMint-AT_1882-12-06.p2.s5.w6">50</w>
+<w msd="UPosTag=X|Foreign=Yes" lemma="kr." pos="FM" xml:id="PressMint-AT_1882-12-06.p2.s5.w7">kr.</w>
+</s>
+            </p>
+         </div>
+         <gap reason="editorial">
+            <desc xml:lang="en">SAMPLING</desc>
+         </gap>
+         <div type="article">
+            <head xml:id="PressMint-AT_1882-12-06.head33">
+               <s n="476" xml:id="PressMint-AT_1882-12-06.head33.s1">
+<w msd="UPosTag=NOUN|Gender=Neut|Number=Sing" lemma="Theater" pos="NN" xml:id="PressMint-AT_1882-12-06.head33.s1.w1">Theater</w>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="von" pos="APPR" xml:id="PressMint-AT_1882-12-06.head33.s1.w2">von</w>
+<w msd="UPosTag=ADV" lemma="heute" pos="ADV" join="right" xml:id="PressMint-AT_1882-12-06.head33.s1.w3">heute</w>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.head33.s1.w4">.</pc>
+</s>
+            </head>
+            <p xml:id="PressMint-AT_1882-12-06.p105">
+<s n="477" xml:id="PressMint-AT_1882-12-06.p105.s1">
+                  <name type="LOC">
+<w msd="UPosTag=PROPN|Number=Sing" lemma="K." pos="NE" xml:id="PressMint-AT_1882-12-06.p105.s1.w1">K.</w>
+                  </name>
+<w msd="UPosTag=PROPN" lemma="k." pos="NE" xml:id="PressMint-AT_1882-12-06.p105.s1.w2">k.</w>
+                  <name type="LOC">
+<w msd="UPosTag=NOUN" lemma="Hofburgtheater" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p105.s1.w3">Hofburgtheater</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Comm" lemma="," pos="$," xml:id="PressMint-AT_1882-12-06.p105.s1.w4">,</pc>
+<w msd="UPosTag=VERB|Aspect=Perf|VerbForm=Part" lemma="schließen" pos="VVPP" join="right" xml:id="PressMint-AT_1882-12-06.p105.s1.w5">Geschlossen</w>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p105.s1.w6">.</pc>
+</s>
+            </p>
+            <p xml:id="PressMint-AT_1882-12-06.p106">
+<s n="478" xml:id="PressMint-AT_1882-12-06.p106.s1">
+<w msd="UPosTag=PROPN|Number=Sing" lemma="K." pos="NE" xml:id="PressMint-AT_1882-12-06.p106.s1.w1">K.</w>
+<w msd="UPosTag=PROPN|Number=Sing" lemma="k" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p106.s1.w2">k</w>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p106.s1.w3">.</pc>
+</s>
+               <s n="479" xml:id="PressMint-AT_1882-12-06.p106.s2">
+                  <name type="LOC">
+<w msd="UPosTag=NOUN" lemma="Hofoverntheater" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p106.s2.w1">Hofoverntheater</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p106.s2.w2">.</pc>
+</s>
+               <s n="480" xml:id="PressMint-AT_1882-12-06.p106.s3">
+<pc msd="UPosTag=PUNCT|PunctType=Brck" lemma="„" pos="$(" join="right" xml:id="PressMint-AT_1882-12-06.p106.s3.w1">„</pc>
+                  <name type="MISC">
+<w msd="UPosTag=NOUN|Gender=Masc|Number=Sing" lemma="Flick" pos="NN" xml:id="PressMint-AT_1882-12-06.p106.s3.w2">Flick</w>
+<w msd="UPosTag=CCONJ" lemma="und" pos="KON" xml:id="PressMint-AT_1882-12-06.p106.s3.w3">und</w>
+<w msd="UPosTag=NOUN|Gender=Masc|Number=Sing" lemma="Flock" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p106.s3.w4">Flock</w>
+                  </name>
+<w msd="UPosTag=X" lemma="“" pos="FM" join="right" xml:id="PressMint-AT_1882-12-06.p106.s3.w5">“</w>
+<pc msd="UPosTag=PUNCT|PunctType=Comm" lemma="," pos="$," xml:id="PressMint-AT_1882-12-06.p106.s3.w6">,</pc>
+<w msd="UPosTag=ADJ|Degree=Pos|Gender=Neut|Number=Sing" lemma="komisch" pos="ADJA" xml:id="PressMint-AT_1882-12-06.p106.s3.w7">komisches</w>
+<w msd="UPosTag=NOUN|Gender=Neut|Number=Sing" lemma="Zauberballet" pos="NN" xml:id="PressMint-AT_1882-12-06.p106.s3.w8">Zauberballet</w>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="in" pos="APPR" xml:id="PressMint-AT_1882-12-06.p106.s3.w9">in</w>
+<w msd="UPosTag=NUM|Number=Plur|NumType=Card" lemma="drei" pos="CARD" xml:id="PressMint-AT_1882-12-06.p106.s3.w10">drei</w>
+<w msd="UPosTag=NOUN|Case=Dat|Gender=Neut|Number=Plur" lemma="Acte" pos="NN" xml:id="PressMint-AT_1882-12-06.p106.s3.w11">Acten</w>
+<w msd="UPosTag=CCONJ" lemma="und" pos="KON" xml:id="PressMint-AT_1882-12-06.p106.s3.w12">und</w>
+<w msd="UPosTag=NUM|Number=Plur|NumType=Card" lemma="sechs" pos="CARD" xml:id="PressMint-AT_1882-12-06.p106.s3.w13">sechs</w>
+<w msd="UPosTag=NOUN|Case=Dat|Gender=Neut|Number=Plur" lemma="Bild" pos="NN" xml:id="PressMint-AT_1882-12-06.p106.s3.w14">Bildern</w>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="von" pos="APPR" xml:id="PressMint-AT_1882-12-06.p106.s3.w15">von</w>
+                  <name type="PER">
+<w msd="UPosTag=PROPN|Gender=Masc|Number=Sing" lemma="Paul" pos="NE" xml:id="PressMint-AT_1882-12-06.p106.s3.w16">Paul</w>
+<w msd="UPosTag=PROPN" lemma="Taglioni" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p106.s3.w17">Taglioni</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p106.s3.w18">.</pc>
+</s>
+               <s n="481" xml:id="PressMint-AT_1882-12-06.p106.s4">
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Musik" pos="NN" xml:id="PressMint-AT_1882-12-06.p106.s4.w1">Musik</w>
+<w xml:id="PressMint-AT_1882-12-06.p106.s4.w2">vom<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" norm="von" lemma="von" pos="APPR" xml:id="PressMint-AT_1882-12-06.p106.s4.w3"/><w msd="UPosTag=DET|Case=Dat|Definite=Def|Gender=Masc,Neut|Number=Sing|PronType=Art" norm="dem" lemma="der" pos="ART" xml:id="PressMint-AT_1882-12-06.p106.s4.w4"/></w>
+<w msd="UPosTag=ADJ" lemma="kön." pos="ADJA" xml:id="PressMint-AT_1882-12-06.p106.s4.w5">kön.</w>
+                  <name type="MISC">
+<w msd="UPosTag=ADJ|Degree=Pos|Number=Sing" lemma="preußisch" pos="ADJA" xml:id="PressMint-AT_1882-12-06.p106.s4.w6">preußischen</w>
+                  </name>
+<w msd="UPosTag=NOUN|Gender=Masc|Number=Sing" lemma="Hofcomponist" pos="NN" xml:id="PressMint-AT_1882-12-06.p106.s4.w7">Hofcomponisten</w>
+                  <name type="PER">
+<w msd="UPosTag=PROPN|Number=Sing" lemma="Hertel" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p106.s4.w8">Hertel</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p106.s4.w9">.</pc>
+</s>
+            </p>
+            <p xml:id="PressMint-AT_1882-12-06.p107">
+<s n="482" xml:id="PressMint-AT_1882-12-06.p107.s1">
+                  <name type="LOC">
+<w msd="UPosTag=ADJ|Degree=Pos" lemma="wiener" pos="ADJA" xml:id="PressMint-AT_1882-12-06.p107.s1.w1">Wiener</w>
+<w msd="UPosTag=NOUN|Gender=Masc|Number=Sing" lemma="Stadttheater" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p107.s1.w2">Stadttheater</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p107.s1.w3">.</pc>
+</s>
+               <s n="483" xml:id="PressMint-AT_1882-12-06.p107.s2">
+<pc msd="UPosTag=PUNCT|PunctType=Brck" lemma="„" pos="$(" join="right" xml:id="PressMint-AT_1882-12-06.p107.s2.w1">„</pc>
+                  <name type="MISC">
+<w msd="UPosTag=DET|Case=Acc|Definite=Ind|Gender=Fem|Number=Sing|NumType=Card|PronType=Art" lemma="ein" pos="ART" xml:id="PressMint-AT_1882-12-06.p107.s2.w2">Eine</w>
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Perle" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p107.s2.w3">Perle</w>
+                  </name>
+<w msd="UPosTag=X" lemma="“" pos="FM" join="right" xml:id="PressMint-AT_1882-12-06.p107.s2.w4">“</w>
+<pc msd="UPosTag=PUNCT|PunctType=Comm" lemma="," pos="$," xml:id="PressMint-AT_1882-12-06.p107.s2.w5">,</pc>
+<w msd="UPosTag=NOUN|Gender=Neut|Number=Sing" lemma="Lustspiel" pos="NN" xml:id="PressMint-AT_1882-12-06.p107.s2.w6">Lustspiel</w>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="in" pos="APPR" xml:id="PressMint-AT_1882-12-06.p107.s2.w7">in</w>
+<w msd="UPosTag=NUM|Number=Plur|NumType=Card" lemma="drei" pos="CARD" xml:id="PressMint-AT_1882-12-06.p107.s2.w8">drei</w>
+<w msd="UPosTag=NOUN|Case=Dat|Gender=Neut|Number=Plur" lemma="Acte" pos="NN" xml:id="PressMint-AT_1882-12-06.p107.s2.w9">Acten</w>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="von" pos="APPR" xml:id="PressMint-AT_1882-12-06.p107.s2.w10">von</w>
+                  <name type="PER">
+<w msd="UPosTag=PROPN" lemma="Crisafulli" pos="NE" xml:id="PressMint-AT_1882-12-06.p107.s2.w11">Crisafulli</w>
+                  </name>
+<w msd="UPosTag=CCONJ" lemma="und" pos="KON" xml:id="PressMint-AT_1882-12-06.p107.s2.w12">und</w>
+                  <name type="PER">
+<w msd="UPosTag=PROPN" lemma="Bocage" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p107.s2.w13">Bocage</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p107.s2.w14">.</pc>
+</s>
+               <s n="484" xml:id="PressMint-AT_1882-12-06.p107.s3">
+                  <name type="MISC">
+<w msd="UPosTag=ADJ|Degree=Pos|Variant=Short" lemma="deutsch" pos="ADJD" xml:id="PressMint-AT_1882-12-06.p107.s3.w1">Deutsch</w>
+                  </name>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="von" pos="APPR" xml:id="PressMint-AT_1882-12-06.p107.s3.w2">von</w>
+                  <name type="PER">
+<w msd="UPosTag=PROPN|Gender=Masc|Number=Sing" lemma="Oskar" pos="NE" xml:id="PressMint-AT_1882-12-06.p107.s3.w3">Oskar</w>
+<w msd="UPosTag=PROPN" lemma="Blumenthal" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p107.s3.w4">Blumenthal</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p107.s3.w5">.</pc>
+</s>
+               <s n="485" xml:id="PressMint-AT_1882-12-06.p107.s4">
+<pc msd="UPosTag=PUNCT|PunctType=Brck" lemma="(" pos="$(" join="right" xml:id="PressMint-AT_1882-12-06.p107.s4.w1">(</pc>
+<w msd="UPosTag=NOUN|Gender=Neut|Number=Sing" lemma="Gastspiel" pos="NN" xml:id="PressMint-AT_1882-12-06.p107.s4.w2">Gastspiel</w>
+<w msd="UPosTag=DET|Case=Gen|Definite=Def|Gender=Fem|Number=Sing|PronType=Art" lemma="der" pos="ART" xml:id="PressMint-AT_1882-12-06.p107.s4.w3">der</w>
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Frau" pos="NN" xml:id="PressMint-AT_1882-12-06.p107.s4.w4">Frau</w>
+                  <name type="PER">
+<w msd="UPosTag=PROPN|Gender=Fem|Number=Sing" lemma="Hedwig" pos="NE" xml:id="PressMint-AT_1882-12-06.p107.s4.w5">Hedwig</w>
+<w msd="UPosTag=PROPN" lemma="Niemann=Raabe" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p107.s4.w6">Niemann=Raabe</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." join="right" xml:id="PressMint-AT_1882-12-06.p107.s4.w7">.</pc>
+<pc msd="UPosTag=PUNCT|PunctType=Brck" lemma=")" pos="$(" xml:id="PressMint-AT_1882-12-06.p107.s4.w8">)</pc>
+</s>
+            </p>
+            <p xml:id="PressMint-AT_1882-12-06.p108">
+<s n="486" xml:id="PressMint-AT_1882-12-06.p108.s1">
+                  <name type="LOC">
+<w msd="UPosTag=PROPN" lemma="Carl=Theater" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p108.s1.w1">Carl=Theater</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p108.s1.w2">.</pc>
+</s>
+               <s n="487" xml:id="PressMint-AT_1882-12-06.p108.s2">
+<pc msd="UPosTag=PUNCT|PunctType=Brck" lemma="„" pos="$(" join="right" xml:id="PressMint-AT_1882-12-06.p108.s2.w1">„</pc>
+                  <name type="MISC">
+<w msd="UPosTag=PROPN" lemma="Kosiki" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p108.s2.w2">Kosiki</w>
+                  </name>
+<w msd="UPosTag=X|Foreign=Yes" lemma="“" pos="FM" join="right" xml:id="PressMint-AT_1882-12-06.p108.s2.w3">“</w>
+<pc msd="UPosTag=PUNCT|PunctType=Comm" lemma="," pos="$," xml:id="PressMint-AT_1882-12-06.p108.s2.w4">,</pc>
+<w msd="UPosTag=ADJ|Degree=Pos|Gender=Fem|Number=Sing" lemma="komisch" pos="ADJA" xml:id="PressMint-AT_1882-12-06.p108.s2.w5">komische</w>
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Operette" pos="NN" xml:id="PressMint-AT_1882-12-06.p108.s2.w6">Operette</w>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="in" pos="APPR" xml:id="PressMint-AT_1882-12-06.p108.s2.w7">in</w>
+<w msd="UPosTag=NUM|Number=Plur|NumType=Card" lemma="drei" pos="CARD" xml:id="PressMint-AT_1882-12-06.p108.s2.w8">drei</w>
+<w msd="UPosTag=NOUN|Case=Dat|Gender=Neut|Number=Plur" lemma="Acte" pos="NN" xml:id="PressMint-AT_1882-12-06.p108.s2.w9">Acten</w>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="von" pos="APPR" xml:id="PressMint-AT_1882-12-06.p108.s2.w10">von</w>
+                  <name type="PER">
+<w msd="UPosTag=PROPN" lemma="Busnach" pos="NE" xml:id="PressMint-AT_1882-12-06.p108.s2.w11">Busnach</w>
+                  </name>
+<w msd="UPosTag=CCONJ" lemma="und" pos="KON" xml:id="PressMint-AT_1882-12-06.p108.s2.w12">und</w>
+                  <name type="PER">
+<w msd="UPosTag=NOUN" lemma="Liorat" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p108.s2.w13">Liorat</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p108.s2.w14">.</pc>
+</s>
+               <s n="488" xml:id="PressMint-AT_1882-12-06.p108.s3">
+                  <name type="MISC">
+<w msd="UPosTag=ADJ|Degree=Pos|Variant=Short" lemma="deutsch" pos="ADJD" xml:id="PressMint-AT_1882-12-06.p108.s3.w1">Deutsch</w>
+                  </name>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="von" pos="APPR" xml:id="PressMint-AT_1882-12-06.p108.s3.w2">von</w>
+                  <name type="PER">
+<w msd="UPosTag=PROPN|Number=Sing" lemma="Karl" pos="NE" xml:id="PressMint-AT_1882-12-06.p108.s3.w3">Karl</w>
+<w msd="UPosTag=PROPN" lemma="Treumann" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p108.s3.w4">Treumann</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p108.s3.w5">.</pc>
+</s>
+               <s n="489" xml:id="PressMint-AT_1882-12-06.p108.s4">
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Musik" pos="NN" xml:id="PressMint-AT_1882-12-06.p108.s4.w1">Musik</w>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="von" pos="APPR" xml:id="PressMint-AT_1882-12-06.p108.s4.w2">von</w>
+                  <name type="PER">
+<w msd="UPosTag=PROPN|Case=Dat|Gender=Masc|Number=Sing" lemma="Charles" pos="NE" xml:id="PressMint-AT_1882-12-06.p108.s4.w3">Charles</w>
+<w msd="UPosTag=PROPN" lemma="Lecocg" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p108.s4.w4">Lecocg</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p108.s4.w5">.</pc>
+</s>
+            </p>
+            <p xml:id="PressMint-AT_1882-12-06.p109">
+<s n="490" xml:id="PressMint-AT_1882-12-06.p109.s1">
+                  <name type="LOC">
+<w msd="UPosTag=NOUN|Gender=Neut|Number=Sing" lemma="Theater" pos="NN" xml:id="PressMint-AT_1882-12-06.p109.s1.w1">Theater</w>
+                  </name>
+                  <name type="ORG">
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="an" pos="APPR" xml:id="PressMint-AT_1882-12-06.p109.s1.w2">an</w>
+<w msd="UPosTag=DET|Case=Dat|Definite=Def|Gender=Fem|Number=Sing|PronType=Art" lemma="der" pos="ART" xml:id="PressMint-AT_1882-12-06.p109.s1.w3">der</w>
+<w msd="UPosTag=PROPN|Number=Sing" lemma="Wien" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p109.s1.w4">Wien</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p109.s1.w5">.</pc>
+</s>
+               <s n="491" xml:id="PressMint-AT_1882-12-06.p109.s2">
+<w xml:id="PressMint-AT_1882-12-06.p109.s2.w1">Zum<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" norm="Zu" lemma="zu" pos="APPR" xml:id="PressMint-AT_1882-12-06.p109.s2.w2"/><w msd="UPosTag=DET|Case=Dat|Definite=Def|Gender=Masc,Neut|Number=Sing|PronType=Art" norm="dem" lemma="der" pos="ART" xml:id="PressMint-AT_1882-12-06.p109.s2.w3"/></w>
+<w msd="UPosTag=ADJ|Degree=Pos|Number=Sing|NumType=Ord" lemma="erst" pos="ADJA" xml:id="PressMint-AT_1882-12-06.p109.s2.w4">ersten</w>
+<w msd="UPosTag=NOUN|Case=Dat|Gender=Neut|Number=Sing" lemma="Mal" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p109.s2.w5">Male</w>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma=":" pos="$." xml:id="PressMint-AT_1882-12-06.p109.s2.w6">:</pc>
+</s>
+               <s n="492" xml:id="PressMint-AT_1882-12-06.p109.s3">
+<pc msd="UPosTag=PUNCT|PunctType=Brck" lemma="„" pos="$(" join="right" xml:id="PressMint-AT_1882-12-06.p109.s3.w1">„</pc>
+                  <name type="MISC">
+<w msd="UPosTag=DET|Case=Nom|Definite=Def|Gender=Masc|Number=Sing|PronType=Art" lemma="der" pos="ART" xml:id="PressMint-AT_1882-12-06.p109.s3.w2">Der</w>
+<w msd="UPosTag=NOUN|Gender=Masc|Number=Sing" lemma="Bettelstudent" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p109.s3.w3">Bettelstudent</w>
+                  </name>
+<w msd="UPosTag=X" lemma="“" pos="FM" join="right" xml:id="PressMint-AT_1882-12-06.p109.s3.w4">“</w>
+<pc msd="UPosTag=PUNCT|PunctType=Comm" lemma="," pos="$," xml:id="PressMint-AT_1882-12-06.p109.s3.w5">,</pc>
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Operette" pos="NN" xml:id="PressMint-AT_1882-12-06.p109.s3.w6">Operette</w>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="in" pos="APPR" xml:id="PressMint-AT_1882-12-06.p109.s3.w7">in</w>
+<w msd="UPosTag=NUM|Number=Plur|NumType=Card" lemma="drei" pos="CARD" xml:id="PressMint-AT_1882-12-06.p109.s3.w8">drei</w>
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Plur" lemma="Acte" pos="NN" xml:id="PressMint-AT_1882-12-06.p109.s3.w9">Acten</w>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="von" pos="APPR" xml:id="PressMint-AT_1882-12-06.p109.s3.w10">von</w>
+                  <name type="PER">
+<w msd="UPosTag=PROPN|Number=Sing" lemma="F." pos="NE" xml:id="PressMint-AT_1882-12-06.p109.s3.w11">F.</w>
+<w msd="UPosTag=PROPN|Number=Sing" lemma="Zell" pos="NE" xml:id="PressMint-AT_1882-12-06.p109.s3.w12">Zell</w>
+                  </name>
+<w msd="UPosTag=CCONJ" lemma="und" pos="KON" xml:id="PressMint-AT_1882-12-06.p109.s3.w13">und</w>
+                  <name type="PER">
+<w msd="UPosTag=PROPN|Gender=Masc|Number=Sing" lemma="Richard" pos="NE" xml:id="PressMint-AT_1882-12-06.p109.s3.w14">Richard</w>
+<w msd="UPosTag=PROPN" lemma="Genée" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p109.s3.w15">Genée</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p109.s3.w16">.</pc>
+</s>
+               <s n="493" xml:id="PressMint-AT_1882-12-06.p109.s4">
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Musik" pos="NN" xml:id="PressMint-AT_1882-12-06.p109.s4.w1">Musik</w>
+<w msd="UPosTag=ADP|AdpType=Prep|Case=Dat" lemma="von" pos="APPR" xml:id="PressMint-AT_1882-12-06.p109.s4.w2">von</w>
+                  <name type="PER">
+<w msd="UPosTag=PROPN|Number=Sing" lemma="Karl" pos="NE" xml:id="PressMint-AT_1882-12-06.p109.s4.w3">Karl</w>
+<w msd="UPosTag=PROPN" lemma="Millöcker" pos="NE" join="right" xml:id="PressMint-AT_1882-12-06.p109.s4.w4">Millöcker</w>
+                  </name>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p109.s4.w5">.</pc>
+</s>
+               <s n="494" xml:id="PressMint-AT_1882-12-06.p109.s5">
+<w msd="UPosTag=NOUN|Gender=Masc|Number=Sing" lemma="Anfang" pos="NN" xml:id="PressMint-AT_1882-12-06.p109.s5.w1">Anfang</w>
+<w msd="UPosTag=NUM|Number=Plur|NumType=Card" lemma="6½" pos="CARD" xml:id="PressMint-AT_1882-12-06.p109.s5.w2">6½</w>
+<w msd="UPosTag=NOUN|Gender=Fem|Number=Sing" lemma="Uhr" pos="NN" join="right" xml:id="PressMint-AT_1882-12-06.p109.s5.w3">Uhr</w>
+<pc msd="UPosTag=PUNCT|PunctType=Peri" lemma="." pos="$." xml:id="PressMint-AT_1882-12-06.p109.s5.w4">.</pc>
+</s>
+            </p>
+         </div>
+         <div type="article">
+            <gap reason="editorial" xml:id="PressMint-AT_1882-12-06.ana.gap1">
+               <desc xml:lang="en">An advertisement.</desc>
+            </gap>
+         </div>
+         <div type="article">
+            <gap reason="editorial" xml:id="PressMint-AT_1882-12-06.ana.gap2">
+               <desc xml:lang="en">A table.</desc>
+            </gap>
+         </div>
+      </body>
+   </text>
+</TEI>
+

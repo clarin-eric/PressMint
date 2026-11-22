@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-AT_1882-12-06" xml:lang="de">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="de">Österreichisches historisches Zeitungskorpus PressMint-AT, "Wiener Abendpost", 06.12.1882 [PressMint SAMPLE]</title>
+            <title xml:lang="en">Austrian historical newspaper corpus PressMint-AT, "Wiener Abendpost", 12/06/1882 [PressMint SAMPLE]</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="paragraphs" quantity="109" xml:lang="en">109 paragraphs</measure>
+            <measure unit="words" quantity="7633" xml:lang="en">7,633 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="de">CLARIN Forschungsinfrastruktur</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by-nc/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</ref>.</p>
+               <p xml:lang="de">Dieses Werk ist lizenziert unter der <ref target="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Namensnennung-Nicht kommerziell 4.0 International Lizenz</ref>.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Wiener Abendpost</title>
+               <publisher>Friedrich Uhl</publisher>
+               <pubPlace>Vienna</pubPlace>
+               <date when="1882-12-06">06.12.1882</date>
+               <idno type="URI" subtype="URL">https://anno.onb.ac.at/cgi-content/anno?aid=wrz&amp;datum=18821206</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2026-11-21">
+            <name>corpus2sample.xsl</name>: Made sample.</change>
+         <change when="2026-08-24">
+            <name>Jona Marie Hassenbach</name>: Encoded corpus.</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="PressMint-AT_1882-12-06.page1">
+         <graphic url="https://anno.onb.ac.at/cgi-content/anno?aid=wrz&amp;datum=18821206&amp;seite=15&amp;zoom=33"/>
+      </surface>
+   </facsimile>
+   <text xml:lang="de">
+      <body>
+         <pb n="1" facs="#PressMint-AT_1882-12-06.page1"/>
+         <div type="banner">
+            <head xml:id="PressMint-AT_1882-12-06.head1">Wiener Abendpost.</head>
+         </div>
+         <div type="colophon">
+            <p xml:id="PressMint-AT_1882-12-06.p1">1882. — Nr. 279. Beilage zur Wiener Zeitung. Mittwoch, 6. December.</p>
+         </div>
+         <div type="colophon">
+            <p xml:id="PressMint-AT_1882-12-06.p2">Pränumerationspreise. Für Wien: „Wiener Abendpost“ vierteljährig 1 fl., monatlich 50 kr. Für die Zustellung ins Haus monatlich 20 kr., Einzelne Nummern 2 kr. Mit Postversendung vierteljährig 1 fl. 50 kr.</p>
+         </div>
+         <gap reason="editorial">
+            <desc xml:lang="en">SAMPLING</desc>
+         </gap>
+         <div type="article">
+            <head xml:id="PressMint-AT_1882-12-06.head33">Theater von heute.</head>
+            <p xml:id="PressMint-AT_1882-12-06.p105">K. k. Hofburgtheater, Geschlossen.</p>
+            <p xml:id="PressMint-AT_1882-12-06.p106">K. k. Hofoverntheater. „Flick und Flock“, komisches Zauberballet in drei Acten und sechs Bildern von Paul Taglioni. Musik vom kön. preußischen Hofcomponisten Hertel.</p>
+            <p xml:id="PressMint-AT_1882-12-06.p107">Wiener Stadttheater. „Eine Perle“, Lustspiel in drei Acten von Crisafulli und Bocage. Deutsch von Oskar Blumenthal. (Gastspiel der Frau Hedwig Niemann=Raabe.)</p>
+            <p xml:id="PressMint-AT_1882-12-06.p108">Carl=Theater. „Kosiki“, komische Operette in drei Acten von Busnach und Liorat. Deutsch von Karl Treumann. Musik von Charles Lecocg.</p>
+            <p xml:id="PressMint-AT_1882-12-06.p109">Theater an der Wien. Zum ersten Male: „Der Bettelstudent“, Operette in drei Acten von F. Zell und Richard Genée. Musik von Karl Millöcker. Anfang 6½ Uhr.</p>
+         </div>
+         <div type="article">
+            <gap reason="editorial" xml:id="PressMint-AT_1882-12-06.gap1">
+               <desc xml:lang="en">An advertisement.</desc>
+            </gap>
+         </div>
+         <div type="article">
+            <gap reason="editorial" xml:id="PressMint-AT_1882-12-06.gap2">
+               <desc xml:lang="en">A table.</desc>
+            </gap>
+         </div>
+      </body>
+   </text>
+</TEI>
+
