@@ -140,6 +140,7 @@ $country2lang{'ES-CM'} = 'es';
 $country2lang{'ES-CT'} = 'ca, es';
 $country2lang{'ES-GA'} = 'gl';
 $country2lang{'ES-PV'} = 'eu, es';
+$country2lang{'ES-VC'} = 'ca, es';
 $country2lang{'FI'} = 'fi';
 $country2lang{'FR'} = 'fr';
 $country2lang{'GB'} = 'en';
@@ -157,11 +158,13 @@ $country2lang{'PL'} = 'pl';
 $country2lang{'PT'} = 'pt';
 $country2lang{'RO'} = 'ro';
 $country2lang{'RS'} = 'sr';
+$country2lang{'RU-YEV'} = 'yi';
 $country2lang{'SE'} = 'sv';
 $country2lang{'SI'} = 'sl';
 $country2lang{'SK'} = 'sk';
 $country2lang{'TR'} = 'tr';
 $country2lang{'UA'} = 'uk, ru';
+$country2lang{'UA-53'} = 'yi';
 # Fake country for testing:
 $country2lang{'XX'} = 'hr'; 
 
