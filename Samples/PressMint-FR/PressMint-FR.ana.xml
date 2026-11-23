@@ -12,10 +12,10 @@
       <extent>
         <measure unit="texts" quantity="2" xml:lang="fr">2 textes</measure>
         <measure unit="texts" quantity="2" xml:lang="en">2 texts</measure>
-        <measure unit="paragraphs" quantity="1649" xml:lang="fr">1 649 paragraphs</measure>
-        <measure unit="paragraphs" quantity="1649" xml:lang="en">1,649 paragraphs</measure>
-        <measure unit="words" quantity="62818" xml:lang="fr">62 818 mots</measure>
-        <measure unit="words" quantity="62818" xml:lang="en">62,818 words</measure>
+        <measure unit="paragraphs" quantity="1603" xml:lang="fr">1 603 paragraphs</measure>
+        <measure unit="paragraphs" quantity="1603" xml:lang="en">1,603 paragraphs</measure>
+        <measure unit="words" quantity="62817" xml:lang="fr">62 817 mots</measure>
+        <measure unit="words" quantity="62817" xml:lang="en">62,817 words</measure>
       </extent>
       <publicationStmt>
         <publisher>
@@ -25,7 +25,7 @@
         <availability status="unknown">
           <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</licence>
         </availability>
-        <date when="2026-11-20">2026-11-20</date>
+        <date when="2026-11-23">2026-11-23</date>
       </publicationStmt>
       <sourceDesc>
         <bibl>
@@ -43,7 +43,7 @@
       <editorialDecl>
         <p xml:lang="en">OCR text is preserved without correction, except for whitespace normalisation and line-end hyphen handling.</p>
         <p xml:lang="en">Line-end hyphenation is resolved using ALTO SUBS_TYPE and SUBS_CONTENT attributes where available.  Where not available, the hyphen is preserved.</p>
-        <p xml:lang="en">ALTO TextBlocks are encoded as TEI paragraphs.  No article or section divisions are inferred, because the source contains no logical structMap.</p>
+        <p xml:lang="en">ALTO TextBlocks are encoded as TEI paragraphs.  A block that ends with a line-end hyphen and is followed by a block starting in lowercase is joined to it in one paragraph.  No article or section divisions are inferred, because the source contains no logical structMap.</p>
         <p xml:lang="en">Page order is derived from the METS physical structMap ORDER attribute. ALTO PHYSICAL_IMG_NR is not used (it is 1 on all pages in this dataset).</p>
         <p xml:lang="en">Text in an issue is encoded in ALTO reading order.  No column-aware geometric reordering is applied.Image references use Gallica IIIF URLs because the master TIFF images are not included.</p>
         <p xml:lang="en">In this linguistically analysed version, the paragraphs are segmented into sentences, and these into words and punctuation marks, with lemmas and UD part-of-speech tags and features, and named entities (PER, LOC, ORG, MISC) are marked. The annotation is applied to uncorrected OCR text and is therefore unreliable where the OCR is poor.</p>
@@ -54,14 +54,14 @@
           <tagUsage gi="facsimile" occurs="2"/>
           <tagUsage gi="graphic" occurs="8"/>
           <tagUsage gi="lb" occurs="8298"/>
-          <tagUsage gi="name" occurs="3652"/>
-          <tagUsage gi="p" occurs="1649"/>
+          <tagUsage gi="name" occurs="3655"/>
+          <tagUsage gi="p" occurs="1603"/>
           <tagUsage gi="pb" occurs="8"/>
-          <tagUsage gi="pc" occurs="11838"/>
-          <tagUsage gi="s" occurs="6682"/>
+          <tagUsage gi="pc" occurs="11839"/>
+          <tagUsage gi="s" occurs="6613"/>
           <tagUsage gi="surface" occurs="8"/>
           <tagUsage gi="text" occurs="2"/>
-          <tagUsage gi="w" occurs="62818"/>
+          <tagUsage gi="w" occurs="62817"/>
           <tagUsage gi="zone" occurs="10025"/>
         </namespace>
       </tagsDecl>
@@ -91,8 +91,8 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-11-20">Second conversion from BnF METS/ALTO to PressMint TEI.</change>
-      <change when="2026-11-20">Linguistic annotation added (TEI.ana).</change>
+      <change when="2026-11-23">Second conversion from BnF METS/ALTO to PressMint TEI.</change>
+      <change when="2026-11-23">Linguistic annotation added (TEI.ana).</change>
     </revisionDesc>
   </teiHeader>
   <xi:include href="1920/PressMint-FR_1920-01-01-LeTemps-BnF-0243877.ana.xml"/>

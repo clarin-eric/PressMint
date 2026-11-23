@@ -17,7 +17,7 @@ The sample consists of two issues:
 
 * __Content__: Newspaper issues of *Le Temps*. The sample contains two issues (1920-01-01 and 1920-01-14).
 
-* __Size__: Sample: 2 issues, 8 pages, 1,649 paragraphs, 59,963 words. Whole corpus (counted from the delivery, not yet converted): 15,819 issues from 1900-01-01 to 1942-11-17, 77,009 pages and about 603 million words (ALTO word strings; a word split at a line end counts twice). Issues per year: 345 to 462 in 1900-1940, 33 in 1941, 272 in 1942. Statistics per year: `viewer/corpus-stats.html` of the converter.
+* __Size__: Sample: 2 issues, 8 pages, 1,603 paragraphs, 59,963 words. Whole corpus (counted from the delivery, not yet converted): 15,819 issues from 1900-01-01 to 1942-11-17, 77,009 pages and about 603 million words (ALTO word strings; a word split at a line end counts twice). Issues per year: 345 to 462 in 1900-1940, 33 in 1941, 272 in 1942. Statistics per year: `viewer/corpus-stats.html` of the converter.
 
 * __Known issues in the delivery__:
 
@@ -28,14 +28,14 @@ The sample consists of two issues:
 
 * __Structure__: METS (issue metadata and physical page order) with one ALTO file per page (text blocks, lines, words, coordinates and OCR confidence). The source has no logical structure (articles, sections).
 
-* __Correction__: Uncorrected BnF OCR. Only whitespace is normalised and line-end hyphens are joined.
+* __Correction__: Uncorrected BnF OCR. Only whitespace is normalised and line-end hyphens are joined where the source marks them. A text block that ends with a line-end hyphen and is followed by a block starting in lowercase is joined to it in one paragraph (the OCR layout analysis sometimes splits a paragraph there).
 
 * __Linguistic annotation__: None in the source. The TEI.ana sample (`PressMint-FR.ana.xml` and `1920/*.ana.xml`) is annotated automatically on the uncorrected OCR text:
 
     - sentences, tokens, lemmas, UD part-of-speech tags and morphological features: [spaCy](https://spacy.io/models/fr) `fr_core_news_md`
     - named entities: [historical-ner-baseline](https://huggingface.co/emanuelaboros/historical-ner-baseline) (BERT fine-tuned on HIPE-2022). Its labels are mapped to the PressMint categories: `pers` to PER, `loc` to LOC, `org` to ORG and `prod` to MISC. Entities labelled `time` or `scope` are not marked.
 
-    The OCR is not corrected, so the annotation is unreliable where the OCR is poor (e.g. mastheads and advertisements). The annotation was produced with `src/annotate_ana.py` of the converter. The sample has 2 issues, 62,818 words (plus 11,838 punctuation tokens), 6,682 sentences and 3,652 named entities.
+    The OCR is not corrected, so the annotation is unreliable where the OCR is poor (e.g. mastheads and advertisements). The annotation was produced with `src/annotate_ana.py` of the converter. The sample has 2 issues, 62,817 words (plus 11,839 punctuation tokens), 6,613 sentences and 3,655 named entities.
 
 * __Metadata__:
 
