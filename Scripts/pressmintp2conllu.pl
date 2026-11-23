@@ -70,6 +70,7 @@ $country2lang{'ES-CN'} = 'es';
 $country2lang{'ES-CT'} = 'ca, es';
 $country2lang{'ES-GA'} = 'gl';
 $country2lang{'ES-PV'} = 'eu, es';
+$country2lang{'ES-VC'} = 'ca, es';
 $country2lang{'FI'} = 'fi';
 $country2lang{'FR'} = 'fr';
 $country2lang{'GB'} = 'en';
