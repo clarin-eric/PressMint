@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-ES-PV" xml:lang="eu">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Euskal Herriko prentsa historikoaren corpusa PressMint-ES-PV [PressMint SAMPLE]</title>
+            <title xml:lang="en">Basque Country historical newspaper corpus PressMint-ES-PV [PressMint SAMPLE]</title>
+            <respStmt>
+               <persName>TODO: kodetzailearen izena</persName>
+               <resp>PressMint TEI XML kodeketa</resp>
+               <resp xml:lang="en">PressMint TEI XML corpus encoding</resp>
+            </respStmt>
+            <funder>
+               <orgName xml:lang="eu">CLARIN ikerketa-azpiegitura</orgName>
+               <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+            </funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="eu">CLARIN ikerketa-azpiegitura</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="eu">Lan hau <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Aitortu 4.0 Nazioartekoa lizentzia</ref> baten mende dago.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title type="main" xml:lang="eu">Argia astekaria (1921–1936), PDF eskaneatuak</title>
+               <title type="main" xml:lang="en">Argia weekly (1921–1936), scanned PDFs</title>
+               <idno type="local" subtype="filename">arg_1921_05_01.pdf</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+         </projectDesc>
+         <editorialDecl>
+            <quotation>
+               <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+            </quotation>
+            <hyphenation>
+               <p xml:lang="en">End-of-line hyphens followed by a lower-case letter were removed and the word parts joined automatically; this also joins some genuine hyphenated compounds split at line end.</p>
+            </hyphenation>
+            <correction>
+               <p xml:lang="en">The text is uncorrected OCR produced with Tesseract 5.3.4 (tessdata_best Basque and Spanish models). Only the masthead and one heading were corrected by hand. The source uses Sabino Arana's orthography (e.g. ŕ, ĺ), which the OCR frequently misreads (e.g. ŕ as f or ñ). Paragraphs are marked quality.high when the mean Tesseract word confidence is at least 85, otherwise quality.low.</p>
+            </correction>
+            <normalization>
+               <p xml:lang="en">Text has not been normalised, except for spacing.</p>
+            </normalization>
+            <segmentation>
+               <p xml:lang="en">Texts are split by page beginnings and into paragraphs as detected by the OCR layout analysis, in the OCR reading order. Paragraphs are not yet grouped into articles. Each paragraph points to a zone (bounding box, in pixels of the 300 dpi page image) in the facsimile.</p>
+            </segmentation>
+         </editorialDecl>
+         <classDecl>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-OCR.xml"/>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+               <date from="1921" to="1921">1921</date>
+            </setting>
+         </settingDesc>
+         <langUsage>
+            <language ident="eu" xml:lang="eu">euskara</language>
+            <language ident="eu" xml:lang="en">Basque</language>
+            <language ident="en" xml:lang="eu">ingelesa</language>
+            <language ident="en" xml:lang="en">English</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1921/PressMint-ES-PV_1921-05-01_ARGIA.xml"/>
+</teiCorpus>
