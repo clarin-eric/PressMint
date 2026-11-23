@@ -15,7 +15,7 @@ PATH "/data/manatee-data/pressmint10_si/"
 VERTICAL "| zcat /data/vert/PressMint-SI.1.0.vert.gz"
 
 DOCSTRUCTURE text
-MAXDETAIL 200
+MAXDETAIL 10000
 
 SUBCORPATTRS "p.quality|text.id|text.year,text.newspaper|text.article|text.date,text.publisher|text.volume|text.issue"
 FULLREF "text.article,text.newspaper,text.date,text.publisher,text.volume,text.issue,text.source_url,text.id,p.quality,p.id"
