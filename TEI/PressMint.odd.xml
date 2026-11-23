@@ -19,7 +19,7 @@
       </titleStmt>
       <publicationStmt>
         <publisher>CLARIN</publisher>
-        <date>2026-11-22</date>
+        <date>2026-11-23</date>
         <availability status="free">
           <p>This file is freely available and you are hereby authorised to copy, modify, and
           redistribute it in any way without further reference or permissions.</p>
@@ -74,7 +74,7 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-11-22">Tomaž Erjavec: draft the section on modernisation.</change>
+      <change when="2026-11-23">Tomaž Erjavec: draft the section on modernisation.</change>
       <change when="2026-10-09">Tomaž Erjavec: change sec. for modernised words back to encoding of syntactic words.</change>
       <change when="2026-06-18">Tomaž Erjavec: fix bug in lb discussion.</change>
       <change when="2026-06-14">Tomaž Erjavec: insert discussion and definition of zones.</change>
@@ -92,7 +92,7 @@
           <titlePart type="main">The structure and encoding of
           <ref target="https://github.com/clarin-eric/PressMint">PressMint corpora</ref></titlePart>
         </docTitle>
-        <docDate>2026-11-22</docDate>
+        <docDate>2026-11-23</docDate>
       </titlePage>
       <p></p>
       <divGen type="toc"/>
@@ -1225,255 +1225,6 @@
           </div>
         </div>
 
-        <div xml:id="sec-mt">
-          <head>Language modernisation</head>
-        
-          <p>The language of older newspapers might differ significantly from the contemporary norm.
-          This has an impact, in cases where the annotation tool has been trained on contemporary
-          texts only, on the quality of linguistic annotations, as well as hindering searching for
-          particular words or lemmas in their contemporary spellings. To alleviate this,
-          normalisation (i.e. modernisation) is often used on archaic texts, and the subsequent
-          linguist annotation is performed on such modernised text.</p>
-
-          <p>Modern LLM approaches typically take a complete chunk of text and normalise it, while
-          more traditional approaches perform the normalisation on individual words. The former
-          has the advantage of being capable not only of modernising the spelling of individual
-          words but also substituting archaic words with their contemporary equivalents,
-          modernising multi-word units or even syntactic constructions.  However, if such a method
-          is used on a PressMint corpus, this means that the linguistically annotated variant of
-          the corpus will contain only the modernised text, and the alignment to the corpus with
-          original language (the source corpus) will be difficult.</p>
-          
-          <p>The PressMint modernised corpora are stored similarly to
-          <ref target="https://clarin-eric.github.io/ParlaMint/#sec-mt">ParlaMint machine translated corpora</ref>.
-          In general, they are encoded simliarly to their source corpora but with the following top-level
-          differences:
-          
-          <list>
-            <item>The first part of the filenames is extended with the suffix <code>-modern</code>,
-            e.g. the linguistically analysed Austrian modernised corpus would have the root filename
-            <code>PressMint-AT-modern.ana.xml</code> and a component filename could be
-            <code>PressMint-AT-modern_18994-11-04.ana.xml</code>.</item>
-            <item>The top-level <att>xml:id</att> of the corpus root and of components must also be changed
-            accordingly to e.g. <code>PressMint-AT-modern.ana</code> and
-            <code>PressMint-AT-modern_18994-11-04.ana</code>.</item>
-            <item>The stamp in the main titles should be changed too by adding the suffix, e.g. to
-            <code>[PressMint-modern.ana]</code>.</item>
-          </list>
-          </p>
-          
-          <p>The structure of the <gi>text</gi>, inluding the linguistic analysis, is encoded the
-          same as as in the original corpora. The main difference is that the aligned elements are
-          linked to their corresponding elements in the source corpus but there are several options
-          on which elements can be linked to the source corpus.</p>
-
-          <p>For LLM approaches we assume that each paragraph is modernised separately, and the
-          linking to the source plain-text corpus is thus on the paragraph level and on the elements above
-          it. The alignment is trivial, simply specifiying the same <att>xml:id</att> value of the
-          element the source corpus. We illustrate paragraph (and above) level
-          alignment in the following example:
-          
-          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-llm">
-            <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="sl"
-                 xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana" corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2">
-              ...
-              <text xml:lang="sl">
-                <body>
-                  <pb facs="#PressMint-SI_1850-01-02-JOBLX5K2.page1"/>
-                  <p xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p1"
-                     corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.p1">
-                    <s xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p2.s1">
-                      <w ana="mte:Ncfsn" msd="UPosTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="pesa" join="right">Pesa</w>
-                      <pc ana="mte:Z" msd="UPosTag=PUNCT" lemma=".">.</pc>
-                    </s>
-                    ...
-                  </p>
-                  ...
-                </body>
-              </text>
-            </TEI>
-          </egXML>
-          
-          As can be seen above, the alignment is specified on the <att>corresp</att> attibute.
-          The alignment reference makes use of the TEI extended pointer syntax (cf. also the Section on
-          <ref target="#sec-ana-prefixDef">Prefix definitions</ref>), to define the <val>mod-src</val> prefix
-          which must resolve to the correct component file of the corpus in the source language, as will be
-          explained below.</p>
-
-          <p>If the modernisation is performed on the word level the situation is more complicated.
-          First, the source corpus will have to be first tokenised (and, presumably, sentence
-          segmented, as this is typically also the job of the tokeniser), so that individual tokens
-          can be passed on to the word moderniser, and the words modernised, presumably retaining
-          the sentence segmentation. Then the modernised words are linguistically analysed, same as
-          for the LLM case.</p>
-
-          <p>To retain the alignment to the source corpus, it must be (as it is, even if only by
-          identifying tokens) stored as the linguistically analysed version (so, <code>.ana</code>),
-          and each of its tokens given an ID. The tokens (and all superordinate elements, as above)
-          of the modernised version are then linked to their source tokens, as the following example
-          illustrates (for readablility, not all linguistic annotation is retained):
-
-          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-llm">
-            
-            Source PressMint-SI_1850-01-02-JOBLX5K2.ana:
-            <s xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1">
-              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t1">Kmetovavce</w>
-              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t2">po</w>
-              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t3">Slovenskim</w>
-              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t4">prihodnjič</w>
-              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t5">tacih</w>
-              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t6">pridelkov</w>
-              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t7">opominovati</w>
-              ...
-            </s>
-            
-            Target PressMint-SI-modern_1850-01-02-JOBLX5K2.ana:
-            <s xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1">
-              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t1"
-                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t1"
-                 msd="UPosTag=NOUN" lemma="kmetovalec">Kmetovalec</w>
-              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t2"
-                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t2"
-                 msd="UPosTag=ADP" lemma="po">po</w>
-              <name type="LOC">
-                <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t3"
-                   corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t3"
-                   msd="UPosTag=ADJ" lemma="slovenski">Slovenskem</w>
-              </name>
-              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t4"
-                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t4"
-                 msd="UPosTag=ADV" lemma="prihodnjič">prihodnjič</w>
-              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t5"
-                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t5"
-                 msd="UPosTag=ADJ" lemma="tak">takih</w>
-              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t6"
-                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t6"
-                 msd="UPosTag=NOUN" lemma="pridelek">pridelkov</w>
-              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t7"
-                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t7"
-                 msd="UPosTag=VERB" lemma="opominjati" join="right">opominjati</w>
-              ...
-            </s>
-          </egXML>
-          </p>
-          <p>
-            When modernising words in can happen that one archaic word maps to two or more modern
-            words, or (if the word modernisation tool supports this) two or more original words
-            are modernised to just one word. This means that the word alignment is not necessarily 1-1,
-            but can be 1-n or n-1. Thes two cases must then have the corresponding alignments, as
-            illustrated below:
-
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-orig">
-            
-              Source PressMint-SI_1850-01-02-JOBLX5K2.ana:
-              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t1">Nar</w>
-              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t2">lepši</w>
-              ...
-              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t6">nebote</w>
-              
-              Target PressMint-SI-modern_1850-01-02-JOBLX5K2.ana:
-              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p9.s1.t1"
-                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t1 mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t2"
-                 msd="UPosTag=ADJ" lemma="lep">Najlepši</w>
-              ...
-              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p9.s1.t6"
-                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t6"
-                 msd="UPosTag=PART" lemma="ne">ne</w>
-              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p9.s1.t7"
-                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t6"
-                 msd="UPosTag=AUX" lemma="biti">boste</w>
-              ...
-            </egXML>
-          </p>
-          
-          <p>
-            Finally, it is advantageous to store the original form of the words together with the modernised words.
-            This allows is to process the modernised corpus without accessing the original corpus, as well as making it
-            unecessary to assign IDs and alignments to each individual token. To store the original form of the word, we use
-            the <att>orig</att> attribute, as illustrated in the example below: 
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-word">
-            
-              Source:
-              <w>Nar</w>
-              <w>lepši</w>
-              <w>kmetovavec</w>
-              ...
-              <w>prihodnjič</w>
-              <w>nebote</w>
-              
-              Target:
-              <w orig="Nar lepši">Najlepši</w>
-              <w orig="kmetovavec">kmetovalec</w>
-              ...
-              <w>prihodnjič</w>
-              <w orig="nebote">ne</w>
-              <w orig="">boste</w>
-              ...
-            </egXML>
-
-            The example above covers four cases which can arrise in the modernisation:
-            <list>
-              <item>the modernised word can be identical to the original one, as is the case with
-              <code>prihodnjič</code>: here, the <att>orig</att> attribute is ommitted;</item>
-              
-              <item>the modernised word has a 1-1 mapping with the original one, as is the case with
-              <code>kmetovavec</code>; here, the original word is given in the <att>orig</att>
-              attribute;</item>
-              
-              <item>the modernised words can correspond to two (or more) original words:
-              in this case the words are given in the <att>orig</att> attribute, with spaces between them;</item>
-              
-              <item>the original words can correspond to two (or more) modernised words: here the
-              first modern word is given the original word in <att>orig</att>, while the second (and
-              possibly further) words are given the <att>orig</att> attribute, but with an empty
-              value.
-            </list>
-          </p>
-
-          <!-- TO HERE -->
-          
-          <p>In contrast to other linguistic annotations that specify one prefix definition for the complete
-          corpus (so, inside the corpus root <gi>teiHeader</gi>), the translated corpora should specify a
-          prefix definition inside each corpus component because its definition depends on the component file.
-          For example, the prefix definition of the corpus component file <code>ParlaMint-LV-en_2014-11-04.ana.xml</code>
-          should be as in the following example:
-          
-          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mt-prefixDef">
-            <listPrefixDef>
-              <prefixDef ident="mod-src"
-                         matchPattern="(.+)"
-                         replacementPattern="../../ParlaMint-LV.TEI.ana/2014/ParlaMint-LV_2014-11-04.ana.xml#$1">
-                <p>Private URIs with this prefix point to aligned source elements of the MTed corpus.</p>
-              </prefixDef>
-            </listPrefixDef>
-          </egXML>
-          
-          The assumption above is that the two corpora are available in the same directory
-          (so, <code>./ParlaMint-LV.TEI.ana/</code> and <code>./ParlaMint-LV-en.TEI.ana/</code>), so that <att>corresp</att> values
-          of the file <code>ParlaMint-LV-en.TEI.ana/2014/ParlaMint-LV-en_2014-11-04.ana.xml</code> with the <code>mt-src</code>
-          prefix will point to
-          <code>ParlaMint-LV-en.TEI.ana/2014/../../ParlaMint-LV.TEI.ana/2014/ParlaMint-LV_2014.ana.xml</code>
-          i.e. to <code>./ParlaMint-LV.TEI.ana/2014/ParlaMint-LV_2014-11-04.xml</code>.</p>
-          
-          <p>The final additional element of the transated corpora is the information on the application, <gi>application</gi>,
-          (cf. also the Section on <ref target="#sec-ana-appInfo">Application information for linguistic processing</ref>) 
-          i.e. on the program that was used to translate the corpora, as illustrated by the following example:
-          
-          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mt-appInfo">
-            <application ident="EasyNMT" version="2.0">
-              <label>EasyNMT (OPUS-MT model)</label>
-              <desc>Translation to English done with EasyNMT
-              (<ref target="https://github.com/UKPLab/EasyNMT">https://github.com/UKPLab/EasyNMT</ref>)
-              with OPUS-MT model bat
-              (<ref target="https://github.com/Helsinki-NLP/Opus-MT">https://github.com/Helsinki-NLP/Opus-MT</ref>)</desc>
-            </application>
-          </egXML>
-          
-          This element should be given in the corpus root, together with all the other information on applications
-          inside the application information (<gi>appInfo</gi>) element.</p>
-          
-        </div>
-        
         <div xml:id="sec-profileDesc">
           <head>Profile description</head>
           
@@ -2198,7 +1949,7 @@
             it is the syntactic word that is on the top level, while the inner words are the
             actual tokens. To take an example from historical language<note>Note that we, in PressMint,
             treat the relation of historical language to contemporary one differenty, cf. the
-            Section on <ref target="#sec-mt">Language modernisation</ref>.</note>
+            Section on <ref target="#sec-mod">Language modernisation</ref>.</note>
             Slovenian used to form the superlative form of adjectives with the word <q>naj</q> written separately
             (and often as <q>nar</q>), while in contemporary Slovenian, the <q>naj</q> is a
             prefix of the adjective. This would be encoded as follows:
@@ -2318,6 +2069,272 @@
             </egXML>
             </p>
           </div>
+        </div>
+      </div>
+      
+      <div xml:id="chp-mod">
+        <head>Language modernisation</head>
+        
+        <p>The language of older newspapers can differ significantly from the contemporary norm.
+        This has an impact, in cases where the annotation tool has been trained on contemporary
+        texts only, on the quality of linguistic annotations, as well as hindering searching for
+        particular words or lemmas in their contemporary and more unified spellings. To alleviate
+        this, normalisation (i.e. modernisation) is often used on archaic texts, and the
+        subsequent linguist annotation is performed on such modernised text.</p>
+        
+        <p>Modern LLM approaches typically take a complete chunk of text and normalise it, while
+        more traditional approaches perform the normalisation on individual words or, at best,
+        multi-word units.  The former has the advantage of being capable not only of modernising
+        the spelling of individual words but also substituting archaic words with their
+        contemporary equivalents, modernising phrases or possibly even syntactic constructions.
+        However, if such a method is used on a PressMint corpus, this means that the
+        linguistically annotated variant of the corpus will contain only the modernised text, and
+        fine-grained alignment to the corpus with original language (the source corpus) will be
+        difficult.</p>
+
+        <div xml:id="sec-mod-metadata">
+          <head>Top-level changes and metadata</head>
+          
+          <p>In PressMint, the modernised corpora (where such exist) are set-up similarly to
+          <ref target="https://clarin-eric.github.io/ParlaMint/#sec-mod">ParlaMint machine translated corpora</ref>.
+          In general, they are encoded like their source corpora but with the following top-level
+          differences:
+          
+          <list>
+            <item>The first part of the filenames is extended with the suffix <code>-modern</code>,
+            for example, the modernised and linguistically analysed Austrian corpus would have the root filename
+            <code>PressMint-AT-modern.ana.xml</code> and a component filename would be e.g.
+            <code>PressMint-AT-modern_18994-11-04.ana.xml</code>.</item>
+            <item>The top-level <att>xml:id</att> of the corpus root and of components must also be changed
+            accordingly to e.g. <code>PressMint-AT-modern.ana</code> and
+            <code>PressMint-AT-modern_18994-11-04.ana</code>.</item>
+            <item>The stamp in the main titles should be changed too by adding the suffix, to e.g.
+            <code>[PressMint-modern.ana]</code>.</item>
+          </list>
+          </p>
+          
+          <p>Next, as with any other software that annotates or modifies a ParlaMint corpus, the
+          application that did so must be documented in the <gi>application</gi> element of the
+          TEI header (cf. the Section on <ref target="#sec-ana-appInfo">Application information
+          for linguistic processing</ref>), as illustrated by the following example:
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-appInfo">
+            <application ident="cSMTiser" version="1.0">
+              <label>cSMTiser (IMP model)</label>
+              <desc>Word-level modernisation for Slovenian done with <ref
+              target="https://github.com/clarinsi/csmtiser">cSMTiser</ref> using the model for
+              Gajica alphabet derived from the goo300k corpus
+              (http://hdl.handle.net/11356/1025).</desc>
+            </application>
+          </egXML>
+          
+          This element should be given in the corpus root, together with all the other information
+          on applications inside the application information (<gi>appInfo</gi>) element.</p>
+          
+          <p>As discussed in the Section on <ref target="#sec-prefixDef">Prefix definitions</ref>,
+          it is possible to shorten long references by introducing <att>prefixDef</att> elements in
+          the TEI header. As modernised corpora have many references, i.e. alignments to their
+          source corpora, it is advantageous to also have prefix definitions for the alignments.</p>
+          
+          <p>In contrast to other linguistic annotations that specify one prefix definition for the
+          complete corpus (so, inside the corpus root <gi>teiHeader</gi>), the modernised corpora
+          should specify a prefix definition inside each corpus component because its definition
+          depends on the component file.  For example, the prefix definition of the corpus component
+          file <code>ParlaMint-PL-modern_2014-11-04.ana.xml</code> that will be aligned to
+          <code>ParlaMint-PL_2014-11-04.xml</code> should be as in the following example:
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-prefixDef">
+            <listPrefixDef>
+              <prefixDef ident="mod-src"
+                         matchPattern="(.+)"
+                         replacementPattern="../../ParlaMint-PL.TEI/2014/ParlaMint-PL_2014-11-04.ana.xml#$1">
+                <p>Private URIs with this prefix point to aligned source elements of the modernised corpus.</p>
+              </prefixDef>
+            </listPrefixDef>
+          </egXML>
+          
+          The assumption above is that the two corpora are available in the directories
+          <code>./ParlaMint-PL.TEI/</code> and <code>./ParlaMint-PL-modern.TEI.ana/</code>), so that
+          <att>corresp</att> values in the file
+          <code>ParlaMint-PL-modern.TEI.ana/2014/ParlaMint-PL-modern_2014-11-04.ana.xml</code> with
+          the <code>mt-src</code> prefix will point to
+          <code>ParlaMint-PL-modern.TEI.ana/2014/../../ParlaMint-PL.TEI/2014/ParlaMint-PL_2014.xml</code>
+          i.e. to <code>./ParlaMint-PL.TEI./2014/ParlaMint-LV_2014-11-04.xml</code>.</p>
+          </div>
+          
+          <div xml:id="sec-mod-text">
+            <head>Alignments and original forms</head>
+            
+            <p>The structure of the <gi>text</gi>, inluding the linguistic analysis, is encoded the
+            same way as in the source corpora. The main difference is that the aligned elements are
+            linked to their corresponding elements in the source corpus but there are several options,
+            depending on the approach to modernisation, on which elements can be linked to the source
+            corpus.</p>
+            
+          <p>For LLM approaches we assume that each paragraph is modernised separately, and the
+          linking to the source plain-text corpus is thus on the paragraph level and on the elements
+          above it. The alignment is trivial, simply specifiying the co-localted <att>xml:id</att>
+          value of the element the source corpus. We illustrate paragraph (and above) level
+          alignment in the following example:
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-llm">
+            <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="sl"
+                 xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana" corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2">
+              ...
+              <text xml:lang="sl">
+                <body>
+                  <pb facs="#PressMint-SI_1850-01-02-JOBLX5K2.page1"/>
+                  <p xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p1"
+                     corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.p1">
+                    <s xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p2.s1">
+                      <w ana="mte:Ncfsn" msd="UPosTag=NOUN|Case=Nom|Gender=Fem|Number=Sing" lemma="pesa" join="right">Pesa</w>
+                      <pc ana="mte:Z" msd="UPosTag=PUNCT" lemma=".">.</pc>
+                    </s>
+                    ...
+                  </p>
+                  ...
+                </body>
+              </text>
+            </TEI>
+          </egXML>
+          
+          As can be seen above, the alignment is specified on the <att>corresp</att> attibute.  The
+          alignment reference makes use of the TEI extended pointer syntax as discussed above, to
+          define the <val>mod-src</val> prefix which must resolve to the correct component file of
+          the source corpus.</p>
+
+          <p>If the modernisation is performed on the word level the situation is more complicated.
+          First, the source corpus will have to be first tokenised (and, presumably, sentence
+          segmented, as this is typically also the job of the tokeniser), so that individual tokens
+          can be passed on to the word moderniser, and the words modernised, again presumably
+          retaining the sentence segmentation. Then the modernised words are linguistically
+          analysed, same as for the LLM case.</p>
+
+          <p>To retain the alignment to the source corpus, it must be (as it is, even if only by
+          identifying tokens) stored as the linguistically analysed version (so, <code>.ana</code>),
+          and each of its tokens given an ID. The tokens (and all superordinate elements, as above)
+          of the modernised version are then linked to their source tokens, as the following example
+          illustrates (for readablility, not all linguistic annotation is retained):
+
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-word">
+            
+            Source PressMint-SI_1850-01-02-JOBLX5K2.ana:
+            <s xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1">
+              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t1">Kmetovavce</w>
+              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t2">po</w>
+              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t3">Slovenskim</w>
+              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t4">prihodnjič</w>
+              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t5">tacih</w>
+              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t6">pridelkov</w>
+              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t7">opominovati</w>
+              ...
+            </s>
+            
+            Target PressMint-SI-modern_1850-01-02-JOBLX5K2.ana:
+            <s xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1">
+              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t1"
+                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t1"
+                 msd="UPosTag=NOUN" lemma="kmetovalec">Kmetovalec</w>
+              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t2"
+                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t2"
+                 msd="UPosTag=ADP" lemma="po">po</w>
+              <name type="LOC">
+                <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t3"
+                   corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t3"
+                   msd="UPosTag=ADJ" lemma="slovenski">Slovenskem</w>
+              </name>
+              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t4"
+                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t4"
+                 msd="UPosTag=ADV" lemma="prihodnjič">prihodnjič</w>
+              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t5"
+                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t5"
+                 msd="UPosTag=ADJ" lemma="tak">takih</w>
+              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t6"
+                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t6"
+                 msd="UPosTag=NOUN" lemma="pridelek">pridelkov</w>
+              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t7"
+                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t7"
+                 msd="UPosTag=VERB" lemma="opominjati" join="right">opominjati</w>
+              ...
+            </s>
+          </egXML>
+          </p>
+          
+          <p>
+            When modernising words in can happen that one archaic word maps to two or more modern
+            words, or (if the word modernisation tool supports this) two or more original words
+            are modernised to just one word. This means that the word alignment is not necessarily 1-1,
+            but can be 1-n or n-1. Thes two cases must then have the corresponding alignments, as
+            illustrated below:
+
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-n-n">
+            
+              Source PressMint-SI_1850-01-02-JOBLX5K2.ana:
+              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t1">Nar</w>
+              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t2">lepši</w>
+              ...
+              <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t6">nebote</w>
+              
+              Target PressMint-SI-modern_1850-01-02-JOBLX5K2.ana:
+              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p9.s1.t1"
+                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t1 mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t2"
+                 msd="UPosTag=ADJ" lemma="lep">Najlepši</w>
+              ...
+              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p9.s1.t6"
+                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t6"
+                 msd="UPosTag=PART" lemma="ne">ne</w>
+              <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p9.s1.t7"
+                 corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t6"
+                 msd="UPosTag=AUX" lemma="biti">boste</w>
+              ...
+            </egXML>
+          </p>
+          
+          <p>
+            Finally, it is advantageous to store the original form of the words together with the
+            modernised words.  This allows is to process the modernised corpus a stand-aline,
+            i.e. without needing to access the source corpus, as well as making it unecessary to
+            assign IDs and alignments to each individual token. To store the original form of the
+            word, we use the <att>orig</att> attribute, as illustrated in the example below:
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-orig">
+            
+              Source .ana corpus:
+              <w>Nar</w>
+              <w>lepši</w>
+              <w>kmetovavec</w>
+              ...
+              <w>nebote</w>
+              <w>prihodnjič</w>
+              
+              Target modernised .ana corpus:
+              <w orig="Nar lepši">Najlepši</w>
+              <w orig="kmetovavec">kmetovalec</w>
+              ...
+              <w orig="nebote">ne</w>
+              <w orig="">boste</w>
+              <w>prihodnjič</w>
+              ...
+            </egXML>
+
+            The example above covers four cases which can arrise in the modernisation:
+            <list>
+              <item>the modernised word can be identical to the original one, as is the case with
+              <code>prihodnjič</code>: the <att>orig</att> attribute is ommitted;</item>
+              
+              <item>the modernised word has a 1-1 mapping with the original one, as is the case with
+              <code>kmetovavec</code>: the original word is given in the <att>orig</att>
+              attribute;</item>
+              
+              <item>the modernised words corresponds to two (or more) original words:
+              the source words are given in the <att>orig</att> attribute, with spaces between them;</item>
+              
+              <item>the original words corresponds to two (or more) modernised words: 
+              the first modern word is given the original word in <att>orig</att>, while the second (and
+              possdibly further) words are given the <att>orig</att> attribute, but with an empty
+              value.</item>
+            </list>
+          </p>
         </div>
       </div>
       
