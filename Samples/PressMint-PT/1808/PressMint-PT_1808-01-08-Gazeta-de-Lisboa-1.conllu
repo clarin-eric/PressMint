@@ -1,0 +1,82 @@
+# newdoc id = PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.ana
+# newpar id = PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.ana.p1
+# lang = pt
+# sent_id = PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.ana.p1.s1
+# text = Hamburgo 2 de Dezembro
+1	Hamburgo	Hamburgo	PROPN	_	_	0	_	_	NER=B-LOC
+2	2	2	NUM	_	NumType=Card	0	_	_	NER=O
+3	de	de	ADP	_	_	0	_	_	NER=O
+4	Dezembro	Dezembro	PROPN	_	_	0	_	_	NER=O
+
+# newpar id = PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.ana.p2
+# lang = pt
+# sent_id = PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.ana.p2.s2
+# text = Passa agora por certo haverem todas as Potencias do Continente feito disposições relativas á situação actual das cousas entre a França e a Inglaterra.
+1	Passa	passar	VERB	_	_	0	_	_	NER=O
+2	agora	agora	ADV	_	_	0	_	_	NER=O
+3	por	por	ADP	_	_	0	_	_	NER=O
+4	certo	certo	ADJ	_	_	0	_	_	NER=O
+5	haverem	haver	VERB	_	_	0	_	_	NER=O
+6	todas	todas	DET	_	_	0	_	_	NER=O
+7	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	0	_	_	NER=O
+8	Potencias	Potencias	PROPN	_	_	0	_	_	NER=O
+9-10	do	_	_	_	_	_	_	_	NER=O
+9	de	de	ADP	_	_	0	_	_	_
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	0	_	_	_
+11	Continente	Continente	PROPN	_	_	0	_	_	NER=B-MISC
+12	feito	feito	VERB	_	_	0	_	_	NER=O
+13	disposições	disposição	NOUN	_	_	0	_	_	NER=O
+14	relativas	relativo	ADJ	_	_	0	_	_	NER=O
+15	á	á	ADP	_	_	0	_	_	NER=O
+16	situação	situação	NOUN	_	_	0	_	_	NER=O
+17	actual	actual	ADJ	_	_	0	_	_	NER=O
+18-19	das	_	_	_	_	_	_	_	NER=O
+18	de	de	ADP	_	_	0	_	_	_
+19	as	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	0	_	_	_
+20	cousas	cousa	NOUN	_	_	0	_	_	NER=O
+21	entre	entre	ADP	_	_	0	_	_	NER=O
+22	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+23	França	França	PROPN	_	_	0	_	_	NER=B-LOC
+24	e	e	CCONJ	_	_	0	_	_	NER=O
+25	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+26	Inglaterra	Inglaterra	PROPN	_	_	0	_	_	NER=B-LOC|SpaceAfter=No
+27	.	.	PUNCT	_	_	0	_	_	NER=O
+
+# newpar id = PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.ana.p11
+# lang = pt
+# sent_id = PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.ana.p11.s11
+# text = As que formaõ a guarniçaõ da nossa cidade, ainda estaõ aqui;
+1	As	As	PRON	_	_	0	_	_	NER=O
+2	que	que	PRON	_	_	0	_	_	NER=O
+3	formaõ	formaõr	VERB	_	_	0	_	_	NER=O
+4	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	NER=O
+5	guarniçaõ	guarniçaõ	NOUN	_	_	0	_	_	NER=O
+6-7	da	_	_	_	_	_	_	_	NER=O
+6	de	de	ADP	_	_	0	_	_	_
+7	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	0	_	_	_
+8	nossa	nossa	DET	_	_	0	_	_	NER=O
+9	cidade	cidade	NOUN	_	_	0	_	_	NER=O|SpaceAfter=No
+10	,	,	PUNCT	_	_	0	_	_	NER=O
+11	ainda	ainda	ADV	_	_	0	_	_	NER=O
+12	estaõ	estaõ	VERB	_	_	0	_	_	NER=O
+13	aqui	aqui	ADV	_	_	0	_	_	NER=O|SpaceAfter=No
+14	;	;	PUNCT	_	_	0	_	_	NER=O
+
+# newpar id = PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.ana.p12
+# lang = pt
+# sent_id = PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.ana.p12.s12
+# text = mas he de crer que naõ tardem em tomar o mesmo caminho.
+1	mas	mas	CCONJ	_	_	0	_	_	NER=O
+2	he	he	AUX	_	_	0	_	_	NER=O
+3	de	de	ADP	_	_	0	_	_	NER=O
+4	crer	crer	VERB	_	_	0	_	_	NER=O
+5	que	que	CCONJ	_	_	0	_	_	NER=O
+6	naõ	naõ	ADV	_	Polarity=Neg	0	_	_	NER=O
+7	tardem	tardar	VERB	_	_	0	_	_	NER=O
+8	em	em	ADP	_	_	0	_	_	NER=O
+9	tomar	tomar	VERB	_	_	0	_	_	NER=O
+10	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	0	_	_	NER=O
+11	mesmo	mesmo	ADJ	_	_	0	_	_	NER=O
+12	caminho	caminho	NOUN	_	_	0	_	_	NER=O|SpaceAfter=No
+13	.	.	PUNCT	_	_	0	_	_	NER=O
+

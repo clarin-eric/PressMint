@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1" xml:lang="pt">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="pt">Corpus português de jornais históricos PressMint-PT 1808-01-08 [PressMint SAMPLE]</title>
+            <title xml:lang="en">Portuguese historical newspaper corpus PressMint-PT 1808-01-08 [PressMint SAMPLE]</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="paragraphs" quantity="12" xml:lang="en">12 paragraphs</measure>
+            <measure unit="words" quantity="325" xml:lang="en">325 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="pt">Infraestrutura CLARIN ERIC</orgName>
+               <orgName xml:lang="en">CLARIN ERIC infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="pt">O corpus é disponibilizado com a licença <ref target="http://creativecommons.org/licenses/by/4.0/">Licença Creative Commons Atribuição 4.0 Internacional</ref>.</p>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+            </availability>
+            <date when="2026-10-09">2026-10-09</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <publisher>Gazeta de Lisboa</publisher>
+               <date when="1808-01-08">08-01-1808</date>
+               <biblScope unit="local">Lisboa</biblScope>
+               <biblScope unit="kind">Jornalístico</biblScope>
+               <biblScope unit="type">Notícia</biblScope>
+               <biblScope unit="section">Alemanha</biblScope>
+               <biblScope unit="page">3-4</biblScope>
+               <biblScope unit="supplement">Supplemento</biblScope>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2026-10-09">
+            <name>corpus2sample.xsl</name>: Made sample.</change>
+         <change when="2026-04-05">
+            <name>José Aires</name>: Made sample.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="pt">
+      <body>
+         <p ana="#quality.low" xml:id="PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.p1">Hamburgo 2 de Dezembro</p>
+         <p ana="#quality.low" xml:id="PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.p2">Passa agora por certo haverem todas as Potencias do Continente feito disposições relativas á situação actual das cousas entre a França e a Inglaterra.</p>
+         <gap reason="editorial">
+            <desc xml:lang="en">SAMPLING</desc>
+         </gap>
+         <p ana="#quality.low" xml:id="PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.p11">As que formaõ a guarniçaõ da nossa cidade, ainda estaõ aqui;</p>
+         <p ana="#quality.low" xml:id="PressMint-PT_1808-01-08-Gazeta-de-Lisboa-1.p12">mas he de crer que naõ tardem em tomar o mesmo caminho.</p>
+      </body>
+   </text>
+</TEI>
+
