@@ -14,7 +14,7 @@ max_press_changed_size=0
 all_press_changed_size=0
 for press in $press_changed;
 do
-  size=$(find Samples/PressMint-$press -type f -name "PressMint-$press*.xml"  -print0 | du -c --block-size=1000000 --files0-from=-|tail -1|cut -f 1)
+  size=$(find Samples/PressMint-$press -type f -name "PressMint-$press*.xml" -print0 | du -cb --files0-from=- | tail -1 | awk '{print int(($1+999999)/1000000)}')
   echo "::notice:: Samples/PressMint-$press size =${size} MB"
   max_press_changed_size=$(( $max_press_changed_size < $size ? $size : $max_press_changed_size ))
   all_press_changed_size=$(echo "$all_press_changed_size+$size"|bc)
@@ -35,7 +35,7 @@ echo "DEBUG: press_all=${press_all}"
 
 echo "DEBUG: press_process=${press_process}"
 
-
+echo "press_count=$(echo $press_process | jq 'length')" >> $GITHUB_OUTPUT
 echo "press_process=${press_process}" >> $GITHUB_OUTPUT
 echo "press_all=${press_all}" >> $GITHUB_OUTPUT
 echo "press_changed=${press_changed}" >> $GITHUB_OUTPUT

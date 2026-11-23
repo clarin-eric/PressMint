@@ -3,7 +3,8 @@ all:	cp_regis
 
 SRC=/project/clarinsi-cqp/registry/
 REGIST_VERSION=10
-REGIST_CORPORA=at bg cz es gr is lv nl pl si
+#REGIST_CORPORA=at bg cz es gr is lv nl pl si
+REGIST_CORPORA=pl si at
 
 # Registry files 
 cp_regis:

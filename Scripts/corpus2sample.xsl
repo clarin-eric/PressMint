@@ -4,6 +4,7 @@
 <xsl:stylesheet 
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:tei="http://www.tei-c.org/ns/1.0" 
   xmlns="http://www.tei-c.org/ns/1.0"
   xmlns:et="http://nl.ijs.si/et" 
@@ -15,8 +16,8 @@
   <!-- Output directory for samples -->
   <xsl:param name="outDir"/>
   
-  <!-- Revision responsible person  -->
-  <xsl:param name="revRespPers">Tomaž Erjavec</xsl:param>
+  <!-- Revision responsible agency  -->
+  <xsl:param name="revRespPers">corpus2sample.xsl</xsl:param>
 
   <!-- How many TEI files to take -->
   <xsl:param name="Files">3</xsl:param>
@@ -30,20 +31,22 @@
   
   <xsl:variable name="today" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
 
-  <!-- Select $Files XInclude components -->
+  <xsl:key name="facs" match="tei:*" use="substring-after(@facs, '#')"/>
+  
+  <!-- Select URIs of XInclude components that will be in the sample -->
   <xsl:variable name="components">
     <xsl:variable name="n" select="count(/tei:teiCorpus/xi:include)"/>
     <xsl:choose>
       <!-- When too few files -->
-      <xsl:when test="$n &lt; 2 * $Files">
-        <xsl:message select="concat('INFO: from ', $n , ' files  selecting all of them: ')"/>
+      <xsl:when test="$n &lt; $Files">
+        <xsl:message select="concat('INFO: from ', $n , ' files selecting all of them: ')"/>
         <xsl:for-each select="/tei:teiCorpus/xi:include">
           <xsl:message select="concat('INFO: selecting component file ', @href)"/>
           <xsl:copy-of select="."/>
         </xsl:for-each>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:message select="concat('INFO: from ', $n , ' component files  selecting ~', $Files, ' files:')"/>
+        <xsl:message select="concat('INFO: from ', $n , ' component files selecting ~', $Files, ' files:')"/>
       <xsl:for-each select="/tei:teiCorpus/xi:include">
         <xsl:if test="(position()-1) mod floor($n div $Files) = floor($n div $Files) - 1">
           <xsl:message select="concat('INFO: selecting component file ', @href)"/>
@@ -54,7 +57,7 @@
     </xsl:choose>
   </xsl:variable>
 
-  <xsl:output method="xml" indent="yes"/>
+  <xsl:output method="xml" indent="yes" suppress-indentation="w pc"/>
   
   <xsl:template match="/">
     <!-- Output root file -->
@@ -64,19 +67,23 @@
     </xsl:result-document>
     <!-- Output component file samples -->
     <xsl:variable name="inDir" select="replace(base-uri(), '/[^/]+$', '')"/>
-    <xsl:for-each select="$components/xi:include | //tei:teiHeader//xi:include">
+    <!-- process component files -->
+    <xsl:for-each select="$components/xi:include">
       <!-- Get rid of subdirectories if in original -->
       <xsl:variable name="href" select="replace(@href, '.+/', '')"/>
       <xsl:result-document href="{$outDir}/{$href}" method="xml">
         <xsl:apply-templates mode="component" select="document(concat($inDir, '/', @href))"/>
       </xsl:result-document>
     </xsl:for-each>
+    <!-- Output taxonomy files as raw, unparsed text copies -->
+    <xsl:for-each select="//tei:teiHeader//xi:include">
+      <xsl:variable name="href" select="replace(@href, '.+/', '')"/>
+      <xsl:result-document href="{$outDir}/{$href}" method="text">
+        <xsl:value-of select="unparsed-text(concat($inDir, '/', @href))"/>
+      </xsl:result-document>
+    </xsl:for-each>
   </xsl:template>
   
-  <xsl:template mode="component" match="/">
-    <xsl:apply-templates/>
-  </xsl:template>
-
   <xsl:template match="tei:teiCorpus">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
@@ -87,7 +94,26 @@
     </xsl:copy>
   </xsl:template>
 
-    <xsl:template match="tei:teiHeader">
+  <xsl:template mode="component" match="/">
+    <xsl:apply-templates select="tei:TEI"/>
+  </xsl:template>
+  
+  <xsl:template match="tei:TEI">
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates select="tei:teiHeader"/>
+      <xsl:variable name="text">
+        <xsl:apply-templates select="tei:text"/>
+      </xsl:variable>
+      <!-- <text> needed by <facsimile> so only used <surface> (and <zone>) elements are retained -->
+      <xsl:apply-templates select="tei:facsimile">
+        <xsl:with-param name="text" select="$text"/>
+      </xsl:apply-templates>
+      <xsl:copy-of select="$text"/>
+    </xsl:copy>
+  </xsl:template>
+
+  <xsl:template match="tei:teiHeader">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:apply-templates/>
@@ -161,20 +187,65 @@
     <change when="{$today-iso}"><name><xsl:value-of select="$revRespPers"/></name>: Made sample.</change>
   </xsl:template>
 
+  <xsl:template match="tei:facsimile">
+    <xsl:param name="text"/>
+    <xsl:copy>
+      <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates>
+        <xsl:with-param name="text" select="$text"/>
+      </xsl:apply-templates>
+    </xsl:copy>
+  </xsl:template>
+
+  <!-- Select only surfaces and zones that are referred to from the sample -->
+  <xsl:template match="tei:surface | tei:zone">
+    <xsl:param name="text"/>
+    <xsl:variable name="check">
+      <xsl:apply-templates mode="check" select=".">
+        <xsl:with-param name="text" select="$text"/>
+      </xsl:apply-templates>
+    </xsl:variable>
+    <xsl:if test="normalize-space($check)">
+      <xsl:copy>
+        <xsl:message select="concat('INFO: selecting ', name(), ' ', @xml:id)"/>
+        <xsl:apply-templates select="@*"/>
+        <xsl:apply-templates>
+          <xsl:with-param name="text" select="$text"/>
+        </xsl:apply-templates>
+      </xsl:copy>
+    </xsl:if>
+  </xsl:template>
+
+  <!-- Return "OK" if element of any nested elements is referred to in $text -->
+  <xsl:template mode="check" match="tei:surface | tei:zone">
+    <xsl:param name="text"/>
+    <xsl:choose>
+      <xsl:when test="key('facs', @xml:id, $text)">OK</xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates mode="check">
+          <xsl:with-param name="text" select="$text"/>
+        </xsl:apply-templates>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+ 
   <!-- Here we pick the first and last $Range paragraphs and all
        immediatelly preceding and intervening other elements -->
   <xsl:template match="tei:body">
     <xsl:variable name="all" select="count(//tei:text//tei:p)"/>
+    <xsl:if test="not(.//tei:p)">
+      <xsl:message select="concat('ERROR: no paragraphs in ', /tei:TEI/@xml:id)"/>
+    </xsl:if>
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:variable name="to">
         <xsl:choose>
           <!-- If there is too few <p>s in the document -->
           <xsl:when test="$all &lt; $Range">
-            <xsl:value-of select="(.//tei:p)[last()]/@xml:id"/>
+            <xsl:value-of select="generate-id((.//tei:p)[last()])"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="(.//tei:p)[position() = $Range]/@xml:id"/>
+            <xsl:value-of select="generate-id((.//tei:p)[position() = $Range])"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:variable>
@@ -183,7 +254,7 @@
           <!-- If there is too few <p>s in the document -->
           <xsl:when test="$all &lt; 2 * $Range">0</xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="(.//tei:p)[position() = $all - ($Range - 1)]/@xml:id"/>
+            <xsl:value-of select="generate-id((.//tei:p)[position() = $all - ($Range - 1)])"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:variable>
@@ -197,7 +268,7 @@
   <xsl:template name="process-text">
     <xsl:param name="from">0</xsl:param>
     <xsl:param name="to">0</xsl:param>
-    <xsl:message select="concat('SELECTING ', /tei:TEI/@xml:id, ': ', $to, ' AND ', $from)"/>
+    <xsl:message select="concat('INFO: selecting sample from ', /tei:TEI/@xml:id, ': ', $to, ' and ', $from)"/>
     <xsl:variable name="text">
       <xsl:variable name="incipit">
         <xsl:apply-templates>
@@ -211,7 +282,9 @@
       </xsl:variable>
       <xsl:if test="$incipit/tei:*">
         <xsl:copy-of select="$incipit"/>
-        <gap reason="editorial"><desc xml:lang="en">SAMPLING</desc></gap>
+        <xsl:if test="$explicit/tei:*">
+          <gap reason="editorial"><desc xml:lang="en">SAMPLING</desc></gap>
+        </xsl:if>
       </xsl:if>
       <xsl:copy-of select="$explicit"/>
     </xsl:variable>
@@ -223,8 +296,8 @@
   <xsl:template match="tei:body/node()">
     <xsl:param name="from">0</xsl:param>
     <xsl:param name="to">0</xsl:param>
-    <xsl:if test="($from = '0' and (self::tei:* | following::tei:*)[@xml:id = $to]) or 
-                  ($to   = '0' and (self::tei:* | preceding::tei:*)[@xml:id = $from])">
+    <xsl:if test="($from = '0' and (self::tei:* | following::tei:* | .//tei:*)[generate-id(.) = $to]) or 
+                  ($to   = '0' and (self::tei:* | preceding::tei:* | .//tei:*)[generate-id(.) = $from])">
       <xsl:choose>
         <xsl:when test="self::tei:gap[@reason='editorial' and ./tei:desc/text() = 'SAMPLING']" /> <!-- don't copy gap/desc SAMPLING -->
         <xsl:when test="self::tei:*">

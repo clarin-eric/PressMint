@@ -68,12 +68,28 @@
   <xsl:template mode="plain" match="tei:*">
     <xsl:apply-templates mode="plain"/>
   </xsl:template>
+  <!-- do not print hyphen-->
+  <xsl:template mode="plain" match="tei:pc[@force and not(@msd)]">
+    <xsl:message>WARN: hyphen outside token</xsl:message>
+  </xsl:template>
   <xsl:template mode="plain" match="tei:w | tei:pc">
-    <xsl:value-of select="normalize-space(.)"/>
+    <xsl:variable name="text">
+      <xsl:apply-templates mode="text-extract"/>
+    </xsl:variable>
+    <xsl:value-of select="normalize-space($text)"/>
     <xsl:call-template name="SpaceAfter">
       <xsl:with-param name="yes" select="'&#32;'"/>
     </xsl:call-template>
   </xsl:template>
+
+  <xsl:template mode="text-extract" match="text()">
+    <xsl:value-of select="."/>
+  </xsl:template>
+  <xsl:template mode="text-extract" match="tei:*">
+    <xsl:apply-templates mode="text-extract"/>
+  </xsl:template>
+  <!-- do not print hyphen-->
+  <xsl:template mode="text-extract" match="tei:pc[@force and not(@msd)]"/>
 
   <xsl:template match="tei:note | tei:desc">
     <!-- We just ignore these (and parents of desc), is there anything else we could do? -->
@@ -117,6 +133,12 @@
     <xsl:apply-templates/>
   </xsl:template>
   
+  <xsl:template match="tei:pc[@force and not(@msd)]">
+    <xsl:if test="./following-sibling::tei:lb">
+      <xsl:message select="concat('WARN: hyphenation ',text(),' not followed by lb')"/>
+    </xsl:if>
+  </xsl:template>
+
   <xsl:template match="tei:w | tei:pc">
     <!-- 1/ID -->
     <xsl:apply-templates mode="number" select="."/>
@@ -277,7 +299,8 @@
       <xsl:number count="tei:w | tei:pc" level="any" from="tei:s"/>
     </xsl:variable>
     <xsl:variable name="ignore">
-      <xsl:number count="tei:w[tei:w]" level="any" from="tei:s"/>
+      <!-- ignore ortograph words witout subtoken and hyphens-->
+      <xsl:number count="tei:w[tei:w] | tei:pc[@force and not(@msd)]" level="any" from="tei:s"/>
     </xsl:variable>
     <xsl:choose>
       <xsl:when test="normalize-space($ignore)">
@@ -384,4 +407,3 @@
     </xsl:choose>
   </xsl:function>
 </xsl:stylesheet>
-
