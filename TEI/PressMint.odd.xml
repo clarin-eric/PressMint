@@ -146,7 +146,7 @@
           corpus root and corpus components;</item>
 
           <item><ref target="#chp-general">Chapter 3</ref> explains basic requirements
-          and the file conventions a ParlaMint corpus and introduces
+          and the file conventions a PressMint corpus and introduces
           the top level XML elements and their attributes incl. links;</item>
 
           <item><ref target="#chp-metadata">Chapter 4</ref> gives the encoding of the corpus metadata,
@@ -161,10 +161,13 @@
           <item><ref target="#chp-linguistic">Chapter 7</ref> details the addition of
           linguistic annotations to the corpus;</item>
 
-          <item><ref target="#chp-validation">Chapter 8</ref> introduces scripts to finalise,
+          <item><ref target="#chp-modern">Chapter 8</ref> specifies how the corpus variant
+          with modernised text is stored and encoded;</item>
+
+          <item><ref target="#chp-validation">Chapter 9</ref> introduces scripts to finalise,
           validate and convert a PressMint corpus to other formats;</item>
 
-          <item><ref target="#chp-contributing">Chapter 9</ref> gives instructions on how to
+          <item><ref target="#chp-contributing">Chapter 10</ref> gives instructions on how to
           contribute samples of a PressMint corpus to GitHub;</item>
 
           <item><ref target="#schema">Appendix A</ref> gives the formal specification of
@@ -291,8 +294,8 @@
 
             <item>Certain metadata elements from the corpus root <gi>teiHeader</gi> are stored in separate
             files, in particular the PressMint taxonomies, stored in <gi>taxonomy</gi> elements.
-            The common PressMint taxonomies are named as in <code>ParlaMint-taxonomy-topics.xml</code>,
-            i.e. start with <code>ParlaMint-taxonomy-</code> followed by the a string describing what the taxonomy contains,
+            The common PressMint taxonomies are named as in <code>PressMint-taxonomy-topics.xml</code>,
+            i.e. start with <code>PressMint-taxonomy-</code> followed by the a string describing what the taxonomy contains,
             in this case, the topics that the newspaper articles will be classified into.
             However, if a taxonomy (or other metadata file) is specific to a particular corpus, then this is indicated by
             having in the file name (and the IDs contained in it) prefixed by the name of the corpus root, e.g.
@@ -1120,7 +1123,7 @@
             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-taxo">
               <classDecl>
                 ...
-                <taxonomy xml:id="ParlaMint-taxonomy-topic" xml:lang="mul">
+                <taxonomy xml:id="PressMint-taxonomy-topic" xml:lang="mul">
                   <desc xml:lang="en"><term>Topics</term>: Comparative Agendas Project
                     <ref target="https://www.comparativeagendas.net/pages/master-codebook">CAP major topic labels</ref>
                   </desc>
@@ -1949,7 +1952,7 @@
             it is the syntactic word that is on the top level, while the inner words are the
             actual tokens. To take an example from historical language<note>Note that we, in PressMint,
             treat the relation of historical language to contemporary one differenty, cf. the
-            Section on <ref target="#sec-mod">Language modernisation</ref>.</note>
+            Section on <ref target="#chp-modern">Language modernisation</ref>.</note>
             Slovenian used to form the superlative form of adjectives with the word <q>naj</q> written separately
             (and often as <q>nar</q>), while in contemporary Slovenian, the <q>naj</q> is a
             prefix of the adjective. This would be encoded as follows:
@@ -2047,7 +2050,7 @@
             as follows:
             
             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-ana-taxonomy-NER">
-              <taxonomy xml:id="ParlaMint-taxonomy-NER.ana">
+              <taxonomy xml:id="PressMint-taxonomy-NER.ana">
                 <desc xml:lang="en"><term>Named entities</term></desc>
                 <category xml:id="PER">
                   <catDesc xml:lang="sl"><term>oseba</term></catDesc>
@@ -2072,7 +2075,7 @@
         </div>
       </div>
       
-      <div xml:id="chp-mod">
+      <div xml:id="chp-modern">
         <head>Language modernisation</head>
         
         <p>The language of older newspapers can differ significantly from the contemporary norm.
@@ -2092,11 +2095,11 @@
         fine-grained alignment to the corpus with original language (the source corpus) will be
         difficult.</p>
 
-        <div xml:id="sec-mod-metadata">
+        <div xml:id="sec-modern-metadata">
           <head>Top-level changes and metadata</head>
           
           <p>In PressMint, the modernised corpora (where such exist) are set-up similarly to
-          <ref target="https://clarin-eric.github.io/ParlaMint/#sec-mod">ParlaMint machine translated corpora</ref>.
+          <ref target="https://clarin-eric.github.io/ParlaMint/#sec-modern">ParlaMint machine translated corpora</ref>.
           In general, they are encoded like their source corpora but with the following top-level
           differences:
           
@@ -2113,12 +2116,12 @@
           </list>
           </p>
           
-          <p>Next, as with any other software that annotates or modifies a ParlaMint corpus, the
+          <p>Next, as with any other software that annotates or modifies a PressMint corpus, the
           application that did so must be documented in the <gi>application</gi> element of the
           TEI header (cf. the Section on <ref target="#sec-ana-appInfo">Application information
           for linguistic processing</ref>), as illustrated by the following example:
           
-          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-appInfo">
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-modern-appInfo">
             <application ident="cSMTiser" version="1.0">
               <label>cSMTiser (IMP model)</label>
               <desc>Word-level modernisation for Slovenian done with <ref
@@ -2140,29 +2143,29 @@
           complete corpus (so, inside the corpus root <gi>teiHeader</gi>), the modernised corpora
           should specify a prefix definition inside each corpus component because its definition
           depends on the component file.  For example, the prefix definition of the corpus component
-          file <code>ParlaMint-PL-modern_2014-11-04.ana.xml</code> that will be aligned to
-          <code>ParlaMint-PL_2014-11-04.xml</code> should be as in the following example:
+          file <code>PressMint-PL-modern_2014-11-04.ana.xml</code> that will be aligned to
+          <code>PressMint-PL_2014-11-04.xml</code> should be as in the following example:
           
-          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-prefixDef">
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-modern-prefixDef">
             <listPrefixDef>
               <prefixDef ident="mod-src"
                          matchPattern="(.+)"
-                         replacementPattern="../../ParlaMint-PL.TEI/2014/ParlaMint-PL_2014-11-04.ana.xml#$1">
+                         replacementPattern="../../PressMint-PL.TEI/2014/PressMint-PL_2014-11-04.ana.xml#$1">
                 <p>Private URIs with this prefix point to aligned source elements of the modernised corpus.</p>
               </prefixDef>
             </listPrefixDef>
           </egXML>
           
           The assumption above is that the two corpora are available in the directories
-          <code>./ParlaMint-PL.TEI/</code> and <code>./ParlaMint-PL-modern.TEI.ana/</code>), so that
+          <code>./PressMint-PL.TEI/</code> and <code>./PressMint-PL-modern.TEI.ana/</code>), so that
           <att>corresp</att> values in the file
-          <code>ParlaMint-PL-modern.TEI.ana/2014/ParlaMint-PL-modern_2014-11-04.ana.xml</code> with
+          <code>PressMint-PL-modern.TEI.ana/2014/PressMint-PL-modern_2014-11-04.ana.xml</code> with
           the <code>mt-src</code> prefix will point to
-          <code>ParlaMint-PL-modern.TEI.ana/2014/../../ParlaMint-PL.TEI/2014/ParlaMint-PL_2014.xml</code>
-          i.e. to <code>./ParlaMint-PL.TEI./2014/ParlaMint-LV_2014-11-04.xml</code>.</p>
+          <code>PressMint-PL-modern.TEI.ana/2014/../../PressMint-PL.TEI/2014/PressMint-PL_2014.xml</code>
+          i.e. to <code>./PressMint-PL.TEI./2014/PressMint-LV_2014-11-04.xml</code>.</p>
           </div>
           
-          <div xml:id="sec-mod-text">
+          <div xml:id="sec-modern-text">
             <head>Alignments and original forms</head>
             
             <p>The structure of the <gi>text</gi>, inluding the linguistic analysis, is encoded the
@@ -2177,8 +2180,8 @@
           value of the element the source corpus. We illustrate paragraph (and above) level
           alignment in the following example:
           
-          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-llm">
-            <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="sl"
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-modern-llm">
+            <TEI xml:lang="sl"
                  xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana" corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2">
               ...
               <text xml:lang="sl">
@@ -2216,9 +2219,10 @@
           of the modernised version are then linked to their source tokens, as the following example
           illustrates (for readablility, not all linguistic annotation is retained):
 
-          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-word">
+          <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-modern-word">
             
             Source PressMint-SI_1850-01-02-JOBLX5K2.ana:
+            
             <s xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1">
               <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t1">Kmetovavce</w>
               <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t2">po</w>
@@ -2231,6 +2235,7 @@
             </s>
             
             Target PressMint-SI-modern_1850-01-02-JOBLX5K2.ana:
+            
             <s xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1">
               <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p3.s1.t1"
                  corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p3.s1.t1"
@@ -2267,15 +2272,17 @@
             but can be 1-n or n-1. Thes two cases must then have the corresponding alignments, as
             illustrated below:
 
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-n-n">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-modern-n-n">
             
               Source PressMint-SI_1850-01-02-JOBLX5K2.ana:
+
               <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t1">Nar</w>
               <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t2">lepši</w>
               ...
               <w xml:id="PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t6">nebote</w>
               
               Target PressMint-SI-modern_1850-01-02-JOBLX5K2.ana:
+
               <w xml:id="PressMint-SI-modern_1850-01-02-JOBLX5K2.ana.p9.s1.t1"
                  corresp="mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t1 mod-src:PressMint-SI_1850-01-02-JOBLX5K2.ana.p9.s1.t2"
                  msd="UPosTag=ADJ" lemma="lep">Najlepši</w>
@@ -2297,9 +2304,10 @@
             assign IDs and alignments to each individual token. To store the original form of the
             word, we use the <att>orig</att> attribute, as illustrated in the example below:
             
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-mod-orig">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="exa-modern-orig">
             
               Source .ana corpus:
+
               <w>Nar</w>
               <w>lepši</w>
               <w>kmetovavec</w>
@@ -2308,6 +2316,7 @@
               <w>prihodnjič</w>
               
               Target modernised .ana corpus:
+
               <w orig="Nar lepši">Najlepši</w>
               <w orig="kmetovavec">kmetovalec</w>
               ...
