@@ -51,11 +51,13 @@ $country2lang{'PL'} = 'pl';
 $country2lang{'PT'} = 'pt';
 $country2lang{'RO'} = 'ro';
 $country2lang{'RS'} = 'sr';
+$country2lang{'RU-YEV'} = 'yi';
 $country2lang{'SE'} = 'sv';
 $country2lang{'SI'} = 'sl';
 $country2lang{'SK'} = 'sk';
 $country2lang{'TR'} = 'tr';
 $country2lang{'UA'} = 'uk, ru';
+$country2lang{'UA-53'} = 'yi';
 $country2lang{'IL'} = 'he';
 
 $bkpName = "BKP";

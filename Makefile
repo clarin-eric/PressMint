@@ -6,7 +6,7 @@ export PATH := $(abspath $(VENV_DIR)/bin):$(PATH)
 
 
 
-PRESS := AT BG CZ ES ES-CM ES-GA ES-MD ES-PV FI FR GB GR HU IS IT LV NL PL PT SI UA ZA
+PRESS := AT BG CZ DE ES ES-CM ES-GA ES-MD ES-PV FI FR GB GR HU IS IT LV NL PL PT RS RU-YEV SI UA UA-53 ZA
 
 ##$JAVA-MEMORY## Set a java memory maxsize in GB
 JAVA-MEMORY =
@@ -96,20 +96,57 @@ setup-python-env:
 		python3 -m venv $(VENV_DIR); \
 	fi
 
+## README template for new Samples/PressMint-XX folders (used by setup-press)
+define PRESS_README_TEMPLATE
+# Samples of the PressMint-$(PRESS-CODE) corpus
+
+## Data source
+
+The source of the PressMint-$(PRESS-CODE) corpus will be ...
+
+### Details of the source:
+
+* __Source__: 
+
+* __Availability__: 
+
+* __Content__: 
+
+* __Size__: 
+
+* __Structure__: 
+
+* __Correction__: 
+
+* __Linguistic annotation__: 
+
+* __Metadata__:
+
+    The texts in the corpus have the following metadata:
+
+    - Document ID 
+    - ...
+    
+* __Format__: 
+
+* __Facsimile__:
+
+## Conversion plan
+
+For the PressMint-$(PRESS-CODE) corpus we plan to:
+endef
+export PRESS_README_TEMPLATE
+
 setup-press:
 ifndef PRESS-CODE
 	$(error PRESS-CODE is not set - use "make TARGET PRESS-CODE='<CODE>'" )
-endif
-ifndef PRESS-NAME
-	$(error PRESS-NAME is not set - use "make TARGET PRESS-NAME='<COUNTRY>'" )
 endif
 ifndef LANG-LIST
 	$(error LANG-LIST is not set - use "make TARGET LANG-LIST='<langcode1> (Language1), <langcode2> (Language2)'" )
 endif
 	test ! -d ./Samples/PressMint-$(PRESS-CODE)
 	mkdir ./Samples/PressMint-$(PRESS-CODE)
-	echo "# PressMint directory for samples of country $(PRESS-CODE) ($(PRESS-NAME))" > ./Samples/PressMint-$(PRESS-CODE)/README.md
-	echo "## Languages: $(LANG-LIST)" >> ./Samples/PressMint-$(PRESS-CODE)/README.md
+	printf '%s\n\n' "$$PRESS_README_TEMPLATE" > ./Samples/PressMint-$(PRESS-CODE)/README.md
 	echo "LANG-CODE-LIST=$(LANG-CODE-LIST)"
 	make initTaxonomies-$(PRESS-CODE) PRESS="$(PRESS-CODE)" LANG-CODE-LIST="$(LANG-CODE-LIST)"
 	git status ./Samples/PressMint-$(PRESS-CODE)/*
