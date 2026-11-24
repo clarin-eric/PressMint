@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-AT" xml:lang="de">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt> <!--needs more information -->
+            <title>Österreichisches historisches Zeitungskorpus PressMint-AT [PressMint SAMPLE]</title>
+            <title xml:lang="en">Austrian historical newspaper corpus PressMint-AT [PressMint SAMPLE]</title>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0002-1631-4560">Tanja Wissik</persName>
+               <resp xml:lang="de">PressMint-AT Projektkoordinatorin</resp>
+               <resp xml:lang="en">PressMint-At project coordinator</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0001-8066-7363">Claudia Resch</persName>
+               <resp xml:lang="de">PressMint-AT Projektkoordinatorin</resp>
+               <resp xml:lang="en">PressMint-At project coordinator</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref= "https://orcid.org/0000-0002-8111-5584">Hannes Pirker</persName>
+               <resp xml:lang="de">Klassifikation relevanter Seiten auf ANNO</resp>
+               <resp xml:lang="en">classification of relevant pages on ANNO</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref= "https://orcid.org/0009-0003-9200-2512">Jona Marie Hassenbach</persName>
+               <resp xml:lang="de">Layout Analyse und TEI-XML encoding</resp>
+               <resp xml:lang="en">Layout Analysis and TEI-XML encoding</resp>
+            </respStmt>
+            <respStmt>
+               <persName>Stefan Resch</persName>
+               <resp xml:lang="de">OCR Tool Vergleich</resp>
+               <resp xml:lang="en">OCR tool comparison</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref= "https://orcid.org/0000-0002-0236-0224">Christian Lendl</persName>
+               <resp xml:lang="de">Layout Analyse</resp>
+               <resp xml:lang="en">Layout Analysis</resp>
+            </respStmt>
+            <funder>
+               <orgName xml:lang="de">CLARIN Forschungsinfrastruktur</orgName>
+               <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+            </funder>
+            <funder>
+               <orgName xml:lang="de">CLARIAH-AT Konsortium</orgName>
+               <orgName xml:lang="en">CLARIAH-AT consortium</orgName>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--this happens automatically (for English) -->
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="de">CLARIN Forschungsinfrastruktur</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <availability status="free"> <!--this was copied, needs to be checked-->
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+               <p xml:lang="de">Dieses Werk ist lizenziert unter der <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</ref>.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author> NN, NN</author><!--further details to come-->
+               <title type="main" xml:lang="de">ANNO (AustriaN Newspaper Online)</title>
+               <title type="main" xml:lang="en">ANNO (AustriaN Newspaper Online)</title>
+               <!-- <date>????</date> --> <!--further details to come-->
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+            <p xml:lang="de"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> ist ein Projekt, das darauf abzielt, (1) eine mehrsprachige Sammlung von Korpora historischer Zeitungen zu erstellen, die einheitlich gemäß den <ref target="https://clarin-eric.github.io/PressMint/">PressMint-Encoding-Richtlinien</ref> kodiert sind; (2) die Korpora mit linguistischen Annotationen zu versehen; und (3) die Korpora über Konkordanzwerkzeuge zugänglich zu machen.</p>
+         </projectDesc>
+         <editorialDecl>
+            <quotation><!--further details to come, right now the requirements are found here-->
+               <p xml:lang="en">Quotation marks can be left in the text and do not have to be explicitly marked up.</p>
+            </quotation>
+            <hyphenation>
+               <p xml:lang="en">Line breaks have to be removed and enhyphend words are meant to be joined. Did we do that?</p>
+            </hyphenation>
+            <correction>
+               <p xml:lang="en">Did we perform any further preprocessing after PERO OCR?</p>
+            </correction>
+            <normalization>
+               <p xml:lang="en">Spacing has to be normalized. Did we normalize anything else?</p>
+            </normalization>
+            <segmentation>
+               <p xml:lang="en">The texts are split by page breaks, and then segmented into paragraphs.</p>
+            </segmentation>
+         </editorialDecl>
+         <tagsDecl><!--this happens automatically (for English) -->
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="246"/>
+               <tagUsage gi="p" occurs="56032"/>
+               <tagUsage gi="pb" occurs="1057"/>
+               <tagUsage gi="text" occurs="246"/>
+            </namespace>
+         </tagsDecl>
+         <classDecl><!--Taxonomien?-->
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-OCR.xml"/>
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="PressMint-taxonomy-NER.ana.xml"/>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+               <date from="1863" to="1920">1863-1920</date>
+            </setting>
+         </settingDesc>
+         <langUsage>
+            <language ident="de" xml:lang="de">Deutsch</language>
+            <language ident="de" xml:lang="en">German</language>
+            <language ident="en" xml:lang="de">Englisch</language>
+            <language ident="en" xml:lang="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-07-14">
+            <name>Jona Marie Hassenbach</name>: Made bigger sample (106 issues, 1863, 1864, 1865, 1866, 1867, 1868, 1869, 1870, 1871, 1872, 1873, 1874, 1875, 1876, 1877, 1878, 1879, 1880, 1881, 1882, 1883, 1884, 1885, 1886, 1887, 1888, 1889, 1890, 1891, 1892, 1901, 1902, 1903, 1904, 1905, 1908, 1909, 1910, 1911, 1914, 1915, 1916, 1917, 1918).</change>
+         <change when="2026-07-07">
+            <name>Jona Marie Hassenbach</name>: Corrected sample (4 issues, 1914, 1915, 1917, 1918).</change>
+         <change when="2026-04-21">
+            <name>Jona Marie Hassenbach</name>: Made sample (4 issues, 1914, 1915, 1917, 1918).</change>
+      </revisionDesc>
+  </teiHeader>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1914/PressMint-AT_1914-06-29.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1915/PressMint-AT_1915-12-28.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-AT_1917-12-28.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1918/PressMint-AT_1918-12-27.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1863/PressMint-AT_1863-07-01.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1863/PressMint-AT_1863-07-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1863/PressMint-AT_1863-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1864/PressMint-AT_1864-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1864/PressMint-AT_1864-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1865/PressMint-AT_1865-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1865/PressMint-AT_1865-12-30.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1866/PressMint-AT_1866-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1866/PressMint-AT_1866-01-03.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1866/PressMint-AT_1866-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1867/PressMint-AT_1867-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1867/PressMint-AT_1867-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1868/PressMint-AT_1868-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1868/PressMint-AT_1868-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1869/PressMint-AT_1869-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1869/PressMint-AT_1869-12-14.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1869/PressMint-AT_1869-12-16.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1869/PressMint-AT_1869-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1870/PressMint-AT_1870-01-03.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1870/PressMint-AT_1870-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1871/PressMint-AT_1871-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1871/PressMint-AT_1871-02-18.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1871/PressMint-AT_1871-12-30.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1872/PressMint-AT_1872-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1872/PressMint-AT_1872-07-10.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1872/PressMint-AT_1872-10-26.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1872/PressMint-AT_1872-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-AT_1873-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-AT_1873-09-05.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1873/PressMint-AT_1873-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1874/PressMint-AT_1874-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1874/PressMint-AT_1874-04-17.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1874/PressMint-AT_1874-06-15.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1874/PressMint-AT_1874-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1875/PressMint-AT_1875-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1875/PressMint-AT_1875-03-09.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1875/PressMint-AT_1875-06-28.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1875/PressMint-AT_1875-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1876/PressMint-AT_1876-01-03.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1876/PressMint-AT_1876-10-23.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1876/PressMint-AT_1876-12-30.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1877/PressMint-AT_1877-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1877/PressMint-AT_1877-02-05.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1877/PressMint-AT_1877-12-28.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1878/PressMint-AT_1878-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1878/PressMint-AT_1878-05-04.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1878/PressMint-AT_1878-12-30.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1879/PressMint-AT_1879-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1879/PressMint-AT_1879-07-19.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1879/PressMint-AT_1879-12-12.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1879/PressMint-AT_1879-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1880/PressMint-AT_1880-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1880/PressMint-AT_1880-03-26.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1880/PressMint-AT_1880-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-AT_1881-01-03.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-AT_1881-01-10.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-AT_1881-04-19.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1881/PressMint-AT_1881-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1882/PressMint-AT_1882-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1882/PressMint-AT_1882-06-30.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1882/PressMint-AT_1882-10-18.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1882/PressMint-AT_1882-12-30.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1883/PressMint-AT_1883-01-04.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1883/PressMint-AT_1883-05-10.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1883/PressMint-AT_1883-09-12.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1883/PressMint-AT_1883-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1884/PressMint-AT_1884-02-18.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1884/PressMint-AT_1884-06-27.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1885/PressMint-AT_1885-04-29.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1885/PressMint-AT_1885-10-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1886/PressMint-AT_1886-01-12.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1886/PressMint-AT_1886-12-07.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1887/PressMint-AT_1887-02-26.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1887/PressMint-AT_1887-05-20.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1888/PressMint-AT_1888-08-14.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1888/PressMint-AT_1888-10-18.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1889/PressMint-AT_1889-03-23.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1889/PressMint-AT_1889-09-05.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-AT_1890-06-03.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1890/PressMint-AT_1890-11-22.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1891/PressMint-AT_1891-03-13.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1891/PressMint-AT_1891-07-10.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1892/PressMint-AT_1892-04-30.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1901/PressMint-AT_1901-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1901/PressMint-AT_1901-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1902/PressMint-AT_1902-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1902/PressMint-AT_1902-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1903/PressMint-AT_1903-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1903/PressMint-AT_1903-12-30.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1904/PressMint-AT_1904-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1904/PressMint-AT_1904-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1905/PressMint-AT_1905-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1908/PressMint-AT_1908-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1908/PressMint-AT_1908-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1909/PressMint-AT_1909-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1909/PressMint-AT_1909-12-30.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-AT_1910-01-03.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1910/PressMint-AT_1910-12-31.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1911/PressMint-AT_1911-01-02.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1916/PressMint-AT_1916-01-03.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1916/PressMint-AT_1916-12-30.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="1917/PressMint-AT_1917-01-02.xml"/>
+</teiCorpus>
