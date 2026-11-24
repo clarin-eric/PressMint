@@ -17,7 +17,7 @@ The sample consists of two issues:
 
 * __Content__: Newspaper issues of *Le Temps*. The sample contains two issues (1920-01-01 and 1920-01-14).
 
-* __Size__: Sample: 2 issues, 8 pages, 1,603 paragraphs, 59,963 words. Whole corpus (counted from the delivery, not yet converted): 15,819 issues from 1900-01-01 to 1942-11-17, 77,009 pages and about 603 million words (ALTO word strings; a word split at a line end counts twice). Issues per year: 345 to 462 in 1900-1940, 33 in 1941, 272 in 1942. Statistics per year: `viewer/corpus-stats.html` of the converter.
+* __Size__: Sample: 2 issues, 8 pages, 1,610 paragraphs, 59,963 words. Whole corpus (counted from the delivery, not yet converted): 15,819 issues from 1900-01-01 to 1942-11-17, 77,009 pages and about 603 million words (ALTO word strings; a word split at a line end counts twice). Issues per year: 345 to 462 in 1900-1940, 33 in 1941, 272 in 1942.
 
 * __Known issues in the delivery__:
 
@@ -56,7 +56,7 @@ The sample consists of two issues:
 
 ## Statistics of the whole corpus
 
-Counted from the BnF METS/ALTO delivery (15,819 issues); the corpus is not yet converted. Words are ALTO word strings (a word split at a line end counts twice). OCR confidence is the ALTO word confidence (`WC`, 0 to 1). *Date estimated*: the METS date is a placeholder and the date was estimated from the issue number (see Known issues). Issues with a two-day date are counted under the first day. The same table, with charts, is in `viewer/corpus-stats.html` of the converter.
+Counted from the BnF METS/ALTO delivery (15,819 issues); the corpus is not yet converted. Words are ALTO word strings (a word split at a line end counts twice). OCR confidence is the ALTO word confidence (`WC`, 0 to 1). *Date estimated*: the METS date is a placeholder and the date was estimated from the issue number (see Known issues). Issues with a two-day date are counted under the first day.
 
 | Year | Issues | Date estimated | No OCR | Pages | Words (millions) | Mean OCR confidence | Words below 0.5 |
 |---|---:|---:|---:|---:|---:|---:|---:|
