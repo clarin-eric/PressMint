@@ -18,8 +18,8 @@
         <measure unit="texts" quantity="1" xml:lang="en">1 text</measure>
         <measure unit="paragraphs" quantity="848" xml:lang="fr">848 paragraphs</measure>
         <measure unit="paragraphs" quantity="848" xml:lang="en">848 paragraphs</measure>
-        <measure unit="words" quantity="29450" xml:lang="fr">29 450 mots</measure>
-        <measure unit="words" quantity="29450" xml:lang="en">29,450 words</measure>
+        <measure unit="words" quantity="29413" xml:lang="fr">29 413 mots</measure>
+        <measure unit="words" quantity="29413" xml:lang="en">29,413 words</measure>
       </extent>
       <publicationStmt>
         <publisher>
@@ -53,7 +53,7 @@
       </projectDesc>
       <editorialDecl>
         <p xml:lang="en">OCR text is preserved without correction, except for whitespace normalisation and line-end hyphen handling.</p>
-        <p xml:lang="en">Line-end hyphenation is resolved using ALTO SUBS_TYPE and SUBS_CONTENT attributes where available.  Where not available, the hyphen is preserved.</p>
+        <p xml:lang="en">Line-end hyphenation is resolved using ALTO SUBS_TYPE and SUBS_CONTENT attributes where available.  Where not available, the hyphen is preserved; when it falls inside a word (the next line starts in lowercase) it is encoded as &lt;pc force="weak"&gt;-&lt;/pc&gt; and the next &lt;lb/&gt; gets break="no".</p>
         <p xml:lang="en">ALTO TextBlocks are encoded as TEI paragraphs.  A block that ends with a line-end hyphen and is followed by a block starting in lowercase is joined to it in one paragraph.  No article or section divisions are inferred, because the source contains no logical structMap.</p>
         <p xml:lang="en">Page order is derived from the METS physical structMap ORDER attribute. ALTO PHYSICAL_IMG_NR is not used (it is 1 on all pages in this dataset).</p>
         <p xml:lang="en">Text in an issue is encoded in ALTO reading order.  No column-aware geometric reordering is applied.Image references use Gallica IIIF URLs because the master TIFF images are not included.</p>
@@ -64,14 +64,14 @@
           <tagUsage gi="facsimile" occurs="1"/>
           <tagUsage gi="graphic" occurs="4"/>
           <tagUsage gi="lb" occurs="3988"/>
-          <tagUsage gi="name" occurs="2304"/>
+          <tagUsage gi="name" occurs="2301"/>
           <tagUsage gi="p" occurs="848"/>
           <tagUsage gi="pb" occurs="4"/>
-          <tagUsage gi="pc" occurs="6096"/>
-          <tagUsage gi="s" occurs="3267"/>
+          <tagUsage gi="pc" occurs="6131"/>
+          <tagUsage gi="s" occurs="3263"/>
           <tagUsage gi="surface" occurs="4"/>
           <tagUsage gi="text" occurs="1"/>
-          <tagUsage gi="w" occurs="29450"/>
+          <tagUsage gi="w" occurs="29413"/>
           <tagUsage gi="zone" occurs="4906"/>
         </namespace>
       </tagsDecl>
@@ -88,8 +88,8 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-11-23">Second conversion from BnF METS/ALTO to PressMint TEI.</change>
-      <change when="2026-11-23">Linguistic annotation added: spaCy fr_core_news_md (tokens, sentences, UPOS, features, lemmas) and historical-ner-baseline (named entities).</change>
+      <change when="2026-11-24">Second conversion from BnF METS/ALTO to PressMint TEI.</change>
+      <change when="2026-11-24">Linguistic annotation added: spaCy fr_core_news_md (tokens, sentences, UPOS, features, lemmas) and historical-ner-baseline (named entities).</change>
     </revisionDesc>
   </teiHeader>
   <facsimile xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.facsimile">
@@ -6918,9 +6918,7 @@
           <w lemma="et" msd="UPosTag=CCONJ">et</w>
           <w lemma="vers" msd="UPosTag=ADP">vers</w>
           <name type="LOC">
-            <w lemma="ip-" msd="UPosTag=ADJ|Number=Sing">Ip-</w>
-            <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000077"/>
-            <w lemma="sala" msd="UPosTag=NOUN|Gender=Masc|Number=Sing" join="right">sala</w>
+            <w lemma="Ipsala" msd="UPosTag=PROPN" join="right">Ip<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000077" break="no"/>sala</w>
           </name>
           <pc msd="UPosTag=PUNCT">,</pc>
           <w lemma="après" msd="UPosTag=ADP">après</w>
@@ -7121,9 +7119,7 @@
           <w lemma="communication" msd="UPosTag=NOUN|Gender=Fem|Number=Sing" join="right">communication</w>
           <pc msd="UPosTag=PUNCT">,</pc>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Number=Sing|PronType=Art" join="right">l'</w>
-          <w lemma="im-" msd="UPosTag=NOUN|Number=Sing">im-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000095"/>
-          <w lemma="possibilité" msd="UPosTag=ADJ|Gender=Fem|Number=Sing">possibilité</w>
+          <w lemma="impossibilité" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">im<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000095" break="no"/>possibilité</w>
           <w lemma="de" msd="UPosTag=ADP">de</w>
           <w lemma="se" msd="UPosTag=PRON|Person=3|Reflex=Yes">se</w>
           <w lemma="ravitailler" msd="UPosTag=NOUN|Gender=Fem|Number=Plur" join="right">ravitailler</w>
@@ -8807,9 +8803,7 @@
           <w lemma="il" msd="UPosTag=PRON|Gender=Masc|Number=Sing|Person=3">-il</w>
           <w lemma="pouvoir" msd="UPosTag=VERB|Tense=Past|VerbForm=Part">pu</w>
           <w lemma="être" msd="UPosTag=AUX|VerbForm=Inf">être</w>
-          <pc msd="UPosTag=PUNCT">.épar-</pc>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000242"/>
-          <w lemma="gné" msd="UPosTag=X">gné</w>
+          <w lemma=".épargné" msd="UPosTag=PROPN|Gender=Fem|Number=Sing">.épar<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000242" break="no"/>gné</w>
           <w lemma="tout" msd="UPosTag=ADV">tout</w>
           <w lemma="au" msd="UPosTag=ADP|Definite=Def|Gender=Masc|Number=Sing|PronType=Art">au</w>
           <w lemma="moins" msd="UPosTag=ADV">moins</w>
@@ -10797,11 +10791,9 @@
           <pc msd="UPosTag=PUNCT">»</pc>
         </s>
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000048.s6">
-          <w lemma="aussitôt" msd="UPosTag=ADV">Aussitôt</w>
+          <w lemma="aussitôt" msd="UPosTag=ADV|PronType=Int">Aussitôt</w>
           <w lemma="on" msd="UPosTag=PRON|Number=Sing|Person=3">on</w>
-          <w lemma="télégra-" msd="UPosTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin">télégra-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000428"/>
-          <w lemma="phi" msd="UPosTag=ADJ|Number=Plur">phie</w>
+          <w lemma="télégraphie" msd="UPosTag=NOUN|Number=Sing">télégra<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000428" break="no"/>phie</w>
           <w lemma="à" msd="UPosTag=ADP">à</w>
           <w lemma="notre" msd="UPosTag=DET|Number=Plur|Poss=Yes">nos</w>
           <w lemma="gouverneur" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">gouverneurs</w>
@@ -10893,9 +10885,7 @@
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Number=Sing|PronType=Art" join="right">l'</w>
           <name type="LOC">
             <w lemma="Afrique" msd="UPosTag=PROPN|Gender=Fem|Number=Sing">Afrique</w>
-            <w lemma="occiden-" msd="UPosTag=ADJ|Gender=Masc|Number=Sing">occiden-</w>
-            <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000437"/>
-            <w lemma="taler" msd="UPosTag=DET|Definite=Ind|Gender=Fem|Number=Sing|PronType=Art">tale</w>
+            <w lemma="occidental" msd="UPosTag=ADJ|Gender=Fem|Number=Sing">occiden<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000437" break="no"/>tale</w>
           </name>
           <w lemma="et" msd="UPosTag=CCONJ">et</w>
           <name type="LOC">
@@ -10962,9 +10952,7 @@
           <w lemma="relation" msd="UPosTag=NOUN|Gender=Fem|Number=Plur">relations</w>
           <w lemma="entrer" msd="UPosTag=ADP">entre</w>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Gender=Fem|Number=Sing|PronType=Art">la</w>
-          <w lemma="métro-" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">métro-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000443"/>
-          <w lemma="pole" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">pole</w>
+          <w lemma="métropole" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">métro<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000443" break="no"/>pole</w>
           <w lemma="et" msd="UPosTag=CCONJ">et</w>
           <w lemma="son" msd="UPosTag=DET|Number=Plur|Poss=Yes">ses</w>
           <w lemma="colonie" msd="UPosTag=NOUN|Gender=Fem|Number=Plur" join="right">colonies</w>
@@ -10981,9 +10969,7 @@
           <w lemma="de" msd="UPosTag=ADP|Definite=Def|Number=Plur|PronType=Art">des</w>
           <w lemma="principale" msd="UPosTag=NOUN|Gender=Fem|Number=Plur">principales</w>
           <w lemma="denrée" msd="UPosTag=NOUN|Gender=Fem|Number=Plur">denrées</w>
-          <w lemma="colo-" msd="UPosTag=PROPN">colo-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000445"/>
-          <w lemma="niale" msd="UPosTag=ADJ|Gender=Fem|Number=Plur">niales</w>
+          <w lemma="colonial" msd="UPosTag=ADJ|Gender=Fem|Number=Plur">colo<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000445" break="no"/>niales</w>
           <w lemma="sur" msd="UPosTag=ADP">sur</w>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Number=Sing|PronType=Art" join="right">l'</w>
           <w lemma="étranger" msd="UPosTag=NOUN|Gender=Masc|Number=Sing" join="right">étranger</w>
@@ -11019,9 +11005,7 @@
           <w lemma="1913" msd="UPosTag=NUM|NumType=Card">1913</w>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Number=Sing|PronType=Art" join="right">l'</w>
           <w lemma="industrie" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">industrie</w>
-          <pc msd="UPosTag=PUNCT">fran-</pc>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000448"/>
-          <w lemma="çais" msd="UPosTag=ADJ|Gender=Fem|Number=Sing">çaise</w>
+          <w lemma="français" msd="UPosTag=ADJ|Gender=Fem|Number=Sing">fran<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000448" break="no"/>çaise</w>
           <w lemma="avoir" msd="UPosTag=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin">a</w>
           <w lemma="consommer" msd="UPosTag=VERB|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part">consommé</w>
           <w lemma="472,000" msd="UPosTag=NUM|NumType=Card">472,000</w>
@@ -11724,9 +11708,7 @@
           <w lemma="étatisme" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">étatisme</w>
           <w lemma="et" msd="UPosTag=CCONJ">et</w>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Gender=Fem|Number=Sing|PronType=Art">la</w>
-          <w lemma="cen-" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">cen-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000514"/>
-          <w lemma="tralisation" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">tralisation</w>
+          <w lemma="centralisation" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">cen<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000514" break="no"/>tralisation</w>
           <w lemma="à" msd="UPosTag=ADP">à</w>
           <w lemma="outrance" msd="UPosTag=NOUN|Gender=Fem|Number=Sing" join="right">outrance</w>
           <pc msd="UPosTag=PUNCT">.</pc>
@@ -13740,9 +13722,7 @@
           <w lemma="son" msd="UPosTag=DET|Gender=Fem|Number=Sing|Poss=Yes">sa</w>
           <w lemma="•correspondance" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">•correspondance</w>
           <w lemma="à" msd="UPosTag=ADP|Definite=Def|Number=Plur|PronType=Art">aux</w>
-          <w lemma="déoar-" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">déoar-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000687"/>
-          <w lemma="tement" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">tements</w>
+          <w lemma="déoartement" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">déoar<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000687" break="no"/>tements</w>
           <w lemma="intéresser" msd="UPosTag=VERB|Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part" join="right">intéressés</w>
           <pc msd="UPosTag=PUNCT">,</pc>
           <w lemma="de" msd="UPosTag=ADP">de</w>
@@ -15426,9 +15406,7 @@
           <w lemma="télégraphia" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">télégraphia</w>
           <w lemma="de" msd="UPosTag=ADP">de</w>
           <name type="LOC">
-            <w lemma="Cons-" msd="UPosTag=PROPN">Cons-</w>
-            <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000837"/>
-            <w lemma="iàntinopte" msd="UPosTag=ADV">iàntinopte</w>
+            <w lemma="Consiàntinopte" msd="UPosTag=PROPN">Cons<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000837" break="no"/>iàntinopte</w>
           </name>
         </s>
       </p>
@@ -15691,9 +15669,7 @@
             <w lemma="Angleterre" msd="UPosTag=PROPN|Gender=Fem|Number=Sing">Angleterre</w>
           </name>
           <w lemma="en" msd="UPosTag=ADP">en</w>
-          <pc msd="UPosTag=PUNCT">par-</pc>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000858"/>
-          <w lemma="ticulier" msd="UPosTag=PROPN|Gender=Masc|Number=Sing" join="right">ticulier</w>
+          <w lemma="particulier" msd="UPosTag=ADJ|Gender=Masc|Number=Sing" join="right">par<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000858" break="no"/>ticulier</w>
         </s>
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000101.s2">
           <pc msd="UPosTag=PUNCT">.</pc>
@@ -16052,18 +16028,14 @@
         </s>
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000108.s2">
           <w lemma="ing" msd="UPosTag=ADJ|NumType=Ord">ing</w>
-          <name type="PER">
-            <w lemma="haut-commissaire" msd="UPosTag=NOUN|Number=Sing">haut-commissaire</w>
-            <w lemma="de" msd="UPosTag=ADP">de</w>
+          <w lemma="haut-commissaire" msd="UPosTag=NOUN|Number=Sing">haut-commissaire</w>
+          <w lemma="de" msd="UPosTag=ADP">de</w>
+          <w lemma="•" msd="UPosTag=DET|Definite=Def|Number=Sing|PronType=Art">•</w>
+          <name type="LOC">
+            <w lemma="Grande-Bretagne" msd="UPosTag=PROPN|Gender=Fem|Number=Sing">Grande-Bre<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000894" break="no"/>tagne</w>
           </name>
         </s>
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000108.s3">
-          <w lemma="•" msd="UPosTag=DET|Definite=Def|Number=Sing|PronType=Art">•</w>
-          <name type="LOC">
-            <w lemma="Grande-Bre-" msd="UPosTag=PROPN">Grande-Bre-</w>
-            <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000894"/>
-            <w lemma="tagne" msd="UPosTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin">tagne</w>
-          </name>
           <w lemma="auprès" msd="UPosTag=ADV">auprès</w>
           <w lemma="de" msd="UPosTag=ADP|Definite=Def|Gender=Masc|Number=Sing|PronType=Art">du</w>
           <w lemma="gouvernement" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">gouvernement</w>
@@ -16289,9 +16261,7 @@
           <w lemma="pays" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">pays</w>
           <w lemma="et" msd="UPosTag=CCONJ">et</w>
           <w lemma="son" msd="UPosTag=DET|Number=Sing|Poss=Yes">son</w>
-          <w lemma="developpe-" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">developpe-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000914"/>
-          <w lemma="̃mentt" msd="UPosTag=PROPN|Gender=Masc|Number=Sing" join="right">̃mentt</w>
+          <w lemma="developpẽmentt" msd="UPosTag=NOUN|Gender=Masc|Number=Sing" join="right">developpe<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000914" break="no"/>̃mentt</w>
           <pc msd="UPosTag=PUNCT">.</pc>
         </s>
       </p>
@@ -16405,9 +16375,7 @@
           </name>
           <w lemma="un" msd="UPosTag=DET|Definite=Ind|Gender=Fem|Number=Sing|PronType=Art">une</w>
           <w lemma="indépendance" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">indépendance</w>
-          <w lemma="com-" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">com-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000925"/>
-          <w lemma="plèt" msd="UPosTag=ADJ|Gender=Fem|Number=Sing" join="right">plète</w>
+          <w lemma="complet" msd="UPosTag=ADJ|Gender=Fem|Number=Sing" join="right">com<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000925" break="no"/>plète</w>
           <pc msd="UPosTag=PUNCT">.</pc>
         </s>
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000117.s2">
@@ -16582,9 +16550,7 @@
           <w lemma="agir" msd="UPosTag=VERB|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part">agi</w>
           <w lemma="jusque" msd="UPosTag=ADP" join="right">jusqu'</w>
           <w lemma="ici" msd="UPosTag=ADV">ici</w>
-          <w lemma="corn-" msd="UPosTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin">corn-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000939"/>
-          <w lemma="me" msd="UPosTag=PRON|Number=Sing|Person=1">me</w>
+          <w lemma="cornm" msd="UPosTag=ADJ|Gender=Masc|Number=Sing">corn<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000939" break="no"/>me</w>
           <w lemma="médiateur" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">médiateurs</w>
           <w lemma="entrer" msd="UPosTag=ADP">entre</w>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Gender=Fem|Number=Sing|PronType=Art">la</w>
@@ -17009,9 +16975,7 @@
           <w lemma="ministère" msd="UPosTag=NOUN|Number=Plur" join="right">ministères</w>
           <pc msd="UPosTag=PUNCT">,</pc>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Number=Plur|PronType=Art">les</w>
-          <w lemma="chô-" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">chô-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000979"/>
-          <w lemma="meur" msd="UPosTag=ADJ|Gender=Masc">meurs</w>
+          <w lemma="chômeur" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">chô<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000979" break="no"/>meurs</w>
           <w lemma="être" msd="UPosTag=AUX|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin">sont</w>
           <w lemma="assez" msd="UPosTag=ADV">assez</w>
           <w lemma="nombreux" msd="UPosTag=ADJ|Gender=Masc" join="right">nombreux</w>
@@ -17755,9 +17719,7 @@
           <w lemma="îa" msd="UPosTag=DET|Number=Sing|Poss=Yes">îa</w>
           <w lemma="constitution" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">Constitution</w>
           <w lemma="être" msd="UPosTag=AUX|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin">sont</w>
-          <w lemma="appli-" msd="UPosTag=VERB|Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass">appli-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000016"/>
-          <w lemma="̃" msd="UPosTag=DET|Definite=Ind|Number=Sing|PronType=Art">̃</w>
+          <w lemma="applĩ" msd="UPosTag=VERB|Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass">appli<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000016" break="no"/>̃</w>
           <w lemma="cable" msd="UPosTag=NOUN|Gender=Masc|Number=Plur" join="right">cables</w>
           <pc msd="UPosTag=PUNCT">.</pc>
         </s>
@@ -18016,9 +17978,7 @@
           <w lemma="te" msd="UPosTag=PRON|Number=Sing|Person=1">te</w>
           <w lemma="rssulta'" msd="UPosTag=VERB|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin" join="right">rssulta'</w>
           <w lemma="ts" msd="UPosTag=DET|Definite=Ind|Number=Sing|PronType=Art">ts</w>
-          <w lemma="favo-" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">favo-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000038"/>
-          <w lemma="œblw" msd="UPosTag=ADV" join="right">œblw</w>
+          <w lemma="favoœblw" msd="UPosTag=NOUN|Gender=Masc|Number=Sing" join="right">favo<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000038" break="no"/>œblw</w>
           <pc msd="UPosTag=PUNCT" join="right">.</pc>
         </s>
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000140.s2">
@@ -18059,10 +18019,7 @@
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000143.s2">
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Gender=Masc|Number=Sing|PronType=Art">le</w>
           <w lemma="13" msd="UPosTag=NUM|NumType=Card">13</w>
-          <w lemma="jan-" msd="UPosTag=PROPN|Gender=Masc|Number=Sing">jan-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000042"/>
-          <pc msd="UPosTag=PUNCT" join="right">(</pc>
-          <w lemma="vier" msd="UPosTag=ADP">vier</w>
+          <w lemma="jan(vier" msd="UPosTag=PROPN">jan<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000042" break="no"/>(vier</w>
         </s>
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000144" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tb000017">
@@ -19882,17 +19839,13 @@
           <w lemma="trouver" msd="UPosTag=VERB|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin" join="right">trouvent</w>
           <pc msd="UPosTag=PUNCT">,</pc>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Gender=Masc|Number=Sing|PronType=Art">le</w>
-          <w lemma="combus-" msd="UPosTag=PROPN|Gender=Masc|Number=Sing">combus-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000207"/>
-          <w lemma="tibl" msd="UPosTag=ADJ|Number=Sing">tible</w>
+          <w lemma="combustible" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">combus<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000207" break="no"/>tible</w>
           <w lemma="et" msd="UPosTag=CCONJ">et</w>
           <w lemma="autre" msd="UPosTag=ADJ|Number=Plur">autres</w>
           <w lemma="produire" msd="UPosTag=VERB|Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part">produite</w>
           <w lemma="nécessaire" msd="UPosTag=ADJ|Number=Sing">nécessaire</w>
           <w lemma="au" msd="UPosTag=ADP|Definite=Def|Gender=Masc|Number=Sing|PronType=Art">au</w>
-          <w lemma="fonctioitîkî-" msd="UPosTag=ADJ|Gender=Masc|Number=Sing">fonctioitîKî-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000208"/>
-          <w lemma="ment" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">ment</w>
+          <w lemma="fonctioitîkîmer" msd="UPosTag=VERB|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin">fonctioitîKî<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000208" break="no"/>ment</w>
           <w lemma="de" msd="UPosTag=ADP">de</w>
           <w lemma="son" msd="UPosTag=DET|Number=Sing|Poss=Yes">leur</w>
           <w lemma="usine" msd="UPosTag=NOUN|Gender=Fem|Number=Sing" join="right">usine</w>
@@ -21232,9 +21185,7 @@
           <w lemma="par" msd="UPosTag=ADP">par</w>
           <w lemma="suite" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">suite</w>
           <w lemma="de" msd="UPosTag=ADP">de</w>
-          <w lemma="lmnclli-" msd="UPosTag=DET|Definite=Def|Number=Plur|PronType=Art">lMnclli-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000327"/>
-          <w lemma="naison" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">naison</w>
+          <w lemma="lMncllinaison" msd="UPosTag=PROPN|Gender=Masc|Number=Sing">lMnclli<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000327" break="no"/>naison</w>
           <w lemma="de" msd="UPosTag=ADP|Definite=Def|Gender=Masc|Number=Sing|PronType=Art">du</w>
           <w lemma="navire" msd="UPosTag=NOUN|Gender=Masc|Number=Sing" join="right">navire</w>
           <pc msd="UPosTag=PUNCT">.</pc>
@@ -21254,9 +21205,7 @@
           <w lemma="de" msd="UPosTag=ADP">de</w>
           <w lemma="lundi" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">lundi</w>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Gender=Fem|Number=Sing|PronType=Art">la</w>
-          <w lemma="re-" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">re-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000329"/>
-          <w lemma="cherche" msd="UPosTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin">cherche</w>
+          <w lemma="recherche" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">re<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000329" break="no"/>cherche</w>
           <w lemma="de" msd="UPosTag=ADP|Definite=Def|Gender=Masc|Number=Sing|PronType=Art">du</w>
           <w lemma="paquebot" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">paquebot</w>
           <w lemma="Afrique" msd="UPosTag=PROPN|Gender=Fem|Number=Sing">Afrique</w>
@@ -23719,19 +23668,13 @@
           <pc msd="UPosTag=PUNCT">–</pc>
         </s>
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000226.s7">
-          <name type="PER">
-            <w lemma="Henry" msd="UPosTag=PROPN">Henry</w>
-            <w lemma="Rvy" msd="UPosTag=PROPN" join="right">Rvy</w>
-          </name>
+          <w lemma="Henry" msd="UPosTag=PROPN">Henry</w>
+          <w lemma="Rvy" msd="UPosTag=PROPN" join="right">Rvy</w>
           <pc msd="UPosTag=PUNCT">,</pc>
-          <name type="PER">
-            <w lemma="Rabier" msd="UPosTag=PROPN|Gender=Masc|Number=Sing" join="right">Rabier</w>
-          </name>
+          <w lemma="Rabier" msd="UPosTag=PROPN|Gender=Masc|Number=Sing" join="right">Rabier</w>
           <pc msd="UPosTag=PUNCT">,</pc>
           <name type="LOC">
-            <w lemma="Do-" msd="UPosTag=PROPN|Gender=Fem|Number=Sing">Do-</w>
-            <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000507"/>
-            <w lemma="non" msd="UPosTag=ADV" join="right">non</w>
+            <w lemma="Donon" msd="UPosTag=PROPN|Gender=Masc|Number=Sing" join="right">Do<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000507" break="no"/>non</w>
           </name>
           <pc msd="UPosTag=PUNCT">.</pc>
         </s>
@@ -25958,13 +25901,9 @@
             <w lemma="Allier" msd="UPosTag=PROPN|Gender=Masc|Number=Sing" join="right">Allier</w>
           </name>
           <pc msd="UPosTag=PUNCT" join="right">)</pc>
-        </s>
-        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000275.s2">
           <pc msd="UPosTag=PUNCT">,</pc>
           <name type="PER">
-            <w lemma="vic-" msd="UPosTag=PRON|Gender=Masc|Number=Plur">Vic-</w>
-            <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000648"/>
-            <w lemma="tor" msd="UPosTag=X">tor</w>
+            <w lemma="Victor" msd="UPosTag=PROPN|Gender=Masc|Number=Sing">Vic<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000648" break="no"/>tor</w>
             <w lemma="Pcy" msd="UPosTag=PROPN">Pcy</w>
             <w lemma="tirer" msd="UPosTag=VERB|Mood=Ind|Number=Plur|Person=2|Tense=Imp|VerbForm=Fin">tirai</w>
           </name>
@@ -26088,8 +26027,10 @@
           </name>
           <pc msd="UPosTag=PUNCT" join="right">)</pc>
           <pc msd="UPosTag=PUNCT">,</pc>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000654"/>
-          <name type="PER">
+        </s>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000654"/>
+        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000275.s2">
+          <name type="LOC">
             <w lemma="royn'" msd="UPosTag=NOUN|Gender=Masc|Number=Sing" join="right">Royn'</w>
             <w lemma="eau" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">eau</w>
           </name>
@@ -26099,7 +26040,7 @@
           </name>
           <pc msd="UPosTag=PUNCT" join="right">)</pc>
           <pc msd="UPosTag=PUNCT">,</pc>
-          <name type="PER">
+          <name type="LOC">
             <w lemma="le" msd="UPosTag=DET|Definite=Def|Gender=Masc|Number=Sing|PronType=Art">Le</w>
             <w lemma="Hars" msd="UPosTag=PROPN|Gender=Masc|Number=Sing">Hars</w>
           </name>
@@ -26173,14 +26114,10 @@
             <w lemma="Gers" msd="UPosTag=PROPN" join="right">Gers</w>
           </name>
           <pc msd="UPosTag=PUNCT" join="right">)</pc>
-        </s>
-        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000277.s3">
           <pc msd="UPosTag=PUNCT">,</pc>
-          <w lemma="Da-" msd="UPosTag=PROPN">Da-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000659"/>
-          <w lemma="vid" msd="UPosTag=NOUN|Gender=Fem|Number=Plur" join="right">vid</w>
-        </s>
-        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000277.s4">
+          <name type="PER">
+            <w lemma="David" msd="UPosTag=PROPN|Gender=Masc|Number=Sing" join="right">Da<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000659" break="no"/>vid</w>
+          </name>
           <pc msd="UPosTag=PUNCT">,</pc>
           <name type="PER">
             <w lemma="vaysaière" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">Vaysaière</w>
@@ -26407,9 +26344,7 @@
           </name>
           <pc msd="UPosTag=PUNCT" join="right">)</pc>
           <pc msd="UPosTag=PUNCT">,</pc>
-          <name type="PER">
-            <w lemma="de" msd="UPosTag=ADP">de</w>
-          </name>
+          <w lemma="de" msd="UPosTag=ADP">de</w>
           <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000670"/>
           <name type="LOC">
             <w lemma="imonzie" msd="UPosTag=NOUN|Gender=Fem|Number=Plur">iMonzie</w>
@@ -26448,7 +26383,7 @@
           </name>
           <pc msd="UPosTag=PUNCT" join="right">)</pc>
         </s>
-        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000277.s5">
+        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000277.s3">
           <pc msd="UPosTag=PUNCT">..</pc>
         </s>
       </p>
@@ -29123,9 +29058,7 @@
           <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000828"/>
           <w lemma="Républicains" msd="UPosTag=PROPN">Républicains</w>
           <w lemma="de" msd="UPosTag=ADP">de</w>
-          <w lemma="gau-" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">gau-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000829"/>
-          <w lemma="ch" msd="UPosTag=ADJ" join="right">che</w>
+          <w lemma="gauche" msd="UPosTag=NOUN|Number=Sing" join="right">gau<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000829" break="no"/>che</w>
           <pc msd="UPosTag=PUNCT">.</pc>
         </s>
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000308.s4">
@@ -29133,9 +29066,7 @@
           <w lemma="61" msd="UPosTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin">61</w>
           <w lemma="16" msd="UPosTag=NUM|NumType=Card">16</w>
           <pc msd="UPosTag=PUNCT">»</pc>
-        </s>
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000830"/>
-        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000308.s5">
+          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000830"/>
           <w lemma="radical" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">Radicaux</w>
           <w lemma="et" msd="UPosTag=CCONJ">et</w>
           <w lemma="radical" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">radicaux</w>
@@ -29157,21 +29088,17 @@
           <w lemma="25" msd="UPosTag=NUM|NumType=Card">25</w>
           <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000832"/>
           <w lemma="républicain" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">Républicains</w>
-        </s>
-        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000309.s4">
-          <w lemma="socia-" msd="UPosTag=ADV|PronType=Int">socia-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000833"/>
-          <w lemma="liste" msd="UPosTag=NOUN|Gender=Fem|Number=Plur" join="right">listes</w>
+          <w lemma="socialiste" msd="UPosTag=ADJ|Number=Plur" join="right">socia<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000833" break="no"/>listes</w>
           <pc msd="UPosTag=PUNCT">.</pc>
         </s>
-        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000309.s5">
+        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000309.s4">
           <w lemma="1" msd="UPosTag=NUM|NumType=Card">1</w>
           <w lemma="5" msd="UPosTag=DET">5</w>
           <w lemma="4" msd="UPosTag=NUM|NumType=Card">4</w>
           <pc msd="UPosTag=PUNCT">»</pc>
         </s>
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000834"/>
-        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000309.s6">
+        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000309.s5">
           <w lemma="socialiste" msd="UPosTag=NOUN|Number=Plur">Socialistes</w>
           <w lemma="unifier" msd="UPosTag=ADJ|Gender=Masc|Number=Plur">unifiés</w>
           <pc msd="UPosTag=PUNCT">»</pc>
@@ -29180,7 +29107,7 @@
           <pc msd="UPosTag=PUNCT">»</pc>
         </s>
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000835"/>
-        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000309.s7">
+        <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000309.s6">
           <w lemma="224" msd="UPosTag=PROPN|Gender=Masc|Number=Sing">224</w>
           <w lemma="224" msd="UPosTag=DET|Number=Sing">224</w>
           <w lemma="25" msd="UPosTag=NUM|NumType=Card">25</w>
@@ -30831,9 +30758,7 @@
           <w lemma="rendement" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">rendement</w>
           <w lemma="de" msd="UPosTag=ADP|Definite=Def|Number=Plur|PronType=Art">des</w>
           <w lemma="impôt" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">impôts</w>
-          <w lemma="di-" msd="UPosTag=ADV">di-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000973"/>
-          <w lemma="rect" msd="UPosTag=ADJ|Gender=Masc|Number=Plur" join="right">rects</w>
+          <w lemma="direct" msd="UPosTag=ADJ|Gender=Masc|Number=Plur" join="right">di<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page2.tl000973" break="no"/>rects</w>
           <pc msd="UPosTag=PUNCT">,</pc>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Number=Plur|PronType=Art">les</w>
           <w lemma="résultat" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">résultats</w>
@@ -33795,10 +33720,8 @@
           <w lemma="lui" msd="UPosTag=PRON|Gender=Fem|Number=Sing|Person=3">elle</w>
           <w lemma="avoir" msd="UPosTag=AUX|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin">a</w>
           <w lemma="droit" msd="UPosTag=ADJ|Gender=Masc|Number=Sing">droit</w>
-          <w lemma="do" msd="UPosTag=PRON|Gender=Fem|Number=Sing|Person=3">do</w>
-          <w lemma="paraî-" msd="UPosTag=PROPN|Gender=Fem|Number=Sing">paraî-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000063"/>
-          <w lemma="tre" msd="UPosTag=PROPN" join="right">tre</w>
+          <w lemma="do" msd="UPosTag=PRON|Gender=Masc|Number=Sing|Person=3">do</w>
+          <w lemma="paraître" msd="UPosTag=VERB|VerbForm=Inf" join="right">paraî<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000063" break="no"/>tre</w>
           <pc msd="UPosTag=PUNCT">,</pc>
           <w lemma="et" msd="UPosTag=CCONJ">et</w>
           <w lemma="où" msd="UPosTag=PRON|PronType=Rel">où</w>
@@ -33808,9 +33731,7 @@
           <w lemma="chance" msd="UPosTag=NOUN|Gender=Fem|Number=Plur">chances</w>
           <w lemma="particulier" msd="UPosTag=ADJ|Gender=Fem|Number=Plur">particulières</w>
           <w lemma="de" msd="UPosTag=ADP">de</w>
-          <w lemma="ré-" msd="UPosTag=PRON|Number=Sing|Person=3">ré-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000064"/>
-          <w lemma="gner" msd="UPosTag=VERB|VerbForm=Inf" join="right">gner</w>
+          <w lemma="régner" msd="UPosTag=VERB|VerbForm=Inf" join="right">ré<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000064" break="no"/>gner</w>
           <pc msd="UPosTag=PUNCT">?</pc>
         </s>
       </p>
@@ -33850,9 +33771,7 @@
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000379.s2">
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Gender=Masc|Number=Sing|PronType=Art">Le</w>
           <w lemma="jouet" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">jouet</w>
-          <pc msd="UPosTag=PUNCT">alle-</pc>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000068"/>
-          <w lemma="mand" msd="UPosTag=ADJ|Gender=Masc|Number=Sing">mand</w>
+          <w lemma="allemand" msd="UPosTag=ADJ|Gender=Masc|Number=Sing">alle<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000068" break="no"/>mand</w>
           <w lemma="porte" msd="UPosTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin">porte</w>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Gender=Fem|Number=Sing|PronType=Art">la</w>
           <w lemma="marque" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">marque</w>
@@ -35320,9 +35239,7 @@
           <w lemma="ce" msd="UPosTag=DET|Number=Plur|PronType=Dem">ces</w>
           <w lemma="modèle" msd="UPosTag=NOUN|Gender=Masc|Number=Plur" join="right">modèles</w>
           <pc msd="UPosTag=PUNCT">,</pc>
-          <w lemma="se-" msd="UPosTag=X">se-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000174"/>
-          <w lemma="lon" msd="UPosTag=PRON|PronType=Rel">lon</w>
+          <w lemma="selon" msd="UPosTag=ADP">se<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000174" break="no"/>lon</w>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Gender=Masc|Number=Sing|PronType=Art">le</w>
           <w lemma="terme" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">terme</w>
           <w lemma="technique" msd="UPosTag=ADJ|Number=Sing" join="right">technique</w>
@@ -37182,10 +37099,8 @@
           <pc msd="UPosTag=PUNCT">.</pc>
         </s>
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000427.s3">
-          <w lemma="prix" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">Prix</w>
-          <w lemma="mo-" msd="UPosTag=ADJ|Number=Sing">mo-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000322"/>
-          <w lemma="déré" msd="UPosTag=NOUN|Gender=Masc|Number=Plur" join="right">dérés</w>
+          <w lemma="prix" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">Prix</w>
+          <w lemma="modérer" msd="UPosTag=ADJ|Gender=Masc|Number=Plur" join="right">mo<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000322" break="no"/>dérés</w>
           <pc msd="UPosTag=PUNCT">.</pc>
         </s>
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000427.s4">
@@ -39215,9 +39130,7 @@
           <w lemma="tenir" msd="UPosTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin">tient</w>
           <w lemma="lieu" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">lieu</w>
           <w lemma="de" msd="UPosTag=ADP" join="right">d'</w>
-          <w lemma="in-" msd="UPosTag=NOUN">in-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000470"/>
-          <w lemma="vitation" msd="UPosTag=NOUN|Gender=Fem|Number=Sing" join="right">vitation</w>
+          <w lemma="invitation" msd="UPosTag=NOUN|Gender=Fem|Number=Sing" join="right">in<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000470" break="no"/>vitation</w>
           <pc msd="UPosTag=PUNCT">.</pc>
         </s>
       </p>
@@ -39232,9 +39145,7 @@
           <name type="PER">
             <w lemma="m." msd="UPosTag=NOUN|Gender=Masc|Number=Sing">M.</w>
             <w lemma="Joseph" msd="UPosTag=PROPN|Gender=Masc|Number=Sing">Joseph</w>
-            <w lemma="Va-" msd="UPosTag=PROPN">Va-</w>
-            <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000472"/>
-            <w lemma="dette" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">dette</w>
+            <w lemma="Vadette" msd="UPosTag=PROPN">Va<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000472" break="no"/>dette</w>
           </name>
           <w lemma="avec" msd="UPosTag=ADP">avec</w>
           <name type="PER">
@@ -43053,13 +42964,11 @@
           <w lemma="présenter" msd="UPosTag=VERB|Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part">présentés</w>
           <w lemma="à" msd="UPosTag=ADP">à</w>
           <w lemma="le" msd="UPosTag=DET|Definite=Def|Gender=Fem|Number=Sing|PronType=Art">la</w>
-          <w lemma="com-" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">com-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000769"/>
-          <w lemma="pensation" msd="UPosTag=NOUN|Gender=Fem|Number=Sing" join="right">pensation</w>
+          <w lemma="compensation" msd="UPosTag=NOUN|Gender=Fem|Number=Sing" join="right">com<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000769" break="no"/>pensation</w>
           <pc msd="UPosTag=PUNCT">.</pc>
         </s>
         <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000535.s3">
-          <w lemma="10.536.367.473" msd="UPosTag=NOUN">10.536.367.473</w>
+          <w lemma="10.536.367.473" msd="UPosTag=DET|Definite=Ind|Number=Plur|PronType=Art">10.536.367.473</w>
           <w lemma="62" msd="UPosTag=NUM|NumType=Card">62</w>
           <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000770"/>
           <w lemma="moyenne" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">Moyenne</w>
@@ -44108,10 +44017,7 @@
           <w lemma="grand" msd="UPosTag=ADJ|Gender=Masc|Number=Sing">grand</w>
           <w lemma="patriote" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">patriote</w>
           <w lemma="de" msd="UPosTag=ADP" join="right">d'</w>
-          <w lemma="aujour-" msd="UPosTag=PROPN|Gender=Masc|Number=Sing">aujour-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000850"/>
-          <w lemma="de" msd="UPosTag=ADP" join="right">d'</w>
-          <w lemma="hui" msd="UPosTag=PRON|Gender=Fem|Number=Plur|Person=3">hui</w>
+          <w lemma="aujourd'hui" msd="UPosTag=ADV">aujour<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page3.tl000850" break="no"/>d'hui</w>
           <w lemma="rendre" msd="UPosTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin" join="right">rend</w>
           <pc msd="UPosTag=PUNCT">,</pc>
           <w lemma="à" msd="UPosTag=ADP">à</w>
@@ -48305,9 +48211,7 @@
           <w lemma="janvier" msd="UPosTag=NOUN|Gender=Masc|Number=Sing" join="right">janvier</w>
           <pc msd="UPosTag=PUNCT">,</pc>
           <w lemma="annoncer" msd="UPosTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin">annonce</w>
-          <w lemma="no-" msd="UPosTag=ADV">no-</w>
-          <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000162"/>
-          <w lemma="tomntetnt" msd="UPosTag=ADJ|Gender=Masc|Number=Sing">tomntetnt</w>
+          <w lemma="notomntetnt" msd="UPosTag=ADJ|Gender=Masc|Number=Sing">no<pc force="weak">-</pc><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000162" break="no"/>tomntetnt</w>
         </s>
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000681" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tb000057">

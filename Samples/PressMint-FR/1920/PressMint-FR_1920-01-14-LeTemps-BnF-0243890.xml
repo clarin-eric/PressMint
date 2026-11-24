@@ -53,7 +53,7 @@
       </projectDesc>
       <editorialDecl>
         <p xml:lang="en">OCR text is preserved without correction, except for whitespace normalisation and line-end hyphen handling.</p>
-        <p xml:lang="en">Line-end hyphenation is resolved using ALTO SUBS_TYPE and SUBS_CONTENT attributes where available.  Where not available, the hyphen is preserved.</p>
+        <p xml:lang="en">Line-end hyphenation is resolved using ALTO SUBS_TYPE and SUBS_CONTENT attributes where available.  Where not available, the hyphen is preserved; when it falls inside a word (the next line starts in lowercase) it is encoded as &lt;pc force="weak"&gt;-&lt;/pc&gt; and the next &lt;lb/&gt; gets break="no".</p>
         <p xml:lang="en">ALTO TextBlocks are encoded as TEI paragraphs.  A block that ends with a line-end hyphen and is followed by a block starting in lowercase is joined to it in one paragraph.  No article or section divisions are inferred, because the source contains no logical structMap.</p>
         <p xml:lang="en">Page order is derived from the METS physical structMap ORDER attribute. ALTO PHYSICAL_IMG_NR is not used (it is 1 on all pages in this dataset).</p>
         <p xml:lang="en">Text in an issue is encoded in ALTO reading order.  No column-aware geometric reordering is applied.Image references use Gallica IIIF URLs because the master TIFF images are not included.</p>
@@ -84,7 +84,7 @@
       </langUsage>
     </profileDesc>
     <revisionDesc>
-      <change when="2026-11-23">Second conversion from BnF METS/ALTO to PressMint TEI.</change>
+      <change when="2026-11-24">Second conversion from BnF METS/ALTO to PressMint TEI.</change>
     </revisionDesc>
   </teiHeader>
   <facsimile xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.facsimile">
@@ -6002,8 +6002,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000073"/>au centre, devaient exécuter la première partie
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000074"/>du plan conçu par. le général Franchet d'.Esperey
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000075"/>elles devaient passer la Maritza vers'
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000076"/>îAndrinopl'e, vers Kuleli--Bourgas et vers Ip-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000077"/>sala, après quoi le plan comportait deux autres
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000076"/>îAndrinopl'e, vers Kuleli--Bourgas et vers Ip<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000077" break="no"/>sala, après quoi le plan comportait deux autres
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000078"/>phases les alliés atteignaient la mer de Marmara,
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000079"/>de manière à isoler les troupes turques
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000080"/>qui gardaient Gallipoli, puis ils s'emparaient
@@ -6023,8 +6023,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000093"/>que la ïatigùè, Ta saison des pluies, rallongé*.
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000025" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000025 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000026">
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000094"/>ment excessif des lignes de communication, l'im-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000095"/>possibilité de se ravitailler, le manquer de renforts
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000094"/>ment excessif des lignes de communication, l'im<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000095" break="no"/>possibilité de se ravitailler, le manquer de renforts
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000096"/>entraveront la progression menaçante du général
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000097"/>iAJlenby. Mais à là nouvelle que les alliés massent
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000098"/>des forces imposantes sur leur frontière de Thrace,
@@ -6198,8 +6198,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000238"/>étiolée et un crédit languissant. Elles accomplissent
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000239"/>aujourd'hui le geste, le rite traditionnel
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000240"/>et classique que commandent les textes: l'élection
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000241"/>du bureau. Peut-être eût-il pu être .épar-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000242"/>gné tout au moins à la 'Chambre qui va réélire
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000241"/>du bureau. Peut-être eût-il pu être .épar<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000242" break="no"/>gné tout au moins à la 'Chambre qui va réélire
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000243"/>identiquement le même bureau sur lequel se
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000244"/>sont groupées ses voix et portée sa confiance,
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000245"/>le 18 décembre dernier. Une journée entière va
@@ -6400,8 +6400,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000424"/>s'avise que la viande et les œufs sont
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000425"/>̃chers. « Pourquoi, se dit-il tout à coup, ne point
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000426"/>utiliser la production coloniale pour faire baisser
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000427"/>le prix dés denrées? » Aussitôt on télégra-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000428"/>phie à nos gouverneurs et résidents de construire
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000427"/>le prix dés denrées? » Aussitôt on télégra<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000428" break="no"/>phie à nos gouverneurs et résidents de construire
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000429"/>des ports. C'est là ce qu'on appelle sans
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000430"/>doute un plan mûri.
       </p>
@@ -6411,19 +6411,19 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000433"/>1" novembre dernier, le Journal officiel publie
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000434"/>un décret en date du 14 octobre qui a pour
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000435"/>objet de réserver à l'industrie métropolitaine
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000436"/>la récolte en oléagineux de l'Afrique occiden-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000437"/>tale et équatoriale. Petit fait, en apparence,
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000436"/>la récolte en oléagineux de l'Afrique occiden<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000437" break="no"/>tale et équatoriale. Petit fait, en apparence,
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000438"/>mais qui mérite de retenir l'attention.
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000439"/>Il signifie, en effet, que, sans avertissement
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000440"/>préalable, on revient tout à coup à un régime
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000441"/>analogue à celui du pacte colonial. Sous prétexte
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000442"/>de développer les relations entre la métro-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000443"/>pole et ses colonies, on décide d'interdire l'exportation
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000444"/>d'une des principales denrées colo-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000445"/>niales sur l'étranger. Il ne semble pas qua l'on
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000442"/>de développer les relations entre la métro<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000443" break="no"/>pole et ses colonies, on décide d'interdire l'exportation
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000444"/>d'une des principales denrées colo<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000445" break="no"/>niales sur l'étranger. Il ne semble pas qua l'on
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000446"/>ait envisagé les conséquences d'une' pareille
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000447"/>mesure. Il se trouve qu'en 1913 l'industrie fran-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000448"/>çaise a consommé 472,000 tonnes d'huile tirée
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000447"/>mesure. Il se trouve qu'en 1913 l'industrie fran<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000448" break="no"/>çaise a consommé 472,000 tonnes d'huile tirée
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000449"/>des matières grasses, alors que la totalité des
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000450"/>colonies françaises n'en produisait que 144,000
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000451"/>tonnes. C'est dire que les colonies sont hors
@@ -6491,8 +6491,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000510"/>ou agences des gouvernements généraux?
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000511"/>Faute d'idées directrices, les administrations
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000512"/>métropolitaines suivent leur instinct qui les
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000513"/>conduTfc en direction vers î'étatisme et la cen-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000514"/>tralisation à outrance. Le résultat, c'est qu'avant
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000513"/>conduTfc en direction vers î'étatisme et la cen<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000514" break="no"/>tralisation à outrance. Le résultat, c'est qu'avant
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000515"/>même d'avoir sérieusement. abordé, la
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000516"/>grande tâche de l'éveil colonial, on laisse/ se
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000517"/>former de lourdes excroissances qui menacent
@@ -6703,8 +6703,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000683"/>Le haut-commissaire centralise les questions
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000684"/>relatives à la rive gauche du Rhin et correspond
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000685"/>directement avec le ministre des affaires étrangères
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000686"/>oui transmet sa •correspondance aux déoar-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000687"/>tements intéressés, de la même manière que pour
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000686"/>oui transmet sa •correspondance aux déoar<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000687" break="no"/>tements intéressés, de la même manière que pour
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000688"/>aa correspondance des agents diplomatiques, sous
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000689"/>réserve des affaires courantes et des questions
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000690"/>d'administration militaire.
@@ -6897,8 +6897,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000835"/>I/ouverturo du Parlement ottoman
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000095" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000098 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000099">
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000836"/>Notre correspondant particulier télégraphia de Cons-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000837"/>iàntinopte
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000836"/>Notre correspondant particulier télégraphia de Cons<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000837" break="no"/>iàntinopte
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000096" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000100">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000838"/>La Chambre s'est réunie lundi. Le discours du
@@ -6930,8 +6930,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000856"/>mesure serait préjudiciable aux intérêts de
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000101" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000105 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000106">
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000857"/>'Europe, de la France et de l'Angleterre en par-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000858"/>ticulier.
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000857"/>'Europe, de la France et de l'Angleterre en par<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000858" break="no"/>ticulier.
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000102" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000107">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000859"/>Le journal Ifkam croit savoir mie île dernier
@@ -6979,8 +6979,8 @@
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000108" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000113">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000892"/>Le gouvernement anglais vient de nommer sir
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000893"/>Erber .Der ing haut-commissaire de • Grande-Bre-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000894"/>tagne auprès du gouvernement bulgare. Il pré-;
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000893"/>Erber .Der ing haut-commissaire de • Grande-Bre<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000894" break="no"/>tagne auprès du gouvernement bulgare. Il pré-;
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000895"/>sentera ses 'lettres de créance dès te -mise en vigueur
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000896"/>du traite.
       </p>
@@ -7007,8 +7007,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000910"/>juive qui se fera isous ses auspices ne sera
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000911"/>pas capitaliste et ne créera pas des latifundia,
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000912"/>mais tendra à harmoniser les intérêts des masses
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000913"/>ouvrières avec ceux du pays et son developpe-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000914"/>̃mentt.
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000913"/>ouvrières avec ceux du pays et son developpe<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000914" break="no"/>̃mentt.
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000113" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000119">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000915"/>NOUVELLES DE L'ETRANGER
@@ -7028,8 +7028,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000921"/>Paris, sa joie et sa fierté, en, présence du « glo:rieux
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000922"/>acte national » des princes qui ont confirmé
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000923"/>leur solidarité absolue avec le peuple égyptien en
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000924"/>réclamant pour l'Egypte une indépendance com-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000925"/>plète. "'̃' ,̃
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000924"/>réclamant pour l'Egypte une indépendance com<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000925" break="no"/>plète. "'̃' ,̃
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000118" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000125">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000926"/>« Voilà, dit-il, la réponse la plus ardente et la
@@ -7046,8 +7046,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000935"/>D'autre part, des télégrammes du Caire publiés
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000936"/>par iles journaux anglais ont annoncé qu'à la suite
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000937"/>des entretiens qui ont eu lieu entre lord Milner
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000938"/>et Adly et Selnat pachas, qui ont agi jusqu'ici corn-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000939"/>me médiateurs entre la commission SMilner et
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000938"/>et Adly et Selnat pachas, qui ont agi jusqu'ici corn<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000939" break="no"/>me médiateurs entre la commission SMilner et
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000940"/>Zagloul pacha, la situation s'était beaucoup améliorée.
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000120" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000127">
@@ -7094,8 +7094,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000975"/>à bref délai entre le gouverneimemt et les
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000976"/>agents et fonctionnaires des administrations de
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000977"/>l'Etat. Des pourparlers se poursuivent, mais sans
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000978"/>résultat jusqu'ici. Dans les ministères, les chô-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000979"/>meurs sont assez nombreux. Par contre, les professeurs
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000978"/>résultat jusqu'ici. Dans les ministères, les chô<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000979" break="no"/>meurs sont assez nombreux. Par contre, les professeurs
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000980"/>de l'enseignement moyen (qui correspond
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000981"/>à l'enseignement secondaire français) ne se sont
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000982"/>pas mis en grève bien qu'ils fassent partie du
@@ -7183,8 +7183,8 @@
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000136" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000006 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000007">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000014"/>Les iiestrietions des libertés individuelles prévues
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000015"/>pas? l'article 46 de îa Constitution sont appli-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000016"/>̃ cables.
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000015"/>pas? l'article 46 de îa Constitution sont appli<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000016" break="no"/>̃ cables.
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000137" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000008">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000017"/>JLe gâterai de Walter ti. été ïioman'é commandant
@@ -7213,8 +7213,8 @@
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000140" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000011 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000012">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000036"/>Les débats, qui se poursuiv»3nt dans différentes
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000037"/>commiasionB, imt entrevoir *te rssulta'ts favo-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000038"/>œblw.,
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000037"/>commiasionB, imt entrevoir *te rssulta'ts favo<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000038" break="no"/>œblw.,
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000141" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000013">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000039"/>ESPAGNE
@@ -7223,8 +7223,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000040"/>Le bolchevisms à la caserne
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000143" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000015 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000016">
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000041"/>Noire, oorreeponâant de Madrid- tv&amp;ôg'riaphie le 13 jan-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000042"/>(vier
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000041"/>Noire, oorreeponâant de Madrid- tv&amp;ôg'riaphie le 13 jan<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000042" break="no"/>(vier
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000144" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000017">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000043"/>De nouvelles informations permettent d'apprécier
@@ -7428,9 +7428,9 @@
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000164" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000037 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000038 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000039">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000204"/>membrés de ce comité, grâce à leur iâii» de bolcheviste,
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000205"/>peuvent librement voyager à travers le
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000206"/>territoire et raflent, où ils le trouvent, le combus-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000207"/>tible et autres produite nécessaire au fonctioitîKî-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000208"/>ment de leur usine. Bieai entendu, au détriment
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000206"/>territoire et raflent, où ils le trouvent, le combus<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000207" break="no"/>tible et autres produite nécessaire au fonctioitîKî<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000208" break="no"/>ment de leur usine. Bieai entendu, au détriment
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000209"/>d'autres établissements, car pareil système amène
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000210"/>ce fait anormal que là où le comité d'ouvriers est
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000211"/>composé de débrouillards, la production continue
@@ -7562,12 +7562,12 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000323"/>les signaux de l'Afrique qui venait de lui inidquer dans
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000324"/>un dernier radiotéiiégranioie que l'on procédait à l'évacuation
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000325"/>du bond par des embarcations de sauveatge.
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000326"/>Cette opération était très difflo&amp;e par suite de lMnclli-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000327"/>naison du navire.
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000326"/>Cette opération était très difflo&amp;e par suite de lMnclli<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000327" break="no"/>naison du navire.
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000172" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000047">
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000328"/>Le Ceylan commença dès ia matinée de lundi la re-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000329"/>cherche du paquebot Afrique et de ses enÀamcations.
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000328"/>Le Ceylan commença dès ia matinée de lundi la re<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000329" break="no"/>cherche du paquebot Afrique et de ses enÀamcations.
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000330"/>A midi, il avait retrouvé Tune d'elles avec onze ocoupante.
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000331"/>Vers quinze heures, aujourd'hui, H indiquait
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000332"/>avoir recueilli un radeau sur lequel se trouvaient quinze
@@ -7845,8 +7845,8 @@
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000226" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000101 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000102">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000503"/>Loire-Inférieurë (6 sénateurs). • Léon Jamin,
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000504"/>Babin-Chevaye, de Landemont, de Montaigu, SaintMaur.
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000506"/>Loiret (3 sénateurs). &lt;– Henry Rvy, Rabier, Do-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000507"/>non.
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000506"/>Loiret (3 sénateurs). &lt;– Henry Rvy, Rabier, Do<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000507" break="no"/>non.
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000227" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000103">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000508"/>Lot (3 BénateoTs). ̃=–. de Monzie, Louïbet, Fontanitte.
@@ -8082,8 +8082,8 @@
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000275" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000151">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000646"/>MM. Chanal (Ain), de Lubersac et Chênebenoit
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000647"/>(Aisne), Marcel Régnier et Beaumont (Allier), Vic-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000648"/>tor Pcy tirai (Hautes-Alpes), Chalamet, Ouminal et
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000647"/>(Aisne), Marcel Régnier et Beaumont (Allier), Vic<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000648" break="no"/>tor Pcy tirai (Hautes-Alpes), Chalamet, Ouminal et
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000649"/>Roche (Ardèohe), Charpentier (Ardënnes), 'Mony
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000650"/>(Aube), Pasquet, Schrameck et Louis Artaud (Boucaes-du-iRhône),
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000651"/>Landrodie (Charente-Inférieure),
@@ -8097,8 +8097,8 @@
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000277" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000153">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000657"/>(MM. Duchain, Cruppi et Blaignan (Hauië^Garonne),
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000658"/>Noulens, Philip et Masclanis (Gers), Da-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000659"/>vid, Vaysaière et Buhan (Gironde), Pelisse, Roustan
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000658"/>Noulens, Philip et Masclanis (Gers), Da<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000659" break="no"/>vid, Vaysaière et Buhan (Gironde), Pelisse, Roustan
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000660"/>et Lafferre (Héraioilt), Garnier et Porteu (Illeet-Vilaine),
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000661"/>Cosnier (Indre), René Besnard, Alphonse
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000662"/>Chautemps et Foucher (Indre-et-Loire),
@@ -8326,14 +8326,14 @@
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000308" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000184 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000185">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000826"/>Conservateurs. 27 28 1 »
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000827"/>Progressistes 22 24 2 »
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000828"/>Républicains de gau-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000829"/>che. 45 61 16 »
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000828"/>Républicains de gau<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000829" break="no"/>che. 45 61 16 »
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000830"/>Radicaux et radicaux
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000309" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000186 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000187">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000831"/>socialistes. 129 104 ». 25
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000832"/>Républicains socia-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000833"/>listes. 1 5 4 »
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000832"/>Républicains socia<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000833" break="no"/>listes. 1 5 4 »
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000834"/>Socialistes unifiés » 2 2 »
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000835"/>224 224 25 25
       </p>
@@ -8513,8 +8513,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000971"/>d'ordre et produits divers.
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000330" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000208 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000209">
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000972"/>Si l'on considère le rendement des impôts di-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000973"/>rects, les résultats sont très différents et beaucoup
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000972"/>Si l'on considère le rendement des impôts di<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000973" break="no"/>rects, les résultats sont très différents et beaucoup
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tl000974"/>moins satisfaisants.
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000331" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page2.tb000210">
@@ -8868,15 +8868,15 @@
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000378" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tb000009">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000061"/>Et la France? Pourquoi ne prend-elle pas sa part
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000062"/>et sa place sur ce terrain, où elle a droit do paraî-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000063"/>tre, et où elle a des chances particulières de ré-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000064"/>gner?
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000062"/>et sa place sur ce terrain, où elle a droit do paraî<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000063" break="no"/>tre, et où elle a des chances particulières de ré<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000064" break="no"/>gner?
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000379" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tb000010">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000065"/>Car enfin, le jouet est fait de grâce, de fantaisie
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000066"/>aimable ou spirituelle, et ne sont-ce pas là des
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000067"/>qualités essentiellement françaises? Le jouet alle-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000068"/>mand porte la marque du goût allemand, qui n'est
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000067"/>qualités essentiellement françaises? Le jouet alle<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000068" break="no"/>mand porte la marque du goût allemand, qui n'est
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000069"/>pas le nôtre. Les enfants d'Allemagne s'amusent
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000070"/>avec des joujoux qui constatent une mentalité opposée
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000071"/>à la nôtre de petites boucheries avec des
@@ -9024,8 +9024,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000170"/>pées de Mme la baronne dé Laumont, de Mme
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000171"/>Sautter, de Mme Valentine Thomson, de Mme Rachel
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000172"/>Boyer, de Mme Eugène Simon. Mais il eût
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000173"/>fallu pouvoir « industrialiser » ces modèles, se-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000174"/>lon le terme technique, et produire en grosses
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000173"/>fallu pouvoir « industrialiser » ces modèles, se<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000174" break="no"/>lon le terme technique, et produire en grosses
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000175"/>quantités en créant d'importantes usines. Elles
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000176"/>n'ont pu et ne pouvaient le faire.
       </p>
@@ -9222,8 +9222,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000320"/>~~RI$4A~U·t~r~~ en3 jours. complète
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000427" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tb000058 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tb000059">
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000321"/>IlliLAIIl/luEj IJ- A» i en 3 jours. Prix mo-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000322"/>dérés. Réparations et mise au point de toutes
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000321"/>IlliLAIIl/luEj IJ- A» i en 3 jours. Prix mo<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000322" break="no"/>dérés. Réparations et mise au point de toutes
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000323"/>voitures. Sudan. 15, rue Jean-Daudin. Métro et
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000324"/>Nord-Sud Pasteur. Téléphone Saxe 82.92.
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000325"/>I/1?MTI? à l'Hôtel Drouot, le 15 janvier 1920,
@@ -9417,12 +9417,12 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000466"/>Le mariage de Mile Simone Veyriin et de
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000467"/>M. Robert Latham aura lieu ie samedi 17 janvier,
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000468"/>à 2 h. 1/2, à l'église de l'Eboiite, avemue de la
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000469"/>Grande-Armée, 54. Le présent avis tient lieu d'in-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000470"/>vitation.
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000469"/>Grande-Armée, 54. Le présent avis tient lieu d'in<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000470" break="no"/>vitation.
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000452" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tb000084">
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000471"/>Nous apprenons le mariage de M. Joseph Va-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000472"/>dette avec Mlle Jacqueline Emery, fille du docteur
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000471"/>Nous apprenons le mariage de M. Joseph Va<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000472" break="no"/>dette avec Mlle Jacqueline Emery, fille du docteur
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000473"/>Emile Emery et de Mme Emery. La cérémonie
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000474"/>aura lieu en l'église Saint-Augustin, le jeudi
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000475"/>22 janvier, à midi très précis.
@@ -9880,8 +9880,8 @@
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000535" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tb000167 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tb000168">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000767"/>Débits et crédits cumulés Fr. 21.072.734.947 24
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000768"/>Soit: ellets présentés à la com-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000769"/>pensation. 10.536.367.473 62
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000768"/>Soit: ellets présentés à la com<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000769" break="no"/>pensation. 10.536.367.473 62
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000770"/>Moyenne sur 26 jours. Fr. 405.244.902 83
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000771"/>A Genève, 100 francs français cotent 50 725;
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000772"/>100 marks, 11 05; 100 couronnes austro-hongroi
@@ -10043,8 +10043,8 @@
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000848"/>désastre de 1870, il faut lire cet ouvrage,
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000576" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tb000209 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tb000210">
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000849"/>dans lequel un grand patriote d'aujour-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000850"/>d'hui rend, à un grand patriote d'hier^
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000849"/>dans lequel un grand patriote d'aujour<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000850" break="no"/>d'hui rend, à un grand patriote d'hier^
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000577" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tb000211">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page3.tl000851"/>l'hommage de reconnaissance qui lui est dû.
@@ -10514,8 +10514,8 @@
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000680" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tb000055 #PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tb000056">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000160"/>Le communiqué miliitair© du gouvernement bolcheviste
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000161"/>russe, en diaite du 11 janvier, annonce no-
-        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000162"/>tomntetnt
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000161"/>russe, en diaite du 11 janvier, annonce no<pc force="weak">-</pc>
+        <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000162" break="no"/>tomntetnt
       </p>
       <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000681" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tb000057">
         <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000163"/>Front occidental. Dans la iddrecMon de Jaoobsteidt,

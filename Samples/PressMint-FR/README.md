@@ -28,14 +28,14 @@ The sample consists of two issues:
 
 * __Structure__: METS (issue metadata and physical page order) with one ALTO file per page (text blocks, lines, words, coordinates and OCR confidence). The source has no logical structure (articles, sections).
 
-* __Correction__: Uncorrected BnF OCR. Only whitespace is normalised and line-end hyphens are joined where the source marks them. A text block that ends with a line-end hyphen and is followed by a block starting in lowercase is joined to it in one paragraph (the OCR layout analysis sometimes splits a paragraph there).
+* __Correction__: Uncorrected BnF OCR. Only whitespace is normalised and line-end hyphens are joined where the source marks them. A text block that ends with a line-end hyphen and is followed by a block starting in lowercase is joined to it in one paragraph (the OCR layout analysis sometimes splits a paragraph there). A hyphen inside a word at a line end is encoded as `<pc force="weak">-</pc>` and the next `<lb/>` has `break="no"`; in the TEI.ana the whole word is one `<w>` that contains both.
 
 * __Linguistic annotation__: None in the source. The TEI.ana sample (`PressMint-FR.ana.xml` and `1920/*.ana.xml`) is annotated automatically on the uncorrected OCR text:
 
     - sentences, tokens, lemmas, UD part-of-speech tags and morphological features: [spaCy](https://spacy.io/models/fr) `fr_core_news_md`
     - named entities: [historical-ner-baseline](https://huggingface.co/emanuelaboros/historical-ner-baseline) (BERT fine-tuned on HIPE-2022). Its labels are mapped to the PressMint categories: `pers` to PER, `loc` to LOC, `org` to ORG and `prod` to MISC. Entities labelled `time` or `scope` are not marked.
 
-    The OCR is not corrected, so the annotation is unreliable where the OCR is poor (e.g. mastheads and advertisements). The annotation was produced with `src/annotate_ana.py` of the converter. The sample has 2 issues, 62,817 words (plus 11,839 punctuation tokens), 6,613 sentences and 3,655 named entities.
+    The OCR is not corrected, so the annotation is unreliable where the OCR is poor (e.g. mastheads and advertisements). The annotation was produced with `src/annotate_ana.py` of the converter. The sample has 2 issues, 62,717 words (plus 11,836 punctuation tokens), 6,605 sentences and 3,650 named entities.
 
 * __Metadata__:
 
