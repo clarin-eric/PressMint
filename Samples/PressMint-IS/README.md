@@ -2,13 +2,11 @@
 
 ## Data source
 
-The source of the PressMint-IS corpus is the PressMint part of **MC-19v2**, a corpus of Icelandic newspapers and periodicals compiled at the [Árni Magnússon Institute for Icelandic Studies](https://www.arnastofnun.is) from the page images published by the National and University Library of Iceland (Landsbókasafn Íslands - Háskólabókasafn) at [timarit.is](https://timarit.is). The PressMint part contains the issues from 1870 to 1920 of the 58 newspapers selected for the Icelandic part of PressMint.
+The source of the PressMint-IS corpus is **MC-19v2**, a corpus of Icelandic newspapers and periodicals compiled at the [Árni Magnússon Institute for Icelandic Studies](https://www.arnastofnun.is) from the page images published by the National and University Library of Iceland (Landsbókasafn Íslands - Háskólabókasafn) at [timarit.is](https://timarit.is). The PressMint part contains the issues from 1870 to 1920 of the 58 newspapers selected for the Icelandic part of PressMint.
 
 ### Details of the source:
 
 * __Source__: Page images (JPEG) of newspaper issues digitised by the National and University Library of Iceland and published at [timarit.is](https://timarit.is). The images were OCR-ed anew for MC-19 (see *Correction*).
-
-* __Availability__: MC-19 v2 will be distributed by [CLARIN-IS](https://clarin.is) under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence (CLARIN-IS handle to be added when v2 of the corpus is published). Every page links to its image at timarit.is.
 
 * __Content__: Icelandic newspapers published 1870-1920, and other publications tagged with the keyword 'news' by the national library and having at least 12 issues per year. 58 titles.
 
