@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890" xml:lang="fr">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main" xml:lang="en">French historical newspaper corpus PressMint-FR, Le Temps, 1920-01-14 [PressMint SAMPLE]</title>
+            <title type="main" xml:lang="fr">Corpus français de presse historique PressMint-FR, Le Temps, 1920-01-14 [PressMint SAMPLE]</title>
+            <respStmt>
+               <persName>bnf_pressmint converter</persName>
+               <resp xml:lang="en">METS/ALTO to PressMint TEI conversion</resp>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="paragraphs" quantity="848" xml:lang="en">848 paragraphs</measure>
+            <measure unit="words" quantity="29450" xml:lang="fr">29 450 mots</measure>
+            <measure unit="words" quantity="29450" xml:lang="en">29,450 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="en">CLARIN PressMint project</orgName>
+            </publisher>
+            <idno type="handle">TBD</idno>
+            <availability status="unknown">
+               <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</licence>
+               <p xml:lang="en">Availability for the French PressMint contribution is subject to BnF/Gallica licensing terms.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Le Temps</title>
+               <publisher>[s.n.]</publisher>
+               <pubPlace>Paris</pubPlace>
+               <date when="1920-01-14">1920/01/14</date>
+               <biblScope unit="issue">21352</biblScope>
+               <idno type="URN" subtype="issue-ARK">ark:/12148/bpt6k243890r</idno>
+               <idno type="URN" subtype="journal-ARK">ark:/12148/cb34431794k</idno>
+               <idno type="URN" subtype="set-ARK">ark:/12148/bc6p0j3t4</idno>
+               <idno type="local" subtype="BnF-productionIdentifier">243890</idno>
+               <idno type="local" subtype="BnF-versionIdentifier">version0.release0</idno>
+               <idno type="local" subtype="METS-file">manifest.xml</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+         </projectDesc>
+         <editorialDecl>
+            <p xml:lang="en" xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p3">OCR text is preserved without correction, except for whitespace normalisation and line-end hyphen handling.</p>
+            <p xml:lang="en" xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p4">Line-end hyphenation is resolved using ALTO SUBS_TYPE and SUBS_CONTENT attributes where available. Where not available, the hyphen is preserved.</p>
+            <p xml:lang="en" xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p5">ALTO TextBlocks are encoded as TEI paragraphs. A block that ends with a line-end hyphen and is followed by a block starting in lowercase is joined to it in one paragraph. No article or section divisions are inferred, because the source contains no logical structMap.</p>
+            <p xml:lang="en" xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p6">Page order is derived from the METS physical structMap ORDER attribute. ALTO PHYSICAL_IMG_NR is not used (it is 1 on all pages in this dataset).</p>
+            <p xml:lang="en" xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p7">Text in an issue is encoded in ALTO reading order. No column-aware geometric reordering is applied.Image references use Gallica IIIF URLs because the master TIFF images are not included.</p>
+         </editorialDecl>
+         <tagsDecl><!--These numbers do not reflect the size of the sample!-->
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="1"/>
+               <tagUsage gi="lb" occurs="3988"/>
+               <tagUsage gi="p" occurs="848"/>
+               <tagUsage gi="pb" occurs="4"/>
+               <tagUsage gi="text" occurs="1"/>
+            </namespace>
+         </tagsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+               <date when="1920-01-14">1920-01-14</date>
+            </setting>
+         </settingDesc>
+         <langUsage>
+            <language ident="fr">French</language>
+            <language ident="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-11-24">
+            <name>corpus2sample.xsl</name>: Made sample.</change>
+         <change when="2026-11-23">Second conversion from BnF METS/ALTO to PressMint TEI.</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.facsimile">
+      <surface xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1" n="1" ulx="0" uly="0" lrx="6046" lry="7952">
+         <graphic xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.graphic" url="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k243890r/f1/full/full/0/native.jpg"/>
+         <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000001" type="block" ulx="1813" uly="240" lrx="4105" lry="305">
+            <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000001" type="line" ulx="1813" uly="240" lrx="4105" lry="305"/>
+         </zone>
+         <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000002" type="block" ulx="4918" uly="240" lrx="5503" lry="274">
+            <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000002" type="line" ulx="4918" uly="240" lrx="5503" lry="274"/>
+         </zone>
+      </surface>
+      <surface xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4" n="4" ulx="0" uly="0" lrx="6072" lry="7961">
+         <graphic xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.graphic" url="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k243890r/f4/full/full/0/native.jpg"/>
+         <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.body" type="pageBody" ulx="314" uly="314" lrx="5930" lry="7677">
+            <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tb000223" type="table" ulx="5024" uly="7273" lrx="5902" lry="7316">
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000869" type="line" ulx="5024" uly="7273" lrx="5902" lry="7316"/>
+            </zone>
+            <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tb000224" type="table" ulx="5024" uly="7292" lrx="5921" lry="7677">
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000870" type="line" ulx="5025" uly="7292" lrx="5902" lry="7343"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000871" type="line" ulx="5024" uly="7333" lrx="5902" lry="7373"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000872" type="line" ulx="5025" uly="7364" lrx="5901" lry="7404"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000873" type="line" ulx="5024" uly="7395" lrx="5901" lry="7437"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000874" type="line" ulx="5026" uly="7437" lrx="5921" lry="7468"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000875" type="line" ulx="5046" uly="7469" lrx="5871" lry="7516"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000876" type="line" ulx="5026" uly="7512" lrx="5901" lry="7556"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000877" type="line" ulx="5054" uly="7543" lrx="5901" lry="7583"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000878" type="line" ulx="5055" uly="7573" lrx="5901" lry="7616"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000879" type="line" ulx="5027" uly="7616" lrx="5901" lry="7644"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000880" type="line" ulx="5052" uly="7646" lrx="5902" lry="7677"/>
+            </zone>
+         </zone>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <pb xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.pb1" n="1" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1"/>
+         <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000001" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000001"><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000001"/>Oa s-aDonne aux Bateaux m Journal, 5, RUE DES ITALIENS, À PARIS (9e), et dans tous tes Boréaux de Poste/</p>
+         <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000002" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tb000002"><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page1.tl000002"/>MERCREDI i4 JANVIER Ï9g0</p>
+         <gap reason="editorial">
+            <desc xml:lang="en">SAMPLING</desc>
+         </gap>
+         <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000847" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tb000223"><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000869"/>Foncières 190~* 3~1 Pampelune 530</p>
+         <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.p000848" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tb000224"><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000870"/>Foncières 1900 189 |3'™e i| <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000871"/>Foncières 191331/2 365 Astunesl» 525" <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000872"/>Foncières 19X3 40/0 415.. Asturies «• 475*' <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000873"/>Emprunt 1917. 320 tSSgossè i». I \Y 469 <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000874"/>Est 3 0/0 306 Métropolitain 3 1/2 334 .&lt; <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000875"/>nouv. 300 •' aûKS £7 0BUG4T10SS 6 0/0 <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000876"/>Lyqn40/0 384 50 Fnerc. élect. centr. rin <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000877"/>(lusion). Mi 50 Uasse_isere 522., <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000878"/>obhg. nouv. 300.. Energie Méditerr.. 522 .i <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000879"/>Ouest 3 0/0 299.. Affréteurs réunis.. 515 <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.page4.tl000880"/>nouv. 302 .t Chargeurs /522,«</p>
+      </body>
+   </text>
+</TEI>
+

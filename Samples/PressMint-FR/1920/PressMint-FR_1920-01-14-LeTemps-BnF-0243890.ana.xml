@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana" xml:lang="fr">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main" xml:lang="en">French historical newspaper corpus PressMint-FR, Le Temps, 1920-01-14 [PressMint.ana SAMPLE]</title>
+            <title type="main" xml:lang="fr">Corpus français de presse historique PressMint-FR, Le Temps, 1920-01-14 [PressMint.ana SAMPLE]</title>
+            <respStmt>
+               <persName>bnf_pressmint converter</persName>
+               <resp xml:lang="en">METS/ALTO to PressMint TEI conversion</resp>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition>1.0</edition>
+         </editionStmt>
+         <extent><!--These numbers do not reflect the size of the sample!-->
+            <measure unit="paragraphs" quantity="848" xml:lang="en">848 paragraphs</measure>
+            <measure unit="words" quantity="29450" xml:lang="fr">29 450 mots</measure>
+            <measure unit="words" quantity="29450" xml:lang="en">29,450 words</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="en">CLARIN PressMint project</orgName>
+            </publisher>
+            <idno type="handle">TBD</idno>
+            <availability status="unknown">
+               <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</licence>
+               <p xml:lang="en">Availability for the French PressMint contribution is subject to BnF/Gallica licensing terms.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j">Le Temps</title>
+               <publisher>[s.n.]</publisher>
+               <pubPlace>Paris</pubPlace>
+               <date when="1920-01-14">1920/01/14</date>
+               <biblScope unit="issue">21352</biblScope>
+               <idno type="URN" subtype="issue-ARK">ark:/12148/bpt6k243890r</idno>
+               <idno type="URN" subtype="journal-ARK">ark:/12148/cb34431794k</idno>
+               <idno type="URN" subtype="set-ARK">ark:/12148/bc6p0j3t4</idno>
+               <idno type="local" subtype="BnF-productionIdentifier">243890</idno>
+               <idno type="local" subtype="BnF-versionIdentifier">version0.release0</idno>
+               <idno type="local" subtype="METS-file">manifest.xml</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="en"><ref target="https://www.clarin.eu/pressmint">PressMint</ref> is a project that aims to (1) create a multilingual set of corpora of historical newspapers uniformly encoded according to the <ref target="https://clarin-eric.github.io/PressMint/">PressMint encoding guidelines</ref>; (2) add linguistic annotations to the corpora; and (3) make the corpora available through concordancers.</p>
+         </projectDesc>
+         <editorialDecl>
+            <p xml:lang="en" xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p3">OCR text is preserved without correction, except for whitespace normalisation and line-end hyphen handling.</p>
+            <p xml:lang="en" xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p4">Line-end hyphenation is resolved using ALTO SUBS_TYPE and SUBS_CONTENT attributes where available. Where not available, the hyphen is preserved.</p>
+            <p xml:lang="en" xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p5">ALTO TextBlocks are encoded as TEI paragraphs. A block that ends with a line-end hyphen and is followed by a block starting in lowercase is joined to it in one paragraph. No article or section divisions are inferred, because the source contains no logical structMap.</p>
+            <p xml:lang="en" xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p6">Page order is derived from the METS physical structMap ORDER attribute. ALTO PHYSICAL_IMG_NR is not used (it is 1 on all pages in this dataset).</p>
+            <p xml:lang="en" xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p7">Text in an issue is encoded in ALTO reading order. No column-aware geometric reordering is applied.Image references use Gallica IIIF URLs because the master TIFF images are not included.</p>
+         </editorialDecl>
+         <tagsDecl><!--These numbers do not reflect the size of the sample!-->
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="1"/>
+               <tagUsage gi="lb" occurs="3988"/>
+               <tagUsage gi="name" occurs="2304"/>
+               <tagUsage gi="p" occurs="848"/>
+               <tagUsage gi="pb" occurs="4"/>
+               <tagUsage gi="pc" occurs="6096"/>
+               <tagUsage gi="s" occurs="3267"/>
+               <tagUsage gi="text" occurs="1"/>
+               <tagUsage gi="w" occurs="29450"/>
+            </namespace>
+         </tagsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+               <date when="1920-01-14">1920-01-14</date>
+            </setting>
+         </settingDesc>
+         <langUsage>
+            <language ident="fr">French</language>
+            <language ident="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-11-24">
+            <name>corpus2sample.xsl</name>: Made sample.</change>
+         <change when="2026-11-23">Second conversion from BnF METS/ALTO to PressMint TEI.</change>
+         <change when="2026-11-23">Linguistic annotation added: spaCy fr_core_news_md (tokens, sentences, UPOS, features, lemmas) and historical-ner-baseline (named entities).</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.facsimile">
+      <surface xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1" n="1" ulx="0" uly="0" lrx="6046" lry="7952">
+         <graphic xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.graphic" url="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k243890r/f1/full/full/0/native.jpg"/>
+         <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tb000001" type="block" ulx="1813" uly="240" lrx="4105" lry="305">
+            <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000001" type="line" ulx="1813" uly="240" lrx="4105" lry="305"/>
+         </zone>
+         <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tb000002" type="block" ulx="4918" uly="240" lrx="5503" lry="274">
+            <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000002" type="line" ulx="4918" uly="240" lrx="5503" lry="274"/>
+         </zone>
+      </surface>
+      <surface xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4" n="4" ulx="0" uly="0" lrx="6072" lry="7961">
+         <graphic xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.graphic" url="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k243890r/f4/full/full/0/native.jpg"/>
+         <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.body" type="pageBody" ulx="314" uly="314" lrx="5930" lry="7677">
+            <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tb000223" type="table" ulx="5024" uly="7273" lrx="5902" lry="7316">
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000869" type="line" ulx="5024" uly="7273" lrx="5902" lry="7316"/>
+            </zone>
+            <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tb000224" type="table" ulx="5024" uly="7292" lrx="5921" lry="7677">
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000870" type="line" ulx="5025" uly="7292" lrx="5902" lry="7343"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000871" type="line" ulx="5024" uly="7333" lrx="5902" lry="7373"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000872" type="line" ulx="5025" uly="7364" lrx="5901" lry="7404"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000873" type="line" ulx="5024" uly="7395" lrx="5901" lry="7437"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000874" type="line" ulx="5026" uly="7437" lrx="5921" lry="7468"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000875" type="line" ulx="5046" uly="7469" lrx="5871" lry="7516"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000876" type="line" ulx="5026" uly="7512" lrx="5901" lry="7556"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000877" type="line" ulx="5054" uly="7543" lrx="5901" lry="7583"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000878" type="line" ulx="5055" uly="7573" lrx="5901" lry="7616"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000879" type="line" ulx="5027" uly="7616" lrx="5901" lry="7644"/>
+               <zone xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000880" type="line" ulx="5052" uly="7646" lrx="5902" lry="7677"/>
+            </zone>
+         </zone>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <pb xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.pb1" n="1" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1"/>
+         <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000001" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tb000001"><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000001"/>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000001.s1">
+<w lemma="Oa" msd="UPosTag=PROPN|Gender=Masc|Number=Sing">Oa</w>
+<w lemma="s" msd="UPosTag=PRON|Person=3|Reflex=Yes" join="right">s</w>
+<w lemma="-" msd="UPosTag=ADV" join="right">-</w>
+<w lemma="adonner" msd="UPosTag=VERB|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin">aDonne</w>
+<w lemma="à" msd="UPosTag=ADP|Definite=Def|Number=Plur|PronType=Art">aux</w>
+<w lemma="bateau" msd="UPosTag=NOUN|Gender=Masc|Number=Plur">Bateaux</w>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000001.s2">
+<w lemma="m" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">m</w>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000001.s3">
+<w lemma="journal" msd="UPosTag=NOUN" join="right">Journal</w>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000001.s4">
+<pc msd="UPosTag=PUNCT">,</pc>
+               <name type="LOC">
+<w lemma="5" msd="UPosTag=NUM|NumType=Card" join="right">5</w>
+<pc msd="UPosTag=PUNCT">,</pc>
+<w lemma="rue" msd="UPosTag=NOUN">RUE</w>
+<w lemma="de" msd="UPosTag=ADP|Definite=Def|Number=Plur|PronType=Art">DES</w>
+<w lemma="ITALIENS" msd="UPosTag=PROPN" join="right">ITALIENS</w>
+               </name>
+<pc msd="UPosTag=PUNCT">,</pc>
+<w lemma="à" msd="UPosTag=ADP">À</w>
+               <name type="LOC">
+<w lemma="PARIS" msd="UPosTag=PROPN|Gender=Masc|Number=Sing">PARIS</w>
+<pc msd="UPosTag=PUNCT" join="right">(</pc>
+<w lemma="9" msd="UPosTag=ADJ|NumType=Ord" join="right">9e</w>
+               </name>
+<pc msd="UPosTag=PUNCT" join="right">)</pc>
+<pc msd="UPosTag=PUNCT">,</pc>
+<w lemma="et" msd="UPosTag=CCONJ">et</w>
+<w lemma="dans" msd="UPosTag=ADP">dans</w>
+<w lemma="tout" msd="UPosTag=ADJ|Gender=Masc|Number=Plur">tous</w>
+<w lemma="ton" msd="UPosTag=DET|Number=Plur|Poss=Yes">tes</w>
+<w lemma="boréau" msd="UPosTag=NOUN|Number=Plur">Boréaux</w>
+<w lemma="de" msd="UPosTag=ADP">de</w>
+<w lemma="Poste/" msd="UPosTag=PROPN|Gender=Masc|Number=Sing">Poste/</w>
+</s>
+         </p>
+         <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000002" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tb000002"><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page1.tl000002"/>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000002.s1">
+<w lemma="mercredi" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">MERCREDI</w>
+<w lemma="i4" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">i4</w>
+<w lemma="janvier" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">JANVIER</w>
+<w lemma="Ï9g0" msd="UPosTag=NUM|NumType=Card">Ï9g0</w>
+</s>
+         </p>
+         <gap reason="editorial">
+            <desc xml:lang="en">SAMPLING</desc>
+         </gap>
+         <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000847" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tb000223"><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000869"/>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000847.s1">
+<w lemma="foncière" msd="UPosTag=NOUN|Number=Plur">Foncières</w>
+<w lemma="190~" msd="UPosTag=NOUN" join="right">190~</w>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000847.s2">
+<w lemma="*" msd="UPosTag=NOUN">*</w>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000847.s3">
+<w lemma="3~1" msd="UPosTag=PROPN">3~1</w>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000847.s4">
+               <name type="LOC">
+<w lemma="pampelune" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">Pampelune</w>
+               </name>
+<w lemma="530" msd="UPosTag=NUM|NumType=Card">530</w>
+</s>
+         </p>
+         <p xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848" facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tb000224"><lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000870"/>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s1">
+<w lemma="foncière" msd="UPosTag=NOUN|Number=Plur">Foncières</w>
+<w lemma="1900" msd="UPosTag=NUM|NumType=Card">1900</w>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s2">
+<w lemma="189" msd="UPosTag=NUM|NumType=Card">189</w>
+<w lemma="|3'" msd="UPosTag=NOUN|Number=Plur" join="right">|3'</w>
+<w lemma="™" msd="UPosTag=X" join="right">™</w>
+<w lemma="e" msd="UPosTag=X">e</w>
+<w lemma="i|" msd="UPosTag=X">i|</w>
+               <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000871"/>
+<w lemma="foncière" msd="UPosTag=NOUN|Number=Plur">Foncières</w>
+<w lemma="191331/2" msd="UPosTag=ADJ">191331/2</w>
+<w lemma="365" msd="UPosTag=NUM|NumType=Card">365</w>
+<w lemma="Astunesl" msd="UPosTag=PROPN" join="right">Astunesl</w>
+<pc msd="UPosTag=PUNCT">»</pc>
+<w lemma="525" msd="UPosTag=NUM|NumType=Card" join="right">525</w>
+<pc msd="UPosTag=PUNCT">"</pc>
+               <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000872"/>
+<w lemma="foncière" msd="UPosTag=NOUN|Number=Plur">Foncières</w>
+<w lemma="19x3" msd="UPosTag=NOUN|NumType=Card">19X3</w>
+<w lemma="40/0" msd="UPosTag=NOUN|Gender=Fem|Number=Plur">40/0</w>
+<w lemma="415" msd="UPosTag=PRON|NumType=Card" join="right">415</w>
+<pc msd="UPosTag=PUNCT">..</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s3">
+               <name type="LOC">
+<w lemma="Asturies" msd="UPosTag=PROPN|Gender=Fem|Number=Sing">Asturies</w>
+               </name>
+<pc msd="UPosTag=PUNCT" join="right">«</pc>
+<w lemma="•" msd="UPosTag=ADJ|Gender=Fem|Number=Plur">•</w>
+<w lemma="475" msd="UPosTag=NUM|NumType=Card" join="right">475</w>
+<w lemma="*" msd="UPosTag=NOUN" join="right">*</w>
+<pc msd="UPosTag=PUNCT">'</pc>
+               <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000873"/>
+<w lemma="emprunt" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">Emprunt</w>
+<w lemma="1917" msd="UPosTag=NUM|NumType=Card" join="right">1917</w>
+<pc msd="UPosTag=PUNCT">.</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s4">
+<w lemma="320" msd="UPosTag=NUM|NumType=Card">320</w>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s5">
+<w lemma="tssgossè" msd="UPosTag=VERB|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin">tSSgossè</w>
+<w lemma="i" msd="UPosTag=ADJ|Gender=Fem|Number=Sing" join="right">i</w>
+<pc msd="UPosTag=PUNCT" join="right">»</pc>
+<pc msd="UPosTag=PUNCT">.</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s6">
+<w lemma="i" msd="UPosTag=NOUN">I</w>
+<w lemma="\Y" msd="UPosTag=PROPN">\Y</w>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s7">
+<w lemma="469" msd="UPosTag=NUM|NumType=Card">469</w>
+               <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000874"/>
+<w lemma="est" msd="UPosTag=NOUN">Est</w>
+<w lemma="3" msd="UPosTag=NUM|NumType=Card">3</w>
+<w lemma="0/0" msd="UPosTag=NOUN">0/0</w>
+<w lemma="306" msd="UPosTag=NUM|NumType=Card">306</w>
+<w lemma="métropolitain" msd="UPosTag=NOUN|Gender=Masc|Number=Sing">Métropolitain</w>
+<w lemma="3" msd="UPosTag=NUM|NumType=Card">3</w>
+<w lemma="1/2" msd="UPosTag=DET">1/2</w>
+<w lemma="334" msd="UPosTag=NOUN">334</w>
+<pc msd="UPosTag=PUNCT" join="right">.</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s8">
+<w lemma="&lt;" msd="UPosTag=ADP">&lt;</w>
+               <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000875"/>
+<w lemma="nouv" msd="UPosTag=ADJ|Gender=Masc|Number=Sing" join="right">nouv</w>
+<pc msd="UPosTag=PUNCT">.</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s9">
+<w lemma="300" msd="UPosTag=NUM|NumType=Card">300</w>
+<pc msd="UPosTag=PUNCT" join="right">•</pc>
+<pc msd="UPosTag=PUNCT">'</pc>
+<w lemma="aûKS" msd="UPosTag=PROPN">aûKS</w>
+<w lemma="£" msd="UPosTag=NOUN" join="right">£</w>
+<w lemma="7" msd="UPosTag=NUM|NumType=Card">7</w>
+<w lemma="0bug4t10s" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">0BUG4T10SS</w>
+<w lemma="6" msd="UPosTag=NUM|NumType=Card">6</w>
+<w lemma="0/0" msd="UPosTag=NOUN">0/0</w>
+</s>
+            <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000876"/>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s10">
+<pc msd="UPosTag=PUNCT">Lyqn40/0</pc>
+<w lemma="384" msd="UPosTag=NUM|NumType=Card">384</w>
+<w lemma="50" msd="UPosTag=NUM|NumType=Card">50</w>
+<w lemma="fnerc" msd="UPosTag=NOUN|Gender=Fem|Number=Sing" join="right">Fnerc</w>
+<pc msd="UPosTag=PUNCT">.</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s11">
+<w lemma="élect" msd="UPosTag=ADJ|Gender=Masc|Number=Sing" join="right">élect</w>
+<pc msd="UPosTag=PUNCT">.</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s12">
+<w lemma="centr" msd="UPosTag=NOUN|Gender=Masc|Number=Sing" join="right">centr</w>
+<pc msd="UPosTag=PUNCT">.</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s13">
+<w lemma="rin" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">rin</w>
+               <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000877"/>
+<pc msd="UPosTag=PUNCT" join="right">(</pc>
+<w lemma="lusion" msd="UPosTag=NOUN|Gender=Fem|Number=Sing" join="right">lusion</w>
+<pc msd="UPosTag=PUNCT" join="right">)</pc>
+<pc msd="UPosTag=PUNCT">.</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s14">
+<w lemma="Mi" msd="UPosTag=X">Mi</w>
+<w lemma="50" msd="UPosTag=NUM|NumType=Card">50</w>
+<w lemma="uasse_isere" msd="UPosTag=NOUN">Uasse_isere</w>
+<w lemma="522" msd="UPosTag=NUM|NumType=Card" join="right">522</w>
+<pc msd="UPosTag=PUNCT" join="right">.</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s15">
+<pc msd="UPosTag=PUNCT">,</pc>
+               <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000878"/>
+<w lemma="obhg" msd="UPosTag=NOUN|Number=Sing" join="right">obhg</w>
+<pc msd="UPosTag=PUNCT">.</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s16">
+<w lemma="nouv" msd="UPosTag=ADJ|Gender=Masc|Number=Sing" join="right">nouv</w>
+<pc msd="UPosTag=PUNCT">.</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s17">
+<w lemma="300" msd="UPosTag=NUM|NumType=Card" join="right">300</w>
+<pc msd="UPosTag=PUNCT">..</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s18">
+<w lemma="energie" msd="UPosTag=NOUN|Gender=Fem|Number=Sing">Energie</w>
+<w lemma="Méditerr" msd="UPosTag=PROPN" join="right">Méditerr</w>
+<pc msd="UPosTag=PUNCT">..</pc>
+<w lemma="522" msd="UPosTag=NUM|NumType=Card">522</w>
+<w lemma=".i" msd="UPosTag=NOUN">.i</w>
+               <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000879"/>
+<w lemma="Ouest" msd="UPosTag=PROPN">Ouest</w>
+<w lemma="3" msd="UPosTag=NUM|NumType=Card">3</w>
+<w lemma="0/0" msd="UPosTag=NOUN">0/0</w>
+<w lemma="299" msd="UPosTag=NOUN|NumType=Card" join="right">299</w>
+<pc msd="UPosTag=PUNCT">..</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s19">
+<w lemma="Affréteurs" msd="UPosTag=PROPN">Affréteurs</w>
+<w lemma="réunir" msd="UPosTag=VERB|Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part" join="right">réunis</w>
+<pc msd="UPosTag=PUNCT">..</pc>
+<w lemma="515" msd="UPosTag=NUM|NumType=Card">515</w>
+               <lb facs="#PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.page4.tl000880"/>
+<w lemma="nouv" msd="UPosTag=ADJ|Gender=Masc|Number=Sing" join="right">nouv</w>
+<pc msd="UPosTag=PUNCT">.</pc>
+</s>
+            <s xml:id="PressMint-FR_1920-01-14-LeTemps-BnF-0243890.ana.p000848.s20">
+<w lemma="302" msd="UPosTag=NUM|NumType=Card">302</w>
+<w lemma=".t" msd="UPosTag=NOUN">.t</w>
+<w lemma="Chargeurs" msd="UPosTag=PROPN">Chargeurs</w>
+<w lemma="/522" msd="UPosTag=VERB|Number=Plur|Tense=Past|VerbForm=Part" join="right">/522</w>
+<pc msd="UPosTag=PUNCT" join="right">,</pc>
+<pc msd="UPosTag=PUNCT">«</pc>
+</s>
+         </p>
+      </body>
+   </text>
+</TEI>
+
