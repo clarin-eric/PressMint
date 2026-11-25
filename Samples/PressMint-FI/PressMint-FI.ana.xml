@@ -1,0 +1,133 @@
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:id="PressMint-FI.ana" xml:lang="mul">
+<teiHeader>
+  <fileDesc>
+    <titleStmt>
+       <title xml:lang="fi">Suomen historiallinen sanomalehtikorpus PressMint-FI</title>
+       <title xml:lang="en">Finnish historical newspaper corpus PressMint-FI</title>
+       <respStmt>
+         <persName>Jussi Piitulainen</persName>
+         <resp xml:lang="en">PressMint TEI XML corpus encoding</resp>
+       </respStmt>
+       <funder>
+         <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+       </funder>
+    </titleStmt>
+    <publicationStmt>
+       <publisher>
+          <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+          <orgName xml:lang="fi">Tutkimusinfrastruktuuri CLARIN</orgName>
+          <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+       </publisher>
+       <availability status="free">
+          <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+          <p xml:lang="en">The PressMint-FI corpus is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</ref> license.</p>
+          <p xml:lang="fi">PressMint-FI -korpus on lisensoitu <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nimeä 4.0 Kansainvälinen</ref> -lisenssillä.</p>
+       </availability>
+    </publicationStmt>
+    <sourceDesc>
+      <bibl>
+         <!-- author? who even are the authors of KLK corpora? -->
+         <!-- and should klk-fi-v2 and klk-sv-v2 be two bibl? -->
+         <title type="main" xml:lang="fi">Kansalliskirjaston sanoma- ja aikakauslehtikokoelman suomenkielinen osakorpus versio 2, VRT</title>
+         <title type="main" xml:lang="en">The Finnish Sub-corpus of the Newspaper and Periodical Corpus of the National Library of Finland version 2, VRT</title>
+         <title type="main" xml:lang="fi">Kansalliskirjaston sanoma- ja aikakauslehtikokoelman ruotsinkielinen osakorpus, versio 2, VRT</title>
+         <title type="main" xml:lang="en">The Swedish Sub-corpus of the Newspaper and Periodical Corpus of the National Library of Finland, version 2, VRT</title>
+         <idno type="URI" subtype="URN">http://urn.fi/urn:nbn:fi:lb-2023121101</idno> <!-- klk-fi-v2-vrt, COMEDI -->
+         <idno type="URI" subtype="URN">http://urn.fi/urn:nbn:fi:lb-2026100601</idno> <!-- klk-sv-v2-vrt, COMEDI -->
+      </bibl>
+    </sourceDesc>
+  </fileDesc>
+  <encodingDesc>
+    <projectDesc>
+      <!-- PressMint, English version to be inserted automatically -->
+      <p xml:lang="fi"><ref target="https://www.clarin.eu/pressmint">PressMint</ref>
+         on projekti, joka pyrkii (1) luomaan monikielisen kokoelman historiallisia
+         sanomalehtiaineistoja,
+         <ref target="https://clarin-eric.github.io/PressMint">yhtenäisessä</ref>
+         muodossa; (2) lisäämään aineistoihin lingvististä annotaatiota; ja (3)
+         julkaisemaan aineistot TODO (?)konkordanssereissa.</p>
+    </projectDesc>
+    <editorialDecl>
+      <quotation>
+         <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+      </quotation>
+      <hyphenation>
+         <p xml:lang="en">TODO what?</p>
+      </hyphenation>
+      <correction>
+         <p xml:lang="en">Text has been extracted with ad hoc scripts from METS/ALTO files provided by the national library.</p>
+      </correction>
+      <normalization>
+         <p xml:lang="en">Text has not been normalised, except for spacing.</p>
+      </normalization>
+      <segmentation>
+         <p xml:lang="en">Texts correspond to pages and are segmented into paragraphs.</p>
+      </segmentation>
+    </editorialDecl>
+    <tagsDecl>
+      <!-- TODO? if there even is controlled vocabulary -->
+    </tagsDecl>
+  </encodingDesc>
+  <profileDesc>
+    <settingDesc>
+       <setting>
+         <!-- TODO set actual year range when known -->
+         <date from="1881" to="1919">1881--1919</date>
+       </setting>
+    </settingDesc>
+    <langUsage>
+      <!-- TODO occasional other languages, what does one do? -->
+      <language ident="en" xml:lang="en">English</language>
+      <language ident="en" xml:lang="fi">englanti</language>
+      <language ident="fi" xml:lang="en">Finnish</language>
+      <language ident="fi" xml:lang="fi">suomi</language>
+      <language ident="sv" xml:lang="en">Swedish</language>
+      <language ident="sv" xml:lang="fi">ruotsi</language>
+      <language ident="und" xml:lang="en">undetermined</language>
+      <language ident="und" xml:lang="fi">määrittämätön</language>
+      <language ident="mul" xml:lang="en">multiple languages</language>
+      <language ident="mul" xml:lang="fi">useita kieliä</language>
+    </langUsage>
+  </profileDesc>
+</teiHeader>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1821/PressMint-FI_1821-03-03_t-bd4b32f0-2f6265f0.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1821/PressMint-FI_1821-07-14_t-tmp-9a82e7ed-d24c5db2.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1831/PressMint-FI_1831-09-08_t-tmp-9a82e7ed-e104cebe.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1836/PressMint-FI_1836-01-16_t-fb1662c2-13c830fc.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1840/PressMint-FI_1840-04-04_t-c3361e48-45e4fa36.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1843/PressMint-FI_1843-01-11_t-tmp-9a82e7ed-07604a1a.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1852/PressMint-FI_1852-07-01_t-tmp-9a82e7ed-451c7190.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1858/PressMint-FI_1858-03-26_t-2e0223bb-f82592f1.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1862/PressMint-FI_1862-01-09_t-6d28f941-dc6717ff.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1867/PressMint-FI_1867-12-28_t-tmp-9a82e7ed-f59d89c7.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1875/PressMint-FI_1875-10-15_t-tmp-9a82e7ed-8712141a.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1878/PressMint-FI_1878-01-26_t-1e124915-1d30de72.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1884/PressMint-FI_1884-09-09_t-tmp-9a82e7ed-a9ab3690.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1888/PressMint-FI_1888-03-10_t-0a46faa8-8c19479b.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1896/PressMint-FI_1896-01-11_t-tmp-9a82e7ed-3dacb737.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1896/PressMint-FI_1896-10-12_t-a388bb64-37c0736e.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1902/PressMint-FI_1902-01-01_t-tmp-9a82e7ed-9aa97f2b.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1908/PressMint-FI_1908-05-26_t-f646207f-c5906bcd.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1911/PressMint-FI_1911-03-14_t-tmp-9a82e7ed-5b175d2b.ana.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="1912/PressMint-FI_1912-01-01_t-6e583ba4-237c978d.ana.xml"/>
+</teiCorpus>
