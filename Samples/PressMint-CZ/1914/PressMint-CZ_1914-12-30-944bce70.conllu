@@ -1,12 +1,28 @@
 # newdoc id = PressMint-CZ_1914-12-30-944bce70.ana
+# sent_id = PressMint-CZ_1914-12-30-944bce70.head1.s1
+# text = Za o hal.
+1	Za	za	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+2	o	o	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+3	hal	hal	NOUN	F%-------------	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
 # newpar id = PressMint-CZ_1914-12-30-944bce70.p1
 # lang = cs
 # sent_id = PressMint-CZ_1914-12-30-944bce70.p1.s1
-# text = NA „MORAVSKOU ORLICEpředplácí se v Brně: bez donášení měsíně.
+# text = Za á Ran.
+1	Za	za	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+2	á	á	NOUN	II-------------	Foreign=Yes	0	_	_	NER=O
+3	Ran	Ran	PROPN	F%-------------	Foreign=Yes	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p2
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p2.s1
+# text = NA „MORAVSKOU ORLICE předplácí se v Brně: bez donášení měsíně.
 1	NA	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
 2	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
 3	MORAVSKOU	moravský	ADJ	AAFS4----1A----	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=B-ORG
-4	ORLICE	Orlice	PROPN	NNFS4-----A----	Case=Acc|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+4	ORLICE	Orlice	PROPN	NNFS4-----A----	Case=Acc|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=I-ORG
 5	předplácí	předplácet	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
 6	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
 7	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
@@ -17,37 +33,485 @@
 12	měsíně	měsín	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
 13	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
 
-# sent_id = PressMint-CZ_1914-12-30-944bce70.p1.s2
-# text = s donáškou
-1	s	s	ADP	RR--7----------	AdpType=Prep|Case=Ins	0	_	_	NER=O
-2	donáškou	donáška	NOUN	NNFS7-----A----	Case=Ins|Gender=Fem|Number=Sing	0	_	_	NER=O
-
-# newpar id = PressMint-CZ_1914-12-30-944bce70.p2
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p3
 # lang = cs
-# sent_id = PressMint-CZ_1914-12-30-944bce70.p2.s1
-# text = .
-1	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p3.s1
+# text = .K 190 s donáškou
+1	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+2	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+3	190	190	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+4	s	s	ADP	RR--7----------	AdpType=Prep|Case=Ins	0	_	_	NER=O
+5	donáškou	donáška	NOUN	NNFS7-----A----	Case=Ins|Gender=Fem|Number=Sing	0	_	_	NER=O
 
-# sent_id = PressMint-CZ_1914-12-30-944bce70.p2.s2
-# text = K 190„
-1	K	k	ADP	RR--3----------	AdpType=Prep|Case=Dat	0	_	_	NER=O
-2	190	190	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
-3	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
-
-# newpar id = PressMint-CZ_1914-12-30-944bce70.p121
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p4
 # lang = cs
-# sent_id = PressMint-CZ_1914-12-30-944bce70.p121.s1
-# text = i tentokráte v hojnou přízeň.
-1	i	i	CCONJ	TT-------------	_	0	_	_	NER=O
-2	tentokráte	tentokráte	ADV	Db-------------	PronType=Dem	0	_	_	NER=O
-3	v	v	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
-4	hojnou	hojný	ADJ	AAFS4----1A----	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
-5	přízeň	přízeň	NOUN	NNFS4-----A----	Case=Acc|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p4.s1
+# text = Na předplaté lstky znějící na 6 po sobě jdoucích čísel 48 laléřů.
+1	Na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+2	předplaté	předplatý	ADJ	AAFP4----1A----	Case=Acc|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O
+3	lstky	lstka	NOUN	NNFP4-----A----	Case=Acc|Gender=Fem|Number=Plur	0	_	_	NER=O
+4	znějící	znějící	ADJ	AGFP4-----A----	Aspect=Imp|Case=Acc|Gender=Fem|Number=Plur|Polarity=Pos|Tense=Pres|VerbForm=Part|Voice=Act	0	_	_	NER=O
+5	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+6	6	6	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+7	po	po	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+8	sobě	se	PRON	P6--6----------	Case=Loc|PronType=Prs|Reflex=Yes	0	_	_	NER=O
+9	jdoucích	jdoucí	ADJ	AGNP2-----A----	Aspect=Imp|Case=Gen|Gender=Neut|Number=Plur|Polarity=Pos|Tense=Pres|VerbForm=Part|Voice=Act	0	_	_	NER=O
+10	čísel	číslo	NOUN	NNNP2-----A----	Case=Gen|Gender=Neut|Number=Plur	0	_	_	NER=O
+11	48	48	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+12	laléřů	laléř	NOUN	NNMP2-----A----	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+13	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p5
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p5.s1
+# text = Jednotlivá čísla po 8 h, sobotní v Brně po 10 hal.
+1	Jednotlivá	jednotlivý	ADJ	AANP1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Plur|Polarity=Pos	0	_	_	NER=O
+2	čísla	číslo	NOUN	NNNP1-----A----	Case=Nom|Gender=Neut|Number=Plur	0	_	_	NER=O
+3	po	po	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+4	8	8	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+5	h	hodina	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	sobotní	sobotní	ADJ	AANP1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Plur|Polarity=Pos	0	_	_	NER=O
+8	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+9	Brně	Brno	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+10	po	po	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+11	10	10	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+12	hal	hát	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+13	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p6
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p6.s1
+# text = Poštou měsíčě . . . čtvrtidně. . . 750 „ pololáně . . .
+1	Poštou	pošta	NOUN	NNFS7-----A----	Case=Ins|Gender=Fem|Number=Sing	0	_	_	NER=O
+2	měsíčě	měsíč	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+6	čtvrtidně	čtvrtidně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+10	750	750	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+11	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+12	pololáně	pololáně	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+13	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+14	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+15	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p6.s2
+# text = 15.— celorčně. . .
+1	15	15	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+3	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	celorčně	celorčně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
 6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
 
-# newpar id = PressMint-CZ_1914-12-30-944bce70.p122
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p6.s3
+# text = 30.— Jednotlivá čsla na venkově po 10 haléřích.
+1	30	30	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+3	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	Jednotlivá	jednotlivý	ADJ	AANP1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Plur|Polarity=Pos	0	_	_	NER=O
+5	čsla	čslo	NOUN	NNNP1-----A----	Case=Nom|Gender=Neut|Number=Plur	0	_	_	NER=O
+6	na	na	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+7	venkově	venkov	NOUN	NNIS6-----A----	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	0	_	_	NER=O
+8	po	po	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+9	10	10	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+10	haléřích	haléř	NOUN	NNIP6-----A----	Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+11	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p7
 # lang = cs
-# sent_id = PressMint-CZ_1914-12-30-944bce70.p122.s1
-# text = nel
-1	nel	nel	VERB	VpYS----R-NAI--	Aspect=Imp|Gender=Masc|Number=Sing|Polarity=Neg|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p7.s1
+# text = List vycház denně vyjímaje neděle a svátky.
+1	List	list	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	vycház	vycház	ADJ	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+3	denně	denně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O
+4	vyjímaje	vyjímat	VERB	VeYS------A-I--	Aspect=Imp|Gender=Masc|Number=Sing|Polarity=Pos|Tense=Pres|VerbForm=Conv|Voice=Act	0	_	_	NER=O
+5	neděle	neděle	NOUN	NNFP4-----A----	Case=Acc|Gender=Fem|Number=Plur	0	_	_	NER=O
+6	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+7	svátky	svátek	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p8
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p8.s1
+# text = MU
+1	MU	on	PRON	P5ZS3--3-------	Case=Dat|Gender=Masc,Neut|Number=Sing|Person=3|PronType=Prs|Variant=Short	0	_	_	NER=B-ORG
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p9
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p9.s1
+# text = SKA ORECL
+1	SKA	SKA	PROPN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=B-ORG
+2	ORECL	Orecl	PROPN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=B-LOC
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p10
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p10.s1
+# text = 1 a
+1	1	1	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+2	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p11
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p11.s1
+# text = V Brně, ve středu òne 30. prosince 1914.
+1	V	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+2	Brně	Brno	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+3	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	ve	v	ADP	RV--4----------	AdpType=Voc|Case=Acc	0	_	_	NER=O
+5	středu	středa	NOUN	NNFS4-----A----	Case=Acc|Gender=Fem|Number=Sing	0	_	_	NER=O
+6	òne	òne	NOUN	F%-------------	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+7	30	30	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+9	prosince	prosinec	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+10	1914	1914	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+11	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p12
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p12.s1
+# text = REDAKCE, .
+1	REDAKCE	redakce	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p12.s2
+# text = MINISTRACE
+1	MINISTRACE	ministrace	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p13
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p13.s1
+# text = A E.. ..DICE v Besedním domě, Eliščina tř
+1	A	a	CCONJ	J^-------------	_	0	_	_	NER=O
+2	E	E	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+7	DICE	Dice	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O
+8	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+9	Besedním	besední	ADJ	AAIS6----1A----	Animacy=Inan|Case=Loc|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=B-ORG
+10	domě	dům	NOUN	NNIS6-----A----	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+11	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+12	Eliščina	Eliščin	ADJ	AUFS1M---------	Case=Nom|Gender=Fem|Gender[psor]=Masc|NameType=Giv|Number=Sing|Poss=Yes	0	_	_	NER=B-LOC
+13	tř	tř	NUM	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p14
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p14.s1
+# text = ČÍSLO TELEPONU: redakce 468a, administrace 46.
+1	ČÍSLO	číslo	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing	0	_	_	NER=O
+2	TELEPONU	telepon	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	redakce	redakce	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+5-6	468a	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	468	468	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	_
+6	a	a	NOUN	Q3-------------	Abbr=Yes	0	_	_	_
+7	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	administrace	administrace	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+9	46	46	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+10	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p15
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p15.s1
+# text = Listy přijímují se frankované.
+1	Listy	list	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+2	přijímují	přijímovat	VERB	VB-P---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+3	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
+4	frankované	frankovaný	ADJ	AAIP1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos|VerbForm=Part|Voice=Pass	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p16
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p16.s1
+# text = Reklamace, nejsou-li zapečetěny, se nefrankují.
+1	Reklamace	reklamace	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+3	nejsou	být	AUX	VB-P---3P-NAI--	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Neg|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O|SpaceAfter=No
+4	-	-	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+5	li	li	SCONJ	J,-------------	_	0	_	_	NER=O
+6	zapečetěny	zapečetěný	ADJ	VsTP----X-APP--	Animacy=Inan|Aspect=Perf|Degree=Pos|Gender=Fem,Masc|Number=Plur|Polarity=Pos|Variant=Short|VerbForm=Part|Voice=Pass	0	_	_	NER=O|SpaceAfter=No
+7	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
+9	nefrankují	frankovat	VERB	VB-P---3P-NAI--	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Neg|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O|SpaceAfter=No
+10	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p16.s2
+# text = = Rukopisy se nevracejí.
+1	=	=	SYM	Z:-------------	_	0	_	_	NER=O
+2	Rukopisy	rukopis	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+3	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
+4	nevracejí	vracet	VERB	VB-P---3P-NAI--	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Neg|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p16.s3
+# text = —
+1	—	—	ADP	Q3-------------	Abbr=Yes	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p17
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p17.s1
+# text = INSERÁTY přijímá jen administrace a účtní« je mírně.
+1	INSERÁTY	inserát	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O
+2	přijímá	přijímat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+3	jen	jen	PART	TT-------------	_	0	_	_	NER=O
+4	administrace	administrace	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+5	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+6	účtní	účtnit	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O|SpaceAfter=No
+7	«	«	SYM	Z:-------------	_	0	_	_	NER=O
+8	je	on	PRON	PEXP4--3-------	Case=Acc|Number=Plur|Person=3|PrepCase=Npr|PronType=Prs	0	_	_	NER=O
+9	mírně	mírně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+10	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p18
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p18.s1
+# text = PŘEDPLATNÉ A INSERTNĚ zapravuje se jenom v administraci v Brně.
+1	PŘEDPLATNÉ	předplatné	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing	0	_	_	NER=O
+2	A	a	CCONJ	J^-------------	_	0	_	_	NER=O
+3	INSERTNĚ	insertně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O
+4	zapravuje	zapravovat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+5	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
+6	jenom	jenom	PART	TT-------------	_	0	_	_	NER=O
+7	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+8	administraci	administrace	NOUN	NNFS6-----A----	Case=Loc|Gender=Fem|Number=Sing	0	_	_	NER=O
+9	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+10	Brně	Brno	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+11	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p19
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p19.s1
+# text = Ročník LII.
+1	Ročník	ročník	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	LII	LII	NUM	C}-------------	NumForm=Roman|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p20
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p20.s1
+# text = Číslo 275.
+1	Číslo	číslo	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing	0	_	_	NER=O
+2	275	275	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.head2.s1
+# text = Světová válka.
+1	Světová	světový	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	válka	válka	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p21
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p21.s1
+# text = Z nčkeckých bojišt.
+1	Z	z	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+2	nčkeckých	nčkecký	ADJ	AANP2----1A----	Case=Gen|Degree=Pos|Gender=Neut|Number=Plur|Polarity=Pos	0	_	_	NER=O
+3	bojišt	bojišta	NOUN	NNNP2-----A----	Case=Gen|Gender=Neut|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p22
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p22.s1
+# text = Z Berlína, 30. prosince.
+1	Z	z	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+2	Berlína	Berlín	PROPN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+3	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	30	30	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+6	prosince	prosinec	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p22.s2
+# text = Velký hlavní stan 30. prosince dopoledne.
+1	Velký	velký	ADJ	AAIS1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	hlavní	hlavní	ADJ	AAIS1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+3	stan	stan	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+4	30	30	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+6	prosince	prosinec	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+7	dopoledne	dopoledne	ADV	Db-------------	_	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p23
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p23.s1
+# text = Západní bojiště: O dvorec St. Georges jihovýchodně od Nieuportu, který před překvapujícím útokem jsme museli vykliditi, se ještě bojuje.
+1	Západní	západní	ADJ	AANS1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	bojiště	bojiště	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	O	o	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+5	dvorec	dvorec	NOUN	NNIS4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O
+6	St	St	X	F%-------------	Foreign=Yes	0	_	_	NER=B-LOC|SpaceAfter=No
+7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=I-LOC
+8	Georges	Georges	X	F%-------------	Foreign=Yes	0	_	_	NER=I-LOC
+9	jihovýchodně	jihovýchodně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O
+10	od	od	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+11	Nieuportu	Nieuport	PROPN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+12	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+13	který	který	DET	P4IS4----------	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing|PronType=Int,Rel	0	_	_	NER=O
+14	před	před	ADP	RR--7----------	AdpType=Prep|Case=Ins	0	_	_	NER=O
+15	překvapujícím	překvapující	ADJ	AGIS7-----A----	Animacy=Inan|Aspect=Imp|Case=Ins|Gender=Masc|Number=Sing|Polarity=Pos|Tense=Pres|VerbForm=Part|Voice=Act	0	_	_	NER=O
+16	útokem	útok	NOUN	NNIS7-----A----	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	0	_	_	NER=O
+17	jsme	být	AUX	VB-P---1P-AAI--	Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+18	museli	muset	VERB	VpMP----R-AAI--	Animacy=Anim|Aspect=Imp|Gender=Masc|Number=Plur|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+19	vykliditi	vyklidit	VERB	Vf--------A-P--	Aspect=Perf|Polarity=Pos|VerbForm=Inf	0	_	_	NER=O|SpaceAfter=No
+20	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+21	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
+22	ještě	ještě	ADV	Db-------------	_	0	_	_	NER=O
+23	bojuje	bojovat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O|SpaceAfter=No
+24	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p23.s2
+# text = — Bouře a průtrže mračen poškodily posice obou válčících stran ve Flandřích a v severní Francii.
+1	—	—	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	Bouře	bouře	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+3	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+4	průtrže	průtrže	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+5	mračen	mračno	NOUN	NNNP2-----A----	Case=Gen|Gender=Neut|Number=Plur	0	_	_	NER=O
+6	poškodily	poškodit	VERB	VpTP----R-AAP--	Animacy=Inan|Aspect=Perf|Gender=Fem,Masc|Number=Plur|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+7	posice	posice	NOUN	NNFP4-----A----	Case=Acc|Gender=Fem|Number=Plur	0	_	_	NER=O
+8	obou	oba	NUM	CnXP2----------	Case=Gen|Number=Plur|NumForm=Word|NumType=Card	0	_	_	NER=O
+9	válčících	válčící	ADJ	AGFP2-----A----	Aspect=Imp|Case=Gen|Gender=Fem|Number=Plur|Polarity=Pos|Tense=Pres|VerbForm=Part|Voice=Act	0	_	_	NER=O
+10	stran	strana	NOUN	NNFP2-----A----	Case=Gen|Gender=Fem|Number=Plur	0	_	_	NER=O
+11	ve	v	ADP	RV--6----------	AdpType=Voc|Case=Loc	0	_	_	NER=O
+12	Flandřích	Flandřy	PROPN	NNIP6-----A----	Animacy=Inan|Case=Loc|Gender=Masc|NameType=Geo|Number=Plur	0	_	_	NER=B-LOC
+13	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+14	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+15	severní	severní	ADJ	AAFS6----1A----	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+16	Francii	Francie	PROPN	NNFS6-----A----	Case=Loc|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+17	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p23.s3
+# text = — Na ostatní frontě minul den celkem klidně.
+1	—	—	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	Na	na	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+3	ostatní	ostatní	ADJ	AAFS6----1A----	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+4	frontě	fronta	NOUN	NNFS6-----A----	Case=Loc|Gender=Fem|Number=Sing	0	_	_	NER=O
+5	minul	minout	VERB	VpYS----R-AAP--	Aspect=Perf|Gender=Masc|Number=Sing|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+6	den	den	NOUN	NNIS4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O
+7	celkem	celkem	ADV	Db-------------	_	0	_	_	NER=O
+8	klidně	klidně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-30-944bce70.p24
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p24.s1
+# text = Východní bojiště: Ve východním Prusku byla ruská vojenská jízda zatlačena na Pilkaly.
+1	Východní	východní	ADJ	AANS1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	bojiště	bojiště	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	Ve	v	ADP	RV--6----------	AdpType=Voc|Case=Loc	0	_	_	NER=O
+5	východním	východní	ADJ	AANS6----1A----	Case=Loc|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+6	Prusku	Prusko	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+7	byla	být	AUX	VpQW----R-AAI--	Aspect=Imp|Gender=Fem,Neut|Number=Plur,Sing|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+8	ruská	ruský	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+9	vojenská	vojenský	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+10	jízda	jízda	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+11	zatlačena	zatlačený	ADJ	VsQW----X-APP--	Aspect=Perf|Degree=Pos|Gender=Fem,Neut|Number=Plur,Sing|Polarity=Pos|Variant=Short|VerbForm=Part|Voice=Pass	0	_	_	NER=O
+12	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+13	Pilkaly	Pilkaly	PROPN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|NameType=Geo|Number=Plur	0	_	_	NER=B-LOC|SpaceAfter=No
+14	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p24.s2
+# text = V Polsku na pravé straně Visly je situace nezměněna. —
+1	V	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+2	Polsku	Polsko	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+3	na	na	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+4	pravé	pravý	ADJ	AAFS6----1A----	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+5	straně	strana	NOUN	NNFS6-----A----	Case=Loc|Gender=Fem|Number=Sing	0	_	_	NER=O
+6	Visly	Visla	PROPN	NNFS2-----A----	Case=Gen|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+7	je	být	AUX	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+8	situace	situace	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+9	nezměněna	nezměněný	ADJ	VsQW----X-NPP--	Aspect=Perf|Degree=Pos|Gender=Fem,Neut|Number=Plur,Sing|Polarity=Neg|Variant=Short|VerbForm=Part|Voice=Pass	0	_	_	NER=O|SpaceAfter=No
+10	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+11	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p24.s3
+# text = Na západním břehu Visly bylo pokračováno v ofensivě východně od useku bzurského.
+1	Na	na	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+2	západním	západní	ADJ	AAIS6----1A----	Animacy=Inan|Case=Loc|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+3	břehu	břeh	NOUN	NNIS6-----A----	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	0	_	_	NER=O
+4	Visly	Visla	PROPN	NNFS2-----A----	Case=Gen|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+5	bylo	být	AUX	VpNS----R-AAI--	Aspect=Imp|Gender=Neut|Number=Sing|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+6	pokračováno	pokračovaný	ADJ	VsNS----X-API--	Aspect=Imp|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos|Variant=Short|VerbForm=Part|Voice=Pass	0	_	_	NER=O
+7	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+8	ofensivě	ofensiva	NOUN	NNFS6-----A----	Case=Loc|Gender=Fem|Number=Sing	0	_	_	NER=O
+9	východně	východně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O
+10	od	od	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+11	useku	usek	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+12	bzurského	bzurský	ADJ	AAIS2----1A----	Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+13	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p24.s4
+# text = Jinak boje trvají na useku Rawky a východně od něho, jakož i u Inowlodže a jihozápadně.
+1	Jinak	jinak	ADV	Db-------------	_	0	_	_	NER=O
+2	boje	boj	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+3	trvají	trvat	VERB	VB-P---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+4	na	na	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+5	useku	usek	NOUN	NNIS6-----A----	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	0	_	_	NER=O
+6	Rawky	Rawka	PROPN	NNFS2-----A----	Case=Gen|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+7	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+8	východně	východně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O
+9	od	od	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+10	něho	on	PRON	PEZS2--3------1	Case=Gen|Gender=Masc,Neut|Number=Sing|Person=3|PrepCase=Pre|PronType=Prs	0	_	_	NER=O|SpaceAfter=No
+11	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+12	jakož	jakož	SCONJ	J,-------------	_	0	_	_	NER=O
+13	i	i	PART	TT-------------	_	0	_	_	NER=O
+14	u	u	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+15	Inowlodže	Inowlodž	PROPN	NNFS2-----A----	Case=Gen|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+16	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+17	jihozápadně	jihozápadně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+18	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p24.s5
+# text = — Dle zahraničních zpráv se zdá, jakoby Lovič a Skierniewice nebyly v našem držení.
+1	—	—	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	Dle	dle	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+3	zahraničních	zahraniční	ADJ	AAFP2----1A----	Case=Gen|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O
+4	zpráv	zpráva	NOUN	NNFP2-----A----	Case=Gen|Gender=Fem|Number=Plur	0	_	_	NER=O
+5	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
+6	zdá	zdát	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O|SpaceAfter=No
+7	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	jakoby	jakoby	SCONJ	J,-------------	_	0	_	_	NER=O
+9	Lovič	Lovič	PROPN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+10	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+11	Skierniewice	Skierniewice	PROPN	NNFP1-----A----	Case=Nom|Gender=Fem|NameType=Geo|Number=Plur	0	_	_	NER=B-LOC
+12	nebyly	být	AUX	VpTP----R-NAI--	Animacy=Inan|Aspect=Imp|Gender=Fem,Masc|Number=Plur|Polarity=Neg|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+13	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+14	našem	náš	DET	PSZS6-P1-------	Case=Loc|Gender=Masc,Neut|Number=Sing|Number[psor]=Plur|Person=1|Poss=Yes|PronType=Prs	0	_	_	NER=O
+15	držení	držení	NOUN	NNNS6-----A----	Case=Loc|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O|SpaceAfter=No
+16	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p24.s6
+# text = Tato místa byla námi zabrána již více než před 6 dny.
+1	Tato	tento	DET	PDNP1----------	Case=Nom|Gender=Neut|Number=Plur|PronType=Dem	0	_	_	NER=O
+2	místa	místo	NOUN	NNNP1-----A----	Case=Nom|Gender=Neut|Number=Plur	0	_	_	NER=O
+3	byla	být	AUX	VpQW----R-AAI--	Aspect=Imp|Gender=Fem,Neut|Number=Plur,Sing|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+4	námi	my	PRON	PP-P7--1-------	Case=Ins|Number=Plur|Person=1|PronType=Prs	0	_	_	NER=O
+5	zabrána	zabraný	ADJ	VsQW----X-APP--	Aspect=Perf|Degree=Pos|Gender=Fem,Neut|Number=Plur,Sing|Polarity=Pos|Variant=Short|VerbForm=Part|Voice=Pass	0	_	_	NER=O
+6	již	již	PART	TT-------------	_	0	_	_	NER=O
+7	více	více	ADV	Dg-------2A----	Degree=Cmp|Polarity=Pos	0	_	_	NER=O
+8	než	než	SCONJ	J,-------------	_	0	_	_	NER=O
+9	před	před	ADP	RR--7----------	AdpType=Prep|Case=Ins	0	_	_	NER=O
+10	6	6	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+11	dny	den	NOUN	NNIP7-----A----	Animacy=Inan|Case=Ins|Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-30-944bce70.p24.s7
+# text = Skierniewice leží daleko za naší frontou.
+1	Skierniewice	Skierniewice	PROPN	NNFP1-----A----	Case=Nom|Gender=Fem|NameType=Geo|Number=Plur	0	_	_	NER=B-LOC
+2	leží	ležet	VERB	VB-P---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+3	daleko	daleko	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O
+4	za	za	ADP	RR--7----------	AdpType=Prep|Case=Ins	0	_	_	NER=O
+5	naší	náš	DET	PSFS7-P1-------	Case=Ins|Gender=Fem|Number=Sing|Number[psor]=Plur|Person=1|Poss=Yes|PronType=Prs	0	_	_	NER=O
+6	frontou	fronta	NOUN	NNFS7-----A----	Case=Ins|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
 
