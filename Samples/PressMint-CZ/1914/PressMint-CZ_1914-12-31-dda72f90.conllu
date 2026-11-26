@@ -1,7 +1,5 @@
 # newdoc id = PressMint-CZ_1914-12-31-dda72f90.ana
-# newpar id = PressMint-CZ_1914-12-31-dda72f90.p1
-# lang = cs
-# sent_id = PressMint-CZ_1914-12-31-dda72f90.p1.s1
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head1.s1
 # text = Varšavský gubernátor nebude propuštěn.
 1	Varšavský	varšavský	ADJ	AAMS1----1A----	Animacy=Anim|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
 2	gubernátor	gubernátor	NOUN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
@@ -9,9 +7,9 @@
 4	propuštěn	propuštěný	ADJ	VsYS----X-APP--	Aspect=Perf|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos|Variant=Short|VerbForm=Part|Voice=Pass	0	_	_	NER=O|SpaceAfter=No
 5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
 
-# newpar id = PressMint-CZ_1914-12-31-dda72f90.p2
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p1
 # lang = cs
-# sent_id = PressMint-CZ_1914-12-31-dda72f90.p2.s1
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p1.s1
 # text = Zpravodaj »Deutsche Volksblattu« se dovídá, že se Německo rozhodlo, nevyhověti žádosti za propuštění generálního gubernátora varšavského, bar. Korffa.
 1	Zpravodaj	zpravodaj	NOUN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
 2	»	»	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
@@ -39,7 +37,7 @@
 24	Korffa	Korff	PROPN	NNMS2-----A----	Animacy=Anim|Case=Gen|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=B-PER|SpaceAfter=No
 25	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
 
-# sent_id = PressMint-CZ_1914-12-31-dda72f90.p2.s2
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p1.s2
 # text = Jak známo, bylo jeho propuštění žádáno s odůvodněním, že bar.
 1	Jak	jak	SCONJ	J,-------------	_	0	_	_	NER=O
 2	známo	známý	ADJ	ACNS------A----	Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos|Variant=Short	0	_	_	NER=O|SpaceAfter=No
@@ -55,7 +53,7 @@
 12	bar	bar	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=B-PER|SpaceAfter=No
 13	.	.	PUNCT	Z:-------------	_	0	_	_	NER=I-PER
 
-# sent_id = PressMint-CZ_1914-12-31-dda72f90.p2.s3
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p1.s3
 # text = Korff byl zajat při činnosti v intencích Červeného kříže.
 1	Korff	Korff	PROPN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=B-PER
 2	byl	být	AUX	VpYS----R-AAI--	Aspect=Imp|Gender=Masc|Number=Sing|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
@@ -68,9 +66,540 @@
 9	kříže	kříž	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
 10	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
 
-# newpar id = PressMint-CZ_1914-12-31-dda72f90.p139
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head2.s1
+# text = Mátka s Turacan.
+1	Mátka	mátka	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+2	s	s	ADP	RR--7----------	AdpType=Prep|Case=Ins	0	_	_	NER=O
+3	Turacan	Turacan	PROPN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|NameType=Oth|Number=Sing	0	_	_	NER=B-PER|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head3.s1
+# text = Portugalci v Egyptě?
+1	Portugalci	Portugalec	PROPN	NNMP1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Nat|Number=Plur	0	_	_	NER=B-MISC
+2	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+3	Egyptě	Egypt	PROPN	NNIS6-----A----	Animacy=Inan|Case=Loc|Gender=Masc|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+4	?	?	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p2
 # lang = cs
-# sent_id = PressMint-CZ_1914-12-31-dda72f90.p139.s1
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p2.s1
+# text = Turinská »Stampa« sděluje, že 20. prosince byly dopraveny do Kahýry dva pluky portugalské pěchoty a umístěny v anglických kasárnách.
+1	Turinská	turinský	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	»	»	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+3	Stampa	Stampa	X	NNFS1-----A----	Foreign=Yes	0	_	_	NER=B-ORG|SpaceAfter=No
+4	«	«	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	sděluje	sdělovat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	že	že	SCONJ	J,-------------	_	0	_	_	NER=O
+8	20	20	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+10	prosince	prosinec	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+11	byly	být	AUX	VpTP----R-AAI--	Animacy=Inan|Aspect=Imp|Gender=Fem,Masc|Number=Plur|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+12	dopraveny	dopravený	ADJ	VsTP----X-APP--	Animacy=Inan|Aspect=Perf|Degree=Pos|Gender=Fem,Masc|Number=Plur|Polarity=Pos|Variant=Short|VerbForm=Part|Voice=Pass	0	_	_	NER=O
+13	do	do	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+14	Kahýry	Kahýra	PROPN	NNFS2-----A----	Case=Gen|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+15	dva	dva	NUM	CnYP1----------	Case=Nom|Gender=Masc|Number=Plur|NumForm=Word|NumType=Card	0	_	_	NER=O
+16	pluky	pluk	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+17	portugalské	portugalský	ADJ	AAFS2----1A----	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+18	pěchoty	pěchota	NOUN	NNFS2-----A----	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=O
+19	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+20	umístěny	umístěný	ADJ	VsTP----X-APP--	Animacy=Inan|Aspect=Perf|Degree=Pos|Gender=Fem,Masc|Number=Plur|Polarity=Pos|Variant=Short|VerbForm=Part|Voice=Pass	0	_	_	NER=O
+21	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+22	anglických	anglický	ADJ	AANP6----1A----	Case=Loc|Degree=Pos|Gender=Neut|Number=Plur|Polarity=Pos	0	_	_	NER=O
+23	kasárnách	kasárna	NOUN	NNNP6-----A----	Case=Loc|Gender=Neut|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+24	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head43.s1
+# text = Q
+1	Q	Q	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head44.s1
+# text = Dchod
+1	Dchod	dchod	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head45.s1
+# text = papírem ve velkem
+1	papírem	papír	NOUN	NNIS7-----A----	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	ve	v	ADP	RV--6----------	AdpType=Voc|Case=Loc	0	_	_	NER=O
+3	velkem	velek	NOUN	NNIS7-----A----	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head46.s1
+# text = A
+1	A	a	CCONJ	J^-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head47.s1
+# text = BA
+1	BA	BA	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head48.s1
+# text = y sklad c. k. priv.
+1	y	y	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	sklad	sklad	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+3	c	c	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	k	k	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	priv	priv	NOUN	NNIXX-----A---b	Abbr=Yes|Animacy=Inan|Gender=Masc	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head48.s2
+# text = Neusiedelské akciové společnosti pro výrobu papíru,
+1	Neusiedelské	neusiedelský	ADJ	AAFS3----1A----	Case=Dat|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=B-ORG
+2	akciové	akciový	ADJ	AAFS3----1A----	Case=Dat|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=I-ORG
+3	společnosti	společnost	NOUN	NNFS3-----A----	Case=Dat|Gender=Fem|Number=Sing	0	_	_	NER=I-ORG
+4	pro	pro	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=I-ORG
+5	výrobu	výroba	NOUN	NNFS4-----A----	Case=Acc|Gender=Fem|Number=Sing	0	_	_	NER=I-ORG
+6	papíru	papír	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+7	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head49.s1
+# text = BrnO, V (Kaunicův palác
+1	BrnO	Brno	PROPN	NNNS1-----A----	Case=Nom|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+3	V	V	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+4	(	(	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+5	Kaunicův	Kaunicův	ADJ	AUIS1M---------	Animacy=Inan|Case=Nom|Gender=Masc|Gender[psor]=Masc|NameType=Giv|Number=Sing|Poss=Yes	0	_	_	NER=O
+6	palác	palác	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head50.s1
+# text = Veselá ulice
+1	Veselá	veselý	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	ulice	ulice	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head51.s1
+# text = Velké nám.
+1	Velké	velký	ADJ	AANS4----1A----	Case=Acc|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	nám	my	PRON	PP-P3--1-------	Case=Dat|Number=Plur|Person=1|PronType=Prs	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head51.s2
+# text = 28,
+1	28	28	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head52.s1
+# text = doporučuje p. T. knihtiskárnám a obchodníkům papírem svůj hojně a účelně sdružený sklad veškerých dopisních, kancelář-- ských a barevných papírů, jakož i papírů pro umělý tisk.
+1	doporučuje	doporučovat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+2	p	p	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	T	T	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+6	knihtiskárnám	knihtiskárna	NOUN	NNFP3-----A----	Case=Dat|Gender=Fem|Number=Plur	0	_	_	NER=O
+7	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+8	obchodníkům	obchodník	NOUN	NNMP3-----A----	Animacy=Anim|Case=Dat|Gender=Masc|Number=Plur	0	_	_	NER=O
+9	papírem	papír	NOUN	NNIS7-----A----	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	0	_	_	NER=O
+10	svůj	svůj	DET	P8IS4----------	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing|Poss=Yes|PronType=Prs|Reflex=Yes	0	_	_	NER=O
+11	hojně	hojně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O
+12	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+13	účelně	účelně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O
+14	sdružený	sdružený	ADJ	AAIS4----1A----	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos|VerbForm=Part|Voice=Pass	0	_	_	NER=O
+15	sklad	sklad	NOUN	NNIS4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O
+16	veškerých	veškerý	PRON	PLXP2----------	Case=Gen|Number=Plur|PronType=Tot	0	_	_	NER=O
+17	dopisních	dopisní	ADJ	AAIP2----1A----	Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+18	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+19	kancelář	kancelář	ADJ	S2--------A----	Degree=Pos|Hyph=Yes|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+20	-	-	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+21	-	-	PUNCT	Z:-------------	_	0	_	_	NER=O
+22	ských	ský	ADJ	AAIP2----1A----	Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+23	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+24	barevných	barevný	ADJ	AAIP2----1A----	Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+25	papírů	papír	NOUN	NNIP2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+26	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+27	jakož	jakož	SCONJ	J,-------------	_	0	_	_	NER=O
+28	i	i	PART	TT-------------	_	0	_	_	NER=O
+29	papírů	papír	NOUN	NNIP2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	0	_	_	NER=O
+30	pro	pro	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+31	umělý	umělý	ADJ	AAIS4----1A----	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+32	tisk	tisk	NOUN	NNIS4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+33	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head53.s1
+# text = Vzorky na požádání franko.
+1	Vzorky	vzorek	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O
+2	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+3	požádání	požádání	NOUN	NNNS4-----A----	Case=Acc|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O
+4	franko	franko	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p191
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p191.s1
+# text = Účet pošt. spoř. č. 74.521.
+1	Účet	účet	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	pošt	pošt	ADJ	AAXXX----1A---b	Abbr=Yes|Degree=Pos|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	spoř	spořpolečnost	NOUN	NNFXX-----A---a	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+6	č	číslo	NOUN	NNNXX-----A---b	Abbr=Yes|Gender=Neut	0	_	_	NER=O|SpaceAfter=No
+7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	74.521	74.521	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p191.s2
+# text = Clearingové spojení.
+1	Clearingové	clearingový	ADJ	AANS1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	spojení	spojení	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p191.s3
+# text = Telefon č. 1348 v meziměstském spojení.
+1	Telefon	telefon	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	č	číslo	NOUN	NNNXX-----A---b	Abbr=Yes|Gender=Neut	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	1348	1348	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+5	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+6	meziměstském	meziměstský	ADJ	AANS6----1A----	Case=Loc|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+7	spojení	spojení	NOUN	NNNS6-----A----	Case=Loc|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p192
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p192.s1
+# text = 3759
+1	3759	3759	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head54.s1
+# text = Zvláštní výroby.
+1	Zvláštní	zvláštní	ADJ	AAFP1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O
+2	výroby	výroba	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head55.s1
+# text = KADODONT
+1	KADODONT	kadodont	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p193
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p193.s1
+# text = nejlepší
+1	nejlepší	lepší	ADJ	AANS1----3A----	Case=Nom|Degree=Sup|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p194
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p194.s1
+# text = 3766 zubní krém
+1	3766	3766	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+2	zubní	zubní	ADJ	AAIS1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+3	krém	krém	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p195
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p195.s1
+# text = StJí od 21. prosince 1914 70 halířů.
+1	StJí	sát	NOUN	NNFS7-----A----	Case=Ins|Gender=Fem|Number=Sing	0	_	_	NER=B-MISC
+2	od	od	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+3	21	21	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	prosince	prosinec	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+6	1914	1914	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+7	70	70	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+8	halířů	halíř	NOUN	NNMP2-----A----	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head56.s1
+# text = ZIMnI oděvy
+1	ZIMnI	zimně	NOUN	NNMP1-----A----	_	0	_	_	NER=O
+2	oděvy	oděv	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p196
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p196.s1
+# text = pánské obleky od K 18.— raglány „ „ 20.— zimníky „ „ 25.— kožichy „ „ 25.— župany „ „ 14.—
+1	pánské	pánský	ADJ	AAIP1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+2	obleky	oblek	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+3	od	od	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+4	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=B-ORG
+5	18	18	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+7	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	raglány	raglán	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+9	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+10	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+11	20	20	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+13	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+14	zimníky	zimník	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+15	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+16	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+17	25	25	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+18	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+19	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+20	kožichy	kožich	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+21	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+22	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+23	25	25	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+24	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+25	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+26	župany	župan	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+27	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+28	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+29	14	14	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+30	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+31	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p197
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p197.s1
+# text = Dámské kostymy od K 20.— raglány „ „ 15.— halenky „ „ 3.— paleta „ „ 14.— župany
+1	Dámské	dámský	ADJ	AAIP1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+2	kostymy	kostym	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+3	od	od	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+4	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=B-ORG
+5	20	20	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+7	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	raglány	raglán	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+9	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+10	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+11	15	15	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+13	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+14	halenky	halenka	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+15	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+16	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+17	3	3	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+18	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+19	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+20	paleta	paleta	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+21	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+22	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+23	14	14	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+24	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+25	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+26	župany	župan	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p198
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p198.s1
+# text = „ „ 3.—
+1	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+2	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+3	3	3	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+5	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p199
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p199.s1
+# text = 3685
+1	3685	3685	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p200
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p200.s1
+# text = Chlapecké
+1	Chlapecké	chlapecký	ADJ	AAFP1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p201
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p201.s1
+# text = Dívčí obleky od K 4.— šátky od K 2.50 pláštíky „ „ 6.— raglány „ „ 10.— s plyš. „ „ 8.— zimníky „ „ 7.— limce „ „ 5.— čepice „ „ 0.99 kožešinové soupravy beraničky„ „ 2.— od K 2.50.
+1	Dívčí	dívčí	ADJ	AAIP1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+2	obleky	oblek	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+3	od	od	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+4	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=B-ORG
+5	4	4	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+7	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	šátky	šátek	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+9	od	od	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+10	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=B-ORG
+11	2.50	2.50	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+12	pláštíky	pláštík	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+13	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+14	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+15	6	6	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+16	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+17	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+18	raglány	raglán	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+19	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+20	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+21	10	10	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+22	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+23	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+24	s	s	ADP	RR--7----------	AdpType=Prep|Case=Ins	0	_	_	NER=O
+25	plyš	plyš	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+26	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+27	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+28	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+29	8	8	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+30	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+31	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+32	zimníky	zimník	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+33	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+34	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+35	7	7	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+36	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+37	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+38	limce	limce	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+39	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+40	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+41	5	5	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+42	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+43	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+44	čepice	čepice	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+45	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+46	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+47	0.99	0.99	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+48	kožešinové	kožešinový	ADJ	AAFP1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O
+49	soupravy	souprava	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+50	beraničky	beranička	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+51	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+52	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+53	2	2	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+54	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+55	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+56	od	od	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+57	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=B-ORG
+58	2.50	2.50	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+59	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p202
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p202.s1
+# text = FRANT.
+1	FRANT	Frant	PROPN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=B-PER|SpaceAfter=No
+2	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p202.s2
+# text = KROUPA, Brno, Ferdinand. ul. 10-12.
+1	KROUPA	Kroupa	PROPN	NNFS1-----A----	Case=Nom|Gender=Fem|NameType=Oth|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+3	Brno	Brno	PROPN	NNNS1-----A----	Case=Nom|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+4	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	Ferdinand	Ferdinand	ADJ	AAXXX----1A---b	Abbr=Yes|Degree=Pos|Polarity=Pos	0	_	_	NER=B-LOC|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	ul	ulpolečnost	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+9	10	10	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+10	-	-	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+11	12	12	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p203
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p203.s1
+# text = R
+1	R	R	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p204
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p204.s1
+# text = ReRTae
+1	ReRTae	Rertae	PROPN	NNFS1-----A----	Case=Nom|Gender=Fem|NameType=Oth|Number=Sing	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head57.s1
+# text = ŽÁDEJTE NÁŠLISI VE VŠECH HOSTINCÍCH =AKAVÁRNÁCH!E
+1	ŽÁDEJTE	žádat	VERB	Vi-P---2--A-I--	Aspect=Imp|Mood=Imp|Number=Plur|Person=2|Polarity=Pos|VerbForm=Fin	0	_	_	NER=O
+2	NÁŠLISI	nášlise	NOUN	NNMP4-----A----	Case=Acc|Gender=Fem|Number=Sing	0	_	_	NER=O
+3	VE	v	ADP	RV--6----------	AdpType=Voc|Case=Loc	0	_	_	NER=O
+4	VŠECH	všechen	DET	PLXP6----------	Case=Loc|Number=Plur|PronType=Tot	0	_	_	NER=O
+5	HOSTINCÍCH	hostinec	NOUN	NNIP6-----A----	Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur	0	_	_	NER=O
+6	=	=	SYM	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+7	AKAVÁRNÁCH	akavárna	NOUN	NNFP6-----A----	Case=Loc|Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+8	!	!	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+9	E	E	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p205
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p205.s1
+# text = Pozvání ku předplacení.
+1	Pozvání	pozvání	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O
+2	ku	k	ADP	RV--3---------1	AdpType=Voc|Case=Dat	0	_	_	NER=O
+3	předplacení	předplacení	NOUN	NNNS3-----A----	Case=Dat|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p206
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p206.s1
+# text = Dnem 1. ledna 1915 počne nové předplacení na první čtvrt leti politického denníku
+1	Dnem	den	NOUN	NNIS7-----A----	Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	1	1	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	ledna	leden	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+5	1915	1915	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+6	počne	počít	VERB	VB-S---3P-AAP--	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+7	nové	nový	ADJ	AANS1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+8	předplacení	předplacení	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O
+9	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+10	první	první	ADJ	CrFS4----------	Case=Acc|Gender=Fem|Number=Sing|NumType=Ord	0	_	_	NER=O
+11	čtvrt	čtvrt	NUM	CzFS4----------	Case=Acc|Gender=Fem|Number=Sing|NumType=Card	0	_	_	NER=O
+12	leti	let	NOUN	NNNS2-----A----	Case=Gen|Gender=Neut|Number=Sing	0	_	_	NER=O
+13	politického	politický	ADJ	AAIS2----1A----	Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+14	denníku	denník	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p207
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p207.s1
+# text = „RNSRE URLICE'
+1	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+2	RNSRE	RNSRE	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=B-ORG
+3	URLICE	Urlice	PROPN	F%-------------	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+4	'	'	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p208
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p208.s1
+# text = Předplácí se:
+1	Předplácí	předplácet	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+2	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p209
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p209.s1
+# text = aby každý předplatil právě za-
+1-2	aby	_	_	_	_	_	_	_	NER=O
+1	aby	aby	SCONJ	J,-------------	_	0	_	_	_
+2	by	být	AUX	Vc-------------	Aspect=Imp|Mood=Cnd|VerbForm=Fin	0	_	_	_
+3	každý	každý	DET	PLMS1----------	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing|PronType=Tot	0	_	_	NER=O
+4	předplatil	předplatit	VERB	VpYS----R-AAP--	Aspect=Perf|Gender=Masc|Number=Sing|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+5	právě	právě	PART	TT-------------	_	0	_	_	NER=O
+6	za	za	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O|SpaceAfter=No
+7	-	-	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p210
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p210.s1
+# text = hájený nový ročník Humorů,
+1	hájený	hájený	ADJ	AAIS1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos|VerbForm=Part|Voice=Pass	0	_	_	NER=O
+2	nový	nový	ADJ	AAIS1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+3	ročník	ročník	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+4	Humorů	Humor	PROPN	NNIP2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	0	_	_	NER=B-ORG|SpaceAfter=No
+5	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p211
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p211.s1
+# text = jehož první číslo již vyšlo.
+1	jehož	jehož	DET	P1XXXZS3-------	Gender[psor]=Masc,Neut|Number[psor]=Sing|Person=3|Poss=Yes|PronType=Rel	0	_	_	NER=O
+2	první	první	ADJ	CrNS1----------	Case=Nom|Gender=Neut|Number=Sing|NumType=Ord	0	_	_	NER=O
+3	číslo	číslo	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing	0	_	_	NER=O
+4	již	již	ADV	Db-------------	_	0	_	_	NER=O
+5	vyšlo	vyjít	VERB	VpNS----R-AAP--	Aspect=Perf|Gender=Neut|Number=Sing|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p212
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p212.s1
+# text = v
+1	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p213
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p213.s1
+# text = Předplácí se K 3.80 na čtvrt roku
+1	Předplácí	předplácet	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+2	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
+3	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+4	3.80	3.80	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+5	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+6	čtvrt	čtvrt	NUM	CzFS4----------	Case=Acc|Gender=Fem|Number=Sing|NumType=Card	0	_	_	NER=O
+7	roku	rok	NOUN	NNIS2-----A---1	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p214
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p214.s1
 # text = i s poštou v každém knihkupectví.
 1	i	i	PART	TT-------------	_	0	_	_	NER=O
 2	s	s	ADP	RR--7----------	AdpType=Prep|Case=Ins	0	_	_	NER=O
@@ -80,7 +609,9 @@
 6	knihkupectví	knihkupectví	NOUN	NNNS6-----A----	Case=Loc|Gender=Neut|Number=Sing	0	_	_	NER=O|SpaceAfter=No
 7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
 
-# sent_id = PressMint-CZ_1914-12-31-dda72f90.p139.s2
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p215
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p215.s1
 # text = Ukázkové číslo zašle každému na požádání
 1	Ukázkové	ukázkový	ADJ	AANS4----1A----	Case=Acc|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
 2	číslo	číslo	NOUN	NNNS4-----A----	Case=Acc|Gender=Neut|Number=Sing	0	_	_	NER=O
@@ -89,20 +620,1256 @@
 5	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
 6	požádání	požádání	NOUN	NNNS4-----A----	Case=Acc|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O
 
-# newpar id = PressMint-CZ_1914-12-31-dda72f90.p140
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p216
 # lang = cs
-# sent_id = PressMint-CZ_1914-12-31-dda72f90.p140.s1
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p216.s1
 # text = Administrace HUMORIST.
-1	Administrace	administrace	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
-2	HUMORIST	Humorist	PROPN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|NameType=Oth|Number=Sing	0	_	_	NER=B-ORG|SpaceAfter=No
+1	Administrace	administrace	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=B-ORG
+2	HUMORIST	Humorist	PROPN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|NameType=Oth|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
 3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=I-ORG
 
-# sent_id = PressMint-CZ_1914-12-31-dda72f90.p140.s2
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p216.s2
 # text = LISTŮ v Praze, Spálená 18
 1	LISTŮ	list	NOUN	NNMP2-----A----	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	0	_	_	NER=B-ORG
-2	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
-3	Praze	Praha	PROPN	NNFS6-----A----	Case=Loc|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+2	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=I-ORG
+3	Praze	Praha	PROPN	NNFS6-----A----	Case=Loc|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
 4	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
-5	Spálená	spálený	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos|VerbForm=Part|Voice=Pass	0	_	_	NER=O
+5	Spálená	spálený	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos|VerbForm=Part|Voice=Pass	0	_	_	NER=B-LOC
 6	18	18	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p217
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p217.s1
+# text = LITOVELSKÉ
+1	LITOVELSKÉ	litovelský	ADJ	AANS1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=B-LOC
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p218
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p218.s1
+# text = =PIO z rolnického akciov.
+1	=	=	SYM	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+2	PIO	PIO	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O
+3	z	z	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+4	rolnického	rolnický	ADJ	AANS2----1A----	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+5	akciov	akciov	X	F%-------------	Foreign=Yes	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p218.s2
+# text = pivovaru uznává se všeobecně za jedlné konkurenční.
+1	pivovaru	pivovar	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	uznává	uznávat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+3	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
+4	všeobecně	všeobecně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O
+5	za	za	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+6	jedlné	jedlný	ADJ	AANS4----1A----	Case=Acc|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+7	konkurenční	konkurenční	ADJ	AANS4----1A----	Case=Acc|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p218.s3
+# text = s pivem plzeňským.
+1	s	s	ADP	RR--7----------	AdpType=Prep|Case=Ins	0	_	_	NER=O
+2	pivem	pivo	NOUN	NNNS7-----A----	Case=Ins|Gender=Neut|Number=Sing	0	_	_	NER=O
+3	plzeňským	plzeňský	ADJ	AANS7----1A----	Case=Ins|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p219
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p219.s1
+# text = Pro Brno a okolí: sklad a písárna Brno-Židenice ve vlastním domě.
+1	Pro	pro	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+2	Brno	Brno	PROPN	NNNS4-----A----	Case=Acc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+3	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+4	okolí	okolí	NOUN	NNNS4-----A----	Case=Acc|Gender=Neut|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+5	:	:	PUNCT	Z:-------------	_	0	_	_	NER=O
+6	sklad	sklad	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+7	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+8	písárna	písárna	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+9	Brno	Brno	PROPN	NNNS1-----A----	Case=Nom|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+10	-	-	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+11	Židenice	Židenice	PROPN	NNFP1-----A----	Case=Nom|Gender=Fem|NameType=Geo|Number=Plur	0	_	_	NER=O
+12	ve	v	ADP	RV--6----------	AdpType=Voc|Case=Loc	0	_	_	NER=O
+13	vlastním	vlastní	ADJ	AAIS6----1A----	Animacy=Inan|Case=Loc|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+14	domě	dům	NOUN	NNIS6-----A----	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+15	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p220
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p220.s1
+# text = Telefon 1287.
+1	Telefon	telefon	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	1287	1287	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p221
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p221.s1
+# text = Poctěno nejvyšším vyznamonáním na mezlnár.
+1	Poctěno	poctěný	ADJ	VsNS----X-APP--	Aspect=Perf|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos|Variant=Short|VerbForm=Part|Voice=Pass	0	_	_	NER=O
+2	nejvyšším	vysoký	ADJ	AANS7----3A----	Case=Ins|Degree=Sup|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+3	vyznamonáním	vyznamonání	NOUN	NNNS7-----A----	Case=Ins|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O
+4	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+5	mezlnár	mezlnár	NOUN	NNIS4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p221.s2
+# text = výstavě ve Vídni 1908.
+1	výstavě	výstava	NOUN	NNFS3-----A----	Case=Dat|Gender=Fem|Number=Sing	0	_	_	NER=O
+2	ve	v	ADP	RV--6----------	AdpType=Voc|Case=Loc	0	_	_	NER=O
+3	Vídni	Vídeň	PROPN	NNFS6-----A----	Case=Loc|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+4	1908	1908	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p222
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p222.s1
+# text = RERRRSS
+1	RERRRSS	Rerrrss	PROPN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p223
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p223.s1
+# text = Veškerédruhylosu ednotlivě, jakož i ve skupinách dostati lze u nás ☞ na mírné splátky měsíční: na měs. spl. 3% pozem.
+1	Veškerédruhylosu	veškerédruhylosa	NOUN	NNFS4-----A----	Case=Acc|Gender=Fem|Number=Sing	0	_	_	NER=O
+2	ednotlivě	ednotlivě	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	jakož	jakož	SCONJ	J,-------------	_	0	_	_	NER=O
+5	i	i	PART	J^-------------	_	0	_	_	NER=O
+6	ve	v	ADP	RV--6----------	AdpType=Voc|Case=Loc	0	_	_	NER=O
+7	skupinách	skupina	NOUN	NNFP6-----A----	Case=Loc|Gender=Fem|Number=Plur	0	_	_	NER=O
+8	dostati	dostat	VERB	Vf--------A-P--	Aspect=Perf|Polarity=Pos|VerbForm=Inf	0	_	_	NER=O
+9	lze	lze	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+10	u	u	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+11	nás	my	PRON	PP-P2--1-------	Case=Gen|Number=Plur|Person=1|PronType=Prs	0	_	_	NER=O
+12	☞	☞	NOUN	Q3-------------	_	0	_	_	NER=O
+13	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+14	mírné	mírný	ADJ	AAFP4----1A----	Case=Acc|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O
+15	splátky	splátka	NOUN	NNFP4-----A----	Case=Acc|Gender=Fem|Number=Plur	0	_	_	NER=O
+16	měsíční	měsíční	ADJ	AAFP4----1A----	Case=Acc|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+17	:	:	PUNCT	Z:-------------	_	0	_	_	NER=O
+18	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+19	měs	měs	NOUN	BNXXX-----A----	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+20	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+21	spl	spát	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+22	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+23	3	3	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+24	%	%	SYM	Z:-------------	_	0	_	_	NER=O
+25	pozem	pozem	NOUN	Db-------------	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+26	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p223.s2
+# text = los I. em. . . . à K 10.— 3% pozem.
+1	los	los	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	I	I	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	em	em	NOUN	F%-------------	Foreign=Yes	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+9	à	à	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+10	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+11	10	10	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+13	—	—	ADP	Q3-------------	Abbr=Yes	0	_	_	NER=O
+14	3	3	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+15	%	%	SYM	Z:-------------	_	0	_	_	NER=O
+16	pozem	pozem	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+17	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p223.s3
+# text = los II. em. . . . .
+1	los	los	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	II	II	NUM	C}-------------	NumForm=Roman|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	em	em	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p223.s4
+# text = K 9.— 4% uher. hypot. losy. . . ..
+1	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	9	9	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+4	—	—	CCONJ	J*-------------	ConjType=Oper	0	_	_	NER=O
+5	4	4	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+6	%	%	SYM	Z:-------------	_	0	_	_	NER=O
+7	uher	uher	ADJ	F%-------------	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+9	hypot	hypot	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+10	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+11	losy	los	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+13	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+14	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+15	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+16	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p223.s5
+# text = K 8. 4% losy na reg. Tissy . . . .
+1	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	8	8	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	4	4	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+5	%	%	SYM	Z:-------------	_	0	_	_	NER=O
+6	losy	los	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+7	na	na	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+8	reg	reg	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+10	Tissy	Tissy	PROPN	NNXXX-----A----	NameType=Oth	0	_	_	NER=O
+11	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+12	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+13	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+14	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p223.s6
+# text = K 12.— 1/ uherské prem. losy . . . .
+1	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	12	12	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+4	—	—	ADP	Z:-------------	_	0	_	_	NER=O
+5	1	1	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+6	/	/	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	uherské	uherský	ADJ	AAIP1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+8	prem	prem	X	F%-------------	Foreign=Yes	0	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+10	losy	los	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+11	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+12	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+13	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+14	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p223.s7
+# text = K 14.—
+1	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	14	14	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+4	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p224
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p224.s1
+# text = . . . „ K 7.—
+1	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+2	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+6	7	7	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+8	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p225
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p225.s1
+# text = Právo na výhru po složení první splátky.
+1	Právo	právo	NOUN	NNNS4-----A----	Case=Acc|Gender=Neut|Number=Sing	0	_	_	NER=O
+2	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+3	výhru	výhra	NOUN	NNFS4-----A----	Case=Acc|Gender=Fem|Number=Sing	0	_	_	NER=O
+4	po	po	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+5	složení	složení	NOUN	NNNS6-----A----	Case=Loc|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O
+6	první	první	ADJ	CrFS2----------	Case=Gen|Gender=Fem|Number=Sing|NumType=Ord	0	_	_	NER=O
+7	splátky	splátka	NOUN	NNFS2-----A----	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p225.s2
+# text = 57
+1	57	57	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p226
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p226.s1
+# text = Tažební listiny po každém fahu.
+1	Tažební	tažební	ADJ	AAFP1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O
+2	listiny	listina	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+3	po	po	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+4	každém	každý	DET	PLIS6----------	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing|PronType=Tot	0	_	_	NER=O
+5	fahu	fah	NOUN	NNIS6-----A----	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p227
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p227.s1
+# text = Bankovní a velkoobohodní dům L. HERBER.
+1	Bankovní	bankovní	ADJ	AAIS1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+3	velkoobohodní	velkoobohodní	ADJ	AAIS1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+4	dům	dům	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+5	L	L	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=B-PER|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=B-ORG
+7	HERBER	Herber	PROPN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p227.s2
+# text = Brno.
+1	Brno	Brno	PROPN	NNNS1-----A----	Case=Nom|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p227.s3
+# text = Velké nám.3.
+1	Velké	velký	ADJ	AANS1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2-3	nám.3	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	nám	my	PRON	PP-P3--1-------	Case=Dat|Number=Plur|Person=1|PronType=Prs	0	_	_	_
+3	.3	.3	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	_
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p228
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p228.s1
+# text = EEENEEEBESEREREEBREES,
+1	EEENEEEBESEREREEBREES	Eeeneeebeserereebrees	PROPN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p229
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p229.s1
+# text = Proti kašli BRREERERBRRRERrERNan osvědčily se nejlépe prsní pastilky po 20 a 40 hal., eucalyptové bonbony 50h, jitrocelové bonbony 60 h. cibulové bonbony bal.50 h, „Valda“ pastilky K 1.75. n
+1	Proti	proti	ADP	RR--3----------	AdpType=Prep|Case=Dat	0	_	_	NER=O
+2	kašli	kašel	NOUN	NNIS3-----A----	Animacy=Inan|Case=Dat|Gender=Masc|Number=Sing	0	_	_	NER=O
+3	BRREERERBRRRERrERNan	Brreererbrrrerrernan	PROPN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=O
+4	osvědčily	osvědčit	VERB	VpTP----R-AAP--	Animacy=Inan|Aspect=Perf|Gender=Fem,Masc|Number=Plur|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+5	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
+6	nejlépe	lépe	ADV	Dg-------3A----	Degree=Sup|Polarity=Pos	0	_	_	NER=O
+7	prsní	prsní	ADJ	AAFP1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O
+8	pastilky	pastilka	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+9	po	po	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+10	20	20	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+11	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+12	40	40	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+13	hal	hát	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+14	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+15	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+16	eucalyptové	eucalyptový	ADJ	AAIP1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+17	bonbony	bonbon	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+18-19	50h	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+18	50	50	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	_
+19	h	hodina	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	_
+20	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+21	jitrocelové	jitrocelový	ADJ	AAIP1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+22	bonbony	bonbon	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+23	60	60	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+24	h	hodina	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+25	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+26	cibulové	cibulový	ADJ	AAIP1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+27	bonbony	bonbon	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+28-29	bal.50	_	_	_	_	_	_	_	NER=O
+28	bal	bal	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	_
+29	.50	.50	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	_
+30	h	hodina	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+31	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+32	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+33	Valda	Valda	PROPN	NNFS1-----A----	Case=Nom|Gender=Fem|NameType=Oth|Number=Sing	0	_	_	NER=B-MISC|SpaceAfter=No
+34	“	“	PUNCT	Z:-------------	_	0	_	_	NER=O
+35	pastilky	pastilka	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+36	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+37	1.75	1.75	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+38	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+39	n	n	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p230
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p230.s1
+# text = REE
+1	REE	REE	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p231
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p231.s1
+# text = Linka a Rosola, Brno.
+1	Linka	linka	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=B-ORG
+2	a	a	CCONJ	J^-------------	_	0	_	_	NER=I-ORG
+3	Rosola	Rosola	PROPN	NNFS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+4	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	Brno	Brno	PROPN	NNNS1-----A----	Case=Nom|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p232
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p232.s1
+# text = Reservní fondy přes K 2,000.000.
+1	Reservní	reservní	ADJ	AAIP1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+2	fondy	fond	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+3	přes	přes	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+4	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+5	2	2	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+7	000.000	000.000	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head58.s1
+# text = Divadlo.
+1	Divadlo	divadlo	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head59.s1
+# text = Repertoir Národního divadla v Brně.
+1	Repertoir	repertoir	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	Národního	národní	ADJ	AANS2----1A----	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=B-ORG
+3	divadla	divadlo	NOUN	NNNS2-----A----	Case=Gen|Gender=Neut|Number=Sing	0	_	_	NER=I-ORG
+4	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=I-ORG
+5	Brně	Brno	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head60.s1
+# text = Národní hospodářství, průmysl a obchod.
+1	Národní	národní	ADJ	AANS1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	hospodářství	hospodářství	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	průmysl	průmysl	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+5	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+6	obchod	obchod	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p233
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p233.s1
+# text = EEEES
+1	EEEES	Eeees	PROPN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|NameType=Oth|Number=Sing	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head61.s1
+# text = Zastavení činnosti kožního karte-
+1	Zastavení	zastavení	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O
+2	činnosti	činnost	NOUN	NNFS2-----A----	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=O
+3	kožního	kožní	ADJ	AAIS2----1A----	Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+4	karte	kart	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+5	-	-	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head62.s1
+# text = Výkazy benk a záložen.
+1	Výkazy	výkaz	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+2	benk	benka	NOUN	NNFP2-----A----	Case=Gen|Gender=Fem|Number=Plur	0	_	_	NER=O
+3	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+4	záložen	záložna	NOUN	NNFP2-----A----	Case=Gen|Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p234
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p234.s1
+# text = (Zasláno.)
+1	(	(	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+2	Zasláno	zaslaný	ADJ	VsNS----X-APP--	Aspect=Perf|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos|Variant=Short|VerbForm=Part|Voice=Pass	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+4	)	)	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p235
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p235.s1
+# text = Poslední dny!
+1	Poslední	poslední	ADJ	AAIP4----1A----	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+2	dny	den	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+3	!	!	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p236
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p236.s1
+# text = Tah neodvolatelně 9. ledna 1915.
+1	Tah	tah	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	neodvolatelně	odvolatelně	ADV	Dg-------1N----	Degree=Pos|Polarity=Neg	0	_	_	NER=O
+3	9	9	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	ledna	leden	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+6	1915	1915	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p237
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p237.s1
+# text = C. k. policej. úřednická loterie.
+1	C	C	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+3	k	k	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	policej	policý	ADJ	AAXXX----1A---b	Abbr=Yes|Degree=Pos|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	úřednická	úřednický	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+8	loterie	loterie	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p237.s2
+# text = Hlavní výhra K 30.000 v ceně, neb jako posudv hotovosti.
+1	Hlavní	hlavní	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	výhra	výhra	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+3	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+4	30.000	30.000	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+5	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+6	ceně	cena	NOUN	NNFS6-----A----	Case=Loc|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+7	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	neb	neb	CCONJ	J^-------------	_	0	_	_	NER=O
+9	jako	jako	SCONJ	J,-------------	_	0	_	_	NER=O
+10	posudv	posudv	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+11	hotovosti	hotovost	NOUN	NNFS2-----A----	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p238
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p238.s1
+# text = Losy po 1
+1	Losy	los	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+2	po	po	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+3	1	1	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p238.s2
+# text = K dostati lze všude.
+1	K	k	ADP	RR--3----------	AdpType=Prep|Case=Dat	0	_	_	NER=O
+2	dostati	dostat	VERB	Vf--------A-P--	Aspect=Perf|Polarity=Pos|VerbForm=Inf	0	_	_	NER=O
+3	lze	lze	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+4	všude	všude	ADV	Db-------------	PronType=Tot	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p239
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p239.s1
+# text = 3751
+1	3751	3751	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p240
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p240.s1
+# text = Za vydávání odpovídá jan Ehrenberger.
+1	Za	za	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+2	vydávání	vydávání	NOUN	NNNS4-----A----	Case=Acc|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O
+3	odpovídá	odpovídat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+4	jan	jan	NOUN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=B-PER
+5	Ehrenberger	Ehrenberger	PROPN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=I-PER|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p240.s2
+# text = — Zod povědný redaktor Al. V. Kožíšek.
+1	—	—	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	Zod	Zod	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O
+3	povědný	povědný	ADJ	AAMS1----1A----	Animacy=Anim|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+4	redaktor	redaktor	NOUN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+5	Al	Al	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=B-PER|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=I-PER
+7	V	V	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=I-PER|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=I-PER
+9	Kožíšek	Kožíšek	PROPN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=I-PER|SpaceAfter=No
+10	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p240.s3
+# text = — Tisken Moravské akciové knihtiskárny v Brně, Besedn dům.
+1	—	—	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	Tisken	tisken	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+3	Moravské	moravský	ADJ	AAFS2----1A----	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=B-ORG
+4	akciové	akciový	ADJ	AAFS2----1A----	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=I-ORG
+5	knihtiskárny	knihtiskárna	NOUN	NNFS2-----A----	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=I-ORG
+6	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+7	Brně	Brno	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+8	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+9	Besedn	Besedn	PROPN	NNIS1-----A----	Foreign=Yes	0	_	_	NER=O
+10	dům	dům	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+11	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p240.s4
+# text = — Papír ze skladu A. Urbana v Brně
+1	—	—	ADP	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	Papír	papír	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+3	ze	z	ADP	RV--2----------	AdpType=Voc|Case=Gen	0	_	_	NER=O
+4	skladu	sklad	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+5	A	A	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=B-PER|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=I-PER
+7	Urbana	Urban	PROPN	NNMS2-----A----	Animacy=Anim|Case=Gen|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=I-PER
+8	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+9	Brně	Brno	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p241
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p241.s1
+# text = Odborný lékař nemocí krčních, nosních
+1	Odborný	odborný	ADJ	AAMS1----1A----	Animacy=Anim|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	lékař	lékař	NOUN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+3	nemocí	nemoc	NOUN	NNFP2-----A----	Case=Gen|Gender=Fem|Number=Plur	0	_	_	NER=O
+4	krčních	krční	ADJ	AAFP2----1A----	Case=Gen|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+5	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+6	nosních	nosní	ADJ	AAFP2----1A----	Case=Gen|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p242
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p242.s1
+# text = S a vnitřních
+1	S	s	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+3	vnitřních	vnitřní	ADJ	AAMP2----1A----	Animacy=Anim|Case=Gen|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p243
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p243.s1
+# text = Dr. K. Sázavský v Brně, Velké náměstí čís.
+1	Dr	Dr	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=B-PER|SpaceAfter=No
+2	.	.	PUNCT	Z:-------------	_	0	_	_	NER=I-PER
+3	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=I-PER|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=I-PER
+5	Sázavský	Sázavský	PROPN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=I-PER
+6	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+7	Brně	Brno	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+8	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+9	Velké	velký	ADJ	AANS1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+10	náměstí	náměstí	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing	0	_	_	NER=O
+11	čís	čís	NOUN	NNNXX-----A---b	Abbr=Yes|Gender=Neut	0	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p243.s2
+# text = 26.
+1	26	26	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p244
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p244.s1
+# text = Ordinuje od 1 do 3 hod. odpol.
+1	Ordinuje	ordinovat	VERB	VB-S---3P-AAB--	Aspect=Imp,Perf|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+2	od	od	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+3	1	1	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+4	do	do	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+5	3	3	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+6	hod	hodina	NOUN	NNFXX-----A---a	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+7	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	odpol	odpol	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head63.s1
+# text = Předplatte svým milým na bojišti 6 „Moravskou Orlici",
+1	Předplatte	předplatit	VERB	Vi-P---2--A-P--	Aspect=Perf|Mood=Imp|Number=Plur|Person=2|Polarity=Pos|VerbForm=Fin	0	_	_	NER=O
+2	svým	svůj	DET	P8XP3----------	Case=Dat|Number=Plur|Poss=Yes|PronType=Prs|Reflex=Yes	0	_	_	NER=O
+3	milým	milý	NOUN	NNMP3-----A----	Animacy=Anim|Case=Dat|Gender=Masc|Number=Plur	0	_	_	NER=O
+4	na	na	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+5	bojišti	bojiště	NOUN	NNNS6-----A----	Case=Loc|Gender=Neut|Number=Sing	0	_	_	NER=O
+6	6	6	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+7	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+8	Moravskou	moravský	ADJ	AAFS4----1A----	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=B-MISC
+9	Orlici	Orlice	PROPN	NNFS4-----A----	Case=Acc|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=I-MISC|SpaceAfter=No
+10	"	"	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+11	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p245
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p245.s1
+# text = jejíž pravidelné denní zasílání obstará administrace „Mor. Orlice“ v Brně, Besední dům.
+1	jejíž	jehož	DET	P1IS4FS3-------	Animacy=Inan|Case=Acc|Gender=Masc|Gender[psor]=Fem|Number=Sing|Number[psor]=Sing|Person=3|Poss=Yes|PronType=Rel	0	_	_	NER=O
+2	pravidelné	pravidelný	ADJ	AANS4----1A----	Case=Acc|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+3	denní	denní	ADJ	AANS4----1A----	Case=Acc|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+4	zasílání	zasílání	NOUN	NNNS4-----A----	Case=Acc|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O
+5	obstará	obstarat	VERB	VB-S---3P-AAP--	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+6	administrace	administrace	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+7	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+8	Mor	Mor	X	F%-------------	Foreign=Yes	0	_	_	NER=B-ORG|SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=I-ORG
+10	Orlice	Orlice	X	F%-------------	Foreign=Yes	0	_	_	NER=I-ORG|SpaceAfter=No
+11	“	“	PUNCT	Z:-------------	_	0	_	_	NER=O
+12	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+13	Brně	Brno	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+14	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+15	Besední	besední	ADJ	AAIS1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+16	dům	dům	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+17	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p245.s2
+# text = Udejte přesnou adressu a číslo polní pošty.
+1	Udejte	udat	VERB	Vi-P---2--A-P--	Aspect=Perf|Mood=Imp|Number=Plur|Person=2|Polarity=Pos|VerbForm=Fin	0	_	_	NER=O
+2	přesnou	přesný	ADJ	AAFS4----1A----	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+3	adressu	adressa	NOUN	NNFS4-----A----	Case=Acc|Gender=Fem|Number=Sing	0	_	_	NER=O
+4	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+5	číslo	číslo	NOUN	NNNS4-----A----	Case=Acc|Gender=Neut|Number=Sing	0	_	_	NER=O
+6	polní	polní	ADJ	AAFS2----1A----	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+7	pošty	pošta	NOUN	NNFS2-----A----	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head64.s1
+# text = UPUJTE JEN UNA-SICH INSERENTŮ!
+1	UPUJTE	upovat	VERB	Vi-P---2--A-P--	Aspect=Perf|Mood=Imp|Number=Plur|Person=2|Polarity=Pos|VerbForm=Fin	0	_	_	NER=O
+2	JEN	jen	PART	TT-------------	_	0	_	_	NER=O
+3	UNA-SICH	Unasich	ADJ	F%-------------	Foreign=Yes	0	_	_	NER=O
+4	INSERENTŮ	inserent	NOUN	NNMP2-----A----	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+5	!	!	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p246
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p246.s1
+# text = EB
+1	EB	EB	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p247
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p247.s1
+# text = Z
+1	Z	z	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p248
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p248.s1
+# text = W MALY
+1	W	W	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+2	MALY	Maly	PROPN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p249
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p249.s1
+# text = OZNAMOVATEL
+1	OZNAMOVATEL	oznamovatel	NOUN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p250
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p250.s1
+# text = Všellké do této rubriky podané
+1	Všellké	všellký	ADJ	AAFP1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O
+2	do	do	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+3	této	tento	DET	PDFS2----------	Case=Gen|Gender=Fem|Number=Sing|PronType=Dem	0	_	_	NER=O
+4	rubriky	rubrika	NOUN	NNFS2-----A----	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=O
+5	podané	podaný	ADJ	AAFS2----1A----	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos|VerbForm=Part|Voice=Pass	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p251
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p251.s1
+# text = Inseráty platí se hotově předem.
+1	Inseráty	inserát	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+2	platí	platit	VERB	VB-P---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+3	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
+4	hotově	hotově	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O
+5	předem	předem	ADV	Db-------------	_	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p252
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p252.s1
+# text = KDOP
+1	KDOP	KDOP	PROPN	BNXXX-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p253
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p253.s1
+# text = Mocí neb zadati chce stíba a prící,
+1	Mocí	mocí	X	F%-------------	Foreign=Yes	0	_	_	NER=O
+2	neb	neb	CCONJ	J^-------------	_	0	_	_	NER=O
+3	zadati	zadat	ADJ	F%-------------	Style=Coll	0	_	_	NER=O
+4	chce	chtít	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+5	stíba	stíb	NOUN	NNMS4-----A----	Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O
+6	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+7	prící	prící	NOUN	NNNS4-----A----	Case=Acc|Gender=Neut|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+8	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p254
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p254.s1
+# text = ADO hledá neb k zaaání má, *
+1	ADO	ADO	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O
+2	hledá	hledat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+3	neb	neb	CCONJ	J^-------------	_	0	_	_	NER=O
+4	k	k	ADP	RR--3----------	AdpType=Prep|Case=Dat	0	_	_	NER=O
+5	zaaání	zaaání	NOUN	NNNS3-----A----	Case=Dat|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O
+6	má	mít	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O|SpaceAfter=No
+7	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+8	*	*	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p254.s2
+# text = Ochrevynčovati aneb učiti x adlamu,
+1	Ochrevynčovati	ochrevynčovat	VERB	Vf--------A-I--	Aspect=Imp|Polarity=Pos|VerbForm=Inf	0	_	_	NER=O
+2	aneb	aneb	CCONJ	J^-------------	_	0	_	_	NER=O
+3	učiti	učiti	VERB	Vf--------A-I--	Aspect=Imp|Polarity=Pos|VerbForm=Inf	0	_	_	NER=O
+4	x	x	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+5	adlamu	adlama	X	F%-------------	Foreign=Yes	0	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p255
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p255.s1
+# text = ADO oůbec chce nějaké oznámant, vhodně pro. všeobecnog potřeba,
+1	ADO	ADO	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O
+2	oůbec	oůbec	NOUN	NNIS1-----A----	_	0	_	_	NER=O
+3	chce	chtít	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+4	nějaké	nějaký	DET	PZNS4----------	Case=Acc|Gender=Neut|Number=Sing|PronType=Ind	0	_	_	NER=O
+5	oznámant	oznámant	NOUN	NNIS4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	vhodně	vhodně	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O
+8	pro	pro	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+10	všeobecnog	všeobecnog	X	F%-------------	Foreign=Yes	0	_	_	NER=O
+11	potřeba	potřeba	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+12	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p256
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p256.s1
+# text = ADO najmouti neb pronajati chce stravu a byt.
+1	ADO	ADO	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O
+2	najmouti	najmouti	VERB	Vf--------A-P--	Aspect=Perf|Polarity=Pos|VerbForm=Inf	0	_	_	NER=O
+3	neb	neb	CCONJ	J^-------------	_	0	_	_	NER=O
+4	pronajati	pronajati	VERB	Vf--------A-P--	Aspect=Perf|Polarity=Pos|VerbForm=Inf	0	_	_	NER=O
+5	chce	chtít	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+6	stravu	strava	NOUN	NNFS4-----A----	Case=Acc|Gender=Fem|Number=Sing	0	_	_	NER=O
+7	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+8	byt	byt	NOUN	NNIS4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p257
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p257.s1
+# text = KDO samýšli nějaký prodej neb koupl,
+1	KDO	kdo	PRON	PQ--1----------	Animacy=Anim|Case=Nom|PronType=Int,Rel	0	_	_	NER=O
+2	samýšli	samýšt	VERB	VpMP----R-AAI--	Animacy=Anim|Aspect=Imp|Gender=Masc|Number=Plur|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+3	nějaký	nějaký	DET	PZIS4----------	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing|PronType=Ind	0	_	_	NER=O
+4	prodej	prodej	NOUN	NNIS4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O
+5	neb	neb	CCONJ	J^-------------	_	0	_	_	NER=O
+6	koupl	koupnout	VERB	VpYS----R-AAP-1	Aspect=Perf|Gender=Masc|Number=Sing|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O|SpaceAfter=No
+7	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p258
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p258.s1
+# text = K9O chce byt neb nějakou obchodní místnost, KDO něco stratil neb nalez použi k účeli tomu Malého oznamovatele v Moravské Orici.
+1-2	K9	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+1	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	_
+2	9	9	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	_
+3	O	O	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+4	chce	chtít	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+5	byt	byt	NOUN	NNIS4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O
+6	neb	neb	CCONJ	J^-------------	_	0	_	_	NER=O
+7	nějakou	nějaký	DET	PZFS4----------	Case=Acc|Gender=Fem|Number=Sing|PronType=Ind	0	_	_	NER=O
+8	obchodní	obchodní	ADJ	AAFS4----1A----	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+9	místnost	místnost	NOUN	NNFS4-----A----	Case=Acc|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+10	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+11	KDO	kdo	PRON	PQ--1----------	Animacy=Anim|Case=Nom|PronType=Int,Rel	0	_	_	NER=O
+12	něco	něco	PRON	PK--4----------	Animacy=Inan|Case=Acc|PronType=Ind	0	_	_	NER=O
+13	stratil	stratit	VERB	VpYS----R-AAP--	Aspect=Perf|Gender=Masc|Number=Sing|Polarity=Pos|Tense=Past|VerbForm=Part|Voice=Act	0	_	_	NER=O
+14	neb	neb	CCONJ	J^-------------	_	0	_	_	NER=O
+15	nalez	nalezit	VERB	Vi-S---2--A-P--	Aspect=Perf|Mood=Imp|Number=Sing|Person=2|Polarity=Pos|VerbForm=Fin	0	_	_	NER=O
+16	použi	použe	VERB	Vi-S---2--A-P--	Aspect=Perf|Mood=Imp|Number=Sing|Person=2|Polarity=Pos|VerbForm=Fin	0	_	_	NER=O
+17	k	k	ADP	RR--3----------	AdpType=Prep|Case=Dat	0	_	_	NER=O
+18	účeli	účel	NOUN	NNIS3-----A----	Animacy=Inan|Case=Dat|Gender=Masc|Number=Sing	0	_	_	NER=O
+19	tomu	ten	DET	PDZS3----------	Case=Dat|Gender=Masc,Neut|Number=Sing|PronType=Dem	0	_	_	NER=O
+20	Malého	Malý	PROPN	NNMS4-----A----	Animacy=Anim|Case=Acc|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=O
+21	oznamovatele	oznamovatel	NOUN	NNMS4-----A----	Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O
+22	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+23	Moravské	moravský	ADJ	AAFS6----1A----	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=B-LOC
+24	Orici	Orice	PROPN	NNFS6-----A----	Case=Loc|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=B-ORG|SpaceAfter=No
+25	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head65.s1
+# text = WAW
+1	WAW	WAW	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=B-ORG
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p259
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p259.s1
+# text = NÁRODNÍ spořitelna a záložn , Rudolfova ul. 20, přijímá vklady a účtuje je 41 procenty.
+1	NÁRODNÍ	národní	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=B-ORG
+2	spořitelna	spořitelna	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=I-ORG
+3	a	a	CCONJ	J^-------------	_	0	_	_	NER=I-ORG
+4	záložn	záložna	NOUN	NNFS1-----A----	Case=Gen|Gender=Fem|Number=Plur	0	_	_	NER=I-ORG
+5	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+6	Rudolfova	Rudolfův	ADJ	AUFS1M---------	Case=Nom|Gender=Fem|Gender[psor]=Masc|NameType=Giv|Number=Sing|Poss=Yes	0	_	_	NER=B-LOC
+7	ul	ul	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+9	20	20	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+10	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+11	přijímá	přijímat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+12	vklady	vklad	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O
+13	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+14	účtuje	účtovat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+15	je	on	PRON	PEXP4--3-------	Case=Acc|Number=Plur|Person=3|PrepCase=Npr|PronType=Prs	0	_	_	NER=O
+16	41	41	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+17	procenty	procento	NOUN	NNNP7-----A----	Case=Ins|Gender=Neut|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+18	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p260
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p260.s1
+# text = Cyrillo-Methodějská záložna v Brně přijímá vklady na knížky a poskytuje půjčky všelikého druhu.
+1	Cyrillo	Cyrillo	PROPN	NNNS1-----A----	Case=Nom|Gender=Neut|NameType=Oth|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	-	-	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+3	Methodějská	methodějský	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+4	záložna	záložna	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=B-ORG
+5	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+6	Brně	Brno	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+7	přijímá	přijímat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+8	vklady	vklad	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O
+9	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+10	knížky	knížka	NOUN	NNFP4-----A----	Case=Acc|Gender=Fem|Number=Plur	0	_	_	NER=O
+11	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+12	poskytuje	poskytovat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+13	půjčky	půjčka	NOUN	NNFP4-----A----	Case=Acc|Gender=Fem|Number=Plur	0	_	_	NER=O
+14	všelikého	všeliký	DET	P4ZS2----------	Case=Gen|Gender=Masc,Neut|Number=Sing|PronType=Dem	0	_	_	NER=O
+15	druhu	druh	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+16	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head66.s1
+# text = Starobrněnská
+1	Starobrněnská	starobrněnský	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=B-ORG
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p261
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p261.s1
+# text = záložna v Brně
+1	záložna	záložna	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=B-ORG
+2	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+3	Brně	Brno	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p262
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p262.s1
+# text = Měšťanská ul. 23, poskytuje zápůjčky všelikého druhu a přijímá vklady na úrok
+1	Měšťanská	měšťanský	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	ul	ul	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	23	23	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+5	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+6	poskytuje	poskytovat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+7	zápůjčky	zápůjčka	NOUN	NNFP4-----A----	Case=Acc|Gender=Fem|Number=Plur	0	_	_	NER=O
+8	všelikého	všeliký	DET	AAIS2----1A----	Case=Gen|Gender=Masc,Neut|Number=Sing|PronType=Dem	0	_	_	NER=O
+9	druhu	druh	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+10	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+11	přijímá	přijímat	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+12	vklady	vklad	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O
+13	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+14	úrok	úrok	NOUN	NNIS4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p263
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p263.s1
+# text = S
+1	S	s	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p264
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p264.s1
+# text = Záruka na vklady: Aktiva, reservní fon nové svými podíly (přes členů) okrouhle K 1,400.000.
+1	Záruka	záruka	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+2	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+3	vklady	vklad	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	Aktiva	aktivum	NOUN	NNNP1-----A----	Case=Nom|Gender=Neut|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	reservní	reservní	ADJ	AAIS1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+8	fon	fon	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+9	nové	nový	ADJ	AANS1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+10	svými	svůj	DET	P8XP7----------	Case=Ins|Number=Plur|Poss=Yes|PronType=Prs|Reflex=Yes	0	_	_	NER=O
+11	podíly	podíl	NOUN	NNIP7-----A----	Animacy=Inan|Case=Ins|Gender=Masc|Number=Plur	0	_	_	NER=O
+12	(	(	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+13	přes	přes	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+14	členů	člen	NOUN	NNMP2-----A----	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+15	)	)	PUNCT	Z:-------------	_	0	_	_	NER=O
+16	okrouhle	okrouhle	ADV	Dg-------1A----	Degree=Pos|Polarity=Pos	0	_	_	NER=O
+17	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+18	1	1	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+19	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+20	400.000	400.000	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+21	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p265
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p265.s1
+# text = 2377
+1	2377	2377	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p266
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p266.s1
+# text = pracovní mzdy stojí správ.
+1	pracovní	pracovní	ADJ	AAFP1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=O
+2	mzdy	mzda	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+3	stojí	stát	VERB	VB-P---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+4	správ	správ	NOUN	NNIS4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p266.s2
+# text = ka jednoho slunečníku neb deštníky lf Strach rožní dům Ferdinandova ulice čás.
+1	ka	ka	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+2	jednoho	jeden	NUM	CnZS2----------	Case=Gen|Gender=Masc,Neut|Number=Sing|NumForm=Word|NumType=Card	0	_	_	NER=O
+3	slunečníku	slunečník	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+4	neb	neb	CCONJ	J^-------------	_	0	_	_	NER=O
+5	deštníky	deštník	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+6	lf	lf	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+7	Strach	Strach	PROPN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=O
+8	rožní	rožní	ADJ	AAIS1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+9	dům	dům	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+10	Ferdinandova	Ferdinandův	ADJ	AUFS1M---------	Case=Nom|Gender=Fem|Gender[psor]=Masc|NameType=Giv|Number=Sing|Poss=Yes	0	_	_	NER=B-LOC
+11	ulice	ulice	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+12	čás	čy	NOUN	NNFXX-----A---b	Abbr=Yes|Gender=Fem	0	_	_	NER=O|SpaceAfter=No
+13	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p266.s3
+# text = 17.
+1	17	17	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p267
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p267.s1
+# text = První občanská záložna v Brně, nyní po dobu stavby vlastního domu v Solnoúřední ulici čís.
+1	První	první	ADJ	CrFS1----------	Case=Nom|Gender=Fem|Number=Sing|NumType=Ord	0	_	_	NER=B-ORG
+2	občanská	občanský	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=I-ORG
+3	záložna	záložna	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=I-ORG
+4	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+5	Brně	Brno	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+6	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	nyní	nyní	ADV	Db-------------	PronType=Dem	0	_	_	NER=O
+8	po	po	ADP	RR--4----------	AdpType=Prep|Case=Acc|ExtPos=ADP	0	_	_	NER=O
+9	dobu	doba	NOUN	NNFS4-----A----	Case=Acc|Gender=Fem|Number=Sing	0	_	_	NER=O
+10	stavby	stavba	NOUN	NNFS2-----A----	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=O
+11	vlastního	vlastní	ADJ	AAIS2----1A----	Animacy=Inan|Case=Gen|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+12	domu	dům	NOUN	NNIS2-----A----	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	0	_	_	NER=O
+13	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+14	Solnoúřední	solnoúřední	ADJ	AAFS6----1A----	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=B-LOC
+15	ulici	ulice	NOUN	NNFS6-----A----	Case=Loc|Gender=Fem|Number=Sing	0	_	_	NER=I-LOC
+16	čís	čís	NOUN	NNNXX-----A---b	Abbr=Yes|Gender=Neut	0	_	_	NER=O|SpaceAfter=No
+17	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p267.s2
+# text = 6 v přízemí a všechny její filiálky a sběrny přijímají vklady na úrok až
+1	6	6	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+2	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+3	přízemí	přízemí	NOUN	NNNS6-----A----	Case=Loc|Gender=Neut|Number=Sing	0	_	_	NER=O
+4	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+5	všechny	všechen	DET	PLFP1----------	Case=Nom|Gender=Fem|Number=Plur|PronType=Tot	0	_	_	NER=O
+6	její	jeho	DET	P9XP1FS3-------	Case=Nom|Gender[psor]=Fem|Number=Plur|Number[psor]=Sing|Person=3|Poss=Yes|PronType=Prs	0	_	_	NER=O
+7	filiálky	filiálka	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+8	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+9	sběrny	sběrna	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+10	přijímají	přijímat	VERB	VB-P---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+11	vklady	vklad	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O
+12	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+13	úrok	úrok	NOUN	NNIS4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O
+14	až	až	PART	TT-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p268
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p268.s1
+# text = TO
+1	TO	ten	DET	PDNS1----------	Case=Nom|Gender=Neut|Number=Sing|PronType=Dem	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head67.s1
+# text = 20
+1	20	20	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.head68.s1
+# text = ZÁDEJTE NÁŠ LISI
+1	ZÁDEJTE	zádat	VERB	Vi-P---2--A-I--	Aspect=Imp|Mood=Imp|Number=Plur|Person=2|Polarity=Pos|VerbForm=Fin	0	_	_	NER=O
+2	NÁŠ	náš	DET	PSYS1-P1-------	Case=Nom|Gender=Masc|Number=Sing|Number[psor]=Plur|Person=1|Poss=Yes|PronType=Prs	0	_	_	NER=O
+3	LISI	LISI	NOUN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p269
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p269.s1
+# text = VE VŠECH
+1	VE	v	ADP	RV--6----------	AdpType=Voc|Case=Loc	0	_	_	NER=O
+2	VŠECH	všechen	DET	PLXP6----------	Case=Loc|Number=Plur|PronType=Tot	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p270
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p270.s1
+# text = HOSTINCÍCH A KAVÁRs NÁCH!s
+1	HOSTINCÍCH	hostinec	NOUN	NNIP6-----A----	Animacy=Inan|Case=Loc|Gender=Masc|Number=Plur	0	_	_	NER=O
+2	A	a	CCONJ	J^-------------	_	0	_	_	NER=O
+3	KAVÁRs	kavárs	NOUN	F%-------------	Foreign=Yes	0	_	_	NER=O
+4	NÁCH	na	PROPN	NNFP6-----A----	Case=Loc|Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+5	!	!	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+6	s	s	ADP	RR--7----------	AdpType=Prep|Case=Ins	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p271
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p271.s1
+# text = 9e
+1	9e	9e	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p272
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p272.s1
+# text = Ustřední banka dve českých spořitelen
+1	Ustřední	ustřední	ADJ	AAFS1----1A----	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=B-ORG
+2	banka	banka	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=I-ORG
+3	dve	dve	NUM	CnHP1----------	Case=Gen|Number=Plur|NumForm=Word|NumType=Card	0	_	_	NER=I-ORG
+4	českých	český	ADJ	AAFP2----1A----	Case=Gen|Degree=Pos|Gender=Fem|Number=Plur|Polarity=Pos	0	_	_	NER=I-ORG
+5	spořitelen	spořitelna	NOUN	NNFP2-----A----	Case=Gen|Gender=Fem|Number=Plur	0	_	_	NER=I-ORG
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p273
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p273.s1
+# text = Telefon čís.
+1	Telefon	telefon	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	čís	čís	NOUN	NNNXX-----A---b	Abbr=Yes|Gender=Neut	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p273.s2
+# text = 1277 Tillálka v Brně 127 velké nám.
+1	1277	1277	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+2	Tillálka	Tillálka	PROPN	NNFS1-----A----	Case=Nom|Gender=Fem|NameType=Oth|Number=Sing	0	_	_	NER=O
+3	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+4	Brně	Brno	PROPN	NNNS6-----A----	Case=Loc|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=O
+5	127	127	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+6	velké	velký	ADJ	AANS1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O
+7	nám	my	NOUN	NNNXX-----A---b	Abbr=Yes|Gender=Neut	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p273.s3
+# text = č. 28.
+1	č	číslo	NOUN	NNNXX-----A---b	Abbr=Yes|Gender=Neut	0	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+3	28	28	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p274
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p274.s1
+# text = Zky a účty úrokujeme dle výpovědi co nejvýhodněji.
+1	Zky	zka	NOUN	NNFP4-----A----	Case=Acc|Gender=Fem|Number=Plur	0	_	_	NER=O
+2	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+3	účty	účet	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O
+4	úrokujeme	úrokovat	VERB	VB-P---1P-AAI--	Aspect=Imp|Mood=Ind|Number=Plur|Person=1|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+5	dle	dle	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+6	výpovědi	výpověď	NOUN	NNFS2-----A----	Case=Gen|Gender=Fem|Number=Sing	0	_	_	NER=O
+7	co	co	ADV	Db-------------	_	0	_	_	NER=O
+8	nejvýhodněji	výhodně	ADV	Dg-------3A----	Degree=Sup|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p274.s2
+# text = Vklad na k nI
+1	Vklad	vklad	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+2	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+3	k	k	NOUN	RR--3----------	Abbr=Yes	0	_	_	NER=O
+4	nI	NI	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p275
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p275.s1
+# text = Oddělení žírové.
+1	Oddělení	oddělení	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing|VerbForm=Vnoun	0	_	_	NER=O
+2	žírové	žírový	ADJ	AANS1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+3	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p275.s2
+# text = Veškeré obchody bankovní.
+1	Veškeré	veškerý	PRON	PLIP1----------	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur|PronType=Tot	0	_	_	NER=O
+2	obchody	obchod	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+3	bankovní	bankovní	ADJ	AAIP1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p275.s3
+# text = Vadia a kauce.
+1	Vadia	vadium	NOUN	NNNP1-----A----	Case=Nom|Gender=Neut|Number=Plur	0	_	_	NER=O
+2	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+3	kauce	kauce	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p276
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p276.s1
+# text = Příchozím do Brna a čtenářům „Moravské Orlice“ doporučují se následující OBCHODY A ZÁVODY:
+1	Příchozím	příchozí	NOUN	AAMP3----1A----	Animacy=Anim|Case=Dat|Gender=Masc|Number=Plur	0	_	_	NER=O
+2	do	do	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+3	Brna	Brno	PROPN	NNNS2-----A----	Case=Gen|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC
+4	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+5	čtenářům	čtenář	NOUN	NNMP3-----A----	Animacy=Anim|Case=Dat|Gender=Masc|Number=Plur	0	_	_	NER=O
+6	„	„	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+7	Moravské	moravský	ADJ	AAFS2----1A----	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=B-ORG
+8	Orlice	Orlice	PROPN	NNFS2-----A----	Case=Gen|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+9	“	“	PUNCT	Z:-------------	_	0	_	_	NER=O
+10	doporučují	doporučovat	VERB	VB-P---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+11	se	se	PRON	P7-X4----------	Case=Acc|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
+12	následující	následující	ADJ	AGIP1-----A----	Animacy=Inan|Aspect=Imp|Case=Nom|Gender=Masc|Number=Plur|Polarity=Pos|Tense=Pres|VerbForm=Part|Voice=Act	0	_	_	NER=O
+13	OBCHODY	obchod	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O
+14	A	a	CCONJ	J^-------------	_	0	_	_	NER=O
+15	ZÁVODY	závod	NOUN	NNIP1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+16	:	:	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p277
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p277.s1
+# text = rum, malaga, vo-KOhdK, ňavky a toiletní mýdla u drogistů LINKY & ROSOLY v Orelské ulici.
+1	rum	rum	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+3	malaga	malaga	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+4	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	vo-KOhdK	vokohdk	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+7	ňavky	ňavka	NOUN	NNFP1-----A----	Case=Nom|Gender=Fem|Number=Plur	0	_	_	NER=O
+8	a	a	CCONJ	J^-------------	_	0	_	_	NER=O
+9	toiletní	toiletní	ADJ	AANP1----1A----	Case=Nom|Degree=Pos|Gender=Neut|Number=Plur|Polarity=Pos	0	_	_	NER=O
+10	mýdla	mýdlo	NOUN	NNNP1-----A----	Case=Nom|Gender=Neut|Number=Plur	0	_	_	NER=O
+11	u	u	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+12	drogistů	drogista	NOUN	NNMP2-----A----	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	0	_	_	NER=O
+13	LINKY	Linky	X	F%-------------	Foreign=Yes	0	_	_	NER=B-ORG
+14	&	&	PUNCT	Z:-------------	_	0	_	_	NER=I-ORG
+15	ROSOLY	Rosoly	X	F%-------------	Foreign=Yes	0	_	_	NER=I-ORG
+16	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+17	Orelské	orelský	ADJ	AAFS6----1A----	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=B-LOC
+18	ulici	ulice	NOUN	NNFS6-----A----	Case=Loc|Gender=Fem|Number=Sing	0	_	_	NER=I-LOC|SpaceAfter=No
+19	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p277.s2
+# text = opatříte si nej-SluZOV lépe inserty v Moravské Orlici, jež objednati lze v adm.
+1	opatříte	opatřit	VERB	VB-P---2P-AAP--	Aspect=Perf|Mood=Ind|Number=Plur|Person=2|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+2	si	se	PRON	P7--3----------	Case=Dat|PronType=Prs|Reflex=Yes|Variant=Short	0	_	_	NER=O
+3	nej-SluZOV	nejsluzov	ADV	NNIS4-----A----	_	0	_	_	NER=O
+4	lépe	lépe	ADV	Dg-------2A----	Degree=Cmp|Polarity=Pos	0	_	_	NER=O
+5	inserty	insert	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O
+6	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+7	Moravské	moravský	ADJ	AAFS6----1A----	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing|Polarity=Pos	0	_	_	NER=B-LOC
+8	Orlici	Orlice	PROPN	NNFS6-----A----	Case=Loc|Gender=Fem|NameType=Geo|Number=Sing	0	_	_	NER=I-LOC|SpaceAfter=No
+9	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+10	jež	jenž	PRON	P4XP4----------	Case=Acc|Number=Plur|PrepCase=Npr|PronType=Rel	0	_	_	NER=O
+11	objednati	objednat	VERB	Vf--------A-P--	Aspect=Perf|Polarity=Pos|VerbForm=Inf	0	_	_	NER=O
+12	lze	lze	VERB	VB-S---3P-AAI--	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Polarity=Pos|Tense=Pres|VerbForm=Fin|Voice=Act	0	_	_	NER=O
+13	v	v	ADP	RR--6----------	AdpType=Prep|Case=Loc	0	_	_	NER=O
+14	adm	adm	NOUN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+15	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p277.s3
+# text = Brno, Besední dům.
+1	Brno	Brno	PROPN	NNNS1-----A----	Case=Nom|Gender=Neut|NameType=Geo|Number=Sing	0	_	_	NER=B-LOC|SpaceAfter=No
+2	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+3	Besední	besední	ADJ	AAIS1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=B-ORG
+4	dům	dům	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=I-ORG|SpaceAfter=No
+5	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p277.s4
+# text = na splátky, cenné pa-LOSpíry k ulož., půjčky na cenné papíry u ALEX.
+1	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+2	splátky	splátka	NOUN	NNFP4-----A----	Case=Acc|Gender=Fem|Number=Plur	0	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+4	cenné	cenný	ADJ	AAIP4----1A----	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+5	pa-LOSpíry	palospír	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O
+6	k	k	ADP	RR--3----------	AdpType=Prep|Case=Dat	0	_	_	NER=O
+7	ulož	ulož	NOUN	NNFXX-----A---b	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+9	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+10	půjčky	půjčka	NOUN	NNFP4-----A----	Case=Acc|Gender=Fem|Number=Plur	0	_	_	NER=O
+11	na	na	ADP	RR--4----------	AdpType=Prep|Case=Acc	0	_	_	NER=O
+12	cenné	cenný	ADJ	AAIP4----1A----	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Plur|Polarity=Pos	0	_	_	NER=O
+13	papíry	papír	NOUN	NNIP4-----A----	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	0	_	_	NER=O
+14	u	u	ADP	RR--2----------	AdpType=Prep|Case=Gen	0	_	_	NER=O
+15	ALEX	ALEX	PROPN	BNXXX-----A----	Abbr=Yes	0	_	_	NER=O|SpaceAfter=No
+16	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p277.s5
+# text = SUCHÁNKA, bankéře, Ferdinandova ulice číslo 37—39.
+1	SUCHÁNKA	Suchánka	PROPN	NNMS1-----A----	Animacy=Anim|Case=Nom|Gender=Masc|NameType=Giv|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+3	bankéře	bankéř	NOUN	NNMS4-----A----	Animacy=Anim|Case=Acc|Gender=Masc|Number=Sing	0	_	_	NER=O|SpaceAfter=No
+4	,	,	PUNCT	Z:-------------	_	0	_	_	NER=O
+5	Ferdinandova	Ferdinandův	ADJ	AUFS1M---------	Case=Nom|Gender=Fem|Gender[psor]=Masc|NameType=Giv|Number=Sing|Poss=Yes	0	_	_	NER=O
+6	ulice	ulice	NOUN	NNFS1-----A----	Case=Nom|Gender=Fem|Number=Sing	0	_	_	NER=O
+7	číslo	číslo	NOUN	NNNS1-----A----	Case=Nom|Gender=Neut|Number=Sing	0	_	_	NER=O
+8	37	37	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+9	—	—	PUNCT	Z:-------------	_	0	_	_	NER=O|SpaceAfter=No
+10	39	39	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+11	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p278
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p278.s1
+# text = oaos sxe
+1	oaos	oaos	X	F%-------------	Foreign=Yes	0	_	_	NER=O
+2	sxe	sxe	X	F%-------------	Foreign=Yes	0	_	_	NER=O
+
+# newpar id = PressMint-CZ_1914-12-31-dda72f90.p279
+# lang = cs
+# sent_id = PressMint-CZ_1914-12-31-dda72f90.p279.s1
+# text = Akciový kapitál K 25 millonů.
+1	Akciový	akciový	ADJ	AAIS1----1A----	Animacy=Inan|Case=Nom|Degree=Pos|Gender=Masc|Number=Sing|Polarity=Pos	0	_	_	NER=O
+2	kapitál	kapitál	NOUN	NNIS1-----A----	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	0	_	_	NER=O
+3	K	K	NOUN	Q3-------------	Abbr=Yes	0	_	_	NER=O
+4	25	25	NUM	C=-------------	NumForm=Digit|NumType=Card	0	_	_	NER=O
+5	millonů	millon	NUM	CzIP2----------	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur|NumType=Card	0	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	Z:-------------	_	0	_	_	NER=O
 
